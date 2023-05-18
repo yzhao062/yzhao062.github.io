@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Alicia Guo | Yue Zhao</title>
+    <link>https://www.andrew.cmu.edu/user/yuezhao2/authors/alicia-guo/</link>
+      <atom:link href="https://www.andrew.cmu.edu/user/yuezhao2/authors/alicia-guo/index.xml" rel="self" type="application/rss+xml" />
+    <description>Alicia Guo</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Copyright © Yue Zhao; Last update Jan 2023</copyright><lastBuildDate>Wed, 01 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://www.andrew.cmu.edu/user/yuezhao2/img/icon-192.png</url>
+      <title>Alicia Guo</title>
+      <link>https://www.andrew.cmu.edu/user/yuezhao2/authors/alicia-guo/</link>
+    </image>
+    
+    <item>
+      <title>SynC: A Unified Framework for Generating Synthetic Population with Gaussian Copula</title>
+      <link>https://www.andrew.cmu.edu/user/yuezhao2/publication/20-aaai-sync/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://www.andrew.cmu.edu/user/yuezhao2/publication/20-aaai-sync/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

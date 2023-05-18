@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Zhihao Jia | Yue Zhao</title>
+    <link>https://www.andrew.cmu.edu/user/yuezhao2/authors/zhihao-jia/</link>
+      <atom:link href="https://www.andrew.cmu.edu/user/yuezhao2/authors/zhihao-jia/index.xml" rel="self" type="application/rss+xml" />
+    <description>Zhihao Jia</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Copyright © Yue Zhao; Last update Jan 2023</copyright><lastBuildDate>Sat, 14 Oct 2023 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://www.andrew.cmu.edu/user/yuezhao2/img/icon-192.png</url>
+      <title>Zhihao Jia</title>
+      <link>https://www.andrew.cmu.edu/user/yuezhao2/authors/zhihao-jia/</link>
+    </image>
+    
+    <item>
+      <title>TOD: GPU-accelerated Outlier Detection via Tensor Operations</title>
+      <link>https://www.andrew.cmu.edu/user/yuezhao2/publication/23-vldb-tod/</link>
+      <pubDate>Sat, 14 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>https://www.andrew.cmu.edu/user/yuezhao2/publication/23-vldb-tod/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>BOND: Benchmarking Unsupervised Outlier Node Detection on Static Attributed Graphs</title>
+      <link>https://www.andrew.cmu.edu/user/yuezhao2/publication/22-neurips-bond/</link>
+      <pubDate>Wed, 14 Sep 2022 00:00:00 +0000</pubDate>
+      <guid>https://www.andrew.cmu.edu/user/yuezhao2/publication/22-neurips-bond/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

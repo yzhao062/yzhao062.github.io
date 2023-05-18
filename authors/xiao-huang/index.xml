@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Xiao Huang | Yue Zhao</title>
+    <link>https://www.andrew.cmu.edu/user/yuezhao2/authors/xiao-huang/</link>
+      <atom:link href="https://www.andrew.cmu.edu/user/yuezhao2/authors/xiao-huang/index.xml" rel="self" type="application/rss+xml" />
+    <description>Xiao Huang</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Copyright © Yue Zhao; Last update Jan 2023</copyright><lastBuildDate>Wed, 12 Jan 2022 08:05:15 +0800</lastBuildDate>
+    <image>
+      <url>https://www.andrew.cmu.edu/user/yuezhao2/img/icon-192.png</url>
+      <title>Xiao Huang</title>
+      <link>https://www.andrew.cmu.edu/user/yuezhao2/authors/xiao-huang/</link>
+    </image>
+    
+    <item>
+      <title>Contrastive Attributed Network Anomaly Detection with Data Augmentation</title>
+      <link>https://www.andrew.cmu.edu/user/yuezhao2/publication/22-pakdd/</link>
+      <pubDate>Wed, 12 Jan 2022 08:05:15 +0800</pubDate>
+      <guid>https://www.andrew.cmu.edu/user/yuezhao2/publication/22-pakdd/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

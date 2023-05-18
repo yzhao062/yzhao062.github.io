@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Yue Zhao</title>
+    <link>https://www.andrew.cmu.edu/user/yuezhao2/</link>
+      <atom:link href="https://www.andrew.cmu.edu/user/yuezhao2/index.xml" rel="self" type="application/rss+xml" />
+    <description>Yue Zhao</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Copyright © Yue Zhao; Last update Jan 2023</copyright><lastBuildDate>Tue, 14 Nov 2023 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://www.andrew.cmu.edu/user/yuezhao2/img/icon-192.png</url>
+      <title>Yue Zhao</title>
+      <link>https://www.andrew.cmu.edu/user/yuezhao2/</link>
+    </image>
+    
+    <item>
+      <title>Publications</title>
+      <link>https://www.andrew.cmu.edu/user/yuezhao2/publication/</link>
+      <pubDate>Tue, 14 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://www.andrew.cmu.edu/user/yuezhao2/publication/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Projects</title>
+      <link>https://www.andrew.cmu.edu/user/yuezhao2/project/</link>
+      <pubDate>Sun, 17 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>https://www.andrew.cmu.edu/user/yuezhao2/project/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Posts</title>
+      <link>https://www.andrew.cmu.edu/user/yuezhao2/post/</link>
+      <pubDate>Fri, 12 Jul 2019 00:00:00 +0000</pubDate>
+      <guid>https://www.andrew.cmu.edu/user/yuezhao2/post/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Recent &amp; Upcoming Talks</title>
+      <link>https://www.andrew.cmu.edu/user/yuezhao2/talk/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.andrew.cmu.edu/user/yuezhao2/talk/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

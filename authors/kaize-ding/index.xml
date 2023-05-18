@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kaize Ding | Yue Zhao</title>
+    <link>https://www.andrew.cmu.edu/user/yuezhao2/authors/kaize-ding/</link>
+      <atom:link href="https://www.andrew.cmu.edu/user/yuezhao2/authors/kaize-ding/index.xml" rel="self" type="application/rss+xml" />
+    <description>Kaize Ding</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Copyright © Yue Zhao; Last update Jan 2023</copyright><lastBuildDate>Wed, 14 Sep 2022 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://www.andrew.cmu.edu/user/yuezhao2/img/icon-192.png</url>
+      <title>Kaize Ding</title>
+      <link>https://www.andrew.cmu.edu/user/yuezhao2/authors/kaize-ding/</link>
+    </image>
+    
+    <item>
+      <title>BOND: Benchmarking Unsupervised Outlier Node Detection on Static Attributed Graphs</title>
+      <link>https://www.andrew.cmu.edu/user/yuezhao2/publication/22-neurips-bond/</link>
+      <pubDate>Wed, 14 Sep 2022 00:00:00 +0000</pubDate>
+      <guid>https://www.andrew.cmu.edu/user/yuezhao2/publication/22-neurips-bond/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

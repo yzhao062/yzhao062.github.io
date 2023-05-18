@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Haoping Bai | Yue Zhao</title>
+    <link>https://www.andrew.cmu.edu/user/yuezhao2/authors/haoping-bai/</link>
+      <atom:link href="https://www.andrew.cmu.edu/user/yuezhao2/authors/haoping-bai/index.xml" rel="self" type="application/rss+xml" />
+    <description>Haoping Bai</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Copyright © Yue Zhao; Last update Jan 2023</copyright><lastBuildDate>Sat, 03 Apr 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://www.andrew.cmu.edu/user/yuezhao2/img/icon-192.png</url>
+      <title>Haoping Bai</title>
+      <link>https://www.andrew.cmu.edu/user/yuezhao2/authors/haoping-bai/</link>
+    </image>
+    
+    <item>
+      <title>SUOD: Accelerating Large-scale Unsupervised Heterogeneous Outlier Detection</title>
+      <link>https://www.andrew.cmu.edu/user/yuezhao2/publication/21-mlsys-suod/</link>
+      <pubDate>Sat, 03 Apr 2021 00:00:00 +0000</pubDate>
+      <guid>https://www.andrew.cmu.edu/user/yuezhao2/publication/21-mlsys-suod/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

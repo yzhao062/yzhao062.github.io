@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>synthetic population | Yue Zhao</title>
+    <link>https://www.andrew.cmu.edu/user/yuezhao2/tags/synthetic-population/</link>
+      <atom:link href="https://www.andrew.cmu.edu/user/yuezhao2/tags/synthetic-population/index.xml" rel="self" type="application/rss+xml" />
+    <description>synthetic population</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Copyright © Yue Zhao; Last update Jan 2023</copyright><lastBuildDate>Wed, 01 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://www.andrew.cmu.edu/user/yuezhao2/img/icon-192.png</url>
+      <title>synthetic population</title>
+      <link>https://www.andrew.cmu.edu/user/yuezhao2/tags/synthetic-population/</link>
+    </image>
+    
+    <item>
+      <title>SynC: A Copula based Framework for Generating Synthetic Data from Aggregated Sources</title>
+      <link>https://www.andrew.cmu.edu/user/yuezhao2/publication/20-icdmw-sync/</link>
+      <pubDate>Wed, 01 Jul 2020 00:00:00 +0000</pubDate>
+      <guid>https://www.andrew.cmu.edu/user/yuezhao2/publication/20-icdmw-sync/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

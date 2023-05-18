@@ -1,0 +1,479 @@
+Given Tom is a data scientist at an insurance firm who works on risk prediction.
+
+- How to combine existing **rule-based models** with the **emerging ML models**?
+- During the combination process, how to eliminate **bias** and **discrimination**? What type of **calibration** should be done?
+- Is there a possibility to provide **interpretability** to certain extent?
+- Ultimately, what is the **implication** of this transformation process? Is this transferable?
+
+Thanks to CMU's highly interdisciplinary setting, I am able to choose from the following tracks:
+(i) [*Joint Ph.D. degree in Machine Learning & Public Policy*](https://www.ml.cmu.edu/academics/joint-ml-phd.html),
+(ii) [*Ph.D. in Public Policy \& Management*](https://www.heinz.cmu.edu/programs/phd-programs/public-policy-management),
+and (iii) [*Ph.D. in Information Systems \& Management*](https://www.heinz.cmu.edu/programs/phd-programs/information-systems-management).
+
+[Ph.D. in Data Mining and Information Systems](https://www.heinz.cmu.edu/programs/phd-programs/information-systems-management)
+
+https://datascience.columbia.edu/phd-specialization-in-data-science
+PhD Specialization in Data Science
+The Ph.D. specialization in Data Science is an option within each participating department's PhD program.
+The current participating departments are Applied Mathematics, Computer Science, Electrical Engineering, Industrial Engineering and Operations Research, and Statistics.
+PhD students in these departments can choose to do this specialization.
+To participate, students need to fulfill the requirements below in addition to those of their respective department's PhD program.
+Students should discuss this specialization option with their PhD advisor and their department's Director for Graduate Studies.
+Further questions about the specialization requirements should be directed to Professor David Blei (CS and Stats).
+
+My research interest spans **data mining algorithms, systems, applications, and real-world implications**.
+After I joined the Heinz College, **Information systems**, especially how machine learning impacts our daily life,
+arises as my new interest.
+
+I am also appointed as the [GSA International Student Co-Advocate](https://www.cmu.edu/stugov/gsa/About-the-GSA/Execs.html),
+defending for the rights of graduate international students.
+[The Graduate Student Assembly (GSA)](https://www.cmu.edu/stugov/gsa/About-the-GSA/index.html) is
+the branch of student government that represents all 7,000+ graduate students at CMU.
+
+I have an open (if not crazy) mind for all sorts of opportunities,
+e.g., industry research labs, universities, NGOs, and think tanks. The key ask is to use data mining techniques
+for solving **impactful real-world problems**.
+
+**[w19a]** HD-Cluster: Synthesized Cluster Analysis and Outlier Detection on High-dimensional Data.
+
+[**#3**] From Oct 2019 to May 2020, I am a [GSA International Student Co-Advocate](https://www.cmu.edu/stugov/gsa/About-the-GSA/Execs.html),
+along with Sandra Fomete.
+[The Graduate Student Assembly (GSA)](https://www.cmu.edu/stugov/gsa/About-the-GSA/index.html) is
+the branch of student government that represents all graduate students at CMU.
+I am working with administrators at different levels and student groups to improve international graduate students' experience at CMU.
+My core focus includes immigration (visa and CPT/OPT), career
+development, and mental health issues, which are particularly relevant to international students.
+<span style="color:green">If you are a CMU graduate student that wants to discuss related issues with me, please shoot me an email.</span>
+
+<span style="color:green">Oct 2019</span>: I had a talk on "text generation by generative models". Check out the [slides](misc/Text-Generation-from-Uncontrollable-to-Controllable.pdf).
+
+Neither Anomaly nor noise gets a clear definition in data mining as they may look similar in many ways.
+In fact, the convention is calling noise as "weak outliers", in comparison to true anomalies that analysts care. Loosely speaking,
+anomalies are the subjects we are interested in, while noise is not. However, they are convertible in both directions.
+In this work, we revisit the problem and define noise with five properties.
+Based on these properties, the benchmark of various outlier detection methods along with newly created datasets in differentiating noise is provided.
+Lastly, a two-stage denoising framework is proposed to better separate noise from anomalies.
+
+
+The key idea is to incorporate the existing labels into unsupervised generative models. This idea is inspired by the discussion at [Economing I](https://www.cmu.edu/tepper/programs/courses/47958.html).
+
+
+**Longer version**: **my interests lie on the applied side of the learning algorithms**. I especially care why, when, and how to use learning models to bring **social impact**.
+In addition to propose new ensemble learning, outlier detection, and clustering **algorithms**,
+I design and implement accessible and scalable machine learning **systems and libraries** as well.
+More importantly, I enjoy applying learning algorithms to solve real-world problems (e.g., healthcare, education, security, and finance),
+i.e., build **applications** and understand their **implications**.
+
+**Dec 2019**: Received AAAI Student Travel Grant and CMU GSA/Provost Scholarship for attending [*AAAI 2020*](https://aaai.org/Conferences/AAAI-20/). See you in New York!
+
+# Before coming to CMU, I have more than 5-year [software engineering and
+management consulting experience](#experience).
+
+Visa sponsorship may be needed for other countries.
+
+
+**Oct 2019**: Our demo paper “[Combining Machine Learning Models and Scores Using combo library](papers/20-aaai-combo.pdf)” on ML library [combo](https://github.com/yzhao062/combo)
+is accepted at [*AAAI 2020*](https://aaai.org/Conferences/AAAI-20/). Check out our [Demo Video](https://youtu.be/PaSJ49Ij7w4)!
+
+**Dec 2019**: Our preliminary paper on accelerating the training & prediction with a large number of unsupervised anomaly detectors:
+"[SUOD: Toward Scalable Unsupervised Outlier Detection](papers/20-aaai-workshop-suod.pdf)" is accepted as an oral presentation at *AAAI Workshop on* [*Artificial Intelligence for Cyber Security (AICS)*](http://aics.site/AICS2020/).
+
+
+**Feb 2020**: In preparation for a KDD hands-on tutorial on "Accessible, Interactive, and Scalable Anomaly Detection" based on the series of tools and systems I built ([PyOD](https://github.com/yzhao062/pyod), [SUOD](https://github.com/yzhao062/SUOD), etc.).
+
+
+**Jan 2020**: Having a talk accepted ("Developing Python Libraries for Machine Learning: Best Practices and Lessons Learned") at [*The Python Conference (PyCon) 2020*](https://us.pycon.org/2020/), the largest annual gathering for the Python community.
+See you in Pittsburgh in April!
+
+**Jan 2020**: I will start a ML research internship at IQVIA in Summer 2020, under supervision of [Dr. Cao (Danica) Xiao (IQVIA)](https://sites.google.com/view/danicaxiao)
+and [Prof. Jimeng Sun (UIUC)](https://scholar.google.com/citations?user=9jmmp5sAAAAJ&hl=en). Let's connect in Boston during summer!
+
+**Mar 2020**: I received more than 6,000 &#x2b50; on [GitHub](https://github.com/yzhao062/). [PyOD](https://github.com/yzhao062/pyod), as the fundamental library for anomaly detection, has been stared by more than 3,000 people.
+The latest version ([V0.7.8](https://pypi.org/project/pyod/)) includes a series of new models, e.g., VAE, LMDD, LODA, etc.
+
+[**#4**] If you want to meet in person for a coffee in Pittsburgh (it is on me), drop me a [line](#contact) &#9749;.
+
+**Mar 2020**: Accepted the PC invite for The 1st Workshop on Artificial Intelligence for Anomalies and Novelties ([AI4AN 2020](https://sites.google.com/view/ai4an2020/home?authuser=0)), co-located with [IJCAI-PRICAI 2020](https://ijcai20.org/).
+
+**[w20d]** Maruan Al-Shedivat, Liam Li, Yue Zhao, Eric P. Xing, Ameet Talwalkar. A New Learning Framework (*Name masked due to the double-blind policy*).
+**Submitted to a major ML conference, under review**.
+
+--I propose and design **large-scale automated learning algorithms, systems, and applications**.
+**Research Keywords**: {{< hl >}}Outlier & Anomaly Detection{{< /hl >}}; {{< hl >}}Automated Machine Learning{{< /hl >}}; {{< hl >}}Scalable Machine Learning{{< /hl >}}; {{< hl >}}Machine Learning Systems{{< /hl >}}; {{< hl >}}Ensemble Learning{{< /hl >}}; {{< hl >}}Information Systems{{< /hl >}}.
+
+
+[**#4**] In addition to develop the most popular outlier detection toolbox [PyOD](https://github.com/yzhao062/pyod),
+I am also maintaining a knowledge repository for [anomaly detection resources](https://github.com/yzhao062/anomaly-detection-resources)
+for related books, papers, videos, and toolboxes. Check out to know more about the field!
+
+**[w20f]** {{< hl >}}A Cell Clustering Paper (Name masked due to the double-blind policy){{< /hl >}}, with [Changlin Wan](https://web.ics.purdue.edu/~wan82/), Dongya Jia, Wennan Chang, Sha Cao, Xiao Wang, Chi Zhang.
+**Submitted to a major data mining conference, under review**.
+
+
+**[w20e]** DNA: Differentiating Noise from Anomaly by Generative Models.
+
+**[w20f]** Improving Supervised Anomaly Detection via Unsupervised Representation Learning.
+
+
+**Jul 2020**: Working on an invited talk titled as "Anomaly detection and rare event detection: Applications in Risk Modeling"
+
+**Jul 2020**: [PyOD](https://github.com/yzhao062/pyod) has been downloaded by more than 1,000,000 times!
+
+* [Prof. Pedro Ferreira | H. John Heinz III College \& Department of Engineering and Public Policy, Carnegie Mellon University](https://pedro-ferreira.org/)
+
+**Aug 2020**: Have a new system paper ([SUOD: A Scalable Unsupervised Outlier Detection Framework](papers/20-preprint-suod.pdf)) ready to submit. [SUOD](https://github.com/yzhao062/SUOD) is an
+acceleration system for large-scale unsupervised outlier detection. It has been downloaded by more than 300,000 times, and presented in *AAAI Workshop on* [*Artificial Intelligence for Cyber Security (AICS)*](http://aics.site/AICS2020/).
+
+
+[**#1**] I am an **active software/system developer** with more than 8,000 GitHub stars in total (top 820 among 40,000,000 GitHub developers ranked by
+[Gitstar Ranking](https://gitstar-ranking.com/yzhao062)).
+I led multiple popular open-source ML initiatives, including [PyOD](https://github.com/yzhao062/pyod),
+[combo](https://github.com/yzhao062/combo), [SUOD](https://github.com/yzhao062/suod),
+[anomaly-detection-resources](https://github.com/yzhao062/anomaly-detection-resources), and
+[awesome-ensemble-learning](https://github.com/yzhao062/awesome-ensemble-learning).
+
+**To my dear viewers, please take care of yourself**. Please eat well, do work out, and have good rest.
+I learn this lesson from my grandma, who is currently in ICU due to brain hemorrhage. If you are far away from the family, please call as much as possible.
+I wish you all the best.
+
+Externally, I collaborate with [Prof. Jimeng Sun](http://sunlab.org/) (UIUC) and
+[Prof. Xia "Ben" Hu](http://faculty.cs.tamu.edu/xiahu/) (TAMU).
+
+At CMU, I am working with [Prof. Pedro Ferreira](https://pedro-ferreira.org/) and [Prof. Leman Akoglu](http://www.andrew.cmu.edu/user/lakoglu/).
+
+**Nov 2020**: Our paper [A Data Denoising Approach to Optimize Functional Clustering of Single Cell RNA-sequencing Data]() is accepted at [IEEE BIBM 2020](https://ieeebibm.org/BIBM2020/). Great work [Changlin Wan](https://web.ics.purdue.edu/~wan82/)!
+
+
+**Sep 2020**: Have a paper accepted at [ICDM Workshops 2020 (ICDMW)](https://msdm20.loria.fr/) on "recovering" low-level data from aggregation. A personal copy can be found here: [SynC: A Copula based Framework for Generating Synthetic Data from Aggregated Sources](papers/20-icdmw-sync.pdf).
+
+**Nov 2020**: [My libraries' total downloads](https://github.com/yzhao062/pyod) exceed 3,000,000 times!
+
+**Dec 2020**: Thrilled to be invited by [Prof. Jure Leskovek](https://cs.stanford.edu/people/jure/) @ Stanford University for a research internship/visit in 2021:) See u in CA (if not remotely)!
+
+* [meta-blocks](https://github.com/alshedivat/meta-blocks): A modular toolbox for meta-learning research (Meta-Learning).
+
+**[w20b]** A New Semi-supervised Anomaly Detection Model (Name masked due to the double-blind policy), with [Cheng Cheng](https://scholar.google.ca/citations?user=8LDlwEwAAAAJ&hl=en) (co-first author)
+and [Xiyang Hu](https://www.andrew.cmu.edu/user/xiyanghu/), [Cao (Danica) Xiao (IQVIA)](https://sites.google.com/view/danicaxiao), [Yunlong Wang (IQVIA)](https://scholar.google.com/citations?hl=en&user=xHv-7cQAAAAJ&view_op=list_works&sortby=pubdate),
+[Prof. Jimeng Sun (UIUC)](http://www.sunlab.org/) and [Prof. Jeremy C. Weiss](https://www.andrew.cmu.edu/user/jweiss2/research.html).
+**To be submitted to a major data mining conference**.
+
+{{< hl >}}General Notes{{< /hl >}}: **I am always open to ML/DM Internship & collaboration.
+Not necessarily pure research; ML system or AutoML would be great. Please reach out :)**
+
+**Oct 2020**: Our demo paper [TODS: An Automated Time Series Outlier Detection System](https://arxiv.org/pdf/2009.09822.pdf) is accepted at [AAAI 2021](https://aaai.org/Conferences/AAAI-21/aaai21demoscall/).
+See the new Python library [TODS](https://github.com/datamllab/tods) [(video)](https://www.youtube.com/watch?v=H0bBXuDUe7s&feature=youtu.be) designed for time-series outlier detection. It is initialized and led by [DATA Lab @ Texas A&M University](https://people.engr.tamu.edu/xiahu/people.html);
+I contribute to core detection model design and implementation.
+
+**Oct 2020**: Our paper [AutoAudit: Mining Accounting and Time-Evolving Graphs](https://arxiv.org/abs/2011.00447) will appear in [IEEE BigData 2020](http://bigdataieee.org/BigData2020/). It is a system for
+detecting anomalies in time-evolving graphs. Great work with Meng-Chieh Lee, Aluna Wang, Pierre Jinghong Liang, Leman Akoglu, Vincent S. Tseng, and Christos Faloutsos!
+
+**Sep 2020**: We have a new paper [Automating Outlier Detection via Meta-Learning](https://arxiv.org/abs/2009.10606) ([code](https://github.com/yzhao062/MetaOD)) out. In this paper,
+we propose the first unsupervised meta-learner that can select (recommend) the most performing outlier detection model on an arbitrary dataset.
+
+**Sep 2020**: Our paper [COPOD: Copula-Based Outlier Detection](papers/20-icdm-copod.pdf) (camera-ready version) will appear in [ICDM 2020](http://icdm2020.bigke.org/) soon!
+It is a **fast, parameter-free,** and **highly interpretable unsupervised outlier detection algorithm**; it is available in [PyOD](https://github.com/yzhao062/pyod) now.
+
+([U Toronto](https://www.utoronto.ca/), [Havard](https://www.harvard.edu/), [UIUC](https://illinois.edu/), [Texas A&M University](https://www.tamu.edu/),
+[Tsinghua](https://www.tsinghua.edu.cn/en/index.htm), [Purdue University](https://www.purdue.edu/), [Northeastern U](https://www.northeastern.edu/),
+[University of Virginia](https://www.virginia.edu/), [PolyU](https://www.polyu.edu.hk/en/), [IQVIA](https://www.iqvia.com/), [Adobe](https://www.adobe.com/), [PwC](https://www.pwc.com/), [Arima](https://www.arimadata.com/), etc.).
+
+, and Prof. Pedro Ferreira (Heinz) on information systems.
+
+* **information systems** problems related to **interaction, trade-off, and cooperation between human and "AI"**
+
+{{< hl >}}Regarding Leetcode style interview{{< /hl >}}: **I strongly dislike the general programming interview, and would NOT do this type of "tests".
+You can trust my coding and design capacity :)**
+
+[Friends &#128107;](img/DSC00346-min.JPG)
+
+
+![Word Cloud from Paper Titles](img/research_cloud.png)
+
+**Jan 2021**: Invited talk by University of Nottingham on general ML applications and career development. Link to be shared soon! See my previous [talks](#talks).
+
+
+**Jan 2021**: We have a new library [PyHealth](https://github.com/yzhao062/PyHealth) released for more than 30 state-of-the-art predictive health algorithms (mostly deep learning based).
+See [the corresponding paper](papers/21-preprint-pyhealth.pdf) as well!
+
+
+
+**Jan 2021**: Have a new system paper ([SUOD: Accelerating Large-scale Unsupervised Heterogeneous Outlier Detection](papers/21-mlsys-suod.pdf)) accepted at [Conference on Machine Learning and Systems (MLSys)](https://mlsys.org/). [SUOD](https://github.com/yzhao062/SUOD) is an
+acceleration system for large-scale unsupervised outlier detection with [Xiyang Hu](https://www.andrew.cmu.edu/user/xiyanghu/). It has been downloaded by more than 900,000 times, included as part of [PyOD](https://github.com/yzhao062/pyod).
+
+
+**Mar 2021**: I will join [Prof. Jure Leskovek](https://cs.stanford.edu/people/jure/)'s team @ Stanford University during summer :)
+
+**Feb 2021**: [Therapeutics Data Commons (TDC)](https://zitniklab.hms.harvard.edu/TDC/), a large collection of > 60 machine learning-ready datasets across more than 20 therapeutic tasks, is released. See [paper on arxiv](https://arxiv.org/abs/2102.09548)!
+Great work led by [Kexin Huang](https://www.kexinhuang.com/) and [Prof. Marinka Zitnik](https://zitniklab.hms.harvard.edu/) from Havard!
+
+**May 2021**: Passed my 1st paper presentation (part of the Ph.D. program requirements)--two more to go!
+
+**Apr 2021**: How to evaluate/select outlier detection models without any external information (e.g., ground truth)?
+We have [a new preprint](https://arxiv.org/pdf/2104.01422.pdf) on using internal strategies for model selection. Do they suffice? [Check out our paper](https://arxiv.org/pdf/2104.01422.pdf)!
+
+[**#1**] **I am open to collaboration opportunities** (anytime & anywhere) and
+**research internships** (summer 2022).
+I could legally work in **United States** (CPT), **Canada** (permanent residency), and **China** (permanent residency). I have been working with
+the professionals from both industry and academia (e.g., Stanford, Havard, Facebook).
+
+[Prof. George H. Chen](http://www.andrew.cmu.edu/user/georgech/) on general ML and statistics,
+
+* [SDM] [LSCP](https://github.com/yzhao062/pyod/blob/master/examples/lscp_example.py): An unsupervised ensemble framework for outlier detection.
+
+* [PyHealth](https://github.com/yzhao062/PyHealth): A Python Library for Healthcare AI (ML for Healthcare).
+
+
+**[w21a]** PyHealth: A Python Library for Health Predictive Models, with Zhi Qiao (equal contribution), Cao (Danica) Xiao, Lucas M. Glass, and Jimeng Sun. [Preprint](papers/21-preprint-pyhealth.pdf).
+
+
+**Aug 2021**: Two impactful large-scale ML initiatives are accepted to [NeurIPS 2021 (Datasets and Benchmarks track)](https://neurips.cc/Conferences/2021/CallForDatasetsBenchmarks).
+See the papers on OpenReview: (1) [Therapeutics Data Commons: Machine Learning Datasets and Tasks for Drug Discovery and Development](https://openreview.net/forum?id=8nvgnORnoWr) and
+(2) [Revisiting Time Series Outlier Detection: Definitions and Benchmarks](https://openreview.net/forum?id=r8IvOsnHchr).
+
+![Word Cloud from Paper Titles](img/research_cloud4.png)
+
+**[w21e]** Automatic Unsupervised Outlier Model Selection, with Ryan A. Rossi and Leman Akoglu.
+**Submitted to a major CS conference, under review**. [Preprint](https://arxiv.org/abs/2009.10606).
+
+**May-Aug 2021**: Visiting at Standford University in [SNAP](http://snap.stanford.edu/) by [Prof. Jure Leskovec](https://cs.stanford.edu/~jure/).
+
+**May 2021**: Have a new journal paper titled *Copula-Based Outlier Detection* under review. It is based on our [ICDM' 20 paper](papers/20-icdm-copod.pdf) with more theoretical analysis.
+See [the extended journal version](papers/21-preprint-copod-journal.pdf)!
+
+{{< hl >}}2022 Summer Internship{{< /hl >}}: **Open to ML/AI research/system internship. Please reach out :)**
+
+**NeurIPS 2021**: Happy to have multiple papers accepted at [NeurIPS 2021](https://nips.cc/), including my latest work on [Automatic Unsupervised Outlier Model Selection](https://openreview.net/forum?id=KCd-3Pz8VjM) and
+the participation in two impactful ML initiatives: (i) [Therapeutics Data Commons: Machine Learning Datasets and Tasks for Drug Discovery and Development](https://openreview.net/forum?id=8nvgnORnoWr) by {Havard, Gatech, and MIT} and
+(ii) [Revisiting Time Series Outlier Detection: Definitions and Benchmarks](https://openreview.net/forum?id=r8IvOsnHchr) by Rice University.
+
+**Sep 2021**: Happy to spend my summer (as a member of the [PyG team](https://github.com/pyg-team)) for adding some cool features to [PyTorch Geometric (PyG)](https://www.pyg.org/). Check out [PyG 2.0](https://www.pyg.org/PyG2.0-released)!
+**Oct 2021**: Invited to give a talk on ML applications in D&A at [E&Y Canada](https://www.ey.com/en_ca) Learning Series.
+
+**Jan 2022**: Will intern at [Microsoft Research (MSR)](https://www.microsoft.com/en-us/research/) in summer 2022 for AutoML with outlier detection.
+And of course, it is remote :)
+
+{{< hl >}}Startup and VC{{< /hl >}}: I am interested in capitalizing my expertise in machine learning systems and outlier detection. Let's connect!
+
+
+**Dec 2021**: Talk at CMU [Catalyst](https://catalyst.cs.cmu.edu/): Systems for Data Mining Algorithms. Ping me for the slides.
+* [ICDM] [COPOD](https://github.com/winstonll/COPOD):  A fast and parameter-free outlier detection method.
+
+Research-wise, I specialize in designing and building **machine learning systems** (MLSys),
+with realization and applications in **outlier detection**, healthcare, graph neural networks, and ensemble learning.
+My research focuses on the intersection of two fields:
+* **machine learning systems** that **speed/scale up** and **automate** learning algorithms
+* **data mining algorithms** like **outlier detection** (anomaly detection)
+
+
+&#127881; [**Looking for paper review opportunities in outlier detection and related fields**](#services).
+
+
+![OD universe](img/od_universe.png)
+
+----
+
+* [IEEE Transactions on Neural Networks and Learning Systems (TNNLS)](https://cis.ieee.org/publications/t-neural-networks-and-learning-systems)
+
+**Jan 2022**: Both [PyOD](https://github.com/yzhao062/pyod) and [Anomaly Detection Resources](https://github.com/yzhao062/anomaly-detection-resources) are ranked top 10 data mining projects on [GitHub](https://github.com/topics/data-mining).
+
+**Feb 2022**: Invited talk at Tesla for large-scale anomaly detection.
+
+(formerly known as the Symantec Research Labs Fellowship)
+
+**Conference & Workshop**:
+
+* [NeurIPS 2021](https://neurips.cc/Conferences/2021/CallForDatasetsBenchmarks)
+* [KDD 2020](https://www.kdd.org/kdd2020/), [KDD 2021](https://www.kdd.org/kdd2021/), [KDD 2022](https://www.kdd.org/kdd2022/)
+* [IJCAI 2022](https://ijcai-22.org/)
+* [AAAI 2021](https://aaai.org/Conferences/AAAI-21/), [AAAI 2022](https://aaai.org/Conferences/AAAI-22/)
+* [ICDM 2020](http://icdm2020.bigke.org/)
+* [MICCAI 2020](https://www.miccai2020.org/en/), [MICCAI 2021](https://www.miccai2021.org/en/), [MICCAI 2022](https://conferences.miccai.org/2022/en/)
+* [INFORMS Workshop on Data Science 2021](http://2021.dsconf.cc/)
+
+- Outlier detection systems (JMLR'19, AAAI'21, MLsys'21, NeurIPS'21)
+- Outlier detection algorithms (IJCNN'18, SDM'19, BigData'20, ICDM'20, TKDE'22)
+- Automated outlier detection (NeuIPS'21)
+- AI x Science (AAAI'20, NeuIPS'21)
+
+**Jan 2022**: Accepted an invite @ [Andalusian Research Institute in Data Science and Computational Intelligence (DaSCI)](https://dasci.es/) to present my recent work on outlier detection.
+I am an enthusiastic open-source developer: I build **machine learning libraries and systems**.
+Specifically, I initialized [Python Outlier Detection library (PyOD)](https://github.com/pyod) in 2018,
+which has become the most popular Python outlier detection toolkit.
+I also initialized [combo: A Python Toolbox for Machine Learning Model Combination](https://github.com/yzhao062/combo) in
+July 2019--it is currently under active development.
+
+My recent works is a new ML system called SUOD (**S**calable **U**nsupervised **O**utlier **D**etection), for accelerating model training and prediction when a large number of outlier detectors are presented on large, high-dimensional datasets.
+[Watch/Star/Follow welcome!](https://github.com/yzhao062/suod)
+
+- **machine learning systems**: PyOD (JMLR'19), TODS (AAAI'21), SUOD (MLsys'21), TOD (2022), PyGOD (2022)
+- **ensemble learning**: XGBOD (IJCNN'18), LSCP (SDM'19), combo (AAAI'20), COPOD (ICDM'20), ECOD (TKDE'22)
+- **automated machine learning**: AutoAudit (BigData'20), MetaOD (NeuIPS'21)
+- **graph neural networks**: CONAD (PAKDD'22), PyGOD (2022)
+- **AI x Science**: HR management (Intellisys'18), CIBS (BIBM'20), PyHealth (2021), TDC (NeuIPS'21)
+
+
+**Community**: I am organizing **the largest open-source community of outlier detection**, including
+(1) the most popular detection system [PyOD](https://github.com/yzhao062/pyod) (7M downloads, top 10 data mining projects on GitHub)
+(2) the most watched and starred [Anomaly Detection Resources](https://github.com/yzhao062/anomaly-detection-resources) with hundreds of books, tutorial, and papers (5k+ stars)
+(3) the discussion groups with hundreds of outlier detection researchers and practitioners from MIT, Meta, and more (see note [#1] below).
+
+**Mar 2022**: Invited to present at Morgan Stanley for large-scale anomaly detection systems!
+
+**Mar 2022**: &#127881; I received the prestigious 2022 [Norton Labs Graduate Fellowship](https://www.nortonlifelock.com/us/en/research-labs/news/2022-fellowship-winners/) (one of the two graduate students worldwide).
+Thanks to the selection committee and my advisors!
+
+**Mar 2022**: [ECOD: Unsupervised Outlier Detection Using Empirical Cumulative Distribution Functions](papers/22-tkde-ecod.pdf) is accepted to [IEEE Transactions on Knowledge and Data Engineering (TKDE)](https://www.computer.org/csdl/journal/tk)!
+ECOD is a simple yet effective detection algorithm with extremely fast O(nd) runtime.
+
+**Feb 2022**: Propose a new initiative called Detected AI (detected.ai) for large-scale anomaly detection applications.
+It is still too early to tell, but it will be exciting!
+
+**May 2022**: Invited to present at Morgan Stanley for automated outlier detection!
+
+**Apr 2022**: [PyGOD (Python Graph Outlier Detection)](https://github.com/pygod-team/pygod) received 400+ stars in a week!
+We released [PyGOD (Python Graph Outlier Detection)](https://github.com/pygod-team/pygod).
+With PyGOD, you could do anomaly detection with the latest graph neural networks in 5 lines! See [paper](https://arxiv.org/abs/2204.12095) here!
+
+**Jun 2022**: Have a new system out **TOD: GPU-accelerated Outlier Detection via Tensor Operations**. with George H. Chen and Zhihao Jia.
+[Preprint](papers/22-preprint-tod.pdf), [Code being released](https://github.com/yzhao062/pytod)
+
+**TOD** is the **first** fast, comprehensive, GPU-based outlier detection system.
+- &#127775; on average it is **11 times faster than PyOD**!
+- &#127775; it supports various OD algorithms, e,g., kNN, LOF, ABOD, HBOS, etc.
+
+**Jun 2022**: We just released a 36-page, the most comprehensive anomaly detection benchmark paper.
+[The fully open-sourced ADBench](https://github.com/Minqi824/ADBench) compares 30 anomaly detection algorithms on 55 benchmark datasets.
+Please star, fork, and follow for the latest update!
+See [paper](papers/22-preprint-adbench.pdf) here!
+
+
+**Jul 2022**: Invited talk on anomaly detection for risk modeling at Wells Fargo.
+
+**Jul 2022**: Invited guest lecture on anomaly detection (e.g., [PyOD](https://github.com/yzhao062/pyod)) for Master of the Applied Analytics at Columbia University.
+
+**Jun 2022**: We just released the first node-level graph outlier detection benchmark paper.
+[PyGOD Benchmark](https://github.com/pygod-team/pygod/tree/main/benchmark) compares 10+ graph outlier detection algorithms with many new insights!
+Please star, fork, and follow for the latest update!
+See [paper](https://arxiv.org/abs/2206.10071) here!
+
+[Data Analytics Techniques Algorithms (DATA) Lab](https://datalab.heinz.cmu.edu/) and
+
+
+**Aug 2022**: [ELECT: Toward Unsupervised Outlier Model Selection]() is accepted to [IEEE International Conference on Data Mining (ICDM)](https://icdm22.cse.usf.edu/) as a regular paper!
+
+**Jul 2022**: &#127775; Reached 1000 citations on [Google Scholar](https://scholar.google.com/citations?user=zoGDYsoAAAAJ)!
+
+, [Prof. Xia "Ben" Hu](https://cs.rice.edu/~xh37/index.html) at Rice University,
+
+**Sep 2022**: Two *large-scale anomaly detection benchmarks* for tabular data ([ADBench](https://openreview.net/forum?id=foA_SFQ9zo0)) and graph data ([BOND](https://openreview.net/forum?id=YXvGXEmtZ5N)) accepted at NeurIPS 2022.
+
+- [ADBench](https://openreview.net/forum?id=foA_SFQ9zo0) is my most important work---this 45-page paper contains the analysis results on 30 algorithms on 57 datasets, with around 100,000 experiments. A must-read!
+- [BOND](https://openreview.net/forum?id=YXvGXEmtZ5N) is the first systematic benchmark on node outlier detection.
+
+**Sep 2022**: Check out our [comprehensive survey on diffusion models](https://arxiv.org/abs/2209.00796). Star the [code repo](https://github.com/YangLing0818/Diffusion-Models-Papers-Survey-Taxonomy)!
+
+Before joining CMU, I earned my MS degree from University of Toronto (2016) and BS degree from University of Cincinnati (2015), and worked as a senior consultant at [PwC Canada](https://www.pwc.com/ca/en.html) (2016-19).
+
+
+**Contributions Machine Learning Systems for Anomaly Detection and Out-of-distribution (OOD) Detection**:
+I use *machine learning systems (MLSys)* techniques to support large-scale,
+real-world outlier detection applications in security, finance, and healthcare with millions of downloads.
+I designed CPU-based ([PyOD](https://github.com/yzhao062/pyod)),
+GPU-based ([TOD](https://github.com/yzhao062/tod)),
+distributed detection systems ([SUOD](https://github.com/yzhao062/suod))
+for tabular ([PyOD](https://github.com/yzhao062/pyod)), time-series ([TODS](https://github.com/datamllab/tods)),
+and graph data ([PyGOD](https://github.com/pygod-team/pygod)).
+To understand the characteristics of OD algorithms, I co-author *large-scale benchmarks* for tabular data ([ADBench](https://openreview.net/forum?id=foA_SFQ9zo0)),
+time-series data ([paper](https://openreview.net/forum?id=r8IvOsnHchr)), and graph data ([BOND](https://openreview.net/forum?id=YXvGXEmtZ5N)).
+My work has been widely used by thousands of *projects and applications*, including
+Amazon, IBM, Morgan Stanley, and Tesla. See [more applications](https://github.com/yzhao062/pyod/network/dependents).
+
+
+**Sep 2022**: [Artificial Intelligence Foundation for Therapeutic Science](https://www.nature.com/articles/s41589-022-01131-2) published in ***Nature Chemical Biology***.
+The paper describes [Therapeutics Data Commons (TDC)](https://tdcommons.ai/) and its various use cases, laying the foundation of therapeutic science.
+
+**Sep 2022**: Two *large-scale anomaly detection benchmarks* for tabular data ([ADBench](https://openreview.net/forum?id=foA_SFQ9zo0)) and graph data ([BOND](https://openreview.net/forum?id=YXvGXEmtZ5N)) accepted at NeurIPS 2022.
+Also, feel free to check out my [thesis in progress (Anomaly and Outlier Detection: Automation, Systems, and Applications)](https://www.overleaf.com/read/hqgfwjtscgjt).
+
+or [WeChat (微信) @ yzhao062](files/ID_yzhao062.JPG).
+
+[**#1**] 我组织并维护多个机器学习研究社交微信群，包括
+- anomaly detection (异常检测微信讨论组) & machine learning systems (机器学习系统讨论组) & 其他机器学习研究方向群
+- ML Ph.D. (北美ML博士求职分享群) where we share postdoc, intern, and full-time jobs for ML Ph.D. (students).
+Join them by scanning [微信 @ 加群小助手](files/ID_breaknever.jpg)!
+
+, [research statement](files/ZHAO_YUE_RS.pdf), and [teaching statement](files/ZHAO_YUE_TS.pdf).
+
+
+Popular ones:
+* [PyOD](https://github.com/yzhao062/pyod): A Python Toolbox for Scalable Outlier Detection (Anomaly Detection).
+* [Therapeutics Data Commons (TDC)](https://tdcommons.ai/): Machine learning for drug discovery.
+* [ADBench](https://github.com/Minqi824/ADBench): The most comprehensive tabular anomaly detection benchmark (30 anomaly detection algorithms on 57 benchmark datasets).
+* [TOD](https://github.com/yzhao062/pytod): Tensor-based outlier detection--First large-scale GPU-based system for acceleration!
+* [PyTorch Geometric (PyG)](https://www.pyg.org/): Graph Neural Network Library for PyTorch. Contributed to profiler & benchmarking, and heterogeneous data transformation.
+* [SUOD](https://github.com/yzhao062/SUOD): An Acceleration System for Large-scale Heterogeneous Outlier Detection.
+* [Python Graph Outlier Detection (PyGOD)](https://www.pygod.org/): A Python Library for Graph Outlier Detection.
+* [combo](https://github.com/yzhao062/combo): A Python Toolbox for ML Model Combination (Ensemble Learning).
+* [TODS](https://github.com/datamllab/tods): Time-series Outlier Detection. Contributed to core detection models.
+
+* &#x1F437; [Xiyang Hu | Machine Learning, Information Systems, Natural Language Processing](https://www.andrew.cmu.edu/user/xiyanghu/)
+
+**Recent and Upcoming Talks**:
+- **Talk title**: *Automated and Scalable Algorithms and Systems for Unsupervised ML*
+- **Presented at**: KAUST, Emory, USC, UC Davis, Stony Brook, U Chicago, CMU (PDL), UCM
+
+Will share more on intern/visitor, graduate student, and postdoc recruitment later.
+, with the support from the CMU [Presidential Fellowship](https://www.cmu.edu/sfs/financial-aid/types/scholarships-and-grants/university.html) and [Norton Graduate Fellowship](https://www.nortonlifelock.com/us/en/research-labs/news/2022-fellowship-winners/).
+
+**Dec 2022**: [The Need for Unsupervised Outlier Model Selection: A Review and Evaluation of Internal Evaluation Strategies](papers/23-kdd-explorations-ipm.pdf)
+will appear in ACM SIGKDD Explorations Newsletter 2023 (joint work with Leman Akoglu).
+
+**Nov 2022**: Happy to serve as the workflow co-chair for [KDD 2023](https://www.kdd.org/kdd2023/)!
+
+**Nov 2022**: [ADMoE: Anomaly Detection with Mixture-of-Experts from Noisy Labels](https://arxiv.org/abs/2208.11290)
+will appear in [AAAI 2023](https://aaai.org/Conferences/AAAI-23/)--the first framework of using multiple sets of noisy labels for detection.
+
+**Oct 2022**: Have a new system paper out **TOD: GPU-accelerated Outlier Detection via Tensor Operations**. with George H. Chen and Zhihao Jia.
+[VLDB paper](https://arxiv.org/abs/2110.14007), [Code](https://github.com/yzhao062/pytod).
+
+**Oct 2022**: Great news! [Our proposal](https://research.facebook.com/blog/2022/10/announcing-the-winners-of-the-2022-ai4ai-research-request-for-proposals/) (led by Prof. Zhihao Jia) for AI-assisted systems has been funded via Meta 2022 AI4AI Research!
+
+I was a senior consultant/associate at PwC Canada from 2017-2019.
+
+**Research outcomes**. I have published more than 30 papers in leading journals such as JMLR, NeurIPS, VLDB, and MLsys
+(primarily for unsupervised ML if not specified):
+
+{{<table "table table-striped table-bordered">}}
+| **Primary field**                 | **Secondary**                	| **Method**    	| **Year** 	| **Venue**  	| **Lead author** 	    |
+|--------------------------------	|------------------------------	|---------------	|----------	|------------	|--------------------	|
+| **large-scale Benchmark**      	| **tabular data**              | ADBench          	| 2022     	| NeurIPS       | Y                  	|
+| **large-scale Benchmark**      	| **graph learning**            | BOND          	| 2022     	| NeurIPS       | Y                  	|
+| **large-scale Benchmark**       	| **sequence data**             | TODS          	| 2021     	| NeurIPS       |                    	|
+| **automated machine learning** 	| **model selection**           | MetaOD        	| 2021     	| NeurIPS    	| Y                  	|
+| **automated machine learning** 	| **model selection**           | ELECT         	| 2022     	| ICDM      	| Y                  	|
+| **automated machine learning** 	| **HP optimization**           | HPOD          	| 2022     	| Preprint      | Y                  	|
+| **automated machine learning** 	| **evaluation metrics**        | IPM           	| 2023     	| KDD Explor.   | Y                  	|
+| **automated machine learning** 	| **neural arch. search (NAS)** | NAC             	| 2023     	| ICML          |                   	|
+| **machine learning systems**   	|                              	| PyOD          	| 2019     	| JMLR       	| Y                  	|
+| **machine learning systems**   	| **time series**              	| TODS          	| 2020     	| AAAI          |                    	|
+| **machine learning systems**   	|                              	| SUOD          	| 2021     	| MLSys      	| Y                  	|
+| **machine learning systems**   	| **distributed systems**  	    | TOD           	| 2022     	| VLDB   	    | Y                  	|
+| **machine learning systems**   	| **graph neural networks**    	| PyGOD         	| 2022     	| Preprint   	| Y                  	|
+| **robust ML**                 	| **semi-supervised**          	| XGBOD         	| 2018     	| IJCNN      	| Y                  	|
+| **robust ML**                 	| **ensemble learning**         | LSCP          	| 2019     	| SDM        	| Y                  	|
+| **robust ML**                 	| **ensemble learning**         | combo         	| 2020     	| AAAI       	| Y                  	|
+| **robust ML**                 	| **ensemble learning**         | COPOD         	| 2020     	| ICDM       	| Y                  	|
+| **robust ML**                 	| **ensemble learning**         | ECOD          	| 2022     	| TKDE       	| Y                  	|
+| **robust ML**                 	| **noisy label learning**      | ADMoE          	| 2023     	| AAAI       	| Y                  	|
+| **graph mining** 	                | **finance**               	| AutoAudit     	| 2020     	| BigData    	|                    	|
+| **graph neural networks**      	| **contrastive learning**     	| CONAD         	| 2022     	| PAKDD      	|                    	|
+| **Diffusion Models**              | **survey**                    |                   | 2022      | Preprint      |                       |
+| **AI x Science**               	| **synthetic data**            | SynC              | 2020     	| ICDMW       	|                    	|
+| **AI x Science**               	| **healthcare AI**             | PyHealth      	| 2020     	| Preprint   	| Y                  	|
+| **AI x Science**               	| **Datasets & Benchmark**      | TDC           	| 2021     	| NeurIPS    	|                    	|
+| **AI x Science**               	| **Datasets & Benchmark**      | TDC V2           	| 2022     	| NCHEMB    	|                    	|
+{{</table>}}
+
+<pre></pre>
+
+![Research Overview](img/overview.png)

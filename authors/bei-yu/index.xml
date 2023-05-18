@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bei Yu | Yue Zhao</title>
+    <link>https://www.andrew.cmu.edu/user/yuezhao2/authors/bei-yu/</link>
+      <atom:link href="https://www.andrew.cmu.edu/user/yuezhao2/authors/bei-yu/index.xml" rel="self" type="application/rss+xml" />
+    <description>Bei Yu</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Copyright © Yue Zhao; Last update Jan 2023</copyright><lastBuildDate>Tue, 14 Nov 2023 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://www.andrew.cmu.edu/user/yuezhao2/img/icon-192.png</url>
+      <title>Bei Yu</title>
+      <link>https://www.andrew.cmu.edu/user/yuezhao2/authors/bei-yu/</link>
+    </image>
+    
+    <item>
+      <title>Do Not Train It: A Linear Neural Architecture Search of Graph Neural Networks</title>
+      <link>https://www.andrew.cmu.edu/user/yuezhao2/publication/23-icml-nac/</link>
+      <pubDate>Tue, 14 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://www.andrew.cmu.edu/user/yuezhao2/publication/23-icml-nac/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

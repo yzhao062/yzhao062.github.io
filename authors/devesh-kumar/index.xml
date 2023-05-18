@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Devesh Kumar | Yue Zhao</title>
+    <link>https://www.andrew.cmu.edu/user/yuezhao2/authors/devesh-kumar/</link>
+      <atom:link href="https://www.andrew.cmu.edu/user/yuezhao2/authors/devesh-kumar/index.xml" rel="self" type="application/rss+xml" />
+    <description>Devesh Kumar</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Copyright © Yue Zhao; Last update Jan 2023</copyright><lastBuildDate>Mon, 01 Feb 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://www.andrew.cmu.edu/user/yuezhao2/img/icon-192.png</url>
+      <title>Devesh Kumar</title>
+      <link>https://www.andrew.cmu.edu/user/yuezhao2/authors/devesh-kumar/</link>
+    </image>
+    
+    <item>
+      <title>TODS: An Automated Time Series Outlier Detection System</title>
+      <link>https://www.andrew.cmu.edu/user/yuezhao2/publication/21-aaai-tods/</link>
+      <pubDate>Mon, 01 Feb 2021 00:00:00 +0000</pubDate>
+      <guid>https://www.andrew.cmu.edu/user/yuezhao2/publication/21-aaai-tods/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

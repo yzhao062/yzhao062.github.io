@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Zain Nasrullah | Yue Zhao</title>
+    <link>https://www.andrew.cmu.edu/user/yuezhao2/authors/zain-nasrullah/</link>
+      <atom:link href="https://www.andrew.cmu.edu/user/yuezhao2/authors/zain-nasrullah/index.xml" rel="self" type="application/rss+xml" />
+    <description>Zain Nasrullah</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Copyright © Yue Zhao; Last update Jan 2023</copyright><lastBuildDate>Mon, 22 Jul 2019 08:05:15 +0800</lastBuildDate>
+    <image>
+      <url>https://www.andrew.cmu.edu/user/yuezhao2/img/icon-192.png</url>
+      <title>Zain Nasrullah</title>
+      <link>https://www.andrew.cmu.edu/user/yuezhao2/authors/zain-nasrullah/</link>
+    </image>
+    
+    <item>
+      <title>PyOD: A Python Toolbox for Scalable Outlier Detection</title>
+      <link>https://www.andrew.cmu.edu/user/yuezhao2/publication/19-jmlr-pyod/</link>
+      <pubDate>Mon, 22 Jul 2019 08:05:15 +0800</pubDate>
+      <guid>https://www.andrew.cmu.edu/user/yuezhao2/publication/19-jmlr-pyod/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Music Artist Classification with Convolutional Recurrent Neural Networks</title>
+      <link>https://www.andrew.cmu.edu/user/yuezhao2/publication/19-ijcnn-music/</link>
+      <pubDate>Thu, 18 Jul 2019 08:05:15 +0800</pubDate>
+      <guid>https://www.andrew.cmu.edu/user/yuezhao2/publication/19-ijcnn-music/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>LSCP: Locally Selective Combination in Parallel Outlier Ensembles</title>
+      <link>https://www.andrew.cmu.edu/user/yuezhao2/publication/19-sdm-lscp/</link>
+      <pubDate>Wed, 22 May 2019 08:05:15 +0800</pubDate>
+      <guid>https://www.andrew.cmu.edu/user/yuezhao2/publication/19-sdm-lscp/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

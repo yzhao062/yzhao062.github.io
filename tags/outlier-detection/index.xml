@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Outlier Detection | Yue Zhao</title>
+    <link>https://www.andrew.cmu.edu/user/yuezhao2/tags/outlier-detection/</link>
+      <atom:link href="https://www.andrew.cmu.edu/user/yuezhao2/tags/outlier-detection/index.xml" rel="self" type="application/rss+xml" />
+    <description>Outlier Detection</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Copyright © Yue Zhao; Last update Jan 2023</copyright><lastBuildDate>Sat, 14 Oct 2023 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://www.andrew.cmu.edu/user/yuezhao2/img/icon-192.png</url>
+      <title>Outlier Detection</title>
+      <link>https://www.andrew.cmu.edu/user/yuezhao2/tags/outlier-detection/</link>
+    </image>
+    
+    <item>
+      <title>TOD: GPU-accelerated Outlier Detection via Tensor Operations</title>
+      <link>https://www.andrew.cmu.edu/user/yuezhao2/publication/23-vldb-tod/</link>
+      <pubDate>Sat, 14 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>https://www.andrew.cmu.edu/user/yuezhao2/publication/23-vldb-tod/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The Need for Unsupervised Outlier Model Selection: A Review and Evaluation of Internal Evaluation Strategies</title>
+      <link>https://www.andrew.cmu.edu/user/yuezhao2/publication/23-kdd-explorations-ipm/</link>
+      <pubDate>Thu, 01 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>https://www.andrew.cmu.edu/user/yuezhao2/publication/23-kdd-explorations-ipm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ADMoE: Anomaly Detection with Mixture-of-Experts from Noisy Labels</title>
+      <link>https://www.andrew.cmu.edu/user/yuezhao2/publication/23-aaai-admoe/</link>
+      <pubDate>Tue, 14 Feb 2023 00:00:00 +0000</pubDate>
+      <guid>https://www.andrew.cmu.edu/user/yuezhao2/publication/23-aaai-admoe/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ADBench: Anomaly Detection Benchmark</title>
+      <link>https://www.andrew.cmu.edu/user/yuezhao2/publication/22-neurips-adbench/</link>
+      <pubDate>Thu, 15 Sep 2022 00:00:00 +0000</pubDate>
+      <guid>https://www.andrew.cmu.edu/user/yuezhao2/publication/22-neurips-adbench/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>BOND: Benchmarking Unsupervised Outlier Node Detection on Static Attributed Graphs</title>
+      <link>https://www.andrew.cmu.edu/user/yuezhao2/publication/22-neurips-bond/</link>
+      <pubDate>Wed, 14 Sep 2022 00:00:00 +0000</pubDate>
+      <guid>https://www.andrew.cmu.edu/user/yuezhao2/publication/22-neurips-bond/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ELECT: Toward Unsupervised Outlier Model Selection</title>
+      <link>https://www.andrew.cmu.edu/user/yuezhao2/publication/22-icdm-elect/</link>
+      <pubDate>Fri, 12 Aug 2022 08:05:15 +0800</pubDate>
+      <guid>https://www.andrew.cmu.edu/user/yuezhao2/publication/22-icdm-elect/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ADBench</title>
+      <link>https://www.andrew.cmu.edu/user/yuezhao2/project/adbench/</link>
+      <pubDate>Sun, 17 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>https://www.andrew.cmu.edu/user/yuezhao2/project/adbench/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>PyGOD (Python Graph Outlier Detection)</title>
+      <link>https://www.andrew.cmu.edu/user/yuezhao2/project/pygod/</link>
+      <pubDate>Fri, 01 Apr 2022 00:00:00 +0000</pubDate>
+      <guid>https://www.andrew.cmu.edu/user/yuezhao2/project/pygod/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ECOD: Unsupervised Outlier Detection Using Empirical Cumulative Distribution Functions</title>
+      <link>https://www.andrew.cmu.edu/user/yuezhao2/publication/22-tkde-ecod/</link>
+      <pubDate>Tue, 01 Mar 2022 08:05:15 +0800</pubDate>
+      <guid>https://www.andrew.cmu.edu/user/yuezhao2/publication/22-tkde-ecod/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Contrastive Attributed Network Anomaly Detection with Data Augmentation</title>
+      <link>https://www.andrew.cmu.edu/user/yuezhao2/publication/22-pakdd/</link>
+      <pubDate>Wed, 12 Jan 2022 08:05:15 +0800</pubDate>
+      <guid>https://www.andrew.cmu.edu/user/yuezhao2/publication/22-pakdd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Automatic Unsupervised Outlier Model Selection</title>
+      <link>https://www.andrew.cmu.edu/user/yuezhao2/publication/21-neurips-metaod/</link>
+      <pubDate>Fri, 01 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>https://www.andrew.cmu.edu/user/yuezhao2/publication/21-neurips-metaod/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Revisiting Time Series Outlier Detection: Definitions and Benchmarks</title>
+      <link>https://www.andrew.cmu.edu/user/yuezhao2/publication/21-neurips-tods/</link>
+      <pubDate>Fri, 01 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>https://www.andrew.cmu.edu/user/yuezhao2/publication/21-neurips-tods/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SUOD: Accelerating Large-scale Unsupervised Heterogeneous Outlier Detection</title>
+      <link>https://www.andrew.cmu.edu/user/yuezhao2/publication/21-mlsys-suod/</link>
+      <pubDate>Sat, 03 Apr 2021 00:00:00 +0000</pubDate>
+      <guid>https://www.andrew.cmu.edu/user/yuezhao2/publication/21-mlsys-suod/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>A Data Denoising Approach to Optimize Functional Clustering of Single Cell RNA-sequencing Data</title>
+      <link>https://www.andrew.cmu.edu/user/yuezhao2/publication/20-bibm-cibs/</link>
+      <pubDate>Mon, 12 Oct 2020 08:05:15 +0800</pubDate>
+      <guid>https://www.andrew.cmu.edu/user/yuezhao2/publication/20-bibm-cibs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>AutoAudit: Mining Accounting and Time-Evolving Graphs</title>
+      <link>https://www.andrew.cmu.edu/user/yuezhao2/publication/20-bigdata-autoaudit/</link>
+      <pubDate>Mon, 12 Oct 2020 08:05:15 +0800</pubDate>
+      <guid>https://www.andrew.cmu.edu/user/yuezhao2/publication/20-bigdata-autoaudit/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>COPOD: Copula-Based Outlier Detection</title>
+      <link>https://www.andrew.cmu.edu/user/yuezhao2/publication/20-icdm-copod/</link>
+      <pubDate>Wed, 12 Aug 2020 08:05:15 +0800</pubDate>
+      <guid>https://www.andrew.cmu.edu/user/yuezhao2/publication/20-icdm-copod/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DSR: An Accurate Single Image Super Resolution Approach for Various Degradations</title>
+      <link>https://www.andrew.cmu.edu/user/yuezhao2/publication/20-icme-dsr/</link>
+      <pubDate>Sun, 01 Mar 2020 08:05:15 +0800</pubDate>
+      <guid>https://www.andrew.cmu.edu/user/yuezhao2/publication/20-icme-dsr/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SynC: A Unified Framework for Generating Synthetic Population with Gaussian Copula</title>
+      <link>https://www.andrew.cmu.edu/user/yuezhao2/publication/20-aaai-sync/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://www.andrew.cmu.edu/user/yuezhao2/publication/20-aaai-sync/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>PyOD: A Python Toolbox for Scalable Outlier Detection</title>
+      <link>https://www.andrew.cmu.edu/user/yuezhao2/publication/19-jmlr-pyod/</link>
+      <pubDate>Mon, 22 Jul 2019 08:05:15 +0800</pubDate>
+      <guid>https://www.andrew.cmu.edu/user/yuezhao2/publication/19-jmlr-pyod/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>LSCP: Locally Selective Combination in Parallel Outlier Ensembles</title>
+      <link>https://www.andrew.cmu.edu/user/yuezhao2/publication/19-sdm-lscp/</link>
+      <pubDate>Wed, 22 May 2019 08:05:15 +0800</pubDate>
+      <guid>https://www.andrew.cmu.edu/user/yuezhao2/publication/19-sdm-lscp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>XGBOD: Improving Supervised Outlier Detection with Unsupervised Representation Learning</title>
+      <link>https://www.andrew.cmu.edu/user/yuezhao2/publication/18-ijcnn-xgbod/</link>
+      <pubDate>Sat, 22 Sep 2018 08:05:15 +0800</pubDate>
+      <guid>https://www.andrew.cmu.edu/user/yuezhao2/publication/18-ijcnn-xgbod/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DCSO: Dynamic Combination of Detector Scores for Outlier Ensembles</title>
+      <link>https://www.andrew.cmu.edu/user/yuezhao2/publication/18-kdd-dcso/</link>
+      <pubDate>Sat, 25 Aug 2018 08:05:15 +0800</pubDate>
+      <guid>https://www.andrew.cmu.edu/user/yuezhao2/publication/18-kdd-dcso/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>An empirical study of touch-based authentication methods on smartwatches</title>
+      <link>https://www.andrew.cmu.edu/user/yuezhao2/publication/17-iswc-smartwatch/</link>
+      <pubDate>Fri, 22 Sep 2017 08:05:15 +0800</pubDate>
+      <guid>https://www.andrew.cmu.edu/user/yuezhao2/publication/17-iswc-smartwatch/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

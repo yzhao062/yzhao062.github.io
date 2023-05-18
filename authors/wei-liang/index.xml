@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Wei Liang | Yue Zhao</title>
+    <link>https://www.andrew.cmu.edu/user/yuezhao2/authors/wei-liang/</link>
+      <atom:link href="https://www.andrew.cmu.edu/user/yuezhao2/authors/wei-liang/index.xml" rel="self" type="application/rss+xml" />
+    <description>Wei Liang</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Copyright © Yue Zhao; Last update Jan 2023</copyright><lastBuildDate>Sun, 01 Mar 2020 08:05:15 +0800</lastBuildDate>
+    <image>
+      <url>https://www.andrew.cmu.edu/user/yuezhao2/img/icon-192.png</url>
+      <title>Wei Liang</title>
+      <link>https://www.andrew.cmu.edu/user/yuezhao2/authors/wei-liang/</link>
+    </image>
+    
+    <item>
+      <title>DSR: An Accurate Single Image Super Resolution Approach for Various Degradations</title>
+      <link>https://www.andrew.cmu.edu/user/yuezhao2/publication/20-icme-dsr/</link>
+      <pubDate>Sun, 01 Mar 2020 08:05:15 +0800</pubDate>
+      <guid>https://www.andrew.cmu.edu/user/yuezhao2/publication/20-icme-dsr/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
