@@ -1,7 +1,8 @@
+
 <!DOCTYPE html>
 <!--
     Plain-Academic by Vasilios Mavroudis
-    Released under the Simplified BSD License/FreeBSD (2-clause) License.
+    Released under the  Simplified BSD License/FreeBSD (2-clause) License.
     https://github.com/mavroudisv/plain-academic
 -->
 
@@ -11,105 +12,113 @@
     <link rel="icon" type="image/x-icon" href="/images/logo.ico">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+
 </head>
 <body>
 
 
 <!-- Navigation -->
-	<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
-	  <div class="container">
-		<div class="navbar-header">
-		  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-		</div>
-
-		<!-- Collect the nav links, forms, and other content for toggling -->
-		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-		  <ul class="nav navbar-nav">
-				  <li><a href="index.html">Home</a></li>
-				  <li><a href="#">Projects</a></li>
-				  <li><a href="#publications">Publications</a></li> 
-				  <li><a href="/files/ZHAO_YUE_CV.pdf">CV</a></li>
-		  </ul>
-		</div>
+    <nav class="navbar navbar-inverse style="margin-left: 100px;"">
+      <div class="container">
+		<ul class="nav navbar-nav">
+              <li><a href="#">Home</a></li>
+<!--              <li><a href="#talks">Talks</a></li>-->
+              <li><a href="#publications">Publications</a></li>
+              <li><a href="#teaching">Teaching</a></li>
+              <li><a href="/files/ZHAO_YUE_CV.pdf">CV</a></li>
+		</ul>
 	  </div>
 	</nav>
-  
   <!-- Page Content -->
     <div class="container">
-
         <div class="row">
-
-            <!-- Entries Column -->
-            <div class="col-md-8" style="height: 100vh;">
-                
-                <!-- Main Image -->
-                <img class="img-responsive" src="/images/avatar_hu2082c0e9971c437c9dd1bc1c71d6ae15_138029_250x250_fill_q90_lanczos_center.jpg" alt=""><br>
-                
-                <div style="margin-top:3%; text-align:justify;">                
-					<p>I am remaking my website from the <a href="https://www.andrew.cmu.edu/user/yuezhao2/">CMU one</a>. Stay tuned!!</p>
-					
-<!--					<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>-->
-<!--					-->
-<!--					<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>-->
-                </div>
-            </div> 
-
             <!-- Contact Info on the Sidebar -->
-            <div class="col-md-4">
-                <div style="font-family: 'Oswald', sans-serif; font-size: 32px;"><b>Yue Zhao</b></div><br>
-                <p><b>yzhao010 at usc.edu</b><br>
-
-                <p><i>Assistant Professor</i><br>
+            <div class="col-md-3 col-xs-12">
+                <div style="word-wrap: break-word; font-family: 'Oswald', sans-serif; font-size: 32px;"><b>Yue Zhao</b></div><br>
+<!--                <div> <p>(she)<br> </div>-->
+                <div class="row"> <div class="col-md-10 col-xs-4"> <img class="img-responsive" src="/images/avatar_small.jpg" alt=""></div></div><br>
+                <i>Assistant Professor</i><br>
                 Computer Science Department<br>
-                University of Southern California<br>
+                <p style="color:#990000";>University of Southern California<br></p>
 <!--                Street<br>-->
                 Los Angeles, CA, USA<br>
-                </p>
+                <div> <p><b>Email</b>: yzhao010 at usc.edu<br> </div>
+                <div> <p>
+                    <a href="https://scholar.google.com/citations?user=zoGDYsoAAAAJ&hl=en">Google Scholar</a> |
+                    <a href="https://github.com/yzhao062">GitHub</a> |
+                    <a href="https://twitter.com/yzhao062"> Twitter</a>
+                </div>
             </div>
-            
-            
-            <!-- Links on the Sidebar -->
-            <div class="col-md-4" style="margin-top:2%">
-              <dd><a href="https://scholar.google.com/citations?user=zoGDYsoAAAAJ&hl=en">Google Scholar</a></dd>
-              <dd><a href="https://twitter.com/yzhao062">Twitter</a></dd>
-              <dd><a href="https://www.linkedin.com/in/yzhao062/">LinkedIn</a></dd>
-            </div>
-            
-            
-            <!-- Publications -->
-            <div class="col-md-8" style="height: 100vh;">    
-                <h2 id="publications">Publications</h2>
-                
-                <strong>Peer-reviewed</strong><br/>
-                <ul>
-                <li class="paper" words="add, your, keywords, here"><a href="#">Full title</a> Names of the authors</li>
-                </ul>
-            
-                <strong>Technical Reports</strong><br/>
-                <ul>
-                <li class="paper" words="add, your, keywords, here"><a href="#">Full title</a>. Details of the report</li>
-                </ul>
-            </div>
+            <!-- Entries Column -->
+            <div class="col-md-8 col-xs-12">
+                <div class="col" style="margin-top:3%; text-align:left;">
 
-            
+                    <p style="color:#990000";><b> I am migrating from my <a href="https://www.andrew.cmu.edu/user/yuezhao2/">CMU page</a> to this one...</b></p>
+
+                    <p><strong>Next Steps</strong>. <span class="markup-quote">🐎 I will join <a href="https://www.cs.usc.edu/">USC</a> as an Assistant Professor of Computer Science in August 2023</span> (more details on intern/visitor, graduate student, and postdoc recruitment to follow.)</p> <p>Contact me by Email (yzhao010 [AT] usc.edu) or <a href="images/ID_yzhao062.JPG" >WeChat @ yzhao062</a>. Of course, please add my WeChat only for good reasons, e.g., collaboration, visiting, joining the group, etc.</p>
+
+                    <p><strong>Short Bio</strong>. I got my Ph.D. in 4 years at <a href="https://www.cmu.edu/">Carnegie Mellon University (CMU)</a>.
+<strong>My research <em>accelerates</em> and <em>automates</em> unsupervised ML</strong>: (1) how to speed up large-scale learning tasks with <strong>ML systems</strong> and (2) how to <strong>automate</strong> unsupervised ML model selection and hyperparameter optimization.
+I build AI/ML applications in <strong>finance</strong>, <strong>healthcare</strong>, and <strong>security</strong>.</p>
+<p><strong>Open-source Contribution</strong>. I have <strong>led</strong> to <a href="https://github.com/yzhao062">more than 10 ML open-source initiatives</a>,
+receiving 16,000 GitHub stars (top 0.002%: <a href="https://gitstar-ranking.com/yzhao062">ranked 800 out of 40M GitHub users</a>) and &gt;15M downloads.</p>
+
+                    <p><strong>Social Media</strong>. I wrote more than 300 articles (in Chinese) with 220,000 followers on <a href="https://en.wikipedia.org/wiki/Zhihu">Zhihu (知乎)</a> (200 million+ users).
+My articles have got more than 20,000,000 time read.
+See my <a href="https://www.zhihu.com/people/breaknever/">Zhihu (微调)</a>.</p>
+
+<p><strong>Ph.D. time</strong>. At CMU, I worked with <a href="http://www.cs.cmu.edu/~lakoglu/">Prof. Leman Akoglu</a>, <a href="https://cs.cmu.edu/~zhihaoj2">Prof. Zhihao Jia</a>,
+and <a href="http://www.andrew.cmu.edu/user/georgech/">Prof. George H. Chen</a>.
+I was a member of  <a href="https://catalyst.cs.cmu.edu/">CMU automated learning systems group (Catalyst)</a>.
+I collaborated with <a href="https://cs.stanford.edu/~jure/">Prof. Jure Leskovec</a> at Stanford and <a href="https://cs.uic.edu/profiles/philip-yu/">Prof. Philip S. Yu</a> at UIC.</p>
+<hr>
+</div>
+                <div class="col">
+<!--                    <h2 id="talks">Talks</h2>-->
+<!--                    <p>NYU CAP Lab, Apr 2023 </p>-->
+<!--                    <p>Cornell University C.Psyd Group, Dec 2022</p>-->
+<!--                    <p><a href="https://sigtyp.github.io/"> SIGTYP 2022 </a> keynote, July 2022 [<a href=pdfs/SIGTYP2022slides.pdf>slides</a>]</p>-->
+<!--                    <p>UT Austin  Computational Linguistics Group, April 2022</p>-->
+<!--                    <p>UC Santa Barbara Computational Linguistics Group, October 2020</p>-->
+
+                    <h2 id="publications">Publications</h2>
+                <p style="color:#990000";><b> Under construction...</b></p>
+
+                    <ul class="vert">
+
+		<li>
+                <strong><a href="https://openreview.net/forum?id=rNLHeKckZc">Do Not Train It: A Linear Neural Architecture Search of Graph Neural Networks</strong></a>. <br>
+            Peng Xu, Lin Zhang, Xuanzhou Liu, Jiaqi Sun, <u>Yue Zhao</u>, Haiqin Yang, Bei Yu.<br>
+			International Conference on Machine Learning (ICML), 2023.
+		</li>
+
+                    </ul>
+<!--		<li>-->
+<!--                <strong>DualDory: Logarithmic-verifier linkable ring signatures through preprocessing</strong>. <br>-->
+<!--		Jonathan Bootle, Kaoutar Elkhiyaoui, Julia Hesse and Yacov Manevich.<br>-->
+<!--			ESORICS 2022<br>-->
+<!--		</li>-->
+</div>
+
+        <div class="col">
+            <h2 id="teaching">Teaching</h2>
+            <p style="color:#990000";><b> Under construction...</b></p>
+<!--                        <p> I was a TA for CS224N, <b>Natural Language Processing with Deep Learning</b>, taught by Chris Manning in Winter 2023</p>-->
+<!--                        <p>I was a TA for the <b>Independent Study in Machine Translation</b> seminar taught by Noah Goodman in Winter 2020</p>-->
+<!--                        <p>At Berkeley I was a TA for <b>CS70 Discrete Math and Probability</b> Fall 2015, taught by Satish Rao and Jean Walrand </p>-->
+                </div>
         </div>
-
-
     </div>
-    <!-- /.container -->
-    
-    <!-- Other people may like it too! -->
-    <a style="color:#b5bec9;font-size:0.8em; float:right;" href="https://github.com/mavroudisv/plain-academic">Plain Academic</a> 
-    
+    </div>
+
+<!--<div id="tcb-wrapper" style="z-index: 2147483647 !important; position: relative !important;"></div>-->
+<!-- people may like it too! &ndash;&gt;-->
+<!--    <a style="color:#b5bec9;font-size:0.8em; float:right;" href="https://github.com/mavroudisv/plain-academic">The template is by Vasilios Mavroudis. Thanks!</a>-->
+
 </body>
 
 </html>
