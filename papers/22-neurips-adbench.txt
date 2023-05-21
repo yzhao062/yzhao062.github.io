@@ -1,0 +1,6 @@
+@inproceedings{han2022adbench,
+  title={Adbench: Anomaly detection benchmark},
+  author={Han, Songqiao and Hu, Xiyang and Huang, Hailiang and Jiang, Mingqi and Zhao, Yue},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year={2022}
+}
