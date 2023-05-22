@@ -1,0 +1,9 @@
+@article{ma2023the,
+  title={The Need for Unsupervised Outlier Model Selection: A Review and Evaluation of Internal Evaluation Strategies},
+  author={Ma, Martin Q and Zhao, Yue and Zhang, Xiaorong and Akoglu, Leman},
+  journal={ACM SIGKDD Explorations Newsletter},
+  volume={25},
+  number={1},
+  year={2023},
+  publisher={ACM New York, NY, USA}
+}
