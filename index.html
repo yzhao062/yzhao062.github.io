@@ -15,31 +15,72 @@
   <meta name="description" content="Personal website of Yue Zhao">
   <meta name="keywords" content="MLSys, outlier detection, automl, anomaly detection, Yue Zhao">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+<!--    Original dependency-->
+<!--  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>-->
+<!--  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">-->
+<!--  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>-->
+<!--    Added by ChatGPT-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!--    Added by ChatGPT-->
+    <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <meta name="google-site-verification" content="RccnJHpThamoK-j8CG_5OuRUWJ93bU8HHLFZJpwvDJ8" />
 </head>
 <body>
 
+<style>
+  .heading {
+    word-wrap: break-word;
+    font-family: 'Oswald', sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .info-text {
+    margin-bottom: 10px;
+  }
+
+  .university-color {
+    color: #990000;
+  }
+
+  .link-list a {
+    margin-right: 5px;
+  }
+</style>
+
 <!-- Navigation -->
 <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
-      <div class="container">
-		<ul class="nav navbar-nav">
-              <li><a href="index.html">Home</a></li>
-<!--              <li><a href="#talks">Talks</a></li>-->
-<!--              <li><a href="publications.html">Publications</a></li>-->
-              <li><a href="#publications">Publications</a></li>
-              <li><a href="#teaching">Teaching</a></li>
-              <li><a href="#awards">Awards</a></li>
-              <li><a href="#services">Services</a></li>
-              <li><a href="files/ZHAO_YUE_CV.pdf">CV</a></li>
-              <li><a href="#join-asap">Join ASAP "ASAP"</a></li>
-		</ul>
-	  </div>
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Yue Zhao</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">Home</a></li>
+        <!-- <li><a href="#talks">Talks</a></li> -->
+        <!-- <li><a href="publications.html">Publications</a></li> -->
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#teaching">Teaching</a></li>
+        <li><a href="#awards">Awards</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="files/ZHAO_YUE_CV.pdf">CV</a></li>
+        <li><a href="#join-asap">Join ASAP "ASAP"</a></li>
+      </ul>
+    </div>
+  </div>
 </nav>
+
 
 <!--It is possible to have multiple pages  https://souravchatterjee.su.domains//index.html -->
   <!-- Page Content -->
@@ -47,29 +88,34 @@
         <div class="row">
             <!-- Contact Info on the Sidebar -->
             <div class="col-md-3 col-xs-12">
-                <div style="word-wrap: break-word; font-family: 'Oswald', sans-serif; font-size: 32px;"><b>Yue Zhao</b></div><br>
-<!--                <div> <p>(she)<br> </div>-->
-                <div class="row"> <div class="col-md-10 col-xs-4"> <img class="img-responsive" src="images/avatar_small2.jpg" alt=""></div></div><br>
+              <div class="heading">Yue Zhao</div>
+              <div class="row">
+                <div class="col-md-10 col-xs-4">
+                  <img class="img-responsive" src="images/avatar_small2.jpg" alt="Avatar of Yue Zhao">
+                </div>
+              </div>
+              <div class="info-text">
                 <i>Assistant Professor</i><br>
                 Computer Science Department<br>
-                <p style="color:#990000";>University of Southern California</p>
+                <p class="university-color">University of Southern California</p>
                 Los Angeles, CA, USA<br>
-                <div> <p><b>Email</b>: yzhao010 at usc.edu<br> </p></div>
-                <div> <p>
-                    <a href="https://scholar.google.com/citations?user=zoGDYsoAAAAJ&hl=en">Google Scholar</a> |
-                    <a href="https://github.com/yzhao062">GitHub</a> |
-                    <a href="https://twitter.com/yzhao062"> Twitter</a> |
-                    <a href="https://www.linkedin.com/in/yzhao062/"> LinkedIn</a> |
-                    <a href="https://www.zhihu.com/people/breaknever/">知乎 (微调)</a> |
-                    <a href="images/ID_yzhao062.JPG" >微信 (加入Lab请通过邮件)</a>
-                </div>
+                <b>Email</b>: <a href="mailto:yzhao010@usc.edu">yzhao010@usc.edu</a><br>
+              </div>
+              <div class="link-list">
+                <a href="https://scholar.google.com/citations?user=zoGDYsoAAAAJ&hl=en">Google Scholar</a> |
+                <a href="https://github.com/yzhao062">GitHub</a> |
+                <a href="https://twitter.com/yzhao062"> Twitter</a> |
+                <a href="https://www.linkedin.com/in/yzhao062/"> LinkedIn</a> |
+                <a href="https://www.zhihu.com/people/breaknever/">知乎 (微调)</a> |
+                <a href="images/ID_yzhao062.JPG">微信 (加入Lab请通过邮件)</a>
+              </div>
             </div>
             <!-- Entries Column -->
             <div class="col-md-8 col-xs-12">
                 <div class="col" style="margin-top:3%; text-align:left;">
 
                     <p><strong style="color:#990000";>Prospective Students and Interns</strong>.
-                        I am actively looking for interns/visitors (not at USC yet), current USC students at all levels, and prospective Ph.D. students (from Fall 24). See <a href="#join-us"> instructions (via email but not via WeChat)</a>.
+                        I am actively looking for interns/visitors (not at USC yet), current USC students at all levels, and prospective Ph.D. students (from Fall 24). See <a href="#join-asap"> instructions (via email but not via WeChat)</a>.
 
                     <p><strong style="color:#990000";>Research</strong>.
                     My research <strong><em>accelerates</em> and <em>automates</em> unsupervised ML</strong> (e.g., <strong>anomaly detection</strong>): (1) how to speed up large-scale learning tasks with <strong>ML systems</strong> and (2) how to <strong>automate</strong> unsupervised ML model selection and hyperparameter optimization.
@@ -96,25 +142,14 @@
 
                 </div>
 
-
-
                 <div class="col">
-<!--                    <h2 id="talks">Talks</h2>-->
-<!--                    <p>NYU CAP Lab, Apr 2023 </p>-->
-<!--                    <p>Cornell University C.Psyd Group, Dec 2022</p>-->
-<!--                    <p><a href="https://sigtyp.github.io/"> SIGTYP 2022 </a> keynote, July 2022 [<a href=pdfs/SIGTYP2022slides.pdf>slides</a>]</p>-->
-<!--                    <p>UT Austin  Computational Linguistics Group, April 2022</p>-->
-<!--                    <p>UC Santa Barbara Computational Linguistics Group, October 2020</p>-->
-
                     <h2 id="publications">Recent Publications</h2>
-<!--                    <p style="color:#990000";><b> Under construction (add more)...</b></p>-->
                     <p>See my <a href="https://scholar.google.com/citations?user=zoGDYsoAAAAJ">Google Scholar</a>,
                     <a href="https://dblp.org/pid/48/76-16.html">DBLP</a>,
                     <a href="https://orcid.org/0000-0003-3401-4921">ORCID</a>,
                     and <a href="https://www.researchgate.net/profile/Yue_Zhao191">ResearchGate</a> for the full publication list (before 2021).
                     <sup>&dagger;</sup>Equal contribution; <sup>&spades;</sup> Corresponding author
                     </p>
-
 
                     <hr>
 
@@ -236,26 +271,30 @@
                         <a href="https://github.com/yzhao062/SUOD"><i class="fa fa-github" style="font-size:18px"></i></a>
                     </li>
                     </ul>
-<!--		<li>-->
-<!--                <strong>DualDory: Logarithmic-verifier linkable ring signatures through preprocessing</strong>. <br>-->
-<!--		Jonathan Bootle, Kaoutar Elkhiyaoui, Julia Hesse and Yacov Manevich.<br>-->
-<!--			ESORICS 2022<br>-->
-<!--		</li>-->
             </div>
         <hr>
         <div class="col">
             <h2 id="teaching">Teaching</h2>
-            <br>
-            <p> <b>USC</b> (as instructor):</p>
-            <p>- Machine Learning Systems (Spring 2024; to be decided)</p><br>
 
-            <p> <b>CMU</b> (as teaching assistant):</p>
-            <p>- Intro to Artificial Intelligence (Spring 2020-Spring 2022); Digital Transformation (Spring 2022); Statistics for IT Managers (Fall 2021)</p><br>
+            <h4>USC (as instructor):</h4>
+            <ul>
+                <li>Machine Learning Systems (Spring 2024; to be decided)</li>
+            </ul>
 
-            <p> <b>University of Toronto</b> (as teaching assistant):</p>
-            <p>- Embedded Systems (Fall 2015)</p>
+            <h4>CMU (as teaching assistant):</h4>
+            <ul>
+                <li>Intro to Artificial Intelligence (Spring 2020-Spring 2022)</li>
+                <li>Digital Transformation (Spring 2022)</li>
+                <li>Statistics for IT Managers (Fall 2021)</li>
+            </ul>
+
+            <h4>University of Toronto (as teaching assistant):</h4>
+            <ul>
+                <li>Embedded Systems (Fall 2015)</li>
+            </ul>
 
         </div>
+
         <hr>
 
         <div class="col">
@@ -318,32 +357,31 @@
         <hr>
 <!--        <div class="col">-->
         <h2 id="join-asap">Join <u>A</u>utomation, <u>S</u>ystem, and <u>AP</u>plication (ASAP) Lab</h2>
-            <p><strong style="color:#990000";>Openings</strong>.
-                I am actively looking for intern/visitor (not at USC), current USC students, and prospective Ph.D. student (from Fall 24).
-                I also wrote an article about these opportunities in Chinese: <a href="https://zhuanlan.zhihu.com/p/635612451"> 加入USC ASAP Lab来和我一起策"马"扬鞭！</a> </p>
+        <p><strong style="color:#990000;">Openings</strong>.
+            I am actively looking for intern/visitor (not at USC), current USC students, and prospective Ph.D. student (from Fall 24).
+            I also wrote an article about these opportunities in Chinese: <a href="https://zhuanlan.zhihu.com/p/635612451"> 加入USC ASAP Lab来和我一起策"马"扬鞭！</a> </p>
 
-                <p><strong>Why research collaboration/intern first?</strong> It is beneficial for both you and me to work together on a project before committing to long-term advisee/advisor relationship.
-                    Bottom line: you may get a strong reference letter and better offers than USC :-) </p>
+        <p><strong>Why research collaboration/intern first?</strong> It is beneficial for both you and me to work together on a project before committing to long-term advisee/advisor relationship.
+            Bottom line: you may get a strong reference letter and better offers than USC :-) </p>
 
-                <p><strong>Please email the following</strong> (subject time: "Interested in {position, e.g., Ph.D.} at {expected time, e.g., Fall 23}"):</p>
-                <ul>
-                <li>
-                    <b>CV</b>: brief background of you and the plan of next steps:) </li>
-                <li>
-                    <b>Research experience</b>: any projects; any publications :) </li>
-                <li>
-                    <b>Why us</b>: if any of my research papers/topics are related to you -- I am also happy to work on new topics if you can propose any :-)
-                </li>
-                </ul>
-            <p><strong>General Expectation.</strong> Strong strong strong programming expertise since we are working on ML Systems and open-source ML. Stats/math is a good plus :)
-            Do not be afraid of making mistakes -> that is part of the research and life. </p>
-<!--        </div>-->
-<!--        </div>-->
+        <p><strong>Please email the following</strong> (subject time: "Interested in {position, e.g., Ph.D.} at {expected time, e.g., Fall 23}"):</p>
+        <ul>
+            <li>
+                <strong>CV</strong>: brief background of you and the plan of next steps :) </li>
+            <li>
+                <strong>Research experience</strong>: any projects; any publications :) </li>
+            <li>
+                <strong>Why us</strong>: if any of my research papers/topics are related to you -- I am also happy to work on new topics if you can propose any :-)
+            </li>
+        </ul>
+        <p><strong>General Expectation.</strong> Strong strong strong programming expertise since we are working on ML Systems and open-source ML. Stats/math is a good plus :)
+        Do not be afraid of making mistakes -> that is part of the research and life. </p>
+        <!--        </div>-->
+        <!--        </div>-->
 
     </div>
+        </div>
     </div>
-    </div>
-</div>
   <!-- Begin Web-Stat code v 6.3 -->
   <span id="wts1866123">&nbsp;</span><script>
   var wts=document.createElement('script');wts.type='text/javascript';
