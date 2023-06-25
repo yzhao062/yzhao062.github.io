@@ -1,0 +1,8 @@
+                <p><strong style="color:#990000";>Research</strong>.
+                My research <strong><em>accelerates</em> and <em>automates</em> unsupervised ML</strong> (e.g., <strong>anomaly detection</strong>): (1) how to speed up large-scale learning tasks with <strong>ML systems</strong> and (2) how to <strong>automate</strong> unsupervised ML model selection and hyperparameter optimization.
+                I build AI/ML applications in finance, healthcare, and security.
+                    <ul>
+                    <li>
+                        <b> Keywords</b>: unsupervised ML, ML systems, Automated ML, anomaly/outlier/out-of-distribution (OOD) detection.
+                    </li>
+                    </ul>
