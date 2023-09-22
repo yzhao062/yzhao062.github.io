@@ -1,8 +1,8 @@
-@article{li2022ecod,
-  author={Li, Zheng and Zhao, Yue and Hu, Xiyang and Botta, Nicola and Ionescu, Cezar and Chen, George},
-  journal={IEEE Transactions on Knowledge and Data Engineering},
-  title={ECOD: Unsupervised Outlier Detection Using Empirical Cumulative Distribution Functions},
-  year={2022},
-  pages={1-1},
-  doi={10.1109/TKDE.2022.3159580}
-  }
+@article{liu2022bond,
+  title={Bond: Benchmarking unsupervised outlier node detection on static attributed graphs},
+  author={Liu, Kay and Dou, Yingtong and Zhao, Yue and Ding, Xueying and Hu, Xiyang and Zhang, Ruitong and Ding, Kaize and Chen, Canyu and Peng, Hao and Shu, Kai and others},
+  journal={Advances in Neural Information Processing Systems},
+  volume={35},
+  pages={27021--27035},
+  year={2022}
+}

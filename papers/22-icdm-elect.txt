@@ -1,7 +1,8 @@
-@inproceedings{zhao2022elect,
-  title={Toward Unsupervised Outlier Model Selection},
+@inproceedings{zhao2022toward,
+  title={Toward unsupervised outlier model selection},
   author={Zhao, Yue and Zhang, Sean and Akoglu, Leman},
-  booktitle={IEEE International Conference on Data Mining (ICDM)},
+  booktitle={2022 IEEE International Conference on Data Mining (ICDM)},
+  pages={773--782},
   year={2022},
-  organization={IEEE},
+  organization={IEEE}
 }

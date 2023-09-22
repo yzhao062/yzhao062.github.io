@@ -1,0 +1,8 @@
+@article{zhao2021automatic,
+  title={Automatic unsupervised outlier model selection},
+  author={Zhao, Yue and Rossi, Ryan and Akoglu, Leman},
+  journal={Advances in Neural Information Processing Systems},
+  volume={34},
+  pages={4489--4502},
+  year={2021}
+}

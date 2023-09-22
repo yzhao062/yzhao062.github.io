@@ -1,0 +1,8 @@
+@inproceedings{yoo2023dsv,
+  title={DSV: An Alignment Validation Loss for Self-supervised Outlier Model Selection},
+  author={Yoo, Jaemin and Zhao, Yue and Zhao, Lingxiao and Akoglu, Leman},
+  booktitle={Joint European Conference on Machine Learning and Knowledge Discovery in Databases},
+  pages={254--269},
+  year={2023},
+  organization={Springer}
+}

@@ -6,3 +6,11 @@
                         <b> Keywords</b>: unsupervised ML, ML systems, Automated ML, anomaly/outlier/out-of-distribution (OOD) detection.
                     </li>
                     </ul>
+
+
+                    <p><strong>[w23f]</strong> ADGym: Design Choices for Deep Anomaly Detection, with Minqi Jiang, Chaochuan Hou, Ao Zheng, Songqiao Han, Hailiang Huang, Qingsong Wen, Xiyang Hu.</p>
+
+                    I also wrote an article about these opportunities in Chinese: <a href="https://zhuanlan.zhihu.com/p/635612451"> 加入USC ASAP Lab来和我一起策"马"扬鞭！</a>
+
+                    Participating in a project together provides a beneficial environment for us to assess our compatibility before committing to a long-term advisee/advisor relationship.
+        And the cherry on top: you might obtain a strong reference letter and secure better offers than that of USC :-)

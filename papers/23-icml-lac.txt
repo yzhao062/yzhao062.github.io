@@ -1,6 +1,8 @@
-@article{xu2023do,
+@inproceedings{xu2023not,
   title={Do Not Train It: A Linear Neural Architecture Search of Graph Neural Networks},
-  author={Peng Xu and Lin Zhang and Xuanzhou Liu and Jiaqi Sun and Yue Zhao and Haiqin Yang and Bei Yu},
-  journal={International Conference on Machine Learning},
+  author={Xu, Peng and Zhang, Lin and Liu, Xuanzhou and Sun, Jiaqi and Zhao, Yue and Yang, Haiqin and Yu, Bei},
+  booktitle={International Conference on Machine Learning},
+  pages={38826--38847},
   year={2023},
+  organization={PMLR}
 }

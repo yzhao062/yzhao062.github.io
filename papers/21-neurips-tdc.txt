@@ -1,0 +1,6 @@
+@article{huang2021therapeutics,
+  title={Therapeutics Data Commons: Machine Learning Datasets and Tasks for Drug Discovery and Development},
+  author={Huang, Kexin and Fu, Tianfan and Gao, Wenhao and Zhao, Yue and Roohani, Yusuf and Leskovec, Jure and Coley, Connor and Xiao, Cao and Sun, Jimeng and Zitnik, Marinka},
+  journal={Advances in neural information processing systems},
+  year={2021}
+}

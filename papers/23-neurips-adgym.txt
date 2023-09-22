@@ -1,0 +1,7 @@
+@article{jiang2023adgym,
+  title={ADGym: Design Choices for Deep Anomaly Detection},
+  author={Jiang, Minqi and Hou, Chaochuan and Zheng, Ao and Han, Songqiao and Huang, Hailiang and Wen, Qingsong and Hu, Xiyang and Zhao, Yue},
+  journal={Advances in Neural Information Processing Systems},
+  volume={36},
+  year={2023}
+}
