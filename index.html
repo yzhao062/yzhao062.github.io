@@ -13,13 +13,13 @@
         <link rel="icon" type="image/x-icon" href="images/logo2.ico">
 
         <!-- Stylesheets -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
 
         <!-- Scripts -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     </head>
 
     <body>
@@ -133,33 +133,14 @@
                         </p>
                         <hr>
                     </div>
-                    <div class="col">
-                        <h2 id="news">&#9992; News and Travel</h2>
-                        <p><strong>[Nov 2023]</strong>  Become an Associate Editor of <a href="https://cis.ieee.org/publications/t-neural-networks-and-learning-systems/">IEEE Transactions on Neural Networks and Learning Systems (TNNLS)</a>. Please submit to it!</p>
-                        <p><strong>[Nov 2023]</strong>  The <a href="https://usc-asap.github.io/CICS566-S24/">course website (under construction)</a> for CSCI 566: Deep Learning and its Applications (Spring 2024) is live.</p>
-                        <p><strong>[Oct 2023]</strong>  Become an Action Editor of <a href="https://data.mlr.press/">Journal of Data-centric Machine Learning Research (DMLR)</a>. Please submit to this new sister journal of JMLR and TMLR!</p>
-                        <p><strong>[Sep 2023]</strong> <i>Diffusion Models: A Comprehensive Survey of Methods and Applications</i> is accepted to <a href="https://dl.acm.org/doi/10.1145/3626235"> ACM Computing Surveys</a>. Congrats to Lin Yang and other coauthors! </p>
-                        <p><strong>[Sep 2023]</strong> <i>ADGym: Design Choices for Deep Anomaly Detection</i> is accepted to <a href="https://nips.cc/Conferences/2023"> NeurIPS 2023</a>; I will be in New Orleans, again.</p>
-                    </div>
-                    <hr>
-                    <h2 id="teaching">&#128175; Teaching</h2>
-                    <h4>USC (as instructor):</h4>
-                    <ul>
-                        <li>CSCI 566: Deep Learning and its Applications (Spring 2024); See <a href="https://usc-asap.github.io/CICS566-S24/">Course website (under construction)</a></li>
-                    </ul>
-                    <h4>CMU (as teaching assistant):</h4>
-                    <ul>
-                        <li>Intro to Artificial Intelligence (Spring 2020-Spring 2022)</li>
-                        <li>Digital Transformation (Spring 2022)</li>
-                        <li>Statistics for IT Managers (Fall 2021)</li>
-                    </ul>
-                    <h4>University of Toronto (as teaching assistant):</h4>
-                    <ul>
-                        <li>Embedded Systems (Fall 2015)</li>
-                    </ul>
+                    <h2 id="news">&#9992; News and Travel</h2>
+                    <p><strong>[Nov 2023]</strong>  Become an Associate Editor of <a href="https://cis.ieee.org/publications/t-neural-networks-and-learning-systems/">IEEE Transactions on Neural Networks and Learning Systems (TNNLS)</a>. Please submit to it!</p>
+                    <p><strong>[Nov 2023]</strong>  The <a href="https://usc-asap.github.io/CICS566-S24/">course website (under construction)</a> for CSCI 566: Deep Learning and its Applications (Spring 2024) is live.</p>
+                    <p><strong>[Oct 2023]</strong>  Become an Action Editor of <a href="https://data.mlr.press/">Journal of Data-centric Machine Learning Research (DMLR)</a>. Please submit to this new sister journal of JMLR and TMLR!</p>
+                    <p><strong>[Sep 2023]</strong> <i>Diffusion Models: A Comprehensive Survey of Methods and Applications</i> is accepted to <a href="https://dl.acm.org/doi/10.1145/3626235"> ACM Computing Surveys</a>. Congrats to Lin Yang and other coauthors! </p>
+                    <p><strong>[Sep 2023]</strong> <i>ADGym: Design Choices for Deep Anomaly Detection</i> is accepted to <a href="https://nips.cc/Conferences/2023"> NeurIPS 2023</a>; I will be in New Orleans, again.</p>
 
                     <hr>
-
                     <h2 id="awards">&#127941; Awards and Grants</h2>
                     <br>
                     <p> - <a href="https://research.facebook.com/blog/2022/10/announcing-the-winners-of-the-2022-ai4ai-research-request-for-proposals/">Meta AI4AI Research Award (co-PI)</a>, 2022</p>
@@ -169,10 +150,19 @@
                 </div>
             </div>
         </div>
-    <footer style="background-color: #f9f9f9; padding: 20px; text-align: center; border-top: 2px solid #e5e5e5; margin-top: 30px;">
-        <p style="font-family: 'Oswald', sans-serif; font-size: 15px; color: #555;">Written by Yue Zhao and ChatGPT from scratch!</p>
-        <a href="https://github.com/yzhao062/yzhao062.github.io" target="_blank" style="color: #888; text-decoration: none; font-weight: normal;">Reuse my code with love</a>
-        <span style="font-size: 20px; margin-left: 5px;">&#10084;</span>
-    </footer>
+
+    <!--Insert footer-->
+    <div id="myFooter"></div>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        fetch('footer.html')
+        .then(response => response.text())
+        .then(content => {
+            document.getElementById('myFooter').innerHTML = content;
+        });
+    });
+    </script>
+    <!--Insert footer-->
+
     </body>
 </html>
