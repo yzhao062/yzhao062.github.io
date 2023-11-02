@@ -1,86 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <!-- Meta Information -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="author" content="Yue Zhao">
-        <meta name="description" content="Personal website of Yue Zhao">
-        <meta name="keywords" content="MLSys, outlier detection, automl, anomaly detection, data mining, Yue Zhao">
+<head>
+    <!-- Meta Information -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Yue Zhao">
+    <meta name="description" content="Personal website of Yue Zhao">
+    <meta name="keywords" content="MLSys, outlier detection, automl, anomaly detection, data mining, Yue Zhao">
 
-        <!-- Title & Icon -->
-        <title>Yue Zhao</title>
-        <link rel="icon" type="image/x-icon" href="images/logo2.ico">
+    <!-- Title & Icon -->
+    <title>Yue Zhao</title>
+    <link rel="icon" type="image/x-icon" href="images/logo2.ico">
 
-        <!-- Stylesheets -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
 
-        <!-- Scripts -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    </head>
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
 
-    <body>
-        <style>
-            .heading {
+<body>
+    <style>
+        body {
+            font-family: 'Roboto', serif;
+        }
+
+        .heading {
             word-wrap: break-word;
-            font-family: 'Oswald', sans-serif;
+            font-family: 'Poppins', sans-serif;
             font-size: 32px;
             font-weight: bold;
             margin-bottom: 10px;
-            }
-            .info-text {
+            white-space: nowrap;
+        }
+
+        .info-text {
             margin-bottom: 10px;
-            }
-            .university-color {
+        }
+
+        .university-color {
             color: #990000;
-            }
-            .link-list a {
+        }
+
+        .link-list a {
             margin-right: 5px;
-            }
-        </style>
+        }
 
-        <!-- Navigation -->
-        <div id="navbar"></div>
-        <!-- JavaScript to load the navigation bar -->
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script>
-            $(function(){
-              $("#navbar").load("navbar.html");
-            });
-        </script>
+        .content-spacing {
+            margin-top: 30px;
+            /*margin-left: 20px;*/
+        }
 
-        <!--  Please remove this part of code if you adapt from Yue Zhao's Website. This will track your visitors!!-->
-        <!--请将这段代码移除，这个是我自己track网站统计的。如果未移除，我将会看到你所有的网站访问-->
-        <!-- Begin Web-Stat code v 7.0 -->
-        <span id="wts1866123"></span>
-        <script>var wts=document.createElement('script');wts.async=true;
-            wts.src='https://app.ardalio.com/log7.js';document.head.appendChild(wts);
-            wts.onload = function(){ wtslog7(1866123,5); };
-        </script>
-        <noscript><a href="https://www.web-stat.com">
-            <img src="https://app.ardalio.com/7/5/1866123.png"
-                alt="Web-Stat traffic analysis"></a>
-        </noscript>
-        <!-- End Web-Stat code v 7.0 -->
-        <!--请将这段代码移除，这个是我自己track网站统计的。如果未移除，我将会看到你所有的网站访问-->
-        <!--  Please remove this part of code if you adapt from Yue Zhao's Website. This will track your visitors!!-->
+        .headshot {
+            max-width: 80%;
+            max-height: 80%;
+            margin: 0 auto;
+        }
 
-        <div class="container">
-            <!-- Contact Info on the Sidebar -->
-            <div class="col-md-3 col-xs-12">
+        a {
+            color: #2B5597;
+        }
+    </style>
+
+    <!-- Navigation -->
+    <div id="navbar"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            $("#navbar").load("navbar.html");
+        });
+    </script>
+
+    <!--  Please remove this part of code if you adapt from Yue Zhao's Website. This will track your visitors!!-->
+    <!--请将这段代码移除，这个是我自己track网站统计的。如果未移除，我将会看到你所有的网站访问-->
+    <!-- Begin Web-Stat code v 7.0 -->
+    <span id="wts1866123"></span>
+    <script>var wts=document.createElement('script');wts.async=true;
+        wts.src='https://app.ardalio.com/log7.js';document.head.appendChild(wts);
+        wts.onload = function(){ wtslog7(1866123,5); };
+    </script>
+    <noscript><a href="https://www.web-stat.com">
+        <img src="https://app.ardalio.com/7/5/1866123.png"
+            alt="Web-Stat traffic analysis"></a>
+    </noscript>
+    <!-- End Web-Stat code v 7.0 -->
+    <!--请将这段代码移除，这个是我自己track网站统计的。如果未移除，我将会看到你所有的网站访问-->
+    <!--  Please remove this part of code if you adapt from Yue Zhao's Website. This will track your visitors!!-->
+
+    <div class="container">
+        <!-- Contact Info on the Sidebar -->
+        <div class="row">
+            <div class="col-md-3 col-xs-12 content-spacing">
                 <div class="heading">Yue Zhao</div>
                 <div class="row">
                     <div class="col-md-10 col-xs-4">
-                        <img class="img-responsive" src="images/rsz_250.jpg" alt="Avatar of Yue Zhao">
+                        <img class="img-fluid headshot" src="images/rsz_250.jpg" alt="Avatar of Yue Zhao">
                     </div>
                 </div>
                 <div class="info-text">
-                    <i>Assistant Professor (profile picture generated by AI)</i><br>
-                    <a href="https://www.cs.usc.edu/"> Thomas Lord
-                    Department of Computer Science</a><br>
+                    <i>Assistant Professor (profile pic. generated by AI)</i><br>
+                    <a href="https://www.cs.usc.edu/"> Thomas Lord Department of Computer Science</a><br>
                     <p class="university-color">University of Southern California</p>
                     Los Angeles, CA, USA<br>
                     <b>Email</b>: <a href="mailto:yzhao010@usc.edu">yzhao010@usc.edu</a><br>
@@ -96,8 +121,9 @@
                     <a href="images/ID_yzhao062.JPG">微信</a>
                 </div>
             </div>
+
             <!-- Entries Column -->
-            <div class="col-md-8 col-xs-12">
+            <div class="col-md-9 col-xs-12 content-spacing">
                 <div class="col">
                     <h2 id="publications">&#127853; Recent Publications (2021-)</h2>
                     <p>See my <a href="https://scholar.google.com/citations?user=zoGDYsoAAAAJ">Google Scholar</a>,
@@ -235,17 +261,18 @@
                 </div>
             </div>
         </div>
+    </div>
+
     <!--Insert footer-->
     <div id="myFooter"></div>
     <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        fetch('footer.html')
-        .then(response => response.text())
-        .then(content => {
-            document.getElementById('myFooter').innerHTML = content;
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('footer.html')
+            .then(response => response.text())
+            .then(content => {
+                document.getElementById('myFooter').innerHTML = content;
+            });
         });
-    });
     </script>
-    <!--Insert footer-->
-    </body>
+</body>
 </html>

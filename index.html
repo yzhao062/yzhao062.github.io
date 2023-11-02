@@ -1,106 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <!-- Meta Information -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="author" content="Yue Zhao">
-        <meta name="description" content="Personal website of Yue Zhao">
-        <meta name="keywords" content="MLSys, outlier detection, automl, anomaly detection, data mining, Yue Zhao">
+<head>
+    <!-- Meta Information -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Yue Zhao">
+    <meta name="description" content="Personal website of Yue Zhao">
+    <meta name="keywords" content="MLSys, outlier detection, automl, anomaly detection, data mining, Yue Zhao">
 
-        <!-- Title & Icon -->
-        <title>Yue Zhao</title>
-        <link rel="icon" type="image/x-icon" href="images/logo2.ico">
+    <!-- Title & Icon -->
+    <title>Yue Zhao</title>
+    <link rel="icon" type="image/x-icon" href="images/logo2.ico">
 
-        <!-- Stylesheets -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
 
-        <!-- Scripts -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    </head>
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
 
-    <body>
-        <style>
-            .heading {
+<body>
+    <style>
+        body {
+            font-family: 'Roboto', serif;
+        }
+
+        .heading {
             word-wrap: break-word;
-            font-family: 'Oswald', sans-serif;
+            font-family: 'Poppins', sans-serif;
             font-size: 32px;
             font-weight: bold;
             margin-bottom: 10px;
-            }
-            .info-text {
+            white-space: nowrap;
+        }
+
+        .info-text {
             margin-bottom: 10px;
-            }
-            .university-color {
+        }
+
+        .university-color {
             color: #990000;
-            }
-            .link-list a {
+        }
+
+        .link-list a {
             margin-right: 5px;
-            }
-        </style>
+        }
 
-        <!-- Navigation -->
-        <div id="navbar"></div>
-        <!-- JavaScript to load the navigation bar -->
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script>
-            $(function(){
-              $("#navbar").load("navbar.html");
-            });
-        </script>
+        .content-spacing {
+            margin-top: 30px;
+            /*margin-left: 20px;*/
+        }
 
-        <!--  Please remove this part of code if you adapt from Yue Zhao's Website. This will track your visitors!!-->
-        <!--请将这段代码移除，这个是我自己track网站统计的。如果未移除，我将会看到你所有的网站访问-->
-        <!-- Begin Web-Stat code v 7.0 -->
-        <span id="wts1866123"></span>
-        <script>var wts=document.createElement('script');wts.async=true;
-            wts.src='https://app.ardalio.com/log7.js';document.head.appendChild(wts);
-            wts.onload = function(){ wtslog7(1866123,5); };
-        </script>
-        <noscript><a href="https://www.web-stat.com">
-            <img src="https://app.ardalio.com/7/5/1866123.png"
-                alt="Web-Stat traffic analysis"></a>
-        </noscript>
-        <!-- End Web-Stat code v 7.0 -->
-        <!--请将这段代码移除，这个是我自己track网站统计的。如果未移除，我将会看到你所有的网站访问-->
-        <!--  Please remove this part of code if you adapt from Yue Zhao's Website. This will track your visitors!!-->
+        .headshot {
+            max-width: 80%;
+            max-height: 80%;
+            margin: 0 auto;
+        }
 
-        <!-- Page Content -->
-        <div class="container">
-            <div class="row">
-                <!-- Contact Info on the Sidebar -->
-                <div class="col-md-3 col-xs-12">
-                    <div class="heading">Yue Zhao</div>
-                    <div class="row">
-                        <div class="col-md-10 col-xs-4">
-                            <img class="img-responsive" src="images/rsz_250.jpg" alt="Avatar of Yue Zhao">
-                        </div>
-                    </div>
-                    <div class="info-text">
-                        <i>Assistant Professor (profile picture generated by AI)</i><br>
-                        <a href="https://www.cs.usc.edu/"> Thomas Lord
-                        Department of Computer Science</a><br>
-                        <p class="university-color">University of Southern California</p>
-                        Los Angeles, CA, USA<br>
-                        <b>Email</b>: <a href="mailto:yzhao010@usc.edu">yzhao010@usc.edu</a><br>
-                    </div>
-                    <div class="link-list">
-                        <a href="https://scholar.google.com/citations?user=zoGDYsoAAAAJ&hl=en">Google Scholar</a> |
-                        <a href="files/bio.txt">Short Bio</a> |
-                        <a href="https://github.com/yzhao062">GitHub</a> |
-                        <a href="https://twitter.com/yzhao062"> Twitter</a> |
-                        <a href="https://www.linkedin.com/in/yzhao062/"> LinkedIn</a> |
-                        <a href="https://www.zhihu.com/people/breaknever/">知乎 (微调)</a> |
-                        <a href="https://www.xiaohongshu.com/user/profile/61716aad000000000201caae?xhsshare=CopyLink&appuid=61716aad000000000201caae&apptime=1693197943">小红书</a> |
-                        <a href="images/ID_yzhao062.JPG">微信</a>
+        a {
+            color: #2B5597;
+        }
+    </style>
+
+    <!-- Navigation -->
+    <div id="navbar"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            $("#navbar").load("navbar.html");
+        });
+    </script>
+
+    <!--  Please remove this part of code if you adapt from Yue Zhao's Website. This will track your visitors!!-->
+    <!--请将这段代码移除，这个是我自己track网站统计的。如果未移除，我将会看到你所有的网站访问-->
+    <!-- Begin Web-Stat code v 7.0 -->
+    <span id="wts1866123"></span>
+    <script>var wts=document.createElement('script');wts.async=true;
+        wts.src='https://app.ardalio.com/log7.js';document.head.appendChild(wts);
+        wts.onload = function(){ wtslog7(1866123,5); };
+    </script>
+    <noscript><a href="https://www.web-stat.com">
+        <img src="https://app.ardalio.com/7/5/1866123.png"
+            alt="Web-Stat traffic analysis"></a>
+    </noscript>
+    <!-- End Web-Stat code v 7.0 -->
+    <!--请将这段代码移除，这个是我自己track网站统计的。如果未移除，我将会看到你所有的网站访问-->
+    <!--  Please remove this part of code if you adapt from Yue Zhao's Website. This will track your visitors!!-->
+
+    <div class="container">
+        <!-- Contact Info on the Sidebar -->
+        <div class="row">
+            <div class="col-md-3 col-xs-12 content-spacing">
+                <div class="heading">Yue Zhao</div>
+                <div class="row">
+                    <div class="col-md-10 col-xs-4">
+                        <img class="img-fluid headshot" src="images/rsz_250.jpg" alt="Avatar of Yue Zhao">
                     </div>
                 </div>
-                <!-- Entries Column -->
-                <div class="col-md-8 col-xs-12">
-                    <div class="col" style="margin-top:3%; text-align:left;">
+                <div class="info-text">
+                    <i>Assistant Professor (profile pic. generated by AI)</i><br>
+                    <a href="https://www.cs.usc.edu/"> Thomas Lord Department of Computer Science</a><br>
+                    <p class="university-color">University of Southern California</p>
+                    Los Angeles, CA, USA<br>
+                    <b>Email</b>: <a href="mailto:yzhao010@usc.edu">yzhao010@usc.edu</a><br>
+                </div>
+                <div class="link-list">
+                    <a href="https://scholar.google.com/citations?user=zoGDYsoAAAAJ&hl=en">Google Scholar</a> |
+                    <a href="files/bio.txt">Short Bio</a> |
+                    <a href="https://github.com/yzhao062">GitHub</a> |
+                    <a href="https://twitter.com/yzhao062"> Twitter</a> |
+                    <a href="https://www.linkedin.com/in/yzhao062/"> LinkedIn</a> |
+                    <a href="https://www.zhihu.com/people/breaknever/">知乎 (微调)</a> |
+                    <a href="https://www.xiaohongshu.com/user/profile/61716aad000000000201caae?xhsshare=CopyLink&appuid=61716aad000000000201caae&apptime=1693197943">小红书</a> |
+                    <a href="images/ID_yzhao062.JPG">微信</a>
+                </div>
+            </div>
+
+            <!-- Entries Column -->
+            <div class="col-md-9 col-xs-12 content-spacing">
+                <div class="col">
                         <p><strong style="color:#990000";>Prospective Students</strong>.
                             I am <strong>peacefully</strong> welcoming prospective Ph.D. students (apply by Dec 15th for Fall 24 admission; full financial support).
                             You are expected to have <em><strong>a relevant paper</strong></em> to my research topics and <em>strong programming skills</em> for open-source ML and/or systems.
@@ -131,38 +155,36 @@
                         <p><strong style="color:#990000";>Biography</strong>.
                             Dr. Yue Zhao is an Assistant Professor at the University of Southern California. He specializes in building automated, efficient, and scalable machine learning (ML), with an emphasis on anomaly detection, graph neural networks, and open-source ML tool development. Additionally, Dr. Zhao's contributions to the ML community include the development of over 10 open-source projects, which have over 16,000+ GitHub stars and over 20 million downloads by 2023. Notably, projects such as PyOD, PyGOD, TDC, and ADBench have found applications in leading institutions like NASA and Morgan Stanley. Earning his Ph.D. from Carnegie Mellon University (CMU) in four years, Dr. Zhao's academic excellence has been acknowledged through awards like the Norton Fellowship, Meta AI4AI Research Award, and the CMU Presidential Fellowship. He is also an associate editor of IEEE Transactions on Neural Networks and Learning Systems (TNNLS), an action editor of Journal of Data-centric Machine Learning Research (DMLR), and workflow co-chair of KDD 2023.
                         </p>
-                        <hr>
-                    </div>
-                    <h2 id="news">&#9992; News and Travel</h2>
-                    <p><strong>[Nov 2023]</strong>  Become an Associate Editor of <a href="https://cis.ieee.org/publications/t-neural-networks-and-learning-systems/">IEEE Transactions on Neural Networks and Learning Systems (TNNLS)</a>. Please submit to it!</p>
-                    <p><strong>[Nov 2023]</strong>  The <a href="https://usc-asap.github.io/CICS566-S24/">course website (under construction)</a> for CSCI 566: Deep Learning and its Applications (Spring 2024) is live.</p>
-                    <p><strong>[Oct 2023]</strong>  Become an Action Editor of <a href="https://data.mlr.press/">Journal of Data-centric Machine Learning Research (DMLR)</a>. Please submit to this new sister journal of JMLR and TMLR!</p>
-                    <p><strong>[Sep 2023]</strong> <i>Diffusion Models: A Comprehensive Survey of Methods and Applications</i> is accepted to <a href="https://dl.acm.org/doi/10.1145/3626235"> ACM Computing Surveys</a>. Congrats to Lin Yang and other coauthors! </p>
-                    <p><strong>[Sep 2023]</strong> <i>ADGym: Design Choices for Deep Anomaly Detection</i> is accepted to <a href="https://nips.cc/Conferences/2023"> NeurIPS 2023</a>; I will be in New Orleans, again.</p>
 
-                    <hr>
-                    <h2 id="awards">&#127941; Awards and Grants</h2>
-                    <br>
-                    <p> - <a href="https://research.facebook.com/blog/2022/10/announcing-the-winners-of-the-2022-ai4ai-research-request-for-proposals/">Meta AI4AI Research Award (co-PI)</a>, 2022</p>
-                    <p> - <a href="https://www.nortonlifelock.com/us/en/research-labs/news/2022-fellowship-winners/"> Norton Labs Graduate Fellowship</a>, 2022</p>
-                    <p> - CMU Presidential Fellowship, 2019</p>
-                    <p> - Mantei/Mae Academic Achievement Award, 2011-2015</p>
+                        <h2 id="news">&#9992; News and Travel</h2>
+                        <p><strong>[Nov 2023]</strong>  Become an Associate Editor of <a href="https://cis.ieee.org/publications/t-neural-networks-and-learning-systems/">IEEE Transactions on Neural Networks and Learning Systems (TNNLS)</a>. Please submit to it!</p>
+                        <p><strong>[Nov 2023]</strong>  The <a href="https://usc-asap.github.io/CSCI566-S24/">course website (under construction)</a> for CSCI 566: Deep Learning and its Applications (Spring 2024) is live.</p>
+                        <p><strong>[Oct 2023]</strong>  Become an Action Editor of <a href="https://data.mlr.press/">Journal of Data-centric Machine Learning Research (DMLR)</a>. Please submit to this new sister journal of JMLR and TMLR!</p>
+                        <p><strong>[Sep 2023]</strong> <i>Diffusion Models: A Comprehensive Survey of Methods and Applications</i> is accepted to <a href="https://dl.acm.org/doi/10.1145/3626235"> ACM Computing Surveys</a>. Congrats to Lin Yang and other coauthors! </p>
+                        <p><strong>[Sep 2023]</strong> <i>ADGym: Design Choices for Deep Anomaly Detection</i> is accepted to <a href="https://nips.cc/Conferences/2023"> NeurIPS 2023</a>; I will be in New Orleans, again.</p>
+
+                        <hr>
+                        <h2 id="awards">&#127941; Awards and Grants</h2>
+                        <br>
+                        <p> - <a href="https://research.facebook.com/blog/2022/10/announcing-the-winners-of-the-2022-ai4ai-research-request-for-proposals/">Meta AI4AI Research Award (co-PI)</a>, 2022</p>
+                        <p> - <a href="https://www.nortonlifelock.com/us/en/research-labs/news/2022-fellowship-winners/"> Norton Labs Graduate Fellowship</a>, 2022</p>
+                        <p> - CMU Presidential Fellowship, 2019</p>
+                        <p> - Mantei/Mae Academic Achievement Award, 2011-2015</p>
                 </div>
             </div>
         </div>
+    </div>
 
     <!--Insert footer-->
     <div id="myFooter"></div>
     <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        fetch('footer.html')
-        .then(response => response.text())
-        .then(content => {
-            document.getElementById('myFooter').innerHTML = content;
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('footer.html')
+            .then(response => response.text())
+            .then(content => {
+                document.getElementById('myFooter').innerHTML = content;
+            });
         });
-    });
     </script>
-    <!--Insert footer-->
-
-    </body>
+</body>
 </html>
