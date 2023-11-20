@@ -108,7 +108,15 @@
                     <a href="https://www.cs.usc.edu/"> Thomas Lord Department of Computer Science</a><br>
                     <p class="university-color">University of Southern California</p>
                     Los Angeles, CA, USA<br>
-                    <b>Email</b>: <a href="mailto:yzhao010@usc.edu">yzhao010@usc.edu</a><br>
+                    <b>Email</b>: <span id="email-placeholder"></span>
+                    <script>
+                    document.addEventListener('DOMContentLoaded', (event) => {
+                        var emailUser = 'yzhao010'; // Your email user
+                        var emailHost = 'usc.edu'; // Your email host
+                        var emailElement = document.getElementById('email-placeholder');
+                        emailElement.innerHTML = '<a href="mailto:' + emailUser + '@' + emailHost + '">' + emailUser + '@' + emailHost + '</a>';
+                    });
+                    </script>
                 </div>
                 <div class="link-list">
                     <a href="https://scholar.google.com/citations?user=zoGDYsoAAAAJ&hl=en">Google Scholar</a> |
