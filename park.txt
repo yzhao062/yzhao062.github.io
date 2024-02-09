@@ -14,3 +14,24 @@
 
                     Participating in a project together provides a beneficial environment for us to assess our compatibility before committing to a long-term advisee/advisor relationship.
         And the cherry on top: you might obtain a strong reference letter and secure better offers than that of USC :-)
+
+        <!--                        <p><strong style="color:#990000";>Prior to USC</strong>. I got my Ph.D. in 4 years at CMU, working with <a href="http://www.cs.cmu.edu/~lakoglu/">Prof. Leman Akoglu</a>, <a href="https://cs.cmu.edu/~zhihaoj2">Prof. Zhihao Jia</a>,-->
+<!--                            and <a href="http://www.andrew.cmu.edu/user/georgech/">Prof. George H. Chen</a>.-->
+<!--                            I was a member of  <a href="https://catalyst.cs.cmu.edu/"> CMU Catalyst</a>.-->
+<!--                            I also collaborated with <a href="https://cs.stanford.edu/~jure/">Prof. Jure Leskovec</a> and <a href="https://cs.uic.edu/profiles/philip-yu/">Prof. Philip S. Yu</a>. I was an intern at IQVIA, Stanford, MSR, and Norton Lab.-->
+<!--                        </p>-->
+
+
+<!--                        <p><strong style="color:#990000";>Prospective Students</strong>.-->
+<!--                            I am currently reviewing Ph.D. applications for Fall 24.-->
+<!--                            See <a href="lab.html"> instructions for Fall 2025 admission before reaching out</a>.-->
+<!--                            <ol>-->
+<!--                                <li>I do not plan to have students who <strong>ONLY</strong> plan to work on MLSys &#45;&#45; you may do data mining (like anomaly detection, GNN) + systems.</li>-->
+<!--                                <li>You are expected to have <em><strong>one top paper</strong></em> in my current focus (<strong style="color:#990000;">anomaly/outlier/OOD detection, Auto ML, Multimodal Learning</strong>)-->
+<!--                            and <em><strong>strong programming skills</strong></em> (e.g., (ML) system papers or open-source experience).</li>-->
+<!--                            </ol>-->
+<!--                        </p>-->
+<!--                        <p><strong style="color:#990000";>CS Faculty Search 2024 (计算机教职申请)</strong>. We have created an anonymous Google form to collect <a href="https://forms.gle/rSwTy8RcLU6QHs4q6">application progress</a>.-->
+<!--                             <a href="https://docs.google.com/spreadsheets/d/1aCavGgtonE1lUkGOxqzEmEHB8O4YH7dZFWMtcsq1rco/edit?usp=sharing">The aggregated results </a>are available-->
+<!--                            (please request for viewer access; in the comment, please add your name, homepage, university) &#45;&#45; it is only open to the current candidates.-->
+<!--                        </p>-->
