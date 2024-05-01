@@ -1,0 +1,7 @@
+@inproceedings{zhao2024hpod,
+  title={Hyperparameter Optimization for Unsupervised Outlier Detection},
+  author={Zhao, Yue and Akoglu, Leman},
+  booktitle={International Conference on Automated Machine Learning},
+  publisher={{PMLR}},
+  year={2024},
+}

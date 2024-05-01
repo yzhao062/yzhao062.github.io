@@ -1,0 +1,9 @@
+@inproceedings{zhao2024towards,
+  title={Towards Reproducible, Automated, and Scalable Anomaly Detection},
+  author={Zhao, Yue},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={38},
+  number={20},
+  pages={22687--22687},
+  year={2024}
+}
