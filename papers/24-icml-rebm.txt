@@ -1,0 +1,7 @@
+@inproceedings{liu2024controllable,
+  title={Controllable Molecule Synthesis with Residual Energy-based Model},
+  author={Liu, Songtao and Dai, Hanjun and Zhao, Yue and Liu, Peng},
+  booktitle={International Conference on Machine Learning},
+  year={2024},
+  organization={PMLR}
+}
