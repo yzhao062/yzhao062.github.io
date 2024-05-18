@@ -1,0 +1,7 @@
+@inproceedings{ding2024hyper,
+  title={Fast Unsupervised Deep Outlier Model Selection with Hypernetworks},
+  author={Ding, Xueying and Zhao, Yue and Akoglu, Leman},
+  booktitle={ACM SIGKDD Conference on Knowledge Discovery and Data Mining},
+  publisher={{ACM}},
+  year={2024},
+}
