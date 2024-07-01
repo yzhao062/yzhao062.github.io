@@ -5,22 +5,21 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Yue Zhao">
-    <meta name="description" content="Personal website of Yue Zhao">
-    <meta name="keywords" content="MLSys, outlier detection, automl, anomaly detection, data mining, open source, machine learning systems, Yue Zhao">
+    <meta name="description" content="Personal website of Yue Zhao, Assistant Professor at USC focusing on ML and AI research.">
+    <meta name="keywords" content="Machine Learning, Anomaly Detection, Yue Zhao, USC, Data Mining, AI Research, Machine Learning Systems, Open Source, OOD Detection">
 
     <!-- Title & Icon -->
     <title>Yue Zhao</title>
     <link rel="icon" type="image/x-icon" href="images/logo2.ico">
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="https://unpkg.com/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.0/dist/css/bootstrap.min.css" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
 
     <!-- Scripts -->
-    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -69,10 +68,13 @@
     <!-- Navigation -->
     <div id="navbar"></div>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-        $(function(){
-            $("#navbar").load("navbar.html");
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('navbar.html')
+            .then(response => response.text())
+            .then(content => {
+                document.getElementById('navbar').innerHTML = content;
+            });
         });
     </script>
 
@@ -109,9 +111,9 @@
                     Los Angeles, CA, USA<br>
                     <b>Email</b>: <span id="email-placeholder"></span>
                     <script>
-                    document.addEventListener('DOMContentLoaded', (event) => {
-                        var emailUser = 'yzhao010'; // Your email user
-                        var emailHost = 'usc.edu'; // Your email host
+                    document.addEventListener('DOMContentLoaded', function() {
+                        var emailUser = 'yzhao010';
+                        var emailHost = 'usc.edu';
                         var emailElement = document.getElementById('email-placeholder');
                         emailElement.innerHTML = '<a href="mailto:' + emailUser + '@' + emailHost + '">' + emailUser + '@' + emailHost + '</a>';
                     });
