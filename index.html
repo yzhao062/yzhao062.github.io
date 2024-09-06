@@ -155,9 +155,10 @@
                             <li><strong>Robustness and Security of AI:</strong> Enhancing the robustness and security of AI systems through out-of-distribution (OOD) detection, outlier detection, and anomaly detection.</li>
                             <li><strong>Efficient and Scalable AI:</strong> Developing efficient and scalable ML systems and automation techniques.</li>
                             <li><strong>Applications in Security, Finance, and Healthcare:</strong> Applying AI technologies to address complex problems in security, finance, and healthcare sectors.</li>
+                            <li><strong>Integration with foundation models and generative AI:</strong> How do these emerging directions benefit anomaly and OOD detection, and vice versa.</li>
                         </ol>
                         <p style="margin-left: 25px;">
-                            <b>Research Keywords</b>: <strong>(1) Robustness and Security of AI:</strong> OOD Detection, Outlier Detection, Anomaly Detection <strong>(2) Efficient and Scalable AI:</strong> ML Systems (MLSys), Automated ML, Decentralized Learning <strong>(3) Applications:</strong> AI for Security, Finance, Healthcare.
+                            <b>Research Keywords</b>: <strong>(1) Robustness and Security of AI:</strong> OOD Detection, Outlier Detection, Anomaly Detection <strong>(2) Efficient and Scalable AI:</strong> ML Systems (MLSys), Automated ML, Decentralized Learning <strong>(3) Applications:</strong> AI for Security, Finance, Healthcare <strong>(4) Integration with Foundation Models and GenAI</strong>: LLMs for anomaly and OOD detection.
                         </p>
 
 
@@ -171,11 +172,20 @@
                             I have more than 250,000 followers on all social platforms in combination. 我有一系列北美<strong>在读CS PhD找实习和全职</strong>的微信群 (<strong>不是PhD申请群</strong>)，以及一个<strong>2025年CS教职/教授申请群 (24年底申请，25年入职)</strong>。可以添加微信yzhao062(或者<a href="images/ID_yzhao062.jpg">二维码</a>)入群。
                         </p>
 
-                        <p><strong style="color:#990000";>Biography</strong>.
-                            Dr. Yue Zhao is an Assistant Professor of Computer Science at the University of Southern California. His research primarily focuses on advancing machine learning (ML) and data mining in areas such as robustness and security of AI through anomaly detection and out-of-distribution (OOD) detection, efficient and scalable AI with ML systems and automation, and applications in security, finance, and healthcare. He has contributed over 40 papers to leading venues. Dr. Zhao is recognized for his work in open-source ML systems, having created more than 10 projects with over 20,000 GitHub stars and 22 million downloads. His notable projects, including PyOD, PyGOD, TDC, and ADBench, are used in organizations like NASA and Morgan Stanley for high-stakes applications. He has received awards such as Amazon Research Awards, AAAI New Faculty Highlights Awards, Google Cloud Research Innovators, Norton Fellowship, Meta AI4AI Research Award, and CMU Presidential Fellowship. In his professional capacity, he serves as an associate editor of IEEE Transactions on Neural Networks and Learning Systems (TNNLS), an action editor of the Journal of Data-centric Machine Learning Research (DMLR), a workflow co-chair for KDD 2023, and an area chair for numerous ML conferences.
-                        </p>
-                        <p> Copy/paste from <a href="files/bio.txt">here</a> :)
-                        </p>
+                        <p><strong style="color:#990000">Biography</strong>. <span id="bio-content"></span></p>
+
+                        <script>
+                            fetch('/files/bio.txt')
+                                .then(response => response.text())
+                                .then(text => {
+                                    document.getElementById('bio-content').textContent = text;
+                                })
+                                .catch(error => {
+                                    console.error('Error loading biography:', error);
+                                    document.getElementById('bio-content').textContent = 'Biography content could not be loaded.';
+                                });
+                        </script>
+                        <p> Copy/paste from <a href="files/bio.txt">here</a> :)</p>
 
                         <hr>
                         <h2 id="news">&#9992; News and Travel</h2>
@@ -189,9 +199,7 @@
                         <p><strong>[Jun 2024]</strong>  Get my first NSF support via <a href="https://new.nsf.gov/funding/opportunities/pathways-enable-open-source-ecosystems-pose">NSF Pathways to Enable Open-Source Ecosystems (POSE)</a>!
                         <p><strong>[Jun 2024]</strong>  We have a new paper on multimodal OOD; see our <a href="https://arxiv.org/abs/2405.17419">Preprint</a> and star our <a href="https://github.com/donghao51/MultiOOD">Code</a>!
                         <p><strong>[May 2024]</strong>  Have two papers accepted to ICML 2024 and one to KDD 2024 -- see <a href="publications.html">publications</a> for details.
-<!--                        <p><strong>[Apr 2024]</strong>  My last piece of Ph.D. work, HPOD, will appear in <a href="https://2024.automl.cc/">AutoML Conference</a>! Finally!-->
-<!--                        <p><strong>[Mar 2024]</strong>  We get more than 5,000 GPU hours on A100 and equivalent from NSF and Google.-->
-<!--                        <p><strong>[Mar 2024]</strong>  Selected to be a <a href="https://cloud.google.com/edu/researchers/innovators?hl=en">Google Cloud Research Innovators</a>!-->
+
                         <hr>
                         <h2 id="awards">&#127941; Awards and Grants</h2>
                         <ul class="vert">
