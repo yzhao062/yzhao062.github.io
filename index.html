@@ -175,7 +175,7 @@
                         <p><strong style="color:#990000">Biography</strong>. <span id="bio-content"></span></p>
 
                         <script>
-                            fetch('/files/bio.txt')
+                            fetch('files/bio.txt')
                                 .then(response => response.text())
                                 .then(text => {
                                     document.getElementById('bio-content').textContent = text;
