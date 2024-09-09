@@ -1,5 +1,5 @@
-@inproceedings{liu2024controllable,
-  title={Controllable Molecule Synthesis with Residual Energy-based Model},
+@inproceedings{liu2024preference,
+  title={Preference Optimization for Molecule Synthesis with Conditional Residual Energy-based Models},
   author={Liu, Songtao and Dai, Hanjun and Zhao, Yue and Liu, Peng},
   booktitle={International Conference on Machine Learning},
   year={2024},

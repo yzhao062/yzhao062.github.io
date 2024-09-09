@@ -1,7 +1,8 @@
-@inproceedings{sun2024trustllm,
-  title={Trustllm: Trustworthiness in large language models},
-  author={Sun, Lichao and Huang, Yue and Wang, Haoran and Wu, Siyuan and Zhang, Qihui and Gao, Chujie and Huang, Yixin and Lyu, Wenhan and Zhang, Yixuan and Li, Xiner and others},
+@inproceedings{huang2024position,
+  title={Position: TrustLLM: Trustworthiness in Large Language Models},
+  author={Huang, Yue and Sun, Lichao and Wang, Haoran and Wu, Siyuan and Zhang, Qihui and Li, Yuan and Gao, Chujie and Huang, Yixin and Lyu, Wenhan and Zhang, Yixuan and others},
   booktitle={International Conference on Machine Learning},
+  pages={20166--20270},
   year={2024},
   organization={PMLR}
 }
