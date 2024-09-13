@@ -92,6 +92,31 @@
             font-style: italic;
             color: #666; /* You can change this color to suit your design */
         }
+
+        .sponsors-section {
+        padding: 2rem 0;
+        text-align: center;
+        }
+        .sponsor-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .sponsor-logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 200px;
+            height: 100px;
+        }
+        .sponsor-img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
     </style>
 
     <!-- Navigation -->
@@ -172,60 +197,55 @@
                     </h2>
                     <p><strong style="color:#990000;">FORTIS</strong> stands for <strong>Foundations Of Robust Trustworthy Intelligent Systems</strong>. Derived from the Latin word "fortis," meaning strong or resilient, FORTIS Lab focuses on developing AI systems that are built for robustness, trustworthiness, and scalability. Motivated by challenges like out-of-distribution (OOD) detection and other real-world complexities, the lab aims to design efficient, adaptable AI systems capable of solving problems in domains such as security, finance, healthcare, and AI4Science.</p>
 
-                    <p><strong style="color:#990000;">Openings and Timeline for PhD Offer</strong>.
-                        I am <strong>peacefully</strong> looking for 2-3 Ph.D. students (for Fall 25) and undergraduate/master interns (on a case by case basis).
-                        <ol>
-                            <li>I do not plan to have students who <strong>ONLY</strong> work on MLSys or LLMs -- you may do (anomaly detection, GNN, OOD Detection, AI4Science) + systems/LLMs.</li>
-                            <li>You are expected to have <em><strong>one top paper</strong></em> in my current focus (<strong style="color:#990000;">anomaly/outlier/OOD detection, Auto ML, Multimodal Learning</strong>)
-                        and <em><strong>strong programming skills</strong></em> (e.g., (ML) system papers or open-source experience).</li>
-                        </ol>
-                    </p>
-                    <p><strong style="color:#990000;">Personal Views on PhD</strong>.
-                        Doing a PhD and conducting research is just a job. Doing ok jobs and being an average person is excellent.
-                        My life has been happy: I have supportive parents and partner, and I do not need to use work/career to prove anything :)
-                    </p>
-                    <p><strong>Email for Connection</strong> - Please email the following (subject line: "Interested in {position, e.g., Ph.D.} at {expected time, e.g., Fall 25}"): <strong style="color:#990000;">Magic Words</strong> please add <u>Trojan</u> in the email title to show you read this carefully.</p>
+
+                    <p><strong style="color:#990000;">1. PhD Openings and Application Guidelines</strong> I am <i>happppppily</i> recruiting 2-3 PhD students for Fall 2025 and considering undergraduate/master interns on a case-by-case basis (both at USC or external).</p>
+                    <ul>
+                        <li><strong style="color:#990000;">Important: I only admit students for Ph.D. with whom I have previously collaborated.</strong> Reach out well in advance to initiate collaboration opportunities. This approach ensures mutual fit and is non-negotiable. If unsure, please reach out now ~</li>
+                        <li><strong>Research Focus:</strong> Candidates should align with my core research areas. Please see my <a href="index.html">research interests</a> for details.</li>
+                        <li><strong>Prerequisites:</strong> Successful candidates typically have:
+                            <ul>
+                                <li>At least one top-tier publication in ML (e.g., NeurIPS, ICML, ICLR), Systems (e.g., MLSys, VLDB, OSDI..), or LLMs (ACL, EMNLP, NAACL). Of course, it is an incomplete list.</li>
+                                <li>Strong programming skills, demonstrated through research projects or significant open-source contributions</li>
+                            </ul>
+                        </li>
+                    </ul>
+<!--                    <p><strong style="color:#990000;">2. Personal Views on PhD</strong>.-->
+<!--                        Doing a PhD and conducting research is just a job. Doing ok jobs and being an average person is excellent.-->
+<!--                        My life has been happy: I have supportive parents and partner, and I do not need to use work/career to prove anything :)-->
+<!--                    </p>-->
+                    <p><strong>2. Email for Connection</strong> - Please email the following (subject line: "Interested in {position, e.g., Ph.D.} at {expected time, e.g., Fall 25}"): <strong style="color:#990000;">Magic Words</strong> please add <u>Trojan</u> in the email title to show you read this carefully.</p>
                     <ul>
                         <li>
                             <strong>CV</strong>: Provide a concise background about yourself and your plan for future steps.
                         </li>
                         <li>
-                            <strong>Research experience</strong>: <strong style="color:#990000;">at least 1 top publication in relevant fileds like anomaly/outlier/OOD detection, Auto ML, Multimodal Learning</strong>.
-                        </li>
-                        <li>
-                            <strong>Strong Programming/System Experience</strong>: <strong style="color:#990000;">(ML) System papers and/or open-source experience</strong>.
-                        </li>
-                        <li>
                             <strong>Why FORTIS?</strong>: Do share if any of my research papers or topics are of interest to you. Also, feel free to suggest new topics that you would like to explore. I am always open to fresh perspectives and ideas.
                         </li>
                     </ul>
-                    <p><strong>General Expectations.</strong> <strong style="color:#990000;">Strong programming</strong> is essential as our work revolves around ML Systems and open-source ML. A solid foundation in statistics and mathematics will be a significant plus.
-                        Don't fear making mistakes; they're a part of the learning curve in both research and life.
-                    </p>
-                    <p><strong style="color:#990000;">Compensation</strong>.
+<!--                    <p><strong>General Expectations.</strong> <strong style="color:#990000;">Strong programming</strong> is essential as our work revolves around ML Systems and open-source ML. A solid foundation in statistics and mathematics will be a significant plus.-->
+<!--                        Don't fear making mistakes; they're a part of the learning curve in both research and life.-->
+<!--                    </p>-->
+                    <p><strong style="color:#990000;">3. Compensation</strong>.
                         Ph.D. students will receive the full support (tuition waiver + stipend is $40,000 in 2024-25) outlined by the CS department.
                         TA is always guaranteed, and we will try to give you as many RA as possible.
                         We do not have paid opportunities for undergraduate and master RA; it is not allowed to pay remote interns at USC :(
                         Please consider this before reaching out.
                     </p>
 
-                    <p><strong style="color:#990000;">GPU Clusters</strong>.
+                    <p><strong style="color:#990000;">4.1. GPU Clusters</strong>.
                         We recently (Nov 2023) bought a new GPU server with AMD EPYC Milan 7763, 64x16=1TB DDR4 memory, 15 TB SSD, <a href="https://www.nvidia.com/en-us/design-visualization/rtx-6000/">6x NVIDIA RTX A6000 Ada </a> (released Dec 2022; 1.5x faster than A6000).
                         We plan to buy a second GPU server in Fall 2024.
                     </p>
 
-                    <p><strong style="color:#990000;">Cloud Credits</strong>.
-                        We recently (Mar 2024) get more than 5,000 GPU hours on A100 and equivalent from NSF and Google.
+                    <p><strong style="color:#990000;">4.2. Cloud Credits</strong>.
+                        We recently (Aug 2024) get $20,000 AWS credit; thank you, Amazon.
                     </p>
                 </div>
 
                 <hr>
-
-                <p style="text-align: center;">
-                    <strong style="color:#990000;">Our Team</strong>
-                </p>
+                <h3 class="text-center">Our Team</h3>
 <!--                <p><strong>Why is there no Ph.D. students yet?</strong>: Fall 2023 is my first semester at USC, so there is no Ph.D. student since April 15th is passed.</p>-->
-                <p><strong>Connect with them</strong>: many of the Master RA are looking for Ph.D./full time job for Fall 2024/2025 -- please reach out to them (or me for an intro). </p>
+                <p><strong>Connect with them</strong>: many of the Master RA are looking for Ph.D./full time job for Fall 2025 -- please reach out to them (or me for an intro). </p>
                 <div class="team-section">
                 <div class="row">
                     <!-- Team Member -->
@@ -241,7 +261,7 @@
                         <img src="images/others/tiankai.webp" alt="Tiankai Yang" class="team-img">
                         <h3><a href="http://www.linkedin.com/in/tiankai-yang">Tiankai Yang</a></h3>
                         <p>Anomaly Detection, ML</p>
-                        <p class="member-status"><strong>Ph.D. Student</strong> (tiankaiy@usc.edu)</p>
+                        <p class="member-status"><strong>Ph.D. Student</strong> (prior master RA; tiankaiy@usc.edu)</p>
                     </div>
 
                     <!-- Team Member -->
@@ -344,13 +364,31 @@
                         <p class="member-status">Master's Student (yzhang42@usc.edu)</p>
                     </div>
 
-
-
-
                     <!-- Add more team members here -->
                 </div>
             </div>
+
+                <hr>
+                <div class="sponsors-section">
+                    <h3 class="text-center">Our Sponsors</h3>
+                    <div class="sponsor-logos">
+                        <div class="sponsor-logo">
+                            <img src="images/sponsors/NSF-Symbol.webp" alt="National Science Foundation" class="sponsor-img">
+                        </div>
+                        <div class="sponsor-logo">
+                            <img src="images/sponsors/amazon.webp" alt="Amazon" class="sponsor-img">
+                        </div>
+                        <div class="sponsor-logo">
+                            <img src="images/sponsors/Google_2015.webp" alt="Google" class="sponsor-img">
+                        </div>
+                    </div>
+                </div>
+
+
+
             </div>
+
+
 
         </div>
     </div>
