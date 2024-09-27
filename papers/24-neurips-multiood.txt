@@ -1,0 +1,7 @@
+@article{dong2024multiood,
+  title={MultiOOD: Scaling Out-of-Distribution Detection for Multiple Modalities},
+  author={Dong, Hao and Zhao, Yue and Chatzi, Eleni and Fink, Olga},
+  journal={Advances in Neural Information Processing Systems},
+  volume={37},
+  year={2024}
+}
