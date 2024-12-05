@@ -1,0 +1,30 @@
+name: Deploy to GitHub Pages and USC Server
+
+on:
+  push:
+    branches:
+      - main  # Trigger workflow on pushes to the 'main' branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      # Step 1: Checkout your GitHub repository
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Step 2: Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages
+        run: |
+          echo "GitHub Pages updates automatically when you push to the 'main' branch."
+
+      # Step 3: Deploy to USC Server via SFTP
+      - name: Deploy to USC Server
+        uses: appleboy/scp-action@v0.1.1
+        with:
+          host: viterbi-scf2.usc.edu
+          port: 22
+          username: yzhao010
+          password: ${{ secrets.USC_PASSWORD }}  # Use GitHub secret for USC password
+          source: "./"  # Adjust this path if your local website files are in a specific folder
+          target: "/home/viterbi/02/yzhao010/public_html"
