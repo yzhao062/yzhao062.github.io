@@ -1,0 +1,7 @@
+@inproceedings{chen2025pyod,
+  title={PyOD 2: A Python Library for Outlier Detection with LLM-powered Model Selection},
+  author={Sihan Chen and Zhuangzhuang Qian and Wingchun Siu and Xingcan Hu and Jiaqi Li and Shawn Li and Yuehan Qin and Tiankai Yang and Zhuo Xiao and Wanghao Ye and Yichi Zhang and Yushun Dong and Yue Zhao},
+  booktitle={Companion Proceedings of the Web Conference},
+  year={2025},
+  url={https://arxiv.org/abs/2412.12154}
+}

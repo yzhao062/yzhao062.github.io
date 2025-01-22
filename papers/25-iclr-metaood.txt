@@ -1,0 +1,6 @@
+@inproceedings{qin2025metaood,
+  title={MetaOOD: Automatic Selection of OOD Detection Models},
+  author={Yuehan Qin and Yichi Zhang and Yi Nian and Xueying Ding and Yue Zhao},
+  booktitle={International Conference on Learning Representations (ICLR)},
+  year={2025}
+}
