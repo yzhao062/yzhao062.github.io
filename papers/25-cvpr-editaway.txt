@@ -1,0 +1,6 @@
+@inproceedings{wang2025edit,
+  title     = {Edit Away and My Face Will Not Stay: Personal Biometric Defense against Malicious Generative Editing},
+  author    = {Wang, Hanhui and Zhang, Yihua and Bai, Ruizheng and Zhao, Yue and Liu, Sijia and Tu, Zhengzhong},
+  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  year      = {2025}
+}
