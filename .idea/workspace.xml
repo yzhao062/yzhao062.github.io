@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e94463f2-3144-4f65-93f2-3ba5c2a0e1be" name="Changes" comment="daily changes">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/files/bio.txt" beforeDir="false" afterPath="$PROJECT_DIR$/files/bio.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-    </list>
+    <list default="true" id="e94463f2-3144-4f65-93f2-3ba5c2a0e1be" name="Changes" comment="daily changes" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -105,7 +101,7 @@
       <workItem from="1740549973590" duration="1889000" />
       <workItem from="1740602019671" duration="1137000" />
       <workItem from="1740603264451" duration="1396000" />
-      <workItem from="1740862291328" duration="5131000" />
+      <workItem from="1740862291328" duration="5782000" />
     </task>
     <task id="LOCAL-00001" summary="weekly updates">
       <option name="closed" value="true" />
@@ -355,7 +351,15 @@
       <option name="project" value="LOCAL" />
       <updated>1740993170398</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="daily changes">
+      <option name="closed" value="true" />
+      <created>1741040686571</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1741040686571</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
