@@ -25,6 +25,8 @@
 4. **Render the page locally**
    Open lab.html in your browser to see if your changes look correct. If you want to run a local server, try PyCharm
 
-5. **Commit, push, and submit a pull request**
+5. **Make sure no additional files are committed, such as ds store or .xml files**
+
+6**Commit, push, and submit a pull request**
    Once you are satisfied with the changes, commit them to your forked repository and push.
    Finally, submit a pull request to the main repository.
