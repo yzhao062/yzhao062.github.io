@@ -6,9 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e94463f2-3144-4f65-93f2-3ba5c2a0e1be" name="Changes" comment="daily changes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/files/ZHAO_YUE_CV.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/files/ZHAO_YUE_CV.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/publications.html" beforeDir="false" afterPath="$PROJECT_DIR$/publications.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,12 +22,12 @@
     &quot;assignee&quot;: &quot;yzhao062&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/yzhao062/yzhao062.github.io.git&quot;,
-    &quot;accountId&quot;: &quot;5333c5b2-4dfd-4687-9f2c-24466c187539&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/yzhao062/yzhao062.github.io.git",
+    "accountId": "a1909bea-4778-419e-8f71-6dc2ad6f7e89"
   }
-}</component>
+}]]></component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -52,15 +50,15 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "settings.editor.selected.configurable": "settings.sync",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-PY-241.17011.127" />
-        <option value="bundled-python-sdk-48aec45f0201-7e9c3bbb6e34-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.17011.127" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-PY-243.25659.43" />
+        <option value="bundled-python-sdk-181015f7ab06-4df51de95216-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-243.25659.43" />
       </set>
     </attachedChunks>
   </component>
@@ -108,6 +106,7 @@
       <workItem from="1740603264451" duration="1396000" />
       <workItem from="1740862291328" duration="8546000" />
       <workItem from="1741766202792" duration="290000" />
+      <workItem from="1741843736028" duration="288000" />
     </task>
     <task id="LOCAL-00001" summary="weekly updates">
       <option name="closed" value="true" />
