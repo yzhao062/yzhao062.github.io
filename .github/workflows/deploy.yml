@@ -22,7 +22,7 @@ jobs:
       - name: Deploy to USC Server
         uses: appleboy/scp-action@v0.1.1
         with:
-          host: viterbi-scf2.usc.edu
+          host: viterbi-scf1.usc.edu
           port: 22
           username: yzhao010
           password: ${{ secrets.USC_PASSWORD }}  # Use GitHub secret for USC password
