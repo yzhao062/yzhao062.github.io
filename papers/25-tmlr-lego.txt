@@ -1,0 +1,6 @@
+@article{xu2025lego,
+  title={LEGO-Learn: Label-Efficient Graph Open-Set Learning},
+  author={Xu, Haoyan and Liu, Kay and Yao, Zhengtao and Yu, Philip S and Ding, Kaize and Zhao, Yue},
+  journal={Transactions on Machine Learning Research},
+  year={2025}
+}
