@@ -1,0 +1,6 @@
+@inproceedings{wang2025trusteval,
+  title={TRUSTEVAL: A Dynamic Evaluation Toolkit on Trustworthiness of Generative Foundation Models},
+  author={Wang, Yanbo and Ye, Jiayi and Wu, Siyuan and Gao, Chujie and Huang, Yue and Chen, Xiuying and Zhao, Yue and Zhang, Xiangliang},
+  booktitle={Proceedings of the 2025 Conference of the North American Chapter of the Association for Computational Linguistics: Demonstrations (NAACL Demo Track)},
+  year={2025},
+}

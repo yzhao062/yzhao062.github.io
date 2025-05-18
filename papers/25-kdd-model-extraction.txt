@@ -1,0 +1,6 @@
+@inproceedings{zhao2025extraction,
+  title={A Survey on Model Extraction Attacks and Defenses for Large Language Models},
+  author={Zhao, Kaixiang and Li, Lincan and Ding, Kaize and Gong, Neil Zhenqiang and Zhao, Yue and Dong, Yushun},
+  booktitle={Proceedings of the 31st ACM SIGKDD Conference on Knowledge Discovery and Data Mining, Lecture-Style Tutorial Track},
+  year={2025}
+}

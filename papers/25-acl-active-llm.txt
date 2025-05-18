@@ -1,0 +1,6 @@
+@inproceedings{xia2025active,
+  title={From Selection to Generation: A Survey of LLM-based Active Learning},
+  author={Xia, Yu and Mukherjee, Subhojyoti and Xie, Zhouhang and Wu, Junda and Li, Xintong and Aponte, Ryan and Lyu, Hanjia and Barrow, Joe and Chen, Hongjie and Dernoncourt, Franck and Kveton, Branislav and Yu, Tong and Zhang, Ruiyi and Gu, Jiuxiang and Ahmed, Nesreen K. and Wang, Yu and Chen, Xiang and Deilamsalehy, Hanieh and Kim, Sungchul and Hu, Zhengmian and Zhao, Yue and Lipka, Nedim and Yoon, Seunghyun and Huang, Ting-Hao Kenneth and Wang, Zichao and Mathur, Puneet and Pal, Soumyabrata and Mukherjee, Koyel and Zhang, Zhehao and Park, Namyong and Nguyen, Thien Huu and Luo, Jiebo and Rossi, Ryan A. and McAuley, Julian},
+  booktitle={Proceedings of the Association for Computational Linguistics (ACL)},
+  year={2025}
+}
