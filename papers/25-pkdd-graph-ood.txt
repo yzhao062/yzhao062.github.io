@@ -1,0 +1,6 @@
+@inproceedings{xu2025fewshot,
+  title     = {Few-Shot Graph Out-of-Distribution Detection with LLMs},
+  author    = {Haoyan Xu and Zhengtao Yao and Yushun Dong and Ziyi Wang and Ryan A. Rossi and Mengyuan Li and Yue Zhao},
+  booktitle = {Proceedings of the European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases (ECML PKDD)},
+  year      = {2025},
+}

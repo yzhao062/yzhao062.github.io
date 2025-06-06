@@ -1,6 +1,8 @@
-@inproceedings{li2025dpu,
-  title     = {DPU: Dynamic Prototype Updating for Multimodal Out-of-Distribution Detection},
-  author    = {Li, Shawn and Gong, Huixian and Dong, Hao and Yang, Tiankai and Tu, Zhengzhong and Zhao, Yue},
-  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
-  year      = {2025}
+@InProceedings{li2025dpu,
+    author    = {Li, Shawn and Gong, Huixian and Dong, Hao and Yang, Tiankai and Tu, Zhengzhong and Zhao, Yue},
+    title     = {DPU: Dynamic Prototype Updating for Multimodal Out-of-Distribution Detection},
+    booktitle = {Proceedings of the Computer Vision and Pattern Recognition Conference (CVPR)},
+    month     = {June},
+    year      = {2025},
+    pages     = {10193-10202}
 }
