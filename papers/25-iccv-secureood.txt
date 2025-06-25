@@ -1,0 +1,6 @@
+@inproceedings{li2025secureood,
+  title     = {Secure On-Device Video OOD Detection Without Backpropagation},
+  author    = {Li, Shawn and Cai, Peilin and Zhou, Yuxiao and Ni, Zhiyu and Liang, Renjie and Qin, You and Nian, Yi and Tu, Zhengzhong and Hu, Xiyang and Zhao, Yue},
+  booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+  year      = {2025}
+}
