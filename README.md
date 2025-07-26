@@ -1,4 +1,4 @@
-# How to Add Yourself to the Lab Page
+# How to Add Yourself to the Fortis Lab Page
 
 1. **Fork the repository**  
    Please fork this repository on GitHub. After forking, clone your fork to your local machine.
@@ -10,7 +10,7 @@
 3. **Update the lab.html file**  
    Open `lab.html` in your text editor. Find the section where team members are listed.  
    Insert a block of code similar to the one below, and replace "Peilin Cai" and other details with your own.  
-   Insert your block in alphabetical order by last name.
+   Insert your block in **alphabetical order** by last name.
    
    For example:  
    ```html
@@ -23,10 +23,12 @@
    </div>
 
 4. **Render the page locally**
+
    Open lab.html in your browser to see if your changes look correct. If you want to run a local server, try PyCharm
 
 5. **Make sure no additional files are committed, such as ds store or .xml files**
 
-6**Commit, push, and submit a pull request**
+6. **Commit, push, and submit a pull request**
+
    Once you are satisfied with the changes, commit them to your forked repository and push.
    Finally, submit a pull request to the main repository.
