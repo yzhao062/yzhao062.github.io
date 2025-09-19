@@ -1,0 +1,7 @@
+@article{wang2025dyflow,
+  title={DyFlow: Dynamic Workflow Framework for Agentic Reasoning},
+  author={Wang, Yanbo and Xu, Zixiang and Huang, Yue and Wang, Xiangqi and Song, Zirui and Gao, Lang and Wang, Chenxi and Tang, Xiangru and Zhao, Yue and Cohan, Arman and Zhang, Xiangliang and Chen, Xiuying},
+  journal={Advances in Neural Information Processing Systems},
+  volume={38},
+  year={2025}
+}
