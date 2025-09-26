@@ -1,0 +1,6 @@
+@article{li2025treble,
+  title={Treble counterfactual vlms: A causal approach to hallucination},
+  author={Li, Shawn and Qu, Jiashu and Zhou, Yuxiao and Qin, Yuehan and Yang, Tiankai and Zhao, Yue},
+  journal={Findings of the Association for Computational Linguistics: EMNLP 2025},
+  year={2025}
+}

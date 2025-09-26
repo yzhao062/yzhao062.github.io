@@ -1,0 +1,6 @@
+@article{li2025typhoformer,
+  title={TyphoFormer: Language-Augmented Transformer for Accurate Typhoon Track Forecasting},
+  author={Li, Lincan and Ozguven, Eren Erman and Zhao, Yue and Wang, Guang and Xie, Yiqun and Dong, Yushun},
+  journal={ACM International Conference on Advances in Geographic Information Systems (SIGSPATIAL)},
+  year={2025}
+}

@@ -1,0 +1,6 @@
+@article{xu2025retrieval,
+  title={Retrieval-reasoning large language model-based synthetic clinical trial generation},
+  author={Xu, Zerui and Wu, Fang and Zhang, Yuanyuan and Zhao, Yue},
+  journal={ACM Conference on Bioinformatics, Computational Biology, and Health Informatics},
+  year={2025}
+}

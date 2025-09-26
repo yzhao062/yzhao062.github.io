@@ -1,0 +1,6 @@
+@inproceedings{nian2025jaildam,
+    title={JailDAM: Jailbreak Detection with Adaptive Memory for Vision-Language Model},
+    author={Yi Nian and Shenzhe Zhu and Yuehan Qin and Li Li and Ziyi Wang and Chaowei Xiao and Yue Zhao},
+    booktitle={Second Conference on Language Modeling},
+    year={2025},
+}
