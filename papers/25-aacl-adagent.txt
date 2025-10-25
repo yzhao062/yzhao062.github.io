@@ -1,0 +1,6 @@
+@article{yang2025ad,
+  title={AD-AGENT: A Multi-agent Framework for End-to-end Anomaly Detection},
+  author={Yang, Tiankai and Liu, Junjun and Siu, Wingchun and Wang, Jiahang and Qian, Zhuangzhuang and Song, Chanjuan and Cheng, Cheng and Hu, Xiyang and Zhao, Yue},
+  journal={Findings of the Association for Computational Linguistics: IJCNLP-AACL 2025},
+  year={2025}
+}
