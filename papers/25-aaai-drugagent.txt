@@ -1,0 +1,6 @@
+@inproceedings{liu2025drugagent,
+  title={DrugAgent: Automating AI-aided Drug Discovery Programming through LLM Multi-Agent Collaboration},
+  author={Liu, Sizhe and Lu, Yizhou and Chen, Siyu and Hu, Xiyang and Zhao, Jieyu and Fu, Tianfan and Zhao, Yue},
+  booktitle={Proceedings of the AAAI Workshop on Foundation Models for Biological Discoveries (FMs4Bio)},
+  year={2025}
+}
