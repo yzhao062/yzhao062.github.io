@@ -1,0 +1,7 @@
+@inproceedings{li2025personalized,
+  title={A Personalized Conversational Benchmark: Towards Simulating Personalized Conversations},
+  author={Li, Li and Cai, Peilin and Rossi, Ryan A. and Dernoncourt, Franck and Kveton, Branislav and Wu, Junda and Yu, Tong and Song, Lixin and Yang, Tiankai and Qin, Yuehan and Ahmed, Nesreen K. and Basu, Samyadeep and Mukherjee, Subhojyoti and Zhang, Ruiyi and Zhou, Yuxiao and Wang, Zichao and Huang, Yue and Wang, Yu and Zhang, Xiangliang and Yu, Philip S. and Hu, Xiyang and Zhao, Yue},
+  booktitle={NeurIPS Workshop on Multi-Turn Interactions in Large Language Models (MTI-LLM)},
+  year={2025},
+  note={Spotlight Paper, arXiv preprint arXiv:2505.14106}
+}
