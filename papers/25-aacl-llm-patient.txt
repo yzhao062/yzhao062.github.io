@@ -1,0 +1,6 @@
+@inproceedings{shao2025llm,
+  title={LLM-Empowered Patient-Provider Communication: A Data-Centric Survey From a Clinical Perspective},
+  author={Shao, Ruosi and Seraj, Md Shamim and Zhao, Kangyi and Luo, Yingtao and Li, Lincan and Shen, Bolin and Bates, Averi and Zhao, Yue and Pan, Chongle and Hightow-Weidman, Lisa and Chakraborty, Shayok and Dong, Yushun},
+  booktitle={Findings of the Association for Computational Linguistics: IJCNLP-AACL 2025},
+  year={2025}
+}
