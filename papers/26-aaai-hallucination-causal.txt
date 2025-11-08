@@ -1,0 +1,6 @@
+@inproceedings{li2026mitigating,
+  title={Mitigating Hallucinations in Large Language Models via Causal Reasoning},
+  author={Li, Yuangang and Shen, Yiqing and Nian, Yi and Gao, Jiechao and Wang, Ziyi and Yu, Chenxiao and Li, Shawn and Wang, Jie and Hu, Xiyang and Zhao, Yue},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  year={2026}
+}
