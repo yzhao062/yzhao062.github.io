@@ -1,0 +1,6 @@
+@inproceedings{nimase2025mlaas,
+  title        = {Navigating Between Explainability and Extractability in Machine Learning as a Service},
+  author       = {Nimase, Ojas and Zhao, Yue and Dong, Yushun},
+  booktitle    = {IEEE International Conference on Data Mining (ICDM), BlueSky Track},
+  year         = {2025},
+}
