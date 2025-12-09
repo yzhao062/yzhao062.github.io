@@ -644,6 +644,59 @@
             </div>
 
 
+        <hr>
+        <h3 class="text-center">Lab Activities</h3>
+<!--        <p class="text-center">Click to expand and view photos (images load only after opening).</p>-->
+
+        <details id="lab-activities" class="mb-3">
+          <summary style="cursor:pointer; font-weight:600;">Show NeurIPS 2025 Photos</summary>
+
+          <div class="row mt-3 g-3">
+            <!-- Photo 1 -->
+            <div class="col-6 col-md-4 col-lg-3">
+              <a href="images/events/neurips25-1.jpg" target="_blank" class="text-decoration-none">
+                <div class="card h-100">
+                  <img class="card-img-top" alt="NeurIPS 2025 Photo 1"
+                       loading="lazy"
+                       data-src="images/events/neurips25-1.jpg">
+                  <div class="card-body p-2">
+                    <div class="small text-center">NeurIPS 2025 – Photo 1</div>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <!-- Photo 2 -->
+            <div class="col-6 col-md-4 col-lg-3">
+              <a href="images/events/neurips25-2.jpg" target="_blank" class="text-decoration-none">
+                <div class="card h-100">
+                  <img class="card-img-top" alt="NeurIPS 2025 Photo 2"
+                       loading="lazy"
+                       data-src="images/events/neurips25-2.jpg">
+                  <div class="card-body p-2">
+                    <div class="small text-center">NeurIPS 2025 – Photo 2</div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </details>
+
+        <script>
+          // Only load images after <details> is opened for the first time
+          document.addEventListener('DOMContentLoaded', function () {
+            const block = document.getElementById('lab-activities');
+            if (!block) return;
+            block.addEventListener('toggle', function () {
+              if (block.open) {
+                block.querySelectorAll('img[data-src]').forEach(img => {
+                  img.src = img.getAttribute('data-src');
+                  img.removeAttribute('data-src');
+                });
+              }
+            }, { once: true });
+          });
+        </script>
 
 
 
