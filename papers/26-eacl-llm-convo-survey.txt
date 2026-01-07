@@ -1,0 +1,6 @@
+@inproceedings{ni2026survey,
+  title={A Survey on LLM-based Conversational User Simulation},
+  author={Ni, Bo and Wang, Yu and Wang, Leyao and Kveton, Branislav and Dernoncourt, Franck and Xia, Yu and Chen, Hongjie and Luera, Reuben and Basu, Samyadeep and Mukherjee, Subhojyoti and Mathur, Puneet and Ahmed, Nesreen K. and Wu, Junda and Li, Li and Zhang, Huixin and Zhang, Ruiyi and Yu, Tong and Kim, Sungchul and Gu, Jiuxiang and Tu, Zhengzhong and Siu, Alexa and Wang, Zichao and Yoon, Seunghyun and Lipka, Nedim and Park, Namyong and Lin, Zihao and Bui, Trung and Zhao, Yue and Derr, Tyler and Rossi, Ryan A.},
+  booktitle={Conference of the European Chapter of the Association for Computational Linguistics (EACL)},
+  year={2026}
+}
