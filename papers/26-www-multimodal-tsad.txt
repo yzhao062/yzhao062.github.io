@@ -1,0 +1,6 @@
+@inproceedings{xu2026multimodal,
+  title={Can Multimodal LLMs Perform Time Series Anomaly Detection?},
+  author={Xu, Xiongxiao and Wang, Haoran and Liang, Yueqing and Yu, Philip S. and Zhao, Yue and Shu, Kai},
+  booktitle={Proceedings of The Web Conference (WWW)},
+  year={2026}
+}
