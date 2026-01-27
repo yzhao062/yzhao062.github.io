@@ -1,0 +1,6 @@
+@inproceedings{luo2026doxing,
+  title={Doxing via the Lens: Revealing Location-related Privacy Leakage on Multi-modal Large Reasoning Models},
+  author={Luo, Weidi and Lu, Tianyu and Zhang, Qiming and Liu, Xiaogeng and Hu, Bin and Zhao, Yue and Zhao, Jieyu and Gao, Song and McDaniel, Patrick and Xiang, Zhen and Xiao, Chaowei},
+  booktitle={International Conference on Learning Representations (ICLR)},
+  year={2026}
+}

@@ -1,0 +1,6 @@
+@inproceedings{qian2026decalign,
+  title={DecAlign: Hierarchical Cross-Modal Alignment for Decoupled Multimodal Representation Learning},
+  author={Qian, Chengxuan and Xing, Shuo and Li, Shawn and Zhao, Yue and Tu, Zhengzhong},
+  booktitle={International Conference on Learning Representations (ICLR)},
+  year={2026}
+}
