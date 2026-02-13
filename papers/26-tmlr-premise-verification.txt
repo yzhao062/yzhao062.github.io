@@ -1,0 +1,6 @@
+@article{qin2026premise,
+  title={Don't Let It Hallucinate: Premise Verification via Retrieval-Augmented Logical Reasoning},
+  author={Qin, Yuehan and Li, Li and Nian, Yi and Yu, Xinyan Velocity and Zhao, Yue and Ma, Xuezhe},
+  journal={Transactions on Machine Learning Research},
+  year={2026}
+}
