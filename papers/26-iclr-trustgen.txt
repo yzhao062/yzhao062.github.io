@@ -1,5 +1,5 @@
 @inproceedings{huang2026trustgen,
-  title={On the Trustworthiness of Generative Foundation Models: Guideline, Assessment, and Perspective},
+  title={TrustGen: A Platform of Dynamic Benchmarking on the Trustworthiness of Generative Foundation Models},
   author={Huang, Yue and Gao, Chujie and Wu, Siyuan and Wang, Haoran and Wang, Xiangqi and Zhou, Yujun and Wang, Yanbo and Ye, Jiayi and Shi, Jiawen and Zhang, Qihui and others},
   booktitle={International Conference on Learning Representations (ICLR)},
   year={2026},

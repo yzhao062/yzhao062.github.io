@@ -1,0 +1,7 @@
+@inproceedings{xu2025socialmaze,
+  title={SocialMaze: A Benchmark for Evaluating Social Reasoning in Large Language Models},
+  author={Xu, Zixiang and Wang, Yanbo and Huang, Yue and Ye, Jiayi and Zhuang, Haomin and Song, Zirui and Gao, Lang and Wang, Chenxi and Chen, Zhaorun and Zhou, Yujun and Li, Sixian and Pan, Wang and Zhao, Yue and Zhao, Jieyu and Zhang, Xiangliang and Chen, Xiuying},
+  booktitle={NeurIPS Workshop on Socially Responsible and Trustworthy Foundation Models (ResponsibleFM)},
+  year={2025},
+  note={arXiv preprint arXiv:2505.23713}
+}
