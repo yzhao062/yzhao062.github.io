@@ -153,6 +153,16 @@
   },
   {
     "group": "current",
+    "name": "Zheng Luo",
+    "profile_url": "https://LuoZheng2002.github.io",
+    "image": "images/others/zheng_luo_square.webp",
+    "alt": "Zheng Luo",
+    "research": "LLM/Rule-Based General-Purpose AI",
+    "status_text": "Master Student",
+    "email": "luozheng@usc.edu"
+  },
+  {
+    "group": "current",
     "name": "Zixuan Zhu",
     "profile_url": "https://www.linkedin.com/in/zixuan-zhu-a81b23345/",
     "image": "images/others/ZixuanZhu.webp",
