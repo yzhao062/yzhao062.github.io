@@ -223,11 +223,29 @@
                             .replace(/'/g, '&#39;');
                     }
 
+                    function getLastNameKey(name) {
+                        const clean = String(name || '')
+                            .replace(/\([^)]*\)/g, '')
+                            .trim();
+                        if (!clean) return '';
+                        const parts = clean.split(/\s+/);
+                        return parts[parts.length - 1].toLowerCase();
+                    }
+
+                    function sortMembersByLastName(members) {
+                        return members.slice().sort(function(a, b) {
+                            const aLast = getLastNameKey(a.name);
+                            const bLast = getLastNameKey(b.name);
+                            if (aLast !== bLast) return aLast.localeCompare(bLast);
+                            return String(a.name || '').localeCompare(String(b.name || ''));
+                        });
+                    }
+
                     function renderCurrentPhdMembers(members) {
                         const container = document.getElementById('current-phd-members');
                         if (!container) return;
 
-                        const cards = members.map(function(member) {
+                        const cards = sortMembersByLastName(members).map(function(member) {
                             const awards = Array.isArray(member.awards) && member.awards.length > 0
                                 ? '<p><i class="fas fa-award" style="font-size:18px; color:#990000"></i> ' + escapeHtml(member.awards.join(', ')) + '</p>'
                                 : '';
@@ -291,7 +309,7 @@
                         const container = document.getElementById('current-members');
                         if (!container) return;
 
-                        const cards = members
+                        const cards = sortMembersByLastName(members)
                             .filter(function(member) { return member.group === 'current'; })
                             .map(function(member) {
                                 const awards = Array.isArray(member.awards) && member.awards.length > 0
@@ -316,7 +334,7 @@
                         const container = document.getElementById('past-members');
                         if (!container) return;
 
-                        const cards = members
+                        const cards = sortMembersByLastName(members)
                             .filter(function(member) { return member.group === 'past'; })
                             .map(function(member) {
                                 const publications = renderPublications(member.publications);
