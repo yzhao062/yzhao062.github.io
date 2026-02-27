@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BibTeX Viewer</title>
+  <link rel="icon" type="image/x-icon" href="images/logo2.ico">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/common.css">
+</head>
+<body>
+  <div class="container content-spacing">
+    <h2 style="color:#990000;">BibTeX Entry</h2>
+    <p id="query-title" style="margin-bottom:12px;"></p>
+    <div style="margin-bottom:12px;">
+      <a href="publications.html">Back to Publications</a> |
+      <a href="files/all-publications.bib">View Full BibTeX File</a>
+    </div>
+    <button id="copy-btn" class="btn btn-sm btn-outline-dark" style="margin-bottom:12px;" disabled>Copy BibTeX</button>
+    <pre id="bib-content" style="background:#f8f8f8; border:1px solid #ddd; border-radius:8px; padding:14px; white-space:pre-wrap;"></pre>
+  </div>
+
+  <script>
+    function getQueryParam(name) {
+      var params = new URLSearchParams(window.location.search);
+      return params.get(name) || '';
+    }
+
+    function normalizeTitle(text) {
+      return String(text || '')
+        .toLowerCase()
+        .replace(/&amp;/g, 'and')
+        .replace(/[{}]/g, '')
+        .replace(/[^a-z0-9]+/g, '');
+    }
+
+    function splitBibEntries(text) {
+      var entries = [];
+      var i = 0;
+      while (i < text.length) {
+        while (i < text.length && text[i] !== '@') i++;
+        if (i >= text.length) break;
+
+        var start = i;
+        while (i < text.length && text[i] !== '{') i++;
+        if (i >= text.length) break;
+
+        var depth = 0;
+        var inQuotes = false;
+        for (; i < text.length; i++) {
+          var ch = text[i];
+          if (ch === '"' && text[i - 1] !== '\\') inQuotes = !inQuotes;
+          if (!inQuotes) {
+            if (ch === '{') depth++;
+            if (ch === '}') {
+              depth--;
+              if (depth === 0) {
+                i++;
+                break;
+              }
+            }
+          }
+        }
+        entries.push(text.slice(start, i).trim());
+      }
+      return entries;
+    }
+
+    function extractBibField(entry, fieldName) {
+      var pattern = new RegExp('(?:^|,)\\s*' + fieldName + '\\s*=\\s*', 'i');
+      var match = pattern.exec(entry);
+      if (!match) return '';
+
+      var i = match.index + match[0].length;
+      while (i < entry.length && /\s/.test(entry[i])) i++;
+      if (i >= entry.length) return '';
+
+      if (entry[i] === '{') {
+        i++;
+        var start = i;
+        var depth = 1;
+        var inQuotes = false;
+        for (; i < entry.length; i++) {
+          var ch = entry[i];
+          if (ch === '"' && entry[i - 1] !== '\\') inQuotes = !inQuotes;
+          if (!inQuotes) {
+            if (ch === '{') depth++;
+            if (ch === '}') {
+              depth--;
+              if (depth === 0) return entry.slice(start, i).trim();
+            }
+          }
+        }
+        return entry.slice(start).trim();
+      }
+
+      if (entry[i] === '"') {
+        i++;
+        var qStart = i;
+        for (; i < entry.length; i++) {
+          if (entry[i] === '"' && entry[i - 1] !== '\\') {
+            return entry.slice(qStart, i).trim();
+          }
+        }
+        return entry.slice(qStart).trim();
+      }
+
+      var rawStart = i;
+      while (i < entry.length && entry[i] !== ',' && entry[i] !== '\n') i++;
+      return entry.slice(rawStart, i).trim();
+    }
+
+    function extractBibTitle(entry) {
+      return extractBibField(entry, 'title');
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      var title = getQueryParam('title');
+      var queryTitleEl = document.getElementById('query-title');
+      var bibContentEl = document.getElementById('bib-content');
+      var copyBtn = document.getElementById('copy-btn');
+
+      queryTitleEl.textContent = title ? ('Paper: ' + title) : 'No paper title provided.';
+
+      fetch('files/all-publications.bib')
+        .then(function(response) {
+          if (!response.ok) throw new Error('Failed to load all-publications.bib');
+          return response.text();
+        })
+        .then(function(allBib) {
+          var entries = splitBibEntries(allBib);
+          var target = normalizeTitle(title);
+          var titleCandidates = [target];
+          if (title.indexOf(':') !== -1) {
+            var tail = normalizeTitle(title.split(':').slice(1).join(':'));
+            if (tail) titleCandidates.push(tail);
+          }
+          var exactMatch = null;
+          var fuzzyMatch = null;
+
+          entries.forEach(function(entry) {
+            var bibTitle = extractBibTitle(entry);
+            var normalizedBibTitle = normalizeTitle(bibTitle);
+            titleCandidates.forEach(function(candidate) {
+              if (!candidate) return;
+              if (!exactMatch && normalizedBibTitle === candidate) {
+                exactMatch = entry;
+              } else if (
+                !fuzzyMatch &&
+                candidate &&
+                normalizedBibTitle.indexOf(candidate.slice(0, 24)) !== -1
+              ) {
+                fuzzyMatch = entry;
+              }
+            });
+            if (!fuzzyMatch && !exactMatch && target) {
+              var shortTarget = target.slice(0, 12);
+              if (shortTarget && normalizedBibTitle.indexOf(shortTarget) !== -1) {
+                fuzzyMatch = entry;
+              }
+            }
+          });
+
+          var matched = exactMatch || fuzzyMatch;
+          if (matched) {
+            bibContentEl.textContent = matched;
+            copyBtn.disabled = false;
+            copyBtn.addEventListener('click', function() {
+              navigator.clipboard.writeText(matched).then(function() {
+                copyBtn.textContent = 'Copied';
+              });
+            });
+          } else {
+            bibContentEl.textContent = 'No matching BibTeX entry found for this title. Please use "View Full BibTeX File".';
+          }
+        })
+        .catch(function(error) {
+          console.error(error);
+          bibContentEl.textContent = 'Failed to load BibTeX file.';
+        });
+    });
+  </script>
+</body>
+</html>

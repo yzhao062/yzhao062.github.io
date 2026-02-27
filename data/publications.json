@@ -1,0 +1,851 @@
+﻿[
+    {
+        "id":  "conference-charts-are-not-images-on-the-challenges-of-scientific-chart-editing",
+        "section":  "conference",
+        "title":  "Charts Are Not Images: On the Challenges of Scientific Chart Editing",
+        "paper_url":  "https://arxiv.org/abs/2512.00752",
+        "authors":  "Shawn Li, Ryan Rossi, Sungchul Kim, Sunav Choudhary, Franck Dernoncourt, Puneet Mathur, Zhengzhong Tu, Yue Zhao.",
+        "venue":  "ICLR, 2026",
+        "year":  2026,
+        "links":  [
+                      {
+                          "type":  "github",
+                          "url":  "https://github.com/adobe-research/figure-editing"
+                      }
+                  ]
+    },
+    {
+        "id":  "conference-doxing-via-the-lens-revealing-location-related-privacy-leakage-on-multi-modal-large-reasoning-models",
+        "section":  "conference",
+        "title":  "Doxing via the Lens: Revealing Location-related Privacy Leakage on Multi-modal Large Reasoning Models",
+        "paper_url":  "https://arxiv.org/abs/2504.19373",
+        "authors":  "Weidi Luo, Tianyu Lu, Qiming Zhang, Xiaogeng Liu, Bin Hu, Yue Zhao, Jieyu Zhao, Song Gao, Patrick McDaniel, Zhen Xiang, Chaowei Xiao.",
+        "venue":  "ICLR, 2026",
+        "year":  2026,
+        "links":  [
+                      {
+                          "type":  "project",
+                          "url":  "https://doxbench.github.io/"
+                      }
+                  ]
+    },
+    {
+        "id":  "conference-trustgen-a-platform-of-dynamic-benchmarking-on-the-trustworthiness-of-generative-foundation-models",
+        "section":  "conference",
+        "title":  "TrustGen: A Platform of Dynamic Benchmarking on the Trustworthiness of Generative Foundation Models",
+        "paper_url":  "https://arxiv.org/abs/2502.14296",
+        "authors":  "Yue Huang, Chujie Gao, Siyuan Wu, Haoran Wang, Xiangqi Wang, Yujun Zhou, Yanbo Wang, Jiayi Ye, Jiawen Shi, Qihui Zhang, Yuan Li, Han Bao, Zhaoyi Liu, Tianrui Guan, Dongping Chen, Ruoxi Chen, Yue Zhao, many other authors, Xiangliang Zhang.",
+        "venue":  "ICLR, 2026",
+        "year":  2026,
+        "links":  [
+                      {
+                          "type":  "project",
+                          "url":  "https://trustgen.github.io"
+                      }
+                  ]
+    },
+    {
+        "id":  "conference-decalign-hierarchical-cross-modal-alignment-for-decoupled-multimodal-representation-learning",
+        "section":  "conference",
+        "title":  "DecAlign: Hierarchical Cross-Modal Alignment for Decoupled Multimodal Representation Learning",
+        "paper_url":  "https://arxiv.org/abs/2503.11892",
+        "authors":  "Chengxuan Qian, Shuo Xing, Shawn Li, Yue Zhao, Zhengzhong Tu.",
+        "venue":  "ICLR, 2026",
+        "year":  2026,
+        "links":  [
+                      {
+                          "type":  "github",
+                          "url":  "https://taco-group.github.io/DecAlign/"
+                      }
+                  ]
+    },
+    {
+        "id":  "conference-can-multimodal-llms-perform-time-series-anomaly-detection",
+        "section":  "conference",
+        "title":  "Can Multimodal LLMs Perform Time Series Anomaly Detection?",
+        "paper_url":  "https://arxiv.org/abs/2502.17812",
+        "authors":  "Xiongxiao Xu, Haoran Wang, Yueqing Liang, Philip S. Yu, Yue Zhao, Kai Shu.",
+        "venue":  "WWW, 2026",
+        "year":  2026,
+        "links":  [
+                      {
+                          "type":  "github",
+                          "url":  "https://github.com/mllm-ts/VisualTimeAnomaly"
+                      }
+                  ]
+    },
+    {
+        "id":  "conference-a-survey-on-llm-based-conversational-user-simulation",
+        "section":  "conference",
+        "title":  "A Survey on LLM-based Conversational User Simulation",
+        "paper_url":  "https://openreview.net/forum?id=ssvOsdg9vk",
+        "authors":  "Bo Ni, Yu Wang, Leyao Wang, Branislav Kveton, Franck Dernoncourt, Yu Xia, Hongjie Chen, Reuben Luera, Samyadeep Basu, Subhojyoti Mukherjee, Puneet Mathur, Nesreen K. Ahmed, Junda Wu, Li Li, Huixin Zhang, Ruiyi Zhang, Tong Yu, Sungchul Kim, Jiuxiang Gu, Zhengzhong Tu, Alexa Siu, Zichao Wang, Seunghyun Yoon, Nedim Lipka, Namyong Park, Zihao Lin, Trung Bui, Yue Zhao, Tyler Derr, Ryan A. Rossi.",
+        "venue":  "EACL, 2026",
+        "year":  2026,
+        "links":  [
+                      {
+                          "type":  "github",
+                          "url":  "https://github.com/USC-FORTIS/LLM-Convo-Survey"
+                      }
+                  ]
+    },
+    {
+        "id":  "conference-mitigating-hallucinations-in-large-language-models-via-causal-reasoning",
+        "section":  "conference",
+        "title":  "Mitigating Hallucinations in Large Language Models via Causal Reasoning",
+        "paper_url":  "https://arxiv.org/abs/2508.12495",
+        "authors":  "Yuangang Li, Yiqing Shen, Yi Nian, Jiechao Gao, Ziyi Wang, Chenxiao Yu, Shawn Li, Jie Wang, Xiyang Hu, Yue Zhao.",
+        "venue":  "AAAI, 2026",
+        "year":  2026,
+        "links":  [
+                      {
+                          "type":  "github",
+                          "url":  "https://github.com/MrLYG/CDCRSFT"
+                      }
+                  ]
+    },
+    {
+        "id":  "conference-ad-agent-a-multi-agent-framework-for-end-to-end-anomaly-detection",
+        "section":  "conference",
+        "title":  "AD-AGENT: A Multi-agent Framework for End-to-end Anomaly Detection",
+        "paper_url":  "https://arxiv.org/abs/2505.12594",
+        "authors":  "Tiankai Yang, Junjun Liu, Michael Siu, Jiahang Wang, Zhuangzhuang Qian, Chanjuan Song, Cheng Cheng, Xiyang Hu, Yue Zhao.",
+        "venue":  "Findings of IJCNLP-AACL, 2025",
+        "year":  2025,
+        "links":  [
+                      {
+                          "type":  "github",
+                          "url":  "https://github.com/USC-FORTIS/AD-AGENT"
+                      }
+                  ]
+    },
+    {
+        "id":  "conference-llm-empowered-patient-provider-communication-a-data-centric-survey-from-a-clinical-perspective",
+        "section":  "conference",
+        "title":  "LLM-Empowered Patient-Provider Communication: A Data-Centric Survey From a Clinical Perspective",
+        "paper_url":  "https://openreview.net/forum?id=q7uKFPxLws",
+        "authors":  "Ruosi Shao, Md Shamim Seraj, Kangyi Zhao, Yingtao Luo, Lincan Li, Bolin Shen, Averi Bates, Yue Zhao, Chongle Pan, Lisa Hightow-Weidman, Shayok Chakraborty, Yushun Dong.",
+        "venue":  "Findings of IJCNLP-AACL, 2025",
+        "year":  2025,
+        "links":  [
+
+                  ]
+    },
+    {
+        "id":  "conference-a-personalized-conversational-benchmark-towards-simulating-personalized-conversations",
+        "section":  "conference",
+        "title":  "A Personalized Conversational Benchmark: Towards Simulating Personalized Conversations",
+        "paper_url":  "https://arxiv.org/abs/2505.14106",
+        "authors":  "Li Li, Peilin Cai, Ryan A. Rossi, Franck Dernoncourt, Branislav Kveton, Junda Wu, Tong Yu, Lixin Song, Tiankai Yang, Yuehan Qin, Nesreen K. Ahmed, Samyadeep Basu, Subhojyoti Mukherjee, Ruiyi Zhang, Yuxiao Zhou, Zichao Wang, Yue Huang, Yu Wang, Xiangliang Zhang, Philip S. Yu, Xiyang Hu, Yue Zhao.",
+        "venue":  "NeurIPS Workshop on Multi-Turn Interactions in Large Language Models (MTI-LLM), 2025",
+        "year":  2025,
+        "links":  [
+                      {
+                          "type":  "github",
+                          "url":  "https://github.com/PERSONA-bench/PERSONA/tree/Latest"
+                      }
+                  ],
+        "badges":  [
+                       {
+                           "text":  "Spotlight Paper",
+                           "color":  ""
+                       }
+                   ]
+    },
+    {
+        "id":  "conference-socialmaze-a-benchmark-for-evaluating-social-reasoning-in-large-language-models",
+        "section":  "conference",
+        "title":  "SocialMaze: A Benchmark for Evaluating Social Reasoning in Large Language Models",
+        "paper_url":  "https://arxiv.org/abs/2505.23713",
+        "authors":  "Zixiang Xu, Yanbo Wang, Yue Huang, Jiayi Ye, Haomin Zhuang, Zirui Song, Lang Gao, Chenxi Wang, Zhaorun Chen, Yujun Zhou, Sixian Li, Wang Pan, Yue Zhao, Jieyu Zhao, Xiangliang Zhang, Xiuying Chen.",
+        "venue":  "NeurIPS Workshop on Socially Responsible and Trustworthy Foundation Models (ResponsibleFM), 2025",
+        "year":  2025,
+        "links":  [
+                      {
+                          "type":  "project",
+                          "url":  "https://huggingface.co/datasets/MBZUAI/SocialMaze"
+                      }
+                  ]
+    },
+    {
+        "id":  "conference-dyflow-dynamic-workflow-framework-for-agentic-reasoning",
+        "section":  "conference",
+        "title":  "DyFlow: Dynamic Workflow Framework for Agentic Reasoning",
+        "paper_url":  "https://openreview.net/forum?id=0pbUfmwNTy",
+        "authors":  "Yanbo Wang, Zixiang Xu, Yue Huang, Xiangqi Wang, Zirui Song, Lang Gao, Chenxi Wang, Xiangru Tang, Yue Zhao, Arman Cohan, Xiangliang Zhang, Xiuying Chen.",
+        "venue":  "NeurIPS, 2025",
+        "year":  2025,
+        "links":  [
+                      {
+                          "type":  "github",
+                          "url":  "https://github.com/wyf23187/DyFlow"
+                      }
+                  ]
+    },
+    {
+        "id":  "conference-navigating-between-explainability-and-extractability-in-machine-learning-as-a-service",
+        "section":  "conference",
+        "title":  "Navigating Between Explainability and Extractability in Machine Learning as a Service",
+        "paper_url":  "https://www3.cs.stonybrook.edu/~icdm2025/cfbtp.html",
+        "authors":  "Ojas Nimase, Yue Zhao, Yushun Dong.",
+        "venue":  "IEEE ICDM BlueSky Track, 2025",
+        "year":  2025,
+        "links":  [
+
+                  ],
+        "badges":  [
+                       {
+                           "text":  "Second Prize CCC Award",
+                           "color":  "#990000"
+                       }
+                   ]
+    },
+    {
+        "id":  "conference-treble-counterfactual-vlms-a-causal-approach-to-hallucination",
+        "section":  "conference",
+        "title":  "Treble Counterfactual VLMs: A Causal Approach to Hallucination",
+        "paper_url":  "https://arxiv.org/abs/2503.06169",
+        "authors":  "Shawn Li, Jiashu Qu, Yuxiao Zhou, Yuehan Qin, Tiankai Yang, Yue Zhao.",
+        "venue":  "EMNLP Findings, 2025",
+        "year":  2025,
+        "links":  [
+                      {
+                          "type":  "github",
+                          "url":  "https://github.com/TREE985/Treble-Counterfactual-VLMs"
+                      }
+                  ]
+    },
+    {
+        "id":  "conference-nlp-adbench-nlp-anomaly-detection-benchmark",
+        "section":  "conference",
+        "title":  "NLP-ADBench: NLP Anomaly Detection Benchmark",
+        "paper_url":  "https://arxiv.org/abs/2412.04784",
+        "authors":  "Yuangang Li, Jiaqi Li, Zhuo Xiao, Tiankai Yang, Yi Nian, Xiyang Hu, Yue Zhao.",
+        "venue":  "EMNLP Findings, 2025",
+        "year":  2025,
+        "links":  [
+                      {
+                          "type":  "github",
+                          "url":  "https://github.com/USC-FORTIS/NLP-ADBench"
+                      }
+                  ]
+    },
+    {
+        "id":  "conference-typhoformer-language-augmented-transformer-for-accurate-typhoon-track-forecasting",
+        "section":  "conference",
+        "title":  "TyphoFormer: Language-Augmented Transformer for Accurate Typhoon Track Forecasting",
+        "paper_url":  "https://arxiv.org/abs/2506.17609",
+        "authors":  "Lincan Li, Eren Erman Ozguven, Yue Zhao, Guang Wang, Yiqun Xie, Yushun Dong.",
+        "venue":  "ACM SIGSPATIAL, 2025",
+        "year":  2025,
+        "links":  [
+                      {
+                          "type":  "github",
+                          "url":  "https://github.com/LabRAI/TyphoFormer/"
+                      }
+                  ],
+        "badges":  [
+                       {
+                           "text":  "Best Short Paper",
+                           "color":  "#990000"
+                       }
+                   ]
+    },
+    {
+        "id":  "conference-jaildam-jailbreak-detection-with-adaptive-memory-for-vision-language-model",
+        "section":  "conference",
+        "title":  "JailDAM: Jailbreak Detection with Adaptive Memory for Vision-Language Model",
+        "paper_url":  "https://openreview.net/forum?id=8Pxdzsqvx9",
+        "authors":  "Yi Nian†, Shenzhe Zhu†, Yuehan Qin, Shawn Li, Ziyi Wang, Chaowei Xiao, Yue Zhao.",
+        "venue":  "COLM, 2025",
+        "year":  2025,
+        "links":  [
+                      {
+                          "type":  "github",
+                          "url":  "https://github.com/ShenzheZhu/JailDAM"
+                      }
+                  ]
+    },
+    {
+        "id":  "conference-secure-on-device-video-ood-detection-without-backpropagation",
+        "section":  "conference",
+        "title":  "Secure On-Device Video OOD Detection Without Backpropagation",
+        "paper_url":  "https://arxiv.org/abs/2503.06166",
+        "authors":  "Li Li, Peilin Cai, Yuxiao Zhou, Zhiyu Ni, Renjie Liang, You Qin, Yi Nian, Zhengzhong Tu, Xiyang Hu, Yue Zhao.",
+        "venue":  "ICCV, 2025",
+        "year":  2025,
+        "links":  [
+                      {
+                          "type":  "github",
+                          "url":  "https://github.com/Dystopians/SecDOOD"
+                      }
+                  ]
+    },
+    {
+        "id":  "conference-retrieval-reasoning-large-language-model-based-synthetic-clinical-trial-generation",
+        "section":  "conference",
+        "title":  "Retrieval-Reasoning Large Language Model-based Synthetic Clinical Trial Generation",
+        "paper_url":  "https://arxiv.org/abs/2410.12476",
+        "authors":  "Zerui Xu, Fang Wu, Yue Zhao.",
+        "venue":  "ACM BCB, 2025",
+        "year":  2025,
+        "links":  [
+                      {
+                          "type":  "github",
+                          "url":  "https://github.com/USC-FORTIS/LLM-GOOD"
+                      }
+                  ]
+    },
+    {
+        "id":  "conference-few-shot-graph-out-of-distribution-detection-with-llms",
+        "section":  "conference",
+        "title":  "Few-Shot Graph Out-of-Distribution Detection with LLMs",
+        "paper_url":  "https://arxiv.org/abs/2503.22097",
+        "authors":  "Haoyan Xu†, Zhengtao Yao†, Yushun Dong, Ziyi Wang, Ryan A. Rossi, Mengyuan Li, Yue Zhao.",
+        "venue":  "ECML PKDD, 2025",
+        "year":  2025,
+        "links":  [
+                      {
+                          "type":  "github",
+                          "url":  "https://github.com/USC-FORTIS/LLM-GOOD"
+                      }
+                  ]
+    },
+    {
+        "id":  "conference-ad-llm-benchmarking-large-language-models-for-anomaly-detection",
+        "section":  "conference",
+        "title":  "AD-LLM: Benchmarking Large Language Models for Anomaly Detection",
+        "paper_url":  "https://arxiv.org/abs/2412.11142",
+        "authors":  "Tiankai Yang†, Yi Nian†, Shawn Li, Ruiyao Xu, Yuangang Li, Jiaqi Li, Xiyang Hu, Ryan Rossi, Kaize Ding, Xia Hu, Yue Zhao.",
+        "venue":  "ACL (Findings), 2025",
+        "year":  2025,
+        "links":  [
+                      {
+                          "type":  "github",
+                          "url":  "https://github.com/USC-FORTIS/AD-LLM"
+                      }
+                  ]
+    },
+    {
+        "id":  "conference-from-selection-to-generation-a-survey-of-llm-based-active-learning",
+        "section":  "conference",
+        "title":  "From Selection to Generation: A Survey of LLM-based Active Learning",
+        "paper_url":  "https://arxiv.org/abs/2502.11767",
+        "authors":  "Yu Xia, Subhojyoti Mukherjee, Zhouhang Xie, Junda Wu, Xintong Li, Ryan Aponte, Hanjia Lyu, Joe Barrow, Hongjie Chen, Franck Dernoncourt, Branislav Kveton, Tong Yu, Ruiyi Zhang, Jiuxiang Gu, Nesreen K. Ahmed, Yu Wang, Xiang Chen, Hanieh Deilamsalehy, Sungchul Kim, Zhengmian Hu, Yue Zhao, Nedim Lipka, Seunghyun Yoon, Ting-Hao Kenneth Huang, Zichao Wang, Puneet Mathur, Soumyabrata Pal, Koyel Mukherjee, Zhehao Zhang, Namyong Park, Thien Huu Nguyen, Jiebo Luo, Ryan A. Rossi, Julian McAuley.",
+        "venue":  "ACL, 2025",
+        "year":  2025,
+        "links":  [
+
+                  ]
+    },
+    {
+        "id":  "conference-a-survey-on-model-extraction-attacks-and-defenses-for-large-language-models",
+        "section":  "conference",
+        "title":  "A Survey on Model Extraction Attacks and Defenses for Large Language Models",
+        "paper_url":  "https://arxiv.org/abs/2502.16065",
+        "authors":  "Kaixiang Zhao, Lincan Li, Kaize Ding, Neil Zhenqiang Gong, Yue Zhao, Yushun Dong.",
+        "venue":  "KDD (Lecture-Style Tutorial Track), 2025",
+        "year":  2025,
+        "links":  [
+
+                  ]
+    },
+    {
+        "id":  "conference-dpu-dynamic-prototype-updating-for-multimodal-out-of-distribution-detection",
+        "section":  "conference",
+        "title":  "DPU: Dynamic Prototype Updating for Multimodal Out-of-Distribution Detection",
+        "paper_url":  "https://openaccess.thecvf.com/content/CVPR2025/html/Li_DPU_Dynamic_Prototype_Updating_for_Multimodal_Out-of-Distribution_Detection_CVPR_2025_paper.html",
+        "authors":  "Shawn Li, Huixian Gong, Hao Dong, Tiankai Yang, Zhengzhong Tu, Yue Zhao.",
+        "venue":  "CVPR, 2025",
+        "year":  2025,
+        "links":  [
+                      {
+                          "type":  "github",
+                          "url":  "https://github.com/lili0415/DPU-OOD-Detection"
+                      }
+                  ],
+        "badges":  [
+                       {
+                           "text":  "Highlight Paper",
+                           "color":  ""
+                       }
+                   ]
+    },
+    {
+        "id":  "conference-edit-away-and-my-face-will-not-stay-personal-biometric-defense-against-malicious-generative-editing",
+        "section":  "conference",
+        "title":  "Edit Away and My Face Will Not Stay: Personal Biometric Defense against Malicious Generative Editing",
+        "paper_url":  "https://openaccess.thecvf.com/content/CVPR2025/html/Wang_Edit_Away_and_My_Face_Will_not_Stay_Personal_Biometric_CVPR_2025_paper.html",
+        "authors":  "Hanhui Wang, Yihua Zhang, Ruizheng Bai, Yue Zhao, Sijia Liu, Zhengzhong Tu.",
+        "venue":  "CVPR, 2025",
+        "year":  2025,
+        "links":  [
+                      {
+                          "type":  "github",
+                          "url":  "https://github.com/taco-group/FaceLock"
+                      }
+                  ]
+    },
+    {
+        "id":  "conference-drugagent-automating-ai-aided-drug-discovery-programming-through-llm-multi-agent-collaboration",
+        "section":  "conference",
+        "title":  "DrugAgent: Automating AI-aided Drug Discovery Programming through LLM Multi-Agent Collaboration",
+        "paper_url":  "https://arxiv.org/abs/2411.15692",
+        "authors":  "Sizhe Liu, Yizhou Lu, Siyu Chen, Xiyang Hu, Jieyu Zhao, Tianfan Fu, Yue Zhao.",
+        "venue":  "AAAI Workshop on Foundation Models for Biological Discoveries (FMs4Bio), 2025",
+        "year":  2025,
+        "links":  [
+                      {
+                          "type":  "github",
+                          "url":  "https://github.com/Steven51516/drugagent"
+                      }
+                  ]
+    },
+    {
+        "id":  "conference-trusteval-a-dynamic-evaluation-toolkit-on-trustworthiness-of-generative-foundation-models",
+        "section":  "conference",
+        "title":  "TRUSTEVAL: A Dynamic Evaluation Toolkit on Trustworthiness of Generative Foundation Models",
+        "paper_url":  "https://aclanthology.org/2025.naacl-demo.8/",
+        "authors":  "Yanbo Wang, Jiayi Ye, Siyuan Wu, Chujie Gao, Yue Huang, Xiuying Chen, Yue Zhao, Xiangliang Zhang.",
+        "venue":  "NAACL (Demo Track), 2025",
+        "year":  2025,
+        "links":  [
+                      {
+                          "type":  "github",
+                          "url":  "https://github.com/TrustGen/TrustEval-toolkit"
+                      }
+                  ]
+    },
+    {
+        "id":  "conference-metaood-automatic-selection-of-ood-detection-models",
+        "section":  "conference",
+        "title":  "MetaOOD: Automatic Selection of OOD Detection Models",
+        "paper_url":  "https://openreview.net/forum?id=9qpdDiDQ2H",
+        "authors":  "Yuehan Qin†, Yichi Zhang†, Yi Nian†, Xueying Ding, Yue Zhao♠.",
+        "venue":  "KDD Workshop on Resource-Efficient Learning for Knowledge Discovery, 2024. ICLR, 2025",
+        "year":  2024,
+        "links":  [
+                      {
+                          "type":  "github",
+                          "url":  "https://github.com/yqin43/metaood"
+                      }
+                  ],
+        "badges":  [
+                       {
+                           "text":  "Best Paper",
+                           "color":  "#990000"
+                       }
+                   ]
+    },
+    {
+        "id":  "conference-pyod-2-a-python-library-for-outlier-detection-with-llm-powered-model-selection",
+        "section":  "conference",
+        "title":  "PyOD 2: A Python Library for Outlier Detection with LLM-powered Model Selection",
+        "paper_url":  "https://arxiv.org/abs/2412.12154",
+        "authors":  "Sihan Chen, Zhuangzhuang Qian, Wingchun Siu, Xingcan Hu, Jiaqi Li, Shawn Li, Yuehan Qin, Tiankai Yang, Zhuo Xiao, Wanghao Ye, Yichi Zhang, Yushun Dong, Yue Zhao♠.",
+        "venue":  "The Web Conference (Demo Track), 2025",
+        "year":  2025,
+        "links":  [
+                      {
+                          "type":  "github",
+                          "url":  "https://github.com/yzhao062/pyod"
+                      }
+                  ]
+    },
+    {
+        "id":  "conference-multiood-scaling-out-of-distribution-detection-for-multiple-modalities",
+        "section":  "conference",
+        "title":  "MultiOOD: Scaling Out-of-Distribution Detection for Multiple Modalities",
+        "paper_url":  "https://arxiv.org/abs/2405.17419",
+        "authors":  "Hao Dong, Yue Zhao, Eleni Chatzi, Olga Fink.",
+        "venue":  "NeurIPS, 2024",
+        "year":  2024,
+        "links":  [
+                      {
+                          "type":  "github",
+                          "url":  "https://github.com/donghao51/MultiOOD"
+                      }
+                  ],
+        "badges":  [
+                       {
+                           "text":  "Spotlight Paper",
+                           "color":  ""
+                       }
+                   ]
+    },
+    {
+        "id":  "conference-fast-unsupervised-deep-outlier-model-selection-with-hypernetworks",
+        "section":  "conference",
+        "title":  "Fast Unsupervised Deep Outlier Model Selection with Hypernetworks",
+        "paper_url":  "https://arxiv.org/abs/2307.10529",
+        "authors":  "Xueying Ding, Yue Zhao, Leman Akoglu",
+        "venue":  "KDD, 2024",
+        "year":  2024,
+        "links":  [
+                      {
+                          "type":  "github",
+                          "url":  "https://github.com/xyvivian/HYPER"
+                      }
+                  ]
+    },
+    {
+        "id":  "conference-trustllm-trustworthiness-in-large-language-models",
+        "section":  "conference",
+        "title":  "TrustLLM: Trustworthiness in Large Language Models",
+        "paper_url":  "https://openreview.net/forum?id=bWUU0LwwMp",
+        "authors":  "Lichao Sun, Yue Huang, Haoran Wang, Siyuan Wu, Qihui Zhang, Chujie Gao, Yixin Huang, Wenhan Lyu, Yixuan Zhang, Xiner Li, Zhengliang Liu, Yixin Liu, Yijue Wang, Zhikun Zhang, 50+ collaborative authors, Yue Zhao.",
+        "venue":  "ICML, 2024",
+        "year":  2024,
+        "links":  [
+                      {
+                          "type":  "github",
+                          "url":  "https://github.com/HowieHwong/TrustLLM"
+                      }
+                  ],
+        "badges":  [
+                       {
+                           "text":  "Hugging Face Daily Papers",
+                           "color":  ""
+                       }
+                   ]
+    },
+    {
+        "id":  "conference-preference-optimization-for-molecule-synthesis-with-conditional-residual-energy-based-models",
+        "section":  "conference",
+        "title":  "Preference Optimization for Molecule Synthesis with Conditional Residual Energy-based Models",
+        "paper_url":  "https://openreview.net/forum?id=oLfq1KKneW",
+        "authors":  "Songtao Liu, Hanjun Dai, Yue Zhao, Peng Liu.",
+        "venue":  "ICML, 2024",
+        "year":  2024,
+        "links":  [
+                      {
+                          "type":  "github",
+                          "url":  "https://github.com/SongtaoLiu0823/CREBM"
+                      }
+                  ],
+        "badges":  [
+                       {
+                           "text":  "Oral Paper",
+                           "color":  ""
+                       }
+                   ]
+    },
+    {
+        "id":  "conference-hyperparameter-optimization-for-unsupervised-outlier-detection",
+        "section":  "conference",
+        "title":  "Hyperparameter Optimization for Unsupervised Outlier Detection",
+        "paper_url":  "https://openreview.net/forum?id=pypP5uaHxg",
+        "authors":  "Yue Zhao, Leman Akoglu.",
+        "venue":  "AutoML, 2024",
+        "year":  2024,
+        "links":  [
+                      {
+                          "type":  "github",
+                          "url":  "https://github.com/yzhao062/HPOD"
+                      }
+                  ]
+    },
+    {
+        "id":  "conference-towards-reproducible-automated-and-scalable-anomaly-detection",
+        "section":  "conference",
+        "title":  "Towards Reproducible, Automated, and Scalable Anomaly Detection",
+        "paper_url":  "https://ojs.aaai.org/index.php/AAAI/article/view/30303",
+        "authors":  "Yue Zhao.",
+        "venue":  "AAAI New Faculty Highlights, 2024",
+        "year":  2024,
+        "links":  [
+                      {
+                          "type":  "github",
+                          "url":  "https://github.com/yzhao062"
+                      }
+                  ]
+    },
+    {
+        "id":  "conference-adgym-design-choices-for-deep-anomaly-detection",
+        "section":  "conference",
+        "title":  "ADGym: Design Choices for Deep Anomaly Detection",
+        "paper_url":  "https://openreview.net/forum?id=9CKx9SsSSc",
+        "authors":  "Minqi Jiang†, Chaochuan Hou†, Ao Zheng†, Songqiao Han, Hailiang Huang♠, Qingsong Wen, Xiyang Hu♠, Yue Zhao♠.",
+        "venue":  "NeurIPS, 2023",
+        "year":  2023,
+        "links":  [
+                      {
+                          "type":  "github",
+                          "url":  "https://github.com/Minqi824/ADGym"
+                      }
+                  ]
+    },
+    {
+        "id":  "conference-dsv-an-alignment-validation-loss-for-self-supervised-outlier-model-selection",
+        "section":  "conference",
+        "title":  "DSV: An Alignment Validation Loss for Self-supervised Outlier Model Selection",
+        "paper_url":  "https://arxiv.org/abs/2307.06534",
+        "authors":  "Jaemin Yoo, Yue Zhao, Lingxiao Zhao, Leman Akoglu.",
+        "venue":  "ECML/PKDD, 2023",
+        "year":  2023,
+        "links":  [
+                      {
+                          "type":  "github",
+                          "url":  "https://github.com/jaeminyoo/DSV"
+                      }
+                  ]
+    },
+    {
+        "id":  "conference-do-not-train-it-a-linear-neural-architecture-search-of-graph-neural-networks",
+        "section":  "conference",
+        "title":  "Do Not Train It: A Linear Neural Architecture Search of Graph Neural Networks",
+        "paper_url":  "https://proceedings.mlr.press/v202/xu23w",
+        "authors":  "Peng Xu†, Lin Zhang†, Xuanzhou Liu, Jiaqi Sun, Yue Zhao, Haiqin Yang, Bei Yu.",
+        "venue":  "ICML, 2023",
+        "year":  2023,
+        "links":  [
+
+                  ]
+    },
+    {
+        "id":  "conference-tod-gpu-accelerated-outlier-detection-via-tensor-operations",
+        "section":  "conference",
+        "title":  "TOD: GPU-accelerated Outlier Detection via Tensor Operations",
+        "paper_url":  "http://vldb.org/pvldb/volumes/16/paper/TOD%3A%20GPU-accelerated%20Outlier%20Detection%20via%20Tensor%20Operations",
+        "authors":  "Yue Zhao, George H. Chen, Zhihao Jia.",
+        "venue":  "VLDB, 2023",
+        "year":  2023,
+        "links":  [
+                      {
+                          "type":  "github",
+                          "url":  "https://github.com/yzhao062/pytod/"
+                      }
+                  ]
+    },
+    {
+        "id":  "conference-admoe-anomaly-detection-with-mixture-of-experts-from-noisy-labels",
+        "section":  "conference",
+        "title":  "ADMoE: Anomaly Detection with Mixture-of-Experts from Noisy Labels",
+        "paper_url":  "https://arxiv.org/abs/2208.11290",
+        "authors":  "Yue Zhao, Guoqing Zheng, Subhabrata Mukherjee, Robert McCann, Ahmed Awadallah.",
+        "venue":  "AAAI, 2023",
+        "year":  2023,
+        "links":  [
+
+                  ]
+    },
+    {
+        "id":  "conference-adbench-anomaly-detection-benchmark",
+        "section":  "conference",
+        "title":  "ADBench: Anomaly Detection Benchmark",
+        "paper_url":  "https://openreview.net/forum?id=foA_SFQ9zo0",
+        "authors":  "Songqiao Han†, Xiyang Hu†, Hailiang Huang†, Minqi Jiang†, Yue Zhao†♠.",
+        "venue":  "NeurIPS, 2022",
+        "year":  2022,
+        "links":  [
+                      {
+                          "type":  "github",
+                          "url":  "https://github.com/Minqi824/ADBench"
+                      }
+                  ]
+    },
+    {
+        "id":  "conference-bond-benchmarking-unsupervised-outlier-node-detection-on-static-attributed-graphs",
+        "section":  "conference",
+        "title":  "BOND: Benchmarking Unsupervised Outlier Node Detection on Static Attributed Graphs",
+        "paper_url":  "https://openreview.net/forum?id=YXvGXEmtZ5N",
+        "authors":  "Kay Liu†, Yingtong Dou†, Yue Zhao†, Xueying Ding, Xiyang Hu, Ruitong Zhang, Kaize Ding, Canyu Chen, Hao Peng, Kai Shu, Lichao Sun, Jundong Li, George H. Chen, Zhihao Jia, Philip S. Yu.",
+        "venue":  "NeurIPS, 2022",
+        "year":  2022,
+        "links":  [
+                      {
+                          "type":  "github",
+                          "url":  "https://github.com/pygod-team/pygod/"
+                      }
+                  ]
+    },
+    {
+        "id":  "conference-elect-toward-unsupervised-outlier-model-selection",
+        "section":  "conference",
+        "title":  "ELECT: Toward Unsupervised Outlier Model Selection",
+        "paper_url":  "https://arxiv.org/abs/2211.01834",
+        "authors":  "Yue Zhao, Sean Zhang, Leman Akoglu.",
+        "venue":  "ICDM, 2022",
+        "year":  2022,
+        "links":  [
+                      {
+                          "type":  "github",
+                          "url":  "https://github.com/Minqi824/ADBench"
+                      }
+                  ]
+    },
+    {
+        "id":  "conference-automatic-unsupervised-outlier-model-selection",
+        "section":  "conference",
+        "title":  "Automatic Unsupervised Outlier Model Selection",
+        "paper_url":  "https://openreview.net/forum?id=KCd-3Pz8VjM",
+        "authors":  "Yue Zhao, Ryan Rossi, Leman Akoglu.",
+        "venue":  "NeurIPS, 2021",
+        "year":  2021,
+        "links":  [
+                      {
+                          "type":  "github",
+                          "url":  "https://github.com/yzhao062/metaod"
+                      }
+                  ]
+    },
+    {
+        "id":  "conference-therapeutics-data-commons-machine-learning-datasets-and-tasks-for-drug-discovery-and-development",
+        "section":  "conference",
+        "title":  "Therapeutics Data Commons: Machine Learning Datasets and Tasks for Drug Discovery and Development",
+        "paper_url":  "https://openreview.net/forum?id=8nvgnORnoWr",
+        "authors":  "Kexin Huang†, Tianfan Fu†, Wenhao Gao†, Yue Zhao, Yusuf Roohani, Jure Leskovec, Connor W. Coley, Cao Xiao, Jimeng Sun, Marinka Zitnik.",
+        "venue":  "NeurIPS, 2021",
+        "year":  2021,
+        "links":  [
+                      {
+                          "type":  "github",
+                          "url":  "https://tdcommons.ai/"
+                      }
+                  ]
+    },
+    {
+        "id":  "conference-revisiting-time-series-outlier-detection-definitions-and-benchmarks",
+        "section":  "conference",
+        "title":  "Revisiting Time Series Outlier Detection: Definitions and Benchmarks",
+        "paper_url":  "https://openreview.net/forum?id=r8IvOsnHchr",
+        "authors":  "Kwei-Herng Lai†, Daochen Zha†, Junjie Xu, Yue Zhao, Guanchu Wang, Xia Hu.",
+        "venue":  "NeurIPS, 2021",
+        "year":  2021,
+        "links":  [
+                      {
+                          "type":  "github",
+                          "url":  "https://github.com/datamllab/tods"
+                      }
+                  ]
+    },
+    {
+        "id":  "conference-suod-accelerating-large-scale-unsupervised-heterogeneous-outlier-detection",
+        "section":  "conference",
+        "title":  "SUOD: Accelerating Large-scale Unsupervised Heterogeneous Outlier Detection",
+        "paper_url":  "https://proceedings.mlsys.org/paper_files/paper/2021/hash/98dce83da57b0395e163467c9dae521b-Abstract.html",
+        "authors":  "Yue Zhao†, Xiyang Hu†, Cheng Cheng, Cong Wang, Changlin Wan, Wen Wang, Jianing Yang, Haoping Bai, Zheng Li, Cao Xiao, Yunlong Wang, Zhi Qiao, Jimeng Sun, Leman Akoglu.",
+        "venue":  "MLSys, 2021",
+        "year":  2021,
+        "links":  [
+                      {
+                          "type":  "github",
+                          "url":  "https://github.com/yzhao062/SUOD"
+                      }
+                  ]
+    },
+    {
+        "id":  "journal-don-t-let-it-hallucinate-premise-verification-via-retrieval-augmented-logical-reasoning",
+        "section":  "journal",
+        "title":  "Don’t Let It Hallucinate: Premise Verification via Retrieval-Augmented Logical Reasoning",
+        "paper_url":  "https://arxiv.org/abs/2504.06438",
+        "authors":  "Yuehan Qin, Li Li, Yi Nian, Xinyan Velocity Yu, Yue Zhao♠, Xuezhe Ma♠.",
+        "venue":  "Transactions on Machine Learning Research (TMLR), 2026",
+        "year":  2026,
+        "links":  [
+
+                  ]
+    },
+    {
+        "id":  "journal-lego-learn-label-efficient-graph-open-set-learning",
+        "section":  "journal",
+        "title":  "LEGO-Learn: Label-Efficient Graph Open-Set Learning",
+        "paper_url":  "https://openreview.net/forum?id=J6oxTJPOyN",
+        "authors":  "Haoyan Xu, Kay Liu, Zhengtao Yao, Philip S. Yu, Kaize Ding♠, Yue Zhao♠",
+        "venue":  "Transactions on Machine Learning Research (TMLR), 2025",
+        "year":  2025,
+        "links":  [
+
+                  ]
+    },
+    {
+        "id":  "journal-nng-mix-improving-semi-supervised-anomaly-detection-with-pseudo-anomaly-generation",
+        "section":  "journal",
+        "title":  "NNG-Mix: Improving Semi-supervised Anomaly Detection with Pseudo-anomaly Generation",
+        "paper_url":  "https://arxiv.org/abs/2311.11961",
+        "authors":  "Hao Dong, Gaëtan Frusque, Yue Zhao, Eleni Chatzi, Olga Fink",
+        "venue":  "IEEE Transactions on Neural Networks and Learning Systems, 2024",
+        "year":  2024,
+        "links":  [
+                      {
+                          "type":  "github",
+                          "url":  "https://github.com/donghao51/NNG-Mix"
+                      }
+                  ]
+    },
+    {
+        "id":  "journal-diffusion-models-a-comprehensive-survey-of-methods-and-applications",
+        "section":  "journal",
+        "title":  "Diffusion Models: A Comprehensive Survey of Methods and Applications",
+        "paper_url":  "https://arxiv.org/abs/2209.00796",
+        "authors":  "Ling Yang†, Zhilong Zhang†, Yang Song, Shenda Hong, Runsheng Xu, Yue Zhao, Wentao Zhang, Bin Cui, Ming-Hsuan.",
+        "venue":  "ACM Computing Surveys, 2023",
+        "year":  2023,
+        "links":  [
+
+                  ],
+        "badges":  [
+                       {
+                           "text":  "2000+ citations",
+                           "color":  ""
+                       }
+                   ]
+    },
+    {
+        "id":  "journal-the-need-for-unsupervised-outlier-model-selection-a-review-and-evaluation-of-internal-evaluation-strategies",
+        "section":  "journal",
+        "title":  "The Need for Unsupervised Outlier Model Selection: A Review and Evaluation of Internal Evaluation Strategies",
+        "paper_url":  "https://dl.acm.org/doi/abs/10.1145/3606274.3606277",
+        "authors":  "Martin Q. Ma†, Yue Zhao†, Xiaorong Zhang, Leman Akoglu.",
+        "venue":  "ACM SIGKDD Explorations Newsletter, 2023",
+        "year":  2023,
+        "links":  [
+
+                  ]
+    },
+    {
+        "id":  "journal-artificial-intelligence-foundation-for-therapeutic-science",
+        "section":  "journal",
+        "title":  "Artificial Intelligence Foundation for Therapeutic Science",
+        "paper_url":  "https://www.nature.com/articles/s41589-022-01131-2",
+        "authors":  "Kexin Huang†, Tianfan Fu†, Wenhao Gao†, Yue Zhao, Yusuf Roohani, Jure Leskovec, Connor W. Coley, Cao Xiao, Jimeng Sun, Marinka Zitnik.",
+        "venue":  "Nature Chemical Biology, 2022",
+        "year":  2022,
+        "links":  [
+                      {
+                          "type":  "github",
+                          "url":  "https://tdcommons.ai/"
+                      }
+                  ]
+    },
+    {
+        "id":  "journal-ecod-unsupervised-outlier-detection-using-empirical-cumulative-distribution-functions",
+        "section":  "journal",
+        "title":  "ECOD: Unsupervised Outlier Detection Using Empirical Cumulative Distribution Functions",
+        "paper_url":  "https://arxiv.org/abs/2201.00382",
+        "authors":  "Zheng Li†, Yue Zhao†♠, Xiyang Hu, Nicola Botta, Cezar Ionescu, George H. Chen.",
+        "venue":  "TKDE, 2022",
+        "year":  2022,
+        "links":  [
+                      {
+                          "type":  "github",
+                          "url":  "https://github.com/yzhao062/pyod/blob/master/examples/ecod_example.py"
+                      }
+                  ]
+    },
+    {
+        "id":  "journal-pyod-a-python-toolbox-for-scalable-outlier-detection",
+        "section":  "journal",
+        "title":  "PyOD: A Python Toolbox for Scalable Outlier Detection",
+        "paper_url":  "https://www.jmlr.org/papers/v20/19-011.html",
+        "authors":  "Yue Zhao, Zain Nasrullah, Zheng Li.",
+        "venue":  "JMLR, 2019.",
+        "year":  2019,
+        "links":  [
+                      {
+                          "type":  "github",
+                          "url":  "https://github.com/yzhao062/pyod/"
+                      }
+                  ]
+    }
+]
