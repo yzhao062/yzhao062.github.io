@@ -44,6 +44,48 @@
             filter: brightness(0) invert(1);
         }
 
+        .fortis-lab-link {
+            color: #FFCC00 !important;
+            font-weight: 700;
+            position: relative;
+        }
+
+        .fortis-lab-link:hover,
+        .fortis-lab-link:focus {
+            color: #FFD84D !important;
+        }
+
+        .fortis-lab-link::after {
+            content: "";
+            position: absolute;
+            left: 0.75rem;
+            right: 0.75rem;
+            bottom: 0.35rem;
+            height: 2px;
+            background-color: #FFCC00;
+            border-radius: 2px;
+            opacity: 0.95;
+        }
+
+        .fortis-lab-link:hover::after,
+        .fortis-lab-link:focus::after {
+            background-color: #FFD84D;
+        }
+
+        @media (max-width: 991.98px) {
+            .fortis-lab-link {
+                display: block;
+                margin-top: 0.25rem;
+                padding: 0.35rem 0.7rem !important;
+                border-left: 3px solid #FFCC00;
+                color: #FFCC00 !important;
+            }
+
+            .fortis-lab-link::after {
+                display: none;
+            }
+        }
+
         .team-section {
             text-align: center;
             margin-top: 50px;
