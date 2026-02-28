@@ -421,8 +421,8 @@
         "section":  "conference",
         "title":  "MetaOOD: Automatic Selection of OOD Detection Models",
         "paper_url":  "https://openreview.net/forum?id=9qpdDiDQ2H",
-        "authors":  "Yuehan Qin†, Yichi Zhang†, Yi Nian†, Xueying Ding, Yue Zhao♠.",
-        "venue":  "KDD Workshop on Resource-Efficient Learning for Knowledge Discovery, 2024. ICLR, 2025",
+        "authors":  "Yuehan Qin†, Yichi Zhang†, Yi Nian†, Xueying Ding, Yue Zhao.",
+        "venue":  "ICLR, 2025",
         "year":  2024,
         "links":  [
                       {
@@ -431,10 +431,7 @@
                       }
                   ],
         "badges":  [
-                       {
-                           "text":  "Best Paper",
-                           "color":  "#990000"
-                       }
+
                    ]
     },
     {
@@ -442,7 +439,7 @@
         "section":  "conference",
         "title":  "PyOD 2: A Python Library for Outlier Detection with LLM-powered Model Selection",
         "paper_url":  "https://arxiv.org/abs/2412.12154",
-        "authors":  "Sihan Chen, Zhuangzhuang Qian, Wingchun Siu, Xingcan Hu, Jiaqi Li, Shawn Li, Yuehan Qin, Tiankai Yang, Zhuo Xiao, Wanghao Ye, Yichi Zhang, Yushun Dong, Yue Zhao♠.",
+        "authors":  "Sihan Chen, Zhuangzhuang Qian, Wingchun Siu, Xingcan Hu, Jiaqi Li, Shawn Li, Yuehan Qin, Tiankai Yang, Zhuo Xiao, Wanghao Ye, Yichi Zhang, Yushun Dong, Yue Zhao.",
         "venue":  "The Web Conference (Demo Track), 2025",
         "year":  2025,
         "links":  [

@@ -15,7 +15,7 @@
     <p id="query-title" style="margin-bottom:12px;"></p>
     <div style="margin-bottom:12px;">
       <a href="publications.html">Back to Publications</a> |
-      <a href="files/all-publications.bib">View Full BibTeX File</a>
+      <a href="files/yue-zhao.bib">View Full BibTeX File</a>
     </div>
     <button id="copy-btn" class="btn btn-sm btn-outline-dark" style="margin-bottom:12px;" disabled>Copy BibTeX</button>
     <pre id="bib-content" style="background:#f8f8f8; border:1px solid #ddd; border-radius:8px; padding:14px; white-space:pre-wrap;"></pre>
@@ -123,9 +123,9 @@
 
       queryTitleEl.textContent = title ? ('Paper: ' + title) : 'No paper title provided.';
 
-      fetch('files/all-publications.bib')
+      fetch('files/yue-zhao.bib')
         .then(function(response) {
-          if (!response.ok) throw new Error('Failed to load all-publications.bib');
+          if (!response.ok) throw new Error('Failed to load yue-zhao.bib');
           return response.text();
         })
         .then(function(allBib) {
