@@ -1,4 +1,4 @@
-﻿User-agent: *
+User-agent: *
 Allow: /
 
 Sitemap: https://viterbi-web.usc.edu/~yzhao010/sitemap.xml
