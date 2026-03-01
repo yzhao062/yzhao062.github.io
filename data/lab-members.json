@@ -6,17 +6,20 @@
     "image": "images/others/Chenxiao.webp",
     "alt": "Chenxiao Yu",
     "research": "Human-Centered AI / Agentic Simulation / Safety of LLMs & Agents",
-    "status_text": "Master Student, Research Assistant",
-    "email": "cyu96374@usc.edu"
+    "status_text": "Master Student → Incoming Ph.D. Student (Fall 2026) at USC",
+    "email": "cyu96374@usc.edu",
+    "publications": [
+      "Mitigating Hallucinations in Large Language Models via Causal Reasoning, AAAI 2026"
+    ]
   },
   {
-    "group": "current",
+    "group": "past",
     "name": "Peilin Cai",
-    "profile_url": "https://viterbi-web.usc.edu/~yzhao010/lab.html",
+    "profile_url": "https://caipeilin.com/",
     "image": "images/others/peilin.webp",
     "alt": "Peilin Cai",
     "research": "Multimodal / Generative AI",
-    "status_text": "Master Student",
+    "status_text": "Master Student → Machine Learning Engineer at TikTok",
     "email": "peilinca@usc.edu",
     "publications": [
       "Secure On-Device Video OOD Detection Without Backpropagation, ICCV 2025"
@@ -132,7 +135,7 @@
     ]
   },
   {
-    "group": "current",
+    "group": "past",
     "name": "Zheng Yu",
     "profile_url": "https://yuzhengyyds.github.io/",
     "image": "images/others/Zheng_Yu.webp",
