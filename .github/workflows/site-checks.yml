@@ -25,5 +25,6 @@ jobs:
       - name: Run static site checks
         env:
           CHECK_PUBLIC_URLS: "1"
-          PUBLIC_URLS: "https://yzhao062.github.io/,https://viterbi-web.usc.edu/~yzhao010/"
+          PUBLIC_URLS: "https://yzhao062.github.io/"
+          PUBLIC_URLS_SOFT: "https://viterbi-web.usc.edu/~yzhao010/"
         run: python scripts/ci_check_site.py

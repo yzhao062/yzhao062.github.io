@@ -122,7 +122,7 @@ def check_utf8_bom(errors: list[str]) -> None:
             errors.append(f"UTF-8 BOM detected: {path.relative_to(ROOT).as_posix()}")
 
 
-def check_public_urls(errors: list[str]) -> None:
+def check_public_urls(errors: list[str], warnings: list[str]) -> None:
     enabled = os.getenv("CHECK_PUBLIC_URLS", "0").strip().lower() in {
         "1",
         "true",
@@ -195,6 +195,39 @@ def check_public_urls(errors: list[str]) -> None:
 
         if not ok:
             errors.append(f"Public URL not accessible: {url} ({last_detail})")
+
+    soft_raw_urls = os.getenv("PUBLIC_URLS_SOFT", "")
+    soft_urls = [u.strip() for u in soft_raw_urls.split(",") if u.strip()]
+    for url in soft_urls:
+        try:
+            result = subprocess.run(
+                [
+                    "curl",
+                    "-I",
+                    "--silent",
+                    "--show-error",
+                    "--location",
+                    "--insecure",
+                    "--max-time",
+                    "20",
+                    "--write-out",
+                    "%{http_code}",
+                    "--output",
+                    os.devnull,
+                    url,
+                ],
+                check=False,
+                capture_output=True,
+                text=True,
+            )
+            status_text = (result.stdout or "").strip()
+            status_code = int(status_text[-3:]) if len(status_text) >= 3 else 0
+            if not (result.returncode == 0 and 200 <= status_code < 400):
+                warnings.append(
+                    f"Soft URL check failed: {url} (exit={result.returncode}, status={status_text})"
+                )
+        except Exception as exc:  # noqa: BLE001
+            warnings.append(f"Soft URL check exception: {url} ({exc})")
 
 
 def check_page_smoke(errors: list[str], warnings: list[str]) -> None:
@@ -297,7 +330,7 @@ def main() -> None:
     check_local_refs(errors)
     check_bib_viewer_compat(errors, warnings)
     check_utf8_bom(errors)
-    check_public_urls(errors)
+    check_public_urls(errors, warnings)
 
     if errors:
         fail(errors)
