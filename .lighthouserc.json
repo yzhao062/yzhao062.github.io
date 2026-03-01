@@ -2,9 +2,6 @@
   "ci": {
     "collect": {
       "numberOfRuns": 2,
-      "settings": {
-        "preset": "mobile"
-      },
       "url": [
         "http://localhost:8080/index.html",
         "http://localhost:8080/lab.html",
