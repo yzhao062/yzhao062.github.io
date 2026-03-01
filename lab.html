@@ -29,25 +29,14 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0-beta3/css/all.min.css">
 
   <!-- Use self-hosted fonts declared in css/common.css -->
+  <link rel="stylesheet" href="css/common.css">
+  <script src="assets/js/layout-shell.js" defer></script>
 </head>
 
 <body>
 
-    <!-- 引入公共CSS -->
-    <link rel="stylesheet" href="css/common.css">
-
     <!-- Navigation -->
     <div id="navbar"></div>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            fetch('includes/navbar.html')
-            .then(response => response.text())
-            .then(content => {
-                document.getElementById('navbar').innerHTML = content;
-            });
-        });
-    </script>
 
     <script src="assets/js/webstat-tracker.js" defer></script>
     <noscript><img src="https://app.ardalio.com/7/5/1866123.png" alt=""></noscript>
@@ -57,24 +46,6 @@
         <!-- Contact Info on the Sidebar -->
         <div class="row">
             <div id="sidebar" class="col-md-3 col-12 content-spacing"></div>
-            <script>
-                document.addEventListener("DOMContentLoaded", function() {
-                    fetch('includes/sidebar.html')
-                    .then(response => response.text())
-                    .then(content => {
-                        const sidebar = document.getElementById('sidebar');
-                        sidebar.innerHTML = content;
-
-                        var emailUser = 'yue.z';
-                        var emailHost = 'usc.edu';
-                        var emailElement = sidebar.querySelector('#email-placeholder');
-                        if (emailElement) {
-                            emailElement.innerHTML = '<a href="mailto:' + emailUser + '@' + emailHost + '">' + emailUser + '@' + emailHost + '</a>';
-                        }
-                    });
-                });
-            </script>
-
             <!-- Entries Column -->
             <div class="col-md-9 col-xs-12 content-spacing">
                 <div class="col">
@@ -466,15 +437,6 @@
 
     <!--Insert footer-->
     <div id="myFooter"></div>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            fetch('includes/footer.html')
-            .then(response => response.text())
-            .then(content => {
-                document.getElementById('myFooter').innerHTML = content;
-            });
-        });
-    </script>
 </body>
 </html>
 

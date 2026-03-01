@@ -115,54 +115,98 @@
       return extractBibField(entry, 'title');
     }
 
+    function findBibEntryByTitle(entries, title) {
+      var normalizedTitle = normalizeTitle(title);
+      if (!normalizedTitle) return null;
+
+      var titleCandidates = [normalizedTitle];
+      if (title.indexOf(':') !== -1) {
+        var tail = normalizeTitle(title.split(':').slice(1).join(':'));
+        if (tail) titleCandidates.push(tail);
+      }
+
+      var exactMatch = null;
+      var fuzzyMatch = null;
+
+      entries.forEach(function(entry) {
+        var bibTitle = extractBibTitle(entry);
+        var normalizedBibTitle = normalizeTitle(bibTitle);
+
+        titleCandidates.forEach(function(candidate) {
+          if (!candidate) return;
+
+          if (!exactMatch && normalizedBibTitle === candidate) {
+            exactMatch = entry;
+          } else if (
+            !fuzzyMatch &&
+            normalizedBibTitle.indexOf(candidate.slice(0, 24)) !== -1
+          ) {
+            fuzzyMatch = entry;
+          }
+        });
+
+        if (!fuzzyMatch && !exactMatch) {
+          var shortTarget = normalizedTitle.slice(0, 12);
+          if (shortTarget && normalizedBibTitle.indexOf(shortTarget) !== -1) {
+            fuzzyMatch = entry;
+          }
+        }
+      });
+
+      return exactMatch || fuzzyMatch;
+    }
+
     document.addEventListener('DOMContentLoaded', function() {
-      var title = getQueryParam('title');
+      var id = getQueryParam('id');
+      var fallbackTitle = getQueryParam('title');
       var queryTitleEl = document.getElementById('query-title');
       var bibContentEl = document.getElementById('bib-content');
       var copyBtn = document.getElementById('copy-btn');
 
-      queryTitleEl.textContent = title ? ('Paper: ' + title) : 'No paper title provided.';
+      if (!id && !fallbackTitle) {
+        queryTitleEl.textContent = 'No paper id provided.';
+        bibContentEl.textContent = 'Please open this page from the Publications page.';
+        return;
+      }
 
-      fetch('files/yue-zhao.bib')
-        .then(function(response) {
-          if (!response.ok) throw new Error('Failed to load yue-zhao.bib');
-          return response.text();
-        })
-        .then(function(allBib) {
+      if (id) {
+        queryTitleEl.textContent = 'Paper ID: ' + id;
+      } else {
+        queryTitleEl.textContent = 'Paper: ' + fallbackTitle;
+      }
+
+      var bibPromise = fetch('files/yue-zhao.bib').then(function(response) {
+        if (!response.ok) throw new Error('Failed to load yue-zhao.bib');
+        return response.text();
+      });
+
+      var publicationsPromise = id
+        ? fetch('data/publications.json').then(function(response) {
+            if (!response.ok) throw new Error('Failed to load publications data');
+            return response.json();
+          })
+        : Promise.resolve([]);
+
+      Promise.all([bibPromise, publicationsPromise])
+        .then(function(results) {
+          var allBib = results[0];
+          var publications = Array.isArray(results[1]) ? results[1] : [];
           var entries = splitBibEntries(allBib);
-          var target = normalizeTitle(title);
-          var titleCandidates = [target];
-          if (title.indexOf(':') !== -1) {
-            var tail = normalizeTitle(title.split(':').slice(1).join(':'));
-            if (tail) titleCandidates.push(tail);
-          }
-          var exactMatch = null;
-          var fuzzyMatch = null;
 
-          entries.forEach(function(entry) {
-            var bibTitle = extractBibTitle(entry);
-            var normalizedBibTitle = normalizeTitle(bibTitle);
-            titleCandidates.forEach(function(candidate) {
-              if (!candidate) return;
-              if (!exactMatch && normalizedBibTitle === candidate) {
-                exactMatch = entry;
-              } else if (
-                !fuzzyMatch &&
-                candidate &&
-                normalizedBibTitle.indexOf(candidate.slice(0, 24)) !== -1
-              ) {
-                fuzzyMatch = entry;
-              }
+          var resolvedTitle = fallbackTitle;
+          if (id) {
+            var matchedPublication = publications.find(function(item) {
+              return item && item.id === id;
             });
-            if (!fuzzyMatch && !exactMatch && target) {
-              var shortTarget = target.slice(0, 12);
-              if (shortTarget && normalizedBibTitle.indexOf(shortTarget) !== -1) {
-                fuzzyMatch = entry;
-              }
+            if (!matchedPublication) {
+              bibContentEl.textContent = 'No publication found for id "' + id + '".';
+              return;
             }
-          });
+            resolvedTitle = matchedPublication.title || '';
+            queryTitleEl.textContent = 'Paper: ' + resolvedTitle + ' (id: ' + id + ')';
+          }
 
-          var matched = exactMatch || fuzzyMatch;
+          var matched = findBibEntryByTitle(entries, resolvedTitle);
           if (matched) {
             bibContentEl.textContent = matched;
             copyBtn.disabled = false;
@@ -172,12 +216,12 @@
               });
             });
           } else {
-            bibContentEl.textContent = 'No matching BibTeX entry found for this title. Please use "View Full BibTeX File".';
+            bibContentEl.textContent = 'No matching BibTeX entry found. Please use "View Full BibTeX File".';
           }
         })
         .catch(function(error) {
           console.error(error);
-          bibContentEl.textContent = 'Failed to load BibTeX file.';
+          bibContentEl.textContent = 'Failed to load required files.';
         });
     });
   </script>
