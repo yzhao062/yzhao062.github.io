@@ -1,0 +1,29 @@
+name: Site Checks
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  site-checks:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run static site checks
+        env:
+          CHECK_PUBLIC_URLS: "1"
+          PUBLIC_URLS: "https://yzhao062.github.io/,https://viterbi-web.usc.edu/~yzhao010/"
+        run: python scripts/ci_check_site.py
