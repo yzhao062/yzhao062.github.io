@@ -27,6 +27,15 @@
             font-family: 'Roboto', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Helvetica Neue', 'Arial', 'Noto Sans', 'sans-serif', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
         }
 
+        /* Reserve space for async include blocks to reduce layout shifts. */
+        #navbar {
+            min-height: 56px;
+        }
+
+        #sidebar {
+            min-height: 360px;
+        }
+
         .heading {
             word-wrap: break-word;
             font-family: 'Poppins', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Helvetica Neue', 'Arial', 'Noto Sans', 'sans-serif', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
@@ -55,6 +64,7 @@
         .headshot {
             max-width: 100%;
             height: auto;
+            aspect-ratio: 1 / 1;
             margin: 0 auto;
             display: block;
         }
@@ -174,6 +184,10 @@
         @media (max-width: 767.98px) {
             .content-spacing {
                 margin-top: 18px;
+            }
+
+            #sidebar {
+                min-height: 260px;
             }
 
             .heading {
