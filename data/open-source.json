@@ -1,0 +1,280 @@
+[
+  {
+    "name": "PyOD",
+    "category": "Library",
+    "role": "Primary",
+    "description": "A Python library for outlier and anomaly detection, integrating classical and deep learning methods with a unified interface.",
+    "repo_url": "https://github.com/yzhao062/pyod",
+    "docs_url": "https://pyod.readthedocs.io",
+    "paper_url": "https://arxiv.org/abs/2412.12154",
+    "demo_url": "",
+    "stars": 9700,
+    "tags": [
+      "Anomaly Detection",
+      "Outlier Detection",
+      "Python",
+      "Machine Learning",
+      "PyTorch"
+    ]
+  },
+  {
+    "name": "AD-AGENT",
+    "category": "Platform",
+    "role": "Primary",
+    "description": "An LLM-driven multi-agent anomaly detection platform for end-to-end workflows across tabular, graph, and time-series settings.",
+    "repo_url": "https://github.com/USC-FORTIS/AD-AGENT",
+    "docs_url": "https://usc-fortis.github.io/AD-AGENT/",
+    "paper_url": "https://arxiv.org/abs/2505.12594",
+    "demo_url": "",
+    "stars": 88,
+    "tags": [
+      "LLM Agents",
+      "Anomaly Detection",
+      "Multi-Modal",
+      "Automation"
+    ]
+  },
+  {
+    "name": "TrustLLM",
+    "category": "Benchmark / Toolkit",
+    "role": "Collaborator",
+    "description": "A trustworthiness benchmark and toolkit for LLMs; collaboration included follow-on NSF-supported development with the core team.",
+    "repo_url": "https://github.com/HowieHwong/TrustLLM",
+    "docs_url": "https://trustllmbenchmark.github.io/TrustLLM-Website/",
+    "paper_url": "https://openreview.net/forum?id=bWUU0LwwMp",
+    "demo_url": "",
+    "stars": 618,
+    "tags": [
+      "Trustworthy AI",
+      "LLM Evaluation",
+      "Benchmark",
+      "Toolkit"
+    ]
+  },
+  {
+    "name": "TrustEval-toolkit",
+    "category": "Benchmark / Toolkit",
+    "role": "Collaborator",
+    "description": "A toolkit and benchmark for evaluating trustworthiness of generative foundation models across LLM, VLM, and text-to-image settings.",
+    "repo_url": "https://github.com/TrustGen/TrustEval-toolkit",
+    "docs_url": "https://trusteval-docs.readthedocs.io",
+    "paper_url": "https://arxiv.org/abs/2502.14296",
+    "demo_url": "",
+    "stars": 128,
+    "tags": [
+      "Trustworthy AI",
+      "LLM Evaluation",
+      "VLM",
+      "Text-to-Image",
+      "Benchmark",
+      "Toolkit"
+    ]
+  },
+  {
+    "name": "NLP-ADBench",
+    "category": "Benchmark",
+    "role": "Primary",
+    "description": "A benchmark for anomaly detection in NLP, including NLPAD datasets and standardized evaluation across end-to-end and embedding-based methods.",
+    "repo_url": "https://github.com/USC-FORTIS/NLP-ADBench",
+    "docs_url": "",
+    "paper_url": "https://arxiv.org/abs/2412.04784",
+    "demo_url": "",
+    "stars": 21,
+    "tags": [
+      "NLP",
+      "Anomaly Detection",
+      "Benchmark",
+      "EMNLP Findings"
+    ]
+  },
+  {
+    "name": "ADBench",
+    "category": "Benchmark",
+    "role": "Primary",
+    "description": "Official benchmark for anomaly detection with large-scale evaluations across unsupervised, semi-supervised, and supervised settings.",
+    "repo_url": "https://github.com/Minqi824/ADBench",
+    "docs_url": "",
+    "paper_url": "https://proceedings.neurips.cc/paper_files/paper/2022/hash/da0ddd47c18ae3dd2888ff2ea4b6ccf7-Abstract-Datasets_and_Benchmarks.html",
+    "demo_url": "",
+    "stars": 1000,
+    "tags": [
+      "Anomaly Detection",
+      "Benchmark",
+      "NeurIPS",
+      "Tabular Data"
+    ]
+  },
+  {
+    "name": "Anomaly-Detection-Resources",
+    "category": "Resource Hub",
+    "role": "Primary",
+    "description": "A curated resource hub for anomaly detection, including papers, benchmarks, tutorials, datasets, tools, and community references.",
+    "repo_url": "https://github.com/yzhao062/anomaly-detection-resources",
+    "docs_url": "",
+    "paper_url": "",
+    "demo_url": "",
+    "stars": 9200,
+    "tags": [
+      "Awesome List",
+      "Anomaly Detection",
+      "Resources",
+      "Benchmarks",
+      "Tutorials"
+    ]
+  },
+  {
+    "name": "CS-Paper-Checklist",
+    "category": "Research Toolkit",
+    "role": "Primary",
+    "description": "A practical sanity checklist for improving CS paper quality, structure, and submission readiness.",
+    "repo_url": "https://github.com/yzhao062/cs-paper-checklist",
+    "docs_url": "",
+    "paper_url": "",
+    "demo_url": "",
+    "stars": 1500,
+    "tags": [
+      "Writing",
+      "Research Workflow",
+      "Checklist",
+      "Academic Publishing"
+    ]
+  },
+  {
+    "name": "SUOD",
+    "category": "Library / System",
+    "role": "Primary",
+    "description": "An acceleration framework for large-scale unsupervised heterogeneous outlier detection with efficient training and inference.",
+    "repo_url": "https://github.com/yzhao062/SUOD",
+    "docs_url": "https://suod.readthedocs.io",
+    "paper_url": "https://proceedings.mlsys.org/paper_files/paper/2021/hash/da9d70f7f98f0f660f24f6f3d9e7b0f1-Abstract.html",
+    "demo_url": "",
+    "stars": 391,
+    "tags": [
+      "Anomaly Detection",
+      "Acceleration",
+      "Distributed Systems",
+      "MLSys"
+    ]
+  },
+  {
+    "name": "PyGOD",
+    "category": "Library",
+    "role": "Primary",
+    "description": "A Python library for graph outlier detection, with unified APIs and broad coverage of graph anomaly detection algorithms.",
+    "repo_url": "https://github.com/pygod-team/pygod",
+    "docs_url": "https://docs.pygod.org",
+    "paper_url": "http://jmlr.org/papers/v25/23-0963.html",
+    "demo_url": "",
+    "stars": 1500,
+    "tags": [
+      "Graph Anomaly Detection",
+      "PyTorch Geometric",
+      "Library",
+      "JMLR"
+    ]
+  },
+  {
+    "name": "TODS",
+    "category": "System / AutoML",
+    "role": "Collaborator",
+    "description": "An automated time-series outlier detection system with end-to-end pipeline support for preprocessing, feature extraction, model search, and detection.",
+    "repo_url": "https://github.com/datamllab/tods",
+    "docs_url": "http://tods-doc.github.io",
+    "paper_url": "https://arxiv.org/abs/2009.09822",
+    "demo_url": "",
+    "stars": 1700,
+    "tags": [
+      "Time Series",
+      "Anomaly Detection",
+      "AutoML",
+      "System"
+    ]
+  },
+  {
+    "name": "TDC",
+    "category": "Benchmark / Platform",
+    "role": "Collaborator",
+    "description": "Therapeutics Data Commons, a platform for AI-ready therapeutic datasets, benchmarks, and evaluation workflows across drug discovery tasks.",
+    "repo_url": "https://github.com/mims-harvard/TDC",
+    "docs_url": "https://tdcommons.ai",
+    "paper_url": "https://proceedings.neurips.cc/paper/2021/hash/6a8d3b0f5987e0f6d3d2f5f65f02e3cc-Abstract.html",
+    "demo_url": "",
+    "stars": 1200,
+    "tags": [
+      "Therapeutics",
+      "Benchmark",
+      "Datasets",
+      "Drug Discovery",
+      "Platform"
+    ]
+  },
+  {
+    "name": "AD-LLM",
+    "category": "Benchmark",
+    "role": "Primary",
+    "description": "A benchmark for using large language models in anomaly detection, covering zero-shot detection, data augmentation, and model selection.",
+    "repo_url": "https://github.com/USC-FORTIS/AD-LLM",
+    "docs_url": "",
+    "paper_url": "https://arxiv.org/abs/2412.11142",
+    "demo_url": "",
+    "stars": 41,
+    "tags": [
+      "LLM",
+      "Anomaly Detection",
+      "Benchmark",
+      "ACL Findings"
+    ]
+  },
+  {
+    "name": "LangSkills",
+    "category": "Toolkit / Knowledge Base",
+    "role": "Collaborator",
+    "description": "An evidence-backed skill library and pipeline for AI agents, with offline searchable bundles distilled from papers and technical sources.",
+    "repo_url": "https://github.com/LabRAI/LangSkills",
+    "docs_url": "",
+    "paper_url": "",
+    "demo_url": "",
+    "stars": 5,
+    "tags": [
+      "Agent Tools",
+      "Skill Library",
+      "Knowledge Base",
+      "LLM Pipeline"
+    ]
+  },
+  {
+    "name": "agent-audit",
+    "category": "Security Toolkit",
+    "role": "Collaborator",
+    "description": "A static security analyzer for AI agent code, with OWASP Agentic Top 10 coverage, taint analysis, and MCP configuration auditing.",
+    "repo_url": "https://github.com/HeadyZhang/agent-audit",
+    "docs_url": "",
+    "paper_url": "",
+    "demo_url": "https://pypi.org/project/agent-audit/",
+    "stars": 21,
+    "tags": [
+      "AI Agent Security",
+      "Static Analysis",
+      "OWASP",
+      "MCP",
+      "Taint Analysis"
+    ]
+  },
+  {
+    "name": "combo",
+    "category": "Library",
+    "role": "Primary",
+    "description": "A Python toolbox for machine learning model and score combination across classification, clustering, and anomaly detection tasks.",
+    "repo_url": "https://github.com/yzhao062/combo",
+    "docs_url": "https://pycombo.readthedocs.io",
+    "paper_url": "https://aaai.org/papers/13648-combining-machine-learning-models-using-combo-library/",
+    "demo_url": "",
+    "stars": 659,
+    "tags": [
+      "Ensemble Learning",
+      "Model Combination",
+      "Anomaly Detection",
+      "Library"
+    ]
+  }
+]

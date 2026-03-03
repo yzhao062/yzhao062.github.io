@@ -110,7 +110,48 @@
             background-color: #FFD84D;
         }
 
+        .open-source-link {
+            color: #F2C6A7 !important; /* USC tertiary PMS 474 C */
+            font-weight: 700;
+            position: relative;
+        }
+
+        .open-source-link:hover,
+        .open-source-link:focus {
+            color: #F26178 !important; /* USC tertiary PMS 709 C */
+        }
+
+        .open-source-link::after {
+            content: "";
+            position: absolute;
+            left: 0.75rem;
+            right: 0.75rem;
+            bottom: 0.35rem;
+            height: 2px;
+            background-color: #F2C6A7;
+            border-radius: 2px;
+            opacity: 0.95;
+        }
+
+        .open-source-link:hover::after,
+        .open-source-link:focus::after {
+            background-color: #F26178;
+        }
+
         @media (max-width: 991.98px) {
+            .open-source-link {
+                display: block;
+                margin-top: 0.25rem;
+                padding: 0.35rem 0.7rem !important;
+                border-left: 3px solid #F2C6A7;
+                color: #F2C6A7 !important;
+                background: transparent;
+            }
+
+            .open-source-link::after {
+                display: none;
+            }
+
             .fortis-lab-link {
                 display: block;
                 margin-top: 0.25rem;

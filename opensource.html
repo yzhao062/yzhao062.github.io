@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Yue Zhao">
+  <meta name="description" content="Open-source software, benchmarks, and research tools by Yue Zhao and collaborators.">
+  <meta name="keywords" content="Yue Zhao open source, software, benchmark, toolkit, reproducibility">
+
+  <title>Open Source | Yue Zhao</title>
+  <link rel="canonical" href="https://viterbi-web.usc.edu/~yzhao010/opensource.html">
+  <link rel="icon" type="image/x-icon" href="images/logo2.ico">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Open Source | Yue Zhao">
+  <meta property="og:description" content="Open-source software, benchmarks, and practical research tools.">
+  <meta property="og:url" content="https://viterbi-web.usc.edu/~yzhao010/opensource.html">
+  <meta property="og:image" content="https://viterbi-web.usc.edu/~yzhao010/images/logo.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Open Source | Yue Zhao">
+  <meta name="twitter:description" content="Open-source software, benchmarks, and practical research tools.">
+  <meta name="twitter:image" content="https://viterbi-web.usc.edu/~yzhao010/images/logo.png">
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preload" as="image" href="images/rsz_250.jpg">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="css/common.css">
+  <script src="assets/js/layout-shell.js" defer></script>
+  <style>
+    .open-source-page {
+      --os-accent: #F2C6A7;
+      --os-accent-strong: #F26178;
+      --os-accent-soft: #FFF7F2;
+    }
+
+    .repo-card {
+      border: 1px solid #e5e5e5;
+      border-top: 3px solid var(--os-accent);
+      border-radius: 10px;
+      padding: 16px;
+      margin-bottom: 16px;
+      background: #fff;
+      height: 100%;
+    }
+
+    .repo-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .repo-meta {
+      color: #555;
+      font-size: 0.92rem;
+      margin-bottom: 8px;
+    }
+
+    .role-chip {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 999px;
+      margin-bottom: 8px;
+      border: 1px solid transparent;
+    }
+
+    .role-leadership {
+      background: #fff2f2;
+      color: #990000;
+      border-color: #e7bcbc;
+    }
+
+    .role-core {
+      background: #f2f6ff;
+      color: #1f4b99;
+      border-color: #bfd0ee;
+    }
+
+    .role-contributor {
+      background: #f5f5f5;
+      color: #555;
+      border-color: #ddd;
+    }
+
+    .repo-tags {
+      margin-top: 10px;
+    }
+
+    .repo-tags .badge {
+      margin-right: 6px;
+      margin-bottom: 6px;
+      background: #f1f1f1;
+      color: #444;
+      border: 1px solid #ddd;
+    }
+
+    .empty-state {
+      background: var(--os-accent-soft);
+      border-left: 4px solid var(--os-accent-strong);
+      padding: 12px 16px;
+      margin: 12px 0;
+    }
+
+    .open-source-page #open-source {
+      color: #990000;
+      border-bottom: 2px solid var(--os-accent);
+      display: inline-block;
+      padding-bottom: 2px;
+    }
+
+    .open-source-page .btn-secondary {
+      background-color: var(--os-accent-strong);
+      border-color: var(--os-accent-strong);
+    }
+
+    .open-source-page .btn-secondary:hover,
+    .open-source-page .btn-secondary:focus {
+      background-color: #e14a66;
+      border-color: #e14a66;
+    }
+  </style>
+</head>
+
+<body class="open-source-page">
+    <div id="navbar"></div>
+
+    <script src="assets/js/webstat-tracker.js" defer></script>
+    <noscript><img src="https://app.ardalio.com/7/5/1866123.png" alt=""></noscript>
+
+    <div class="container">
+        <div class="row">
+            <div id="sidebar" class="col-md-3 col-12 content-spacing"></div>
+            <div class="col-md-9 col-xs-12 content-spacing">
+                <div class="col">
+                    <h2 id="open-source">&#128736; Open Source / Software</h2>
+                    <p>
+                      I value practical and reproducible research. This page highlights open-source libraries,
+                      benchmarks, and system tools built by my group and collaborators.
+                      For all repositories, see <a href="https://github.com/yzhao062">my GitHub profile</a>.
+                    </p>
+                    <div style="margin: 10px 0 8px 0;">
+                      <span class="repo-meta" style="margin-right: 8px;">Sort by:</span>
+                      <button id="sort-attention" class="btn btn-sm btn-outline-secondary" type="button">Attention</button>
+                      <button id="sort-update" class="btn btn-sm btn-outline-secondary" type="button">Last Update</button>
+                    </div>
+                    <div id="meta-sync-status" class="repo-meta" style="margin-bottom: 6px;"></div>
+                    <div id="repo-summary" class="repo-meta"></div>
+                    <hr>
+                    <div id="repo-empty" class="empty-state" style="display:none;">
+                      No projects listed yet. Add entries to <code>data/open-source.json</code> to populate this page.
+                    </div>
+                    <div id="repo-list" class="row"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="myFooter"></div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var listEl = document.getElementById("repo-list");
+        var emptyEl = document.getElementById("repo-empty");
+        var summaryEl = document.getElementById("repo-summary");
+        var metaSyncEl = document.getElementById("meta-sync-status");
+        var sortAttentionBtn = document.getElementById("sort-attention");
+        var sortUpdateBtn = document.getElementById("sort-update");
+        var STAR_CACHE_TTL_MS = 6 * 60 * 60 * 1000;
+        var META_CACHE_TTL_MS = 6 * 60 * 60 * 1000;
+        var activeSortMode = "attention";
+        var loadedItems = [];
+
+        function escapeHtml(value) {
+          return String(value || "")
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;")
+            .replace(/'/g, "&#39;");
+        }
+
+        function renderLink(url, iconClass, label) {
+          if (!url) return "";
+          return '<a href="' + escapeHtml(url) + '" style="margin-right:10px;">' +
+            '<i class="' + escapeHtml(iconClass) + '" aria-hidden="true"></i> ' + escapeHtml(label) +
+            "</a>";
+        }
+
+        function renderCard(project) {
+          var tags = Array.isArray(project.tags) ? project.tags : [];
+          var stars = typeof project.stars === "number" ? project.stars : null;
+          var category = project.category ? escapeHtml(project.category) : "General";
+          var starText = stars !== null ? (" | " + stars + "+ stars") : "";
+          var role = String(project.role || "Contributor");
+          var roleLower = role.toLowerCase();
+          var roleClass = "role-contributor";
+          if (roleLower.indexOf("primary") >= 0 || roleLower.indexOf("lead") >= 0 || roleLower.indexOf("creator") >= 0) roleClass = "role-leadership";
+          else if (roleLower.indexOf("core") >= 0 || roleLower.indexOf("maintainer") >= 0) roleClass = "role-core";
+
+          var tagHtml = tags.map(function (tag) {
+            return '<span class="badge rounded-pill">' + escapeHtml(tag) + "</span>";
+          }).join("");
+
+          return (
+            '<div class="col-md-6 d-flex">' +
+              '<div class="repo-card w-100">' +
+                '<div class="repo-title">' + escapeHtml(project.name || "Untitled Project") + "</div>" +
+                '<div class="role-chip ' + roleClass + '">' + escapeHtml(role) + "</div>" +
+                '<div class="repo-meta">' + category + starText + "</div>" +
+                '<p>' + escapeHtml(project.description || "") + "</p>" +
+                '<div>' +
+                  renderLink(project.repo_url, "fab fa-github", "Repo") +
+                  renderLink(project.docs_url, "fas fa-book", "Docs") +
+                  renderLink(project.paper_url, "fas fa-file-alt", "Paper") +
+                  renderLink(project.demo_url, "fas fa-globe", "Demo") +
+                "</div>" +
+                '<div class="repo-tags">' + tagHtml + "</div>" +
+              "</div>" +
+            "</div>"
+          );
+        }
+
+        function parseGitHubRepo(repoUrl) {
+          var value = String(repoUrl || "").trim();
+          var match = value.match(/^https?:\/\/github\.com\/([^\/]+)\/([^\/#?]+)\/?$/i);
+          if (!match) return null;
+          return { owner: match[1], repo: match[2] };
+        }
+
+        function getStarCacheKey(owner, repo) {
+          return "gh_stars_" + owner.toLowerCase() + "_" + repo.toLowerCase();
+        }
+
+        function getMetaCacheKey(owner, repo) {
+          return "gh_meta_" + owner.toLowerCase() + "_" + repo.toLowerCase();
+        }
+
+        function readCachedMeta(owner, repo) {
+          try {
+            var raw = localStorage.getItem(getMetaCacheKey(owner, repo));
+            if (!raw) return null;
+            var payload = JSON.parse(raw);
+            if (!payload || typeof payload.ts !== "number") return null;
+            if ((Date.now() - payload.ts) > META_CACHE_TTL_MS) return null;
+            return payload;
+          } catch (e) {
+            return null;
+          }
+        }
+
+        function writeCachedMeta(owner, repo, payload) {
+          try {
+            localStorage.setItem(
+              getMetaCacheKey(owner, repo),
+              JSON.stringify({
+                stars: payload.stars,
+                pushed_at: payload.pushed_at,
+                ts: Date.now()
+              })
+            );
+          } catch (e) {
+            // Ignore storage errors.
+          }
+        }
+
+        function fetchLiveStars(repoUrl) {
+          var parsed = parseGitHubRepo(repoUrl);
+          if (!parsed) return Promise.resolve(null);
+
+          var cached = readCachedMeta(parsed.owner, parsed.repo);
+          if (cached && (typeof cached.stars === "number" || cached.pushed_at)) return Promise.resolve(cached);
+
+          return fetch("https://api.github.com/repos/" + encodeURIComponent(parsed.owner) + "/" + encodeURIComponent(parsed.repo), {
+            headers: { "Accept": "application/vnd.github+json" }
+          })
+            .then(function (response) {
+              if (!response.ok) throw new Error("GitHub API request failed");
+              return response.json();
+            })
+            .then(function (data) {
+              if (!data) return null;
+              var payload = {
+                stars: (typeof data.stargazers_count === "number") ? data.stargazers_count : null,
+                pushed_at: data.pushed_at || null
+              };
+              writeCachedMeta(parsed.owner, parsed.repo, payload);
+              return payload;
+            })
+            .catch(function () {
+              return null;
+            });
+        }
+
+        function attachLiveStars(projects) {
+          return Promise.all((projects || []).map(function (item) {
+            return fetchLiveStars(item.repo_url).then(function (meta) {
+              if (meta && typeof meta.stars === "number") item.stars = meta.stars;
+              if (meta && meta.pushed_at) {
+                var ts = Date.parse(meta.pushed_at);
+                if (!isNaN(ts)) item.last_updated_epoch = ts;
+              }
+              return item;
+            });
+          }));
+        }
+
+        function setSortButtons() {
+          if (!sortAttentionBtn || !sortUpdateBtn) return;
+          if (activeSortMode === "attention") {
+            sortAttentionBtn.classList.remove("btn-outline-secondary");
+            sortAttentionBtn.classList.add("btn-secondary");
+            sortUpdateBtn.classList.remove("btn-secondary");
+            sortUpdateBtn.classList.add("btn-outline-secondary");
+          } else {
+            sortUpdateBtn.classList.remove("btn-outline-secondary");
+            sortUpdateBtn.classList.add("btn-secondary");
+            sortAttentionBtn.classList.remove("btn-secondary");
+            sortAttentionBtn.classList.add("btn-outline-secondary");
+          }
+        }
+
+        function sortItems(items) {
+          var arr = (items || []).slice();
+          if (activeSortMode === "updated") {
+            arr.sort(function (a, b) {
+              var aUpdated = typeof a.last_updated_epoch === "number" ? a.last_updated_epoch : -1;
+              var bUpdated = typeof b.last_updated_epoch === "number" ? b.last_updated_epoch : -1;
+              if (aUpdated !== bUpdated) return bUpdated - aUpdated;
+              var aStars = typeof a.stars === "number" ? a.stars : -1;
+              var bStars = typeof b.stars === "number" ? b.stars : -1;
+              return bStars - aStars;
+            });
+          } else {
+            arr.sort(function (a, b) {
+              var aStars = typeof a.stars === "number" ? a.stars : -1;
+              var bStars = typeof b.stars === "number" ? b.stars : -1;
+              if (aStars !== bStars) return bStars - aStars;
+              var aUpdated = typeof a.last_updated_epoch === "number" ? a.last_updated_epoch : -1;
+              var bUpdated = typeof b.last_updated_epoch === "number" ? b.last_updated_epoch : -1;
+              return bUpdated - aUpdated;
+            });
+          }
+          return arr;
+        }
+
+        function renderItems(items) {
+          var ordered = sortItems(items);
+          if (ordered.length === 0) {
+            emptyEl.style.display = "block";
+            summaryEl.textContent = "0 projects listed.";
+            return;
+          }
+          emptyEl.style.display = "none";
+          var totalStars = ordered.reduce(function (sum, item) {
+            return sum + (typeof item.stars === "number" ? item.stars : 0);
+          }, 0);
+          var modeText = activeSortMode === "updated" ? "sorted by last update" : "sorted by attention";
+          summaryEl.textContent = ordered.length + " projects listed" + (totalStars > 0 ? (" | " + totalStars + "+ combined stars") : "") + " | " + modeText;
+          listEl.innerHTML = ordered.map(renderCard).join("");
+          setSortButtons();
+        }
+
+        function updateMetaSyncStatus() {
+          if (!metaSyncEl) return;
+          var now = new Date();
+          metaSyncEl.textContent = "GitHub metadata synced: " + now.toLocaleString();
+        }
+
+        fetch("data/open-source.json")
+          .then(function (response) {
+            if (!response.ok) throw new Error("Failed to load open-source.json");
+            return response.json();
+          })
+          .then(function (projects) {
+            return attachLiveStars(Array.isArray(projects) ? projects : []);
+          })
+          .then(function (projects) {
+            loadedItems = Array.isArray(projects) ? projects : [];
+            renderItems(loadedItems);
+            updateMetaSyncStatus();
+
+            if (sortAttentionBtn) {
+              sortAttentionBtn.addEventListener("click", function () {
+                activeSortMode = "attention";
+                renderItems(loadedItems);
+              });
+            }
+            if (sortUpdateBtn) {
+              sortUpdateBtn.addEventListener("click", function () {
+                activeSortMode = "updated";
+                renderItems(loadedItems);
+              });
+            }
+          })
+          .catch(function (error) {
+            console.error(error);
+            emptyEl.style.display = "block";
+            summaryEl.textContent = "Could not load project data.";
+            if (metaSyncEl) metaSyncEl.textContent = "GitHub metadata sync failed.";
+          });
+      });
+    </script>
+</body>
+</html>
