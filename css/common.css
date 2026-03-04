@@ -265,22 +265,26 @@
             object-fit: contain;
         }
 
-        details > summary {
+        details.smart-details > summary {
             cursor: pointer;
             list-style: none;
             border-radius: 4px;
             transition: background-color 0.15s ease;
         }
 
-        details > summary::-webkit-details-marker {
+        details.smart-details > summary::-webkit-details-marker {
             display: none;
         }
 
-        details > summary:hover {
+        details.smart-details > summary::marker {
+            content: "";
+        }
+
+        details.smart-details > summary:hover {
             background-color: #fafafa;
         }
 
-        details > summary::before {
+        details.smart-details > summary::before {
             content: "";
             display: inline-block;
             width: 0.5em;
@@ -293,22 +297,22 @@
             transition: transform 0.15s ease, border-color 0.15s ease;
         }
 
-        details[open] > summary::before {
+        details.smart-details[open] > summary::before {
             transform: rotate(45deg) translateY(-0.03em);
         }
 
-        details > summary:hover::before {
+        details.smart-details > summary:hover::before {
             transform: rotate(-45deg) translate(1px, -0.03em);
             border-right-color: #444;
             border-bottom-color: #444;
         }
 
-        details[open] > summary:hover::before {
+        details.smart-details[open] > summary:hover::before {
             transform: rotate(45deg) translate(1px, -0.03em);
         }
 
         @media (max-width: 767.98px) {
-            details > summary::before {
+            details.smart-details > summary::before {
                 width: 0.56em;
                 height: 0.56em;
                 margin-right: 0.55em;
