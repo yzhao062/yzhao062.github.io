@@ -34,6 +34,31 @@
   <!-- Use self-hosted fonts declared in css/common.css -->
   <link rel="stylesheet" href="css/common.css">
   <script src="assets/js/layout-shell.js" defer></script>
+  <style>
+    .author-toggle {
+      color: #b34760;
+      text-decoration: none;
+      border: 1px solid transparent;
+      border-radius: 4px;
+      padding: 0 6px;
+      margin-left: 4px;
+      line-height: 1.3;
+    }
+
+    .author-toggle:hover,
+    .author-toggle:focus {
+      color: #b34760;
+      background-color: #fff3f6;
+      border-color: #f26178;
+      text-decoration: none;
+    }
+
+    .author-self {
+      font-weight: 600;
+      border-bottom: 1px solid #d8b07a;
+      padding-bottom: 1px;
+    }
+  </style>
 </head>
 
 <body>
@@ -89,12 +114,23 @@
                     <hr>
                     <h4 id="conference-papers">Conference and Workshop Papers</h4>
                     <ul class="vert" id="conference-papers-list"></ul>
+                    <details id="conference-papers-older-wrapper" style="margin: 6px 0 12px 0;">
+                        <summary style="cursor: pointer;">Show conference/workshop papers before 2024</summary>
+                        <ul class="vert" id="conference-papers-older-list"></ul>
+                    </details>
 
                     <h4 id="journal-papers">Journal Papers</h4>
                     <ul class="vert" id="journal-papers-list"></ul>
+                    <details id="journal-papers-older-wrapper" style="margin: 6px 0 12px 0;">
+                        <summary style="cursor: pointer;">Show journal papers before 2024</summary>
+                        <ul class="vert" id="journal-papers-older-list"></ul>
+                    </details>
 
                     <script>
                         document.addEventListener('DOMContentLoaded', function() {
+                            var RECENT_YEAR_CUTOFF = 2024;
+                            var AUTHOR_PREVIEW_COUNT = 10;
+
                             function escapeHtml(text) {
                                 return String(text || '')
                                     .replace(/&/g, '&amp;')
@@ -114,13 +150,43 @@
                             function formatAuthors(authors) {
                                 return escapeHtml(authors || '')
                                     .replace(/†/g, '<sup>&dagger;</sup>')
-                                    .replace(/♠/g, '<sup>&spades;</sup>');
+                                    .replace(/♠/g, '<sup>&spades;</sup>')
+                                    .replace(/\bYue Zhao\b/g, '<span class="author-self">Yue Zhao</span>');
                             }
 
-                            function renderItem(item) {
+                            function splitAuthors(authors) {
+                                return String(authors || '')
+                                    .split(',')
+                                    .map(function(name) { return name.trim(); })
+                                    .filter(function(name) { return name.length > 0; });
+                            }
+
+                            function buildAuthorsHtml(item, section, index) {
+                                var fullAuthors = String(item.authors || '');
+                                var authorList = splitAuthors(fullAuthors);
+                                if (authorList.length <= AUTHOR_PREVIEW_COUNT) {
+                                    return formatAuthors(fullAuthors);
+                                }
+
+                                var previewAuthors = authorList.slice(0, AUTHOR_PREVIEW_COUNT).join(', ') + ', et al.';
+                                var key = 'authors-' + section + '-' + index;
+                                var previewId = key + '-preview';
+                                var fullId = key + '-full';
+
+                                return (
+                                    '<span id="' + previewId + '">' + formatAuthors(previewAuthors) + '</span>' +
+                                    '<span id="' + fullId + '" hidden>' + formatAuthors(fullAuthors) + '</span> ' +
+                                    '<button type="button" class="btn btn-link btn-sm p-0 align-baseline author-toggle" ' +
+                                    'data-preview-id="' + previewId + '" data-full-id="' + fullId + '" data-expanded="false">' +
+                                    'Show all authors</button>'
+                                );
+                            }
+
+                            function renderItem(item, index, section) {
                                 var paperUrl = escapeHtml(item.paper_url || '#');
                                 var title = item.title || '';
                                 var links = Array.isArray(item.links) ? item.links : [];
+                                var authorsHtml = buildAuthorsHtml(item, section, index);
                                 var badgeHtml = '';
                                 if (Array.isArray(item.badges) && item.badges.length > 0) {
                                     badgeHtml = item.badges.map(function(badge) {
@@ -144,22 +210,72 @@
                                 return (
                                     '<li>' +
                                         '<strong><a href="' + paperUrl + '">' + escapeHtml(title) + '</a></strong>. <br>' +
-                                        formatAuthors(item.authors) + (badgeHtml ? (' ' + badgeHtml) : '') + '<br>' +
+                                        authorsHtml + (badgeHtml ? (' ' + badgeHtml) : '') + '<br>' +
                                         escapeHtml(item.venue || '') +
                                         '\n                            ' + linkHtml.join('\n                            ') +
                                     '</li>'
                                 );
                             }
 
-                            function renderSection(items, section, listId) {
-                                var list = document.getElementById(listId);
-                                if (!list) return;
-                                var html = items
-                                    .filter(function(item) { return item.section === section; })
-                                    .map(renderItem)
-                                    .join('\n');
-                                list.innerHTML = html;
+                            function parseYear(item) {
+                                if (typeof item.year === 'number' && !Number.isNaN(item.year)) {
+                                    return item.year;
+                                }
+                                var match = String(item.venue || '').match(/\b(19|20)\d{2}\b/);
+                                return match ? parseInt(match[0], 10) : null;
                             }
+
+                            function renderSection(items, section, recentListId, olderListId, olderWrapperId) {
+                                var recentList = document.getElementById(recentListId);
+                                var olderList = document.getElementById(olderListId);
+                                var olderWrapper = document.getElementById(olderWrapperId);
+                                if (!recentList || !olderList || !olderWrapper) return;
+
+                                var filtered = items.filter(function(item) {
+                                    return item.section === section;
+                                });
+
+                                var recentItems = [];
+                                var olderItems = [];
+                                filtered.forEach(function(item) {
+                                    var year = parseYear(item);
+                                    if (year !== null && year < RECENT_YEAR_CUTOFF) {
+                                        olderItems.push(item);
+                                    } else {
+                                        recentItems.push(item);
+                                    }
+                                });
+
+                                recentList.innerHTML = recentItems.map(function(item, index) {
+                                    return renderItem(item, index, section + '-recent');
+                                }).join('\n');
+                                olderList.innerHTML = olderItems.map(function(item, index) {
+                                    return renderItem(item, index, section + '-older');
+                                }).join('\n');
+                                olderWrapper.hidden = olderItems.length === 0;
+                            }
+
+                            document.addEventListener('click', function(event) {
+                                var button = event.target.closest('.author-toggle');
+                                if (!button) return;
+
+                                var preview = document.getElementById(button.getAttribute('data-preview-id'));
+                                var full = document.getElementById(button.getAttribute('data-full-id'));
+                                if (!preview || !full) return;
+
+                                var expanded = button.getAttribute('data-expanded') === 'true';
+                                if (expanded) {
+                                    preview.hidden = false;
+                                    full.hidden = true;
+                                    button.setAttribute('data-expanded', 'false');
+                                    button.textContent = 'Show all authors';
+                                } else {
+                                    preview.hidden = true;
+                                    full.hidden = false;
+                                    button.setAttribute('data-expanded', 'true');
+                                    button.textContent = 'Show fewer authors';
+                                }
+                            });
 
                             fetch('data/publications.json')
                                 .then(function(response) {
@@ -167,8 +283,20 @@
                                     return response.json();
                                 })
                                 .then(function(items) {
-                                    renderSection(items, 'conference', 'conference-papers-list');
-                                    renderSection(items, 'journal', 'journal-papers-list');
+                                    renderSection(
+                                        items,
+                                        'conference',
+                                        'conference-papers-list',
+                                        'conference-papers-older-list',
+                                        'conference-papers-older-wrapper'
+                                    );
+                                    renderSection(
+                                        items,
+                                        'journal',
+                                        'journal-papers-list',
+                                        'journal-papers-older-list',
+                                        'journal-papers-older-wrapper'
+                                    );
                                 })
                                 .catch(function(error) {
                                     console.error(error);
