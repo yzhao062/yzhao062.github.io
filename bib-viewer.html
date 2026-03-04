@@ -10,7 +10,8 @@
   <link rel="stylesheet" href="css/common.css">
 </head>
 <body>
-  <div class="container content-spacing">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <main id="main-content" class="container content-spacing">
     <h2 style="color:#990000;">BibTeX Entry</h2>
     <p id="query-title" style="margin-bottom:12px;"></p>
     <div style="margin-bottom:12px;">
@@ -19,7 +20,7 @@
     </div>
     <button id="copy-btn" class="btn btn-sm btn-outline-dark" style="margin-bottom:12px;" disabled>Copy BibTeX</button>
     <pre id="bib-content" style="background:#f8f8f8; border:1px solid #ddd; border-radius:8px; padding:14px; white-space:pre-wrap;"></pre>
-  </div>
+  </main>
 
   <script>
     function getQueryParam(name) {

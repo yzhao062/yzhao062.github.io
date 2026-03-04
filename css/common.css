@@ -27,6 +27,31 @@
             font-family: 'Roboto', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Helvetica Neue', 'Arial', 'Noto Sans', 'sans-serif', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
         }
 
+        .skip-link {
+            position: absolute;
+            left: 12px;
+            top: -48px;
+            z-index: 3000;
+            background: #ffffff;
+            color: #990000;
+            border: 2px solid #990000;
+            border-radius: 6px;
+            padding: 8px 12px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: top 0.15s ease;
+        }
+
+        .skip-link:focus,
+        .skip-link:focus-visible {
+            top: 12px;
+        }
+
+        :focus-visible {
+            outline: 3px solid #ffcc00;
+            outline-offset: 2px;
+        }
+
         /* Reserve space for async include blocks to reduce layout shifts. */
         #navbar {
             min-height: 56px;
