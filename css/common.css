@@ -280,6 +280,8 @@
             width: 1em;
             margin-right: 0.35em;
             color: #444;
+            font-size: clamp(0.9rem, 0.5vw + 0.75rem, 1.05rem);
+            line-height: 1;
             transition: transform 0.15s ease;
         }
 
@@ -288,6 +290,11 @@
         }
 
         @media (max-width: 767.98px) {
+            details > summary::before {
+                font-size: clamp(1rem, 1vw + 0.7rem, 1.15rem);
+                margin-right: 0.42em;
+            }
+
             .content-spacing {
                 margin-top: 18px;
             }
