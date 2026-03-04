@@ -268,31 +268,50 @@
         details > summary {
             cursor: pointer;
             list-style: none;
+            border-radius: 4px;
+            transition: background-color 0.15s ease;
         }
 
         details > summary::-webkit-details-marker {
             display: none;
         }
 
+        details > summary:hover {
+            background-color: #fafafa;
+        }
+
         details > summary::before {
-            content: "\25B8";
+            content: "";
             display: inline-block;
-            width: 1em;
-            margin-right: 0.35em;
-            color: #444;
-            font-size: clamp(0.9rem, 0.5vw + 0.75rem, 1.05rem);
-            line-height: 1;
-            transition: transform 0.15s ease;
+            width: 0.5em;
+            height: 0.5em;
+            margin-right: 0.5em;
+            border-right: 2px solid #666;
+            border-bottom: 2px solid #666;
+            transform: rotate(-45deg) translateY(-0.03em);
+            transform-origin: center;
+            transition: transform 0.15s ease, border-color 0.15s ease;
         }
 
         details[open] > summary::before {
-            transform: rotate(90deg);
+            transform: rotate(45deg) translateY(-0.03em);
+        }
+
+        details > summary:hover::before {
+            transform: rotate(-45deg) translate(1px, -0.03em);
+            border-right-color: #444;
+            border-bottom-color: #444;
+        }
+
+        details[open] > summary:hover::before {
+            transform: rotate(45deg) translate(1px, -0.03em);
         }
 
         @media (max-width: 767.98px) {
             details > summary::before {
-                font-size: clamp(1rem, 1vw + 0.7rem, 1.15rem);
-                margin-right: 0.42em;
+                width: 0.56em;
+                height: 0.56em;
+                margin-right: 0.55em;
             }
 
             .content-spacing {
