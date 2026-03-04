@@ -265,6 +265,28 @@
             object-fit: contain;
         }
 
+        details > summary {
+            cursor: pointer;
+            list-style: none;
+        }
+
+        details > summary::-webkit-details-marker {
+            display: none;
+        }
+
+        details > summary::before {
+            content: "\25B8";
+            display: inline-block;
+            width: 1em;
+            margin-right: 0.35em;
+            color: #444;
+            transition: transform 0.15s ease;
+        }
+
+        details[open] > summary::before {
+            transform: rotate(90deg);
+        }
+
         @media (max-width: 767.98px) {
             .content-spacing {
                 margin-top: 18px;
