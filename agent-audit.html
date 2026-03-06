@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Yue Zhao">
+  <meta name="description" content="agent-audit is an open-source security auditing tool for AI agent code, covering OWASP Agentic Top 10 checks, taint-style analysis, MCP auditing, and real-world ClawHub scans.">
+  <meta name="keywords" content="agent-audit, AI agent security, OWASP Agentic Top 10, security audit tool, MCP security, taint analysis, ClawHub, OpenClaw, AGENT-058, GitHub, PyPI">
+  <title>agent-audit | AI Agent Security Audit Tool (ClawHub, GitHub, PyPI)</title>
+  <link rel="canonical" href="https://viterbi-web.usc.edu/~yzhao010/agent-audit.html">
+  <link rel="icon" type="image/x-icon" href="images/logo2.ico">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="agent-audit | AI Agent Security Audit Tool">
+  <meta property="og:description" content="Open-source security auditing tool for AI agent code with OWASP Agentic Top 10 checks, taint-style analysis, MCP auditing, and ClawHub scan evidence.">
+  <meta property="og:url" content="https://viterbi-web.usc.edu/~yzhao010/agent-audit.html">
+  <meta property="og:image" content="https://viterbi-web.usc.edu/~yzhao010/images/logo.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="agent-audit | AI Agent Security Audit Tool">
+  <meta name="twitter:description" content="Open-source security auditing tool for AI agent code with OWASP Agentic Top 10 checks, taint-style analysis, MCP auditing, and ClawHub scan evidence.">
+  <meta name="twitter:image" content="https://viterbi-web.usc.edu/~yzhao010/images/logo.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareSourceCode",
+    "name": "agent-audit",
+    "description": "Open-source security auditing tool for AI agent code with OWASP Agentic Top 10 checks, taint-style analysis, and MCP configuration auditing.",
+    "url": "https://viterbi-web.usc.edu/~yzhao010/agent-audit.html",
+    "codeRepository": "https://github.com/HeadyZhang/agent-audit",
+    "downloadUrl": "https://pypi.org/project/agent-audit/",
+    "programmingLanguage": "Python",
+    "author": {
+      "@type": "Person",
+      "name": "Yue Zhao"
+    }
+  }
+  </script>
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap.min.css" onerror="this.onerror=null;this.href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css';">
+  <script src="assets/vendor/bootstrap/bootstrap.bundle.min.js" defer onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js';"></script>
+  <link rel="preload" href="assets/vendor/fontawesome/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.onerror=null;this.rel='stylesheet';this.href='https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css';">
+  <noscript><link rel="stylesheet" href="assets/vendor/fontawesome/css/all.min.css"></noscript>
+  <link rel="stylesheet" href="css/common.css">
+  <script src="assets/js/layout-shell.js" defer></script>
+</head>
+<body>
+  <div id="navbar"></div>
+  <script src="assets/js/webstat-tracker.js" defer></script>
+  <noscript><img src="https://app.ardalio.com/7/5/1866123.png" alt=""></noscript>
+
+  <div class="container">
+    <div class="row">
+      <div id="sidebar" class="col-md-3 col-12 content-spacing"></div>
+      <div class="col-md-9 col-12 content-spacing">
+        <h1 style="color:#990000;">agent-audit</h1>
+        <p>
+          <strong>agent-audit</strong> is an open-source security auditing tool for AI agent code. It focuses on practical
+          security checks for modern agentic systems, including coverage aligned with OWASP Agentic Top 10 style risk
+          categories, taint-style flow analysis, and MCP configuration auditing.
+        </p>
+        <p>
+          <a href="https://github.com/HeadyZhang/agent-audit"><i class="fab fa-github" aria-hidden="true"></i> GitHub Repository</a>
+          |
+          <a href="https://github.com/HeadyZhang/agent-audit/stargazers"><i class="fas fa-star" aria-hidden="true"></i> Star on GitHub</a>
+          |
+          <a href="https://pypi.org/project/agent-audit/"><i class="fas fa-cube" aria-hidden="true"></i> PyPI Package</a>
+          |
+          <a href="opensource.html"><i class="fas fa-wrench" aria-hidden="true"></i> Back to Open Source</a>
+        </p>
+
+        <p style="background:#fff7f2; border-left:4px solid #F26178; padding:10px 14px; margin:10px 0 14px 0;">
+          If this project is useful in your workflow, please
+          <a href="https://github.com/HeadyZhang/agent-audit/stargazers"><strong>star the GitHub repository</strong></a>
+          to help more practitioners discover it.
+        </p>
+
+        <hr>
+        <h2 style="color:#990000;">Why this project</h2>
+        <p>
+          AI agent pipelines combine LLM prompts, external tools, and runtime configuration. This expands
+          the attack surface beyond traditional app code. agent-audit is designed to help teams catch high-risk
+          patterns earlier in development and CI.
+        </p>
+
+        <h2 style="color:#990000;">Core capabilities</h2>
+        <ul>
+          <li>Security auditing for risk-relevant patterns in agent code.</li>
+          <li>Taint-style analysis to identify risky data flow paths.</li>
+          <li>Audit checks for MCP-related configuration issues.</li>
+          <li>Rule coverage mapped to agent security risk categories.</li>
+        </ul>
+
+        <h2 style="color:#990000;">Quick start</h2>
+        <p>Install from PyPI:</p>
+        <pre style="background:#f8f8f8; border:1px solid #ddd; border-radius:8px; padding:12px;"><code>pip install agent-audit</code></pre>
+
+        <h2 style="color:#990000;">ClawHub deployment results (March 2026)</h2>
+        <p>
+          agent-audit was used on
+          <a href="https://clawhub.ai/HeadyZhang/agent-audit-scanner">ClawHub scanner deployment</a>
+          to analyze the ecosystem at scale.
+        </p>
+        <ul>
+          <li>Scanned 18,899 ClawHub skills end-to-end.</li>
+          <li>Detected 13,947 total vulnerabilities, including 1,996 BLOCK-level critical findings.</li>
+          <li>7 new OpenClaw rules triggered 1,845 hits in total.</li>
+          <li>Obfuscated shell command rule AGENT-058 triggered 1,034 times.</li>
+          <li>Vulnerability rate: 46.6% for skills with scripts vs 16.8% for skills without scripts.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div id="myFooter"></div>
+</body>
+</html>

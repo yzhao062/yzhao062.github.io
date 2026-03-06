@@ -4,10 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="author" content="Yue Zhao">
-  <meta name="description" content="Open-source software, benchmarks, and research tools by Yue Zhao and collaborators.">
-  <meta name="keywords" content="Yue Zhao open source, software, benchmark, toolkit, reproducibility">
+  <meta name="description" content="Open-source software, benchmarks, and research tools by Yue Zhao and collaborators, including PyOD, AD-AGENT, and agent-audit for AI agent security auditing and ClawHub scanning.">
+  <meta name="keywords" content="Yue Zhao open source, software, benchmark, toolkit, reproducibility, agent-audit, AI agent security audit, ClawHub, OpenClaw">
 
-  <title>Open Source | Yue Zhao</title>
+  <title>Open Source Software (PyOD, AD-AGENT, agent-audit) | Yue Zhao</title>
   <link rel="canonical" href="https://viterbi-web.usc.edu/~yzhao010/opensource.html">
   <link rel="icon" type="image/x-icon" href="images/logo2.ico">
   <meta property="og:type" content="website">
@@ -19,6 +19,23 @@
   <meta name="twitter:title" content="Open Source | Yue Zhao">
   <meta name="twitter:description" content="Open-source software, benchmarks, and practical research tools.">
   <meta name="twitter:image" content="https://viterbi-web.usc.edu/~yzhao010/images/logo.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Open Source Software by Yue Zhao",
+    "url": "https://viterbi-web.usc.edu/~yzhao010/opensource.html",
+    "hasPart": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "agent-audit",
+        "url": "https://viterbi-web.usc.edu/~yzhao010/agent-audit.html",
+        "codeRepository": "https://github.com/HeadyZhang/agent-audit",
+        "programmingLanguage": "Python"
+      }
+    ]
+  }
+  </script>
   <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="preload" as="image" href="images/rsz_250.jpg">
@@ -136,12 +153,25 @@
             <div id="sidebar" class="col-md-3 col-12 content-spacing"></div>
             <div class="col-md-9 col-12 content-spacing">
                 <div class="col">
-                    <h2 id="open-source">&#128736; Open Source / Software</h2>
+                    <h1 id="open-source">&#128736; Open Source / Software</h1>
                     <p>
                       I value practical and reproducible research. This page highlights open-source libraries,
                       benchmarks, and system tools built by my group and collaborators.
                       For all repositories, see <a href="https://github.com/yzhao062">my GitHub profile</a>.
                     </p>
+                    <div class="empty-state" style="margin-top: 0;">
+                      <strong>Featured project:</strong>
+                      <a href="agent-audit.html"><strong>agent-audit</strong></a> -
+                      an AI agent security auditing tool with checks for OWASP Agentic Top 10 risks,
+                      taint-style flow analysis, and MCP configuration auditing.
+                      In March 2026, it scanned 18,899 ClawHub skills and detected 13,947 vulnerabilities
+                      (including 1,996 BLOCK-level critical findings).
+                      Links:
+                      <a href="https://github.com/HeadyZhang/agent-audit">GitHub</a> |
+                      <a href="https://github.com/HeadyZhang/agent-audit/stargazers">Star</a> |
+                      <a href="https://pypi.org/project/agent-audit/">PyPI</a> |
+                      <a href="https://clawhub.ai/HeadyZhang/agent-audit-scanner">ClawHub</a>.
+                    </div>
                     <div style="margin: 10px 0 8px 0;">
                       <span class="repo-meta" style="margin-right: 8px;">Sort by:</span>
                       <button id="sort-attention" class="btn btn-sm btn-outline-secondary" type="button">Attention</button>
@@ -195,6 +225,9 @@
           var stars = typeof project.stars === "number" ? project.stars : null;
           var category = project.category ? escapeHtml(project.category) : "General";
           var starText = stars !== null ? (" | " + stars + "+ stars") : "";
+          var repoUrl = String(project.repo_url || "");
+          var ghMatch = repoUrl.match(/^https?:\/\/github\.com\/([^\/]+)\/([^\/#?]+)\/?$/i);
+          var starUrl = ghMatch ? ("https://github.com/" + ghMatch[1] + "/" + ghMatch[2] + "/stargazers") : "";
           var role = String(project.role || "Contributor");
           var roleLower = role.toLowerCase();
           var roleClass = "role-contributor";
@@ -214,6 +247,7 @@
                 '<p>' + escapeHtml(project.description || "") + "</p>" +
                 '<div>' +
                   renderLink(project.repo_url, "fab fa-github", "Repo") +
+                  renderLink(starUrl, "fas fa-star", "Star") +
                   renderLink(project.docs_url, "fas fa-book", "Docs") +
                   renderLink(project.paper_url, "fas fa-file-alt", "Paper") +
                   renderLink(project.demo_url, "fas fa-globe", "Demo") +

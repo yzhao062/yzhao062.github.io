@@ -246,15 +246,15 @@
     "name": "agent-audit",
     "category": "Security Toolkit",
     "role": "Collaborator",
-    "description": "A static security analyzer for AI agent code, with OWASP Agentic Top 10 coverage, taint analysis, and MCP configuration auditing.",
+    "description": "An open-source security auditing tool for AI agent code, with OWASP Agentic Top 10 coverage, taint analysis, and MCP configuration auditing.",
     "repo_url": "https://github.com/HeadyZhang/agent-audit",
-    "docs_url": "",
+    "docs_url": "https://viterbi-web.usc.edu/~yzhao010/agent-audit.html",
     "paper_url": "",
     "demo_url": "https://pypi.org/project/agent-audit/",
     "stars": 21,
     "tags": [
       "AI Agent Security",
-      "Static Analysis",
+      "Security Audit",
       "OWASP",
       "MCP",
       "Taint Analysis"
