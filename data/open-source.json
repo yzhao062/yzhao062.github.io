@@ -245,7 +245,7 @@
   {
     "name": "agent-audit",
     "category": "Security Toolkit",
-    "role": "Collaborator",
+    "role": "Primary",
     "description": "An open-source security auditing tool for AI agent code, with OWASP Agentic Top 10 coverage, taint analysis, and MCP configuration auditing.",
     "repo_url": "https://github.com/HeadyZhang/agent-audit",
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/agent-audit.html",
