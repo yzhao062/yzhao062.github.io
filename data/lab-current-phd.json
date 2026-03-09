@@ -4,8 +4,8 @@
     "profile_url": "https://JetRichardLee.github.io/",
     "image": "images/others/JiateLi.webp",
     "alt": "Jiate Li",
-    "year_info": "1st year, Joined Fortis in Aug 2025",
-    "research": "GNN, AI Robustness",
+    "year_info": "1st year Ph.D. student, with Fortis since Aug 2025",
+    "research": "AI Security / Trustworthy AI / LLM Retrieval",
     "email": "jiateli@usc.edu"
   },
   {
@@ -13,8 +13,8 @@
     "profile_url": "https://lili0415.github.io/",
     "image": "images/others/lili.jpg",
     "alt": "Li Li",
-    "year_info": "2nd year, Joined Fortis in Aug 2024",
-    "research": "Multimodal Learning, Trustworthy ML",
+    "year_info": "2nd year Ph.D. student, with Fortis since Aug 2024",
+    "research": "Multimodal Foundation Models / Trustworthy AI / AI Safety",
     "awards": [
       "Amazon ML Fellowship",
       "Capital One Fellowship"
@@ -26,8 +26,8 @@
     "profile_url": "https://yqin43.github.io/",
     "image": "images/others/qin.webp",
     "alt": "Yuehan Qin",
-    "year_info": "4th year, Joined Fortis in Jan 2024",
-    "research": "OOD Detection, Time Series",
+    "year_info": "4th year Ph.D. student, with Fortis since Jan 2024",
+    "research": "OOD Detection / AutoML / Robust ML",
     "email": "yuehanqi@usc.edu"
   },
   {
@@ -35,8 +35,8 @@
     "profile_url": "https://scholar.google.com/citations?user=BDjUvE8AAAAJ&hl=en",
     "image": "images/others/xhy.webp",
     "alt": "Haoyan Xu",
-    "year_info": "4th year, Joined Fortis in Jan 2024",
-    "research": "GNN, Anomaly Detection",
+    "year_info": "4th year Ph.D. student, with Fortis since Jan 2024",
+    "research": "GNN / Graph OOD Detection / Foundational Model Security",
     "awards": [
       "Capital One Fellowship"
     ],
@@ -51,8 +51,27 @@
     "profile_url": "https://raymondy.github.io/",
     "image": "images/others/tiankai.webp",
     "alt": "Tiankai Yang",
-    "year_info": "2nd year, Joined Fortis in Aug 2024",
-    "research": "Anomaly Detection, LLM",
+    "year_info": "2nd year Ph.D. student, with Fortis since Sep 2023",
+    "research": "Anomaly Detection / LLM & Agent Safety / Synthetic Generation",
     "email": "tiankaiy@usc.edu"
+  },
+  {
+    "name": "Chenxiao Yu",
+    "profile_url": "https://aichimocha.github.io",
+    "image": "images/others/Chenxiao.webp",
+    "alt": "Chenxiao Yu",
+    "year_info": "Incoming Ph.D. student (Fall 2026), with Fortis since 2024",
+    "research": "Human-Centered AI / AI Safety / LLM Interpretability",
+    "status_label": "Incoming Ph.D. Student",
+    "email": "cyu96374@usc.edu"
+  },
+  {
+    "name": "Zixiang Xu (徐子翔)",
+    "profile_url": "https://xzx34.github.io/",
+    "image": "images/others/zixiang.webp",
+    "alt": "Zixiang Xu",
+    "year_info": "Incoming Ph.D. student (Fall 2026), joining Fortis in Fall 2026",
+    "research": "Agent Systems / Trustworthy AI / AI for Science & Society",
+    "status_label": "Incoming Ph.D. Student"
   }
 ]

@@ -1,18 +1,5 @@
 [
   {
-    "group": "current",
-    "name": "Chenxiao Yu",
-    "profile_url": "https://aichimocha.github.io",
-    "image": "images/others/Chenxiao.webp",
-    "alt": "Chenxiao Yu",
-    "research": "Human-Centered AI / Agentic Simulation / Safety of LLMs & Agents",
-    "status_text": "Master Student → Incoming Ph.D. Student (Fall 2026) at USC",
-    "email": "cyu96374@usc.edu",
-    "publications": [
-      "Mitigating Hallucinations in Large Language Models via Causal Reasoning, AAAI 2026"
-    ]
-  },
-  {
     "group": "past",
     "name": "Peilin Cai",
     "profile_url": "https://caipeilin.com/",

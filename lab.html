@@ -233,6 +233,7 @@
                         if (!container) return;
 
                         const cards = sortMembersByLastName(members).map(function(member) {
+                            const statusLabel = member.status_label || 'Ph.D. Student';
                             const awards = Array.isArray(member.awards) && member.awards.length > 0
                                 ? '<p><i class="fas fa-award" style="font-size:18px; color:#990000"></i> ' + escapeHtml(member.awards.join(', ')) + '</p>'
                                 : '';
@@ -241,6 +242,10 @@
                                 ? '<p class="member-status">co-advised by <a href="' + escapeHtml(member.co_advised_by.url) + '">' + escapeHtml(member.co_advised_by.name) + '</a></p>'
                                 : '';
 
+                            const statusLine = member.email
+                                ? '<p class="member-status"><strong>' + escapeHtml(statusLabel) + '</strong> (' + escapeHtml(member.email) + ')</p>'
+                                : '<p class="member-status"><strong>' + escapeHtml(statusLabel) + '</strong></p>';
+
                             return (
                                 '<div class="col-md-4 col-sm-6 team-member">' +
                                     '<img src="' + escapeHtml(member.image) + '" alt="' + escapeHtml(member.alt || member.name) + '" class="team-img" width="150" height="150" loading="lazy" decoding="async" fetchpriority="low">' +
@@ -248,7 +253,7 @@
                                     '<p>' + escapeHtml(member.year_info) + '</p>' +
                                     '<p>' + escapeHtml(member.research) + '</p>' +
                                     awards +
-                                    '<p class="member-status"><strong>Ph.D. Student</strong> (' + escapeHtml(member.email) + ')</p>' +
+                                    statusLine +
                                     coAdvised +
                                 '</div>'
                             );
