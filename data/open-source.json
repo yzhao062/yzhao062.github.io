@@ -261,6 +261,24 @@
     ]
   },
   {
+    "name": "Aegis",
+    "category": "Security / Compliance Platform",
+    "role": "Collaborator",
+    "description": "A runtime firewall and compliance platform for AI agents, with pre-execution tool-call blocking, policy enforcement, human-in-the-loop approvals, and tamper-evident audit trails.",
+    "repo_url": "https://github.com/Justin0504/Aegis",
+    "docs_url": "",
+    "paper_url": "",
+    "demo_url": "https://github.com/Justin0504/Aegis/blob/main/docs/images/readme_demo1.gif",
+    "stars": 135,
+    "tags": [
+      "AI Agent Security",
+      "Policy Enforcement",
+      "Compliance",
+      "Audit Trail",
+      "Human-in-the-Loop"
+    ]
+  },
+  {
     "name": "combo",
     "category": "Library",
     "role": "Primary",
