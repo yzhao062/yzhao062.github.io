@@ -258,6 +258,17 @@
           );
         }
 
+        function normalizeProject(project) {
+          if (!project || typeof project !== "object") return project;
+          if (typeof project.last_updated_epoch !== "number" && project.last_updated_at) {
+            var ts = Date.parse(project.last_updated_at);
+            if (!isNaN(ts)) {
+              project.last_updated_epoch = ts;
+            }
+          }
+          return project;
+        }
+
         function parseGitHubRepo(repoUrl) {
           var value = String(repoUrl || "").trim();
           var match = value.match(/^https?:\/\/github\.com\/([^\/]+)\/([^\/#?]+)\/?$/i);
@@ -410,7 +421,8 @@
             return response.json();
           })
           .then(function (projects) {
-            return attachLiveStars(Array.isArray(projects) ? projects : []);
+            var normalized = Array.isArray(projects) ? projects.map(normalizeProject) : [];
+            return attachLiveStars(normalized);
           })
           .then(function (projects) {
             loadedItems = Array.isArray(projects) ? projects : [];

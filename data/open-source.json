@@ -8,14 +8,15 @@
     "docs_url": "https://pyod.readthedocs.io",
     "paper_url": "https://arxiv.org/abs/2412.12154",
     "demo_url": "",
-    "stars": 9700,
+    "stars": 9742,
     "tags": [
       "Anomaly Detection",
       "Outlier Detection",
       "Python",
       "Machine Learning",
       "PyTorch"
-    ]
+    ],
+    "last_updated_at": "2026-03-01T01:16:31Z"
   },
   {
     "name": "AD-AGENT",
@@ -26,13 +27,14 @@
     "docs_url": "https://usc-fortis.github.io/AD-AGENT/",
     "paper_url": "https://arxiv.org/abs/2505.12594",
     "demo_url": "",
-    "stars": 88,
+    "stars": 90,
     "tags": [
       "LLM Agents",
       "Anomaly Detection",
       "Multi-Modal",
       "Automation"
-    ]
+    ],
+    "last_updated_at": "2026-03-03T00:26:27Z"
   },
   {
     "name": "TrustLLM",
@@ -49,7 +51,8 @@
       "LLM Evaluation",
       "Benchmark",
       "Toolkit"
-    ]
+    ],
+    "last_updated_at": "2025-06-24T18:33:48Z"
   },
   {
     "name": "TrustEval-toolkit",
@@ -68,7 +71,8 @@
       "Text-to-Image",
       "Benchmark",
       "Toolkit"
-    ]
+    ],
+    "last_updated_at": "2025-08-22T02:05:04Z"
   },
   {
     "name": "NLP-ADBench",
@@ -85,7 +89,8 @@
       "Anomaly Detection",
       "Benchmark",
       "EMNLP Findings"
-    ]
+    ],
+    "last_updated_at": "2025-10-09T19:23:34Z"
   },
   {
     "name": "ADBench",
@@ -96,13 +101,14 @@
     "docs_url": "",
     "paper_url": "https://proceedings.neurips.cc/paper_files/paper/2022/hash/da0ddd47c18ae3dd2888ff2ea4b6ccf7-Abstract-Datasets_and_Benchmarks.html",
     "demo_url": "",
-    "stars": 1000,
+    "stars": 1008,
     "tags": [
       "Anomaly Detection",
       "Benchmark",
       "NeurIPS",
       "Tabular Data"
-    ]
+    ],
+    "last_updated_at": "2026-01-08T09:24:20Z"
   },
   {
     "name": "Anomaly-Detection-Resources",
@@ -113,14 +119,15 @@
     "docs_url": "",
     "paper_url": "",
     "demo_url": "",
-    "stars": 9200,
+    "stars": 9199,
     "tags": [
       "Awesome List",
       "Anomaly Detection",
       "Resources",
       "Benchmarks",
       "Tutorials"
-    ]
+    ],
+    "last_updated_at": "2026-03-02T04:42:20Z"
   },
   {
     "name": "CS-Paper-Checklist",
@@ -131,13 +138,14 @@
     "docs_url": "",
     "paper_url": "",
     "demo_url": "",
-    "stars": 1500,
+    "stars": 1538,
     "tags": [
       "Writing",
       "Research Workflow",
       "Checklist",
       "Academic Publishing"
-    ]
+    ],
+    "last_updated_at": "2025-05-07T05:50:50Z"
   },
   {
     "name": "SUOD",
@@ -148,13 +156,14 @@
     "docs_url": "https://suod.readthedocs.io",
     "paper_url": "https://proceedings.mlsys.org/paper_files/paper/2021/hash/da9d70f7f98f0f660f24f6f3d9e7b0f1-Abstract.html",
     "demo_url": "",
-    "stars": 391,
+    "stars": 393,
     "tags": [
       "Anomaly Detection",
       "Acceleration",
       "Distributed Systems",
       "MLSys"
-    ]
+    ],
+    "last_updated_at": "2025-03-24T21:11:39Z"
   },
   {
     "name": "PyGOD",
@@ -165,13 +174,14 @@
     "docs_url": "https://docs.pygod.org",
     "paper_url": "http://jmlr.org/papers/v25/23-0963.html",
     "demo_url": "",
-    "stars": 1500,
+    "stars": 1477,
     "tags": [
       "Graph Anomaly Detection",
       "PyTorch Geometric",
       "Library",
       "JMLR"
-    ]
+    ],
+    "last_updated_at": "2024-11-14T06:35:15Z"
   },
   {
     "name": "TODS",
@@ -182,13 +192,14 @@
     "docs_url": "http://tods-doc.github.io",
     "paper_url": "https://arxiv.org/abs/2009.09822",
     "demo_url": "",
-    "stars": 1700,
+    "stars": 1654,
     "tags": [
       "Time Series",
       "Anomaly Detection",
       "AutoML",
       "System"
-    ]
+    ],
+    "last_updated_at": "2023-09-11T15:48:11Z"
   },
   {
     "name": "TDC",
@@ -199,14 +210,15 @@
     "docs_url": "https://tdcommons.ai",
     "paper_url": "https://proceedings.neurips.cc/paper/2021/hash/6a8d3b0f5987e0f6d3d2f5f65f02e3cc-Abstract.html",
     "demo_url": "",
-    "stars": 1200,
+    "stars": 1214,
     "tags": [
       "Therapeutics",
       "Benchmark",
       "Datasets",
       "Drug Discovery",
       "Platform"
-    ]
+    ],
+    "last_updated_at": "2025-07-13T17:44:10Z"
   },
   {
     "name": "AD-LLM",
@@ -223,7 +235,8 @@
       "Anomaly Detection",
       "Benchmark",
       "ACL Findings"
-    ]
+    ],
+    "last_updated_at": "2025-10-09T19:30:32Z"
   },
   {
     "name": "LangSkills",
@@ -234,13 +247,14 @@
     "docs_url": "",
     "paper_url": "",
     "demo_url": "",
-    "stars": 5,
+    "stars": 189,
     "tags": [
       "Agent Tools",
       "Skill Library",
       "Knowledge Base",
       "LLM Pipeline"
-    ]
+    ],
+    "last_updated_at": "2026-03-11T14:12:33Z"
   },
   {
     "name": "agent-audit",
@@ -251,14 +265,15 @@
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/agent-audit.html",
     "paper_url": "",
     "demo_url": "https://pypi.org/project/agent-audit/",
-    "stars": 21,
+    "stars": 103,
     "tags": [
       "AI Agent Security",
       "Security Audit",
       "OWASP",
       "MCP",
       "Taint Analysis"
-    ]
+    ],
+    "last_updated_at": "2026-03-11T05:12:05Z"
   },
   {
     "name": "Aegis",
@@ -269,14 +284,15 @@
     "docs_url": "",
     "paper_url": "",
     "demo_url": "https://github.com/Justin0504/Aegis/blob/main/docs/images/readme_demo1.gif",
-    "stars": 135,
+    "stars": 173,
     "tags": [
       "AI Agent Security",
       "Policy Enforcement",
       "Compliance",
       "Audit Trail",
       "Human-in-the-Loop"
-    ]
+    ],
+    "last_updated_at": "2026-03-11T02:30:09Z"
   },
   {
     "name": "combo",
@@ -287,12 +303,13 @@
     "docs_url": "https://pycombo.readthedocs.io",
     "paper_url": "https://aaai.org/papers/13648-combining-machine-learning-models-using-combo-library/",
     "demo_url": "",
-    "stars": 659,
+    "stars": 661,
     "tags": [
       "Ensemble Learning",
       "Model Combination",
       "Anomaly Detection",
       "Library"
-    ]
+    ],
+    "last_updated_at": "2023-01-14T04:46:24Z"
   }
 ]
