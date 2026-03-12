@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Yue Zhao">
+  <meta name="description" content="Aegis is an open-source firewall for AI agents with pre-execution blocking, policy enforcement, human approvals, and tamper-evident audit trails.">
+  <meta name="keywords" content="Aegis, firewall for AI agents, AI agent firewall, AI agent security, agent safety, runtime policy enforcement, AI compliance, human approval, audit trail, AI observability, AI guardrails, Justin Yuan, Yue Zhao">
+  <title>Aegis | The Firewall for AI Agents</title>
+  <link rel="canonical" href="https://viterbi-web.usc.edu/~yzhao010/aegis.html">
+  <link rel="icon" type="image/x-icon" href="images/logo2.ico">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Aegis | The Firewall for AI Agents">
+  <meta property="og:description" content="Open-source firewall for AI agents with pre-execution blocking, policy enforcement, human approvals, and tamper-evident audit trails.">
+  <meta property="og:url" content="https://viterbi-web.usc.edu/~yzhao010/aegis.html">
+  <meta property="og:image" content="https://viterbi-web.usc.edu/~yzhao010/images/logo.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Aegis | The Firewall for AI Agents">
+  <meta name="twitter:description" content="Open-source firewall for AI agents with pre-execution blocking, policy enforcement, human approvals, and tamper-evident audit trails.">
+  <meta name="twitter:image" content="https://viterbi-web.usc.edu/~yzhao010/images/logo.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareSourceCode",
+    "name": "Aegis",
+    "description": "Open-source firewall for AI agents with pre-execution blocking, policy enforcement, human approvals, and tamper-evident audit trails.",
+    "url": "https://viterbi-web.usc.edu/~yzhao010/aegis.html",
+    "codeRepository": "https://github.com/Justin0504/Aegis",
+    "programmingLanguage": "TypeScript",
+    "contributor": {
+      "@type": "Person",
+      "name": "Yue Zhao"
+    }
+  }
+  </script>
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap.min.css" onerror="this.onerror=null;this.href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css';">
+  <script src="assets/vendor/bootstrap/bootstrap.bundle.min.js" defer onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js';"></script>
+  <link rel="preload" href="assets/vendor/fontawesome/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.onerror=null;this.rel='stylesheet';this.href='https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css';">
+  <noscript><link rel="stylesheet" href="assets/vendor/fontawesome/css/all.min.css"></noscript>
+  <link rel="stylesheet" href="css/common.css">
+  <script src="assets/js/layout-shell.js" defer></script>
+</head>
+<body>
+  <div id="navbar"></div>
+  <script src="assets/js/webstat-tracker.js" defer></script>
+  <noscript><img src="https://app.ardalio.com/7/5/1866123.png" alt=""></noscript>
+
+  <div class="container">
+    <div class="row">
+      <div id="sidebar" class="col-md-3 col-12 content-spacing"></div>
+      <div class="col-md-9 col-12 content-spacing">
+        <h1 style="color:#990000;">Aegis</h1>
+        <p style="font-size:1.1rem; font-weight:700; color:#7a2a2a; margin-top:-4px;">The firewall for AI agents.</p>
+        <p>
+          <strong>Aegis</strong> is an open-source firewall for AI agents.
+          It sits on the execution path between agents and tools, classifies tool calls, enforces policies before
+          execution, supports human approval flows, and keeps a tamper-evident audit trail for later review.
+        </p>
+        <p>
+          I contributed to Aegis and feature it here because it is closely aligned with our work on agent safety,
+          guardrails, AI auditing, and trustworthy deployment of agentic systems.
+        </p>
+        <p>
+          <a href="https://github.com/Justin0504/Aegis"><i class="fab fa-github" aria-hidden="true"></i> GitHub Repository</a>
+          |
+          <a href="https://github.com/Justin0504/Aegis/stargazers"><i class="fas fa-star" aria-hidden="true"></i> Star on GitHub</a>
+          |
+          <a href="https://github.com/Justin0504/Aegis/blob/main/docs/images/readme_demo1.gif"><i class="fas fa-globe" aria-hidden="true"></i> Demo</a>
+          |
+          <a href="opensource.html"><i class="fas fa-wrench" aria-hidden="true"></i> Back to Open Source</a>
+        </p>
+
+        <p style="background:#fff7f2; border-left:4px solid #F26178; padding:10px 14px; margin:10px 0 14px 0;">
+          If this project is useful in your workflow, please
+          <a href="https://github.com/Justin0504/Aegis/stargazers"><strong>star the GitHub repository</strong></a>
+          to help more practitioners discover it.
+        </p>
+
+        <hr>
+        <h2 style="color:#990000;">Why this project</h2>
+        <p>
+          Agent systems make high-speed tool decisions without a human in the loop by default. That creates practical
+          risks around unsafe commands, prompt injection, sensitive file access, unintended data exfiltration, and weak
+          auditability. Aegis is designed as a runtime control layer for these deployment-time risks.
+        </p>
+
+        <h2 style="color:#990000;">Core capabilities</h2>
+        <ul>
+          <li>Pre-execution policy checks for tool calls before they are executed.</li>
+          <li>Human-in-the-loop approval flows for higher-risk actions.</li>
+          <li>Tamper-evident audit trails for security, compliance, and post-incident review.</li>
+          <li>Support for dashboards, policy management, and operational monitoring around agent behavior.</li>
+        </ul>
+
+        <h2 style="color:#990000;">Why it matters for agent safety</h2>
+        <p>
+          Aegis complements model-side safety work with runtime enforcement. It is relevant when teams need guardrails
+          not only at the prompt layer, but also at the tool invocation and policy enforcement layers for real
+          deployments.
+        </p>
+
+        <h2 style="color:#990000;">Project highlights</h2>
+        <ul>
+          <li>Designed for policy enforcement across modern agent frameworks and tool integrations.</li>
+          <li>Includes approval workflows, policy evaluation, and operational visibility through a compliance cockpit.</li>
+          <li>Supports practical deployment paths, including Docker-based setup and multi-language SDK integration.</li>
+        </ul>
+
+        <h2 style="color:#990000;">Demo</h2>
+        <p>
+          A quick visual walkthrough is available in the repository:
+          <a href="https://github.com/Justin0504/Aegis/blob/main/docs/images/readme_demo1.gif">Aegis demo GIF</a>.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div id="myFooter"></div>
+</body>
+</html>
