@@ -1,4 +1,4 @@
-name: Sync Bib and CV to USC Proposal Template Repo
+name: Sync Profile Assets to Template Repos
 
 on:
   push:
@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
 
 concurrency:
-  group: sync-bib-cv-${{ github.ref }}
+  group: sync-profile-assets-${{ github.ref }}
   cancel-in-progress: false
 
 jobs:
@@ -75,24 +75,26 @@ jobs:
           token: ${{ secrets.NSF_REPO_TOKEN }}
           path: nsf-target-repo
 
-      - name: Copy latest Bib to NSF repo
+      - name: Copy latest Bib and CV to NSF repo
         run: |
-          cp files/yue-zhao.bib nsf-target-repo/bibs/yue-zhao.bib
+          cp files/yue-zhao.bib nsf-target-repo/template/bibs/yue-zhao.bib
+          cp files/ZHAO_YUE_CV.pdf nsf-target-repo/template/team/ZHAO_YUE_CV.pdf
 
-      - name: Commit and push NSF bib if changed
+      - name: Commit and push NSF files if changed
         working-directory: nsf-target-repo
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add bibs/yue-zhao.bib
+          git add template/bibs/yue-zhao.bib
+          git add template/team/ZHAO_YUE_CV.pdf
 
           if git diff --cached --quiet; then
-            echo "No NSF bib changes to sync."
+            echo "No NSF file changes to sync."
             exit 0
           fi
 
-          git commit -m "Sync bib from yzhao062.github.io (${GITHUB_SHA})"
+          git commit -m "Sync bib and CV from yzhao062.github.io (${GITHUB_SHA})"
           for i in 1 2 3; do
             git pull --rebase origin main
             git push && break
