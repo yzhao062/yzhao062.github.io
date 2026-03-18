@@ -78,7 +78,7 @@ jobs:
       - name: Copy latest Bib and CV to NSF repo
         run: |
           cp files/yue-zhao.bib nsf-target-repo/template/bibs/yue-zhao.bib
-          cp files/ZHAO_YUE_CV.pdf nsf-target-repo/template/team/ZHAO_YUE_CV.pdf
+          cp files/ZHAO_YUE_CV.pdf nsf-target-repo/template/context/team/ZHAO_YUE_CV.pdf
 
       - name: Commit and push NSF files if changed
         working-directory: nsf-target-repo
