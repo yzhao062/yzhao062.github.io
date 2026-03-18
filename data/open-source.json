@@ -282,7 +282,7 @@
     "description": "The open-source firewall for AI agents, with pre-execution tool-call blocking, policy enforcement, human-in-the-loop approvals, and tamper-evident audit trails.",
     "repo_url": "https://github.com/Justin0504/Aegis",
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/aegis.html",
-    "paper_url": "",
+    "paper_url": "https://arxiv.org/abs/2603.12621",
     "demo_url": "https://github.com/Justin0504/Aegis/blob/main/docs/images/readme_demo1.gif",
     "stars": 173,
     "tags": [
