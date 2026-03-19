@@ -4,26 +4,27 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="author" content="Yue Zhao">
-  <meta name="description" content="Open-source software and benchmarks by Yue Zhao on AI auditing, assurance, safety, and security for agent systems, with related work on runtime guardrails, compliance, foundation models, robustness, and anomaly detection.">
-  <meta name="keywords" content="Yue Zhao open source, AI Auditing, AI Assurance, AI Safety, AI Security, Agent Systems, Agentic AI, Foundation Models, LLM Safety, Robustness, Anomaly Detection, ML Systems, agent-audit, Aegis, firewall for AI agents, AI agent firewall, AI agent security, runtime guardrails, AI compliance, ClawHub, OpenClaw">
+  <meta name="description" content="Open-source tools by Yue Zhao for agent auditing, policy checks, runtime guardrails, execution tracing, and trustworthiness evaluation in agent systems.">
+  <meta name="keywords" content="Yue Zhao open source, AI Auditing, AI Assurance, Auditable Agent Systems, Verifiable Agent Systems, Agent Systems, Agentic AI, Runtime Guardrails, Policy Checking, Foundation Models, ML Systems, agent-audit, Aegis, ClawHub, OpenClaw">
 
-  <title>Open Source for AI Auditing, Safety, and Security | Yue Zhao</title>
+  <title>Open Source for AI Auditing and Assurance for Agent Systems | Yue Zhao</title>
   <link rel="canonical" href="https://viterbi-web.usc.edu/~yzhao010/opensource.html">
   <link rel="icon" type="image/x-icon" href="images/logo2.ico">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Open Source | AI Auditing, Safety, and Security">
-  <meta property="og:description" content="Open-source tools and benchmarks for AI auditing, assurance, safety, and security for agent systems, with related work on foundation models, robustness, and anomaly detection.">
+  <meta property="og:title" content="Open Source for AI Auditing and Assurance for Agent Systems">
+  <meta property="og:description" content="Open-source tools for agent auditing, policy checks, runtime guardrails, execution tracing, and trustworthiness evaluation in agent systems.">
   <meta property="og:url" content="https://viterbi-web.usc.edu/~yzhao010/opensource.html">
   <meta property="og:image" content="https://viterbi-web.usc.edu/~yzhao010/images/logo.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Open Source | AI Auditing, Safety, and Security">
-  <meta name="twitter:description" content="Open-source tools and benchmarks for AI auditing, assurance, safety, and security for agent systems, with related work on foundation models, robustness, and anomaly detection.">
+  <meta name="twitter:title" content="Open Source for AI Auditing and Assurance for Agent Systems">
+  <meta name="twitter:description" content="Open-source tools for agent auditing, policy checks, runtime guardrails, execution tracing, and trustworthiness evaluation in agent systems.">
   <meta name="twitter:image" content="https://viterbi-web.usc.edu/~yzhao010/images/logo.png">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
     "name": "Open Source Software by Yue Zhao",
+    "description": "Open-source tools and benchmarks for AI auditing and assurance for agent systems, including execution tracing, runtime guardrails, policy checks, and trustworthiness evaluation.",
     "url": "https://viterbi-web.usc.edu/~yzhao010/opensource.html",
     "hasPart": [
       {
@@ -163,7 +164,9 @@
                     <h1 id="open-source">&#128736; Open Source / Software</h1>
                     <p>
                       I value practical and reproducible research. This page highlights open-source libraries,
-                      benchmarks, and system tools built by my group and collaborators.
+                      benchmarks, and system tools built by my group and collaborators. Many of these projects are designed
+                      to support more auditable and verifiable agent behavior, from evaluation and tracing to policy enforcement
+                      and runtime guardrails.
                       For all repositories, see <a href="https://github.com/yzhao062">my GitHub profile</a>.
                     </p>
                     <div class="row g-3" style="margin-top: 0;">
@@ -171,7 +174,7 @@
                         <div class="empty-state" style="margin-top: 0; height: 100%;">
                           <strong>Featured project:</strong>
                           <a href="agent-audit.html"><strong>agent-audit</strong></a> -
-                          an AI agent security auditing tool with checks for OWASP Agentic Top 10 risks,
+                          an AI agent auditing and policy-checking tool with checks for OWASP Agentic Top 10 risks,
                           taint-style flow analysis, and MCP configuration auditing.
                           In March 2026, it scanned 18,899 ClawHub skills and detected 13,947 vulnerabilities
                           (including 1,996 BLOCK-level critical findings).
@@ -188,7 +191,7 @@
                           <a href="aegis.html"><strong>Aegis</strong></a> -
                           the open-source firewall for AI agents,
                           with pre-execution blocking, human approvals, and tamper-evident audit trails.
-                          It is relevant for agent safety, runtime guardrails, and operational monitoring
+                          It is relevant for more auditable deployment of agent systems through runtime guardrails and operational monitoring
                           of real deployments.
                           Links:
                           <a href="https://github.com/Justin0504/Aegis">GitHub</a> |
