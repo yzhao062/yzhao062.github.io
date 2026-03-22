@@ -9,7 +9,16 @@
       "WebFetch(domain:en.wikipedia.org)",
       "WebFetch(domain:asset.brandfetch.io)",
       "Bash(python3 -c \"from PIL import Image; print\\(''pillow ok''\\)\")",
-      "Bash(python -c \"from PIL import Image; print\\(''pillow ok''\\)\")"
+      "Bash(python -c \"from PIL import Image; print\\(''pillow ok''\\)\")",
+      "WebSearch",
+      "WebFetch(domain:caipeilin.com)",
+      "WebFetch(domain:linkedin.com)",
+      "WebFetch(domain:yuangang-cs.vercel.app)",
+      "WebFetch(domain:thleo.co)",
+      "WebFetch(domain:www.linkedin.com)",
+      "WebFetch(domain:jasonsdc.github.io)",
+      "Bash(curl -s -L https://viterbi-web.usc.edu/~yzhao010/)",
+      "Bash(curl -s -L \"https://viterbi-web.usc.edu/~yzhao010/files/bio.txt\")"
     ]
   }
 }

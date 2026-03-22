@@ -1,3 +1,72 @@
+## Bootstrap — Shared Config and Skills
+
+This file is the shared agent configuration hosted at `https://github.com/yzhao062/agent-config`.
+Project repos should include the following bootstrap block in their own `AGENTS.md` so that agents automatically pull the latest shared defaults and skills before starting any task.
+
+### Bootstrap block for project repos
+
+Copy the block below into the top of each project repo's `AGENTS.md`. Project-local rules written after the bootstrap block override anything fetched here.
+
+````
+## Shared Agent Config (auto-fetched)
+
+Before starting any task, fetch the shared agent configuration and skills. Use the block for your shell.
+
+PowerShell (Windows):
+
+```powershell
+New-Item -ItemType Directory -Force -Path .agent-config, .claude, .claude/commands | Out-Null
+Invoke-WebRequest -UseBasicParsing -Uri https://raw.githubusercontent.com/yzhao062/agent-config/main/AGENTS.md -OutFile .agent-config/AGENTS.md
+if (Test-Path .agent-config/repo/.git) {
+  git -C .agent-config/repo pull --ff-only
+} else {
+  git clone --depth 1 --filter=blob:none --sparse https://github.com/yzhao062/agent-config.git .agent-config/repo
+}
+git -C .agent-config/repo sparse-checkout set skills .claude/commands
+if (Test-Path .agent-config/repo/.claude/commands) {
+  Copy-Item .agent-config/repo/.claude/commands/*.md .claude/commands/ -Force
+}
+```
+
+Bash (macOS/Linux):
+
+```bash
+mkdir -p .agent-config .claude/commands
+curl -sfL https://raw.githubusercontent.com/yzhao062/agent-config/main/AGENTS.md -o .agent-config/AGENTS.md
+if [ -d .agent-config/repo/.git ]; then
+  git -C .agent-config/repo pull --ff-only
+else
+  git clone --depth 1 --filter=blob:none --sparse https://github.com/yzhao062/agent-config.git .agent-config/repo
+fi
+git -C .agent-config/repo sparse-checkout set skills .claude/commands
+if [ -d .agent-config/repo/.claude/commands ]; then
+  cp -f .agent-config/repo/.claude/commands/*.md .claude/commands/
+fi
+```
+
+Read and follow the rules in `.agent-config/AGENTS.md` as baseline defaults. Any rule defined later in this file overrides the shared default.
+When a skill is invoked, read its SKILL.md from `.agent-config/repo/skills/<skill-name>/SKILL.md`.
+If a local `skills/<skill-name>/SKILL.md` exists in the project repo, the local copy takes precedence.
+Copying `.agent-config/repo/.claude/commands/*.md` only overwrites command files with the same name as the shared repo and does not delete unrelated project-local commands.
+Add `.agent-config/` to the project's `.gitignore` so fetched files are not committed.
+````
+
+### What gets shared
+
+| Content | Source | How fetched |
+|---------|--------|-------------|
+| User profile, writing defaults, formatting rules, environment notes | `AGENTS.md` (this file) | `curl` raw file |
+| Shared skills (`dual-pass-workflow`, etc.) | `skills/` directory (committed only) | sparse `git clone` |
+| Claude pointer commands for shared skills | `.claude/commands/` | sparse `git clone` plus non-destructive copy into the project `.claude/commands/` |
+
+### Override rules
+
+- Project-local `AGENTS.md` rules always win over shared defaults.
+- Project-local `skills/<name>/SKILL.md` always wins over the shared copy of the same skill.
+- If a shared skill does not exist locally, the agent should use the fetched copy from `.agent-config/repo/skills/`.
+
+---
+
 ## User Profile
 
 - These are user-level defaults that can be reused across projects unless a local repo rule or task-specific instruction is stricter.
@@ -49,5 +118,6 @@
 - Skills under `skills/` are shared between coding agents (Codex, Claude Code, and any future agent).
 - `skills/<skill-name>/SKILL.md` is the single source of truth for each skill. Agent-specific config files (e.g., `agents/openai.yaml`) are thin wrappers and must not duplicate or override the logic in `SKILL.md`.
 - Claude Code accesses these skills via pointer commands in `.claude/commands/`. Each pointer file references the corresponding `SKILL.md` rather than duplicating its content.
+- Bootstrap sync should copy only the shared repo's `.claude/commands/*.md` files into the project `.claude/commands/` directory and should not delete unrelated project-local commands.
 - When editing a skill, modify `SKILL.md` and its `references/` or `scripts/` directly. Do not create agent-specific forks of the same content.
 - If a new skill is added, create both the `skills/<skill-name>/SKILL.md` structure and a matching `.claude/commands/<skill-name>.md` pointer so both agents can use it immediately.
