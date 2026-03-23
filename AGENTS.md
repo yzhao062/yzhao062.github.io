@@ -1,3 +1,6 @@
+> If this file was fetched into `.agent-config/AGENTS.md`, treat the bootstrap block below as copy-paste setup for project repos, not as runtime instructions to execute again.
+> In the fetched copy, read and follow the shared rules starting at `## User Profile`.
+
 ## Bootstrap — Shared Config and Skills
 
 This file is the shared agent configuration hosted at `https://github.com/yzhao062/agent-config`.
@@ -16,38 +19,25 @@ PowerShell (Windows):
 
 ```powershell
 New-Item -ItemType Directory -Force -Path .agent-config, .claude, .claude/commands | Out-Null
-Invoke-WebRequest -UseBasicParsing -Uri https://raw.githubusercontent.com/yzhao062/agent-config/main/AGENTS.md -OutFile .agent-config/AGENTS.md
-if (Test-Path .agent-config/repo/.git) {
-  git -C .agent-config/repo pull --ff-only
-} else {
-  git clone --depth 1 --filter=blob:none --sparse https://github.com/yzhao062/agent-config.git .agent-config/repo
-}
-git -C .agent-config/repo sparse-checkout set skills .claude/commands
-if (Test-Path .agent-config/repo/.claude/commands) {
-  Copy-Item .agent-config/repo/.claude/commands/*.md .claude/commands/ -Force
-}
+Invoke-WebRequest -UseBasicParsing -Uri https://raw.githubusercontent.com/yzhao062/agent-config/main/bootstrap/bootstrap.ps1 -OutFile .agent-config/bootstrap.ps1
+& .\.agent-config\bootstrap.ps1
 ```
 
 Bash (macOS/Linux):
 
 ```bash
 mkdir -p .agent-config .claude/commands
-curl -sfL https://raw.githubusercontent.com/yzhao062/agent-config/main/AGENTS.md -o .agent-config/AGENTS.md
-if [ -d .agent-config/repo/.git ]; then
-  git -C .agent-config/repo pull --ff-only
-else
-  git clone --depth 1 --filter=blob:none --sparse https://github.com/yzhao062/agent-config.git .agent-config/repo
-fi
-git -C .agent-config/repo sparse-checkout set skills .claude/commands
-if [ -d .agent-config/repo/.claude/commands ]; then
-  cp -f .agent-config/repo/.claude/commands/*.md .claude/commands/
-fi
+curl -sfL https://raw.githubusercontent.com/yzhao062/agent-config/main/bootstrap/bootstrap.sh -o .agent-config/bootstrap.sh
+bash .agent-config/bootstrap.sh
 ```
+
+This bootstrap flow refreshes the consuming repo's root `AGENTS.md` to match the shared copy. If a project later needs repo-local overrides, put them in `AGENTS.local.md`.
 
 Read and follow the rules in `.agent-config/AGENTS.md` as baseline defaults. Any rule defined later in this file overrides the shared default.
 When a skill is invoked, read its SKILL.md from `.agent-config/repo/skills/<skill-name>/SKILL.md`.
 If a local `skills/<skill-name>/SKILL.md` exists in the project repo, the local copy takes precedence.
 Copying `.agent-config/repo/.claude/commands/*.md` only overwrites command files with the same name as the shared repo and does not delete unrelated project-local commands.
+Merge shared Claude project defaults (e.g., `effortLevel`, `permissions`) from `.agent-config/repo/.claude/settings.json` into the project `.claude/settings.json`. Shared keys are updated on every bootstrap run; project-only keys are preserved. Merge requires Python; if unavailable the existing file is left untouched.
 Add `.agent-config/` to the project's `.gitignore` so fetched files are not committed.
 ````
 
@@ -58,14 +48,20 @@ Add `.agent-config/` to the project's `.gitignore` so fetched files are not comm
 | User profile, writing defaults, formatting rules, environment notes | `AGENTS.md` (this file) | `curl` raw file |
 | Shared skills (`dual-pass-workflow`, etc.) | `skills/` directory (committed only) | sparse `git clone` |
 | Claude pointer commands for shared skills | `.claude/commands/` | sparse `git clone` plus non-destructive copy into the project `.claude/commands/` |
+| Claude project defaults (`effortLevel`, `permissions`, etc.) | `.claude/settings.json` | sparse `git clone` plus key-level merge into the project `.claude/settings.json` on every run |
 
 ### Override rules
 
+- If `AGENTS.local.md` exists in the project root, read and follow it after `AGENTS.md`. Rules in `AGENTS.local.md` override the shared defaults.
 - Project-local `AGENTS.md` rules always win over shared defaults.
 - Project-local `skills/<name>/SKILL.md` always wins over the shared copy of the same skill.
+- Shared keys in `.claude/settings.json` are updated on every bootstrap run. Project-only keys are preserved. To override a shared key locally, use `.claude/settings.local.json`.
 - If a shared skill does not exist locally, the agent should use the fetched copy from `.agent-config/repo/skills/`.
 
 ---
+
+<!-- Everything above this line is bootstrap setup instructions. -->
+<!-- Everything below this line contains the shared rules that agents should read and follow. -->
 
 ## User Profile
 
@@ -85,7 +81,7 @@ Add `.agent-config/` to the project's `.gitignore` so fetched files are not comm
 - Provide code only when necessary. Confirm that the code is correct and can run as written.
 - For NSF or other federal proposal work, do not introduce DEI-related terms unless the solicitation explicitly requires them.
 - For non-federal proposals or calls that explicitly request DEI framing or terminology, follow the call requirements instead of applying a blanket ban.
-- Avoid the following words and close variants unless the user explicitly asks for them: `encompass`, `burgeoning`, `pivotal`, `realm`, `keen`, `adept`, `endeavor`, `uphold`, `imperative`, `profound`, `ponder`, `cultivate`, `hone`, `delve`, `embrace`, `pave`, `embark`, `monumental`, `scrutinize`, `vast`, `versatile`, `paramount`, `foster`, `necessitates`, `provenance`, `multifaceted`, `nuance`, `obliterate`, `articulate`, `acquire`, `underpin`, `underscore`, `harmonize`, `garner`, `undermine`, `gauge`, `facet`, `bolster`.
+- Avoid the following words and close variants unless the user explicitly asks for them: `encompass`, `burgeoning`, `pivotal`, `realm`, `keen`, `adept`, `endeavor`, `uphold`, `imperative`, `profound`, `ponder`, `cultivate`, `hone`, `delve`, `embrace`, `pave`, `embark`, `monumental`, `scrutinize`, `vast`, `versatile`, `paramount`, `foster`, `necessitates`, `provenance`, `multifaceted`, `nuance`, `obliterate`, `articulate`, `acquire`, `underpin`, `underscore`, `harmonize`, `garner`, `undermine`, `gauge`, `facet`, `bolster`, `groundbreaking`, `game-changing`, `reimagine`, `turnkey`, `intricate`, `trailblazing`, `unprecedented`.
 
 ## Formatting Defaults
 
@@ -104,6 +100,7 @@ Add `.agent-config/` to the project's `.gitignore` so fetched files are not comm
 - On Windows, a common Miniforge pattern is `%USERPROFILE%\\miniforge3\\envs\\py312\\python.exe`.
 - On macOS or Linux, a common Miniforge pattern is `$HOME/miniforge3/envs/py312/bin/python`.
 - If interpreter selection is still unclear, inspect Miniforge environments and local IDE settings before reporting that Python is missing.
+- GitHub CLI (`gh`) is used for PR and issue workflows. If `gh` is not found, remind the user to install it (`winget install GitHub.cli` on Windows, `brew install gh` on macOS) and authenticate with `gh auth login`.
 
 ## Local Skills Precedence
 

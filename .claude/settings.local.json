@@ -18,7 +18,17 @@
       "WebFetch(domain:www.linkedin.com)",
       "WebFetch(domain:jasonsdc.github.io)",
       "Bash(curl -s -L https://viterbi-web.usc.edu/~yzhao010/)",
-      "Bash(curl -s -L \"https://viterbi-web.usc.edu/~yzhao010/files/bio.txt\")"
+      "Bash(curl -s -L \"https://viterbi-web.usc.edu/~yzhao010/files/bio.txt\")",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(find /c/Users/yuezh/PycharmProjects/yzhao062.github.io -type f -name *.yml -o -name *.yaml -o -name *.json -o -name *.toml)",
+      "Bash(git:*)",
+      "Bash(wc:*)",
+      "Bash(ls -la /c/Users/yuezh/PycharmProjects/yzhao062.github.io/*.html)",
+      "Bash(mkdir -p .agent-config .claude/commands)",
+      "Bash(curl -sfL https://raw.githubusercontent.com/yzhao062/agent-config/main/bootstrap/bootstrap.sh -o .agent-config/bootstrap.sh)",
+      "Bash(bash .agent-config/bootstrap.sh)"
     ]
   }
 }

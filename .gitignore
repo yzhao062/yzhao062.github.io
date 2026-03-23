@@ -5,3 +5,4 @@
 # Keep if you later want to share specific project settings:
 # !.idea/codeStyles/
 # !.idea/inspectionProfiles/
+.agent-config/
