@@ -252,6 +252,16 @@
                    ]
     },
     {
+        "id":  "conference-learning-from-the-storm-a-multivariate-machine-learning-approach-to-predicting-hurricane-induced-economic-losses",
+        "section":  "conference",
+        "title":  "Learning from the Storm: A Multivariate Machine Learning Approach to Predicting Hurricane-Induced Economic Losses",
+        "paper_url":  "https://arxiv.org/abs/2506.17964",
+        "authors":  "Bolin Shen, Eren Erman Ozguven, Yue Zhao, Guang Wang, Yiqun Xie, Yushun Dong.",
+        "venue":  "ACM SIGSPATIAL SpatialConnect Workshop, 2025",
+        "year":  2025,
+        "links":  []
+    },
+    {
         "id":  "conference-jaildam-jailbreak-detection-with-adaptive-memory-for-vision-language-model",
         "section":  "conference",
         "title":  "JailDAM: Jailbreak Detection with Adaptive Memory for Vision-Language Model",
