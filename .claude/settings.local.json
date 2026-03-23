@@ -28,7 +28,10 @@
       "Bash(ls -la /c/Users/yuezh/PycharmProjects/yzhao062.github.io/*.html)",
       "Bash(mkdir -p .agent-config .claude/commands)",
       "Bash(curl -sfL https://raw.githubusercontent.com/yzhao062/agent-config/main/bootstrap/bootstrap.sh -o .agent-config/bootstrap.sh)",
-      "Bash(bash .agent-config/bootstrap.sh)"
+      "Bash(bash .agent-config/bootstrap.sh)",
+      "Bash(/c/Users/yuezh/miniforge3/envs/py312/python.exe -m json.tool /c/Users/yuezh/PycharmProjects/yzhao062.github.io/data/publications.json)",
+      "Bash(/c/Users/yuezh/miniforge3/envs/py312/python.exe /tmp/deep_check.py)",
+      "Bash(LLM Agents\" \\(arXiv:2603.19423\\) to publications.html and bib:*)"
     ]
   }
 }
