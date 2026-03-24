@@ -31,6 +31,10 @@
     </div>
     <button id="copy-btn" class="btn btn-sm btn-outline-dark" style="margin-bottom:12px;" disabled>Copy BibTeX</button>
     <pre id="bib-content" style="background:#f8f8f8; border:1px solid #ddd; border-radius:8px; padding:14px; white-space:pre-wrap;"></pre>
+    <div id="abstract-section" style="display:none; margin-top:20px;">
+      <h2 style="color:#990000; font-size:1.4rem;">Abstract</h2>
+      <p id="abstract-content" style="line-height:1.6;"></p>
+    </div>
   </main>
 
   <script>
@@ -192,12 +196,10 @@
         return response.text();
       });
 
-      var publicationsPromise = id
-        ? fetch('data/publications.json').then(function(response) {
+      var publicationsPromise = fetch('data/publications.json').then(function(response) {
             if (!response.ok) throw new Error('Failed to load publications data');
             return response.json();
-          })
-        : Promise.resolve([]);
+          });
 
       Promise.all([bibPromise, publicationsPromise])
         .then(function(results) {
@@ -206,8 +208,9 @@
           var entries = splitBibEntries(allBib);
 
           var resolvedTitle = fallbackTitle;
+          var matchedPublication = null;
           if (id) {
-            var matchedPublication = publications.find(function(item) {
+            matchedPublication = publications.find(function(item) {
               return item && item.id === id;
             });
             if (!matchedPublication) {
@@ -216,6 +219,11 @@
             }
             resolvedTitle = matchedPublication.title || '';
             queryTitleEl.textContent = 'Paper: ' + resolvedTitle + ' (id: ' + id + ')';
+          } else if (fallbackTitle) {
+            var normalizedFallback = normalizeTitle(fallbackTitle);
+            matchedPublication = publications.find(function(item) {
+              return item && normalizeTitle(item.title) === normalizedFallback;
+            }) || null;
           }
 
           var matched = findBibEntryByTitle(entries, resolvedTitle);
@@ -229,6 +237,13 @@
             });
           } else {
             bibContentEl.textContent = 'No matching BibTeX entry found. Please use "View Full BibTeX File".';
+          }
+
+          var abstractSection = document.getElementById('abstract-section');
+          var abstractContent = document.getElementById('abstract-content');
+          if (matchedPublication && matchedPublication.abstract && abstractSection && abstractContent) {
+            abstractContent.textContent = matchedPublication.abstract;
+            abstractSection.style.display = '';
           }
         })
         .catch(function(error) {
