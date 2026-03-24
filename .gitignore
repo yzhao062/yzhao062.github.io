@@ -6,6 +6,7 @@
 # !.idea/codeStyles/
 # !.idea/inspectionProfiles/
 .agent-config/
+.claude/settings.local.json
 
 # Python
 __pycache__/
