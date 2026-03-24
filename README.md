@@ -105,6 +105,7 @@ The rest of this document is for the repo maintainer (Yue Zhao).
 ├── scripts/
 │   ├── generate_cv_open_source.py  Generates cv/open-source.tex from JSON
 │   ├── sync_open_source_metadata.mjs  Refreshes stars/dates from GitHub API
+│   ├── fetch_paper_metadata.py     Batch-fetches abstracts from arXiv/S2
 │   └── ci_check_site.py            CI site validation
 ├── skills/                         Agent skills (shared by Claude Code + Codex)
 │   ├── dual-update/                Update content on both website and CV
@@ -133,6 +134,16 @@ CI runs this chain daily. To run locally:
 node scripts/sync_open_source_metadata.mjs
 python scripts/generate_cv_open_source.py
 ```
+
+#### Publications abstracts
+
+`data/publications.json` contains abstracts for all 100 papers. When adding new papers (via `/dual-update` or manually), include the abstract in the JSON entry. If abstracts are missing in bulk, run:
+
+```bash
+python scripts/fetch_paper_metadata.py
+```
+
+This fetches abstracts from arXiv (for papers with arXiv URLs) and Semantic Scholar (fallback), with title validation to prevent wrong-paper matches.
 
 #### Other shared content (manual, skill-assisted)
 
