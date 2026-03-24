@@ -112,6 +112,39 @@
         "abstract": "Generative Foundation Models (GenFMs) have emerged as transformative tools. However, their widespread adoption raises critical concerns regarding trustworthiness across dimensions. This paper presents a comprehensive framework to address these challenges through three key contributions. First, we systematically review global AI governance laws and policies from governments and regulatory bodies, as well as industry practices and standards. Based on this analysis, we propose a set of guiding principles for GenFMs, developed through extensive multidisciplinary collaboration that integrates technical, ethical, legal, and societal perspectives. Second, we introduce TrustGen, the first dynamic benchmarking platform designed to evaluate trustworthiness across multiple dimensions and model types, including text-to-image, large language, and vision-language models. TrustGen leverages modular components--metadata curation, test case generation, and contextual variation--to enable adaptive and iterative assessments, overcoming the limitations of static evaluation methods. Using TrustGen, we reveal significant progress in trustworthiness while identifying persistent challenges. Finally, we provide an in-depth discussion of the challenges and future directions for trustworthy GenFMs, which reveals the complex, evolving nature of trustworthiness, highlighting the nuanced trade-offs between utility and trustworthiness, and consideration for various downstream applications, identifying persistent challenges and providing a strategic roadmap for future research. This work establishes a holistic framework for advancing trustworthiness in GenAI, paving the way for safer and more responsible integration of GenFMs into critical applications. To facilitate advancement in the community, we release the toolkit for dynamic evaluation."
     },
     {
+        "id": "conference-a-personalized-conversational-benchmark-towards-simulating-personalized-conversations",
+        "section": "workshop",
+        "title": "A Personalized Conversational Benchmark: Towards Simulating Personalized Conversations",
+        "paper_url": "https://arxiv.org/abs/2505.14106",
+        "authors": "Li Li, Peilin Cai, Ryan A. Rossi, Franck Dernoncourt, Branislav Kveton, Junda Wu, Tong Yu, Lixin Song, Tiankai Yang, Yuehan Qin, Nesreen K. Ahmed, Samyadeep Basu, Subhojyoti Mukherjee, Ruiyi Zhang, Yuxiao Zhou, Zichao Wang, Yue Huang, Yu Wang, Xiangliang Zhang, Philip S. Yu, Xiyang Hu, Yue Zhao.",
+        "venue": "NeurIPS Workshop on Multi-Turn Interactions in Large Language Models (MTI-LLM), 2025",
+        "year": 2025,
+        "links": [
+            {
+                "type": "github",
+                "url": "https://github.com/PERSONA-bench/PERSONA/tree/Latest"
+            }
+        ],
+        "badges": [
+            {
+                "text": "Spotlight Paper",
+                "color": ""
+            }
+        ],
+        "abstract": "We present PersonaConvBench, a large-scale benchmark for evaluating personalized reasoning and generation in multi-turn conversations with large language models (LLMs). Unlike existing work that focuses on either personalization or conversational structure in isolation, PersonaConvBench integrates both, offering three core tasks: sentence classification, impact regression, and user-centric text generation across ten diverse Reddit-based domains. This design enables systematic analysis of how personalized conversational context shapes LLM outputs in realistic multi-user scenarios. We benchmark several commercial and open-source LLMs under a unified prompting setup and observe that incorporating personalized history yields substantial performance improvements, including a 198 percent relative gain over the best non-conversational baseline in sentiment classification. By releasing PersonaConvBench with evaluations and code, we aim to support research on LLMs that adapt to individual styles, track long-term context, and produce contextually rich, engaging responses."
+    },
+    {
+        "id": "conference-a-survey-on-model-extraction-attacks-and-defenses-for-large-language-models",
+        "section": "workshop",
+        "title": "A Survey on Model Extraction Attacks and Defenses for Large Language Models",
+        "paper_url": "https://arxiv.org/abs/2502.16065",
+        "authors": "Kaixiang Zhao, Lincan Li, Kaize Ding, Neil Zhenqiang Gong, Yue Zhao, Yushun Dong.",
+        "venue": "KDD (Lecture-Style Tutorial Track), 2025",
+        "year": 2025,
+        "links": [],
+        "abstract": "Model extraction attacks pose significant security threats to deployed language models, potentially compromising intellectual property and user privacy. This survey provides a comprehensive taxonomy of LLM-specific extraction attacks and defenses, categorizing attacks into functionality extraction, training data extraction, and prompt-targeted attacks. We analyze various attack methodologies including API-based knowledge distillation, direct querying, parameter recovery, and prompt stealing techniques that exploit transformer architectures. We then examine defense mechanisms organized into model protection, data privacy protection, and prompt-targeted strategies, evaluating their effectiveness across different deployment scenarios. We propose specialized metrics for evaluating both attack effectiveness and defense performance, addressing the specific challenges of generative language models. Through our analysis, we identify critical limitations in current approaches and propose promising research directions, including integrated attack methodologies and adaptive defense mechanisms that balance security with model utility. This work serves NLP researchers, ML engineers, and security professionals seeking to protect language models in production environments."
+    },
+    {
         "id": "conference-ad-agent-a-multi-agent-framework-for-end-to-end-anomaly-detection",
         "section": "conference",
         "title": "AD-AGENT: A Multi-agent Framework for End-to-end Anomaly Detection",
@@ -164,6 +197,22 @@
             }
         ],
         "abstract": "Out-of-distribution (OOD) detection is crucial for ensuring the robustness of machine learning models by identifying samples that deviate from the training distribution. While traditional OOD detection has predominantly focused on single-modality inputs, such as images, recent advancements in multimodal models have shown the potential of utilizing multiple modalities to improve detection performance. However, existing approaches often neglect intra-class variability within in-distribution (ID) data. To address this issue, we propose Dynamic Prototype Updating (DPU), a novel plug-and-play framework for multimodal OOD detection that accounts for intra-class variations. Our method dynamically updates class center representations for each class by measuring the variance of similar samples within each batch, enabling tailored adjustments. Extensive experiments on two tasks, five datasets, and nine base OOD algorithms demonstrate that DPU significantly improves OOD detection performances, setting a new state-of-the-art in multimodal OOD detection, including improvements up to 80% in Far-OOD detection."
+    },
+    {
+        "id": "conference-drugagent-automating-ai-aided-drug-discovery-programming-through-llm-multi-agent-collaboration",
+        "section": "workshop",
+        "title": "DrugAgent: Automating AI-aided Drug Discovery Programming through LLM Multi-Agent Collaboration",
+        "paper_url": "https://arxiv.org/abs/2411.15692",
+        "authors": "Sizhe Liu, Yizhou Lu, Siyu Chen, Xiyang Hu, Jieyu Zhao, Tianfan Fu, Yue Zhao.",
+        "venue": "AAAI Workshop on Foundation Models for Biological Discoveries (FMs4Bio), 2025",
+        "year": 2025,
+        "links": [
+            {
+                "type": "github",
+                "url": "https://github.com/Steven51516/drugagent"
+            }
+        ],
+        "abstract": "Recent progress in Large Language Models (LLMs) has drawn attention to their potential for accelerating drug discovery. However, a central problem remains: translating theoretical ideas into robust implementations in the highly specialized context of pharmaceutical research. This limitation prevents practitioners from making full use of the latest AI developments in drug discovery. To address this challenge, we introduce DrugAgent, a multi-agent framework that automates machine learning (ML) programming for drug discovery tasks. DrugAgent employs an LLM Planner that formulates high-level ideas and an LLM Instructor that identifies and integrates domain knowledge when implementing those ideas. We present case studies on three representative drug discovery tasks. Our results show that DrugAgent consistently outperforms leading baselines, including a relative improvement of 4.92% in ROC-AUC compared to ReAct for drug-target interaction (DTI). DrugAgent is publicly available at https://anonymous.4open.science/r/drugagent-5C42/."
     },
     {
         "id": "conference-dyflow-dynamic-workflow-framework-for-agentic-reasoning",
@@ -252,6 +301,34 @@
         "abstract": "Large language models (LLMs) hold promise for advancing patient-provider communication, yet a persistent gap remains between benchmark-driven model development and the realities of clinical practice. This work presents a systematic, clinically grounded review of text-based medical datasets for LLM training and evaluation. We propose a scenario-based taxonomy derived from established clinical frameworks to map major knowledge-based and conversation-based corpora against core communication scenarios. Our findings highlight the urgent need for scenario-rich datasets and standardized, human-centered evaluation protocol to advance clinically relevant medical LLMs."
     },
     {
+        "id": "conference-learning-from-the-storm-a-multivariate-machine-learning-approach-to-predicting-hurricane-induced-economic-losses",
+        "section": "workshop",
+        "title": "Learning from the Storm: A Multivariate Machine Learning Approach to Predicting Hurricane-Induced Economic Losses",
+        "paper_url": "https://arxiv.org/abs/2506.17964",
+        "authors": "Bolin Shen, Eren Erman Ozguven, Yue Zhao, Guang Wang, Yiqun Xie, Yushun Dong.",
+        "venue": "ACM SIGSPATIAL SpatialConnect Workshop, 2025",
+        "year": 2025,
+        "links": [],
+        "abstract": "Florida is particularly vulnerable to hurricanes, which frequently cause substantial economic losses. While prior studies have explored specific contributors to hurricane-induced damage, few have developed a unified framework capable of integrating a broader range of influencing factors to comprehensively assess the sources of economic loss. In this study, we propose a comprehensive modeling framework that categorizes contributing factors into three key components: (1) hurricane characteristics, (2) water-related environmental factors, and (3) socioeconomic factors of affected areas. By integrating multi-source data and aggregating all variables at the finer spatial granularity of the ZIP Code Tabulation Area (ZCTA) level, we employ machine learning models to predict economic loss, using insurance claims as indicators of incurred damage. Beyond accurate loss prediction, our approach facilitates a systematic assessment of the relative importance of each component, providing practical guidance for disaster mitigation, risk assessment, and the development of adaptive urban strategies in coastal and storm-exposed areas. Our code is now available at: https://github.com/LabRAI/Hurricane-Induced-Economic-Loss-Prediction"
+    },
+    {
+        "id": "conference-metaood-automatic-selection-of-ood-detection-models",
+        "section": "conference",
+        "title": "MetaOOD: Automatic Selection of OOD Detection Models",
+        "paper_url": "https://openreview.net/forum?id=9qpdDiDQ2H",
+        "authors": "Yuehan Qin†, Yichi Zhang†, Yi Nian†, Xueying Ding, Yue Zhao.",
+        "venue": "ICLR, 2025",
+        "year": 2025,
+        "links": [
+            {
+                "type": "github",
+                "url": "https://github.com/yqin43/metaood"
+            }
+        ],
+        "badges": [],
+        "abstract": "How can we automatically select an out-of-distribution (OOD) detection model for various underlying tasks? This is crucial for maintaining the reliability of open-world applications by identifying data distribution shifts, particularly in critical domains such as online transactions, autonomous driving, and real-time patient diagnosis. Despite the availability of numerous OOD detection methods, the challenge of selecting an optimal model for diverse tasks remains largely underexplored, especially in scenarios lacking ground truth labels. In this work, we introduce MetaOOD, the first zero-shot, unsupervised framework that utilizes meta-learning to select an OOD detection model automatically. As a meta-learning approach, MetaOOD leverages historical performance data of existing methods across various benchmark OOD detection datasets, enabling the effective selection of a suitable model for new datasets without the need for labeled data at the test time. To quantify task similarities more accurately, we introduce language model-based embeddings that capture the distinctive OOD characteristics of both datasets and detection models. Through extensive experimentation with 24 unique test dataset pairs to choose from among 11 OOD detection models, we demonstrate that MetaOOD significantly outperforms existing methods and only brings marginal time overhead. Our results, validated by Wilcoxon statistical tests, show that MetaOOD surpasses a diverse group of 11 baselines, including established OOD detectors and advanced unsupervised selection methods."
+    },
+    {
         "id": "conference-nlp-adbench-nlp-anomaly-detection-benchmark",
         "section": "conference",
         "title": "NLP-ADBench: NLP Anomaly Detection Benchmark",
@@ -285,6 +362,22 @@
         "abstract": "Machine Learning as a Service (MLaaS) systems face a fundamental tension between regulatory demands for explainability and security vulnerabilities from model extraction attacks. This paper advocates for investigating the underexplored relationship between model extractability and explainability. We envision theoretical frameworks enabling MLaaS systems to achieve human-level explainability without enabling extraction attacks. We identify three critical technical gaps: the absence of general frameworks to predict extraction risk, standardized extractability metrics, and predictive security approaches."
     },
     {
+        "id": "conference-pyod-2-a-python-library-for-outlier-detection-with-llm-powered-model-selection",
+        "section": "workshop",
+        "title": "PyOD 2: A Python Library for Outlier Detection with LLM-powered Model Selection",
+        "paper_url": "https://arxiv.org/abs/2412.12154",
+        "authors": "Sihan Chen, Zhuangzhuang Qian, Wingchun Siu, Xingcan Hu, Jiaqi Li, Shawn Li, Yuehan Qin, Tiankai Yang, Zhuo Xiao, Wanghao Ye, Yichi Zhang, Yushun Dong, Yue Zhao.",
+        "venue": "The Web Conference (Demo Track), 2025",
+        "year": 2025,
+        "links": [
+            {
+                "type": "github",
+                "url": "https://github.com/yzhao062/pyod"
+            }
+        ],
+        "abstract": "Outlier detection (OD), also known as anomaly detection, is a critical machine learning (ML) task with applications in fraud detection, network intrusion detection, clickstream analysis, recommendation systems, and social network moderation. Among open-source libraries for outlier detection, the Python Outlier Detection (PyOD) library is the most widely adopted, with over 8,500 GitHub stars, 25 million downloads, and diverse industry usage. However, PyOD currently faces three limitations: (1) insufficient coverage of modern deep learning algorithms, (2) fragmented implementations across PyTorch and TensorFlow, and (3) no automated model selection, making it hard for non-experts. To address these issues, we present PyOD Version 2 (PyOD 2), which integrates 12 state-of-the-art deep learning models into a unified PyTorch framework and introduces a large language model (LLM)-based pipeline for automated OD model selection. These improvements simplify OD workflows, provide access to 45 algorithms, and deliver robust performance on various datasets. In this paper, we demonstrate how PyOD 2 streamlines the deployment and automation of OD models and sets a new standard in both research and industry. PyOD 2 is accessible at [https://github.com/yzhao062/pyod](https://github.com/yzhao062/pyod). This study aligns with the Web Mining and Content Analysis track, addressing topics such as the robustness of Web mining methods and the quality of algorithmically-generated Web data."
+    },
+    {
         "id": "conference-retrieval-reasoning-large-language-model-based-synthetic-clinical-trial-generation",
         "section": "conference",
         "title": "Retrieval-Reasoning Large Language Model-based Synthetic Clinical Trial Generation",
@@ -315,6 +408,38 @@
             }
         ],
         "abstract": "Out-of-Distribution (OOD) detection is critical for ensuring the reliability of machine learning models in safety-critical applications such as autonomous driving and medical diagnosis. While deploying personalized OOD detection directly on edge devices is desirable, it remains challenging due to large model sizes and the computational infeasibility of on-device training. Federated learning partially addresses this but still requires gradient computation and backpropagation, exceeding the capabilities of many edge devices. To overcome these challenges, we propose SecDOOD, a secure cloud-device collaboration framework for efficient on-device OOD detection without requiring device-side backpropagation. SecDOOD utilizes cloud resources for model training while ensuring user data privacy by retaining sensitive information on-device. Central to SecDOOD is a HyperNetwork-based personalized parameter generation module, which adapts cloud-trained models to device-specific distributions by dynamically generating local weight adjustments, effectively combining central and local information without local fine-tuning. Additionally, our dynamic feature sampling and encryption strategy selectively encrypts only the most informative feature channels, largely reducing encryption overhead without compromising detection performance. Extensive experiments across multiple datasets and OOD scenarios demonstrate that SecDOOD achieves performance comparable to fully fine-tuned models, enabling secure, efficient, and personalized OOD detection on resource-limited edge devices. To enhance accessibility and reproducibility, our code is publicly available at https://github.com/Dystopians/SecDOOD."
+    },
+    {
+        "id": "conference-socialmaze-a-benchmark-for-evaluating-social-reasoning-in-large-language-models",
+        "section": "workshop",
+        "title": "SocialMaze: A Benchmark for Evaluating Social Reasoning in Large Language Models",
+        "paper_url": "https://arxiv.org/abs/2505.23713",
+        "authors": "Zixiang Xu, Yanbo Wang, Yue Huang, Jiayi Ye, Haomin Zhuang, Zirui Song, Lang Gao, Chenxi Wang, Zhaorun Chen, Yujun Zhou, Sixian Li, Wang Pan, Yue Zhao, Jieyu Zhao, Xiangliang Zhang, Xiuying Chen.",
+        "venue": "NeurIPS Workshop on Socially Responsible and Trustworthy Foundation Models (ResponsibleFM), 2025",
+        "year": 2025,
+        "links": [
+            {
+                "type": "project",
+                "url": "https://huggingface.co/datasets/MBZUAI/SocialMaze"
+            }
+        ],
+        "abstract": "Large language models (LLMs) are increasingly applied to socially grounded tasks, such as online community moderation, media content analysis, and social reasoning games. Success in these contexts depends on a model's social reasoning ability - the capacity to interpret social contexts, infer others' mental states, and assess the truthfulness of presented information. However, there is currently no systematic evaluation framework that comprehensively assesses the social reasoning capabilities of LLMs. Existing efforts often oversimplify real-world scenarios and consist of tasks that are too basic to challenge advanced models. To address this gap, we introduce SocialMaze, a new benchmark specifically designed to evaluate social reasoning. SocialMaze systematically incorporates three core challenges: deep reasoning, dynamic interaction, and information uncertainty. It provides six diverse tasks across three key settings: social reasoning games, daily-life interactions, and digital community platforms. Both automated and human validation are used to ensure data quality. Our evaluation reveals several key insights: models vary substantially in their ability to handle dynamic interactions and integrate temporally evolving information; models with strong chain-of-thought reasoning perform better on tasks requiring deeper inference beyond surface-level cues; and model reasoning degrades significantly under uncertainty. Furthermore, we show that targeted fine-tuning on curated reasoning examples can greatly improve model performance in complex social scenarios. The dataset is publicly available at: https://huggingface.co/datasets/MBZUAI/SocialMaze"
+    },
+    {
+        "id": "conference-trusteval-a-dynamic-evaluation-toolkit-on-trustworthiness-of-generative-foundation-models",
+        "section": "workshop",
+        "title": "TRUSTEVAL: A Dynamic Evaluation Toolkit on Trustworthiness of Generative Foundation Models",
+        "paper_url": "https://aclanthology.org/2025.naacl-demo.8/",
+        "authors": "Yanbo Wang, Jiayi Ye, Siyuan Wu, Chujie Gao, Yue Huang, Xiuying Chen, Yue Zhao, Xiangliang Zhang.",
+        "venue": "NAACL (Demo Track), 2025",
+        "year": 2025,
+        "links": [
+            {
+                "type": "github",
+                "url": "https://github.com/TrustGen/TrustEval-toolkit"
+            }
+        ],
+        "abstract": "Ensuring the trustworthiness of Generative Foundation Models (GenFMs) is a pressing challenge as they gain widespread use. This paper introduces TRUSTEVAL, a dynamic and comprehensive toolkit designed for evaluating GenFMs across various dimensions. TRUSTEVAL supports both dynamic dataset generation and evaluation, offering advanced features including comprehensiveness, usability, and flexibility."
     },
     {
         "id": "conference-treble-counterfactual-vlms-a-causal-approach-to-hallucination",
@@ -355,6 +480,18 @@
         "abstract": "Accurate typhoon track forecasting is crucial for early system warning and disaster response. While Transformer-based models have demonstrated strong performance in modeling the temporal dynamics of dense trajectories of humans and vehicles in smart cities, they usually lack access to broader contextual knowledge that enhances the forecasting reliability of sparse meteorological trajectories, such as typhoon tracks. To address this challenge, we propose TyphoFormer, a novel framework that incorporates natural language descriptions as auxiliary prompts to improve typhoon trajectory forecasting. For each time step, we use Large Language Model (LLM) to generate concise textual descriptions based on the numerical attributes recorded in the North Atlantic hurricane database. The language descriptions capture high-level meteorological semantics and are embedded as auxiliary special tokens prepended to the numerical time series input. By integrating both textual and sequential information within a unified Transformer encoder, TyphoFormer enables the model to leverage contextual cues that are otherwise inaccessible through numerical features alone. Extensive experiments are conducted on HURDAT2 benchmark, results show that TyphoFormer consistently outperforms other state-of-the-art baseline methods, particularly under challenging scenarios involving nonlinear path shifts and limited historical observations."
     },
     {
+        "id": "workshop-autobench-v",
+        "section": "workshop",
+        "title": "AutoBench-V: Can Large Vision-Language Models Benchmark Themselves?",
+        "paper_url": "https://arxiv.org/abs/2410.21259",
+        "authors": "Han Bao, Yue Huang, Yanbo Wang, Jiayi Ye, Xiangqi Wang, Xiuying Chen, Yue Zhao, Tianyi Zhou, Mohamed Elhoseiny, Xiangliang Zhang",
+        "venue": "ICML 2025 DataWorld Workshop",
+        "year": 2024,
+        "show_on_website": false,
+        "links": [],
+        "abstract": "Large Vision-Language Models (LVLMs) have become essential for advancing the integration of visual and linguistic information. However, the evaluation of LVLMs presents significant challenges as the evaluation benchmark always demands lots of human cost for its construction, and remains static, lacking flexibility once constructed. Even though automatic evaluation has been explored in textual modality, the visual modality remains under-explored. As a result, in this work, we address a question: \"Can LVLMs themselves be used to benchmark each other in the visual automatically domain?\". We introduce AutoBench-V, an automated framework for serving evaluation on demand, i.e., benchmarking LVLMs based on specific aspects of model capability. AutoBench-V leverages text-to-image models to generate relevant image samples and then utilizes LVLMs to orchestrate visual question-answering (VQA) tasks, completing the evaluation process efficiently and flexibly. Through an extensive evaluation of nine popular LVLMs across five demanded user inputs (i.e., evaluation capabilities), the framework shows effectiveness and reliability."
+    },
+    {
         "id": "conference-fast-unsupervised-deep-outlier-model-selection-with-hypernetworks",
         "section": "conference",
         "title": "Fast Unsupervised Deep Outlier Model Selection with Hypernetworks",
@@ -385,23 +522,6 @@
             }
         ],
         "abstract": "Given an unsupervised outlier detection (OD) algorithm, how can we optimize its hyperparameter(s) (HP) on a new dataset, without any labels? In this work, we address this challenging hyperparameter optimization for unsupervised OD problem, and propose the first systematic approach called HPOD that is based on meta-learning. HPOD capitalizes on the prior performance of a large collection of HPs on existing OD benchmark datasets, and transfers this information to enable HP evaluation on a new dataset without labels. Extensive experiments show that HPOD works with both deep and shallow OD algorithms on discrete and continuous HP spaces."
-    },
-    {
-        "id": "conference-metaood-automatic-selection-of-ood-detection-models",
-        "section": "conference",
-        "title": "MetaOOD: Automatic Selection of OOD Detection Models",
-        "paper_url": "https://openreview.net/forum?id=9qpdDiDQ2H",
-        "authors": "Yuehan Qin†, Yichi Zhang†, Yi Nian†, Xueying Ding, Yue Zhao.",
-        "venue": "ICLR, 2025",
-        "year": 2025,
-        "links": [
-            {
-                "type": "github",
-                "url": "https://github.com/yqin43/metaood"
-            }
-        ],
-        "badges": [],
-        "abstract": "How can we automatically select an out-of-distribution (OOD) detection model for various underlying tasks? This is crucial for maintaining the reliability of open-world applications by identifying data distribution shifts, particularly in critical domains such as online transactions, autonomous driving, and real-time patient diagnosis. Despite the availability of numerous OOD detection methods, the challenge of selecting an optimal model for diverse tasks remains largely underexplored, especially in scenarios lacking ground truth labels. In this work, we introduce MetaOOD, the first zero-shot, unsupervised framework that utilizes meta-learning to select an OOD detection model automatically. As a meta-learning approach, MetaOOD leverages historical performance data of existing methods across various benchmark OOD detection datasets, enabling the effective selection of a suitable model for new datasets without the need for labeled data at the test time. To quantify task similarities more accurately, we introduce language model-based embeddings that capture the distinctive OOD characteristics of both datasets and detection models. Through extensive experimentation with 24 unique test dataset pairs to choose from among 11 OOD detection models, we demonstrate that MetaOOD significantly outperforms existing methods and only brings marginal time overhead. Our results, validated by Wilcoxon statistical tests, show that MetaOOD surpasses a diverse group of 11 baselines, including established OOD detectors and advanced unsupervised selection methods."
     },
     {
         "id": "conference-multiood-scaling-out-of-distribution-detection-for-multiple-modalities",
@@ -664,6 +784,18 @@
         "abstract": "Outlier detection (OD) is a key machine learning task for identifying abnormal objects from general samples. Due to the lack of ground truth labels, practitioners often have to build a large number of unsupervised, heterogeneous models for further combination and analysis. We propose a modular acceleration system, called SUOD, focusing on three complementary acceleration aspects while maintaining performance accuracy. Extensive experiments on more than 20 benchmark datasets demonstrate SUOD's effectiveness."
     },
     {
+        "id": "workshop-tods",
+        "section": "workshop",
+        "title": "TODS: An Automated Time Series Outlier Detection System",
+        "paper_url": "https://ojs.aaai.org/index.php/AAAI/article/view/18012",
+        "authors": "Kwei-Herng Lai, Daochen Zha, Guanchu Wang, Junjie Xu, Yue Zhao, Devesh Kumar, Yile Chen, Purav Zumkhawaka, Mingyang Wan, Diego Martinez, Xia Hu",
+        "venue": "AAAI (Demo), 2021",
+        "year": 2021,
+        "show_on_website": false,
+        "links": [],
+        "abstract": "We present TODS, an automated Time Series Outlier Detection System for research and industrial applications. TODS is a highly modular system that supports easy pipeline construction with 70 primitives, including data processing, time series processing, feature analysis, detection algorithms, and a reinforcement module. TODS provides a Graphical User Interface (GUI) and a data-driven searcher to automatically discover the most suitable pipelines."
+    },
+    {
         "id": "conference-therapeutics-data-commons-machine-learning-datasets-and-tasks-for-drug-discovery-and-development",
         "section": "conference",
         "title": "Therapeutics Data Commons: Machine Learning Datasets and Tasks for Drug Discovery and Development",
@@ -716,210 +848,6 @@
         "abstract": "Outlier detection refers to the identification of rare items that are deviant from the general data distribution. We present a novel outlier detection algorithm called COPOD, inspired by copulas for modeling multivariate data distribution. COPOD first constructs an empirical copula, and then uses it to predict tail probabilities of each given data point to determine its level of extremeness. COPOD is both parameter-free, highly interpretable, and computationally efficient."
     },
     {
-        "id": "conference-dsr",
-        "section": "conference",
-        "title": "DSR: An Accurate Single Image Super Resolution Approach for Various Degradations",
-        "paper_url": "https://ieeexplore.ieee.org/document/9102941/",
-        "authors": "Yiqun Mei, Yue Zhao, Wei Liang",
-        "venue": "IEEE ICME, 2020",
-        "year": 2020,
-        "show_on_website": false,
-        "links": [],
-        "abstract": "Convolution neural networks have achieved unprecedented success for image super resolution (SR). However, such methods typically assume a predetermined degradation that deviates from real-world cases, resulting in poor performance frequently. To improve upon this, researchers have proposed various methods to handle super resolution under multiple degradations. Despite, such methods fail to capture an accurate image prior, which is a crucial part of reconstructing image details. In this work, we propose a novel framework called Decoupled Super Resolver (DSR) with both promising performance and applicability. DSR employs a LR Finer to project a degraded image back to its clean version and a Combinational Super Resolver to retrieve a more comprehensive and accurate prior. The latter module further enables DSR to output high-resolution images by combining both image-specific knowledge and external statistics. Extensive experiments under various degradation settings demonstrate the effectiveness of DSR by setting new state-of-the-arts on multiple benchmarks."
-    },
-    {
-        "id": "conference-lscp",
-        "section": "conference",
-        "title": "LSCP: Locally Selective Combination in Parallel Outlier Ensembles",
-        "paper_url": "https://epubs.siam.org/doi/10.1137/1.9781611975673.66",
-        "authors": "Yue Zhao, Zain Nasrullah, Maciej K. Hryniewicki, Zheng Li",
-        "venue": "SDM, 2019",
-        "year": 2019,
-        "show_on_website": false,
-        "links": [],
-        "abstract": "In unsupervised outlier ensembles, the absence of ground truth makes the combination of base outlier detectors a challenging task. We propose LSCP which addresses the issue by defining a local region around a test instance using the consensus of its nearest neighbors in randomly selected feature subspaces. The top-performing base detectors in this local region are selected and combined. Experimental results demonstrate that LSCP_AOM consistently outperforms baselines on the majority of twenty real-world datasets."
-    },
-    {
-        "id": "conference-music-artist-crnn",
-        "section": "conference",
-        "title": "Music Artist Classification with Convolutional Recurrent Neural Networks",
-        "paper_url": "https://ieeexplore.ieee.org/document/8851988/",
-        "authors": "Zain Nasrullah, Yue Zhao",
-        "venue": "IJCNN, 2019",
-        "year": 2019,
-        "show_on_website": false,
-        "links": [],
-        "abstract": "This paper revisits artist classification with deep convolutional and recurrent models and empirically explores the impacts of incorporating temporal structure in the feature representation. A Convolutional Recurrent Neural Network (CRNN) is applied to the artist20 music artist identification dataset. The best performing model achieves an average F1 score of 0.937 across three independent trials."
-    },
-    {
-        "id": "conference-employee-turnover",
-        "section": "conference",
-        "title": "Employee Turnover Prediction with Machine Learning: A Reliable Approach",
-        "paper_url": "https://link.springer.com/chapter/10.1007/978-3-030-01057-7_56",
-        "authors": "Yue Zhao, Maciej K. Hryniewicki, Francesca Cheng, Boyang Fu, Xiaoyu Zhu",
-        "venue": "IntelliSys, 2018",
-        "year": 2018,
-        "show_on_website": false,
-        "links": [],
-        "abstract": "Supervised machine learning methods are described, demonstrated and assessed for the prediction of employee turnover within an organization. Numerical experiments for real and simulated human resources datasets are performed using ten different methods. Through a robust and comprehensive evaluation process, the performance of each method is analyzed and established using statistical methods."
-    },
-    {
-        "id": "conference-xgbod",
-        "section": "conference",
-        "title": "XGBOD: Improving Supervised Outlier Detection with Unsupervised Representation Learning",
-        "paper_url": "https://ieeexplore.ieee.org/document/8489605/",
-        "authors": "Yue Zhao, Maciej K. Hryniewicki",
-        "venue": "IJCNN, 2018",
-        "year": 2018,
-        "show_on_website": false,
-        "links": [],
-        "abstract": "A new semi-supervised ensemble algorithm called XGBOD (Extreme Gradient Boosting Outlier Detection) is proposed for the enhanced detection of outliers. The proposed framework combines the strengths of both supervised and unsupervised machine learning methods by creating a hybrid approach. XGBOD uses multiple unsupervised outlier mining algorithms to extract useful representations that augment the predictive capabilities of an embedded supervised classifier."
-    },
-    {
-        "id": "conference-touch-auth-smartwatch",
-        "section": "conference",
-        "title": "An Empirical Study of Touch-based Authentication Methods on Smartwatches",
-        "paper_url": "https://arxiv.org/abs/1710.04608",
-        "authors": "Yue Zhao, Zhongtian Qiu, Yiqing Yang, Weiwei Li, Mingming Fan",
-        "venue": "ISWC, 2017",
-        "year": 2017,
-        "show_on_website": false,
-        "links": [],
-        "abstract": "The emergence of smartwatches poses new challenges to information security. Although there are mature touch-based authentication methods for smartphones, the effectiveness of using these methods on smartwatches is still unclear. We conducted a user study (n=16) to evaluate how authentication methods (PIN and Pattern), UIs (Square and Circular), and display sizes (38mm and 42mm) affect authentication accuracy, speed, and security. Circular UIs are tailored to smartwatches with fewer UI elements. Results show that 1) PIN is more accurate and secure than Pattern; 2) Pattern is much faster than PIN; 3) Square UIs are more secure but less accurate than Circular UIs; 4) display size does not affect accuracy or speed, but security; 5) Square PIN is the most secure method of all. The study also reveals a security concern that participants' favorite method is not the best in any of the measures. We finally discuss implications for future touch-based smartwatch authentication design."
-    },
-    {
-        "id": "conference-a-personalized-conversational-benchmark-towards-simulating-personalized-conversations",
-        "section": "workshop",
-        "title": "A Personalized Conversational Benchmark: Towards Simulating Personalized Conversations",
-        "paper_url": "https://arxiv.org/abs/2505.14106",
-        "authors": "Li Li, Peilin Cai, Ryan A. Rossi, Franck Dernoncourt, Branislav Kveton, Junda Wu, Tong Yu, Lixin Song, Tiankai Yang, Yuehan Qin, Nesreen K. Ahmed, Samyadeep Basu, Subhojyoti Mukherjee, Ruiyi Zhang, Yuxiao Zhou, Zichao Wang, Yue Huang, Yu Wang, Xiangliang Zhang, Philip S. Yu, Xiyang Hu, Yue Zhao.",
-        "venue": "NeurIPS Workshop on Multi-Turn Interactions in Large Language Models (MTI-LLM), 2025",
-        "year": 2025,
-        "links": [
-            {
-                "type": "github",
-                "url": "https://github.com/PERSONA-bench/PERSONA/tree/Latest"
-            }
-        ],
-        "badges": [
-            {
-                "text": "Spotlight Paper",
-                "color": ""
-            }
-        ],
-        "abstract": "We present PersonaConvBench, a large-scale benchmark for evaluating personalized reasoning and generation in multi-turn conversations with large language models (LLMs). Unlike existing work that focuses on either personalization or conversational structure in isolation, PersonaConvBench integrates both, offering three core tasks: sentence classification, impact regression, and user-centric text generation across ten diverse Reddit-based domains. This design enables systematic analysis of how personalized conversational context shapes LLM outputs in realistic multi-user scenarios. We benchmark several commercial and open-source LLMs under a unified prompting setup and observe that incorporating personalized history yields substantial performance improvements, including a 198 percent relative gain over the best non-conversational baseline in sentiment classification. By releasing PersonaConvBench with evaluations and code, we aim to support research on LLMs that adapt to individual styles, track long-term context, and produce contextually rich, engaging responses."
-    },
-    {
-        "id": "conference-a-survey-on-model-extraction-attacks-and-defenses-for-large-language-models",
-        "section": "workshop",
-        "title": "A Survey on Model Extraction Attacks and Defenses for Large Language Models",
-        "paper_url": "https://arxiv.org/abs/2502.16065",
-        "authors": "Kaixiang Zhao, Lincan Li, Kaize Ding, Neil Zhenqiang Gong, Yue Zhao, Yushun Dong.",
-        "venue": "KDD (Lecture-Style Tutorial Track), 2025",
-        "year": 2025,
-        "links": [],
-        "abstract": "Model extraction attacks pose significant security threats to deployed language models, potentially compromising intellectual property and user privacy. This survey provides a comprehensive taxonomy of LLM-specific extraction attacks and defenses, categorizing attacks into functionality extraction, training data extraction, and prompt-targeted attacks. We analyze various attack methodologies including API-based knowledge distillation, direct querying, parameter recovery, and prompt stealing techniques that exploit transformer architectures. We then examine defense mechanisms organized into model protection, data privacy protection, and prompt-targeted strategies, evaluating their effectiveness across different deployment scenarios. We propose specialized metrics for evaluating both attack effectiveness and defense performance, addressing the specific challenges of generative language models. Through our analysis, we identify critical limitations in current approaches and propose promising research directions, including integrated attack methodologies and adaptive defense mechanisms that balance security with model utility. This work serves NLP researchers, ML engineers, and security professionals seeking to protect language models in production environments."
-    },
-    {
-        "id": "conference-drugagent-automating-ai-aided-drug-discovery-programming-through-llm-multi-agent-collaboration",
-        "section": "workshop",
-        "title": "DrugAgent: Automating AI-aided Drug Discovery Programming through LLM Multi-Agent Collaboration",
-        "paper_url": "https://arxiv.org/abs/2411.15692",
-        "authors": "Sizhe Liu, Yizhou Lu, Siyu Chen, Xiyang Hu, Jieyu Zhao, Tianfan Fu, Yue Zhao.",
-        "venue": "AAAI Workshop on Foundation Models for Biological Discoveries (FMs4Bio), 2025",
-        "year": 2025,
-        "links": [
-            {
-                "type": "github",
-                "url": "https://github.com/Steven51516/drugagent"
-            }
-        ],
-        "abstract": "Recent progress in Large Language Models (LLMs) has drawn attention to their potential for accelerating drug discovery. However, a central problem remains: translating theoretical ideas into robust implementations in the highly specialized context of pharmaceutical research. This limitation prevents practitioners from making full use of the latest AI developments in drug discovery. To address this challenge, we introduce DrugAgent, a multi-agent framework that automates machine learning (ML) programming for drug discovery tasks. DrugAgent employs an LLM Planner that formulates high-level ideas and an LLM Instructor that identifies and integrates domain knowledge when implementing those ideas. We present case studies on three representative drug discovery tasks. Our results show that DrugAgent consistently outperforms leading baselines, including a relative improvement of 4.92% in ROC-AUC compared to ReAct for drug-target interaction (DTI). DrugAgent is publicly available at https://anonymous.4open.science/r/drugagent-5C42/."
-    },
-    {
-        "id": "conference-learning-from-the-storm-a-multivariate-machine-learning-approach-to-predicting-hurricane-induced-economic-losses",
-        "section": "workshop",
-        "title": "Learning from the Storm: A Multivariate Machine Learning Approach to Predicting Hurricane-Induced Economic Losses",
-        "paper_url": "https://arxiv.org/abs/2506.17964",
-        "authors": "Bolin Shen, Eren Erman Ozguven, Yue Zhao, Guang Wang, Yiqun Xie, Yushun Dong.",
-        "venue": "ACM SIGSPATIAL SpatialConnect Workshop, 2025",
-        "year": 2025,
-        "links": [],
-        "abstract": "Florida is particularly vulnerable to hurricanes, which frequently cause substantial economic losses. While prior studies have explored specific contributors to hurricane-induced damage, few have developed a unified framework capable of integrating a broader range of influencing factors to comprehensively assess the sources of economic loss. In this study, we propose a comprehensive modeling framework that categorizes contributing factors into three key components: (1) hurricane characteristics, (2) water-related environmental factors, and (3) socioeconomic factors of affected areas. By integrating multi-source data and aggregating all variables at the finer spatial granularity of the ZIP Code Tabulation Area (ZCTA) level, we employ machine learning models to predict economic loss, using insurance claims as indicators of incurred damage. Beyond accurate loss prediction, our approach facilitates a systematic assessment of the relative importance of each component, providing practical guidance for disaster mitigation, risk assessment, and the development of adaptive urban strategies in coastal and storm-exposed areas. Our code is now available at: https://github.com/LabRAI/Hurricane-Induced-Economic-Loss-Prediction"
-    },
-    {
-        "id": "conference-pyod-2-a-python-library-for-outlier-detection-with-llm-powered-model-selection",
-        "section": "workshop",
-        "title": "PyOD 2: A Python Library for Outlier Detection with LLM-powered Model Selection",
-        "paper_url": "https://arxiv.org/abs/2412.12154",
-        "authors": "Sihan Chen, Zhuangzhuang Qian, Wingchun Siu, Xingcan Hu, Jiaqi Li, Shawn Li, Yuehan Qin, Tiankai Yang, Zhuo Xiao, Wanghao Ye, Yichi Zhang, Yushun Dong, Yue Zhao.",
-        "venue": "The Web Conference (Demo Track), 2025",
-        "year": 2025,
-        "links": [
-            {
-                "type": "github",
-                "url": "https://github.com/yzhao062/pyod"
-            }
-        ],
-        "abstract": "Outlier detection (OD), also known as anomaly detection, is a critical machine learning (ML) task with applications in fraud detection, network intrusion detection, clickstream analysis, recommendation systems, and social network moderation. Among open-source libraries for outlier detection, the Python Outlier Detection (PyOD) library is the most widely adopted, with over 8,500 GitHub stars, 25 million downloads, and diverse industry usage. However, PyOD currently faces three limitations: (1) insufficient coverage of modern deep learning algorithms, (2) fragmented implementations across PyTorch and TensorFlow, and (3) no automated model selection, making it hard for non-experts. To address these issues, we present PyOD Version 2 (PyOD 2), which integrates 12 state-of-the-art deep learning models into a unified PyTorch framework and introduces a large language model (LLM)-based pipeline for automated OD model selection. These improvements simplify OD workflows, provide access to 45 algorithms, and deliver robust performance on various datasets. In this paper, we demonstrate how PyOD 2 streamlines the deployment and automation of OD models and sets a new standard in both research and industry. PyOD 2 is accessible at [https://github.com/yzhao062/pyod](https://github.com/yzhao062/pyod). This study aligns with the Web Mining and Content Analysis track, addressing topics such as the robustness of Web mining methods and the quality of algorithmically-generated Web data."
-    },
-    {
-        "id": "conference-socialmaze-a-benchmark-for-evaluating-social-reasoning-in-large-language-models",
-        "section": "workshop",
-        "title": "SocialMaze: A Benchmark for Evaluating Social Reasoning in Large Language Models",
-        "paper_url": "https://arxiv.org/abs/2505.23713",
-        "authors": "Zixiang Xu, Yanbo Wang, Yue Huang, Jiayi Ye, Haomin Zhuang, Zirui Song, Lang Gao, Chenxi Wang, Zhaorun Chen, Yujun Zhou, Sixian Li, Wang Pan, Yue Zhao, Jieyu Zhao, Xiangliang Zhang, Xiuying Chen.",
-        "venue": "NeurIPS Workshop on Socially Responsible and Trustworthy Foundation Models (ResponsibleFM), 2025",
-        "year": 2025,
-        "links": [
-            {
-                "type": "project",
-                "url": "https://huggingface.co/datasets/MBZUAI/SocialMaze"
-            }
-        ],
-        "abstract": "Large language models (LLMs) are increasingly applied to socially grounded tasks, such as online community moderation, media content analysis, and social reasoning games. Success in these contexts depends on a model's social reasoning ability - the capacity to interpret social contexts, infer others' mental states, and assess the truthfulness of presented information. However, there is currently no systematic evaluation framework that comprehensively assesses the social reasoning capabilities of LLMs. Existing efforts often oversimplify real-world scenarios and consist of tasks that are too basic to challenge advanced models. To address this gap, we introduce SocialMaze, a new benchmark specifically designed to evaluate social reasoning. SocialMaze systematically incorporates three core challenges: deep reasoning, dynamic interaction, and information uncertainty. It provides six diverse tasks across three key settings: social reasoning games, daily-life interactions, and digital community platforms. Both automated and human validation are used to ensure data quality. Our evaluation reveals several key insights: models vary substantially in their ability to handle dynamic interactions and integrate temporally evolving information; models with strong chain-of-thought reasoning perform better on tasks requiring deeper inference beyond surface-level cues; and model reasoning degrades significantly under uncertainty. Furthermore, we show that targeted fine-tuning on curated reasoning examples can greatly improve model performance in complex social scenarios. The dataset is publicly available at: https://huggingface.co/datasets/MBZUAI/SocialMaze"
-    },
-    {
-        "id": "conference-trusteval-a-dynamic-evaluation-toolkit-on-trustworthiness-of-generative-foundation-models",
-        "section": "workshop",
-        "title": "TRUSTEVAL: A Dynamic Evaluation Toolkit on Trustworthiness of Generative Foundation Models",
-        "paper_url": "https://aclanthology.org/2025.naacl-demo.8/",
-        "authors": "Yanbo Wang, Jiayi Ye, Siyuan Wu, Chujie Gao, Yue Huang, Xiuying Chen, Yue Zhao, Xiangliang Zhang.",
-        "venue": "NAACL (Demo Track), 2025",
-        "year": 2025,
-        "links": [
-            {
-                "type": "github",
-                "url": "https://github.com/TrustGen/TrustEval-toolkit"
-            }
-        ],
-        "abstract": "Ensuring the trustworthiness of Generative Foundation Models (GenFMs) is a pressing challenge as they gain widespread use. This paper introduces TRUSTEVAL, a dynamic and comprehensive toolkit designed for evaluating GenFMs across various dimensions. TRUSTEVAL supports both dynamic dataset generation and evaluation, offering advanced features including comprehensiveness, usability, and flexibility."
-    },
-    {
-        "id": "workshop-autobench-v",
-        "section": "workshop",
-        "title": "AutoBench-V: Can Large Vision-Language Models Benchmark Themselves?",
-        "paper_url": "https://arxiv.org/abs/2410.21259",
-        "authors": "Han Bao, Yue Huang, Yanbo Wang, Jiayi Ye, Xiangqi Wang, Xiuying Chen, Yue Zhao, Tianyi Zhou, Mohamed Elhoseiny, Xiangliang Zhang",
-        "venue": "ICML 2025 DataWorld Workshop",
-        "year": 2024,
-        "show_on_website": false,
-        "links": [],
-        "abstract": "Large Vision-Language Models (LVLMs) have become essential for advancing the integration of visual and linguistic information. However, the evaluation of LVLMs presents significant challenges as the evaluation benchmark always demands lots of human cost for its construction, and remains static, lacking flexibility once constructed. Even though automatic evaluation has been explored in textual modality, the visual modality remains under-explored. As a result, in this work, we address a question: \"Can LVLMs themselves be used to benchmark each other in the visual automatically domain?\". We introduce AutoBench-V, an automated framework for serving evaluation on demand, i.e., benchmarking LVLMs based on specific aspects of model capability. AutoBench-V leverages text-to-image models to generate relevant image samples and then utilizes LVLMs to orchestrate visual question-answering (VQA) tasks, completing the evaluation process efficiently and flexibly. Through an extensive evaluation of nine popular LVLMs across five demanded user inputs (i.e., evaluation capabilities), the framework shows effectiveness and reliability."
-    },
-    {
-        "id": "workshop-tods",
-        "section": "workshop",
-        "title": "TODS: An Automated Time Series Outlier Detection System",
-        "paper_url": "https://ojs.aaai.org/index.php/AAAI/article/view/18012",
-        "authors": "Kwei-Herng Lai, Daochen Zha, Guanchu Wang, Junjie Xu, Yue Zhao, Devesh Kumar, Yile Chen, Purav Zumkhawaka, Mingyang Wan, Diego Martinez, Xia Hu",
-        "venue": "AAAI (Demo), 2021",
-        "year": 2021,
-        "show_on_website": false,
-        "links": [],
-        "abstract": "We present TODS, an automated Time Series Outlier Detection System for research and industrial applications. TODS is a highly modular system that supports easy pipeline construction with 70 primitives, including data processing, time series processing, feature analysis, detection algorithms, and a reinforcement module. TODS provides a Graphical User Interface (GUI) and a data-driven searcher to automatically discover the most suitable pipelines."
-    },
-    {
         "id": "workshop-combo",
         "section": "workshop",
         "title": "Combining Machine Learning Models using combo Library",
@@ -930,6 +858,18 @@
         "show_on_website": false,
         "links": [],
         "abstract": "Model combination, often regarded as a key sub-field of ensemble learning, has been widely used in both academic research and industry applications. To facilitate this process, we propose and implement an easy-to-use Python toolkit, combo, to aggregate models and scores under various scenarios, including classification, clustering, and anomaly detection. In a nutshell, combo provides a unified and consistent way to combine both raw and pretrained models from popular machine learning libraries, e.g., scikit-learn, XGBoost, and LightGBM. With accessibility and robustness in mind, combo is designed with detailed documentation, interactive examples, continuous integration, code coverage, and maintainability check; it can be installed easily through Python Package Index (PyPI) or {https://github.com/yzhao062/combo}."
+    },
+    {
+        "id": "conference-dsr",
+        "section": "conference",
+        "title": "DSR: An Accurate Single Image Super Resolution Approach for Various Degradations",
+        "paper_url": "https://ieeexplore.ieee.org/document/9102941/",
+        "authors": "Yiqun Mei, Yue Zhao, Wei Liang",
+        "venue": "IEEE ICME, 2020",
+        "year": 2020,
+        "show_on_website": false,
+        "links": [],
+        "abstract": "Convolution neural networks have achieved unprecedented success for image super resolution (SR). However, such methods typically assume a predetermined degradation that deviates from real-world cases, resulting in poor performance frequently. To improve upon this, researchers have proposed various methods to handle super resolution under multiple degradations. Despite, such methods fail to capture an accurate image prior, which is a crucial part of reconstructing image details. In this work, we propose a novel framework called Decoupled Super Resolver (DSR) with both promising performance and applicability. DSR employs a LR Finer to project a degraded image back to its clean version and a Combinational Super Resolver to retrieve a more comprehensive and accurate prior. The latter module further enables DSR to output high-resolution images by combining both image-specific knowledge and external statistics. Extensive experiments under various degradation settings demonstrate the effectiveness of DSR by setting new state-of-the-arts on multiple benchmarks."
     },
     {
         "id": "workshop-suod-aaai2020",
@@ -968,6 +908,30 @@
         "abstract": "Synthetic population generation is the process of combining multiple socioeconomic and demographic datasets from different sources and/or granularity levels, and downscaling them to an individual level. Although it is a fundamental step for many data science tasks, an efficient and standard framework is absent. In this study, we propose a multi-stage framework called SynC (Synthetic Population via Gaussian Copula) to fill the gap. SynC first removes potential outliers in the data and then fits the filtered data with a Gaussian copula model to correctly capture dependencies and marginal distributions of sampled survey data. Finally, SynC leverages predictive models to merge datasets into one and then scales them accordingly to match the marginal constraints. We make three key contributions in this work: 1) propose a novel framework for generating individual level data from aggregated data sources by combining state-of-the-art machine learning and statistical techniques, 2) demonstrate its value as a feature engineering tool, as well as an alternative to data collection in situations where gathering is difficult through two real-world datasets, 3) release an easy-to-use framework implementation for reproducibility, and 4) ensure the methodology is scalable at the production level and can easily incorporate new data."
     },
     {
+        "id": "conference-lscp",
+        "section": "conference",
+        "title": "LSCP: Locally Selective Combination in Parallel Outlier Ensembles",
+        "paper_url": "https://epubs.siam.org/doi/10.1137/1.9781611975673.66",
+        "authors": "Yue Zhao, Zain Nasrullah, Maciej K. Hryniewicki, Zheng Li",
+        "venue": "SDM, 2019",
+        "year": 2019,
+        "show_on_website": false,
+        "links": [],
+        "abstract": "In unsupervised outlier ensembles, the absence of ground truth makes the combination of base outlier detectors a challenging task. We propose LSCP which addresses the issue by defining a local region around a test instance using the consensus of its nearest neighbors in randomly selected feature subspaces. The top-performing base detectors in this local region are selected and combined. Experimental results demonstrate that LSCP_AOM consistently outperforms baselines on the majority of twenty real-world datasets."
+    },
+    {
+        "id": "conference-music-artist-crnn",
+        "section": "conference",
+        "title": "Music Artist Classification with Convolutional Recurrent Neural Networks",
+        "paper_url": "https://ieeexplore.ieee.org/document/8851988/",
+        "authors": "Zain Nasrullah, Yue Zhao",
+        "venue": "IJCNN, 2019",
+        "year": 2019,
+        "show_on_website": false,
+        "links": [],
+        "abstract": "This paper revisits artist classification with deep convolutional and recurrent models and empirically explores the impacts of incorporating temporal structure in the feature representation. A Convolutional Recurrent Neural Network (CRNN) is applied to the artist20 music artist identification dataset. The best performing model achieves an average F1 score of 0.937 across three independent trials."
+    },
+    {
         "id": "workshop-dcso",
         "section": "workshop",
         "title": "DCSO: Dynamic Combination of Detector Scores for Outlier Ensembles",
@@ -978,6 +942,42 @@
         "show_on_website": false,
         "links": [],
         "abstract": "Selecting and combining the outlier scores of different base detectors used within outlier ensembles can be quite challenging in the absence of ground truth. In this paper, an unsupervised outlier detector combination framework called DCSO is proposed, demonstrated and assessed for the dynamic selection of most competent base detectors, with an emphasis on data locality. The proposed DCSO framework first defines the local region of a test instance by its k nearest neighbors and then identifies the top-performing base detectors within the local region. Experimental results on ten benchmark datasets demonstrate that DCSO provides consistent performance improvement over existing static combination approaches in mining outlying objects. To facilitate interpretability and reliability of the proposed method, DCSO is analyzed using both theoretical frameworks and visualization techniques, and presented alongside empirical parameter setting instructions that can be used to improve the overall performance."
+    },
+    {
+        "id": "conference-employee-turnover",
+        "section": "conference",
+        "title": "Employee Turnover Prediction with Machine Learning: A Reliable Approach",
+        "paper_url": "https://link.springer.com/chapter/10.1007/978-3-030-01057-7_56",
+        "authors": "Yue Zhao, Maciej K. Hryniewicki, Francesca Cheng, Boyang Fu, Xiaoyu Zhu",
+        "venue": "IntelliSys, 2018",
+        "year": 2018,
+        "show_on_website": false,
+        "links": [],
+        "abstract": "Supervised machine learning methods are described, demonstrated and assessed for the prediction of employee turnover within an organization. Numerical experiments for real and simulated human resources datasets are performed using ten different methods. Through a robust and comprehensive evaluation process, the performance of each method is analyzed and established using statistical methods."
+    },
+    {
+        "id": "conference-xgbod",
+        "section": "conference",
+        "title": "XGBOD: Improving Supervised Outlier Detection with Unsupervised Representation Learning",
+        "paper_url": "https://ieeexplore.ieee.org/document/8489605/",
+        "authors": "Yue Zhao, Maciej K. Hryniewicki",
+        "venue": "IJCNN, 2018",
+        "year": 2018,
+        "show_on_website": false,
+        "links": [],
+        "abstract": "A new semi-supervised ensemble algorithm called XGBOD (Extreme Gradient Boosting Outlier Detection) is proposed for the enhanced detection of outliers. The proposed framework combines the strengths of both supervised and unsupervised machine learning methods by creating a hybrid approach. XGBOD uses multiple unsupervised outlier mining algorithms to extract useful representations that augment the predictive capabilities of an embedded supervised classifier."
+    },
+    {
+        "id": "conference-touch-auth-smartwatch",
+        "section": "conference",
+        "title": "An Empirical Study of Touch-based Authentication Methods on Smartwatches",
+        "paper_url": "https://arxiv.org/abs/1710.04608",
+        "authors": "Yue Zhao, Zhongtian Qiu, Yiqing Yang, Weiwei Li, Mingming Fan",
+        "venue": "ISWC, 2017",
+        "year": 2017,
+        "show_on_website": false,
+        "links": [],
+        "abstract": "The emergence of smartwatches poses new challenges to information security. Although there are mature touch-based authentication methods for smartphones, the effectiveness of using these methods on smartwatches is still unclear. We conducted a user study (n=16) to evaluate how authentication methods (PIN and Pattern), UIs (Square and Circular), and display sizes (38mm and 42mm) affect authentication accuracy, speed, and security. Circular UIs are tailored to smartwatches with fewer UI elements. Results show that 1) PIN is more accurate and secure than Pattern; 2) Pattern is much faster than PIN; 3) Square UIs are more secure but less accurate than Circular UIs; 4) display size does not affect accuracy or speed, but security; 5) Square PIN is the most secure method of all. The study also reveals a security concern that participants' favorite method is not the best in any of the measures. We finally discuss implications for future touch-based smartwatch authentication design."
     },
     {
         "id": "journal-don-t-let-it-hallucinate-premise-verification-via-retrieval-augmented-logical-reasoning",
