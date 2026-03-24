@@ -1,43 +1,28 @@
-# How to Update Your Info on the FORTIS Lab Page
+# FORTIS Lab Website and CV
 
-This repository hosts the source code for the [FORTIS Lab webpage](https://viterbi-web.usc.edu/~yzhao010/lab.html).
+This repository hosts the [FORTIS Lab website](https://viterbi-web.usc.edu/~yzhao010/) and the LaTeX source for Yue Zhao's academic CV.
 
-Member sections are now data-driven.
-Please update JSON files instead of editing `lab.html` directly.
+## How to Update Your Info on the Lab Page
 
-## Files You Should Edit
+Member sections are data-driven. Update JSON files instead of editing `lab.html` directly.
+
+### Files to edit
 
 - `data/lab-current-phd.json` for current Ph.D. students
 - `data/lab-members.json` for current Master/Undergrad members and all past members
 
-## Standard Workflow
+### Workflow
 
-1. **Fork and clone**
-   - Fork this repository on GitHub.
-   - Clone your fork locally.
+1. **Fork and clone** this repository.
+2. **Add your photo** under `images/others/` (square, `.webp` preferred).
+3. **Update the correct JSON file** (do **not** manually edit `lab.html`).
+4. **Preview locally** by opening `lab.html` in a browser.
+5. **Keep commits clean** (no `.DS_Store`, `.idea/*.xml`, etc.).
+6. **Open a PR**.
 
-2. **Add your photo**
-   - Put your image under `images/others/`.
-   - Use a square image when possible.
-   - Prefer `.webp` format.
-   - Example: `images/others/your_name.webp`
+### JSON Examples
 
-3. **Update the correct JSON file**
-   - Do **not** manually edit member cards in `lab.html`.
-   - Add or update your entry in the relevant data file.
-
-4. **Preview locally**
-   - Open `lab.html` in a browser (or use a local server in PyCharm) and verify your card.
-
-5. **Keep commit clean**
-   - Do not include unrelated local files (for example `.DS_Store`, `.idea/*.xml`).
-
-6. **Commit, push, and open PR**
-   - Commit your changes, push to your fork, and submit a pull request.
-
-## JSON Examples
-
-### A. Current Ph.D. student (`data/lab-current-phd.json`)
+#### Current Ph.D. student (`data/lab-current-phd.json`)
 
 ```json
 {
@@ -58,7 +43,7 @@ Please update JSON files instead of editing `lab.html` directly.
 
 `awards` and `co_advised_by` are optional.
 
-### B. Current Master/Undergrad (`data/lab-members.json`)
+#### Current Master/Undergrad (`data/lab-members.json`)
 
 ```json
 {
@@ -71,15 +56,13 @@ Please update JSON files instead of editing `lab.html` directly.
   "status_text": "Master Student",
   "email": "janedoe@usc.edu",
   "awards": ["Example Fellowship"],
-  "publications": [
-    "Paper title, Venue 2026"
-  ]
+  "publications": ["Paper title, Venue 2026"]
 }
 ```
 
 `awards` and `publications` are optional.
 
-### C. Past member (`data/lab-members.json`)
+#### Past member (`data/lab-members.json`)
 
 ```json
 {
@@ -88,20 +71,95 @@ Please update JSON files instead of editing `lab.html` directly.
   "profile_url": "https://example.com",
   "status_text": "Master Student → Now Ph.D. Student at XYZ",
   "email": "janedoe@xyz.edu",
-  "publications": [
-    "Paper title, Venue 2026"
-  ]
+  "publications": ["Paper title, Venue 2026"]
 }
 ```
 
-## Moving Someone from Current to Past
+#### Moving someone from current to past
 
-When a current Master/Undergrad member graduates:
+Change `"group": "current"` to `"group": "past"` in `data/lab-members.json`. Optionally update `status_text` and `email`. That single field change moves the member automatically.
 
-1. Open `data/lab-members.json`
-2. Find that member's object
-3. Change:
-   - `"group": "current"` → `"group": "past"`
-4. Optionally update `status_text` and `email`
+---
 
-That single field change (`group`) moves the member from the Current section to Past Members automatically.
+## Maintainer Reference
+
+The rest of this document is for the repo maintainer (Yue Zhao).
+
+### Repository Structure
+
+```
+├── index.html, lab.html, publications.html, ...   Website HTML pages
+├── data/                           Shared data (single source of truth)
+│   ├── publications.json           Publication list (website)
+│   ├── open-source.json            Open-source projects (website + CV)
+│   ├── lab-current-phd.json        Current PhD students
+│   └── lab-members.json            Other lab members (current + past)
+├── cv/                             LaTeX CV sources
+│   ├── cv-full.tex                 Full academic CV
+│   ├── cv-1page.tex                1-page condensed CV
+│   ├── open-source.tex             Auto-generated from data/open-source.json
+│   └── res.cls                     Document class
+├── files/                          PDFs, bib file, bio
+│   ├── ZHAO_YUE_CV.pdf             Compiled CV (auto-updated by CI)
+│   └── yue-zhao.bib                BibTeX file
+├── scripts/
+│   ├── generate_cv_open_source.py  Generates cv/open-source.tex from JSON
+│   ├── sync_open_source_metadata.mjs  Refreshes stars/dates from GitHub API
+│   └── ci_check_site.py            CI site validation
+├── skills/                         Agent skills (shared by Claude Code + Codex)
+│   ├── dual-update/                Update content on both website and CV
+│   └── condense-cv/                Generate short CV variants
+├── .github/workflows/              CI/CD pipelines
+├── css/, assets/, images/          Website static assets
+└── includes/                       Shared HTML fragments (navbar, footer, sidebar)
+```
+
+### How Content Flows
+
+#### Open-source projects (fully automated)
+
+```
+GitHub API
+  → scripts/sync_open_source_metadata.mjs   (refreshes stars, dates)
+  → data/open-source.json                   (single source of truth)
+  → scripts/generate_cv_open_source.py      (generates LaTeX)
+  → cv/open-source.tex                      (included by cv-full.tex)
+  → files/ZHAO_YUE_CV.pdf                   (compiled by CI)
+```
+
+CI runs this chain daily. To run locally:
+
+```bash
+node scripts/sync_open_source_metadata.mjs
+python scripts/generate_cv_open_source.py
+```
+
+#### Other shared content (manual, skill-assisted)
+
+Use the `/dual-update` agent skill to update both website and CV in one pass.
+
+| Content | Website | CV |
+|---|---|---|
+| Publications | `data/publications.json` | `cv/cv-full.tex` |
+| Awards and Grants | `index.html` | `cv/cv-full.tex` |
+| Services | `services.html` | `cv/cv-full.tex` |
+| Teaching | `teaching.html` | `cv/cv-full.tex` |
+| PhD Students | `data/lab-current-phd.json` | `cv/cv-full.tex` |
+| Open-source | `data/open-source.json` | `cv/open-source.tex` (auto-generated) |
+
+### Building the CV Locally
+
+```bash
+cd cv
+latexmk -pdf -interaction=nonstopmode cv-full.tex
+latexmk -pdf -interaction=nonstopmode cv-1page.tex
+```
+
+### CI Workflows
+
+| Workflow | Trigger | What it does |
+|---|---|---|
+| `build-cv.yml` | Daily + push to `cv/` or `data/open-source.json` | Syncs GitHub metadata, regenerates tex, compiles CV PDF, commits |
+| `site-checks.yml` | Push / PR | Runs `scripts/ci_check_site.py` |
+| `lighthouse.yml` | Push / PR | Lighthouse performance audit |
+| `sync-profile-assets-to-template.yml` | Push to `files/yue-zhao.bib` or `files/ZHAO_YUE_CV.pdf` | Syncs bib and CV PDF to USC proposal template repo |
