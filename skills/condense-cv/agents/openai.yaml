@@ -1,0 +1,3 @@
+interface:
+  display_name: "Condense CV"
+  short_description: "Generate 1-page or 2-page CV variants from a master LaTeX CV"

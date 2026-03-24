@@ -1,0 +1,3 @@
+interface:
+  display_name: "Dual Update"
+  short_description: "Add or update content on both website and CV simultaneously"

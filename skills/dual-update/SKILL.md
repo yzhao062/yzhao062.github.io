@@ -1,0 +1,78 @@
+---
+name: dual-update
+description: Add or update content that must appear on both the website and the LaTeX CV. Use when the user mentions adding a new paper, award, grant, service role, teaching course, PhD student, open-source project, or any other content that overlaps between the website and CV.
+---
+
+# Dual Update — Website + CV
+
+When the user adds or updates content that exists in both the website and the CV, **always update both sides in the same pass**. Never update one and forget the other.
+
+## Content Type → File Mapping
+
+| Content type | Website file(s) | CV file(s) | Notes |
+|---|---|---|---|
+| **Publication** (peer-reviewed) | `data/publications.json` | `cv/cv-full.tex` (Publications section) | Website JSON uses structured fields; CV uses `\item` in `benumerate`. Match venue, year, authors, title format. |
+| **Preprint / under submission** | Usually not on website | `cv/cv-full.tex` (Preprints section) | Only add to website (`data/publications.json`) if the user explicitly asks. |
+| **Award / Grant** | `index.html` (Awards section) | `cv/cv-full.tex` (Awards section) | Both use chronological order, newest first. |
+| **Service role** (reviewer, AC, editor, organizer) | `services.html` | `cv/cv-full.tex` (Services section) | Match the sub-category (organizing, editorial, AC/reviewer, journal reviewer). |
+| **Teaching course** | `teaching.html` | `cv/cv-full.tex` (Teaching section) | Include semester, course number, title, enrollment if known. |
+| **PhD student** | `data/lab-current-phd.json` | `cv/cv-full.tex` (PhD Students section) | JSON has structured fields; CV uses inline LaTeX. |
+| **Open-source project** | `data/open-source.json` | `cv/open-source.tex` (**auto-generated**) | Edit JSON only, then run `python scripts/generate_cv_open_source.py`. Do NOT edit `cv/open-source.tex` directly. |
+| **Research direction / keywords** | `index.html` (Research section) | `cv/cv-full.tex` (Research Summary section) | Keep the three-pillar structure consistent. |
+| **News item** | `index.html` (News section) | — | Website only. |
+| **Lab member** (non-PhD) | `data/lab-members.json` | — | Website only. |
+| **Talks** | — | `cv/cv-full.tex` (Talks section) | CV only (not on website currently). |
+| **Student committee** | — | `cv/cv-full.tex` (Student Committee section) | CV only. |
+
+## Workflow
+
+1. **Ask what changed** if the user hasn't specified clearly. Get: content type, the specific details (title, venue, year, authors, etc.).
+2. **Read both target files** before editing. Understand existing format and ordering.
+3. **Make both edits** in the same response. For the website side, match the existing HTML/JSON structure. For the CV side, match the existing LaTeX formatting.
+4. **For open-source changes**: edit `data/open-source.json`, then run the generation script. Do not hand-edit `cv/open-source.tex`.
+5. **Verify consistency**: after editing, briefly confirm both sides have the same content.
+
+## Format Guidelines
+
+### Publications (website JSON)
+```json
+{
+  "title": "Paper Title",
+  "authors": "Author1, Author2, ..., and AuthorN",
+  "venue": "ICLR",
+  "year": 2026,
+  "venue_full": "International Conference on Learning Representations",
+  "type": "Conference",
+  "pdf_url": "https://arxiv.org/abs/...",
+  "code_url": "",
+  "highlight": "",
+  "equal_contribution": [],
+  "corresponding_author": []
+}
+```
+
+### Publications (CV LaTeX)
+Papers in the CV use `benumerate` with reverse numbering. Match the existing style:
+```latex
+\item AUTHOR\_LIST. ``TITLE.'' \textit{VENUE}, YEAR. \href{URL}{[PDF]}
+```
+- Mark equal contribution with `\equalcontrib` and corresponding author with `\corrauthor`.
+- The CV contains papers not on the website (older work, preprints). This is expected.
+
+### Awards (website HTML in index.html)
+```html
+<li>AWARD_NAME (YEAR)</li>
+```
+
+### Awards (CV LaTeX)
+```latex
+AWARD_NAME & TYPE & DATE \\
+```
+
+## Important Reminders
+
+- The CV is a **superset** of the website for publications — it includes older papers and preprints that may not be on the website.
+- When adding a new peer-reviewed paper, add to **both** unless the user says otherwise.
+- When adding a preprint, default to **CV only** unless the user says to add it to the website too.
+- Always preserve reverse chronological ordering in both places.
+- Run `python scripts/generate_cv_open_source.py` after any change to `data/open-source.json`.

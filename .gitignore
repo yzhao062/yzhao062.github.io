@@ -6,3 +6,21 @@
 # !.idea/codeStyles/
 # !.idea/inspectionProfiles/
 .agent-config/
+
+# LaTeX build output
+out/
+
+# LaTeX intermediate files (cv/)
+cv/*.aux
+cv/*.fdb_latexmk
+cv/*.fls
+cv/*.log
+cv/*.out
+cv/*.synctex.gz
+cv/*.toc
+cv/*.lof
+cv/*.lot
+cv/*.nav
+cv/*.snm
+cv/*.vrb
+cv/*.pdf

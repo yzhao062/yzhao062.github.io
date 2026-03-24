@@ -1,0 +1,158 @@
+% Derived from cv/cv-full.tex
+% Target: 1 page
+% Audience: general short CV with brand consistency to the master template
+\documentclass[margin,line,pifont,palatino,courier]{res}
+% Source: https://www.math.nyu.edu/student_resources/misc.php
+\usepackage{pifont}
+\usepackage[latin1] {inputenc}
+\usepackage{enumitem}
+\usepackage{etaremune}
+\usepackage{xspace}
+\usepackage{tabularx}
+\usepackage{booktabs}
+
+\usepackage{fontawesome5}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[hidelinks]{hyperref}
+\definecolor{uscred}{rgb}{0.597, 0.105, 0.117}
+\definecolor{cmublue}{rgb}{0.093, 0.171, 0.3}
+\newcommand{\equalcontrib}{\textsuperscript{$\dagger$}}
+\newcommand{\corrauthor}{\textsuperscript{$\spadesuit$}}
+
+\hypersetup{
+    colorlinks,
+    linkcolor={cmublue},
+    citecolor={cmublue},
+    urlcolor={cmublue}
+}
+
+\usepackage[most]{tcolorbox}
+
+\newtcbox{\mybox}[1][red]{on line,
+    colback=#1, colframe=#1, boxsep=0pt, boxrule=0pt, size=small, arc=0.3mm}
+
+\topmargin -.15in
+\oddsidemargin -.25in
+\evensidemargin -.25in
+\textwidth=6.0in
+\textheight=9.15in
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\rightmargin=0.22in
+
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhf{}
+\lfoot{{\footnotesize Yue Zhao - CV}}
+\rfoot{{\footnotesize Last updated: \today. Page \thepage\ of \pageref{LastPage}}}
+
+\newenvironment{list1}{
+  \begin{list}{\ding{113}}{%
+      \setlength{\itemsep}{0in}
+      \setlength{\parsep}{0in} \setlength{\parskip}{0in}
+      \setlength{\topsep}{0in} \setlength{\partopsep}{0in}
+      \setlength{\leftmargin}{0.17in}}}{\end{list}}
+\newenvironment{list2}{
+  \begin{list}{$\bullet$}{%
+      \setlength{\itemsep}{0in}
+      \setlength{\parsep}{0in} \setlength{\parskip}{0in}
+      \setlength{\topsep}{0in} \setlength{\partopsep}{0in}
+      \setlength{\leftmargin}{0.2in}}}{\end{list}}
+
+\begin{document}
+
+\name{{\huge Yue Zhao}\vspace*{.05in}}
+
+\begin{resume}
+
+\section{\sc Contact Information}
+\href{mailto:yue.z@usc.edu}{\faEnvelope[regular]~\texttt{yue.z@usc.edu}}  \hfill 213-821-2369
+\\
+\href{https://github.com/yzhao062}
+{\faGithub~\texttt{github.com/yzhao062}}
+\hfill CS Department, GCS Hall\\
+\href{https://www.linkedin.com/in/yzhao062/}{\faLinkedinIn ~\texttt{linkedin.com/in/yzhao062}}  \hfill Los Angeles, CA \\
+\href{https://viterbi-web.usc.edu/~yzhao010/}{\faHome~\url{https://viterbi-web.usc.edu/~yzhao010/}}  \hfill United States, 90089 \\
+\href{https://scholar.google.com/citations?user=zoGDYsoAAAAJ}{\faGoogle~\texttt{Google Scholar}}
+\hfill University of Southern California\\
+{\color{uscred}\faStar~22{,}000+ GitHub Stars \hfill
+\href{https://gitstar-ranking.com/yzhao062}{Top $\sim$700 Worldwide}}
+\vspace{-0.1in}
+
+\section{\sc Research Summary}
+My research focuses on \textbf{AI auditing, safety, and security for agent systems},
+with related work on foundation models and anomaly/OOD detection.
+I build methods, benchmarks, and open-source systems for evaluating, monitoring,
+and controlling modern AI systems in high-stakes deployment settings.
+\vspace{-0.12in}
+
+\section{\sc Full-time Professional Experience}
+\textbf{University of Southern California} \\
+\textit{Thomas Lord Department of Computer Science} \\
+Assistant Professor (Tenure-Track) \hfill Aug. 2023 - Present
+\begin{list2}
+\item Founded the FORTIS Lab and lead research on AI auditing, agent safety, and deployment assurance; affiliated with the USC Machine Learning Center.
+\end{list2}
+\vspace{-0.08in}
+
+\textbf{PwC Canada} \\
+\textit{Consulting \& Deals} \\
+Senior Consultant (Data Scientist), Consultant, Research Associate (Intern) \hfill May 2016 - Jun. 2019
+\vspace{-0.08in}
+
+\section{\sc Education}
+\textbf{Carnegie Mellon University} \hfill Pittsburgh, PA \\
+\textit{Ph.D. in Information Systems and Management} \hfill Sep. 2019 - May. 2023
+
+\textbf{University of Toronto} \hfill Toronto, ON\\
+\textit{Master of Science in Computer Science} \hfill Sep. 2015 - Dec. 2016
+
+\textbf{University of Cincinnati} \hfill Cincinnati, OH\\
+\textit{Bachelor of Science in Computer Engineering} \hfill Sep. 2010 - May. 2015 \\
+\textbf{Minor}: \textit{Computer Science} and \textit{Mathematics}
+\vspace{-0.08in}
+
+\section{\sc Selected Systems and Publications}
+{\small
+\begin{tabular}{@{}p{0.47\textwidth}p{0.47\textwidth}}
+\textbf{Open-Source Systems} & \textbf{Selected Publications} \\
+\begin{minipage}[t]{0.47\textwidth}
+\begin{itemize}[leftmargin=*,itemsep=0.08em,topsep=0.08em]
+\item \textbf{\href{https://github.com/yzhao062/pyod}{PyOD}} (\textcolor{uscred}{9.7K stars}) Outlier and anomaly detection library.
+\item \textbf{\href{https://github.com/Minqi824/ADBench}{ADBench}} (\textcolor{uscred}{1K stars}) Large-scale anomaly detection benchmark.
+\item \textbf{\href{https://github.com/yzhao062/anomaly-detection-resources}{Anomaly-Detection-Resources}} (\textcolor{uscred}{9.2K stars}) Curated resource hub for anomaly detection.
+\item \textbf{\href{https://github.com/HowieHwong/TrustLLM}{TrustLLM}} (\textcolor{uscred}{618 stars}) Benchmark and toolkit for LLM trustworthiness.
+\item \textbf{\href{https://github.com/HeadyZhang/agent-audit}{agent-audit}} (\textcolor{uscred}{103 stars}) Toolkit for auditing AI agent code.
+\item \textbf{\href{https://github.com/Justin0504/Aegis}{Aegis}} (\textcolor{uscred}{173 stars}) Runtime firewall and compliance platform for AI agents.
+\item \textbf{\href{https://github.com/USC-FORTIS/AD-AGENT}{AD-AGENT}} (\textcolor{uscred}{90 stars}) Multi-agent platform for end-to-end anomaly detection.
+\end{itemize}
+\end{minipage}
+&
+\begin{minipage}[t]{0.47\textwidth}
+\begin{itemize}[leftmargin=*,itemsep=0.08em,topsep=0.08em]
+\item \textit{Don't Let It Hallucinate}. \textit{TMLR}, 2026.
+\item \textit{Mitigating Hallucinations in Large Language Models via Causal Reasoning}. \textit{AAAI}, 2026.
+\item \textit{Charts Are Not Images: On the Challenges of Scientific Chart Editing}. \textit{ICLR}, 2026.
+\item \textit{On the Trustworthiness of Generative Foundation Models}. \textit{ICLR}, 2026.
+\item \textit{AD-AGENT}. \textit{Findings of IJCNLP-AACL}, 2025.
+\item \textit{NLP-ADBench}. \textit{Findings of EMNLP}, 2025.
+\item \textit{AD-LLM}. \textit{ACL Findings}, 2025.
+\item \textit{MetaOOD}. \textit{ICLR}, 2025.
+\item \textit{MultiOOD}. \textit{NeurIPS Spotlight}, 2024.
+\item \textit{TrustLLM}. \textit{ICML}, 2024.
+\end{itemize}
+\end{minipage}
+\end{tabular}
+}
+\vspace{-0.08in}
+
+\section{\textcolor{uscred}{\faAward} \sc Awards, Grants, and Funding}
+{\small
+\begin{itemize}[leftmargin=*,itemsep=0.08em,topsep=0.08em]
+\item NVIDIA Academic Grant Program (2026); Amazon Research Awards (2024, 2026); NSF POSE I/II (2025, 2024).
+\item Best Short Paper, ACM SIGSPATIAL (2025); Second Prize CCC Award, IEEE ICDM BlueSky (2025); AAAI New Faculty Highlights (2024).
+\end{itemize}
+}
+
+\end{resume}
+\end{document}

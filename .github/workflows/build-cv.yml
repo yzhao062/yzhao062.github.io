@@ -1,0 +1,86 @@
+name: Build CV PDF
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'cv/**'
+      - 'data/open-source.json'
+      - 'scripts/generate_cv_open_source.py'
+      - 'scripts/sync_open_source_metadata.mjs'
+      - '.github/workflows/build-cv.yml'
+  schedule:
+    - cron: '0 9 * * *'   # Daily 9:00 UTC — refresh stars/dates
+  workflow_dispatch:
+
+jobs:
+  build-cv:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Sync open-source metadata from GitHub
+        run: node scripts/sync_open_source_metadata.mjs
+
+      - name: Regenerate open-source.tex from JSON
+        run: python scripts/generate_cv_open_source.py
+
+      - name: Check if sources changed
+        id: source_check
+        run: |
+          if git diff --quiet data/open-source.json cv/open-source.tex; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Compile LaTeX CV
+        if: steps.source_check.outputs.changed == 'true' || github.event_name != 'schedule'
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: cv-full.tex
+          working_directory: cv
+
+      - name: Rename output PDF
+        if: steps.source_check.outputs.changed == 'true' || github.event_name != 'schedule'
+        run: mv cv/cv-full.pdf cv/ZHAO_YUE_CV.pdf
+
+      - name: Copy PDF to files/
+        if: steps.source_check.outputs.changed == 'true' || github.event_name != 'schedule'
+        run: cp cv/ZHAO_YUE_CV.pdf files/ZHAO_YUE_CV.pdf
+
+      - name: Upload PDF artifact
+        if: steps.source_check.outputs.changed == 'true' || github.event_name != 'schedule'
+        uses: actions/upload-artifact@v4
+        with:
+          name: ZHAO_YUE_CV-pdf
+          path: cv/ZHAO_YUE_CV.pdf
+
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/open-source.json cv/open-source.tex
+
+          # Only stage PDF if it was rebuilt
+          if [ -f cv/ZHAO_YUE_CV.pdf ]; then
+            git add files/ZHAO_YUE_CV.pdf
+          fi
+
+          if git diff --cached --quiet; then
+            echo "No changes. Skip commit."
+            exit 0
+          fi
+
+          git commit -m "Update CV PDF and generated open-source.tex"
+          git push

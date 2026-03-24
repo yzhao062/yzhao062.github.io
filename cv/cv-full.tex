@@ -1,0 +1,1164 @@
+\documentclass[margin,line,pifont,palatino,courier]{res}
+% Source: https://www.math.nyu.edu/student_resources/misc.php
+\usepackage{pifont}
+\usepackage[latin1] {inputenc}
+% \PassOptionsToPackage{hyphens}{url}\usepackage{hyperref}[hidelinks]
+\usepackage{enumitem}
+\usepackage{etaremune}
+\usepackage{xspace}
+\usepackage{tabularx}
+\usepackage{booktabs}
+
+\usepackage{fontawesome5}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[hidelinks]{hyperref}
+% \definecolor{cmured}{rgb}{0.769, 0.07, 0.191}
+\definecolor{uscred}{rgb}{0.597, 0.105, 0.117}
+\definecolor{cmublue}{rgb}{0.093, 0.171, 0.3}
+\newcommand{\equalcontrib}{\textsuperscript{$\dagger$}}
+\newcommand{\corrauthor}{\textsuperscript{$\spadesuit$}}
+
+% this can modify the colors of link
+\hypersetup{
+    colorlinks,
+    linkcolor={cmublue},
+    citecolor={cmublue},
+    urlcolor={cmublue}
+}
+
+\usepackage[most]{tcolorbox}
+
+\newtcbox{\mybox}[1][red]{on line,
+    colback=#1, colframe=#1, boxsep=0pt, boxrule=0pt, size=small, arc=0.3mm}
+
+\topmargin -.15in
+\oddsidemargin -.25in
+\evensidemargin -.25in
+\textwidth=6.0in
+\textheight=9.15in
+%\itemsep=0in
+%\parsep=0in
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\rightmargin=0.22in
+%\textheight=8.5in
+
+
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhf{}
+\lfoot{{\footnotesize Yue Zhao - CV}}
+\rfoot{{\footnotesize Last updated: \today. Page \thepage\ of \pageref{LastPage}}} 
+
+
+\newenvironment{list1}{
+  \begin{list}{\ding{113}}{%
+      \setlength{\itemsep}{0in}
+      \setlength{\parsep}{0in} \setlength{\parskip}{0in}
+      \setlength{\topsep}{0in} \setlength{\partopsep}{0in}
+      \setlength{\leftmargin}{0.17in}}}{\end{list}}
+\newenvironment{list2}{
+  \begin{list}{$\bullet$}{%
+      \setlength{\itemsep}{0in}
+      \setlength{\parsep}{0in} \setlength{\parskip}{0in}
+      \setlength{\topsep}{0in} \setlength{\partopsep}{0in}
+      \setlength{\leftmargin}{0.2in}}}{\end{list}}
+
+% for descending enumerate
+\newenvironment{benumerate}[1]{
+    \let\oldItem\item
+    \def\item{\addtocounter{enumi}{-2}\oldItem}
+    \begin{enumerate}[leftmargin=0.25in,label=\textcolor{uscred}{\arabic*.}]
+    \setcounter{enumi}{#1}
+    \addtocounter{enumi}{1}
+}{
+    \end{enumerate}
+}
+
+\begin{document}
+
+\name{{\huge Yue Zhao} %\newline \textsl{\normalsize Machine Learning and Information Systems Researcher with Rich Exp. in Anomaly Detection.} 
+% with 7y exp.} 
+\vspace*{.05in}} 
+
+\begin{resume}
+
+\section{\sc Contact Information}
+% \vspace{.05in}
+
+\href{mailto:yue.z@usc.edu}{\faEnvelope[regular]~\texttt{yue.z@usc.edu}}  \hfill 213-821-2369
+ \\
+\href{https://github.com/yzhao062}
+{\faGithub~\texttt{github.com/yzhao062}} 
+% \texttt{\color{uscred}\faStar[regular]16,000 Stars} 
+\hfill CS Department, GCS Hall\\
+\href{https://www.linkedin.com/in/yzhao062/}{\faLinkedinIn ~\texttt{linkedin.com/in/yzhao062}}  \hfill Los Angeles, CA \\
+\href{https://viterbi-web.usc.edu/~yzhao010/}{\faHome~\url{https://viterbi-web.usc.edu/~yzhao010/}}  \hfill United States, 90089 \\
+{\href{https://viterbi.usc.edu/directory/faculty/Zhao/Yue}{\faSchool~\texttt{USC Faculty Directory}}} 
+\hfill Department of Computer Science\\
+{\href{https://scholar.google.com/citations?user=zoGDYsoAAAAJ}{\faGoogle~\texttt{Google Scholar}}}  
+\hfill University of Southern California\\
+{\color{uscred}\faStar~22{,}000+ GitHub Stars \hfill 
+\href{https://gitstar-ranking.com/yzhao062}{Top $\sim$700 Worldwide}}
+\vspace{-0.1in}
+
+\section{\sc Research Summary}
+
+My research is organized around three connected directions:
+\textbf{AI auditing and assurance}, \textbf{AI safety and security},
+and \textbf{AI for science and society}.
+Across these areas, I study how foundation models, tool-using agents,
+and multi-agent systems can produce traceable evidence of their behavior,
+support meaningful audit after deployment, satisfy checkable safety and
+policy requirements, and operate reliably in high-stakes settings.
+This includes runtime guardrails for real-world deployment and
+demanding applications where correctness, accountability, and impact matter.
+
+
+{\color{uscred}\textbf{1. AI Auditing \& Assurance}}\\
+Developing methods, benchmarks, and open-source systems for AI auditing
+and assurance in foundation models and agent systems.
+This includes execution tracing, audit-ready evidence, policy and behavior
+checking, ecosystem-scale risk scanning, runtime monitoring, and agent
+skill evaluation.
+The goal is to make deployed systems easier to inspect, govern, and trust.
+Representative systems include agent-audit and TrustLLM.
+
+\vspace{-0.15in}
+\begin{tabular}{@{}p{0.475\textwidth}p{0.475\textwidth}}
+\begin{list1}
+\item AI Auditing
+\item AI Assurance
+\item Agent Systems
+\item Execution Tracing
+\end{list1}
+&
+\begin{list1}
+\item Policy Checking
+\item Runtime Monitoring
+\item Evaluation Frameworks
+\item Risk Analysis
+\end{list1}
+\end{tabular}
+
+
+{\color{uscred}\textbf{2. AI Safety \& Security}}\\
+Studying failure modes, attack surfaces, and runtime control layers in
+large language models and agent systems, and designing methods to detect,
+block, and mitigate unsafe or compromised behavior.
+Representative topics include hallucinations, jailbreaks, prompt attacks,
+privacy leakage, model extraction, and failures in multi-agent interaction,
+together with runtime guardrails such as policy enforcement and approval
+workflows for tool-using agents.
+Representative systems include Aegis.
+This direction is also informed by my earlier work on anomaly detection
+and out-of-distribution detection.
+
+\vspace{-0.15in}
+\begin{tabular}{@{}p{0.475\textwidth}p{0.475\textwidth}}
+\begin{list1}
+\item LLM Safety
+\item Agent Safety
+\item AI Security
+\item AI Agent Security
+\item Runtime Guardrails
+\item Policy Enforcement
+\end{list1}
+&
+\begin{list1}
+\item Hallucination Mitigation
+\item Jailbreak Detection
+\item Prompt Attacks
+\item Privacy Leakage
+\item Robustness
+\item OOD \& Anomaly Detection
+\end{list1}
+\end{tabular}
+
+
+{\color{uscred}\textbf{3. AI for Science \& Society}}\\
+Building reliable AI methods for domains where correctness, safety,
+and accountability matter, including climate and weather forecasting,
+healthcare and biomedicine, and computational social systems.
+These applications also serve as demanding testbeds for auditing,
+assurance, and safety methods.
+
+\vspace{-0.15in}
+\begin{tabular}{@{}p{0.475\textwidth}p{0.475\textwidth}}
+\begin{list1}
+\item AI for Science
+\item Scientific Foundation Models
+\item Climate \& Weather Modeling
+\end{list1}
+&
+\begin{list1}
+\item Healthcare \& Biomedicine
+\item Computational Social Systems
+\item Decision Modeling
+\end{list1}
+\end{tabular}
+
+%\vspace{-0.1in}
+
+
+\section{\sc Full-time Professional Experience}
+
+\textbf{University of Southern California} \\ 
+\textit{Thomas Lord Department of Computer Science} \\
+Assistant Professor (Tenure-Track) 
+\hfill Aug. 2023 - Present 
+\begin{itemize}
+    \item {\color{uscred}\underline{F}}oundations {\color{uscred}\underline{O}}f {\color{uscred}\underline{R}}obust {\color{uscred}\underline{T}}rustworthy {\color{uscred}\underline{I}}ntelligent {\color{uscred}\underline{S}}ystems ({\color{uscred}\textbf{FORTIS}}) Lab: \href{https://viterbi-web.usc.edu/~yzhao010/lab}{Link}
+    \item USC Machine Learning Center (MaSCle): \href{https://mascle.usc.edu/}{Link}
+\end{itemize}
+
+
+\textbf{PwC Canada} \\
+\textit{Consulting \& Deals} \\
+Senior Consultant (Data Scientist)                                     \hfill Aug. 2017 - Jun. 2019 \\
+Consultant (Data Scientist)                                   \hfill Feb. 2017 - Jul. 2017 \\
+Research Associate (Intern)                            \hfill May. 2016 - Jan. 2017
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Education %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{\sc Education}
+
+\textbf{Carnegie Mellon University} \hfill Pittsburgh, PA \\
+\href{https://www.heinz.cmu.edu/programs/phd-programs/information-systems-management}{\textit{Ph.D. in Information Systems and Management}}  \hfill Sep. 2019 - May. 2023 
+
+\begin{itemize}[leftmargin=*]
+\setlength\itemsep{-0.1em}
+\item \textbf{Affiliation}: \href{https://catalyst.cs.cmu.edu/}{CMU automated learning systems group (Catalyst)}
+and \href{https://datalab.heinz.cmu.edu/}{Data Analytics Techniques Algorithms (DATA) Lab} 
+\item \textbf{Advisors and Mentors}: CMU: 
+\href{http://www.cs.cmu.edu/~lakoglu/}{Prof. Leman Akoglu},
+\href{https://cs.cmu.edu/~zhihaoj2}{Prof. Zhihao Jia}, and \href{http://www.andrew.cmu.edu/user/georgech/}{Prof. George Chen}.
+I collaborate with \href{https://cs.stanford.edu/~jure/}{Prof. Jure Leskovec} at Stanford, %\href{https://cs.rice.edu/~xh37/index.html}{Prof. Xia "Ben" Hu} at Rice University, 
+and \href{https://cs.uic.edu/profiles/philip-yu/}{Prof. Philip S. Yu} at UIC.
+% \item \textbf{Thesis}: Outlier Detection: Automation, Systems, and Applications
+\end{itemize}
+
+\textbf{University of Toronto}  \hfill Toronto, ON\\
+\textit{Master of Science in Computer Science %(Applied Computing)
+} \hfill Sep. 2015 - Dec. 2016 
+
+
+\textbf{University of Cincinnati} \hfill Cincinnati, OH\\
+% {\color{uscred} \faAward \textit{Magna Cum Laude} \& \textit{Mantei/Mae Scholarship}} \\
+\textit{Bachelor of Science in Computer Engineering}  \hfill Sep. 2010 - May. 2015 \\
+% College of Engineering and Applied Science\\
+% \vspace{-.15in}
+% \begin{itemize}[leftmargin=*]
+% \setlength\itemsep{-0.1em}
+    % \item 
+    \textbf{Minor}: \textit{Computer Science} and \textit{Mathematics}
+% \end{itemize}
+
+% \clearpage
+% \newpage
+
+% \textbf{Shanxi Experimental Secondary School} \hfill Sep. 2007 - Jul. 2010 \\
+% Experimental Class (Honor Class) \hfill \\
+
+% \vspace{-.15in}
+
+% \begin{itemize}[leftmargin=*]
+% \setlength\itemsep{-0.1em}
+%     \item \textbf{Concentration}: \textit{Science}
+% \end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Funds and Awards %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{\textcolor{uscred}{\faAward} \sc Awards, Grants, and Funding}
+
+\vspace{-0.2in}
+\subsubsection*{As Principal Investigator (August 2023 onwards)}
+\vspace{-0.2in}
+\begin{tabularx}{\textwidth}{@{}Xr@{\hskip 0.2in}r@{}}
+\href{https://www.nvidia.com/en-us/industries/higher-education-research/academic-grant-program/}{NVIDIA Academic Grant Program} & \textit{Gift} & \hfill Mar. 2026 \\
+\href{https://www.amazon.science/research-awards/call-for-proposals/ai-for-information-security-call-for-proposals-fall-2025}{Amazon Research Awards, Fall 2025} & \textit{Gift} & \hfill Mar. 2026 \\
+\href{https://dornsife.usc.edu/ccls/news/}{USC CCSL Seed Funding} & \textit{Small Grant} & \hfill Jan. 2026 \\
+\href{https://www3.cs.stonybrook.edu/~icdm2025/cfbtp.html}{Second Prize CCC Award @ IEEE ICDM, BlueSky Track} & \textit{Recognition} & \hfill Nov. 2025 \\
+\href{https://sigspatial2025.sigspatial.org/}{Best Short Paper Award @ ACM SIGSPATIAL} & \textit{Recognition} & \hfill Nov. 2025 \\
+\href{https://www.nsf.gov/awardsearch/showAward?AWD_ID=2449280}{NSF POSE I} & \textit{Funding} & \hfill Aug. 2025 \\
+\href{https://viterbischool.usc.edu/news/2024/04/usc-and-capital-one-establish-new-center-for-responsible-ai-in-finance/}{Capital One Research Awards} & \textit{Grant} & \hfill Oct. 2024 \\
+\href{https://www.amazon.science/research-awards/recipients/yue-zhao}{Amazon Research Awards, Spring 2024} & \textit{Gift} & \hfill Aug. 2024 \\
+\href{https://chuxuzhang.github.io/RelKD/}{Best Paper Award @ KDD Resource-Efficient Learning Workshop} & \textit{Recognition} & \hfill Aug. 2024 \\
+\href{https://www.nsf.gov/awardsearch/showAward?AWD_ID=2428039\&HistoricalAwards=false}{NSF ATD} & \textit{Funding} & \hfill Aug. 2024 \\
+\href{https://www.nsf.gov/awardsearch/showAward?AWD_ID=2346158\&HistoricalAwards=false}{NSF POSE II} & \textit{Funding} & \hfill Jun. 2024 \\
+\href{https://cloud.google.com/edu/researchers/innovators?hl=en}{Google Cloud Research Innovators} & \textit{Recognition} & \hfill Mar. 2024 \\
+\href{https://aaai.org/aaai-conference/aaai-24-new-faculty-highlights/}{AAAI New Faculty Highlights} & \textit{Recognition} & \hfill Feb. 2024 \\
+\end{tabularx}
+
+\vspace{-0.1in}
+
+\small\textit{Note: Monetary values represent \textbf{my portion} of the funding. Total project budgets may be larger.}
+
+
+\vspace{-0.2in}
+% Awards and Grants before PI
+\subsubsection*{Prior to Principal Investigator Role (Before August 2023)}
+\vspace{-0.2in}
+\begin{tabularx}{\textwidth}{@{}Xr@{\hskip 0.2in}r@{}}
+\href{https://research.facebook.com/blog/2022/10/announcing-the-winners-of-the-2022-ai4ai-research-request-for-proposals/}{Meta 2022 AI4AI Research Award} (student co-PI) & \textit{Recognition} & \hfill Oct. 2022 \\
+\href{https://www.nortonlifelock.com/us/en/careers/graduate-fellowship/}{The Norton Labs Graduate Fellowship} & \textit{Fellowship} & \hfill Mar. 2022 \\
+CMU Presidential Fellowship & \textit{Fellowship} & \hfill 2019 \\
+Mitacs-Accelerate Research and Development Funding & \textit{Funding} & \hfill 2016-2017 \\
+University Global Award and Scholarship & \textit{Scholarship} & \hfill 2010-2015 \\
+\href{https://manteimaeawards.com/}{Mantei/Mae Award \& Scholar} & \textit{Award} & \hfill 2012-2015 \\
+\href{https://www.uc.edu/news/articles/legacy/enews/2014/01/e19161.html}{Engineer of the Month} & \textit{Recognition} & \hfill Jun. 2014 \\
+\end{tabularx}
+
+\vspace{-0.1in}
+
+\small\textit{Note: Monetary values are omitted for awards and recognitions received prior to PI role.}
+
+\input{open-source.tex}
+
+\clearpage
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Publications %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{\sc Publications \\
+{\href{https://scholar.google.com/citations?user=zoGDYsoAAAAJ}{\faGoogle~\texttt{Scholar}}\\
+\href{https://www.researchgate.net/profile/Yue_Zhao191}{\faResearchgate~\texttt{ResearchG}}}}
+
+
+\textbf{\color{uscred} Preprints \& Under Submission}
+Note: \equalcontrib Equal contribution and \corrauthor Corresponding author for multi-first/corresponding author papers.
+
+\begin{benumerate}{100}
+% \begin{enumerate}[leftmargin=*]
+
+    \item                                                           Shawn Li, \underline{Yue Zhao}\\                                    The Autonomy Tax: Defense Training Breaks LLM Agents\\            
+    \textbf{Under submission}\\
+    \textbf{arXiv preprint arXiv:2603.19423}  
+
+    \item
+    Yi Nian, Haosen Cao, Shenzhe Zhu, Henry Peng Zou, Qingqing Luan, \underline{Yue Zhao}\\
+    When Only the Final Text Survives: Implicit Execution Tracing for Multi-Agent Attribution\\
+    \textbf{Under submission}\\
+    \textbf{arXiv preprint arXiv:2603.17445}
+
+    \item
+    Aojie Yuan, Haiyue Zhang, Ziyi Wang, \underline{Yue Zhao}\\
+    Sovereign-OS: A Charter-Governed Operating System for Autonomous AI Agents with Verifiable Fiscal Discipline\\
+    \textbf{Under submission}\\
+    \textbf{arXiv preprint arXiv:2603.14011}
+    
+    \item
+    Aojie Yuan, Zhiyuan Su, \underline{Yue Zhao}\\
+    AEGIS: No Tool Call Left Unchecked -- A Pre-Execution Firewall and Audit Layer for AI Agents\\
+    \textbf{Under submission}\\
+    \textbf{arXiv preprint arXiv:2603.12621}
+
+    \item 
+    Zhisheng Qi, Utkarsh Sahu, Li Ma, Haoyu Han, Ryan Rossi, Franck Dernoncourt, Mahantesh Halappanavar, Nesreen Ahmed, Yushun Dong, \underline{Yue Zhao}, Yu Zhang, Yu Wang\\
+    Benchmarking Knowledge-Extraction Attack and Defense on Retrieval-Augmented Generation\\
+    \textbf{Under submission}\\
+    \textbf{arXiv preprint arXiv:2602.09319}
+
+    \item 
+    Rujie Ye, Jiayi Zhang, Zhuoxin Liu, Zihao Zhu, Siyuan Yang, Li Li, Tianfu Fu, Franck Dernoncourt, \underline{Yue Zhao}, Jiacheng Zhu, Ryan Rossi, Wenhao Chai, Zhengzhong Tu\\
+    Agent Banana: High-Fidelity Image Editing with Agentic Thinking and Tooling\\
+    \textbf{Under submission}\\
+    \textbf{arXiv preprint arXiv:2602.09084}
+
+
+    \item 
+    Jiate Li, Defu Cao, Li Li, Wei Yang, Yuehan Qin, Chenxiao Yu, Tiannuo Yang, Ryan A. Rossi, Yan Liu, Xiyang Hu, \underline{Yue Zhao}\\
+    ``Someone Hid It": Query-Agnostic Black-Box Attacks on LLM-Based Retrieval\\
+    \textbf{Under submission}\\
+    \textbf{arXiv preprint arXiv:2602.00364}
+
+    \item 
+    Shawn Li, Chenxiao Yu, Zhiyu Ni, Hao Li, Charith Peris, Chaowei Xiao, \underline{Yue Zhao} \\
+    Defenses Against Prompt Attacks Learn Surface Heuristics \\
+    \textbf{Under submission} \\
+    \textbf{arXiv preprint arXiv:2601.07185}
+
+    \item 
+    Xiaolin Zhou, Zheng Luo, Yicheng Gao, Qixuan Chen, Xiyang Hu, \underline{Yue Zhao}, Ruishan Liu\\
+    Fairness or Fluency? An Investigation into Language Bias of Pairwise LLM-as-a-Judge\\
+    \textbf{Under submission}\\
+    \textbf{arXiv preprint arXiv:2601.13649}
+
+
+    \item 
+    Chenxiao Yu, Bowen Yi, Farzan Karimi-Malekabadi, Suhaib Abdurahman,\\
+    Jinyi Ye, Shrikanth Narayanan, \underline{Yue Zhao}, Morteza Dehghani \\
+    Tracing Moral Foundations in Large Language Models \\
+    \textbf{Under submission} \\
+    \textbf{arXiv preprint arXiv:2601.05437}
+
+    \item 
+    Yixuan Du, Chenxiao Yu, Haoyan Xu, Ziyi Wang, \underline{Yue Zhao}, Xiyang Hu \\
+    Multimodal Generative Engine Optimization: Rank Manipulation for Vision-Language Model Rankers \\
+    \textbf{Under submission} \\
+    \textbf{arXiv preprint arXiv:2601.12263}
+
+
+    \item 
+    Jinbo Liu, Defu Cao, Yifei Wei, Tianyao Su, Yuan Liang, Yushun Dong, Yan Liu, \underline{Yue Zhao}, Xiyang Hu \\
+    Topology Matters: Measuring Memory Leakage in Multi-Agent LLMs \\
+    \textbf{Under submission} \\
+    \textbf{arXiv preprint arXiv:2512.04668}
+
+
+    \item 
+    Kay Liu, Yuwei Han, Haoyan Xu, Henry Peng Zou, \underline{Yue Zhao}, Philip S. Yu \\
+    TAGFN: A Text-Attributed Graph Dataset for Fake News Detection in the Age of LLMs \\
+    \textbf{Under submission} \\
+    \textbf{arXiv preprint arXiv:2511.21624}
+    
+
+    \item 
+    Haoyan Xu, Ruizhi Qian, Zhengtao Yao, Ziyi Liu, Li Li, Yuqi Li, Yanshu Li, Wenqing Zheng, Daniele Rosa, Daniel Barcklow, Senthil Kumar, Jieyu Zhao, \underline{Yue Zhao} \\
+    LLM-Powered Text-Attributed Graph Anomaly Detection via Retrieval-Augmented Reasoning \\
+    \textbf{Under submission} \\
+    \textbf{arXiv preprint arXiv:2511.17584}
+
+
+    \item 
+    Haoyan Xu, Ruizhi Qian, Jiate Li, Yushun Dong, Minghao Lin, Hanson Yan, Zhengtao Yao, Qinghua Liu, Junhao Dong, Ruopeng Huang, \underline{Yue Zhao}\corrauthor, Mengyuan Li\corrauthor \\
+    A Systematic Study of Model Extraction Attacks on Graph Foundation Models \\
+    \textbf{Under submission} \\
+    \textbf{arXiv preprint arXiv:2511.11912}
+
+
+    \item 
+    Yuexing Hao, Yue Huang, Haoran Zhang, Chenyang Zhao, Zhenwen Liang, Paul Pu Liang, \underline{Yue Zhao}, Lichao Sun, Saleh Kalantari, Xiangliang Zhang, Marzyeh Ghassemi \\
+    The Role of Computing Resources in Publishing Foundation Model Research \\
+    \textbf{Under submission} \\
+    \textbf{arXiv preprint arXiv:2510.13621}
+
+
+    \item 
+    Wang Wei, Tiankai Yang, Hongjie Chen, \underline{Yue Zhao}, Franck Dernoncourt, Ryan A. Rossi, Hoda Eldardiry \\
+    Learning to Route LLMs from Bandit Feedback: One Policy, Many Trade-offs \\
+    \textbf{Under submission} \\
+    \textbf{arXiv preprint arXiv:2510.07429}
+
+
+    \item 
+    Langzhou He, Junyou Zhu, Fangxin Wang, Junhua Liu, Haoyan Xu, \underline{Yue Zhao}, Philip S. Yu, Qitian Wu \\
+    Can Molecular Foundation Models Know What They Don't Know? A Simple Remedy with Preference Optimization \\
+    \textbf{Under submission} \\
+    \textbf{arXiv preprint arXiv:2509.25509}
+
+
+    \item Yuehan Qin, Li Li, Defu Cao, Tiankai Yang, \underline{Yue Zhao}\\
+    M3OOD: Automatic Selection of Multimodal OOD Detectors\\
+    \textbf{Under submission}\\
+    \textbf{arXiv preprint arXiv:2508.11936}
+    
+
+
+    \item Haoyan Xu, Zhengtao Yao, Xuzhi Zhang, Ziyi Wang, Langzhou He, Yushun Dong, Philip S. Yu, Mengyuan Li, \underline{Yue Zhao}\\
+    GLIP-OOD: Zero-Shot Graph OOD Detection with Foundation Model\\
+    \textbf{Under submission}\\
+    \textbf{arXiv preprint arXiv:2504.21186}
+
+
+    \item Haoyan Xu, Zhengtao Yao, Ziyi Wang, Zhan Cheng, Xiyang Hu, Mengyuan Li, \underline{Yue Zhao}\\
+    Graph Synthetic Out-of-Distribution Exposure with Large Language Models\\
+    \textbf{Under submission}\\
+    \textbf{arXiv preprint arXiv:2504.21198}
+
+
+
+    \item Yiming Tang, Yi Fan, Chenxiao Yu, Tiankai Yang, \underline{Yue Zhao}, Xiang Hu\\
+    StealthRank: LLM Ranking Manipulation via Stealthy Prompt Optimization\\
+    \textbf{Under submission}\\
+    \textbf{arXiv preprint arXiv:2504.05804}
+    
+
+    \item Kaixiang Zhao, Lincan Li, Kaize Ding, Neil Zhenqiang Gong, \underline{Yue Zhao}, Yushun Dong\\
+    A Survey of Model Extraction Attacks and Defenses in Distributed Computing Environments\\
+    \textbf{Under submission}\\
+    \textbf{arXiv preprint arXiv:2502.16065}
+
+    
+    \item Shixuan Li, Wei Yang, Peiyu Zhang, Xiongye Xiao, Defu Cao, Yuehan Qin, Xiaole Zhang, \underline{Yue Zhao}, Paul Bogdan\\
+    ClimateLLM: Efficient Weather Forecasting via Frequency-Aware Large Language Models\\
+    \textbf{Under submission}\\
+    \textbf{arXiv preprint arXiv:2502.11059}
+
+
+    \item Lincan Li, Jiaqi Li, Catherine Chen\corrauthor, Fred Gui\corrauthor, other collaborators, \underline{Yue Zhao}\corrauthor, Yushun Dong\corrauthor \\
+    Political-LLM: Large Language Models in Political Science\\
+    \textbf{Under submission}\\
+    \textbf{arXiv preprint arXiv:2412.06864}
+    
+
+    \item Chenxiao Yu, Jinyi Ye, Yuangang Li, Zhaotian Weng, Zheng Li, Emilio Ferrara, Xiyang Hu\corrauthor, \underline{Yue Zhao}\corrauthor\\
+    A Large-Scale Simulation on Large Language Models for Decision-Making in Political Science\\
+    \textbf{Under submission}\\
+    \textbf{arXiv preprint arXiv:2412.15291}
+
+
+
+    \item Junda Wu, Hanjia Lyu, Yu Xia, Zhehao Zhang, Joe Barrow, Ishita Kumar, Mehnoosh Mirtahebi, Hongjie Chen, Ryan A. Rossi, Franck Dernoncourt, Tong Yu, Ruiyi Zhang, Jiuxiang Gu, Nesreen K. Ahmed, Yu Wang, Xiang Chen, Hanieh Deilamsalehy, Namyong Park, Sungchul Kim, Huanrui Yang, Subrata Mitra, Zhengmian Hu, Nedim Lipka, \underline{Yue Zhao}, Jiebo Luo, Julian McAuley\\
+    Personalized Multimodal Large Language Models: A Survey\\
+    \textbf{Under submission}\\ 
+    \textbf{arXiv preprint arXiv:2412.02142
+    }
+
+
+
+
+    \item Han Bao, Yue Huang, Yanbo Wang, Jiayi Ye, Xiangqi Wang, Xiuying Chen, \underline{Yue Zhao}, Tianyi Zhou, Mohamed Elhoseiny, Xiangliang Zhang\\
+    AutoDavis: Automatic and Dynamic Evaluation Protocol of Large Vision-Language Models on Visual Question-Answering?\\
+    \textbf{ ICML 2025 DataWorld Workshop }\\
+    \textbf{arXiv preprint arXiv:2410.21259}
+    
+
+        
+\end{benumerate}
+
+
+\textbf{\color{uscred} Peer-reviewed Journal Papers}
+% \begin{enumerate}[leftmargin=*,resume]
+\begin{benumerate}{72}
+
+    \item Yuehan Qin, Shawn Li, Yi Nian, Xinyan Velocity Yu, \underline{Yue Zhao}\corrauthor, Xuezhe Ma\corrauthor\\
+    Don't Let It Hallucinate: Premise Verification via Retrieval-Augmented Logical Reasoning\\
+    \textit{Transactions on Machine Learning Research (TMLR)}, 2026
+
+    \item Haoyan Xu, Kay Liu, Zhengtao Yao, Philip S. Yu, Kaize Ding\corrauthor, \underline{Yue Zhao}\corrauthor \\
+    LEGO-Learn: Label-Efficient Graph Open-Set Learning\\
+    {\textit{Transactions on Machine Learning Research (\textbf{TMLR})}}, 2025
+
+    \item Hao Dong, Gaetan Frusque, \underline{Yue Zhao}, Eleni Chatzi, Olga Fink\\
+    NNG-Mix: Improving Semi-supervised Anomaly Detection with Pseudo-anomaly Generation\\
+    {\textit{IEEE Transactions on Neural Networks and Learning Systems (\textbf{TNNLS})}}, 2024
+
+
+    \item Ling Yang\equalcontrib, Zhilong Zhang\equalcontrib, Yang Song, Shenda Hong, Runsheng Xu, \underline{Yue Zhao}, Wentao Zhang, Bin Cui, Ming-Hsuan Yang\\
+    Diffusion Models: A Comprehensive Survey of Methods and Applications \\ 
+    {\textit{ACM Computing Surveys (\textbf{{CSUR})}}, 2023}
+
+
+    \item \underline{Yue Zhao\equalcontrib}, Martin Q. Ma\equalcontrib, Xiaorong Zhang, Leman Akoglu\\
+    The Need for Unsupervised Outlier Model Selection:
+A Review and Evaluation of Internal Evaluation Strategies\\ 
+    {\textit{ACM SIGKDD Explorations Newsletter (\textbf{{SIGKDD} Explor.)}}, 2023}
+
+    
+    \item Kexin Huang\equalcontrib, Tianfan Fu\equalcontrib, Wenhao Gao\equalcontrib, \underline{Yue Zhao}, Yusuf Roohani, Jure Leskovec, Connor W. Coley, Cao Xiao, Jimeng Sun, Marinka Zitnik\\
+    Artificial Intelligence Foundation for Therapeutic Science\\ 
+    % \href{https://openreview.net/pdf?id=8nvgnORnoWr}
+    {\textit{Nature Chemical Biology (\textbf{NCHEMB})}, 2022}
+
+
+    \item \underline{Yue Zhao\equalcontrib}, Zheng Li\equalcontrib, Xiyang Hu, Nicola Botta, Cezar Ionescu, George H. Chen\\
+    ECOD: Unsupervised Outlier Detection Using Empirical Cumulative Distribution Functions\\ 
+     \textit{IEEE Transactions on Knowledge and Data Engineering (\textbf{TKDE})}, 2022.
+
+     
+    \item \underline{Yue Zhao}, Zain Nasrullah, Zheng Li \\ 
+    PyOD: A Python Toolbox for Scalable Outlier Detection \\
+    \textit{Journal of Machine Learning Research} (\textbf{\textit{JMLR}}), 2019.
+
+\end{benumerate}
+
+\textbf{\color{uscred} Conference \& Workshop Papers}
+\begin{benumerate}{64}
+% \begin{enumerate}[leftmargin=*,resume]
+
+    \item 
+    Shawn Li, Ryan Rossi, Sungchul Kim, Sunav Choudhary, Franck Dernoncourt, Puneet Mathur,\\
+    Zhengzhong Tu, \underline{Yue Zhao} \\
+    Charts Are Not Images: On the Challenges of Scientific Chart Editing \\
+    {\textit{International Conference on Learning Representations (\textbf{ICLR})}, 2026}
+
+    \item Weidi Luo, Qiming Zhang, Tianyu Lu, Xiaogeng Liu, \underline{Yue Zhao}, Zhen Xiang, Chaowei Xiao\\
+    Doxing via the Lens: Revealing Privacy Leakage in Image Geolocation for Agentic Multi-Modal Large Reasoning Model\\
+    {\textit{International Conference on Learning Representations (\textbf{ICLR})}, 2026}
+    
+    \item 
+    Yue Huang, Chujie Gao, Siyuan Wu, Haoran Wang, Xiangqi Wang, Yujun Zhou, Yanbo Wang, Jiayi Ye, Jiawen Shi, Qihui Zhang, Yuan Li, Han Bao, Zhaoyi Liu, Tianrui Guan, Dongping Chen, Ruoxi Chen, 
+    other authors,
+    % Kehan Guo, Andy Zou, Bryan Hooi Kuen-Yew, Caiming Xiong, Elias Stengel-Eskin, 
+    % Hongyang Zhang, Hongzhi Yin, Huan Zhang, Huaxiu Yao, Jaehong Yoon, Jieyu Zhang, Kai Shu, Kaijie Zhu, Ranjay Krishna, Swabha Swayamdipta, Taiwei Shi, Weijia Shi, Xiang Li, Yiwei Li, Xuexing Hao, Zhihao Jia, Zhize Li, Xiuying Chen, Zhengzhong Tu, Xiyang Hu, Tianyi Zhou, Jieyu Zhao, Lichao Sun, Furong Huang, Prasanna Sattigeri, 
+    % Anka Reuel, Max Lamparth, 
+    \underline{Yue Zhao}, 
+    other authors,
+    % Nouha Dziri, Yu Su, Huan Sun, Heng Ji, Chaowei Xiao, Mohit Bansal, Nitesh V. Chawla, Jianfeng Gao, Michael Backes,
+    % Philip S. Yu, Neil Zhenqiang Gong, Pin-Yu Chen, Bo Li, 
+    Xiangliang Zhang\\
+    On the Trustworthiness of Generative Foundation Models: Guideline, Assessment, and Perspective\\
+    {\textit{International Conference on Learning Representations (\textbf{ICLR})}, 2026} \\
+    \url{https://trustgen.github.io/}
+
+    \item Chengxuan Qian, Shuo Xing, Shawn Li, \underline{Yue Zhao}, Zhengzhong Tu\\
+    DecAlign: Hierarchical Cross-Modal Alignment for Decoupled Multimodal Representation Learning\\
+    {\textit{International Conference on Learning Representations (\textbf{ICLR})}, 2026}
+
+    \item Xiongxiao Xu, Haoran Wang, Yueqing Liang, Philip S. Yu, \underline{Yue Zhao}, Kai Shu\\
+    Can Multimodal LLMs Perform Time Series Anomaly Detection?\\
+    \textit{The Web Conference (\textbf{WWW})}, 2026
+
+
+    \item 
+    Bo Ni, Yu Wang, Leyao Wang, Branislav Kveton, Franck Dernoncourt, Yu Xia, Hongjie Chen, Reuben Luera, Samyadeep Basu, Subhojyoti Mukherjee, Puneet Mathur, Nesreen K. Ahmed, Junda Wu, Li Li, Huixin Zhang, Ruiyi Zhang, Tong Yu, Sungchul Kim, Jiuxiang Gu, Zhengzhong Tu, Alexa Siu, Zichao Wang, Seunghyun Yoon, Nedim Lipka, Namyong Park, Zihao Lin, Trung Bui, \underline{Yue Zhao}, Tyler Derr, Ryan A. Rossi \\
+    A Survey on LLM-based Conversational User Simulation \\
+    \textit{Conference of the European Chapter of the Association for Computational Linguistics (\textbf{EACL})}, 2026
+
+
+    \item Ojas Nimase, \underline{Yue Zhao}, Yushun Dong\\
+    Navigating Between Explainability and Extractability in Machine Learning as a Service\\
+    \textit{IEEE International Conference on Data Mining (\textbf{ICDM}) BlueSky Track}, 
+    \textcolor{uscred}{\faAward \xspace Second Prize CCC Award}, 2025.
+
+    \item Yuangang Li, Yiqing Shen, Yi Nian, Jiechao Gao, Ziyi Wang, Chenxiao Yu, Shawn Li, Jie Wang, Xiyang Hu, \underline{Yue Zhao}\\
+    Mitigating Hallucinations in Large Language Models via Causal Reasoning\\
+    \textit{Thirty-Seventh AAAI Conference on Artificial Intelligence (\textbf{AAAI})}, 2026
+
+    \item Tiankai Yang, Junjun Liu, Wingchun Siu, Jiahang Wang, Zhuangzhuang Qian, Chanjuan Song, Cheng Cheng, Xiyang Hu, \underline{Yue Zhao}\\
+    AD-AGENT: A Multi-agent Framework for End-to-end Anomaly Detection\\
+    \textit{\textbf{Findings} of the Association for Computational Linguistics: \textbf{IJCNLP-AACL}}, 2025.
+
+    \item Ruosi Shao, Md Shamim Seraj, Kangyi Zhao, Yingtao Luo, Lincan Li, Bolin Shen, Averi Bates, Yue Zhao, Chongle Pan, Lisa Hightow-Weidman, Shayok Chakraborty, Yushun Dong\\
+    LLM-Empowered Patient-Provider Communication: A Data-Centric Survey From a Clinical Perspective\\
+    \textit{\textbf{Findings} of the Association for Computational Linguistics: \textbf{IJCNLP-AACL}}, 2025.
+
+    \item Li Li, Peilin Cai, Ryan A. Rossi, Franck Dernoncourt, Branislav Kveton, Junda Wu, Tong Yu, Lixin Song, Tiankai Yang, Yuehan Qin, Nesreen K. Ahmed, Samyadeep Basu, Subhojyoti Mukherjee, Ruiyi Zhang, Yuxiao Zhou, Zichao Wang, Yue Huang, Yu Wang, Xiangliang Zhang, Philip S. Yu, Xiyang Hu, \underline{Yue Zhao}\\
+    A Personalized Conversational Benchmark: Towards Simulating Personalized Conversations\\
+    \textit{\textbf{NeurIPS} \textbf{Workshop} on Multi-Turn Interactions in Large Language Models (\textbf{MTI-LLM})}, \faAward \xspace \textbf{Spotlight}, 2025.\\
+    \textbf{arXiv preprint arXiv:2505.14106}
+
+    \item Zixiang Xu, Yanbo Wang, Yue Huang, Jiayi Ye, Haomin Zhuang, Zirui Song, Lang Gao, Chenxi Wang, Zhaorun Chen, Yujun Zhou, Sixian Li, Wang Pan, \underline{Yue Zhao}, Jieyu Zhao, Xiangliang Zhang, Xiuying Chen\\
+    SocialMaze: A Benchmark for Evaluating Social Reasoning in Large Language Models\\
+    \textit{\textbf{NeurIPS} \textbf{Workshop} on Socially Responsible and Trustworthy Foundation Models (\textbf{ResponsibleFM})}\\
+    \textbf{arXiv preprint arXiv:2505.23713}
+    
+    \item 
+    Yanbo Wang, Zixiang Xu, Yue Huang, Xiangqi Wang, Zirui Song, Lang Gao, Chenxi Wang, Xiangru Tang, \underline{Yue Zhao}, Arman Cohan, Xiangliang Zhang, Xiuying Chen \\
+    DyFlow: Dynamic Workflow Framework for Agentic Reasoning \\
+    {\textit{Advances in Neural Information Processing Systems (\textbf{NeurIPS})}, 2025}
+    
+    \item Shawn Li, Jiashu Qu, Yuxiao Zhou, Yuehan Qin, Tiankai Yang, \underline{Yue Zhao}\\
+    Treble Counterfactual VLMs: A Causal Approach to Hallucination\\
+    \textit{\textbf{Findings} of the Association for Computational Linguistics: \textbf{EMNLP}}, 2025.
+    
+    \item Yuangang Li, Jiaqi Li, Zhuo Xiao, Tiankai Yang, Yi Nian, Xiyang Hu, \underline{Yue Zhao}\\
+    NLP-ADBench: NLP Anomaly Detection Benchmark\\
+    \textit{\textbf{Findings} of the Association for Computational Linguistics: \textbf{EMNLP}}, 2025.
+
+
+    \item Lincan Li, Eren Erman Ozguven, \underline{Yue Zhao}, Guang Wang, Yiqun Xie, Yushun Dong\\
+    TyphoFormer: Language-Augmented Transformer for Accurate Typhoon Track Forecasting\\
+    \textit{ACM International Conference on Advances in Geographic Information Systems (\textit{\textbf{SIGSPATIAL}})}, \textcolor{uscred}{\faAward \xspace Best Short Paper Award}, 2025.
+
+    \item Bolin Shen, Eren Erman Ozguven, \underline{Yue Zhao}, Guang Wang, Yiqun Xie, Yushun Dong\\
+    Learning from the Storm: A Multivariate Machine Learning Approach to Predicting Hurricane-Induced Economic Losses\\
+    \textit{ACM SIGSPATIAL International Workshop on Spatial Intelligence for Smart and Connected Communities (\textit{\textbf{SpatialConnect}})}, 2025
+
+    \item Yi Nian\equalcontrib, Shenzhe Zhu\equalcontrib, Yuehan Qin, Shawn Li, Ziyi Wang, Chaowei Xiao, \underline{Yue Zhao}\\
+    JailDAM: Jailbreak Detection with Adaptive Memory for Vision-Language Model\\
+    \textit{Conference on Language Modeling (\textbf{COLM})}, 2025.
+
+    \item Shawn Li, Peilin Cai, Yuxiao Zhou, Zhiyu Ni, Renjie Liang, You Qin, Yi Nian, Zhengzhong Tu, Xiyang Hu, \underline{Yue Zhao}\\
+    Secure On-Device Video OOD Detection Without Backpropagation\\
+    \textit{International Conference on Computer Vision (\textbf{ICCV})}, 2025.
+
+    \item Zerui Xu, Fang Wu, \underline{Yue Zhao} \\
+    Retrieval-Reasoning Large Language Model-based Synthetic Clinical Trial Generation\\
+    \textit{ACM SIGKDD International Conference on Knowledge Discovery and Data Mining} (\textbf{\textit{KDD Workshop}} \textit{on AI Agent for Information Retrieval}), 2025. \\
+    \textit{ACM Conference on Bioinformatics, Computational Biology, and Health Informatics} (\textbf{\textit{ACM BCB}}, 2025.
+
+    \item Haoyan Xu\equalcontrib, Zhengtao Yao\equalcontrib, Yushun Dong, Ziyi Wang, Ryan A. Rossi, Mengyuan Li, 
+    \underline{Yue Zhao}\\
+    Few-Shot Graph Out-of-Distribution Detection with LLMs\\
+    \textit{European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases (\textbf{ECML PKDD})}, 2025.
+
+
+    \item Tiankai Yang\equalcontrib, Yi Nian\equalcontrib, Shawn Li, Ruiyao Xu, Yuangang Li, Jiaqi Li, Xiyang Hu, Ryan Rossi, Kaize Ding, Xia Hu, \underline{Yue Zhao}\\
+    AD-LLM: Benchmarking Large Language Models for Anomaly Detection\\
+    \textit{Findings of the Association for Computational Linguistics (\textbf{ACL} Findings)}, 2025.
+
+    \item Yu Xia, Subhojyoti Mukherjee, Zhouhang Xie, Junda Wu, Xintong Li, Ryan Aponte, Hanjia Lyu, Joe Barrow, Hongjie Chen, Franck Dernoncourt, Branislav Kveton, Tong Yu, Ruiyi Zhang, Jiuxiang Gu, Nesreen K. Ahmed, Yu Wang, Xiang Chen, Hanieh Deilamsalehy, Sungchul Kim, Zhengmian Hu, 
+    \underline{Yue Zhao}, 
+    Nedim Lipka, Seunghyun Yoon, Ting-Hao Kenneth Huang, Zichao Wang, Puneet Mathur, Soumyabrata Pal, Koyel Mukherjee, Zhehao Zhang, Namyong Park, Thien Huu Nguyen, Jiebo Luo, Ryan A. Rossi, Julian McAuley\\
+    From Selection to Generation: A Survey of LLM-based Active Learning\\
+    \textit{Annual Meeting of the Association for Computational Linguistics (\textbf{ACL})}, 2025.
+
+
+
+    \item Kaixiang Zhao, Lincan Li, Kaize Ding, Neil Zhenqiang Gong, \underline{Yue Zhao}, Yushun Dong\\
+    A Survey on Model Extraction Attacks and Defenses for Large Language Models\\
+    \textit{ACM SIGKDD Conference on Knowledge Discovery and Data Mining (\textbf{KDD} Lecture-Style Tutorial Track)}, 2025.
+
+
+
+    \item Shawn Li, Huixian Gong, Hao Dong, Tiankai Yang, Zhengzhong Tu, \underline{Yue Zhao}\\
+    DPU: Dynamic Prototype Updating for Multimodal Out-of-Distribution Detection\\
+    \textit{Conference on Computer Vision and Pattern Recognition (\textbf{CVPR})}, \faAward \xspace \textbf{Highlight}, 2025
+
+    \item Hanhui Wang, Yihua Zhang, Ruizheng Bai, \underline{Yue Zhao}, Sijia Liu, Zhengzhong Tu\\
+    Edit Away and My Face Will Not Stay: Personal Biometric Defense against Malicious Generative Editing\\
+    \textit{Conference on Computer Vision and Pattern Recognition (\textbf{CVPR})}, 2025
+
+    \item Yanbo Wang, Jiayi Ye, Siyuan Wu, Chujie Gao, Yue Huang, Xiuying Chen, \underline{Yue Zhao}, Xiangliang Zhang\\
+    TRUSTEVAL: A Dynamic Evaluation Toolkit on Trustworthiness of Generative Foundation Models\\
+    \textit{Annual Conference of the North American Chapter of the Association for Computational Linguistics (\textbf{NAACL} Demo Track)}, 2025.
+
+    \item Yuehan Qin\equalcontrib, Yichi Zhang\equalcontrib, Yi Nian\equalcontrib, Xueying Ding, \underline{Yue Zhao} \\
+    MetaOOD: Meta-learning for Automatic Out-of-Distribution Detection Model Selection \\
+    {\textit{International Conference on Learning Representations (\textbf{ICLR})}, 2025} \\
+    \textit{ACM SIGKDD International Conference on Knowledge Discovery and Data Mining} (\textbf{\textit{KDD Workshop}} \textit{on Resource-Efficient Learning for Knowledge Discovery}), \textcolor{uscred}{\faAward \xspace Best Paper Award}, 2024. 
+
+
+
+    \item Sihan Chen, Zhuangzhuang Qian, Wingchun Siu, Xingcan Hu, Jiaqi Li, Shawn Li, Yuehan Qin, Tiankai Yang, Zhuo Xiao, Wanghao Ye, Yichi Zhang, Yushun Dong, \underline{Yue Zhao}\\
+    PyOD 2: A Python Library for Outlier Detection with LLM-powered Model Selection\\
+    {\textit{International World Wide Web Conference (\textbf{The Web Conference} Demo Track)}, 2025}
+
+    \item Sizhe Liu, Yizhou Lu, Siyu Chen, Xiyang Hu, \underline{Yue Zhao} \\
+    DrugAgent: Automating AI-aided Drug Discovery Programming through LLM Multi-Agent Collaboration\\
+    \textit{\textbf{AAAI} \textbf{Workshop} on Foundation Models for Biological Discoveries (\textbf{FMs4Bio})}, 2025.
+
+    \item 
+    Hao Dong, \underline{Yue Zhao}, Eleni Chatzi, Olga Fink \\
+    MultiOOD: Scaling Out-of-Distribution Detection for
+    Multiple Modalities \\ 
+    {\textit{Advances in Neural Information Processing Systems (\textbf{NeurIPS})}, \faAward \xspace \textbf{Spotlight}, 2024}
+
+    \item 
+    Xueying Ding, \underline{Yue Zhao}, Leman Akoglu\\
+    Fast Unsupervised Deep Outlier Model Selection with Hypernetworks\\ 
+    \textit{ACM SIGKDD Conference on Knowledge Discovery and Data Mining (\textbf{KDD}), 2024}
+
+
+    \item 
+    Lichao Sun, Yue Huang, Haoran Wang, Siyuan Wu, Qihui Zhang, Chujie Gao, Yixin Huang, Wenhan Lyu, Yixuan Zhang, Xiner Li, Zhengliang Liu, Yixin Liu, Yijue Wang, Zhikun Zhang, 50+ collaborative authors,
+    \underline{Yue Zhao} \\
+    TrustLLM: Trustworthiness in Large Language Models \\ 
+    \textit{International Conference on Machine Learning (\textbf{ICML})}, 2024
+
+    \item Songtao Liu, Hanjun Dai, \underline{Yue Zhao}, Peng Liu \\
+    Preference Optimization for Molecule Synthesis with Conditional Residual Energy-based Models \\ 
+    \textit{International Conference on Machine Learning (\textbf{ICML})}, \textbf{Oral}, 2024
+
+    \item \underline{Yue Zhao}, Leman Akoglu\\
+    Hyperparameter Optimization for Unsupervised Outlier Detection \\ 
+    \textit{International Conference on Automated Machine Learning (\textbf{AutoML})}, 2024 
+
+    \item \underline{Yue Zhao}\\
+    Towards Reproducible, Automated, and Scalable Anomaly Detection \\ 
+    \textit{AAAI Conference on Artificial Intelligence (\textbf{AAAI}), New Faculty Highlights}, 2024 
+
+    \item Minqi Jiang\equalcontrib, Chaochuan Hou\equalcontrib, Ao Zheng\equalcontrib, Songqiao Han, Hailiang Huang\corrauthor, Qingsong Wen, Xiyang Hu\corrauthor, \underline{Yue Zhao}\corrauthor\\
+    ADGym: Design Choices for Deep Anomaly Detection.\\ 
+    {\textit{Advances in Neural Information Processing Systems (\textbf{NeurIPS})}, 2023}\\
+    (\corrauthor Corresponding author)
+
+    \item Jaemin Yoo, \underline{Yue Zhao}, Lingxiao Zhao, Leman Akoglu\\
+    DSV: An Alignment Validation Loss for Self-supervised Outlier Model Selection\\ 
+    \textit{European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases (\textbf{ECML/PKDD})}, 2023
+
+    \item Peng Xu, Lin Zhang, Xuanzhou Liu, Jiaqi Sun, \underline{Yue Zhao}, Haiqin Yang, Bei Yu\\
+    Do Not Train It: A Linear Neural Architecture Search of Graph Neural Networks\\ 
+    \textit{International Conference on Machine Learning (\textbf{ICML})}, 2023
+    
+    \item \underline{Yue Zhao}, Guoqing Zheng, Subhabrata Mukherjee, Robert McCann, Ahmed Awadallah\\
+    ADMoE: Anomaly Detection with Mixture-of-Experts from Noisy Labels\\ 
+    \textit{Thirty-Seventh AAAI Conference on Artificial Intelligence (\textbf{AAAI})}, 2023
+
+    \item \underline{Yue Zhao}, George H. Chen, Zhihao Jia\\
+    TOD: GPU-accelerated Outlier Detection via Tensor Operations\\ 
+    {\textit{International Conference on Very Large Data Bases (\textbf{VLDB})}, 2023}
+    % \textbf{
+    % % \href{https://arxiv.org/abs/2110.14007}
+    % {arXiv preprint arXiv:2110.14007}
+    % }
+
+    \item Songqiao Han\equalcontrib, Xiyang Hu\equalcontrib, Hailiang Huang\equalcontrib, Minqi Jiang\equalcontrib, \underline{Yue Zhao\equalcontrib\corrauthor}\\
+    ADBench: Anomaly Detection Benchmark\\ 
+    {\textit{Advances in Neural Information Processing Systems (\textbf{NeurIPS})}, 2022}\\
+    (\equalcontrib Equal contribution \& \corrauthor Corresponding author)
+
+    \item \underline{Yue Zhao\equalcontrib}, Kay Liu\equalcontrib, Yingtong Dou\equalcontrib, et al.\\
+    % Xueying Ding, Xiyang Hu, Ruitong Zhang, Kaize Ding, Canyu Chen, Hao Peng, Kai Shu, Lichao Sun, Kai Shu, George H. Chen, Zhihao Jia, Philip S Yu\\
+    Benchmarking Node Outlier Detection on Graphs\\ 
+    \textit{Advances in Neural Information Processing Systems (\textbf{NeurIPS})}, 2022.
+
+
+    \item \underline{Yue Zhao}, Xiaorong Zhang, Leman Akoglu\\
+    ELECT: Toward Unsupervised Outlier Model Selection\\ 
+    \textit{IEEE International Conference on Data Mining (\textbf{ICDM})}, 2022. 
+
+    \item Zhiming Xu, Xiao Huang, \underline{Yue Zhao}, Yushun Dong, Jundong Li\\
+    Contrastive Attributed Network Anomaly Detection with Data Augmentation\\ 
+    % \href{https://openreview.net/forum?id=KCd-3Pz8VjM}{\textit{Advances in Neural Information Processing Systems (\textbf{NeurIPS})}, 2021}\\
+    \textit{Pacific-Asia Conference on Knowledge Discovery and Data Mining (\textbf{PAKDD})}, 2022.
+
+    \item \underline{Yue Zhao}, Ryan A. Rossi, Leman Akoglu\\
+    Automatic Unsupervised Outlier Model Selection\\ 
+    % \href{https://openreview.net/forum?id=KCd-3Pz8VjM}
+    {\textit{Advances in Neural Information Processing Systems (\textbf{NeurIPS})}, 2021}.
+
+    \item Kwei-Herng Lai, Daochen Zha, Junjie Xu, \underline{Yue Zhao}, Guanchu Wang, Xia Hu\\
+    Revisiting Time Series Outlier Detection: Definitions and Benchmarks\\ 
+    % \href{https://openreview.net/pdf?id=r8IvOsnHchr}
+    {\textit{Advances in Neural Information Processing Systems (\textbf{NeurIPS})}, 2021}
+    
+    \item Kexin Huang\equalcontrib, Tianfan Fu\equalcontrib, Wenhao Gao\equalcontrib, \underline{Yue Zhao}, Yusuf Roohani, Jure Leskovec, Connor W. Coley, Cao Xiao, Jimeng Sun, Marinka Zitnik\\
+    Therapeutics Data Commons: Machine Learning Datasets and Tasks for Drug Discovery and Development\\ 
+    % \href{https://openreview.net/pdf?id=8nvgnORnoWr}
+    {\textit{Advances in Neural Information Processing Systems (\textbf{NeurIPS})}, 2021}
+
+
+    \item \underline{Yue Zhao\equalcontrib}, Xiyang Hu\equalcontrib, Cheng Cheng, Cong Wang, Changlin Wan, Wen Wang, Jianing Yang, Haoping Bai, Zheng Li, Cao Xiao, Yunlong Wang, Zhi Qiao, Jimeng Sun, Leman Akoglu\\
+    SUOD: Accelerating Large-scale Unsupervised Heterogeneous Outlier Detection\\
+    \textit{Conference on Machine and Learning Systems (\textbf{MLSys})}, 2021.
+    
+    \item Kwei-Herng Lai\equalcontrib, Daochen Zha\equalcontrib, Guanchu Wang, Junjie Xu, \underline{Yue Zhao}, Devesh Kumar, Yile Chen, Purav Zumkhawaka, Minyang Wan, Diego Martinez and Xia Ben Hu \\
+    TODS: An Automated Time Series Outlier Detection System (Demo paper) \\
+    \textit{Thirty-Fifth AAAI Conference on Artificial Intelligence (\textbf{AAAI})}, 2021. 
+
+    
+    \item Meng-Chieh Lee, \underline{Yue Zhao}, Aluna Wang, Pierre Jinghong Liang, Leman Akoglu, Vincent S. Tseng, Christos Faloutsos \\
+    AutoAudit: Mining Accounting and Time-Evolving Graphs\\ 
+    \textit{IEEE International Conference on Big Data (\textbf{Big Data})}, 2020
+
+    \item Changlin Wan, Dongya Jia, \underline{Yue Zhao}, Wennan Chang, Sha Cao, Xiao Wang, and Chi Zhang \\
+    A Data Denoising Approach to Optimize Functional Clustering of Single Cell RNA-sequencing Data\\ 
+    \textit{IEEE International Conference on Bioinformatics and Biomedicine (\textbf{BIBM})}, 2020
+
+    \item \underline{Yue Zhao}, Xueying Ding, Jianing Yang, Haoping Bai. \\
+    SUOD: Toward Scalable Unsupervised Outlier Detection \\
+    \textit{\textbf{Workshops} at the Thirty-Fourth \textbf{AAAI} Conference on Artificial Intelligence}, 2020.\\
+    \textbf{Extended version published in \textit{MLSys 2021}}.
+
+    \item Zheng Li, \underline{Yue Zhao}, Nicola Botta, Cezar Ionescu, Xiyang Hu\\
+    COPOD: Copula-Based Outlier Detection\\
+    \textit{IEEE International Conference on Data Mining (\textbf{ICDM})}, 2020.
+    
+    \item Zheng Li, \underline{Yue Zhao}, Jialin Fu\\
+    SYNC: A Copula based Framework for Generating Synthetic Data from Aggregated Sources\\
+    \textit{IEEE International Conference on Data Mining Workshops (\textbf{ICDMW})}, 2020.
+
+    \item Yiqun Mei, \underline{Yue Zhao}, Wei Liang \\
+    DSR: An Accurate Single Image Super Resolution Approach for Various Degradations\\
+    \textit{IEEE International Conference on Multimedia and Expo (\textbf{ICME})}, 2020, London, UK.
+
+    \item \underline{Yue Zhao}, Xuejian Wang\equalcontrib, Cheng Cheng\equalcontrib, Xueying Ding\equalcontrib \\
+    Combining Machine Learning Models and Scores using combo Library (Demo paper) \\
+    \textit{Thirty-Fourth AAAI Conference on Artificial Intelligence (\textbf{AAAI})}, 2020.
+
+
+    \item Colin Wan, Zheng Li, Alicia Guo, \underline{Yue Zhao} \\
+    SynC: A Unified Framework for Generating Synthetic Population with Gaussian Copula \\
+    \textit{\textbf{Workshops} at the Thirty-Fourth \textbf{AAAI} Conference on Artificial Intelligence}, 2020. \\
+    \textbf{Extended version published in \textit{ICDMW 2020}}.
+    
+    \item Zain Nasrullah, \underline{Yue Zhao} \\
+    Music Artist Classification with Convolutional Recurrent Neural Networks \\
+    \textit{IEEE International Joint Conference on Neural Networks} (\textbf{\textit{IJCNN}}), 2019, Hungary.
+    
+    \item \underline{Yue Zhao}, Zain Nasrullah, Maciej K. Hryniewicki, Zheng Li \\
+    LSCP: Locally Selective Combination in Parallel Outlier Ensembles \\
+    \textit{SIAM International Conference on Data Mining} (\textbf{\textit{SDM}}), 2019, Calgary, Canada. 
+
+    \item \underline{Yue Zhao}, Maciej K. Hryniewicki \\
+    DCSO: Dynamic Combination of Detector Scores for Outlier Ensembles \\
+    \textit{ACM SIGKDD International Conference on Knowledge Discovery and Data Mining} (\textbf{\textit{KDD Workshop}} \textit{on Outlier Detection De-constructed}), 2018, London, UK. \\
+    \textbf{Extended version published in \textit{SDM 2019}, renamed to LSCP}.
+
+    \item \underline{Yue Zhao}, Maciej K. Hryniewicki \\
+    XGBOD: Improving Supervised Outlier Detection with Unsupervised Representation Learning \\
+    \textit{IEEE International Joint Conference on Neural Networks} (\textbf{\textit{IJCNN}}), 2018, Rio, Brazil.
+    
+    \item \underline{Yue Zhao}, Maciej K. Hryniewicki, Francesca Cheng, Boyang Fu, Xiaoyu Zhu \\
+    Employee Turnover Prediction with Machine Learning: A Reliable Approach \\
+    \textit{Intelligent System Conference} (\textbf{\textit{Intellisys}}), 2018, London, UK.
+    
+    \item \underline{Yue Zhao}\equalcontrib, Zhongtian Qiu\equalcontrib, Yiqing Yang\equalcontrib, Weiwei Li\equalcontrib, Mingming Fan \\
+    An Empirical Study of Touch-based Authentication Methods on Smartwatches \\
+    \textit{ACM International Symposium on Wearable Computers} (\textbf{\textit{ISWC}}), 2017, Maui, USA.
+    
+\end{benumerate}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Professional Experiences %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section{\sc Internship Experience}
+
+\textbf{NortonLifeLock Research Group} \\
+Machine Learning Research Intern  \hfill 2022
+% May. 2021--Aug. 2021 \\
+% \begin{itemize}[leftmargin=*]
+% \setlength\itemsep{-0.1em}
+%     % \item Designed weakly supervised anomaly detection algorithms
+%     \item Supervised by Dr. Acar Tamersoy and Dr. Kevin Roundy.
+% \end{itemize}
+
+\textbf{Microsoft Research} \\
+Machine Learning Research Intern \hfill 2022
+% May. 2021--Aug. 2021 \\
+% \begin{itemize}[leftmargin=*]
+% \setlength\itemsep{-0.1em}
+%     \item Designed weakly supervised anomaly detection algorithms
+%     \item Supervised by Dr. Guoqing Zheng and Dr. Subhabrata (Subho) Mukherjee.
+% \end{itemize}
+
+\textbf{Stanford University, Computer Science Department} \\
+Visiting Student Researcher (Prof. Jure Leskovec)                                    \hfill  2021
+% % May. 2021--Aug. 2021 \\
+% \begin{itemize}[leftmargin=*]
+% \setlength\itemsep{-0.1em}
+%     \item Designed new GNN systems.
+%     \item Supervised by Prof. Jure Leskovec.
+% \end{itemize}
+
+\textbf{IQVIA, Analytics Center of Excellence} \\
+Machine Learning Research Intern                                     \hfill 2020
+% May. 2020--Aug. 2020 \\
+% \begin{itemize}[leftmargin=*]
+% \setlength\itemsep{-0.1em}
+%     \item Designed new machine learning models in healthcare.
+%     \item Supervised by Dr. Cao (Danica) Xiao (IQVIA) and Prof. Jimeng Sun (UIUC).
+% \end{itemize}
+
+\textbf{Siemens PLM Software USA} \\
+Software Engineer (Intern \& Contract)                  \hfill Mar. 2012 - Dec. 2014
+% \begin{itemize}[leftmargin=*]
+% \setlength\itemsep{-0.1em}
+%     \item Managed a Java project to transition the LabManager system to vCloud Director. 
+%     \item Refactored outdated automation code and added new modules and JUnit test cases.
+%     \item Led a C++ Code Coverage project on Teamcenter platform to strengthen its stability.
+% \end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Teaching Experience %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{\sc Teaching Experience}
+
+\textit{\textbf{University of Southern California}} \hfill Los Angeles, CA\\
+\-\textbf{~~~Instructor}   \hfill Fall 2026 (scheduled)\\
+\-\textit{~~~~~~CSCI 566 Deep Learning and Its Applications}\\
+\-\textbf{~~~Instructor}   \hfill Spring 2026 \\
+\-\textit{~~~~~~CSCI 699 Adversarial and Trustworthy Foundation Models}\\
+\-\textbf{~~~Instructor}   \hfill Spring 2025 \\
+\-\textit{~~~~~~CSCI 566 Deep Learning and Its Applications}\\
+\-\textbf{~~~Instructor}   \hfill Spring 2024 \\
+\-\textit{~~~~~~CSCI 566 Deep Learning and Its Applications}
+\vskip -2mm
+
+\textit{\textbf{Carnegie Mellon University}} \hfill Pittsburgh, PA\\
+%\begin{tabular}{@{}p{4.7in}p{0.77in}}
+\-\textbf{~~~Teaching Assistant}   \hfill Fall 2022 \\
+\-\textit{~~~~~~Managing Digital Business}  (Prof. David Riel)
+\vskip -2mm
+\-\textbf{~~~Teaching Assistant \& co-Instructor} (lectures on AutoML and MLSys)  \hfill Spring 2022  -- Fall 2020\\ 
+% \-\textbf{~~~Teaching Assistant \& co-Instructor} (lectures on AutoML and MLSys)  \hfill Fall 2021 \\ 
+% \-\textbf{~~~Teaching Assistant \& co-Instructor} (lectures on AutoML)  \hfill Spring 2021 \\ 
+% \-\textbf{~~~Teaching Assistant \& co-Instructor} (lectures on AutoML)  \hfill Fall 2020 \\ 
+\-\textit{~~~~~~Intro to Artificial Intelligence} (Prof. David Steier)
+\vskip -2mm
+\-\textbf{~~~Teaching Assistant}   \hfill Spring 2022 \\
+\-\textit{~~~~~~Digital Transformation}  (Prof. David Riel)
+\vskip -2mm
+\-\textbf{~~~Teaching Assistant} (helping on course topics)  \hfill Fall 2021 \\
+\-\textit{~~~~~~Statistics for IT Managers} (Prof. Daniel Nagin)  \hfill
+%\end{tabular}
+
+\textit{\textbf{University of Toronto}} \hfill Toronto, ON\\
+%\begin{tabular}{@{}p{4.7in}p{0.77in}}
+\-\textbf{~~~Teaching Assistant \& Lab Session Instructor}  \hfill Fall 2015  \\
+\-\textit{~~~~~~Embedded Systems} (Prof. Philip Anderson)
+
+\textit{\textbf{University of Cincinnati}} \hfill Cincinnati, OH\\
+\-\textbf{~~~Teaching Assistant \& Lab Session Instructor}  \hfill Fall 2014 \\
+\-\textit{~~~~~~Intro to Programming} (Prof. George Purdy) 
+%\end{tabular}
+
+\section{\sc Ph.D. Students}
+
+% \textbf{Thesis Committee}
+\begin{itemize}[leftmargin=*]
+\setlength\itemsep{-0.1em}
+
+    \item Haoyan Xu (USC, ECE Ph.D., 2024 Spring-), co-advised by Mengyuan Li,
+    \textcolor{uscred}{\faAward \xspace Capital One Fellowship}
+    \item Yuehan Qin (USC, CS Ph.D., 2024 Fall-)
+    \item Tiankai Yang (USC, CS Ph.D., 2024 Fall-)
+    \item Shawn Li (USC, CS Ph.D., 2024 Fall-), \textcolor{uscred}{\faAward \xspace Capital One Fellowship, Amazon ML Fellowship}
+    \item Jiate Li (USC, CS Ph.D., 2025 Fall-)
+    \item Yi Nian (USC, CS Ph.D., incoming)
+    \item Chenxiao Yu (USC, CS Ph.D., incoming)
+    \item Zixiang Xu (USC, CS Ph.D., incoming)
+\end{itemize}
+
+\section{\sc Student Committee}
+
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{0.95in}X>{\raggedright\arraybackslash}p{1.7in}@{}}
+\toprule
+\textbf{Term} & \textbf{Student} & \textbf{Committee} \\
+\midrule
+Spring 2026 & Longchao Da (ASU, CS Ph.D.) & Defense \\
+\multicolumn{1}{@{}l}{ } & Yahan Li (USC, CS Ph.D.) & Qualification \\
+\multicolumn{1}{@{}l}{ } & Jiageng Mao (USC, CS Ph.D.) & Thesis \\
+\multicolumn{1}{@{}l}{ } & Xinyue Cui (USC, CS Ph.D.) & Qualification \\
+\multicolumn{1}{@{}l}{ } & Jiawei Yang (USC, CS Ph.D.) & Qualification + Thesis \\
+\addlinespace[0.15em]
+Fall 2025 & Hao Dong (ETH Zurich, CS Ph.D.) & Defense \\
+\multicolumn{1}{@{}l}{ } & Haonan Wang (USC, ECE Ph.D.) & Defense \\
+\addlinespace[0.15em]
+Spring 2025 & Mengxi Wu (USC, CS Ph.D.) & Qualification \\
+\multicolumn{1}{@{}l}{ } & Xingrui Wang (USC, ME Ph.D.) & Defense \\
+\addlinespace[0.15em]
+Fall 2024 & Alex Bisberg (USC, CS Ph.D.) & Thesis \\
+\addlinespace[0.15em]
+Summer 2024 & Gengyu Rao (USC, CS Ph.D.) & Defense \\
+\multicolumn{1}{@{}l}{ } & Mehrdad Kiamari (USC, ECE Ph.D.) & Defense \\
+\addlinespace[0.15em]
+Spring 2024 & Maria Despoina Siampou (USC, CS Ph.D.) & Qualification \\
+\multicolumn{1}{@{}l}{ } & Yuan Meng (USC, ECE Ph.D.) & Defense \\
+\multicolumn{1}{@{}l}{ } & Hassan Hamad (USC, ECE Ph.D.) & Qualification \\
+\multicolumn{1}{@{}l}{ } & Yizhou Zhang (USC, CS Ph.D.) & Thesis \\
+\multicolumn{1}{@{}l}{ } & Haoming Li (USC, CS Ph.D.) & Qualification \\
+\multicolumn{1}{@{}l}{ } & Arash Hajisafi (USC, CS Ph.D.) & Qualification \\
+\addlinespace[0.15em]
+Fall 2023 & Yi Chien Lin (USC, ECE Ph.D.) & Qualification \\
+\multicolumn{1}{@{}l}{ } & Yuke Zhang (USC, ECE Ph.D.) & Qualification \\
+\bottomrule
+\end{tabularx}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Community Service %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{\sc Services}
+
+\textbf{Conference/Workshop Organizing Roles}
+\begin{itemize}[leftmargin=*]
+\setlength\itemsep{-0.1em}
+    \item Publicity Co-Chair, WSDM 2027
+    \item Workflow Co-Chair, KDD 2023
+    \item Co-organizer, SURGeLLM: Structured Understanding, Retrieval, and Generation in LLMs era Workshop $@$ ACL 2026
+    \item Co-organizer, AI for Financial Fraud Detection \& Prevention Workshop $@$ 6th ACM International Conference on AI in Finance
+
+\end{itemize}
+
+\textbf{Funding Proposal Review Roles}
+\begin{itemize}[leftmargin=*]
+\setlength\itemsep{-0.1em}
+    \item National Science Foundation (NSF)
+    \item Dutch Research Council (NWO) 
+\end{itemize}
+
+\textbf{Journal Editorial Roles}
+\begin{itemize}[leftmargin=*]
+\setlength\itemsep{-0.1em}
+    \item Associate Editor, ACM Transactions on AI for Science (TAIS), 2025--present
+    \item Associate Editor, IEEE Transactions on Neural Networks and Learning Systems (TNNLS), 2024--present
+    \item Action Editor, Journal of Data-centric Machine Learning Research (DMLR), 2024--present
+\end{itemize}
+
+\textbf{Conference/Workshop AC and Reviewer Roles}
+\begin{itemize}[leftmargin=*]
+\setlength\itemsep{-0.1em}
+    \item ICLR 2025 (AC), ICLR 2026 (AC)
+    \item AAAI 2021, 2022, 2023, 2025 (Senior PC), 2026 (Senior PC)
+    \item ICML 2024, 2025 (AC), 2026 (AC)
+    \item NeurIPS 2021, 2022, 2023, 2025 (AC)
+    \item AISTATS 2024, 2025 (AC)
+    \item MLSys 2024, 2026
+    \item KDD 2020, 2021, 2022, 2023, 2026
+    \item ACL Rolling Review (ARR) 2026
+    \item IJCAI 2022, 2023
+    \item AAAI Demonstrations 2021, 2022
+    \item MICCAI 2020, 2021, 2022
+    \item ICDM 2020
+    \item KDD Workshop on Outlier Detection and Description (ODD), 2021
+    \item KDD Workshop on Anomaly and Novelty Detection (ANDEA), 2021, 2022
+    \item IJCAI Workshop on Artificial Intelligence for Anomalies and Novelties (AI4AN), 2020, 2021
+    \item INFORMS Workshop on Data Science 2021
+\end{itemize}
+
+
+\textbf{Journal Review Roles}
+\begin{itemize}[leftmargin=*]
+\setlength\itemsep{-0.1em}
+    \item Journal of Machine Learning Research (JMLR)
+    \item PNAS Nexus
+    \item Machine Learning
+    \item IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)
+    \item IEEE Transactions on Knowledge and Data Engineering (TKDE)
+    \item IEEE Internet of Things Journal (IoT-J)
+    \item IEEE Intelligent Systems
+    \item IEEE Journal on Selected Areas in Communications (J-SAC)
+    \item Data Mining and Knowledge Discovery (DMAI)
+    \item ACM Transactions on Management Information Systems (TMIS)
+    \item Knowledge and Information Systems (KAIS)
+    \item INFORMS Journal on Computing (IJOC)
+    \item Big Data
+    \item Artificial Intelligence Review (AIRE)
+    \item Neurocomputing
+    \item IEEE Transactions on Systems, Man, and Cybernetics: Systems
+    \item IEEE/ACM Transactions on Computational Biology and Bioinformatics (TCBB)
+    \item IEEE Network Magazine
+    \item IEEE Computational Intelligence Magazine (CIM)
+    \item BioData Mining
+    \item European Journal of Management and Business Economics (EJMBE)
+    \item The Journal of Open Source Software (JOSS)
+\end{itemize}
+
+\clearpage
+\newpage
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Talks %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{{\sc Talks and Lectures} \\ 
+%Industry \& Academia
+} %Talks and Presentations
+\vskip 1mm
+\begin{tabularx}{\textwidth}{@{}p{1.6in}Xr@{}}
+USC symposium on Frontiers of ML/AI & \textit{Towards Robust Al: Advances in Outlier and OOD Detection} & \hfill Mar. 2025 \\
+NUS Tea Talk & \textit{Towards Robust Al: Advances in Outlier and OOD Detection} & \hfill Jan. 2025 \\
+SFU@NeurIPS'24 & \textit{Towards Robust Al: Advances in Outlier and OOD Detection} & \hfill Dec. 2024 \\
+KAIST & \textit{Unsupervised Model Selection: Automation with Meta-learning and LLMs} & \hfill Nov. 2024 \\
+Kennesaw State University & \textit{Unsupervised Model Selection: Automation with Meta-learning and LLMs} & \hfill Oct. 2024 \\
+LinkedIn Anti-Abuse AI & \textit{Outlier Detection: Automation, Systems, and GenAI} & \hfill Aug. 2024 \\
+Amazon Security AI & \textit{Outlier Detection: Automation, Systems, and GenAI} & \hfill Aug. 2024 \\
+New York University & \textit{Outlier Detection: Automation, Systems, and GenAI} & \hfill Aug. 2024 \\
+University of Washington & \textit{Outlier Detection: Automation, Systems, and GenAI} & \hfill Jun. 2024 \\
+Microsoft & \textit{Outlier Detection: Automation, Systems, and GenAI} & \hfill Jun. 2024 \\
+USC Retreat on AI and Engineering Safety & \textit{Safety Measures for LLMs} & \hfill Apr. 2024 \\
+Visa Research & \textit{Towards Reproducible, Automated, and Scalable AD} & \hfill Apr. 2024 \\
+USC Symposium on Frontiers of Generative AI & \textit{Generative AI for Anomaly Detection} & \hfill Mar. 2024 \\
+AAAI New Faculty Highlights (invited)  & \textit{Towards Reproducible, Automated, and Scalable AD} & \hfill Feb. 2024 \\
+U of Nevada, Las Vegas  & \textit{Automated and Scalable ML Algorithms and Systems} & \hfill Oct. 2023 \\
+Samsung Seminar & \textit{Automated and Scalable Anomaly Detection Systems} & \hfill Aug. 2023 \\
+KDD SoCal Day & \textit{Enable Applications by ML with Noisy Inputs} & \hfill Aug. 2023 \\
+CMU Catalyst  & \textit{How (Not) to Fail Your Academic Job Search} & \hfill May. 2023 \\
+KAUST & \textit{Automated and Scalable ML Algorithms and Systems} & \hfill Apr. 2023 \\
+Emory University & \textit{Automated and Scalable ML Algorithms and Systems} & \hfill Apr. 2023 \\
+USC & \textit{Automated and Scalable ML Algorithms and Systems} & \hfill Mar. 2023 \\
+UC Davis & \textit{Automated and Scalable ML Algorithms and Systems} & \hfill Mar. 2023 \\
+Stony Brook University & \textit{Automated and Scalable ML Algorithms and Systems} & \hfill Feb. 2023 \\
+University of Chicago & \textit{Automated and Scalable ML Algorithms and Systems} & \hfill Feb. 2023 \\
+UC Merced & \textit{Automated and Scalable ML Algorithms and Systems} & \hfill Feb. 2023 \\
+CMU PDL Meeting & \textit{Automated and Scalable ML Algorithms and Systems} & \hfill Jan. 2023 \\
+CMU Data Science Seminar & \textbf{Guest Lecture} \textit{Automated Anomaly Detection} & \hfill Nov. 2022 \\
+LoG Seminar  & \textit{Large-scale Graph Anomaly Detection} & \hfill Oct. 2022 \\
+Intuit  & \textit{Anomaly Detection for Financial Risk Modeling} & \hfill Aug. 2022 \\
+Rice University  & \textit{Large-scale Anomaly Detection with Automation} & \hfill Sep. 2022 \\
+Microsoft Research  & \textit{Weakly-supervised Anomaly Detection} & \hfill Sep. 2022 \\
+Wells Fargo  & \textit{Anomaly Detection for Financial Risk Modeling} & \hfill Aug. 2022 \\
+Columbia University  & \textbf{Guest Lecture} \textit{Anomaly Detection} & \hfill Jul. 2022 \\ 
+Morgan Stanley  & \textit{Automated Outlier Detection} & \hfill Jun. 2022 \\
+Microsoft Research  & \textit{Automated Outlier Detection} & \hfill Jun. 2022 \\
+Morgan Stanley  & \textit{Large-scale Anomaly Detection Systems} & \hfill Mar. 2022 \\
+Rutgers Business School  & \textit{Outlier Model Selection} & \hfill Mar. 2022 \\
+Tesla  & \textit{Large-scale Anomaly Detection Systems} & \hfill Feb. 2022 \\
+Catalyst, CMU  & \textit{Systems for Data Mining Algorithms} & \hfill Dec. 2021 \\
+% \end{tabular}\\
+% \begin{tabular}{@{}p{1.64in}p{3.38in}p{0.64in}}
+E\&Y Canada  & \textit{ML applications in Data Analytics} & \hfill Oct. 2021 \\
+University of Nottingham  & \textit{General Machine Learning Applications} & \hfill Jan. 2021 \\
+\end{tabularx}
+
+
+
+\end{resume}
+\end{document}
