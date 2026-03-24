@@ -11,7 +11,7 @@ on:
       - 'scripts/sync_open_source_metadata.mjs'
       - '.github/workflows/build-cv.yml'
   schedule:
-    - cron: '0 9 * * *'   # Daily 9:00 UTC — refresh stars/dates
+    - cron: '0 9 * * 1,3,5'   # Mon/Wed/Fri 9:00 UTC — refresh stars/dates
   workflow_dispatch:
 
 jobs:
