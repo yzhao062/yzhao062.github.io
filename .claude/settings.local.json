@@ -31,7 +31,13 @@
       "Bash(bash .agent-config/bootstrap.sh)",
       "Bash(/c/Users/yuezh/miniforge3/envs/py312/python.exe -m json.tool /c/Users/yuezh/PycharmProjects/yzhao062.github.io/data/publications.json)",
       "Bash(/c/Users/yuezh/miniforge3/envs/py312/python.exe /tmp/deep_check.py)",
-      "Bash(LLM Agents\" \\(arXiv:2603.19423\\) to publications.html and bib:*)"
+      "Bash(LLM Agents\" \\(arXiv:2603.19423\\) to publications.html and bib:*)",
+      "Bash(python3 -c \":*)",
+      "Bash(cd:*)",
+      "Bash(grep -c '\\\\\\\\item' cv/cv-full.tex)",
+      "Bash(grep -c '\\\\\\\\item.*``' cv/cv-full.tex)",
+      "Bash(grep -c '\\\\\\\\item.*\\\\\\\\`\\\\\\\\`' cv/cv-full.tex)",
+      "Bash(22)"
     ]
   }
 }
