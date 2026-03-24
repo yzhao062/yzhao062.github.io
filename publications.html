@@ -241,6 +241,10 @@
                                 if (!recentList || !olderList || !olderWrapper) return;
 
                                 var filtered = items.filter(function(item) {
+                                    if (item.show_on_website === false) return false;
+                                    if (section === 'conference') {
+                                        return item.section === 'conference' || item.section === 'workshop';
+                                    }
                                     return item.section === section;
                                 });
 
