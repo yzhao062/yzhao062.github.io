@@ -1,4 +1,7 @@
-﻿# JetBrains / IntelliJ / PyCharm
+﻿# macOS metadata
+.DS_Store
+
+# JetBrains / IntelliJ / PyCharm
 .idea/
 *.iml
 
