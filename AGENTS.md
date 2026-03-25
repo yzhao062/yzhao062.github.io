@@ -92,6 +92,12 @@ Add `.agent-config/` to the project's `.gitignore` so fetched files are not comm
 - Do not use Unicode character `U+202F`.
 - Avoid heavy dash use.
 
+## Git Safety
+
+- **Never run `git commit` or `git push` without explicit user approval.** Always show the proposed action and ask for confirmation before executing.
+- This rule is non-negotiable and applies to all projects that consume this shared config.
+- This includes any variant: `git commit -m`, `git commit --amend`, `git push`, `git push --force`, `gh pr create` (which pushes), etc.
+
 ## Environment Notes
 
 - Prefer a Miniforge-managed Python interpreter.
