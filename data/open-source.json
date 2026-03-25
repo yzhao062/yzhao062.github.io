@@ -263,7 +263,7 @@
     "description": "An open-source tool for AI auditing and assurance in agent systems, with OWASP Agentic Top 10 coverage, taint analysis, and MCP configuration auditing.",
     "repo_url": "https://github.com/HeadyZhang/agent-audit",
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/agent-audit.html",
-    "paper_url": "",
+    "paper_url": "https://arxiv.org/abs/2603.22853",
     "demo_url": "https://pypi.org/project/agent-audit/",
     "stars": 122,
     "tags": [

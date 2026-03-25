@@ -1099,6 +1099,22 @@
         "abstract": "AI agents increasingly act through external tools: they query databases, execute shell commands, read and write files, and send network requests. Yet in most current agent stacks, model-generated tool calls are handed to the execution layer with no framework-agnostic control point in between. Post-execution observability can record these actions, but it cannot stop them before side effects occur. We present AEGIS, a pre-execution firewall and audit layer for AI agents. AEGIS interposes on the tool-execution path and applies a three-stage pipeline: (i) deep string extraction from tool arguments, (ii) content-first risk scanning, and (iii) composable policy validation. High-risk calls can be held for human approval, and all decisions are recorded in a tamper-evident audit trail based on Ed25519 signatures and SHA-256 hash chaining. In the current implementation, AEGIS supports 14 agent frameworks across Python, JavaScript, and Go with lightweight integration. On a curated suite of 48 attackinstances, AEGIS blocks all attacks in the suite before execution; on 500 benign tool calls, it yields a 1.2% false positive rate; and across 1,000 consecutive interceptions, it adds 8.3 ms median latency. The live demo will show end-to-end interception of benign, malicious, and human-escalated tool calls, allowing attendees to observe real-time blocking, approval workflows, and audit-trail generation. These results suggest that pre-execution mediation for AI agents can be practical, low-overhead, and directly deployable."
     },
     {
+        "id": "preprint-agent-audit",
+        "section": "preprint",
+        "title": "Agent Audit: A Security Analysis System for LLM Agent Applications",
+        "paper_url": "https://arxiv.org/abs/2603.22853",
+        "authors": "Haiyue Zhang, Yi Nian, Yue Zhao",
+        "venue": "arXiv preprint",
+        "year": 2026,
+        "links": [
+            {
+                "type": "github",
+                "url": "https://github.com/HeadyZhang/agent-audit"
+            }
+        ],
+        "abstract": "What should a developer inspect before deploying an LLM agent: the model, the tool code, the deployment configuration, or all three? In practice, many security failures in agent systems arise not from model weights alone, but from the surrounding software stack: tool functions that pass untrusted inputs to dangerous operations, exposed credentials in deployment artifacts, and over-privileged Model Context Protocol (MCP) configurations. We present Agent Audit, a security analysis system for LLM agent applications. Agent Audit analyzes Python agent code and deployment artifacts through an agent-aware pipeline that combines dataflow analysis, credential detection, structured configuration parsing, and privilege-risk checks. The system reports findings in terminal, JSON, and SARIF formats, enabling direct integration with local development workflows and CI/CD pipelines. On a benchmark of 22 samples with 42 annotated vulnerabilities, Agent Audit detects 40 vulnerabilities with 6 false positives, substantially improving recall over common SAST baselines while maintaining sub-second scan times."
+    },
+    {
         "id": "preprint-agent-banana",
         "section": "preprint",
         "title": "Agent Banana: High-Fidelity Image Editing with Agentic Thinking and Tooling",
