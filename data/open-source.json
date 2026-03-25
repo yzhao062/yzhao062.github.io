@@ -8,7 +8,7 @@
     "docs_url": "https://pyod.readthedocs.io",
     "paper_url": "https://arxiv.org/abs/2412.12154",
     "demo_url": "",
-    "stars": 9761,
+    "stars": 9763,
     "tags": [
       "Anomaly Detection",
       "Outlier Detection",
@@ -27,7 +27,7 @@
     "docs_url": "https://usc-fortis.github.io/AD-AGENT/",
     "paper_url": "https://arxiv.org/abs/2505.12594",
     "demo_url": "",
-    "stars": 95,
+    "stars": 96,
     "tags": [
       "LLM Agents",
       "Anomaly Detection",
@@ -101,7 +101,7 @@
     "docs_url": "",
     "paper_url": "https://proceedings.neurips.cc/paper_files/paper/2022/hash/da0ddd47c18ae3dd2888ff2ea4b6ccf7-Abstract-Datasets_and_Benchmarks.html",
     "demo_url": "",
-    "stars": 1007,
+    "stars": 1008,
     "tags": [
       "Anomaly Detection",
       "Benchmark",
@@ -265,7 +265,7 @@
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/agent-audit.html",
     "paper_url": "https://arxiv.org/abs/2603.22853",
     "demo_url": "https://pypi.org/project/agent-audit/",
-    "stars": 122,
+    "stars": 123,
     "tags": [
       "AI Agent Security",
       "Security Audit",
@@ -273,7 +273,7 @@
       "MCP",
       "Taint Analysis"
     ],
-    "last_updated_at": "2026-03-24T02:26:14Z"
+    "last_updated_at": "2026-03-25T01:44:05Z"
   },
   {
     "name": "Aegis",
@@ -284,7 +284,7 @@
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/aegis.html",
     "paper_url": "https://arxiv.org/abs/2603.12621",
     "demo_url": "https://github.com/Justin0504/Aegis/blob/main/docs/images/readme_demo1.gif",
-    "stars": 273,
+    "stars": 276,
     "tags": [
       "AI Agent Security",
       "Policy Enforcement",
