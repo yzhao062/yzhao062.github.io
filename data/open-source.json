@@ -138,7 +138,7 @@
     "docs_url": "",
     "paper_url": "",
     "demo_url": "",
-    "stars": 1543,
+    "stars": 1544,
     "tags": [
       "Writing",
       "Research Workflow",
@@ -265,7 +265,7 @@
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/agent-audit.html",
     "paper_url": "https://arxiv.org/abs/2603.22853",
     "demo_url": "https://pypi.org/project/agent-audit/",
-    "stars": 123,
+    "stars": 127,
     "tags": [
       "AI Agent Security",
       "Security Audit",
