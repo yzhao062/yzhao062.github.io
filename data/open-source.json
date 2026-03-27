@@ -101,7 +101,7 @@
     "docs_url": "",
     "paper_url": "https://proceedings.neurips.cc/paper_files/paper/2022/hash/da0ddd47c18ae3dd2888ff2ea4b6ccf7-Abstract-Datasets_and_Benchmarks.html",
     "demo_url": "",
-    "stars": 1008,
+    "stars": 1010,
     "tags": [
       "Anomaly Detection",
       "Benchmark",
@@ -119,7 +119,7 @@
     "docs_url": "",
     "paper_url": "",
     "demo_url": "",
-    "stars": 9208,
+    "stars": 9211,
     "tags": [
       "Awesome List",
       "Anomaly Detection",
@@ -138,7 +138,7 @@
     "docs_url": "",
     "paper_url": "",
     "demo_url": "",
-    "stars": 1544,
+    "stars": 1545,
     "tags": [
       "Writing",
       "Research Workflow",
@@ -174,7 +174,7 @@
     "docs_url": "https://docs.pygod.org",
     "paper_url": "http://jmlr.org/papers/v25/23-0963.html",
     "demo_url": "",
-    "stars": 1482,
+    "stars": 1483,
     "tags": [
       "Graph Anomaly Detection",
       "PyTorch Geometric",
@@ -265,7 +265,7 @@
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/agent-audit.html",
     "paper_url": "https://arxiv.org/abs/2603.22853",
     "demo_url": "https://pypi.org/project/agent-audit/",
-    "stars": 127,
+    "stars": 132,
     "tags": [
       "AI Agent Security",
       "Security Audit",
@@ -284,7 +284,7 @@
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/aegis.html",
     "paper_url": "https://arxiv.org/abs/2603.12621",
     "demo_url": "https://github.com/Justin0504/Aegis/blob/main/docs/images/readme_demo1.gif",
-    "stars": 276,
+    "stars": 296,
     "tags": [
       "AI Agent Security",
       "Policy Enforcement",
@@ -292,7 +292,7 @@
       "Audit Trail",
       "Human-in-the-Loop"
     ],
-    "last_updated_at": "2026-03-17T04:30:04Z"
+    "last_updated_at": "2026-03-26T20:45:17Z"
   },
   {
     "name": "combo",
@@ -303,7 +303,7 @@
     "docs_url": "https://pycombo.readthedocs.io",
     "paper_url": "https://aaai.org/papers/13648-combining-machine-learning-models-using-combo-library/",
     "demo_url": "",
-    "stars": 660,
+    "stars": 659,
     "tags": [
       "Ensemble Learning",
       "Model Combination",
