@@ -69,6 +69,12 @@ Add `.agent-config/` to the project's `.gitignore` so fetched files are not comm
 - The user is a computer scientist and professor working in machine learning and AI.
 - Common tasks include research papers, funding proposals, scientific writing, and administrative writing.
 
+## Agent Roles
+
+- **Claude Code** is the primary workhorse — drafting, implementation, research, and heavy-lifting tasks.
+- **Codex** is the gatekeeper — review, feedback, and quality checks on work produced by Claude Code or the user.
+- When both agents are available, default to this division of labor unless the user overrides it.
+
 ## Writing Defaults
 
 - Use scientifically accessible language.
@@ -107,6 +113,23 @@ Add `.agent-config/` to the project's `.gitignore` so fetched files are not comm
 - On macOS or Linux, a common Miniforge pattern is `$HOME/miniforge3/envs/py312/bin/python`.
 - If interpreter selection is still unclear, inspect Miniforge environments and local IDE settings before reporting that Python is missing.
 - GitHub CLI (`gh`) is used for PR and issue workflows. If `gh` is not found, remind the user to install it (`winget install GitHub.cli` on Windows, `brew install gh` on macOS) and authenticate with `gh auth login`.
+- **Claude Code installation**: Always use the **native installer** so that auto-update works. npm and winget installs require manual updates and should be migrated.
+  - macOS: `curl -fsSL https://claude.ai/install.sh | sh`
+  - Windows (PowerShell, no admin): `irm https://claude.ai/install.ps1 | iex` (requires Git for Windows)
+  - To migrate from npm: `npm uninstall -g @anthropic-ai/claude-code` first. From winget: `winget uninstall Anthropic.ClaudeCode` first.
+  - Update channel can be set via `/config` inside Claude Code (`stable` or `latest`).
+
+## Submodule Workflow
+
+- Some projects use git submodules for directories shared with collaborators (e.g., co-PI proposal repos, shared paper repos linked to Overleaf).
+- At session start, if `.gitmodules` exists, run `git submodule status` to check submodule state. If submodules are uninitialized (prefix `-`), warn the user and suggest `git submodule update --init`.
+- Submodule directories have their own `.git` and `origin` remote. Commits and pushes inside a submodule go to the submodule's upstream repo, not the parent.
+- When the user asks to push or pull a submodule:
+  1. `cd` into the submodule directory.
+  2. Run git operations (always confirm with user first per Git Safety rules).
+  3. Return to the parent repo and update the submodule pointer: `git add <submodule-path>` then commit.
+- Submodules may have a `.gitignore` that excludes internal-only files (e.g., `context/`, `.agent/`, `guardrail/`). These files exist on disk but are not pushed to the collaborator repo. On a fresh clone, they will be missing — warn the user if expected internal directories are absent.
+- Project-specific submodule details (which directories, which upstream repos, which files are internal-only) belong in `CLAUDE.md` in each project repo, not here.
 
 ## Submodule Workflow
 
