@@ -316,6 +316,88 @@ def check_local_refs(errors: list[str]) -> None:
                 )
 
 
+def _normalize_title(text: str) -> str:
+    """Mirror the normalizeTitle() function in bib-viewer.html."""
+    t = text.lower().replace("&amp;", "and")
+    t = t.replace("{", "").replace("}", "")
+    return re.sub(r"[^a-z0-9]+", "", t)
+
+
+def _extract_bib_titles(bib_text: str) -> list[str]:
+    """Return a list of normalised titles from a .bib file.
+
+    BibTeX titles use nested braces (e.g. ``title = {{XGBOD}: Improving ...}``),
+    so a simple non-greedy regex would stop at the first ``}``.  Instead we
+    find the ``title = {`` prefix and then walk the string counting brace depth.
+    """
+    titles: list[str] = []
+    for match in re.finditer(r"(?<![a-zA-Z])title\s*=\s*\{", bib_text, re.IGNORECASE):
+        start = match.end()
+        depth = 1
+        i = start
+        while i < len(bib_text) and depth > 0:
+            if bib_text[i] == "{":
+                depth += 1
+            elif bib_text[i] == "}":
+                depth -= 1
+            i += 1
+        raw = bib_text[start : i - 1] if depth == 0 else bib_text[start:]
+        titles.append(_normalize_title(raw))
+    return titles
+
+
+def check_bib_coverage(errors: list[str], warnings: list[str]) -> None:
+    """Ensure every publications.json entry has a matching bib entry."""
+    pub_path = ROOT / "data" / "publications.json"
+    bib_path = ROOT / "files" / "yue-zhao.bib"
+
+    pubs = load_json(pub_path, errors)
+    if not isinstance(pubs, list):
+        return
+    bib_text = read_text(bib_path, errors)
+    if not bib_text:
+        return
+
+    bib_titles = _extract_bib_titles(bib_text)
+
+    missing: list[str] = []
+    for item in pubs:
+        if not isinstance(item, dict):
+            continue
+        title = str(item.get("title", "")).strip()
+        if not title:
+            continue
+        norm = _normalize_title(title)
+        if not norm:
+            continue
+
+        # Replicate bib-viewer.html matching: exact, colon-suffix, or prefix-12
+        matched = norm in bib_titles
+        if not matched and ":" in title:
+            tail = _normalize_title(title.split(":", 1)[1])
+            if tail and tail in bib_titles:
+                matched = True
+        if not matched:
+            prefix = norm[:24]
+            if prefix and any(prefix in bt for bt in bib_titles):
+                matched = True
+        if not matched:
+            short = norm[:12]
+            if short and any(short in bt for bt in bib_titles):
+                matched = True
+
+        if not matched:
+            missing.append(item.get("id", title))
+
+    if missing:
+        for pid in missing:
+            errors.append(f"No matching bib entry for publication: {pid}")
+        errors.append(
+            f"publications/bib mismatch: {len(missing)} of {len(pubs)} "
+            "publications have no BibTeX entry in yue-zhao.bib"
+        )
+
+
 def check_bib_viewer_compat(errors: list[str], warnings: list[str]) -> None:
     text = read_text(ROOT / "bib-viewer.html", errors)
     if not text:
@@ -340,6 +422,7 @@ def main() -> None:
     check_page_smoke(errors, warnings)
     check_local_refs(errors)
     check_bib_viewer_compat(errors, warnings)
+    check_bib_coverage(errors, warnings)
     check_utf8_bom(errors)
     check_public_urls(errors, warnings)
 
