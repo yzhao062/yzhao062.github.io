@@ -9,6 +9,7 @@
     "status_text": "Master Student → Machine Learning Engineer at TikTok",
     "email": "peilinca@usc.edu",
     "publications": [
+      "A Personalized Conversational Benchmark: Towards Simulating Personalized Conversations, NeurIPS Workshop on Multi-Turn Interactions in Large Language Models (MTI-LLM), 2025, Spotlight Paper",
       "Secure On-Device Video OOD Detection Without Backpropagation, ICCV 2025"
     ]
   },
@@ -42,6 +43,7 @@
     "status_text": "Master Student",
     "email": "jli77629@usc.edu",
     "publications": [
+      "PyOD 2: A Python Library for Outlier Detection with LLM-powered Model Selection, The Web Conference (Demo Track), 2025",
       "NLP-ADBench: NLP Anomaly Detection Benchmark, Findings of EMNLP 2025",
       "AD-LLM: Benchmarking Large Language Models for Anomaly Detection, Findings of ACL 2025"
     ]
@@ -249,6 +251,7 @@
     "status_text": "Master Student → System Software Engineer at NVIDIA",
     "email": "zhuoxiao@usc.edu",
     "publications": [
+      "PyOD 2: A Python Library for Outlier Detection with LLM-powered Model Selection, The Web Conference (Demo Track), 2025",
       "NLP-ADBench: NLP Anomaly Detection Benchmark, Findings of EMNLP 2025",
       "AD-LLM: Benchmarking Large Language Models for Anomaly Detection, Findings of ACL 2025"
     ]

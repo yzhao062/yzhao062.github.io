@@ -20,7 +20,7 @@ When the user adds or updates content that exists in both the website and the CV
 | **Open-source project** | `data/open-source.json` | `cv/open-source.tex` (**auto-generated**) | Edit JSON only, then run `python scripts/generate_cv_open_source.py`. Do NOT edit `cv/open-source.tex` directly. |
 | **Research direction / keywords** | `index.html` (Research section) | `cv/cv-full.tex` (Research Summary section) | Keep the three-pillar structure consistent. |
 | **News item** | `index.html` (News section) | — | Website only. |
-| **Lab member** (non-PhD) | `data/lab-members.json` | — | Website only. |
+| **Lab member** (non-PhD) | `data/lab-members.json` | — | Website only. When adding a new member, check `data/publications.json` for their published papers and populate the `publications` field. |
 | **Talks** | — | `cv/cv-full.tex` (Talks section) | CV only (not on website currently). |
 | **Student committee** | — | `cv/cv-full.tex` (Student Committee section) | CV only. |
 
@@ -76,3 +76,4 @@ AWARD_NAME & TYPE & DATE \\
 - When adding a preprint, default to **CV only** unless the user says to add it to the website too.
 - Always preserve reverse chronological ordering in both places.
 - Run `python scripts/generate_cv_open_source.py` after any change to `data/open-source.json`.
+- **Publication ↔ lab-members sync**: When adding a new published paper to `data/publications.json`, check if any non-PhD lab member (in `data/lab-members.json`) is a co-author. If so, add the paper to their `publications` array. Note that author names may differ between the two files (e.g., display name vs legal name), so match carefully. Only list published papers with a venue, not arXiv-only preprints.
