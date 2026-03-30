@@ -131,18 +131,6 @@ Add `.agent-config/` to the project's `.gitignore` so fetched files are not comm
 - Submodules may have a `.gitignore` that excludes internal-only files (e.g., `context/`, `.agent/`, `guardrail/`). These files exist on disk but are not pushed to the collaborator repo. On a fresh clone, they will be missing — warn the user if expected internal directories are absent.
 - Project-specific submodule details (which directories, which upstream repos, which files are internal-only) belong in `CLAUDE.md` in each project repo, not here.
 
-## Submodule Workflow
-
-- Some projects use git submodules for directories shared with collaborators (e.g., co-PI proposal repos, shared paper repos linked to Overleaf).
-- At session start, if `.gitmodules` exists, run `git submodule status` to check submodule state. If submodules are uninitialized (prefix `-`), warn the user and suggest `git submodule update --init`.
-- Submodule directories have their own `.git` and `origin` remote. Commits and pushes inside a submodule go to the submodule's upstream repo, not the parent.
-- When the user asks to push or pull a submodule:
-  1. `cd` into the submodule directory.
-  2. Run git operations (always confirm with user first per Git Safety rules).
-  3. Return to the parent repo and update the submodule pointer: `git add <submodule-path>` then commit.
-- Submodules may have a `.gitignore` that excludes internal-only files (e.g., `context/`, `.agent/`, `guardrail/`). These files exist on disk but are not pushed to the collaborator repo. On a fresh clone, they will be missing — warn the user if expected internal directories are absent.
-- Project-specific submodule details (which directories, which upstream repos, which files are internal-only) belong in `CLAUDE.md` in each project repo, not here.
-
 ## Local Skills Precedence
 
 - If the workspace contains a `skills/` directory, treat repo-local skills as the default source of truth for that project.

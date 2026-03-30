@@ -129,10 +129,7 @@
     "alt": "Haiyue Zhang",
     "research": "LLM & Agent Security / GEO",
     "status_text": "Master Student",
-    "email": "haiyuez@usc.edu",
-    "publications": [
-      "Agent Audit: A Security Analysis System for LLM Agent Applications, 2025"
-    ]
+    "email": "haiyuez@usc.edu"
   },
   {
     "group": "past",
