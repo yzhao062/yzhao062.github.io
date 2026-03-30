@@ -122,6 +122,19 @@
     ]
   },
   {
+    "group": "current",
+    "name": "Haiyue Zhang",
+    "profile_url": "https://headyzhang.github.io",
+    "image": "images/others/haiyue_zhang.webp",
+    "alt": "Haiyue Zhang",
+    "research": "LLM & Agent Security / GEO",
+    "status_text": "Master Student",
+    "email": "haiyuez@usc.edu",
+    "publications": [
+      "Agent Audit: A Security Analysis System for LLM Agent Applications, 2025"
+    ]
+  },
+  {
     "group": "past",
     "name": "Zheng Yu",
     "profile_url": "https://yuzhengyyds.github.io/",
