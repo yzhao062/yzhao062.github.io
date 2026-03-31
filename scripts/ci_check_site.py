@@ -64,6 +64,7 @@ def check_required_files(errors: list[str]) -> None:
         "assets/vendor/fontawesome/webfonts/fa-v4compatibility.woff2",
         "css/common.css",
         "data/publications.json",
+        "data/open-source.json",
         "data/lab-members.json",
         "data/lab-current-phd.json",
         "files/yue-zhao.bib",
@@ -78,33 +79,78 @@ def check_required_files(errors: list[str]) -> None:
 
 def check_json_files(errors: list[str]) -> None:
     data_dir = ROOT / "data"
+
+    # Parse each file once; store results for per-file field checks below.
+    parsed: dict[str, list | None] = {}
     for path in sorted(data_dir.glob("*.json")):
         obj = load_json(path, errors)
         if obj is None:
+            parsed[path.name] = None
             continue
         if not isinstance(obj, list):
             errors.append(f"Expected top-level JSON array in {path.as_posix()}")
-
-    publications_path = data_dir / "publications.json"
-    publications = load_json(publications_path, errors)
-    if not isinstance(publications, list):
-        return
-
-    ids: set[str] = set()
-    for idx, item in enumerate(publications):
-        if not isinstance(item, dict):
-            errors.append(f"publications.json item #{idx} is not an object")
-            continue
-        pid = str(item.get("id", "")).strip()
-        title = str(item.get("title", "")).strip()
-        if not pid:
-            errors.append(f"publications.json item #{idx} missing non-empty id")
-        elif pid in ids:
-            errors.append(f"Duplicate publication id: {pid}")
+            parsed[path.name] = None
         else:
-            ids.add(pid)
-        if not title:
-            errors.append(f"publications.json item #{idx} missing non-empty title")
+            parsed[path.name] = obj
+
+    # --- publications.json field checks ---
+    publications = parsed.get("publications.json")
+    if isinstance(publications, list):
+        ids: set[str] = set()
+        for idx, item in enumerate(publications):
+            if not isinstance(item, dict):
+                errors.append(f"publications.json item #{idx} is not an object")
+                continue
+            pid = str(item.get("id", "")).strip()
+            title = str(item.get("title", "")).strip()
+            if not pid:
+                errors.append(f"publications.json item #{idx} missing non-empty id")
+            elif pid in ids:
+                errors.append(f"Duplicate publication id: {pid}")
+            else:
+                ids.add(pid)
+            if not title:
+                errors.append(f"publications.json item #{idx} missing non-empty title")
+
+    # --- open-source.json field checks ---
+    os_items = parsed.get("open-source.json")
+    if isinstance(os_items, list):
+        for idx, item in enumerate(os_items):
+            if not isinstance(item, dict):
+                errors.append(f"open-source.json item #{idx} is not an object")
+                continue
+            if not str(item.get("name", "")).strip():
+                errors.append(f"open-source.json item #{idx} missing non-empty name")
+            if not str(item.get("repo_url", "")).strip():
+                errors.append(f"open-source.json item #{idx} missing non-empty repo_url")
+
+    # --- lab-current-phd.json field checks ---
+    phd_items = parsed.get("lab-current-phd.json")
+    if isinstance(phd_items, list):
+        for idx, item in enumerate(phd_items):
+            if not isinstance(item, dict):
+                errors.append(f"lab-current-phd.json item #{idx} is not an object")
+                continue
+            if not str(item.get("name", "")).strip():
+                errors.append(f"lab-current-phd.json item #{idx} missing non-empty name")
+            if not str(item.get("image", "")).strip():
+                errors.append(f"lab-current-phd.json item #{idx} missing non-empty image")
+
+    # --- lab-members.json field checks ---
+    mem_items = parsed.get("lab-members.json")
+    if isinstance(mem_items, list):
+        for idx, item in enumerate(mem_items):
+            if not isinstance(item, dict):
+                errors.append(f"lab-members.json item #{idx} is not an object")
+                continue
+            if not str(item.get("name", "")).strip():
+                errors.append(f"lab-members.json item #{idx} missing non-empty name")
+            group = str(item.get("group", "")).strip()
+            if group not in ("current", "past"):
+                errors.append(
+                    f"lab-members.json item #{idx} ({item.get('name', '?')}): "
+                    f"group must be 'current' or 'past', got '{group}'"
+                )
 
 
 def read_text(path: Path, errors: list[str]) -> str:
@@ -246,6 +292,7 @@ def check_page_smoke(errors: list[str], warnings: list[str]) -> None:
         ROOT / "index.html",
         ROOT / "lab.html",
         ROOT / "publications.html",
+        ROOT / "opensource.html",
         ROOT / "services.html",
         ROOT / "teaching.html",
     ]
