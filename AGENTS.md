@@ -85,10 +85,11 @@ Add `.agent-config/` to the project's `.gitignore` so fetched files are not comm
 - **Gotcha:** Do not register under a project scope (e.g., from a specific working directory without `-s user`). That creates a project-scoped entry under `projects["<path>"].mcpServers` in `~/.claude.json`, which does not propagate to other directories.
 - Prerequisites: Node.js installed, Codex CLI installed (`npm install -g @openai/codex`), and `OPENAI_API_KEY` set.
 - MCP tools available after registration: `codex` (new prompt) and `codex-reply` (continue an existing session).
-- On Windows, if `PATH` does not include the npm global bin, register with the full path:
+- **Windows note:** Claude Code launches MCP servers through bash, not cmd or PowerShell. This means `.cmd` wrappers and PowerShell variables like `$env:APPDATA` do not work. If `codex` is not on `PATH`, use the full path with forward slashes and **no `.cmd` extension** (npm installs a bash-compatible script alongside the `.cmd`):
   ```
-  claude mcp add codex -s user -- $env:APPDATA\npm\codex.cmd mcp-server
+  claude mcp add codex -s user -- C:/Users/<you>/AppData/Roaming/npm/codex mcp-server
   ```
+  Run `where codex` (cmd) or `Get-Command codex` (PowerShell) to find the actual path.
 - The official `codex-plugin-cc` plugin has sandbox issues on Windows; the MCP approach is more stable.
 
 ## Writing Defaults
