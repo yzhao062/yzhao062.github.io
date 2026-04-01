@@ -34,13 +34,13 @@
     "email": "deyanghs@usc.edu"
   },
   {
-    "group": "current",
+    "group": "past",
     "name": "Bourne Li",
-    "profile_url": "https://www.linkedin.com/in/bourne-li-a9a899231/",
+    "profile_url": "https://www.linkedin.com/in/bourneljq/",
     "image": "images/others/li.webp",
     "alt": "Bourne Li",
     "research": "NLP, Distributed Systems",
-    "status_text": "Master Student",
+    "status_text": "Master Student → Starting a Business",
     "email": "jli77629@usc.edu",
     "publications": [
       "PyOD 2: A Python Library for Outlier Detection with LLM-powered Model Selection, The Web Conference (Demo Track), 2025",
