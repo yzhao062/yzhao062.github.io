@@ -165,7 +165,7 @@
         "section": "conference",
         "title": "AD-LLM: Benchmarking Large Language Models for Anomaly Detection",
         "paper_url": "https://arxiv.org/abs/2412.11142",
-        "authors": "Tiankai Yang†, Yi Nian†, Shawn Li, Ruiyao Xu, Yuangang Li, Jiaqi Li, Xiyang Hu, Ryan Rossi, Kaize Ding, Xia Hu, Yue Zhao.",
+        "authors": "Tiankai Yang†, Yi Nian†, Li Li, Ruiyao Xu, Yuangang Li, Jiaqi Li, Zhuo Xiao, Xiyang Hu, Ryan A. Rossi, Kaize Ding, Xia Hu, Yue Zhao.",
         "venue": "ACL (Findings), 2025",
         "year": 2025,
         "links": [

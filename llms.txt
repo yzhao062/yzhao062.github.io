@@ -1,0 +1,45 @@
+# Yue Zhao — AI Auditing
+
+> Yue Zhao is an Assistant Professor of Computer Science at the University of Southern California (USC), where he leads the FORTIS Lab. His research focuses on AI auditing — building methods, benchmarks, and open-source tools that make AI systems inspectable, safe, and accountable.
+
+## Research Areas
+
+- **AI Auditing & Assurance**: execution tracing, audit-ready evidence, policy and behavior checking, ecosystem-scale risk scanning, runtime monitoring, agent skill evaluation
+- **AI Safety & Security**: hallucinations, jailbreaks, prompt attacks, privacy leakage, model extraction, runtime guardrails, policy enforcement
+- **AI for Science & Society**: climate and weather forecasting, healthcare and biomedicine, computational social systems
+
+## Key Pages
+
+- [Homepage](https://viterbi-web.usc.edu/~yzhao010/): bio, research summary, news, and openings
+- [FORTIS Lab](https://viterbi-web.usc.edu/~yzhao010/lab.html): current PhD students, lab members, and alumni
+- [Publications](https://viterbi-web.usc.edu/~yzhao010/publications.html): full publication list with abstracts and links
+- [Open Source](https://viterbi-web.usc.edu/~yzhao010/opensource.html): open-source projects with GitHub stars, docs, and paper links
+- [agent-audit](https://viterbi-web.usc.edu/~yzhao010/agent-audit.html): security auditing tool for AI agent code
+- [Aegis](https://viterbi-web.usc.edu/~yzhao010/aegis.html): open-source firewall for AI agents
+- [Teaching](https://viterbi-web.usc.edu/~yzhao010/teaching.html): courses taught at USC
+- [Services](https://viterbi-web.usc.edu/~yzhao010/services.html): editorial and reviewing roles
+- [Collaboration](https://viterbi-web.usc.edu/~yzhao010/collaboration.html): collaboration scope and contact details
+
+## Structured Data (JSON)
+
+These files are directly accessible and contain machine-readable data:
+
+- [publications.json](https://viterbi-web.usc.edu/~yzhao010/data/publications.json): all publications with id, title, authors, venue, year, abstract, and links
+- [open-source.json](https://viterbi-web.usc.edu/~yzhao010/data/open-source.json): open-source projects with name, description, repo URL, docs URL, stars, and tags
+- [lab-members.json](https://viterbi-web.usc.edu/~yzhao010/data/lab-members.json): all lab members (current and past) with name, research area, status_text, and publications
+- [lab-current-phd.json](https://viterbi-web.usc.edu/~yzhao010/data/lab-current-phd.json): current PhD students with name, year_info, research area, awards, and email
+
+## Flagship Open-Source Projects
+
+- [PyOD](https://github.com/yzhao062/pyod): Python library for outlier and anomaly detection (9,700+ stars)
+- [agent-audit](https://github.com/HeadyZhang/agent-audit): security auditing tool for AI agent code with OWASP Agentic Top 10 checks
+- [Aegis](https://github.com/Justin0504/Aegis): open-source firewall for AI agents with pre-execution blocking and audit trails
+- [TrustLLM](https://github.com/HowieHwong/TrustLLM): trustworthiness benchmark for large language models
+- [AD-AGENT](https://github.com/USC-FORTIS/AD-AGENT): LLM-driven multi-agent anomaly detection platform
+
+## Contact
+
+- Lab email: fortis@usc.edu
+- GitHub: [yzhao062](https://github.com/yzhao062)
+- Google Scholar: [Yue Zhao](https://scholar.google.com/citations?user=zoGDYsoAAAAJ)
+- LinkedIn: [yzhao062](https://www.linkedin.com/in/yzhao062/)
