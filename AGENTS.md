@@ -1,14 +1,14 @@
 > If this file was fetched into `.agent-config/AGENTS.md`, treat the bootstrap block below as copy-paste setup for project repos, not as runtime instructions to execute again.
 > In the fetched copy, read and follow the shared rules starting at `## User Profile`.
 
-## Bootstrap — Shared Config and Skills
+## Bootstrap: Shared Config and Skills
 
 This file is the shared agent configuration hosted at `https://github.com/yzhao062/agent-config`.
 Project repos should include the following bootstrap block in their own `AGENTS.md` so that agents automatically pull the latest shared defaults and skills before starting any task.
 
 ### Bootstrap block for project repos
 
-Copy the block below into the top of each project repo's `AGENTS.md`. Project-local rules written after the bootstrap block override anything fetched here.
+Copy the block below into the top of each project repo's `AGENTS.md`. Because bootstrap overwrites `AGENTS.md` on every run, put project-local overrides in `AGENTS.local.md`.
 
 ````
 ## Shared Agent Config (auto-fetched)
@@ -33,7 +33,7 @@ bash .agent-config/bootstrap.sh
 
 This bootstrap flow refreshes the consuming repo's root `AGENTS.md` to match the shared copy. If a project later needs repo-local overrides, put them in `AGENTS.local.md`.
 
-Read and follow the rules in `.agent-config/AGENTS.md` as baseline defaults. Any rule defined later in this file overrides the shared default.
+Read and follow the rules in `.agent-config/AGENTS.md` as baseline defaults. Any rule in `AGENTS.local.md` overrides the shared default.
 When a skill is invoked, read its SKILL.md from `.agent-config/repo/skills/<skill-name>/SKILL.md`.
 If a local `skills/<skill-name>/SKILL.md` exists in the project repo, the local copy takes precedence.
 Copying `.agent-config/repo/.claude/commands/*.md` only overwrites command files with the same name as the shared repo and does not delete unrelated project-local commands.
@@ -46,14 +46,14 @@ Add `.agent-config/` to the project's `.gitignore` so fetched files are not comm
 | Content | Source | How fetched |
 |---------|--------|-------------|
 | User profile, writing defaults, formatting rules, environment notes | `AGENTS.md` (this file) | `curl` raw file |
-| Shared skills (`dual-pass-workflow`, etc.) | `skills/` directory (committed only) | sparse `git clone` |
+| Shared skills (`dual-pass-workflow`, `bibref-filler`, `figure-prompt-builder`, etc.) | `skills/` directory (committed only) | sparse `git clone` |
 | Claude pointer commands for shared skills | `.claude/commands/` | sparse `git clone` plus non-destructive copy into the project `.claude/commands/` |
 | Claude project defaults (`effortLevel`, `permissions`, etc.) | `.claude/settings.json` | sparse `git clone` plus key-level merge into the project `.claude/settings.json` on every run |
 
 ### Override rules
 
 - If `AGENTS.local.md` exists in the project root, read and follow it after `AGENTS.md`. Rules in `AGENTS.local.md` override the shared defaults.
-- Project-local `AGENTS.md` rules always win over shared defaults.
+- Rules in `AGENTS.local.md` always win over shared defaults. Do not edit the root `AGENTS.md` for local overrides, as bootstrap will overwrite it.
 - Project-local `skills/<name>/SKILL.md` always wins over the shared copy of the same skill.
 - Shared keys in `.claude/settings.json` are updated on every bootstrap run. Project-only keys are preserved. To override a shared key locally, use `.claude/settings.local.json`.
 - If a shared skill does not exist locally, the agent should use the fetched copy from `.agent-config/repo/skills/`.
@@ -68,6 +68,29 @@ Add `.agent-config/` to the project's `.gitignore` so fetched files are not comm
 - These are user-level defaults that can be reused across projects unless a local repo rule or task-specific instruction is stricter.
 - The user is a computer scientist and professor working in machine learning and AI.
 - Common tasks include research papers, funding proposals, scientific writing, and administrative writing.
+
+## Agent Roles
+
+- **Claude Code** is the primary workhorse: drafting, implementation, research, and heavy-lifting tasks.
+- **Codex** is the gatekeeper: review, feedback, and quality checks on work produced by Claude Code or the user.
+- When both agents are available, default to this division of labor unless the user overrides it.
+
+## Codex MCP Integration
+
+- Codex is available to Claude Code as an MCP server. Register it once at the user level so it applies to all projects and terminals (including PyCharm):
+  ```
+  claude mcp add codex -s user -- codex mcp-server
+  ```
+- This writes to `~/.claude.json` top-level `mcpServers`. A session restart is required after registration for `/mcp` to pick it up.
+- **Gotcha:** Do not register under a project scope (e.g., from a specific working directory without `-s user`). That creates a project-scoped entry under `projects["<path>"].mcpServers` in `~/.claude.json`, which does not propagate to other directories.
+- Prerequisites: Node.js installed, Codex CLI installed (`npm install -g @openai/codex`), and `OPENAI_API_KEY` set.
+- MCP tools available after registration: `codex` (new prompt) and `codex-reply` (continue an existing session).
+- **Windows note:** Claude Code launches MCP servers through bash, not cmd or PowerShell. This means `.cmd` wrappers and PowerShell variables like `$env:APPDATA` do not work. If `codex` is not on `PATH`, use the full path with forward slashes and **no `.cmd` extension** (npm installs a bash-compatible script alongside the `.cmd`):
+  ```
+  claude mcp add codex -s user -- C:/Users/<you>/AppData/Roaming/npm/codex mcp-server
+  ```
+  Run `where codex` (cmd) or `Get-Command codex` (PowerShell) to find the actual path.
+- The official `codex-plugin-cc` plugin has sandbox issues on Windows; the MCP approach is more stable.
 
 ## Writing Defaults
 
@@ -90,7 +113,9 @@ Add `.agent-config/` to the project's `.gitignore` so fetched files are not comm
 - Prefer full forms such as `it is` and `he would` rather than contractions.
 - `e.g.,` and `i.e.,` are fine when appropriate.
 - Do not use Unicode character `U+202F`.
-- Avoid heavy dash use.
+- Avoid heavy dash use. Do not use em dashes (`—`) or en dashes (`–`) as casual sentence punctuation. Prefer commas, semicolons, colons, or parentheses instead. En dashes in numeric ranges (e.g., `1–3`, `2020–2025`), paired names, or citations are fine. Normal hyphenation in compound words and technical terms (e.g., `command-line`, `co-PI`, `zero-shot`) is fine and should not be avoided.
+- Break extremely long or complex sentences into shorter, more readable ones. If a sentence has multiple clauses or nested qualifications, split it.
+- Vary sentence length and structure. Prefer not to start several consecutive sentences with the same word or phrase. Avoid overusing transition words like "Additionally" or "Furthermore." Not every paragraph needs a tidy summary sentence at the end. Mix short, direct sentences with longer ones to keep the writing natural.
 
 ## Git Safety
 
@@ -107,6 +132,24 @@ Add `.agent-config/` to the project's `.gitignore` so fetched files are not comm
 - On macOS or Linux, a common Miniforge pattern is `$HOME/miniforge3/envs/py312/bin/python`.
 - If interpreter selection is still unclear, inspect Miniforge environments and local IDE settings before reporting that Python is missing.
 - GitHub CLI (`gh`) is used for PR and issue workflows. If `gh` is not found, remind the user to install it (`winget install GitHub.cli` on Windows, `brew install gh` on macOS) and authenticate with `gh auth login`.
+- **Claude Code installation**: Always use the **native installer** so that auto-update works. npm and winget installs require manual updates and should be migrated.
+  - macOS: `curl -fsSL https://claude.ai/install.sh | sh`
+  - Windows (PowerShell, no admin): `irm https://claude.ai/install.ps1 | iex` (requires Git for Windows)
+  - To migrate from npm: `npm uninstall -g @anthropic-ai/claude-code` first. From winget: `winget uninstall Anthropic.ClaudeCode` first.
+  - Update channel can be set via `/config` inside Claude Code (`stable` or `latest`).
+
+## Submodule Workflow
+
+- Some projects use git submodules for directories shared with collaborators (e.g., co-PI proposal repos, shared paper repos linked to Overleaf).
+- At session start, if `.gitmodules` exists, run `git submodule status` to check submodule state. If submodules are uninitialized (prefix `-`), warn the user and suggest `git submodule update --init`.
+- Submodule directories have their own `.git` and `origin` remote. Commits and pushes inside a submodule go to the submodule's upstream repo, not the parent.
+- When the user asks to push or pull a submodule:
+  1. `cd` into the submodule directory.
+  2. Run git operations (always confirm with user first per Git Safety rules).
+  3. Return to the parent repo and update the submodule pointer: `git add <submodule-path>` then commit.
+- Submodules may have a `.gitignore` that excludes internal-only files (e.g., `.agent/`, `guardrail/`, `figure-spec/`, `figure-src/`). These files exist on disk but are not pushed to the collaborator repo. On a fresh clone, they will be missing. Warn the user if expected internal directories are absent.
+- `context/` is synced to co-PI repos and will be available after submodule init.
+- Project-specific submodule details (which directories, which upstream repos, which files are internal-only) belong in `CLAUDE.md` in each project repo, not here.
 
 ## Local Skills Precedence
 
