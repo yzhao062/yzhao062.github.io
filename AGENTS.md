@@ -1,5 +1,7 @@
+<!-- Quick start: In Claude Code, read @AGENTS.md to run bootstrap, session checks, and task routing -->
+
 > If this file was fetched into `.agent-config/AGENTS.md`, treat the bootstrap block below as copy-paste setup for project repos, not as runtime instructions to execute again.
-> In the fetched copy, read and follow the shared rules starting at `## User Profile`.
+> In the fetched copy, read and follow the shared rules starting at `## Session Start Check`.
 
 ## Bootstrap: Shared Config and Skills
 
@@ -63,6 +65,20 @@ Add `.agent-config/` to the project's `.gitignore` so fetched files are not comm
 <!-- Everything above this line is bootstrap setup instructions. -->
 <!-- Everything below this line contains the shared rules that agents should read and follow. -->
 
+## Session Start Check
+
+After bootstrap, run **all** of the following checks and report results in a short summary. No shell commands are needed — all information is available from session environment and config files. Only flag items that need attention — if everything is correct, a one-line confirmation is sufficient.
+
+1. **OS** -- Read the platform from the session environment (e.g., `win32`, `darwin`, `linux`). Note it for platform-specific behavior (e.g., terminal review path on Windows, MCP on macOS/Linux).
+2. **Claude Code model and effort** (Claude Code sessions only) -- If the live session environment exposes model name and effort level, check them. The user prefers the highest available model (currently Opus) at high effort. If the session is on a different model or effort, mention it once — this is a preference, not a misconfiguration.
+3. **Codex config** -- Read `~/.codex/config.toml` (or `%USERPROFILE%\.codex\config.toml` on Windows). If the file exists, check these keys and report any that are missing or wrong:
+   - `model` should be `"gpt-5.4"` (or the latest available)
+   - `model_reasoning_effort` should be `"xhigh"`
+   - `service_tier` should be `"fast"`
+   - `[features] fast_mode` should be `true`
+   
+   If the file does not exist and Codex is expected, note that too.
+
 ## User Profile
 
 - These are user-level defaults that can be reused across projects unless a local repo rule or task-specific instruction is stricter.
@@ -75,22 +91,52 @@ Add `.agent-config/` to the project's `.gitignore` so fetched files are not comm
 - **Codex** is the gatekeeper: review, feedback, and quality checks on work produced by Claude Code or the user.
 - When both agents are available, default to this division of labor unless the user overrides it.
 
+## Task Routing
+
+- Before starting a task, read the router skill to determine which domain skill to use. Look for it in this order: `skills/my-router/SKILL.md` (repo-local), then `.agent-config/repo/skills/my-router/SKILL.md` (bootstrapped from shared config).
+- The router inspects prompt keywords, file types, and project structure to dispatch automatically. Do not ask the user which skill to use when the routing table provides a clear match.
+- If the `superpowers` plugin is active, the router operates during the execution phase. Superpowers handles the outer workflow (brainstorm, plan, execute, verify); the router handles inner dispatch to the right domain skill.
+- If routing is ambiguous (multiple skills could apply), state the detected context and proposed skill, then ask the user to confirm.
+
 ## Codex MCP Integration
 
 - Codex is available to Claude Code as an MCP server. Register it once at the user level so it applies to all projects and terminals (including PyCharm):
   ```
-  claude mcp add codex -s user -- codex mcp-server
+  claude mcp add codex -s user -- codex mcp-server -c approval_policy=on-failure
   ```
 - This writes to `~/.claude.json` top-level `mcpServers`. A session restart is required after registration for `/mcp` to pick it up.
+- **Migrating an existing registration:** If Codex was registered without `-c approval_policy=on-failure`, remove and re-add:
+  ```
+  claude mcp remove codex -s user
+  claude mcp add codex -s user -- codex mcp-server -c approval_policy=on-failure
+  ```
+  On Windows, adjust the path as shown below.
 - **Gotcha:** Do not register under a project scope (e.g., from a specific working directory without `-s user`). That creates a project-scoped entry under `projects["<path>"].mcpServers` in `~/.claude.json`, which does not propagate to other directories.
 - Prerequisites: Node.js installed, Codex CLI installed (`npm install -g @openai/codex`), and `OPENAI_API_KEY` set.
+- **Recommended Codex defaults (as of April 2026):** Add or update these keys in `~/.codex/config.toml` on macOS/Linux or `%USERPROFILE%\.codex\config.toml` on Windows (create the file if it does not exist) so that both interactive sessions and the MCP server use the recommended default model with fast inference:
+  ```toml
+  model = "gpt-5.4"
+  model_reasoning_effort = "xhigh"
+  service_tier = "fast"
+
+  [features]
+  fast_mode = true
+  ```
+  `service_tier = "fast"` selects the fast inference tier (1.5x speed, no quality reduction). For ChatGPT-authenticated users this costs 2x credits; API-key users pay standard API pricing. The `[features].fast_mode` flag gates the feature and defaults to `true`; set it explicitly alongside `service_tier` to persist the default in `config.toml`. Omit both if you prefer lower cost over latency. The MCP server reads the same `config.toml`, so these settings apply to both interactive sessions and MCP. These settings work identically on macOS, Linux, and Windows.
 - MCP tools available after registration: `codex` (new prompt) and `codex-reply` (continue an existing session).
 - **Windows note:** Claude Code launches MCP servers through bash, not cmd or PowerShell. This means `.cmd` wrappers and PowerShell variables like `$env:APPDATA` do not work. If `codex` is not on `PATH`, use the full path with forward slashes and **no `.cmd` extension** (npm installs a bash-compatible script alongside the `.cmd`):
   ```
-  claude mcp add codex -s user -- C:/Users/<you>/AppData/Roaming/npm/codex mcp-server
+  claude mcp add codex -s user -- C:/Users/<you>/AppData/Roaming/npm/codex mcp-server -c approval_policy=on-failure
   ```
   Run `where codex` (cmd) or `Get-Command codex` (PowerShell) to find the actual path.
-- The official `codex-plugin-cc` plugin has sandbox issues on Windows; the MCP approach is more stable.
+- **MCP approval policy:** By default the Codex MCP server prompts for approval on every shell command, which surfaces as "MCP server requests your input" dialogs in Claude Code. Pass `-c approval_policy=on-failure` in the registration command (shown above) so commands auto-approve and only prompt on failures. The same key can be set in `config.toml` (`approval_policy = "on-failure"`) for interactive sessions.
+- **Bitdefender false positives (Windows):** Bitdefender Advanced Threat Defense may flag Codex and Claude Code shell commands as "Malicious command lines detected." To suppress this, add exceptions in Bitdefender → Protection → Manage Exceptions. For each exception, enable the **Advanced Threat Defense** toggle (not just Antivirus). Recommended exceptions:
+  - `C:\Program Files\nodejs\node.exe` (process)
+  - `C:\Users\<you>\.local\bin\claude.exe` (process)
+  - `C:\Users\<you>\AppData\Roaming\npm\codex` (process)
+  - `C:\Users\<you>\AppData\Roaming\npm\codex.cmd` (process)
+  - `C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe` (process, if Codex invokes PowerShell)
+- **Windows recommendation: use the terminal path.** On Windows (11 Build 26200+), the MCP path still has rough edges — residual approval prompts and Bitdefender false positives add friction even after the mitigations above. The terminal path (relay reviews via the Codex interactive terminal window) avoids both issues. Prefer the terminal path on Windows; use MCP on macOS/Linux where it works smoothly.
 
 ## Writing Defaults
 
@@ -123,6 +169,16 @@ Add `.agent-config/` to the project's `.gitignore` so fetched files are not comm
 - This rule is non-negotiable and applies to all projects that consume this shared config.
 - This includes any variant: `git commit -m`, `git commit --amend`, `git push`, `git push --force`, `gh pr create` (which pushes), etc.
 
+## Shell Command Style
+
+- **Avoid compound `cd <path> && <command>` chains.** Claude Code's hardcoded compound-command protection prompts for approval on these even when both commands are individually allowed. Use alternatives that keep each tool call to a single command:
+  - For git in another repo: use `git -C <path> <subcommand>` instead of `cd <path> && git <subcommand>`.
+  - For non-git commands: pass the target path as an argument (e.g., `ls <path>`, `python <path>/script.py`) or use separate tool calls.
+- Examples of read-only invocations that should not require approval: `git status`, `git diff`, `git log`, `git branch` (no flags), `git show`, `git stash list`, `git remote -v`, `git submodule status`, `git ls-files`, `git tag --list`. Filesystem reads (`ls`, `cat`) and benign local operations (`mkdir`) are also fine.
+- Examples of invocations that always require explicit approval: `git commit`, `git push`, `git reset`, `git checkout`, `git rebase`, `git merge`, `git branch -d`, `git remote add/remove`, `git tag <name>` (creating/deleting), `git stash drop`.
+- Filesystem commands like `cp` and `mv` are fine for scratch and temporary files. Moves or renames that affect git-tracked files should be reviewed before executing.
+- **Avoid inline Python with `#` comments in quoted arguments.** Claude Code flags "newline followed by `#` inside a quoted argument" as a path-hiding risk and prompts for approval. Instead, write the code to a `.py` file and run `python <script>.py`.
+
 ## Environment Notes
 
 - Prefer a Miniforge-managed Python interpreter.
@@ -143,10 +199,11 @@ Add `.agent-config/` to the project's `.gitignore` so fetched files are not comm
 - Some projects use git submodules for directories shared with collaborators (e.g., co-PI proposal repos, shared paper repos linked to Overleaf).
 - At session start, if `.gitmodules` exists, run `git submodule status` to check submodule state. If submodules are uninitialized (prefix `-`), warn the user and suggest `git submodule update --init`.
 - Submodule directories have their own `.git` and `origin` remote. Commits and pushes inside a submodule go to the submodule's upstream repo, not the parent.
+- **Submodules are shared repos.** Pushes land directly in a collaborator's Overleaf project or co-PI repo. A careless force-push or overwrite can destroy someone else's work. Treat every write operation inside a submodule as high-risk.
 - When the user asks to push or pull a submodule:
-  1. `cd` into the submodule directory.
-  2. Run git operations (always confirm with user first per Git Safety rules).
-  3. Return to the parent repo and update the submodule pointer: `git add <submodule-path>` then commit.
+  1. Before writing, run `git -C <submodule-path> fetch` then `git -C <submodule-path> status` to check for uncommitted local changes. Review recent history with `git -C <submodule-path> log --oneline -5` to see local commits and `git -C <submodule-path> log --oneline -5 --remotes` to see recent remote-tracking activity. This is a quick sanity check, not a full divergence analysis; submodules are often in detached-HEAD state where branch comparisons do not apply cleanly.
+  2. Use `git -C <submodule-path>` for git operations inside the submodule. Always confirm with the user before any commit, push, pull, or reset.
+  3. Back in the parent repo, update the submodule pointer: `git add <submodule-path>` then commit (also requires confirmation).
 - Submodules may have a `.gitignore` that excludes internal-only files (e.g., `.agent/`, `guardrail/`, `figure-spec/`, `figure-src/`). These files exist on disk but are not pushed to the collaborator repo. On a fresh clone, they will be missing. Warn the user if expected internal directories are absent.
 - `context/` is synced to co-PI repos and will be available after submodule init.
 - Project-specific submodule details (which directories, which upstream repos, which files are internal-only) belong in `CLAUDE.md` in each project repo, not here.
