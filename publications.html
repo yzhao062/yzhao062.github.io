@@ -393,6 +393,19 @@
                                 })
                                 .catch(function(error) {
                                     console.error(error);
+                                    var blockMsg = '<p class="text-muted">Unable to load publication data. Please try refreshing the page.</p>';
+                                    var listMsg = '<li class="text-muted">Unable to load publication data. Please try refreshing the page.</li>';
+                                    var el;
+                                    el = document.getElementById('preprint-papers-container');
+                                    if (el) el.innerHTML = blockMsg;
+                                    ['conference-papers-list', 'journal-papers-list'].forEach(function(id) {
+                                        el = document.getElementById(id);
+                                        if (el) el.innerHTML = listMsg;
+                                    });
+                                    ['preprint-papers-older-wrapper', 'conference-papers-older-wrapper', 'journal-papers-older-wrapper'].forEach(function(id) {
+                                        el = document.getElementById(id);
+                                        if (el) el.hidden = true;
+                                    });
                                 });
                         });
                     </script>

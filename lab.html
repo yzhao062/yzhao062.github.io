@@ -309,6 +309,8 @@
                             .then(renderCurrentPhdMembers)
                             .catch(function(error) {
                                 console.error(error);
+                                var el = document.getElementById('current-phd-members');
+                                if (el) el.innerHTML = '<p class="text-muted">Unable to load Ph.D. member data. Please try refreshing the page.</p>';
                             });
                     });
                 </script>
@@ -395,6 +397,11 @@
                             })
                             .catch(function(error) {
                                 console.error(error);
+                                var msg = '<p class="text-muted">Unable to load member data. Please try refreshing the page.</p>';
+                                var cur = document.getElementById('current-members');
+                                var past = document.getElementById('past-members');
+                                if (cur) cur.innerHTML = msg;
+                                if (past) past.innerHTML = msg;
                             });
                     });
                 </script>
