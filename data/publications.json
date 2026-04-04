@@ -1077,6 +1077,17 @@
         "abstract": "PyOD is an open-source Python toolbox for performing scalable outlier detection on multivariate data. Uniquely, it provides access to a wide range of outlier detection algorithms, including established outlier ensembles and more recent neural network-based approaches, under a single, well-documented API designed for use by both practitioners and researchers."
     },
     {
+        "id": "preprint-cross-user-contamination",
+        "section": "preprint",
+        "title": "No Attacker Needed: Unintentional Cross-User Contamination in Shared-State LLM Agents",
+        "paper_url": "https://arxiv.org/abs/2604.01350",
+        "authors": "Tiankai Yang, Jiate Li, Yi Nian, Shen Dong, Ruiyao Xu, Ryan Rossi, Kaize Ding, Yue Zhao",
+        "venue": "arXiv preprint",
+        "year": 2026,
+        "links": [],
+        "abstract": "LLM-based agents increasingly operate across repeated sessions, maintaining task states to ensure continuity. In many deployments, a single agent serves multiple users within a team or organization, reusing a shared knowledge layer across user identities. This shared persistence expands the failure surface: information that is locally valid for one user can silently degrade another user's outcome when the agent reapplies it without regard for scope. We refer to this failure mode as unintentional cross-user contamination (UCC). Unlike adversarial memory poisoning, UCC requires no attacker; it arises from benign interactions whose scope-bound artifacts persist and are later misapplied. We formalize UCC through a controlled evaluation protocol, introduce a taxonomy of three contamination types, and evaluate the problem in two shared-state mechanisms. Under raw shared state, benign interactions alone produce contamination rates of 57--71%. A write-time sanitization is effective when shared state is conversational, but leaves substantial residual risk when shared state includes executable artifacts, with contamination often manifesting as silent wrong answers. These results indicate that shared-state agents need artifact-level defenses beyond text-level sanitization to prevent silent cross-user failures."
+    },
+    {
         "id": "preprint-someone-hid-it",
         "section": "preprint",
         "title": "\"Someone Hid It\": Query-Agnostic Black-Box Attacks on LLM-Based Retrieval",
