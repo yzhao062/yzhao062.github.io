@@ -48,6 +48,19 @@
         "abstract": "Generative models, such as diffusion and autoregressive approaches, have demonstrated impressive capabilities in editing natural images. However, applying these tools to scientific charts rests on a flawed assumption: a chart is not merely an arrangement of pixels but a visual representation of structured data governed by a graphical grammar. Consequently, chart editing is not a pixel-manipulation task but a structured transformation problem. To address this fundamental mismatch, we introduce \\textit{FigEdit}, a large-scale benchmark for scientific figure editing comprising over 30,000 samples. Grounded in real-world data, our benchmark is distinguished by its diversity, covering 10 distinct chart types and a rich vocabulary of complex editing instructions. The benchmark is organized into five distinct and progressively challenging tasks: single edits, multi edits, conversational edits, visual-guidance-based edits, and style transfer. Our evaluation of a range of state-of-the-art models on this benchmark reveals their poor performance on scientific figures, as they consistently fail to handle the underlying structured transformations required for valid edits. Furthermore, our analysis indicates that traditional evaluation metrics (e.g., SSIM, PSNR) have limitations in capturing the semantic correctness of chart edits. Our benchmark demonstrates the profound limitations of pixel-level manipulation and provides a robust foundation for developing and evaluating future structure-aware models. By releasing \\textit{FigEdit} (https://github.com/adobe-research/figure-editing), we aim to enable systematic progress in structure-aware figure editing, provide a common ground for fair comparison, and encourage future research on models that understand both the visual and semantic layers of scientific charts."
     },
     {
+        "id": "conference-coact-co-active-preference-learning-with-human-ai-synergy",
+        "section": "conference",
+        "title": "CoAct: Co-Active Preference Learning with Human-AI Synergy",
+        "paper_url": "bib-viewer.html?id=conference-coact-co-active-preference-learning-with-human-ai-synergy",
+        "authors": "Ruiyao Xu, Mihir Parmar, Tiankai Yang, Zhengyu Hu, Yue Zhao, Kaize Ding.",
+        "venue": "ACL, 2026",
+        "year": 2026,
+        "sort_date": "2026-08-01",
+        "sort_priority": 2,
+        "links": [],
+        "abstract": "Learning from preference-based feedback has become an effective approach for aligning LLMs across diverse tasks. However, high-quality human-annotated preference data remains expensive and scarce. Existing methods address this challenge through either self-rewarding, which scales by using purely AI-generated labels but risks unreliability, or active learning, which ensures quality through oracle annotation but cannot fully leverage unlabeled data. In this paper, we present CoAct, a novel framework that synergistically combines self-rewarding and active learning through strategic human-AI collaboration. CoAct leverages self-consistency to identify both reliable self-labeled data and samples requiring oracle verification. Additionally, oracle feedback guides the model to generate new instructions within its solvable capability. Evaluated on three reasoning benchmarks across two model families, CoAct achieves average improvements of +13.25% on GSM8K, +8.19% on MATH, and +13.16% on WebInstruct, consistently outperforming all baselines."
+    },
+    {
         "id": "conference-decalign-hierarchical-cross-modal-alignment-for-decoupled-multimodal-representation-learning",
         "section": "conference",
         "title": "DecAlign: Hierarchical Cross-Modal Alignment for Decoupled Multimodal Representation Learning",
@@ -62,6 +75,19 @@
             }
         ],
         "abstract": "Multimodal representation learning aims to capture both shared and complementary semantic information across multiple modalities. However, the intrinsic heterogeneity of diverse modalities presents substantial challenges to achieve effective cross-modal collaboration and integration. To address this, we introduce DecAlign, a novel hierarchical cross-modal alignment framework designed to decouple multimodal representations into modality-unique (heterogeneous) and modality-common (homogeneous) features. For handling heterogeneity, we employ a prototype-guided optimal transport alignment strategy leveraging gaussian mixture modeling and multi-marginal transport plans, thus mitigating distribution discrepancies while preserving modality-unique characteristics. To reinforce homogeneity, we ensure semantic consistency across modalities by aligning latent distribution matching with Maximum Mean Discrepancy regularization. Furthermore, we incorporate a multimodal transformer to enhance high-level semantic feature fusion, thereby further reducing cross-modal inconsistencies. Our extensive experiments on four widely used multimodal benchmarks demonstrate that DecAlign consistently outperforms existing state-of-the-art methods across five metrics. These results highlight the efficacy of DecAlign in enhancing superior cross-modal alignment and semantic consistency while preserving modality-unique features, marking a significant advancement in multimodal representation learning scenarios. Our project page is at https://taco-group.github.io/DecAlign."
+    },
+    {
+        "id": "conference-defenses-against-prompt-attacks-learn-surface-heuristics",
+        "section": "conference",
+        "title": "Defenses Against Prompt Attacks Learn Surface Heuristics",
+        "paper_url": "https://arxiv.org/abs/2601.07185",
+        "authors": "Shawn Li, Chenxiao Yu, Zhiyu Ni, Hao Li, Charith Peris, Chaowei Xiao, Yue Zhao.",
+        "venue": "ACL, 2026",
+        "year": 2026,
+        "sort_date": "2026-08-01",
+        "sort_priority": 3,
+        "links": [],
+        "abstract": "Large language models (LLMs) are increasingly deployed in security-sensitive applications, where they must follow system- or developer-specified instructions that define the intended task behavior, while completing benign user requests. When adversarial instructions appear in user queries or externally retrieved content, models may override intended logic. Recent defenses rely on supervised fine-tuning with benign and malicious labels. Although these methods achieve high attack rejection rates, we find that they rely on narrow correlations in defense data rather than harmful intent, leading to systematic rejection of safe inputs. We analyze three recurring shortcut behaviors induced by defense fine-tuning. \\emph{Position bias} arises when benign content placed later in a prompt is rejected at much higher rates; across reasoning benchmarks, suffix-task rejection rises from below \\textbf{10\\%} to as high as \\textbf{90\\%}. \\emph{Token trigger bias} occurs when strings common in attack data raise rejection probability even in benign contexts; inserting a single trigger token increases false refusals by up to \\textbf{50\\%}. \\emph{Topic generalization bias} reflects poor generalization beyond the defense data distribution, with defended models suffering test-time accuracy drops of up to \\textbf{40\\%}. These findings suggest that current prompt-injection defenses frequently respond to attack-like surface patterns rather than the underlying intent. We introduce controlled diagnostic datasets and a systematic evaluation across two base models and multiple defense pipelines, highlighting limitations of supervised fine-tuning for reliable LLM security."
     },
     {
         "id": "conference-doxing-via-the-lens-revealing-location-related-privacy-leakage-on-multi-modal-large-reasoning-models",
@@ -94,6 +120,19 @@
             }
         ],
         "abstract": "Large language models (LLMs) exhibit logically inconsistent hallucinations that appear coherent yet violate reasoning principles, with recent research suggesting an inverse relationship between causal reasoning capabilities and such hallucinations. However, existing reasoning approaches in LLMs, such as Chain-of-Thought (CoT) and its graph-based variants, operate at the linguistic token level rather than modeling the underlying causal relationships between variables, lacking the ability to represent conditional independencies or satisfy causal identification assumptions. To bridge this gap, we introduce causal-DAG construction and reasoning (CDCR-SFT), a supervised fine-tuning framework that trains LLMs to explicitly construct variable-level directed acyclic graph (DAG) and then perform reasoning over it. Moreover, we present a dataset comprising 25,368 samples (CausalDR), where each sample includes an input question, explicit causal DAG, graph-based reasoning trace, and validated answer. Experiments on four LLMs across eight tasks show that CDCR-SFT improves the causal reasoning capability with the state-of-the-art 95.33% accuracy on CLADDER (surpassing human performance of 94.8% for the first time) and reduces the hallucination on HaluEval with 10% improvements. It demonstrates that explicit causal structure modeling in LLMs can effectively mitigate logical inconsistencies in LLM outputs. Code is available at https://github.com/MrLYG/CDCR-SFT."
+    },
+    {
+        "id": "conference-topology-matters-measuring-memory-leakage-in-multi-agent-llms",
+        "section": "conference",
+        "title": "Topology Matters: Measuring Memory Leakage in Multi-Agent LLMs",
+        "paper_url": "https://arxiv.org/abs/2512.04668",
+        "authors": "Jinbo Liu, Defu Cao, Yifei Wei, Tianyao Su, Yuan Liang, Yushun Dong, Yan Liu, Yue Zhao, Xiyang Hu.",
+        "venue": "ACL (Findings), 2026",
+        "year": 2026,
+        "sort_date": "2026-08-01",
+        "sort_priority": 1,
+        "links": [],
+        "abstract": "Graph topology is a fundamental determinant of memory leakage in multi-agent LLM systems, yet its effects remain poorly quantified. We introduce MAMA (Multi-Agent Memory Attack), a framework that measures how network structure shapes leakage. MAMA operates on synthetic documents containing labeled Personally Identifiable Information (PII) entities, from which we generate sanitized task instructions. We execute a two-phase protocol: Engram (seeding private information into a target agent's memory) and Resonance (multi-round interaction where an attacker attempts extraction). Over 10 rounds, we measure leakage as exact-match recovery of ground-truth PII from attacker outputs. We evaluate six canonical topologies (complete, ring, chain, tree, star, star-ring) across $n\\in\\{4,5,6\\}$, attacker-target placements, and base models. Results are consistent: denser connectivity, shorter attacker-target distance, and higher target centrality increase leakage; most leakage occurs in early rounds and then plateaus; model choice shifts absolute rates but preserves topology ordering; spatiotemporal/location attributes leak more readily than identity credentials or regulated identifiers. We distill practical guidance for system design: favor sparse or hierarchical connectivity, maximize attacker-target separation, and restrict hub/shortcut pathways via topology-aware access control."
     },
     {
         "id": "conference-trustgen-a-platform-of-dynamic-benchmarking-on-the-trustworthiness-of-generative-foundation-models",
@@ -1148,17 +1187,6 @@
         "abstract": "Retrieval-Augmented Generation (RAG) has become a cornerstone of knowledge-intensive applications, including enterprise chatbots, healthcare assistants, and agentic memory management. However, recent studies show that knowledge-extraction attacks can recover sensitive knowledge-base content through maliciously crafted queries, raising serious concerns about intellectual property theft and privacy leakage. While prior work has explored individual attack and defense techniques, the research landscape remains fragmented, spanning heterogeneous retrieval embeddings, diverse generation models, and evaluations based on non-standardized metrics and inconsistent datasets. To address this gap, we introduce the first systematic benchmark for knowledge-extraction attacks on RAG systems. Our benchmark covers a broad spectrum of attack and defense strategies, representative retrieval embedding models, and both open- and closed-source generators, all evaluated under a unified experimental framework with standardized protocols across multiple datasets. By consolidating the experimental landscape and enabling reproducible, comparable evaluation, this benchmark provides actionable insights and a practical foundation for developing privacy-preserving RAG systems in the face of emerging knowledge extraction threats. Our code is available here."
     },
     {
-        "id": "preprint-defenses-prompt-attacks-surface-heuristics",
-        "section": "preprint",
-        "title": "Defenses Against Prompt Attacks Learn Surface Heuristics",
-        "paper_url": "https://arxiv.org/abs/2601.07185",
-        "authors": "Shawn Li, Chenxiao Yu, Zhiyu Ni, Hao Li, Charith Peris, Chaowei Xiao, Yue Zhao",
-        "venue": "arXiv preprint",
-        "year": 2026,
-        "links": [],
-        "abstract": "Large language models (LLMs) are increasingly deployed in security-sensitive applications, where they must follow system- or developer-specified instructions that define the intended task behavior, while completing benign user requests. When adversarial instructions appear in user queries or externally retrieved content, models may override intended logic. Recent defenses rely on supervised fine-tuning with benign and malicious labels. Although these methods achieve high attack rejection rates, we find that they rely on narrow correlations in defense data rather than harmful intent, leading to systematic rejection of safe inputs. We analyze three recurring shortcut behaviors induced by defense fine-tuning. \\emph{Position bias} arises when benign content placed later in a prompt is rejected at much higher rates; across reasoning benchmarks, suffix-task rejection rises from below \\textbf{10\\%} to as high as \\textbf{90\\%}. \\emph{Token trigger bias} occurs when strings common in attack data raise rejection probability even in benign contexts; inserting a single trigger token increases false refusals by up to \\textbf{50\\%}. \\emph{Topic generalization bias} reflects poor generalization beyond the defense data distribution, with defended models suffering test-time accuracy drops of up to \\textbf{40\\%}. These findings suggest that current prompt-injection defenses frequently respond to attack-like surface patterns rather than the underlying intent. We introduce controlled diagnostic datasets and a systematic evaluation across two base models and multiple defense pipelines, highlighting limitations of supervised fine-tuning for reliable LLM security."
-    },
-    {
         "id": "preprint-fairness-or-fluency",
         "section": "preprint",
         "title": "Fairness or Fluency? An Investigation into Language Bias of Pairwise LLM-as-a-Judge",
@@ -1355,17 +1383,6 @@
         "year": 2025,
         "links": [],
         "abstract": "Cutting-edge research in Artificial Intelligence (AI) requires considerable resources, including Graphics Processing Units (GPUs), data, and human resources. In this paper, we evaluate of the relationship between these resources and the scientific advancement of foundation models (FM). We reviewed 6517 FM papers published between 2022 to 2024, and surveyed 229 first-authors to the impact of computing resources on scientific output. We find that increased computing is correlated with national funding allocations and citations, but our findings don't observe the strong correlations with research environment (academic or industrial), domain, or study methodology. We advise that individuals and institutions focus on creating shared and affordable computing opportunities to lower the entry barrier for under-resourced researchers. These steps can help expand participation in FM research, foster diversity of ideas and contributors, and sustain innovation and progress in AI. The data will be available at: https://mit-calc.csail.mit.edu/"
-    },
-    {
-        "id": "preprint-topology-matters",
-        "section": "preprint",
-        "title": "Topology Matters: Measuring Memory Leakage in Multi-Agent LLMs",
-        "paper_url": "https://arxiv.org/abs/2512.04668",
-        "authors": "Jinbo Liu, Defu Cao, Yifei Wei, Tianyao Su, Yuan Liang, Yushun Dong, Yan Liu, Yue Zhao, Xiyang Hu",
-        "venue": "arXiv preprint",
-        "year": 2025,
-        "links": [],
-        "abstract": "Graph topology is a fundamental determinant of memory leakage in multi-agent LLM systems, yet its effects remain poorly quantified. We introduce MAMA (Multi-Agent Memory Attack), a framework that measures how network structure shapes leakage. MAMA operates on synthetic documents containing labeled Personally Identifiable Information (PII) entities, from which we generate sanitized task instructions. We execute a two-phase protocol: Engram (seeding private information into a target agent's memory) and Resonance (multi-round interaction where an attacker attempts extraction). Over 10 rounds, we measure leakage as exact-match recovery of ground-truth PII from attacker outputs. We evaluate six canonical topologies (complete, ring, chain, tree, star, star-ring) across $n\\in\\{4,5,6\\}$, attacker-target placements, and base models. Results are consistent: denser connectivity, shorter attacker-target distance, and higher target centrality increase leakage; most leakage occurs in early rounds and then plateaus; model choice shifts absolute rates but preserves topology ordering; spatiotemporal/location attributes leak more readily than identity credentials or regulated identifiers. We distill practical guidance for system design: favor sparse or hierarchical connectivity, maximize attacker-target separation, and restrict hub/shortcut pathways via topology-aware access control."
     },
     {
         "id": "preprint-llm-political-simulation",

@@ -56,7 +56,10 @@
     "alt": "Jinbo Liu",
     "research": "Multi-Agent, Time Series",
     "status_text": "Master Student",
-    "email": "jinboliu@usc.edu"
+    "email": "jinboliu@usc.edu",
+    "publications": [
+      "Topology Matters: Measuring Memory Leakage in Multi-Agent LLMs, Findings of ACL 2026"
+    ]
   },
   {
     "group": "current",

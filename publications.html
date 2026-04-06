@@ -236,6 +236,74 @@
                                 return match ? parseInt(match[0], 10) : null;
                             }
 
+                            function parseSortDate(item) {
+                                var raw = String(item.sort_date || '').trim();
+                                if (!raw) return null;
+                                var normalized = raw.replace(/-/g, '');
+                                if (!/^\d{8}$/.test(normalized)) return null;
+                                return parseInt(normalized, 10);
+                            }
+
+                            function inferredVenueSortDate(item) {
+                                var year = parseYear(item);
+                                if (year === null) return null;
+
+                                var venue = String(item.venue || '').toLowerCase();
+                                var rules = [
+                                    { pattern: /neurips|mti-llm|responsiblefm/, month: 12, day: 1 },
+                                    { pattern: /emnlp|ijcnlp-aacl|sigspatial|spatialconnect|icdm/, month: 11, day: 1 },
+                                    { pattern: /iccv|colm/, month: 10, day: 1 },
+                                    { pattern: /ecml pkdd/, month: 9, day: 1 },
+                                    { pattern: /\bacl\b|association for computational linguistics|kdd|acm bcb/, month: 8, day: 1 },
+                                    { pattern: /icml|dataworld/, month: 7, day: 1 },
+                                    { pattern: /cvpr/, month: 6, day: 1 },
+                                    { pattern: /www|web conference|naacl/, month: 5, day: 1 },
+                                    { pattern: /iclr|eacl/, month: 4, day: 1 },
+                                    { pattern: /aaai/, month: 2, day: 1 }
+                                ];
+
+                                for (var i = 0; i < rules.length; i += 1) {
+                                    if (rules[i].pattern.test(venue)) {
+                                        return (year * 10000) + (rules[i].month * 100) + rules[i].day;
+                                    }
+                                }
+
+                                return year * 10000;
+                            }
+
+                            function parseSortPriority(item) {
+                                if (typeof item.sort_priority === 'number' && !Number.isNaN(item.sort_priority)) {
+                                    return item.sort_priority;
+                                }
+                                return 0;
+                            }
+
+                            function comparePublicationRecency(a, b) {
+                                var da = parseSortDate(a);
+                                var db = parseSortDate(b);
+                                if (da === null) da = inferredVenueSortDate(a);
+                                if (db === null) db = inferredVenueSortDate(b);
+                                if (da !== db) {
+                                    if (db === null) return -1;
+                                    if (da === null) return 1;
+                                    return db - da;
+                                }
+
+                                var pa = parseSortPriority(a);
+                                var pb = parseSortPriority(b);
+                                if (pa !== pb) {
+                                    return pb - pa;
+                                }
+
+                                var ya = parseYear(a) || 0;
+                                var yb = parseYear(b) || 0;
+                                if (ya !== yb) {
+                                    return yb - ya;
+                                }
+
+                                return 0;
+                            }
+
                             function renderSection(items, section, recentListId, olderListId, olderWrapperId) {
                                 var recentList = document.getElementById(recentListId);
                                 var olderList = document.getElementById(olderListId);
@@ -260,6 +328,9 @@
                                         recentItems.push(item);
                                     }
                                 });
+
+                                recentItems.sort(comparePublicationRecency);
+                                olderItems.sort(comparePublicationRecency);
 
                                 recentList.innerHTML = recentItems.map(function(item, index) {
                                     return renderItem(item, index, section + '-recent');
