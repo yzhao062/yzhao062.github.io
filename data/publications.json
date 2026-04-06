@@ -51,7 +51,7 @@
         "id": "conference-coact-co-active-preference-learning-with-human-ai-synergy",
         "section": "conference",
         "title": "CoAct: Co-Active Preference Learning with Human-AI Synergy",
-        "paper_url": "bib-viewer.html?id=conference-coact-co-active-preference-learning-with-human-ai-synergy",
+        "paper_url": "https://openreview.net/forum?id=C7vPSoKofe",
         "authors": "Ruiyao Xu, Mihir Parmar, Tiankai Yang, Zhengyu Hu, Yue Zhao, Kaize Ding.",
         "venue": "ACL, 2026",
         "year": 2026,
@@ -86,7 +86,12 @@
         "year": 2026,
         "sort_date": "2026-08-01",
         "sort_priority": 3,
-        "links": [],
+        "links": [
+            {
+                "type": "github",
+                "url": "https://github.com/AiChiMoCha/MEval"
+            }
+        ],
         "abstract": "Large language models (LLMs) are increasingly deployed in security-sensitive applications, where they must follow system- or developer-specified instructions that define the intended task behavior, while completing benign user requests. When adversarial instructions appear in user queries or externally retrieved content, models may override intended logic. Recent defenses rely on supervised fine-tuning with benign and malicious labels. Although these methods achieve high attack rejection rates, we find that they rely on narrow correlations in defense data rather than harmful intent, leading to systematic rejection of safe inputs. We analyze three recurring shortcut behaviors induced by defense fine-tuning. \\emph{Position bias} arises when benign content placed later in a prompt is rejected at much higher rates; across reasoning benchmarks, suffix-task rejection rises from below \\textbf{10\\%} to as high as \\textbf{90\\%}. \\emph{Token trigger bias} occurs when strings common in attack data raise rejection probability even in benign contexts; inserting a single trigger token increases false refusals by up to \\textbf{50\\%}. \\emph{Topic generalization bias} reflects poor generalization beyond the defense data distribution, with defended models suffering test-time accuracy drops of up to \\textbf{40\\%}. These findings suggest that current prompt-injection defenses frequently respond to attack-like surface patterns rather than the underlying intent. We introduce controlled diagnostic datasets and a systematic evaluation across two base models and multiple defense pipelines, highlighting limitations of supervised fine-tuning for reliable LLM security."
     },
     {
