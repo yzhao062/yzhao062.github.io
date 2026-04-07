@@ -24,7 +24,7 @@
     "email": "xiaoqinf@usc.edu"
   },
   {
-    "group": "current",
+    "group": "past",
     "name": "Deyang Hsu",
     "profile_url": "https://www.linkedin.com/in/deyang-hsu",
     "image": "images/others/Deyang.webp",
@@ -164,7 +164,10 @@
     "alt": "Zheng Luo",
     "research": "LLM/Rule-Based General-Purpose AI",
     "status_text": "Master Student",
-    "email": "luozheng@usc.edu"
+    "email": "luozheng@usc.edu",
+    "publications": [
+      "Lost in Execution: On the Multilingual Robustness of Tool Calling in Large Language Models, ACL 2026"
+    ]
   },
   {
     "group": "current",
@@ -175,6 +178,16 @@
     "research": "LLM/Multimodal/Generative AI",
     "status_text": "Master Student",
     "email": "zhuzixua@usc.edu"
+  },
+  {
+    "group": "past",
+    "name": "Sizhe Liu",
+    "profile_url": "https://steven51516.github.io",
+    "status_text": "Undergraduate Student → Incoming Ph.D. Student at MIT",
+    "email": "sliu0727@usc.edu",
+    "publications": [
+      "DrugAgent: Automating AI-aided Drug Discovery Programming through LLM Multi-Agent Collaboration, AAAI Workshop on Foundation Models for Biological Discoveries (FMs4Bio), 2025"
+    ]
   },
   {
     "group": "past",
