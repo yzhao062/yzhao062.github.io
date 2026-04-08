@@ -8,7 +8,7 @@
     "docs_url": "https://pyod.readthedocs.io",
     "paper_url": "https://arxiv.org/abs/2412.12154",
     "demo_url": "",
-    "stars": 9773,
+    "stars": 9776,
     "tags": [
       "Anomaly Detection",
       "Outlier Detection",
@@ -16,7 +16,7 @@
       "Machine Learning",
       "PyTorch"
     ],
-    "last_updated_at": "2026-04-06T08:12:02Z"
+    "last_updated_at": "2026-04-08T03:59:32Z"
   },
   {
     "name": "AD-AGENT",
@@ -34,7 +34,7 @@
       "Multi-Modal",
       "Automation"
     ],
-    "last_updated_at": "2026-03-29T05:59:44Z"
+    "last_updated_at": "2026-04-08T03:19:05Z"
   },
   {
     "name": "TrustLLM",
@@ -45,7 +45,7 @@
     "docs_url": "https://trustllmbenchmark.github.io/TrustLLM-Website/",
     "paper_url": "https://openreview.net/forum?id=bWUU0LwwMp",
     "demo_url": "",
-    "stars": 622,
+    "stars": 623,
     "tags": [
       "Trustworthy AI",
       "LLM Evaluation",
@@ -138,7 +138,7 @@
     "docs_url": "",
     "paper_url": "",
     "demo_url": "",
-    "stars": 1551,
+    "stars": 1550,
     "tags": [
       "Writing",
       "Research Workflow",
@@ -210,7 +210,7 @@
     "docs_url": "https://tdcommons.ai",
     "paper_url": "https://proceedings.neurips.cc/paper/2021/hash/6a8d3b0f5987e0f6d3d2f5f65f02e3cc-Abstract.html",
     "demo_url": "",
-    "stars": 1228,
+    "stars": 1229,
     "tags": [
       "Therapeutics",
       "Benchmark",
@@ -265,7 +265,7 @@
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/agent-audit.html",
     "paper_url": "https://arxiv.org/abs/2603.22853",
     "demo_url": "https://pypi.org/project/agent-audit/",
-    "stars": 143,
+    "stars": 145,
     "tags": [
       "AI Agent Security",
       "Security Audit",
@@ -284,7 +284,7 @@
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/aegis.html",
     "paper_url": "https://arxiv.org/abs/2603.12621",
     "demo_url": "https://github.com/Justin0504/Aegis/blob/main/docs/images/readme_demo1.gif",
-    "stars": 340,
+    "stars": 341,
     "tags": [
       "AI Agent Security",
       "Policy Enforcement",
