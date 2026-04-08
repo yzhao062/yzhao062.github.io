@@ -8,7 +8,7 @@
     "docs_url": "https://pyod.readthedocs.io",
     "paper_url": "https://arxiv.org/abs/2412.12154",
     "demo_url": "",
-    "stars": 9776,
+    "stars": 9777,
     "tags": [
       "Anomaly Detection",
       "Outlier Detection",
@@ -16,7 +16,7 @@
       "Machine Learning",
       "PyTorch"
     ],
-    "last_updated_at": "2026-04-08T03:59:32Z"
+    "last_updated_at": "2026-04-08T06:12:08Z"
   },
   {
     "name": "AD-AGENT",
@@ -138,7 +138,7 @@
     "docs_url": "",
     "paper_url": "",
     "demo_url": "",
-    "stars": 1550,
+    "stars": 1551,
     "tags": [
       "Writing",
       "Research Workflow",
@@ -174,7 +174,7 @@
     "docs_url": "https://docs.pygod.org",
     "paper_url": "http://jmlr.org/papers/v25/23-0963.html",
     "demo_url": "",
-    "stars": 1485,
+    "stars": 1487,
     "tags": [
       "Graph Anomaly Detection",
       "PyTorch Geometric",
@@ -265,7 +265,7 @@
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/agent-audit.html",
     "paper_url": "https://arxiv.org/abs/2603.22853",
     "demo_url": "https://pypi.org/project/agent-audit/",
-    "stars": 145,
+    "stars": 146,
     "tags": [
       "AI Agent Security",
       "Security Audit",
