@@ -1,3 +1,3 @@
-Read and follow the skill definition at skills/figure-prompt-builder/SKILL.md
+Read and follow the skill definition. Look for it at `skills/figure-prompt-builder/SKILL.md` first, then `.agent-config/repo/skills/figure-prompt-builder/SKILL.md`.
 
-Apply it to the user's current task. Also read the supporting files under skills/figure-prompt-builder/references/ and skills/figure-prompt-builder/assets/ as needed.
+Apply it to the user's current task. Also read the supporting files under the skill's references/, scripts/, and assets/ directories as needed.
