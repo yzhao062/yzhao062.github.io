@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Yue Zhao">
+  <meta name="description" content="Auditable Agents defines five dimensions of auditability for LLM agent systems and identifies three mechanism classes for making agent behavior reconstructable, checkable, and attributable.">
+  <meta name="keywords" content="Auditable Agents, AI Auditing, Agent Auditability, Agent Accountability, AI Safety, AI Security, LLM Agents, Execution Tracing, Policy Checking, Runtime Guardrails, Auditability Card, agent-audit, Aegis, Yue Zhao, USC, FORTIS Lab">
+  <title>Auditable Agents | A Framework for Accountable AI Agent Systems</title>
+  <link rel="canonical" href="https://viterbi-web.usc.edu/~yzhao010/auditable-agents.html">
+  <link rel="icon" type="image/x-icon" href="images/logo2.ico">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Auditable Agents | A Framework for Accountable AI Agent Systems">
+  <meta property="og:description" content="Five dimensions of auditability for LLM agent systems. No agent system can be accountable without auditability.">
+  <meta property="og:url" content="https://viterbi-web.usc.edu/~yzhao010/auditable-agents.html">
+  <meta property="og:image" content="https://viterbi-web.usc.edu/~yzhao010/images/auditable-agents-overview.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Auditable Agents | A Framework for Accountable AI Agent Systems">
+  <meta name="twitter:description" content="Five dimensions of auditability for LLM agent systems. No agent system can be accountable without auditability.">
+  <meta name="twitter:image" content="https://viterbi-web.usc.edu/~yzhao010/images/auditable-agents-overview.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "name": "Auditable Agents",
+    "description": "A position paper defining five dimensions of auditability for LLM agent systems and three mechanism classes for accountable deployment.",
+    "url": "https://viterbi-web.usc.edu/~yzhao010/auditable-agents.html",
+    "author": [
+      {"@type": "Person", "name": "Yi Nian"},
+      {"@type": "Person", "name": "Aojie Yuan"},
+      {"@type": "Person", "name": "Haiyue Zhang"},
+      {"@type": "Person", "name": "Jiate Li"},
+      {"@type": "Person", "name": "Yue Zhao"}
+    ],
+    "datePublished": "2026-04-07",
+    "publisher": {"@type": "Organization", "name": "arXiv"}
+  }
+  </script>
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preload" as="image" href="images/rsz_300.jpg">
+  <link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap.min.css" onerror="this.onerror=null;this.href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css';">
+  <script src="assets/vendor/bootstrap/bootstrap.bundle.min.js" defer onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js';"></script>
+  <link rel="preload" href="assets/vendor/fontawesome/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.onerror=null;this.rel='stylesheet';this.href='https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css';">
+  <noscript><link rel="stylesheet" href="assets/vendor/fontawesome/css/all.min.css"></noscript>
+  <link rel="stylesheet" href="css/common.css">
+  <script src="assets/js/layout-shell.js" defer></script>
+</head>
+<body>
+  <div id="navbar"></div>
+  <script src="assets/js/webstat-tracker.js" defer></script>
+  <noscript><img src="https://app.ardalio.com/7/5/1866123.png" alt=""></noscript>
+
+  <div class="container">
+    <div class="row">
+      <div id="sidebar" class="col-md-3 col-12 content-spacing"></div>
+      <div class="col-md-9 col-12 content-spacing">
+        <h1 style="color:#990000;">Auditable Agents</h1>
+        <p style="font-size:1.1rem; font-weight:700; color:#7a2a2a; margin-top:-4px;">A framework for accountable AI agent systems.</p>
+
+        <p>
+          LLM agents call tools, query databases, delegate tasks, and trigger external side effects.
+          Once an agent system can act in the world, the question is no longer only whether harmful
+          actions can be prevented; it is whether those actions remain answerable after deployment.
+        </p>
+        <p>
+          <strong>Auditable Agents</strong> is a position paper that defines what auditability means
+          for agent systems. It introduces five jointly necessary dimensions, identifies three mechanism
+          classes operating at successive temporal points, and provides layered empirical evidence that
+          the auditability gap is real, closable, and practically addressable.
+        </p>
+        <p>
+          This work spans our <strong>AI Auditing &amp; Assurance</strong> direction (the framework
+          and Auditability Card) and <strong>AI Safety &amp; Security</strong> direction (the ecosystem
+          scan and runtime enforcement evidence).
+        </p>
+
+        <p>
+          <a href="https://arxiv.org/abs/2604.05485"><i class="fas fa-file-alt" aria-hidden="true"></i> Paper (arXiv)</a>
+          |
+          <a href="https://arxiv.org/pdf/2604.05485"><i class="fas fa-file-pdf" aria-hidden="true"></i> Paper (PDF)</a>
+          |
+          <a href="https://github.com/HeadyZhang/agent-audit"><i class="fab fa-github" aria-hidden="true"></i> agent-audit</a>
+          |
+          <a href="https://github.com/Justin0504/Aegis"><i class="fab fa-github" aria-hidden="true"></i> Aegis</a>
+        </p>
+
+        <hr>
+
+        <img src="images/auditable-agents-overview.png"
+             alt="The auditability framework: five dimensions (Action Recoverability, Lifecycle Coverage, Policy Checkability, Responsibility Attribution, Evidence Integrity) and three mechanism classes (Detect, Enforce, Recover)"
+             style="width:100%; max-width:680px; display:block; margin:12px 0;"
+             loading="lazy" decoding="async">
+        <p style="font-size:0.88rem; color:#666; margin-top:4px; margin-bottom:18px;">
+          <strong>Figure:</strong> A defensible audit verdict requires five jointly necessary dimensions
+          (center), rooted in Evidence Integrity. Three mechanism classes (bottom) realize
+          these dimensions at successive temporal points. No single class suffices.
+        </p>
+
+        <p>
+          The framework did not emerge in isolation. It grew out of building tools that address
+          specific auditability gaps, and from studying failure modes that make auditability
+          necessary. Each tool below instantiates one mechanism class; each finding is drawn
+          from the paper.
+        </p>
+
+        <!-- Detect block -->
+        <div style="border-left:4px solid #2c5f8a; background:#f4f8fc; padding:14px 18px; margin:14px 0; border-radius:0 6px 6px 0;">
+          <p style="margin:0 0 4px 0;">
+            <strong style="color:#2c5f8a; font-size:1.05rem;">Detect</strong>
+            <span style="color:#888; font-size:0.9rem;"> &mdash; Pre-deployment</span>
+            <span style="float:right; font-size:1.15rem; font-weight:700; color:#2c5f8a;">617 findings</span>
+          </p>
+          <p style="margin:4px 0;">
+            <a href="agent-audit.html"><strong>agent-audit</strong></a>
+            is the underlying scanning tool
+            (<a href="https://arxiv.org/abs/2603.22853">arXiv</a>).
+            In this paper, we used it to scan six prominent open-source agent projects and surfaced
+            617 security findings
+            (<a href="https://arxiv.org/abs/2604.05485">details in the paper</a>),
+            showing that basic prerequisites for <em>Action Recoverability</em> are widely unmet
+            before agents even run.
+          </p>
+        </div>
+
+        <!-- Enforce block -->
+        <div style="border-left:4px solid #c67b30; background:#fef9f3; padding:14px 18px; margin:14px 0; border-radius:0 6px 6px 0;">
+          <p style="margin:0 0 4px 0;">
+            <strong style="color:#c67b30; font-size:1.05rem;">Enforce</strong>
+            <span style="color:#888; font-size:0.9rem;"> &mdash; Runtime</span>
+            <span style="float:right; font-size:1.15rem; font-weight:700; color:#c67b30;">8.3 ms overhead</span>
+          </p>
+          <p style="margin:4px 0;">
+            <a href="aegis.html"><strong>Aegis</strong></a>
+            is a pre-execution firewall that sits between agents and tools, enforcing policies and
+            generating tamper-evident audit trails
+            (<a href="https://arxiv.org/abs/2603.12621">arXiv</a>).
+            Every intercepted tool call gets a signed, hash-chained record covering
+            <em>Action Recoverability</em>, <em>Policy Checkability</em>, and
+            <em>Evidence Integrity</em> in a single pass, at 8.3 ms median overhead.
+          </p>
+          <p style="margin:4px 0;">
+            <a href="https://arxiv.org/abs/2603.14011"><strong>Sovereign-OS</strong></a>
+            takes enforcement further by embedding policy into the agent operating system itself,
+            providing <em>Lifecycle Coverage</em> at the OS level: execution phases, budgets, and
+            approval chains that a tool-level firewall cannot see.
+          </p>
+        </div>
+
+        <!-- Recover block -->
+        <div style="border-left:4px solid #3a7d44; background:#f4faf5; padding:14px 18px; margin:14px 0; border-radius:0 6px 6px 0;">
+          <p style="margin:0 0 4px 0;">
+            <strong style="color:#3a7d44; font-size:1.05rem;">Recover</strong>
+            <span style="color:#888; font-size:0.9rem;"> &mdash; Post-hoc</span>
+            <span style="float:right; font-size:1.15rem; font-weight:700; color:#3a7d44;">~0.95 accuracy</span>
+          </p>
+          <p style="margin:4px 0;">
+            <a href="https://arxiv.org/abs/2603.17445"><strong>Implicit Execution Tracing</strong></a>
+            embeds agent-specific signals into token distributions, enabling post-hoc recovery of
+            which agent produced which output even when identity metadata and orchestration logs
+            have been stripped. Token attribution accuracy reaches ~0.95 across topologies,
+            directly addressing <em>Responsibility Attribution</em> under degraded conditions.
+          </p>
+        </div>
+
+        <!-- Failure modes block -->
+        <div style="border-left:4px solid #990000; background:#fff7f7; padding:14px 18px; margin:14px 0; border-radius:0 6px 6px 0;">
+          <p style="margin:0 0 4px 0;">
+            <strong style="color:#990000; font-size:1.05rem;">Why auditability is needed</strong>
+            <span style="color:#888; font-size:0.9rem;"> &mdash; Failure modes</span>
+          </p>
+          <p style="margin:4px 0;">
+            <a href="https://arxiv.org/abs/2604.01350"><strong>Cross-user contamination</strong></a>:
+            shared-state agents silently propagate information across user boundaries without any
+            attacker. Without <em>Action Recoverability</em> and <em>Lifecycle Coverage</em>,
+            these events are invisible after the fact.
+          </p>
+          <p style="margin:4px 0;">
+            <a href="https://arxiv.org/abs/2603.19423"><strong>The Autonomy Tax</strong></a>:
+            defense training degrades agent task performance. This tension motivates why Enforce
+            mechanisms must be lightweight; 8.3 ms overhead is practical precisely because it
+            does not impose a capability tax.
+          </p>
+        </div>
+
+        <h2 style="color:#990000;">The Auditability Card</h2>
+        <p>
+          A compact reporting artifact, analogous to model cards, that forces disclosure of auditability
+          properties. A system can answer these questions well or badly, but it should not be allowed
+          to answer them ambiguously.
+        </p>
+
+        <div style="
+          background: #fff;
+          border: 2px solid #990000;
+          border-radius: 10px;
+          padding: 0;
+          margin: 16px 0;
+          max-width: 640px;
+          box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+          overflow: hidden;
+        ">
+          <!-- Card header -->
+          <div style="background:#990000; color:#fff; padding:12px 20px;">
+            <strong style="font-size:1.1rem;">Auditability Card</strong>
+            <span style="float:right; font-size:0.85rem; opacity:0.85;">for Agent Systems</span>
+          </div>
+          <!-- Card body -->
+          <table style="width:100%; border-collapse:collapse; font-size:0.92rem;">
+            <thead>
+              <tr style="background:#f5f0f0;">
+                <th style="text-align:left; padding:10px 16px; border-bottom:1px solid #e0d5d5; width:30%;">Question</th>
+                <th style="text-align:left; padding:10px 16px; border-bottom:1px solid #e0d5d5; width:35%;">What to disclose</th>
+                <th style="text-align:left; padding:10px 16px; border-bottom:1px solid #e0d5d5; width:35%;">Example (Aegis)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="padding:10px 16px; border-bottom:1px solid #f0eded; vertical-align:top;">
+                  <strong>Q1: Actions</strong><br>
+                  <span style="font-size:0.8rem; color:#888;">Action Recoverability</span>
+                </td>
+                <td style="padding:10px 16px; border-bottom:1px solid #f0eded; vertical-align:top;">
+                  What policy-relevant actions does the system record?
+                </td>
+                <td style="padding:10px 16px; border-bottom:1px solid #f0eded; vertical-align:top; color:#555;">
+                  Tool calls with name, full arguments, output, timestamp, and policy decision
+                </td>
+              </tr>
+              <tr>
+                <td style="padding:10px 16px; border-bottom:1px solid #f0eded; vertical-align:top;">
+                  <strong>Q2: Phases</strong><br>
+                  <span style="font-size:0.8rem; color:#888;">Lifecycle Coverage</span>
+                </td>
+                <td style="padding:10px 16px; border-bottom:1px solid #f0eded; vertical-align:top;">
+                  Which execution phases are covered?
+                </td>
+                <td style="padding:10px 16px; border-bottom:1px solid #f0eded; vertical-align:top; color:#555;">
+                  Allow, block, pending, and approval as distinct states; delegation chains not covered
+                </td>
+              </tr>
+              <tr>
+                <td style="padding:10px 16px; border-bottom:1px solid #f0eded; vertical-align:top;">
+                  <strong>Q3: Policies</strong><br>
+                  <span style="font-size:0.8rem; color:#888;">Policy Checkability</span>
+                </td>
+                <td style="padding:10px 16px; border-bottom:1px solid #f0eded; vertical-align:top;">
+                  What policies can be mechanically checked?
+                </td>
+                <td style="padding:10px 16px; border-bottom:1px solid #f0eded; vertical-align:top; color:#555;">
+                  Configurable structural rules; decision stored alongside each call
+                </td>
+              </tr>
+              <tr>
+                <td style="padding:10px 16px; border-bottom:1px solid #f0eded; vertical-align:top;">
+                  <strong>Q4: Attribution</strong><br>
+                  <span style="font-size:0.8rem; color:#888;">Responsibility Attribution</span>
+                </td>
+                <td style="padding:10px 16px; border-bottom:1px solid #f0eded; vertical-align:top;">
+                  What responsibility chain is available?
+                </td>
+                <td style="padding:10px 16px; border-bottom:1px solid #f0eded; vertical-align:top; color:#555;">
+                  Immediate executor and session context; upstream delegation chain partial
+                </td>
+              </tr>
+              <tr>
+                <td style="padding:10px 16px; border-bottom:1px solid #f0eded; vertical-align:top;">
+                  <strong>Q5: Integrity</strong><br>
+                  <span style="font-size:0.8rem; color:#888;">Evidence Integrity</span>
+                </td>
+                <td style="padding:10px 16px; border-bottom:1px solid #f0eded; vertical-align:top;">
+                  What protects the record from modification?
+                </td>
+                <td style="padding:10px 16px; border-bottom:1px solid #f0eded; vertical-align:top; color:#555;">
+                  Level 3: Ed25519-signed, SHA-256 hash-chained records
+                </td>
+              </tr>
+              <tr>
+                <td style="padding:10px 16px; vertical-align:top;">
+                  <strong>Q6: Missing logs</strong><br>
+                  <span style="font-size:0.8rem; color:#888;">Stress test</span>
+                </td>
+                <td style="padding:10px 16px; vertical-align:top;">
+                  What happens when logs are missing or detached?
+                </td>
+                <td style="padding:10px 16px; vertical-align:top; color:#555;">
+                  No built-in recovery; depends on external evidence
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="font-size:0.88rem; color:#666;">
+          Q1 through Q5 map to the five auditability dimensions; Q6 stress-tests what happens when
+          logging assumptions break. The Aegis column is an illustrative partial card, not a canonical answer.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div id="myFooter"></div>
+</body>
+</html>

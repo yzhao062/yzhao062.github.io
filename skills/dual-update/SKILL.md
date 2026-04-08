@@ -11,8 +11,8 @@ When the user adds or updates content that exists in both the website and the CV
 
 | Content type | Website file(s) | CV file(s) | Notes |
 |---|---|---|---|
-| **Publication** (peer-reviewed) | `data/publications.json` | `cv/cv-full.tex` (Publications section) | Website JSON uses structured fields; CV uses `\item` in `benumerate`. Match venue, year, authors, title format. |
-| **Preprint / under submission** | Usually not on website | `cv/cv-full.tex` (Preprints section) | Only add to website (`data/publications.json`) if the user explicitly asks. |
+| **Publication** (peer-reviewed) | `data/publications.json` | `cv/cv-full.tex` (Publications section) | Website JSON uses structured fields; CV uses `\item` in `benumerate`. Match venue, year, authors, title format. Also check `data/lab-members.json` for co-authors. |
+| **Preprint / under submission** | `data/publications.json` (section `"preprint"`) | `cv/cv-full.tex` (Preprints section) | Add to both. Website preprints render on `publications.html` via the JSON `section: "preprint"` entries. |
 | **Award / Grant** | `index.html` (Awards section) | `cv/cv-full.tex` (Awards section) | Both use chronological order, newest first. |
 | **Service role** (reviewer, AC, editor, organizer) | `services.html` | `cv/cv-full.tex` (Services section) | Match the sub-category (organizing, editorial, AC/reviewer, journal reviewer). |
 | **Teaching course** | `teaching.html` | `cv/cv-full.tex` (Teaching section) | Include semester, course number, title, enrollment if known. |
@@ -37,19 +37,36 @@ When the user adds or updates content that exists in both the website and the CV
 ### Publications (website JSON)
 ```json
 {
+  "id": "conference-short-slug",
+  "section": "conference",
   "title": "Paper Title",
+  "paper_url": "https://arxiv.org/abs/...",
   "authors": "Author1, Author2, ..., and AuthorN",
-  "venue": "ICLR",
+  "venue": "VENUE, YEAR",
   "year": 2026,
-  "venue_full": "International Conference on Learning Representations",
-  "type": "Conference",
-  "pdf_url": "https://arxiv.org/abs/...",
-  "code_url": "",
-  "highlight": "",
-  "equal_contribution": [],
-  "corresponding_author": []
+  "links": [
+    {"type": "github", "url": "https://github.com/..."}
+  ],
+  "abstract": "..."
 }
 ```
+Use `"section": "conference"` for conference papers, `"section": "workshop"` for workshop papers, and `"section": "journal"` for journal papers. The website groups conference and workshop entries in the same rendered section, but the JSON distinguishes them. The `links` array can include entries with `type` set to `"github"` or `"project"`. Mark equal contribution with `†` and corresponding author with `♠` in the `authors` string.
+
+### Preprints (website JSON)
+```json
+{
+  "id": "preprint-short-slug",
+  "section": "preprint",
+  "title": "Paper Title",
+  "paper_url": "https://arxiv.org/abs/XXXX.XXXXX",
+  "authors": "Author1, Author2, ..., and AuthorN",
+  "venue": "arXiv preprint",
+  "year": 2026,
+  "links": [],
+  "abstract": "..."
+}
+```
+Preprints render on `publications.html` under "Preprints & Working Papers", sorted by arXiv ID (newest first).
 
 ### Publications (CV LaTeX)
 Papers in the CV use `benumerate` with reverse numbering. Match the existing style:
@@ -73,7 +90,7 @@ AWARD_NAME & TYPE & DATE \\
 
 - The CV is a **superset** of the website for publications — it includes older papers and preprints that may not be on the website.
 - When adding a new peer-reviewed paper, add to **both** unless the user says otherwise.
-- When adding a preprint, default to **CV only** unless the user says to add it to the website too.
+- When adding a preprint, add to **both** `data/publications.json` (with `section: "preprint"`) and `cv/cv-full.tex`.
 - Always preserve reverse chronological ordering in both places.
 - Run `python scripts/generate_cv_open_source.py` after any change to `data/open-source.json`.
 - **Publication ↔ lab-members sync**: When adding a new published paper to `data/publications.json`, check if any non-PhD lab member (in `data/lab-members.json`) is a co-author. If so, add the paper to their `publications` array. Note that author names may differ between the two files (e.g., display name vs legal name), so match carefully. Only list published papers with a venue, not arXiv-only preprints.
