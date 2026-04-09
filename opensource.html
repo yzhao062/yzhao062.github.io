@@ -175,7 +175,12 @@
       width: 100%;
       font-size: 0.9rem;
       border-collapse: collapse;
+      table-layout: fixed;
     }
+
+    .impact-table colgroup .col-type { width: 110px; }
+    .impact-table colgroup .col-evidence { width: auto; }
+    .impact-table colgroup .col-source { width: 120px; }
 
     .impact-table th {
       text-align: left;
@@ -205,6 +210,8 @@
       padding: 1px 7px;
       border-radius: 4px;
       white-space: nowrap;
+      min-width: 80px;
+      text-align: center;
     }
 
     .type-gov { background: #fff2f2; color: #990000; }
@@ -259,7 +266,7 @@
                       <h4>PyOD <span style="font-weight:400; color:#555; font-size:0.9rem;">— Python Library for Outlier Detection</span></h4>
                       <div class="impact-subtitle">9,800+ stars &middot; 39M+ downloads &middot; <a href="https://github.com/yzhao062/pyod">GitHub</a></div>
                       <table class="impact-table">
-                        <thead><tr><th>Type</th><th>Evidence</th><th>Source</th></tr></thead>
+                        <colgroup><col class="col-type"><col class="col-evidence"><col class="col-source"></colgroup><thead><tr><th>Type</th><th>Evidence</th><th>Source</th></tr></thead>
                         <tbody>
                           <tr>
                             <td><span class="impact-type type-gov">Space Agency</span></td>
@@ -310,7 +317,7 @@
                       <h4>TrustLLM <span style="font-weight:400; color:#555; font-size:0.9rem;">— Trustworthiness Benchmark for LLMs</span></h4>
                       <div class="impact-subtitle">620+ stars &middot; ICML 2024 &middot; <a href="https://github.com/HowieHwong/TrustLLM">GitHub</a></div>
                       <table class="impact-table">
-                        <thead><tr><th>Type</th><th>Evidence</th><th>Source</th></tr></thead>
+                        <colgroup><col class="col-type"><col class="col-evidence"><col class="col-source"></colgroup><thead><tr><th>Type</th><th>Evidence</th><th>Source</th></tr></thead>
                         <tbody>
                           <tr>
                             <td><span class="impact-type type-gov">U.S. Senate</span></td>
@@ -351,7 +358,7 @@
                       <h4>TDC <span style="font-weight:400; color:#555; font-size:0.9rem;">— Therapeutics Data Commons</span></h4>
                       <div class="impact-subtitle">1,200+ stars &middot; NeurIPS 2021 &middot; with Harvard &amp; Stanford &middot; <a href="https://github.com/mims-harvard/TDC">GitHub</a></div>
                       <table class="impact-table">
-                        <thead><tr><th>Type</th><th>Evidence</th><th>Source</th></tr></thead>
+                        <colgroup><col class="col-type"><col class="col-evidence"><col class="col-source"></colgroup><thead><tr><th>Type</th><th>Evidence</th><th>Source</th></tr></thead>
                         <tbody>
                           <tr>
                             <td><span class="impact-type type-journal">Journal</span></td>
