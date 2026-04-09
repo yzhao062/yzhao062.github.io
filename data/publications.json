@@ -638,6 +638,10 @@
             {
                 "type": "github",
                 "url": "https://github.com/HowieHwong/TrustLLM"
+            },
+            {
+                "type": "impact",
+                "url": "opensource.html#trustllm-impact"
             }
         ],
         "badges": [
@@ -848,6 +852,10 @@
             {
                 "type": "github",
                 "url": "https://tdcommons.ai/"
+            },
+            {
+                "type": "impact",
+                "url": "opensource.html#tdc-impact"
             }
         ],
         "abstract": "Therapeutics machine learning is an emerging field with incredible opportunities for innovation and impact. We introduce Therapeutics Data Commons (TDC), the first unifying platform to systematically access and evaluate machine learning across the entire range of therapeutics. To date, TDC includes 66 AI-ready datasets spread across 22 learning tasks spanning the discovery and development of safe and effective medicines."
@@ -1116,6 +1124,10 @@
             {
                 "type": "github",
                 "url": "https://github.com/yzhao062/pyod/"
+            },
+            {
+                "type": "impact",
+                "url": "opensource.html#pyod-impact"
             }
         ],
         "abstract": "PyOD is an open-source Python toolbox for performing scalable outlier detection on multivariate data. Uniquely, it provides access to a wide range of outlier detection algorithms, including established outlier ensembles and more recent neural network-based approaches, under a single, well-documented API designed for use by both practitioners and researchers."

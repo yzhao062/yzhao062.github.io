@@ -240,6 +240,36 @@ When running a targeted search (not full audit), append new findings to the exis
 | **Ecosystem check** | Before broader-impact statements | Dim 7 (education, code ecosystem, global) |
 | **PDF deep search** | Before tenure materials or when a specific gov report is suspected | Dim 8 only, with candidate PDF list |
 | **Affiliation audit** | Before tenure/promotion, after major citation milestones | Dim 9 (citation affiliation analysis) |
+| **External deep research** | After automated audit, as a complement pass | Dim 10 (external LLM deep research) |
+
+---
+
+## Dimension 10: External LLM Deep Research
+
+**Purpose:** Use external deep research tools (ChatGPT Deep Research, Gemini Deep Research, Claude on claude.ai, or similar) as a complement to the automated Dimensions 1-9. These tools have browsing capabilities, PDF reading, and search strategies that differ from Claude Code's WebSearch, and consistently find items the automated audit misses.
+
+**Why this matters:** In practice, external deep research tools found the NIST AI 100-2e2025 citation, a third FLI AI Safety Index edition, 5 additional patents, and non-English coverage in Korean/German/Spanish that the automated audit missed entirely. These tools are not a substitute for the structured audit (they lack the systematic coverage and verification discipline), but they are a strong complement.
+
+### How to run
+
+1. After completing Dimensions 1-9, generate a self-contained prompt for external deep research tools. The prompt should include the full tool/paper inventory, what to search for, and the citation verification rule. See `references/search-queries.md` for the base query bank, but the prompt should be open-ended ("search broadly and creatively — I do not know where the coverage is").
+2. Run the prompt in 1-3 external tools. Different tools have different search indices and browsing capabilities; running multiple increases coverage.
+3. Save the raw output to `external-research/` in the project root. Name each file by source and date: `{source}-{YYYY-MM}.md` (e.g., `chatgpt-deep-research-2026-04.md`, `gemini-2026-04.md`, `claude-2026-04.md`). Date the files so future runs know what was already searched and when. Running once per quarter is sufficient; monthly if a major release or conference just happened.
+4. Diff the external findings against the existing audit. Use an agent to extract only genuinely new items (not already in `news-coverage-audit.md`).
+5. For any Tier 0 claims (government, NIST, foundation model system cards), **manually verify** by opening the source PDF and searching for the tool name. External deep research tools hallucinate citations at a non-trivial rate.
+
+### What external tools find that automated search misses
+
+- **Government PDFs:** NIST publications, congressional reports, agency toolkits. These tools can browse and read PDFs that WebSearch cannot index.
+- **Patents:** Google Patents searches with natural language are more effective through browsing tools than through API queries.
+- **Non-English coverage:** Deep research tools handle multilingual searches better and find content on platforms (Bilibili, Tistory, ichi.pro) that site:-scoped web search misses.
+- **Older coverage:** Blog posts and tutorials from 2018-2020 that have fallen out of search engine rankings but are still live.
+
+### What they get wrong
+
+- **Hallucinated citations:** A deep research tool may claim a PDF contains your tool name when it does not. Always verify Tier 0 claims manually.
+- **Name collisions:** "Aegis" matches many unrelated projects. "BOND" matches biology papers. Verification is mandatory.
+- **Stale or broken links:** Some URLs returned may be dead. Check before adding to the audit.
 
 ---
 

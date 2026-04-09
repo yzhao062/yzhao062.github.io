@@ -147,6 +147,87 @@
       background-color: #e14a66;
       border-color: #e14a66;
     }
+
+    /* Impact section */
+    .impact-card {
+      border: 1px solid #e5e5e5;
+      border-left: 4px solid #990000;
+      border-radius: 8px;
+      padding: 18px 20px;
+      margin-bottom: 18px;
+      background: #fff;
+    }
+
+    .impact-card h4 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #990000;
+      margin: 0 0 4px 0;
+    }
+
+    .impact-card .impact-subtitle {
+      font-size: 0.88rem;
+      color: #777;
+      margin-bottom: 12px;
+    }
+
+    .impact-table {
+      width: 100%;
+      font-size: 0.9rem;
+      border-collapse: collapse;
+    }
+
+    .impact-table th {
+      text-align: left;
+      font-weight: 600;
+      color: #555;
+      padding: 5px 10px 5px 0;
+      border-bottom: 1px solid #eee;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    .impact-table td {
+      padding: 6px 10px 6px 0;
+      border-bottom: 1px solid #f5f5f5;
+      vertical-align: top;
+    }
+
+    .impact-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .impact-type {
+      display: inline-block;
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 1px 7px;
+      border-radius: 4px;
+      white-space: nowrap;
+    }
+
+    .type-gov { background: #fff2f2; color: #990000; }
+    .type-policy { background: #f3f0ff; color: #5a3d8a; }
+    .type-enterprise { background: #f0f7ff; color: #1a5276; }
+    .type-education { background: #f0faf0; color: #2d6a2e; }
+    .type-patent { background: #fff8ee; color: #8a6d3b; }
+    .type-pharma { background: #fef0f5; color: #8a3d5c; }
+    .type-journal { background: #f5f5f5; color: #444; }
+    .type-media { background: #fff8f0; color: #8a5c2a; }
+
+    .impact-source {
+      font-size: 0.82rem;
+    }
+
+    .impact-source a {
+      color: #990000;
+      text-decoration: none;
+    }
+
+    .impact-source a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 
@@ -171,6 +252,136 @@
                       <a href="https://claude.com/contact-sales/claude-for-oss">Anthropic Claude for Open Source Program</a>.
                       For all repositories, see <a href="https://github.com/yzhao062">my GitHub profile</a>.
                     </p>
+                    <h3 style="color:#990000; margin-top:18px; margin-bottom:14px;">Adoption &amp; Recognition</h3>
+
+                    <!-- PyOD -->
+                    <div id="pyod-impact" class="impact-card">
+                      <h4>PyOD <span style="font-weight:400; color:#555; font-size:0.9rem;">— Python Library for Outlier Detection</span></h4>
+                      <div class="impact-subtitle">9,800+ stars &middot; 39M+ downloads &middot; <a href="https://github.com/yzhao062/pyod">GitHub</a></div>
+                      <table class="impact-table">
+                        <thead><tr><th>Type</th><th>Evidence</th><th>Source</th></tr></thead>
+                        <tbody>
+                          <tr>
+                            <td><span class="impact-type type-gov">Space Agency</span></td>
+                            <td>Selected by ESA for OPS-SAT spacecraft telemetry benchmark (all 30 algorithms)</td>
+                            <td class="impact-source"><a href="https://www.nature.com/articles/s41597-025-05035-3">Nature Sci. Data</a></td>
+                          </tr>
+                          <tr>
+                            <td><span class="impact-type type-enterprise">Enterprise</span></td>
+                            <td>Walmart real-time pricing anomaly detection (1M+ daily updates)</td>
+                            <td class="impact-source"><a href="https://dl.acm.org/doi/10.1145/3292500.3330693">KDD 2019</a></td>
+                          </tr>
+                          <tr>
+                            <td><span class="impact-type type-enterprise">Enterprise</span></td>
+                            <td>Databricks Kakapo framework for unsupervised outlier detection</td>
+                            <td class="impact-source"><a href="https://www.databricks.com/blog/2023/03/13/unsupervised-outlier-detection-databricks.html">Databricks Blog</a></td>
+                          </tr>
+                          <tr>
+                            <td><span class="impact-type type-enterprise">Enterprise</span></td>
+                            <td>IQVIA healthcare fraud detection (123K+ pharmacy claims)</td>
+                            <td class="impact-source"><a href="https://arxiv.org/abs/2003.05731">SUOD Paper</a></td>
+                          </tr>
+                          <tr>
+                            <td><span class="impact-type type-education">Education</span></td>
+                            <td>Featured in 5 books (Manning, O'Reilly, Apress, Routledge, IntechOpen)</td>
+                            <td class="impact-source"><a href="https://www.manning.com/books/outlier-detection-in-python">Manning</a></td>
+                          </tr>
+                          <tr>
+                            <td><span class="impact-type type-education">Education</span></td>
+                            <td>DataCamp course with dedicated chapter (19M+ platform learners)</td>
+                            <td class="impact-source"><a href="https://www.datacamp.com/courses/anomaly-detection-in-python">DataCamp</a></td>
+                          </tr>
+                          <tr>
+                            <td><span class="impact-type type-enterprise">Enterprise</span></td>
+                            <td>Ericsson Anomaly Detection Framework (E-ADF) built on PyOD</td>
+                            <td class="impact-source"><a href="https://www.ericsson.com/en/blog/2020/7/how-to-make-anomaly-detection-more-accessible">Ericsson Blog</a></td>
+                          </tr>
+                          <tr>
+                            <td><span class="impact-type type-patent">Patents</span></td>
+                            <td>6 patents cite PyOD/COPOD/ECOD (Ericsson, EU, US, China)</td>
+                            <td class="impact-source"><a href="https://patents.google.com/patent/WO2023166515A1/en">Example</a></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <!-- TrustLLM -->
+                    <div id="trustllm-impact" class="impact-card">
+                      <h4>TrustLLM <span style="font-weight:400; color:#555; font-size:0.9rem;">— Trustworthiness Benchmark for LLMs</span></h4>
+                      <div class="impact-subtitle">620+ stars &middot; ICML 2024 &middot; <a href="https://github.com/HowieHwong/TrustLLM">GitHub</a></div>
+                      <table class="impact-table">
+                        <thead><tr><th>Type</th><th>Evidence</th><th>Source</th></tr></thead>
+                        <tbody>
+                          <tr>
+                            <td><span class="impact-type type-gov">U.S. Senate</span></td>
+                            <td>Cited in HSGAC "Hedge Fund Use of Artificial Intelligence" report (footnote 119)</td>
+                            <td class="impact-source"><a href="https://www.hsgac.senate.gov/wp-content/uploads/2024.06.11-Hedge-Fund-Use-of-AI-Report.pdf">Senate PDF</a></td>
+                          </tr>
+                          <tr>
+                            <td><span class="impact-type type-gov">U.S. DoD</span></td>
+                            <td>Listed in CDAO Generative AI Responsible AI Toolkit</td>
+                            <td class="impact-source"><a href="https://www.ai.mil/Portals/137/Documents/Resources%20Page/2024-12GenAI-Responsible-AI-Toolkit.pdf">ai.mil PDF</a></td>
+                          </tr>
+                          <tr>
+                            <td><span class="impact-type type-gov">NIST</span></td>
+                            <td>Named in NIST AI 100-2e2025 Section 3.6 "Benchmarks for AML Vulnerabilities"</td>
+                            <td class="impact-source"><a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-2e2025.pdf">NIST PDF</a></td>
+                          </tr>
+                          <tr>
+                            <td><span class="impact-type type-policy">Policy</span></td>
+                            <td>Official benchmark in all 3 editions of the FLI AI Safety Index (2024, 2025 x2)</td>
+                            <td class="impact-source"><a href="https://futureoflife.org/ai-safety-index-winter-2025/">FLI Report</a> · <a href="https://futureoflife.org/wp-content/uploads/2025/11/Indicator-TrustLLM_Benchmark.pdf">Indicator Sheet</a></td>
+                          </tr>
+                          <tr>
+                            <td><span class="impact-type type-gov">National Lab</span></td>
+                            <td>Lawrence Livermore National Laboratory feature article</td>
+                            <td class="impact-source"><a href="https://computing.llnl.gov/about/newsroom/evaluating-trust-safety-llms">LLNL</a></td>
+                          </tr>
+                          <tr>
+                            <td><span class="impact-type type-media">Media</span></td>
+                            <td>Featured by 机器之心 (Jiqizhixin) and 澎湃新闻 (The Paper)</td>
+                            <td class="impact-source"><a href="https://www.jiqizhixin.com/articles/2024-02-08-8">机器之心</a> · <a href="https://www.thepaper.cn/newsDetail_forward_26315865">澎湃</a></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <!-- TDC -->
+                    <div id="tdc-impact" class="impact-card">
+                      <h4>TDC <span style="font-weight:400; color:#555; font-size:0.9rem;">— Therapeutics Data Commons</span></h4>
+                      <div class="impact-subtitle">1,200+ stars &middot; NeurIPS 2021 &middot; with Harvard &amp; Stanford &middot; <a href="https://github.com/mims-harvard/TDC">GitHub</a></div>
+                      <table class="impact-table">
+                        <thead><tr><th>Type</th><th>Evidence</th><th>Source</th></tr></thead>
+                        <tbody>
+                          <tr>
+                            <td><span class="impact-type type-journal">Journal</span></td>
+                            <td>Published in Nature Chemical Biology (2022)</td>
+                            <td class="impact-source"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9529840/">Nature Chem. Bio.</a></td>
+                          </tr>
+                          <tr>
+                            <td><span class="impact-type type-media">University</span></td>
+                            <td>Harvard Medical School feature: "Can AI transform drug discovery?"</td>
+                            <td class="impact-source"><a href="https://hms.harvard.edu/news/can-ai-transform-way-we-discover-new-drugs">HMS News</a></td>
+                          </tr>
+                          <tr>
+                            <td><span class="impact-type type-media">Science Press</span></td>
+                            <td>Phys.org syndication of Harvard article</td>
+                            <td class="impact-source"><a href="https://phys.org/news/2022-11-ai-drugs.html">Phys.org</a></td>
+                          </tr>
+                          <tr>
+                            <td><span class="impact-type type-enterprise">Industry</span></td>
+                            <td>Amazon Science feature article</td>
+                            <td class="impact-source"><a href="https://www.amazon.science/research-awards/success-stories/cracking-the-code-of-how-diseases-affect-the-body">Amazon Science</a></td>
+                          </tr>
+                          <tr>
+                            <td><span class="impact-type type-pharma">Pharma</span></td>
+                            <td>Cited by researchers at AstraZeneca, Pfizer, Roche, Novartis, Merck, Sanofi, Eli Lilly</td>
+                            <td class="impact-source"><a href="citation-affiliation-audit.md">Audit details</a></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
                     <div class="row g-3" style="margin-top: 0;">
                       <div class="col-md-6">
                         <div class="empty-state" style="margin-top: 0; height: 100%;">

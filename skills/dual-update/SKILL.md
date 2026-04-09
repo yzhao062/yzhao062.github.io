@@ -94,3 +94,15 @@ AWARD_NAME & TYPE & DATE \\
 - Always preserve reverse chronological ordering in both places.
 - Run `python scripts/generate_cv_open_source.py` after any change to `data/open-source.json`.
 - **Publication ↔ lab-members sync**: When adding a new published paper to `data/publications.json`, check if any non-PhD lab member (in `data/lab-members.json`) is a co-author. If so, add the paper to their `publications` array. Note that author names may differ between the two files (e.g., display name vs legal name), so match carefully. Only list published papers with a venue, not arXiv-only preprints.
+
+## CV Paper Count Check
+
+**After every publication change**, verify that the `benumerate` start numbers in `cv/cv-full.tex` are correct. The CV uses three `benumerate` sections with reverse numbering:
+
+- `benumerate{N1}` for Preprints (numbers N1 down to N2+1)
+- `benumerate{N2}` for Journals (numbers N2 down to N3+1)
+- `benumerate{N3}` for Conference/Workshop (numbers N3 down to 1)
+
+The rule: **N1 = total papers**, **N2 = journals + conference/workshop**, **N3 = conference/workshop only**. When you add a paper to any section, increment the start numbers of that section and all sections above it.
+
+Run `python scripts/check_cv_paper_count.py` to verify. If it reports a mismatch, fix the `benumerate` start numbers before compiling.

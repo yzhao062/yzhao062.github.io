@@ -155,6 +155,7 @@
                                 if (type === 'bib') return '<i class="fas fa-quote-left" aria-hidden="true"></i>';
                                 if (type === 'github') return '<i class="fab fa-github" style="font-size:18px"></i>';
                                 if (type === 'project') return '<i class="fas fa-globe" style="font-size:18px"></i>';
+                                if (type === 'impact') return '<i class="fas fa-chart-line" style="font-size:18px"></i>';
                                 return '<i class="fas fa-link" style="font-size:18px"></i>';
                             }
 
@@ -212,11 +213,20 @@
                                     ? ('id=' + encodeURIComponent(item.id))
                                     : ('title=' + encodeURIComponent(title));
                                 var linkHtml = ['<a href="bib-viewer.html?' + bibQuery + '">' + iconHtml('bib') + '</a>'];
-                                linkHtml = linkHtml.concat(links.map(function(link) {
+                                linkHtml = linkHtml.concat(links.filter(function(link) {
+                                    return link.type !== 'impact';
+                                }).map(function(link) {
                                     var href = link.url || '#';
                                     href = escapeHtml(href);
                                     return '<a href="' + href + '">' + iconHtml(link.type) + '</a>';
                                 }));
+                                var impactLink = links.filter(function(link) { return link.type === 'impact'; })[0];
+                                if (impactLink) {
+                                    linkHtml.push(
+                                        '<a href="' + escapeHtml(impactLink.url || '#') + '" style="display:inline-block; padding:1px 9px; background:#fff2f2; color:#990000; border:1px solid #e7bcbc; border-radius:999px; font-size:0.78rem; font-weight:600; text-decoration:none; vertical-align:middle; margin-left:4px;">' +
+                                        '<i class="fas fa-chart-line" style="font-size:11px; margin-right:2px;"></i>Impact</a>'
+                                    );
+                                }
 
                                 return (
                                     '<li>' +

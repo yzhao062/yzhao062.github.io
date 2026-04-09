@@ -18,18 +18,21 @@ Items where government bodies, policy organizations, or foundation model compani
 
 **Source URLs:** [Senate PDF](https://www.hsgac.senate.gov/wp-content/uploads/2024.06.11-Hedge-Fund-Use-of-AI-Report.pdf) · [FLI Winter](https://futureoflife.org/ai-safety-index-winter-2025/) · [FLI Summer](https://futureoflife.org/ai-safety-index-summer-2025/)
 
-**Dimension 8 (PDF deep search) status:** Searched 25+ governance PDFs (OpenAI GPT-4/4o/4.5/5/o1/o3, Anthropic Claude 3/3.5/4/4.5, Meta Llama 3, Google Gemini 1.5, DeepSeek V3/R1, Qwen 2.5, Phi-4, Cohere, Gemma 2, White House x3, NIST AI 600-1, FLI x2, Senate HSGAC) + regulated verticals (OCC, FDIC, FINRA, SEC, CFTC, FDA, NASA, FAA, CISA, DARPA, MITRE, DOE, telecom, insurance, security vendors) for all 104 papers + 17 tools. TrustLLM confirmed in Senate HSGAC + FLI x2. PyOD confirmed in U.S. DoD CDAO Generative AI Responsible AI Toolkit and ESA OPS-SAT benchmark (Nature Scientific Data).
+**Dimension 8 (PDF deep search) status:** Searched 25+ governance PDFs (OpenAI GPT-4/4o/4.5/5/o1/o3, Anthropic Claude 3/3.5/4/4.5, Meta Llama 3, Google Gemini 1.5, DeepSeek V3/R1, Qwen 2.5, Phi-4, Cohere, Gemma 2, White House x3, NIST AI 600-1, FLI x2, Senate HSGAC) + regulated verticals (OCC, FDIC, FINRA, SEC, CFTC, FDA, NASA, FAA, CISA, DARPA, MITRE, DOE, telecom, insurance, security vendors) for all 104 papers + 17 tools. TrustLLM confirmed in Senate HSGAC, FLI x2, and U.S. DoD CDAO Generative AI Responsible AI Toolkit. PyOD confirmed in ESA OPS-SAT benchmark (Nature Scientific Data).
 
 **D8 candidates needing manual PDF verification:**
-- **BIS Working Paper 1188** — ML-based anomaly detection in high-value payment systems (Bank for International Settlements). PDF text extraction failed; could cite PyOD.
+- ~~BIS Working Paper 1188~~ — verified: does NOT cite PyOD. Uses its own ML pipeline. Removed.
 - **OWASP GenAI Solutions Landscape Q2 2026** — Agentic AI security solutions map. agent-audit/Aegis inclusion unconfirmed from search snippets; needs manual check of the landscape graphic.
 
 | 4 | PyOD | **European Space Agency (ESA/ESOC)** | All 30 anomaly detection algorithms in the OPS-SAT spacecraft telemetry benchmark implemented using PyOD 1.1.2. Published in **Nature Scientific Data** (2025). | 2025 |
-| 5 | PyOD | **U.S. Department of Defense (CDAO)** | Listed in the official "Generative AI Responsible AI Toolkit" (v1.0, pages 48-49) with direct link to `yzhao062/pyod`. Published by the Chief Digital and AI Office, Responsible AI Division. | Dec 2024 |
+| 5 | TrustLLM | **U.S. Department of Defense (CDAO)** | Listed in the official "Generative AI Responsible AI Toolkit" (v1.0). Published by the Chief Digital and AI Office, Responsible AI Division. | Dec 2024 |
+| 6 | TrustLLM | **NIST AI 100-2e2025** | Named in Section 3.6 "Benchmarks for AML Vulnerabilities" as a benchmark for six dimensions of trust in LLMs. NIST Special Publication on Adversarial Machine Learning. | Mar 2025 |
+| 7 | TrustLLM | **Future of Life Institute** | Official benchmark in AI Safety Index (Inaugural Edition, Dec 2024). | Dec 2024 |
+| 8 | TrustLLM | **Future of Life Institute** | Dedicated TrustLLM Indicator Data Sheet with scores for 8 AI companies. | Nov 2025 |
 
-**Source URLs:** ... · [CDAO Toolkit PDF](https://www.ai.mil/Portals/137/Documents/Resources%20Page/2024-12GenAI-Responsible-AI-Toolkit.pdf)
+**Source URLs:** ... · [CDAO Toolkit PDF](https://www.ai.mil/Portals/137/Documents/Resources%20Page/2024-12GenAI-Responsible-AI-Toolkit.pdf) · [NIST PDF](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-2e2025.pdf) · [FLI Inaugural](https://futureoflife.org/ai-policy/ai-experts-major-ai-companies-have-significant-safety-gaps/) · [FLI Indicator Sheet](https://futureoflife.org/wp-content/uploads/2025/11/Indicator-TrustLLM_Benchmark.pdf)
 
-**Count: 5 government/policy citations (TrustLLM x3, PyOD x2)**
+**Count: 8 government/policy citations (TrustLLM x7, PyOD x1)**
 
 ---
 
@@ -74,10 +77,15 @@ Independent third-party coverage by outlets not affiliated with you, your lab, o
 | 32 | PyOD | Cake.ai | Industry guide | "Anomaly Detection Software: A Complete Guide" — recommends PyOD as "a strong starting point" | Aug 2025 | D2 | [Link](https://www.cake.ai/blog/open-source-anomaly-detection-tools) |
 | 33 | PyOD | Milvus/Zilliz | Industry reference | "What are open-source libraries for anomaly detection?" — names PyOD as notable library | -- | D2 | [Link](https://milvus.io/ai-quick-reference/what-are-opensource-libraries-for-anomaly-detection) |
 | 34 | TrustLLM | Prompting Guide | Educational reference | "Trustworthiness in LLMs" — references TrustLLM benchmark | -- | D7 | [Link](https://www.promptingguide.ai/research/trustworthiness-in-llms) |
+| 34b | TrustLLM | **机器之心 (Jiqizhixin)** | Top-tier Chinese AI media | "大语言模型的可信之路：TrustLLM全面揭秘" | Feb 2024 | D7 | [Link](https://www.jiqizhixin.com/articles/2024-02-08-8) |
+| 34c | TrustLLM | 腾讯新闻 (Tencent News) | Chinese news syndication | TrustLLM syndication | Feb 2024 | D7 | [Link](https://news.qq.com/rain/a/20240208A03WT900) |
+| 34d | TrustLLM | 新浪财经 (Sina Finance) | Chinese finance/tech platform | TrustLLM syndication | Feb 2024 | D7 | [Link](https://finance.sina.cn/tech/2024-02-08/detail-inahicqm1653854.d.html) |
+| 34e | TrustLLM | 懂AI (DongAIGC) | Chinese AI specialist | "TrustLLM:大型语言模型的可信度评估框架" | 2024 | D7 | [Link](https://www.dongaigc.com/a/trust-llm-reliability-assessment) |
+| 34f | PyOD | 搜狐 (Sohu) | Major Chinese portal | "又一强大的异常检测开源工具库：PyOD" | 2023 | D7 | [Link](https://www.sohu.com/a/692330141_121118999) |
 | 35 | TODS | Towards Data Science | Data science blog | "TODS: Detecting Outliers from Time Series Data" | -- | D3 | [Link](https://towardsdatascience.com/tods-detecting-outliers-from-time-series-data-2d4bd2e91381/) |
 | 36 | DrugAgent | Awesome AI Agents for Healthcare | Curated list | Listed in community resource | -- | D3 | [Link](https://github.com/AgenticHealthAI/Awesome-AI-Agents-for-Healthcare) |
 
-**Count: 37 external third-party items**
+**Count: 42 external third-party items**
 
 ---
 
@@ -118,8 +126,16 @@ External parties building on, integrating, or teaching your tools -- not coverag
 | 65 | COPOD/ECOD | **Academic** | "Data-driven digital forensics: anomaly detection in Mozilla Firefox" (CEUR-WS Vol-4092) -- COPOD and ECOD as "most efficacious" methods |
 | 66a | PyOD | **Course** | Manning liveProject "Using PyOD and Ensemble Methods" -- hands-on project teaching AD with PyOD |
 | 66b | PyOD | **Platform** | GeeksforGeeks "Introduction to Anomaly Detection with Python" -- full PyOD walkthrough tutorial (Jul 2025) |
+| 66c | PyOD | **Tutorial** | Generalist Programmer "Pyod: Python Package Guide 2025" -- standalone guide (Nov 2025) |
+| 66d | PyOD 2 | **Tutorial** | Medium / Kuldeepkumawat -- "PyOD 2: Outlier Detection Powered by LLMs" (Mar 2025) |
+| 66e | PyOD | **Book** | "Advanced Techniques for Anomaly Detection: Beyond the Basics" (Routledge/CRC Press, 2025) -- lists PyOD |
+| 66f | PyOD | **Book** | "Anomaly Detection: Recent Advances, AI and ML Perspectives" (IntechOpen, 2024) -- lists PyOD |
+| 66g | ECOD/LUNAR | **Book chapter** | Springer LNNS vol. 1445, "Novel Outlier Detection Using ECOD, LUNAR and Logistic Regression" (2026) |
+| 66h | PyOD/SUOD | **Enterprise** | IQVIA -- healthcare fraud detection deployment on 123K+ pharmacy claims using PyOD/SUOD models |
+| 66i | ADBench | **Benchmark** | Text-ADBench (arXiv Jul 2025, Jicong Fan et al.) -- external follow-on benchmark inspired by ADBench |
+| 66j | TrustLLM | **Platform** | 腾讯云开发者社区 (Tencent Cloud Developer) -- Chinese TrustLLM coverage |
 
-**Count: 31 ecosystem adoption items**
+**Count: 39 ecosystem adoption items**
 
 ---
 
@@ -201,22 +217,22 @@ Items authored by you, your students, or posted by your team. Useful context but
 
 | Ledger | Count |
 |--------|-------|
-| Government/Policy citations | 5 |
-| External third-party media | 37 |
-| Ecosystem adoption | 31 |
+| Government/Policy citations | 8 |
+| External third-party media | 42 |
+| Ecosystem adoption | 39 |
 | First-party/community | 6 |
 | Awards/recognitions | 18 |
-| **Total verified items** | **97** |
+| **Total verified items** | **113** |
 
 - **104 papers + 17 tools** searched across all 8 dimensions
 - **11,551 Google Scholar citations** (Apr 2026)
 - **39.11M+ PyPI downloads** for PyOD
 - **1,846 Semantic Scholar citations** for Diffusion Models survey
 - **~285 Semantic Scholar citations** for TrustLLM
-- **3 books** with dedicated chapters on PyOD/COPOD
+- **5+ books** with dedicated chapters on PyOD/COPOD/ECOD (Manning, Columbia, Apress, Routledge, IntechOpen)
 - **2 podcasts** naming PyOD
 - **4 online courses** teaching PyOD (DataCamp, Udemy x2, O'Reilly video)
-- **3 enterprise integrations** (Databricks x2, Walmart) + 1 vendor whitepaper (Altair)
+- **4 enterprise integrations** (Databricks x2, Walmart, IQVIA) + 1 vendor whitepaper (Altair)
 - **1 patent** citing PyOD
 - **1 Nature Scientific Data publication** using PyOD (ESA OPS-SAT)
 
@@ -260,9 +276,15 @@ For grant narratives only. These do not name your work.
 - #18b-d: USC Viterbi conference roundups (ICLR 2025, ICML 2024, faculty announcement 2023)
 - D3a mainstream press confirmed all negative
 
-- #5 (Ledger 1): **U.S. DoD CDAO** — PyOD listed in Generative AI Responsible AI Toolkit (Tier 0, found by Codex)
+- #5 (Ledger 1): **U.S. DoD CDAO** — TrustLLM listed in Generative AI Responsible AI Toolkit (Tier 0, found by Codex)
 - #18e-f: USC ISI NeurIPS roundup, FSU TyphoFormer PR (found by Codex)
 - #66a-b: Manning liveProject, GeeksforGeeks tutorial (found by Codex)
 - Codex audit merged and deleted
 
-**Previous total: 64 items. New total: 97 items (+33).**
+**Apr 9 deep patch (+13):**
+- #34b-f: Chinese media (机器之心, 腾讯新闻, 新浪财经, 懂AI, 搜狐)
+- #66c-j: Ecosystem (tutorials, 2 books, Springer chapter, IQVIA enterprise, Text-ADBench, Tencent Cloud TrustLLM)
+- BIS WP 1188 removed from D8 candidates (verified: does not cite PyOD)
+- Citation affiliation audit refreshed (no change: 44 papers, 24 T0, 150 T1)
+
+**Previous total: 64 items. New total: 113 items (+49).**
