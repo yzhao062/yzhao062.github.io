@@ -13,24 +13,20 @@ Items where government bodies, policy organizations, or foundation model compani
 | # | Work Cited | Source | Detail | Date |
 |---|-----------|--------|--------|------|
 | 1 | TrustLLM | **U.S. Senate HSGAC** | Footnote 119, p.25: *"the trustworthiness of large language models is still being analyzed"* in "Hedge Fund Use of Artificial Intelligence" | Jun 2024 |
-| 2 | TrustLLM | **Future of Life Institute** | Official benchmark in AI Safety Index (Winter 2025). Pages 7, 11, 13, 21, 27, 43, 46. Full indicator definition p.46. | Dec 2025 |
-| 3 | TrustLLM | **Future of Life Institute** | Official benchmark in AI Safety Index (Summer 2025). Pages 5, 9, 11, 17, 34, 36, 37. | Jul 2025 |
+| 2 | TrustLLM | **U.S. Department of Defense (CDAO)** | Listed in the official "Generative AI Responsible AI Toolkit" (v1.0). Published by the Chief Digital and AI Office, Responsible AI Division. | Dec 2024 |
+| 3 | TrustLLM | **NIST AI 100-2e2025** | Named in Section 3.6 "Benchmarks for AML Vulnerabilities" as a benchmark for six dimensions of trust in LLMs. NIST Special Publication on Adversarial Machine Learning. | Mar 2025 |
+| 4 | TrustLLM | **Future of Life Institute** | Official benchmark in AI Safety Index (Inaugural Edition). | Dec 2024 |
+| 5 | TrustLLM | **Future of Life Institute** | Official benchmark in AI Safety Index (Summer 2025). Pages 5, 9, 11, 17, 34, 36, 37. | Jul 2025 |
+| 6 | TrustLLM | **Future of Life Institute** | Official benchmark in AI Safety Index (Winter 2025). Pages 7, 11, 13, 21, 27, 43, 46. Full indicator definition p.46. | Dec 2025 |
+| 7 | TrustLLM | **Future of Life Institute** | Dedicated TrustLLM Indicator Data Sheet with scores for 8 AI companies. | Nov 2025 |
+| 8 | PyOD | **European Space Agency (ESA/ESOC)** | All 30 anomaly detection algorithms in the OPS-SAT spacecraft telemetry benchmark implemented using PyOD 1.1.2. Published in **Nature Scientific Data** (2025). | 2025 |
 
-**Source URLs:** [Senate PDF](https://www.hsgac.senate.gov/wp-content/uploads/2024.06.11-Hedge-Fund-Use-of-AI-Report.pdf) · [FLI Winter](https://futureoflife.org/ai-safety-index-winter-2025/) · [FLI Summer](https://futureoflife.org/ai-safety-index-summer-2025/)
+**Source URLs:** [Senate PDF](https://www.hsgac.senate.gov/wp-content/uploads/2024.06.11-Hedge-Fund-Use-of-AI-Report.pdf) · [CDAO Toolkit](https://www.ai.mil/Portals/137/Documents/Resources%20Page/2024-12GenAI-Responsible-AI-Toolkit.pdf) · [NIST PDF](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-2e2025.pdf) · [FLI Inaugural](https://futureoflife.org/ai-policy/ai-experts-major-ai-companies-have-significant-safety-gaps/) · [FLI Summer](https://futureoflife.org/ai-safety-index-summer-2025/) · [FLI Winter](https://futureoflife.org/ai-safety-index-winter-2025/) · [FLI Indicator Sheet](https://futureoflife.org/wp-content/uploads/2025/11/Indicator-TrustLLM_Benchmark.pdf) · [ESA OPS-SAT](https://www.nature.com/articles/s41597-025-05035-3)
 
-**Dimension 8 (PDF deep search) status:** Searched 25+ governance PDFs (OpenAI GPT-4/4o/4.5/5/o1/o3, Anthropic Claude 3/3.5/4/4.5, Meta Llama 3, Google Gemini 1.5, DeepSeek V3/R1, Qwen 2.5, Phi-4, Cohere, Gemma 2, White House x3, NIST AI 600-1, FLI x2, Senate HSGAC) + regulated verticals (OCC, FDIC, FINRA, SEC, CFTC, FDA, NASA, FAA, CISA, DARPA, MITRE, DOE, telecom, insurance, security vendors) for all 104 papers + 17 tools. TrustLLM confirmed in Senate HSGAC, FLI x2, and U.S. DoD CDAO Generative AI Responsible AI Toolkit. PyOD confirmed in ESA OPS-SAT benchmark (Nature Scientific Data).
+**Dimension 8 (PDF deep search) status:** Searched 25+ governance PDFs + regulated verticals for all 104 papers + 17 tools. TrustLLM confirmed in Senate HSGAC, DoD CDAO, NIST AI 100-2e2025, and FLI x4 (inaugural, summer, winter, indicator sheet). PyOD confirmed in ESA OPS-SAT benchmark.
 
 **D8 candidates needing manual PDF verification:**
-- ~~BIS Working Paper 1188~~ — verified: does NOT cite PyOD. Uses its own ML pipeline. Removed.
-- **OWASP GenAI Solutions Landscape Q2 2026** — Agentic AI security solutions map. agent-audit/Aegis inclusion unconfirmed from search snippets; needs manual check of the landscape graphic.
-
-| 4 | PyOD | **European Space Agency (ESA/ESOC)** | All 30 anomaly detection algorithms in the OPS-SAT spacecraft telemetry benchmark implemented using PyOD 1.1.2. Published in **Nature Scientific Data** (2025). | 2025 |
-| 5 | TrustLLM | **U.S. Department of Defense (CDAO)** | Listed in the official "Generative AI Responsible AI Toolkit" (v1.0). Published by the Chief Digital and AI Office, Responsible AI Division. | Dec 2024 |
-| 6 | TrustLLM | **NIST AI 100-2e2025** | Named in Section 3.6 "Benchmarks for AML Vulnerabilities" as a benchmark for six dimensions of trust in LLMs. NIST Special Publication on Adversarial Machine Learning. | Mar 2025 |
-| 7 | TrustLLM | **Future of Life Institute** | Official benchmark in AI Safety Index (Inaugural Edition, Dec 2024). | Dec 2024 |
-| 8 | TrustLLM | **Future of Life Institute** | Dedicated TrustLLM Indicator Data Sheet with scores for 8 AI companies. | Nov 2025 |
-
-**Source URLs:** ... · [CDAO Toolkit PDF](https://www.ai.mil/Portals/137/Documents/Resources%20Page/2024-12GenAI-Responsible-AI-Toolkit.pdf) · [NIST PDF](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-2e2025.pdf) · [FLI Inaugural](https://futureoflife.org/ai-policy/ai-experts-major-ai-companies-have-significant-safety-gaps/) · [FLI Indicator Sheet](https://futureoflife.org/wp-content/uploads/2025/11/Indicator-TrustLLM_Benchmark.pdf)
+- **OWASP GenAI Solutions Landscape Q2 2026** — agent-audit/Aegis inclusion unconfirmed; needs manual check of the landscape graphic.
 
 **Count: 8 government/policy citations (TrustLLM x7, PyOD x1)**
 
@@ -84,8 +80,13 @@ Independent third-party coverage by outlets not affiliated with you, your lab, o
 | 34f | PyOD | 搜狐 (Sohu) | Major Chinese portal | "又一强大的异常检测开源工具库：PyOD" | 2023 | D7 | [Link](https://www.sohu.com/a/692330141_121118999) |
 | 35 | TODS | Towards Data Science | Data science blog | "TODS: Detecting Outliers from Time Series Data" | -- | D3 | [Link](https://towardsdatascience.com/tods-detecting-outliers-from-time-series-data-2d4bd2e91381/) |
 | 36 | DrugAgent | Awesome AI Agents for Healthcare | Curated list | Listed in community resource | -- | D3 | [Link](https://github.com/AgenticHealthAI/Awesome-AI-Agents-for-Healthcare) |
+| 36b | TrustLLM | TechXplore | Science media | "Highlight solutions to make large language models trustworthy" | Aug 2024 | D10 | [Link](https://techxplore.com/news/2024-08-highlight-solutions-large-language-trustworthy.html) |
+| 36c | PyOD | Ericsson Blog | Enterprise blog | "How to make anomaly detection more accessible" — names PyOD in E-ADF framework | Jul 2020 | D10 | [Link](https://www.ericsson.com/en/blog/2020/7/how-to-make-anomaly-detection-more-accessible) |
+| 36d | PyOD/ADBench | Elder Research | Enterprise consulting | "Business Insights Meet Analytics Skills in Anomaly Detection" — recommends PyOD and ADBench | Mar 2025 | D10 | [Link](https://www.elderresearch.com/blog/business-insights-meet-analytics-skills-in-anomaly-detection/) |
+| 36e | PyOD | KDnuggets | Data science outlet | "Outlier Detection Methods Cheat Sheet" — names PyOD, Yue Zhao | Feb 2019 | D10 | [Link](https://www.kdnuggets.com/2019/02/outlier-detection-methods-cheat-sheet.html) |
+| 36f | PyOD | Data Reply IT | Enterprise consulting | "Anomaly Detection made easy with PyOD" (European IT consulting, Reply Group) | 2023 | D10 | [Link](https://medium.com/data-reply-it-datatech/anomaly-detection-made-easy-with-pyod-960faf6da4e5) |
 
-**Count: 42 external third-party items**
+**Count: 47 external third-party items**
 
 ---
 
@@ -134,8 +135,20 @@ External parties building on, integrating, or teaching your tools -- not coverag
 | 66h | PyOD/SUOD | **Enterprise** | IQVIA -- healthcare fraud detection deployment on 123K+ pharmacy claims using PyOD/SUOD models |
 | 66i | ADBench | **Benchmark** | Text-ADBench (arXiv Jul 2025, Jicong Fan et al.) -- external follow-on benchmark inspired by ADBench |
 | 66j | TrustLLM | **Platform** | 腾讯云开发者社区 (Tencent Cloud Developer) -- Chinese TrustLLM coverage |
+| 66k | COPOD/ECOD | **Patent** | EP4339817A1 (EU) -- cites COPOD |
+| 66l | COPOD/ECOD | **Patent** | US20250217974A1 (US) -- cites COPOD and ECOD |
+| 66m | PyOD | **Patent** | EP4662606A1 (EU) -- cites PyOD |
+| 66n | PyOD | **Patent** | CN111666198A (China) -- cites PyOD |
+| 66o | COPOD | **Patent** | CN112328424A (China) -- cites COPOD |
+| 66p | PyOD/COPOD/ECOD | **Enterprise** | Ericsson research paper (arXiv 2308.10504) -- tests COPOD and ECOD, calls them "empirically best performing" |
+| 66q | PyOD | **Platform** | Korean: 3 tutorials (Tistory, JunPyoPark, DataNetworkAnalysis) |
+| 66r | PyOD | **Platform** | Japanese: 4 additional sources (Codemajin, DataPowerNow, Scutum, TRYETING) |
+| 66s | PyOD | **Platform** | German: 5 sources (ichi.pro, Hahn-Schickard/EmbedML, Konfuzio, Acervo Lima, KI Blog) |
+| 66t | PyOD | **Platform** | Spanish: 2 tutorials (Aprende Machine Learning, Medium/Carlos Millan) |
+| 66u | PyOD | **Platform** | Chinese: 智东西 (Zhidx) lecture preview, Bilibili video (9.3K+ views) |
+| 66v | TrustLLM | **Platform** | Chinese: 专知 (Zhuanzhi) TrustLLM coverage |
 
-**Count: 39 ecosystem adoption items**
+**Count: 51 ecosystem adoption items**
 
 ---
 
@@ -208,8 +221,8 @@ Items authored by you, your students, or posted by your team. Useful context but
 | International government | EU AI Office, ENISA, UK gov, OECD iLibrary, UNESCO, G7/G20 | No citations by name |
 | **Regulated verticals (D8)** | OCC, FDIC, FINRA, SEC, CFTC (finance); FDA (healthcare); NASA, FAA (aerospace); CISA (cybersecurity); DARPA, MITRE, DOE (defense); telecom; insurance; security vendors (Splunk, Elastic, CrowdStrike, Palo Alto, Fortinet) | **No confirmed citations**. Topic-relevant PDFs found but none cite PyOD/ADBench/COPOD by name. |
 | Standards bodies | MITRE ATLAS, MLCommons, Cloud Security Alliance | No citations |
-| Korean tech (Tistory) | Searched | No PyOD content |
-| German tech (Heise.de) | Searched | No results |
+| Korean tech (Tistory) | Searched | 3 PyOD tutorials found (D10) — corrected from prior negative |
+| German tech (Heise.de) | Searched | No results on Heise; 5 other German sources found (D10) |
 
 ---
 
@@ -218,11 +231,11 @@ Items authored by you, your students, or posted by your team. Useful context but
 | Ledger | Count |
 |--------|-------|
 | Government/Policy citations | 8 |
-| External third-party media | 42 |
-| Ecosystem adoption | 39 |
+| External third-party media | 47 |
+| Ecosystem adoption | 51 |
 | First-party/community | 6 |
 | Awards/recognitions | 18 |
-| **Total verified items** | **113** |
+| **Total verified items** | **130** |
 
 - **104 papers + 17 tools** searched across all 8 dimensions
 - **11,551 Google Scholar citations** (Apr 2026)
@@ -233,7 +246,7 @@ Items authored by you, your students, or posted by your team. Useful context but
 - **2 podcasts** naming PyOD
 - **4 online courses** teaching PyOD (DataCamp, Udemy x2, O'Reilly video)
 - **4 enterprise integrations** (Databricks x2, Walmart, IQVIA) + 1 vendor whitepaper (Altair)
-- **1 patent** citing PyOD
+- **6 patents** citing PyOD/COPOD/ECOD (Ericsson, EU x2, US, China x2)
 - **1 Nature Scientific Data publication** using PyOD (ESA OPS-SAT)
 
 ---
@@ -276,7 +289,7 @@ For grant narratives only. These do not name your work.
 - #18b-d: USC Viterbi conference roundups (ICLR 2025, ICML 2024, faculty announcement 2023)
 - D3a mainstream press confirmed all negative
 
-- #5 (Ledger 1): **U.S. DoD CDAO** — TrustLLM listed in Generative AI Responsible AI Toolkit (Tier 0, found by Codex)
+- **U.S. DoD CDAO** — TrustLLM listed in Generative AI Responsible AI Toolkit (Tier 0, found by Codex)
 - #18e-f: USC ISI NeurIPS roundup, FSU TyphoFormer PR (found by Codex)
 - #66a-b: Manning liveProject, GeeksforGeeks tutorial (found by Codex)
 - Codex audit merged and deleted
@@ -287,4 +300,6 @@ For grant narratives only. These do not name your work.
 - BIS WP 1188 removed from D8 candidates (verified: does not cite PyOD)
 - Citation affiliation audit refreshed (no change: 44 papers, 24 T0, 150 T1)
 
-**Previous total: 64 items. New total: 113 items (+49).**
+- External reports merged: 5 new media, 5 new patents, Ericsson research paper, 14 non-English sources (Korean x3, Japanese x4, German x5, Spanish x2), corrected negative results
+
+**Previous total: 64 items. New total: 130 items (+66).**
