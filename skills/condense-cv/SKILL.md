@@ -56,3 +56,13 @@ When the audience is specified, bias selection accordingly:
 - `anomaly detection / data mining`: PyOD, ADBench, AD-AGENT, anomaly detection papers
 
 If a LaTeX toolchain is available, compile and confirm the final page count. If compilation is unavailable, state that the source was prepared but the page count was not verified locally.
+
+## Format Preservation Rule
+
+When an existing derived file (`cv-1page.tex` or `cv-2page.tex`) already exists, **preserve its format and layout structure**. Do not redesign the layout, change the two-column arrangement, alter margin settings, or restructure sections. Only update data within the existing structure:
+- Refresh star counts, download counts, and citation numbers from `data/open-source.json` and current metrics.
+- Swap individual publication or system entries if newer, higher-impact items are available.
+- Update award/funding entries with the latest items.
+- Shorten entry text only if the update pushes the page count over budget.
+
+The user has approved the existing format. Changing it forces a new round of visual review and approval. Treat the existing layout as a constraint, not a suggestion.
