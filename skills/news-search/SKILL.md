@@ -239,3 +239,55 @@ When running a targeted search (not full audit), append new findings to the exis
 | **Topic monitor** | When a trending topic connects to your work | Dim 4 only, focused on that topic |
 | **Ecosystem check** | Before broader-impact statements | Dim 7 (education, code ecosystem, global) |
 | **PDF deep search** | Before tenure materials or when a specific gov report is suspected | Dim 8 only, with candidate PDF list |
+| **Affiliation audit** | Before tenure/promotion, after major citation milestones | Dim 9 (citation affiliation analysis) |
+
+---
+
+## Dimension 9: Citation Affiliation Analysis
+
+**Purpose:** Find citing papers where at least one author is affiliated with a notable institution (government agencies, space agencies, national labs, defense contractors, foundation model companies, Fortune 500, pharma, financial institutions). This surfaces adoption evidence that web search and PDF search miss entirely.
+
+**Important framing:** This finds "researchers AT [institution] cited your tool" -- not "[institution] officially endorses your tool." The distinction matters for how results are presented in grant narratives and tenure materials.
+
+### How it works
+
+Run `scripts/citation_affiliation_audit.py`, which uses the OpenAlex API to:
+1. **Load ALL papers** from `data/publications.json` (not a hand-picked subset). The script reads the full inventory and only excludes surveys.
+2. Find each paper on OpenAlex by arXiv ID, DOI, or title search. Title matching uses a two-pass strategy: exact normalized-title match first, then prefix-anchor (pre-colon acronym like "PyOD:", "TrustGen:") plus high word overlap (50%+ with prefix, 70%+ without). This prevents false positives from ambiguous or short titles.
+3. **Query citing papers per work** using OpenAlex's `filter=cites:{work_id}` syntax. Per-work queries preserve the mapping from each citing paper back to which of your works it cites, which is critical for the output table. This is slower than batching but produces accurate attribution.
+4. Extract author institution affiliations from every citing paper.
+5. Pattern-match institutions against Tier 0 targets (government, space, national labs, defense, foundation model companies) and Tier 1 targets (Big Tech, finance, pharma, healthcare, industrial).
+6. Deduplicate and write results to `citation-affiliation-audit.md`.
+
+### Comprehensiveness rule
+
+**Search every paper, not just the high-profile ones.** You do not know where the gold lies. The ESA OPS-SAT citation came from PyOD (obvious), but NASA JPL cited a less obvious paper. The CDC cited ECOD, not PyOD. Deutsche Bundesbank cited ECOD. Morgan Stanley cited XGBOD. Coverage can come from any paper. The script must read `data/publications.json` and search ALL non-survey entries. Do not skip papers because they have low citation counts or seem unlikely to have notable adopters.
+
+### What to exclude
+
+- **Survey papers** (e.g., Diffusion Models survey): OpenAlex conflates papers with similar titles, producing massive false positive rates. Only include tools, benchmarks, and methods papers. The script filters these automatically using title keywords like "comprehensive survey", "a survey on", "a survey of".
+- **Papers with ambiguous short names** (e.g., "BOND"): The script uses title-word overlap verification (>30%) to confirm the right paper was found. If OpenAlex returns biology papers for a graph anomaly detection tool, the match is rejected.
+- **Grant-funded affiliations vs. employment:** NIH appears as an affiliation on many papers, but most are university researchers with NIH grants, not NIH intramural staff. The output uses the framing "researchers AT [institution]" to avoid overclaiming. NIH Clinical Center and NIH intramural programs are stronger signals than generic "National Institutes of Health".
+
+### Known Limitations
+
+- **OpenAlex coverage gaps:** OpenAlex has incomplete coverage for papers published before ~2022 and its citation index lags behind Google Scholar significantly (e.g., PyOD shows ~24 citations on OpenAlex vs. 1,000+ on Scholar). This means the audit systematically undercounts. Run it as a lower-bound estimate, not an exhaustive census.
+- **Google Scholar has no API.** Scholar has the most complete citation data but cannot be queried programmatically. For high-priority papers where OpenAlex returns few results, consider manual Scholar spot-checks.
+- **Semantic Scholar** has better coverage than OpenAlex for CS papers but its affiliation data is mostly empty. It is not useful for this audit.
+- **Re-run periodically.** OpenAlex backfills citation data over time. A paper that shows 0 citations today may show 50 in six months. Re-run at least once per semester. Very recent preprints (2026) will only appear in future runs.
+- **The script tries arXiv ID lookup first** (from `paper_url` in `publications.json`), then falls back to title search. arXiv lookup is more reliable for CS papers but still requires OpenAlex to have ingested the paper.
+
+### Improving Coverage
+
+OpenAlex covers ~50% of papers as of Apr 2026. To close the gap:
+- **Semantic Scholar API** (`api.semanticscholar.org/graph/v1/paper/{id}/citations`): better CS coverage than OpenAlex, but affiliation data is mostly empty. Useful as a second pass to find citing papers that OpenAlex missed, then cross-reference those citing paper titles back to OpenAlex for institution data.
+- **Web of Science / Scopus APIs**: best affiliation data but require USC library credentials. Use for manual verification of Tier 0 claims.
+- **Re-running the script** every 3-6 months is the simplest way to improve coverage, since OpenAlex backfills continuously.
+
+### Output
+
+Results go to `citation-affiliation-audit.md` at the project root, separate from the news coverage audit. The file includes:
+- Tier 0 table (government, space, national labs, defense, foundation model companies)
+- Tier 1 table (Big Tech, finance, pharma, healthcare, industrial)
+- Summary by institution (counts)
+- Methodology note about framing (affiliated researchers, not institutional endorsement)
