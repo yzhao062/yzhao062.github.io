@@ -106,6 +106,10 @@
             {
                 "type": "project",
                 "url": "https://doxbench.github.io/"
+            },
+            {
+                "type": "impact",
+                "url": "opensource.html#doxbench-impact"
             }
         ],
         "abstract": "Recent advances in multi-modal large reasoning models (MLRMs) have shown significant ability to interpret complex visual content. While these models enable impressive reasoning capabilities, they also introduce novel and underexplored privacy risks. In this paper, we identify a novel category of privacy leakage in MLRMs: Adversaries can infer sensitive geolocation information, such as a user's home address or neighborhood, from user-generated images, including selfies captured in private settings. To formalize and evaluate these risks, we propose a three-level visual privacy risk framework that categorizes image content based on contextual sensitivity and potential for location inference. We further introduce DoxBench, a curated dataset of 500 real-world images reflecting diverse privacy scenarios. Our evaluation across 11 advanced MLRMs and MLLMs demonstrates that these models consistently outperform non-expert humans in geolocation inference and can effectively leak location-related private information. This significantly lowers the barrier for adversaries to obtain users' sensitive geolocation information. We further analyze and identify two primary factors contributing to this vulnerability: (1) MLRMs exhibit strong reasoning capabilities by leveraging visual clues in combination with their internal world knowledge; and (2) MLRMs frequently rely on privacy-related visual clues for inference without any built-in mechanisms to suppress or avoid such usage. To better understand and demonstrate real-world attack feasibility, we propose GeoMiner, a collaborative attack framework that decomposes the prediction process into two stages: clue extraction and reasoning to improve geolocation performance while introducing a novel attack perspective. Our findings highlight the urgent need to reassess inference-time privacy risks in MLRMs to better protect users' sensitive information."
@@ -254,6 +258,10 @@
             {
                 "type": "github",
                 "url": "https://github.com/Steven51516/drugagent"
+            },
+            {
+                "type": "impact",
+                "url": "opensource.html#drugagent-impact"
             }
         ],
         "abstract": "Recent progress in Large Language Models (LLMs) has drawn attention to their potential for accelerating drug discovery. However, a central problem remains: translating theoretical ideas into robust implementations in the highly specialized context of pharmaceutical research. This limitation prevents practitioners from making full use of the latest AI developments in drug discovery. To address this challenge, we introduce DrugAgent, a multi-agent framework that automates machine learning (ML) programming for drug discovery tasks. DrugAgent employs an LLM Planner that formulates high-level ideas and an LLM Instructor that identifies and integrates domain knowledge when implementing those ideas. We present case studies on three representative drug discovery tasks. Our results show that DrugAgent consistently outperforms leading baselines, including a relative improvement of 4.92% in ROC-AUC compared to ReAct for drug-target interaction (DTI). DrugAgent is publicly available at https://anonymous.4open.science/r/drugagent-5C42/."
@@ -1409,7 +1417,12 @@
         "authors": "Yuexing Hao, Yue Huang, Haoran Zhang, Chenyang Zhao, Zhenwen Liang, Paul Pu Liang, Yue Zhao, Lichao Sun, Saleh Kalantari, Xiangliang Zhang, Marzyeh Ghassemi",
         "venue": "arXiv preprint",
         "year": 2025,
-        "links": [],
+        "links": [
+            {
+                "type": "impact",
+                "url": "opensource.html#compute-impact"
+            }
+        ],
         "abstract": "Cutting-edge research in Artificial Intelligence (AI) requires considerable resources, including Graphics Processing Units (GPUs), data, and human resources. In this paper, we evaluate of the relationship between these resources and the scientific advancement of foundation models (FM). We reviewed 6517 FM papers published between 2022 to 2024, and surveyed 229 first-authors to the impact of computing resources on scientific output. We find that increased computing is correlated with national funding allocations and citations, but our findings don't observe the strong correlations with research environment (academic or industrial), domain, or study methodology. We advise that individuals and institutions focus on creating shared and affordable computing opportunities to lower the entry barrier for under-resourced researchers. These steps can help expand participation in FM research, foster diversity of ideas and contributors, and sustain innovation and progress in AI. The data will be available at: https://mit-calc.csail.mit.edu/"
     },
     {

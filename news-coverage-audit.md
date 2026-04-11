@@ -1,6 +1,6 @@
 # News & Media Coverage Audit — Yue Zhao / FORTIS Lab
 
-*Updated: 2026-04-10. Full audit via /news-search skill (all 8 dimensions).*
+*Updated: 2026-04-11 (targeted searches: agent-audit, Aegis, Auditable Agents, agent/LLM/VLM last-author works, DPU, Political-LLM, Treble, ADBench, Computing Resources, plus under-searched high-star tools).*
 *All 8 dimensions complete across all 121 items (104 papers + 17 tools).*
 *Citation verification applied: every item names or cites the work, person, lab, or co-author.*
 
@@ -91,8 +91,17 @@ Independent third-party coverage by outlets not affiliated with you, your lab, o
 | 36h | JailDAM | Brian D. Colwell | Security reference | "The Big List of AI Jailbreaking References and Resources" — curated list, names JailDAM and Yue Zhao | 2025 | D5 | [Link](https://briandcolwell.com/the-big-list-of-ai-jailbreaking-references-and-resources/) |
 | 36i | PyOD | Number Analytics | Industry blog | "Advanced Nonparametric Outlier Identification" — names PyOD as "a comprehensive library for anomaly detection" | 2025 | D3 | [Link](https://www.numberanalytics.com/blog/advanced-nonparametric-outlier-identification) |
 | 36j | DrugAgent | bioengineer.org | Science news | "Agentic AI Sparks In Silico Team Science Boom" — syndication of Nature Biotech article, names DrugAgent | Feb 2026 | D4 | [Link](https://bioengineer.org/agentic-ai-sparks-in-silico-team-science-boom/) |
+| 36k | FaceLock | So Essentially (Substack) | Tech blog | "Edit Anyway My Face Generates Away" by Dhruv Diddi — covers FaceLock algorithm, names USC. Yue Zhao not named directly (last author). | Nov 2024 | D5 | [Link](https://soessentially.substack.com/p/edit-anyway-my-face-generates-away) |
+| 36l | ADBench | BAAI Community (智源社区) | Chinese AI research community | "NeurIPS 2022 \| ADBench: 最全面的异常检测基准!" — dedicated article covering ADBench's 100,000 experiments | Sep 2022 | D7 | [Link](https://hub.baai.ac.cn/view/20597) |
+| 36m | ADBench | BAAI Community (智源社区) | Chinese AI research community | "我们真的可以相信过去20年的异常检测领域的进展吗?" — provocative framing of ADBench findings | Sep 2022 | D7 | [Link](https://hub.baai.ac.cn/view/20607) |
+| 36n | PyGOD | Towards Data Science | Data science blog | "Graph Neural Networks with PyG on Node Classification, Link Prediction, and Anomaly Detection" by Tomonori Masui — uses PyGOD for anomaly detection, 84.1% AUC | Oct 2022 | D3 | [Link](https://medium.com/data-science/graph-neural-networks-with-pyg-on-node-classification-link-prediction-and-anomaly-detection-14aa38fe1275) |
+| 36o | PyGOD/BOND | BAAI Community (智源社区) | Chinese AI research community | "NeurIPS 2022 \| BOND: Benchmarking Unsupervised Anomalous Node Detection" — names PyGOD as companion library | Nov 2022 | D7 | [Link](https://hub.baai.ac.cn/view/21552) |
+| 36p | Anomaly-Detection-Resources | paulvanderlaken.com | Data science blog | "Anomaly Detection Resources" — dedicated feature, names "CMU PhD student Yue Zhao" | Dec 2019 | D3 | [Link](https://paulvanderlaken.com/2019/12/19/anomaly-detection-resources/) |
+| 36q | Anomaly-Detection-Resources | R-bloggers | R community aggregator | Syndication of paulvanderlaken article — large data science readership | Dec 2019 | D3 | [Link](https://www.r-bloggers.com/2019/12/anomaly-detection-resources/) |
+| 36r | CS-Paper-Checklist | HelloGitHub | Open-source discovery platform | Featured in Monthly Vol. 110 (#36 in "Other" section), 1.6k stars | May 2025 | D3 | [Link](https://hellogithub.com/en/periodical/volume/110) |
+| 36s | CS-Paper-Checklist | Efficient Coder (高效码农) | Tech blog | "The Ultimate CS Paper Writing Checklist: Expert Tips for High-Impact Research" — links to repo | May 2025 | D3 | [Link](https://www.xugj520.cn/en/archives/computer-science-paper-checklist-2.html) |
 
-**Count: 51 external third-party items**
+**Count: 60 external third-party items**
 
 ---
 
@@ -160,8 +169,43 @@ External parties building on, integrating, or teaching your tools -- not coverag
 | 66aa | DPU | **Platform** | Moonlight.io literature review + paperreading.club |
 | 66ab | Multiple (ICLR 2026) | **Platform** | Paper Digest ICLR 2026 highlights (DoxBench, TrustGen, DecAlign, FigEdit) |
 | 66ac | Can MLLMs do TSAD? | **Platform** | alphaXiv discussion page |
+| 66ad | DyFlow | **Platform** | Moonlight.io literature review + ChatPaper summary + alphaXiv overview |
+| 66ae | FaceLock | **Platform** | Liner.com quick review + Moonlight.io literature review |
+| 66af | CoAct | **Platform** | Moonlight.io literature review + aimodels.fyi paper details + Bytez viewer |
+| 66ag | Agent Banana | **Platform** | Moonlight.io literature review |
+| 66ah | StealthRank | **Platform** | Moonlight.io literature review |
+| 66ai | Defenses Against Prompt Attacks | **Platform** | alphaXiv overview page |
+| 66aj | Can MLLMs do TSAD? | **Platform** | Emergent Mind editorial summary + Moonlight.io + aimodels.fyi (extends 66ac) |
+| 66ak | Multimodal GEO | **Platform** | Emergent Mind topic page |
+| 66al | agent-audit | **Platform** | Hacker News Show HN submission (item 46918149) — "Agent Audit: Open-source security scanner for AI agents" |
+| 66am | ADBench | **Platform** | Zhihu: "异常检测--ADBench (NeurIPS'22) is ALL You Need" technical review |
+| 66an | ADBench | **Platform** | Zhihu: "异常检测基准 Anomaly detection benchmark" overview |
+| 66ao | ADBench | **Platform** | CSDN: benchmark/dataset/baseline collection listing ADBench |
+| 66ap | ADBench | **Platform** | CSDN: "赵越-图神经网络与异常检测" GNN talk coverage naming Yue Zhao |
+| 66aq | ADBench | **Platform** | Emergent Mind dedicated topic page (updated Feb 2026) |
+| 66ar | ADBench | **Platform** | Kaggle notebook "anomaly detection using Adbench datasets" by valeriemokeira (Jan 2025) |
+| 66as | ADBench | **Platform** | alphaXiv discussion page |
+| 66at | DPU | **Platform** | GitHub Awesome-Out-Of-Distribution-Detection curated list (CVPR 2025 entry) |
+| 66au | Treble | **Platform** | Moonlight.io literature review + alphaXiv overview |
+| 66av | Treble | **Platform** | GitHub curated lists: Awesome-MLLM-Hallucination + Awesome-LVLM-Hallucination |
+| 66aw | Political-LLM | **Platform** | alphaXiv (19 upvotes, 133 views) + aimodels.fyi paper summary |
+| 66ax | Political-LLM | **Recognition** | SSRN Top Download Paper for Decision Science (1,327 downloads, 5,137 abstract views) |
+| 66ay | Computing Resources | **Platform** | Hugging Face Papers page for arXiv:2510.13621 |
+| 66az | Computing Resources | **Policy** | CVPR 2026 Compute Reporting Form — official policy pilot addressing same compute-transparency gap the paper quantified; discussed on LinkedIn by program chair Vladimir Pavlovic ([post](https://www.linkedin.com/posts/vladimir-pavlovic-a5528412_cvpr-2026-compute-reporting-form-author-activity-7384957217147457536-kd1X)), Sasha Luccioni ([post](https://www.linkedin.com/posts/sashaluccioniphd_cvpr-2026-compute-reporting-form-author-activity-7385993803515744256-uqM-)) |
+| 66ba | PyGOD | **Platform** | Zhihu x3: dedicated intro article, GNN+AD talk coverage, BOND benchmark article (all name PyGOD) |
+| 66bb | PyGOD | **Platform** | CSDN x5: dedicated PyGOD intro, GNN talk coverage, PyGOD+PyOD methods, JMLR tutorial, troubleshooting guide |
+| 66bc | TODS | **Platform** | Zhihu x3: outlier type detection, open-source system intro, "powerful time series anomaly detection tool" recommendation |
+| 66bd | TODS | **Platform** | Tencent Cloud Developer: detailed TODS tutorial with code examples (Jul 2021) |
+| 66be | TODS | **Platform** | CSDN x2 + DongAI + GitCode + Explinks + Showapi: Chinese-language tutorials and overviews (2021-2025) |
+| 66bf | combo | **Platform** | Zhihu: "combo: Python机器学习模型合并工具库简介" introduction (2019) |
+| 66bg | combo | **Platform** | Tencent Cloud/Datawhale: full combo introduction + AAAI 2020 context (Dec 2019) |
+| 66bh | combo | **Platform** | CSDN x2: combo library articles (2020, 2024) |
+| 66bi | Anomaly-Detection-Resources | **Platform** | Zhihu: third-party recommendation article linking to repo |
+| 66bj | Anomaly-Detection-Resources | **Platform** | CSDN x2: human-written survey referencing repo + PyOD tutorial linking resources |
+| 66bk | CS-Paper-Checklist | **Platform** | CSDN: dedicated article "提升计算机科学论文质量的实用指南" |
+| 66bl | CS-Paper-Checklist | **Platform** | Scholar's Corner (lujie.ac.cn): listed under "Academic Writing Tips" with direct repo link |
 
-**Count: 58 ecosystem adoption items**
+**Count: 93 ecosystem adoption items**
 
 ---
 
@@ -246,11 +290,11 @@ Items authored by you, your students, or posted by your team. Useful context but
 | Ledger | Count |
 |--------|-------|
 | Government/Policy citations | 10 |
-| External third-party media | 51 |
-| Ecosystem adoption | 58 |
+| External third-party media | 60 |
+| Ecosystem adoption | 93 |
 | First-party/community | 6 |
 | Awards/recognitions | 18 |
-| **Total verified items** | **143** |
+| **Total verified items** | **187** |
 
 - **104 papers + 17 tools** searched across all 8 dimensions
 - **11,551 Google Scholar citations** (Apr 2026)
@@ -270,15 +314,19 @@ Items authored by you, your students, or posted by your team. Useful context but
 
 For grant narratives only. These do not name your work.
 
-**AI agent security:** Tom's Hardware (non-DoxBench articles), TechCrunch, WinBuzzer, TechRadar, TechSpot, CyberNews, AI Commission, Bellingcat (DoxBench topic); Hacker News x2, Dark Reading, ReversingLabs, Sangfor, Reco.ai, Penligent.ai, DEV Community (gstack/aegis comparison -- different Aegis), Blink.new (OpenClaw crisis); NIST CAISI RFI (Jan 2026), NIST AI Agent Standards Initiative (Feb 2026), Bessemer VP, Cisco, Microsoft Agent Governance Toolkit, Palo Alto Networks OWASP blog
+**AI agent security:** Tom's Hardware (non-DoxBench articles), TechCrunch, WinBuzzer, TechRadar, TechSpot, CyberNews, AI Commission, Bellingcat (DoxBench topic); Hacker News x2, Dark Reading, ReversingLabs, Sangfor, Reco.ai, Penligent.ai, DEV Community (gstack/aegis comparison -- different Aegis), Blink.new (OpenClaw crisis); NIST CAISI RFI (Jan 2026), NIST AI Agent Standards Initiative (Feb 2026), Bessemer VP, Cisco, Microsoft Agent Governance Toolkit, Palo Alto Networks OWASP blog; CSO Online "Runtime: The New Frontier of AI Agent Security"; HiddenLayer agentic runtime security (Mar 2026); IBM agentic AI runtime security; Grantex "State of AI Agent Security 2026" (93% rely on unscoped API keys); Gravitee "State of AI Agent Security 2026" (57.4% cite lack of audit trails); VentureBeat Nvidia agentic AI stack (GTC 2026); RSAC 2026 "Everyone trying to secure AI agents"; Help Net Security Sage open-source agent security layer (Mar 2026); Help Net Security Asqav open-source SDK for AI agent governance (Apr 2026)
 
-**Consulting/think tanks:** McKinsey x2, Deloitte x2, PwC x2, Accenture x2, EY, KPMG, WEF, OECD, CSA (Securing Autonomous AI Agents), CSET, Brookings, RAND, Sequoia
+**Consulting/think tanks:** McKinsey x4 ("State of AI trust in 2026": 80% encountered risky agent behavior; "Agentic AI governance for autonomous systems"; "Agentic AI security: Risks & governance"; "Rethinking enterprise architecture for the agentic era"); Deloitte x5 ("Agentic AI in audit"; "Internal Audit Hot Topics 2026"; "Agentic AI Orchestration, Governance" -- only 21% mature governance; compliance leaders; Omnia platform); PwC x4 ("The end of traditional internal audit"; "Responsible adoption of AI agents"; "Validating multi-agent AI systems"; "Responsible AI and internal audit"); EY x2 (enterprise agentic AI audit launch -- 130K professionals, Apr 2026; "Unlocking the potential of agentic AI"); KPMG x4 ("AI governance for the agentic AI era" -- 75% prioritize auditability; "Critical Agenda Issues for Boards" -- 86% top priority; Q1 2026 pulse -- 63% require human validation; Canada audit committee); Accenture x3 (responsible AI governance; AI agent security identity; PE 2026); Oliver Wyman ("Agentic AI Transforming Compliance" -- automate 70% compliance, Feb 2026); WEF x3 ("AI Agents in Action" -- 82% plan adoption, Nov 2025; "Governance is key for AI agents" Mar 2026; public sector trust Jan 2026); OECD x2 (heightened security risks May 2025; Hong Kong privacy commissioner Mar 2026); CSA "AI Agent Governance Gap" (Apr 2026); CSET x3 ("Through the Chat Window"; "AI Control"; "Autonomous Cyber Defense"); Brookings ("The train has left the station"); RAND (measuring biological capabilities of AI agents); Partnership on AI ("Six AI Governance Priorities for 2026"); Sequoia
 
 **ChatGPT geolocation (DoxBench topic, paper not cited):** Tom's Hardware, Cloudwards, Cybernews, TechRadar, TechSpot, WinBuzzer, AI Commission
 
-**Government (topic, tools not cited):** GAO AI Accountability Framework, GAO Fraud/Improper Payments, Congress 119th hearing, Nextgov x2, OWASP Top 10 Agentic, OWASP AISVS, ENISA AI/Cybersecurity, UK Gov marketplace, OWASP Agentic AI Solutions Landscape Q2 2026 (no universities or academic tools listed)
+**Government (topic, tools not cited):** GAO AI Accountability Framework, GAO Fraud/Improper Payments, Congress 119th hearing, Nextgov x2, OWASP Top 10 Agentic, OWASP AISVS, OWASP Agentic Skills Top 10, ENISA AI/Cybersecurity, UK Gov marketplace, OWASP Agentic AI Solutions Landscape Q2 2026 (no universities or academic tools listed); FTC AI Policy Statement ($53K/violation fines starting 2027, Mar 2026); SEC 2026 exam priorities targeting AI audit trails; FINRA 2026 Regulatory Oversight Report (multi-step agent reasoning auditability); Federal Register NIST RFI docket NIST-2025-0035 (Jan 2026); NIST ITL webinar "Building Measurement Probes into Agentic AI Ecosystems" (Apr 2026); White House National AI Policy Framework (Mar 2026); FDA deploys agentic AI platform for regulatory operations (2026); Singapore IMDA Model AI Governance Framework for Agentic AI (Jan 2026); EU AI Act enforcement (Aug 2, 2026) -- requires record-keeping, traceability, audit trails; EC Digital Strategy "Agentic AI: Leveraging European AI Talent" (Jan 2026); IEEE-USA NIST RFI Response mapping SP 800-53 audit controls to agent systems (Mar 2026); IETF Internet-Draft "Agent Audit Trail" standard -- JSON-based, tamper-evident hash chaining, maps to EU AI Act/SOC 2/ISO 42001 (Mar 2026)
 
-**Auditable agents (topic, tools not cited):** ISACA "The Growing Challenge of Auditing Agentic AI" (2025)
+**Auditable agents (topic, tools not cited):** ISACA "The Growing Challenge of Auditing Agentic AI" (2025); ISACA Advanced in AI Audit (AAIA) Certification launch (2025); ISACA Future Ready IT Audit Framework Update (2026); ISACA "Responsible AI: From Emerging Technology to Executive Governance Imperative" (2026); Fortune "Intelligence may be scalable, but accountability is not" -- Accenture/Wharton report (Mar 2026); Fortune "AI agents are getting more capable, but reliability is lagging" (Mar 2026); Fortune "Protect your agentic AI before you wreck your agentic AI" (Jan 2026); HBR "To Scale AI Agents Successfully, Think of Them Like Team Members" -- calls for audit trails (Mar 2026); HBR "AI Agents Act a Lot Like Malware" -- executive liability (Mar 2026); HBR "Create an Onboarding Plan for AI Agents" (Mar 2026); Bloomberg -- auditability "non-negotiable" in regulated environments; Gartner multiagent systems (audit trails); Forrester AEGIS Framework (39 controls, name collision -- their AEGIS, not ours); Forrester Predictions 2026 (half of ERP vendors will launch autonomous governance with audit trails); Forrester Agent Control Plane market evaluation; Mayer Brown legal guidance on agentic AI governance (Feb 2026); SafePaaS/Security Boulevard "2026 SOX Compliance: Why Every AI Agent is a Financial Risk" (Feb 2026); Accountancy Age "EY's agentic AI pivot -- A watershed moment for audit quality?" (Apr 2026); Medium (Ian Loe) "Your AI Agent Needs an Audit Trail, Not Just a Guardrail" (Mar 2026); Squirro "Autonomy without auditability is just a liability"; MarkTechPost "How to Build Transparent AI Agents: Traceable Decision-Making with Audit Trails" (Feb 2026); ACM "Creating Characteristically Auditable Agentic AI Systems" (FAIR 2025); Frontiers in AI "Audit-as-code" framework for continuous AI assurance (2026); IBM/e& enterprise agentic AI for governance and compliance (Jan 2026)
+
+**LLM election prediction (topic, papers not cited):** Science (AAAS) "How AIs responded to the 2024 US presidential election -- in real time" (covers MIT CSAIL study, not USC papers); MIT Technology Review "AI's impact on elections is being overblown" (Sep 2024); Nature x2 ("Performance and biases of LLMs in public opinion simulation"; "Persuading voters using human-AI dialogues"); Newsweek x2 (AI election predictions); Semafor x2 (Aaru AI polling startup); Benzinga (Aaru); Brookings x2 ("How AI will transform the 2024 elections"; "Impact of generative AI in a global election year"); Pew Research (public concern over AI in elections); Harvard Ash Center "Using AI for Political Polling"; BYU (GPT-3 voter simulation); Chinese media: The Paper/澎湃新闻 x2 (AI election prediction, LLM voter simulation), Tencent News/南方周末 (Fudan agent-based election prediction), 36kr (Aaru), CSDN (ElectionSim Fudan), Al Jazeera Chinese; International: Carnegie Endowment "AI and Democracy" (Jan 2026); East Asia Forum (Korea elections); IDEA French "L'IA au service de la gestion electorale"; Korean academic journal (US election prediction models)
+
+**Compute inequality in AI research (topic, paper not cited):** HPCwire "The Compute Divide in AI-Driven Science" (75% of AI supercomputing US-based, Nov 2025); VentureBeat "AI research finds a compute divide" (covers Ahmed & Wahed "De-democratization of AI"); Stanford HAI AI Index 2025 (academics 1-8 GPUs vs industry thousands, 90% of notable models from industry); TIME "US Just Made a Crucial Step Toward Democratizing AI Access" (NAIRR pilot); Brookings "How the NAIRR can pilot inclusive AI"; MIT Technology Review "AI is making inequality worse"; Nature x2 ("AI can supercharge inequality"; "AI scientists are changing research"); CFR "How 2026 Could Decide the Future of AI"; Digital Economy Trends 2026 "The AI Divide"; BAAI Community (AI large model training cost surge)
 
 ---
 
@@ -330,3 +378,37 @@ For grant narratives only. These do not name your work.
 - Topic Validation: added OWASP Landscape Q2 2026 (negative), ISACA auditing article.
 
 **New total: 143 items (+13 from Apr 9).**
+
+**Apr 10 targeted search — agent/LLM/VLM last-author works (+10):**
+- **Ledger 2:** #36k FaceLock — So Essentially (Substack) by Dhruv Diddi, covers FaceLock algorithm, names USC (Nov 2024, D5).
+- **Ledger 3 (Tier 5 platforms):** 9 new entries — DyFlow (66ad: Moonlight, ChatPaper, alphaXiv); FaceLock (66ae: Liner, Moonlight); CoAct (66af: Moonlight, aimodels.fyi, Bytez); Agent Banana (66ag: Moonlight); StealthRank (66ah: Moonlight); Defenses Against Prompt Attacks (66ai: alphaXiv); Can MLLMs do TSAD (66aj: Emergent Mind, Moonlight, aimodels.fyi — extends 66ac); Multimodal GEO (66ak: Emergent Mind); agent-audit (66al: Hacker News Show HN).
+- **Topic Validation (major expansion):** Auditable agents concept now covered by Fortune x3, HBR x3, Bloomberg, all Big Four (EY, Deloitte, PwC, KPMG), McKinsey x4, Forrester x3, Gartner, WEF x3, OECD x2, CSET x3, CSA, Partnership on AI. Government/regulatory: FTC ($53K/violation fines 2027), SEC exam priorities, FINRA, Singapore IMDA framework (Jan 2026), EU AI Act enforcement (Aug 2026), IETF Internet-Draft "Agent Audit Trail" standard (Mar 2026), NIST ITL webinar, White House AI Policy Framework, IEEE-USA response. Agent security: CSO Online, HiddenLayer, IBM, Grantex, Gravitee (57.4% lack audit trails), VentureBeat, RSAC 2026. ISACA expanded to 4 items including AAIA certification.
+- **Aegis:** No new coverage. Name extremely crowded (10+ competing products named "Aegis").
+- **agent-audit:** No new third-party editorial coverage. OpenClaw crisis covered heavily but cites Koi Security/Snyk/Trend Micro, not agent-audit.
+- **Auditable Agents (arXiv:2604.05485):** No direct citations (paper too recent). Topic validation is the strongest of any work — the exact concept is the dominant theme of 2026 enterprise AI governance.
+
+**New total: 153 items (+10 from 143).**
+
+**Apr 10 targeted search #2 — DPU, Political-LLM, Treble, ADBench, Computing Resources (+17):**
+- **Ledger 2:** #36l-m ADBench — BAAI Community (智源社区) x2: dedicated Chinese-language articles, one provocatively titled "Can We Really Trust Progress in Anomaly Detection Over the Past 20 Years?" (Sep 2022, D7).
+- **Ledger 3:** 15 new entries:
+  - ADBench (66am-as): Zhihu x2, CSDN x2, Emergent Mind topic page, Kaggle notebook, alphaXiv.
+  - DPU (66at): GitHub Awesome-OOD-Detection curated list.
+  - Treble (66au-av): Moonlight + alphaXiv; 2 GitHub Awesome Hallucination lists.
+  - Political-LLM (66aw-ax): alphaXiv + aimodels.fyi; SSRN Top Download Paper for Decision Science.
+  - Computing Resources (66ay-az): Hugging Face Papers page; CVPR 2026 Compute Reporting Form policy ecosystem (official pilot + LinkedIn posts from program chair Pavlovic, Sasha Luccioni, Jon Barron).
+- **Topic Validation:** LLM election prediction — Science (AAAS), MIT Tech Review, Nature x2, Newsweek x2, Semafor x2, Brookings x2, Pew, Harvard, Chinese media (The Paper x2, Tencent News, 36kr, CSDN), Carnegie Endowment, Korean journal. Compute inequality — HPCwire, VentureBeat, Stanford HAI AI Index 2025, TIME (NAIRR), Brookings, MIT Tech Review, Nature x2, CFR.
+- **Political-LLM:** No direct editorial coverage despite "Will Trump win?" media hook. MIT CSAIL study and Aaru startup captured the media attention. Topic validation very strong.
+- **DPU:** No editorial coverage beyond platform listings. 2 Zhihu CVPR 2025 roundups inaccessible (403).
+- **Treble:** No editorial coverage. EMNLP 2025 Findings. Listed in 2 GitHub Awesome Hallucination reading lists.
+- **Computing Resources:** No new editorial coverage. CVPR 2026 Compute Reporting Form is the strongest downstream policy impact.
+
+**New total: 170 items (+17 from 153).**
+
+**Apr 11 targeted search #3 — under-searched high-star tools (+17):**
+- **Ledger 2 (+6):** PyGOD TDS tutorial by Tomonori Masui (Oct 2022); PyGOD/BOND BAAI Community article (Nov 2022); Anomaly-Detection-Resources featured on paulvanderlaken.com (Dec 2019) + R-bloggers syndication; CS-Paper-Checklist featured in HelloGitHub Monthly Vol. 110 (May 2025) + Efficient Coder article (May 2025).
+- **Ledger 3 (+11):** PyGOD (66ba-bb: Zhihu x3, CSDN x5); TODS (66bc-be: Zhihu x3, Tencent Cloud, CSDN x2, DongAI, GitCode, Explinks, Showapi); combo (66bf-bh: Zhihu, Tencent Cloud/Datawhale, CSDN x2); Anomaly-Detection-Resources (66bi-bj: Zhihu, CSDN x2); CS-Paper-Checklist (66bk-bl: CSDN, Scholar's Corner).
+- Chinese-language coverage is the dominant discovery: PyGOD has 9 Chinese items, TODS has 10, combo has 4, Anomaly-Detection-Resources has 3. English-language coverage for these tools is sparse beyond the initial PyOD ecosystem articles.
+- Anomaly-Detection-Resources (9,239 stars) has surprisingly little dedicated coverage — visibility flows through PyOD rather than the resources repo itself.
+
+**New total: 187 items (+17 from 170).**
