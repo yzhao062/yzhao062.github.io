@@ -1,36 +1,36 @@
 {
-  "permissions": {
-    "allow": [
-      "Bash(git:*)",
-      "Bash(gh:*)",
-      "Bash(python:*)",
-      "Bash(ls:*)",
-      "Bash(cd:*)",
-      "Bash(export PATH=*)",
-      "Edit",
-      "Write",
-      "Read",
-      "Skill",
-      "WebFetch",
-      "WebSearch",
-      "Bash(pip:*)",
-      "Bash(pytest:*)",
-      "Bash(conda:*)",
-      "Bash(mamba:*)",
-      "Bash(mkdir:*)",
-      "Bash(cp:*)",
-      "Bash(mv:*)",
-      "Bash(cat:*)",
-      "Bash(curl:*)",
-      "Bash(echo:*)",
-      "Grep",
-      "Glob"
-    ]
-  },
-  "attribution": {
-    "commit": "",
-    "pr": ""
-  },
-  "$schema": "https://json.schemastore.org/claude-code-settings.json",
-  "effortLevel": "high"
+    "permissions":  {
+                        "allow":  [
+                                      "Bash(git:*)",
+                                      "Bash(gh:*)",
+                                      "Bash(python:*)",
+                                      "Bash(ls:*)",
+                                      "Bash(cd:*)",
+                                      "Bash(export PATH=*)",
+                                      "Edit",
+                                      "Write",
+                                      "Read",
+                                      "Skill",
+                                      "WebFetch",
+                                      "WebSearch",
+                                      "Bash(pip:*)",
+                                      "Bash(pytest:*)",
+                                      "Bash(conda:*)",
+                                      "Bash(mamba:*)",
+                                      "Bash(mkdir:*)",
+                                      "Bash(cp:*)",
+                                      "Bash(mv:*)",
+                                      "Bash(cat:*)",
+                                      "Bash(curl:*)",
+                                      "Bash(echo:*)",
+                                      "Grep",
+                                      "Glob"
+                                  ]
+                    },
+    "attribution":  {
+                        "commit":  "",
+                        "pr":  ""
+                    },
+    "$schema":  "https://json.schemastore.org/claude-code-settings.json",
+    "effortLevel":  "max"
 }
