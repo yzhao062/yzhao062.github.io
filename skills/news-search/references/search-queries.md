@@ -163,6 +163,10 @@ site:enisa.europa.eu "anomaly detection" OR "AI agent security" OR TrustLLM
 site:gov.uk "anomaly detection" OR "AI auditing" OR "AI agent security" OR TrustLLM
 site:oecd-ilibrary.org PyOD OR TrustLLM OR "anomaly detection" OR "Yue Zhao"
 site:unesco.org "anomaly detection" OR "AI auditing" OR TrustLLM
+site:internationalaisafetyreport.org TrustLLM OR PyOD OR "anomaly detection" OR "Yue Zhao"
+site:privacyinternational.org "anomaly detection" OR "geolocation" OR DoxBench OR "AI privacy" OR "Yue Zhao"
+"International AI Safety Report" TrustLLM OR PyOD OR "anomaly detection" OR DoxBench cited {YEAR}
+"Privacy International" DoxBench OR "geolocation" OR "doxing" OR "Yue Zhao" cited {YEAR}
 "EU AI Act" TrustLLM OR PyOD OR "anomaly detection benchmark" cited
 "UK AI Safety Institute" TrustLLM OR PyOD OR "anomaly detection" cited report
 "Hiroshima AI Process" OR "G7" OR "G20" TrustLLM OR "anomaly detection" cited

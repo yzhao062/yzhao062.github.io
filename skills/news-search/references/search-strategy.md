@@ -146,6 +146,24 @@ These are **Tier 0** — the most valuable citations for tenure, grants, and imp
 
 Never assume web search has found everything. The most important citations are the ones buried in PDFs.
 
+### The Domain Blind Spot (Second Most Important Lesson)
+
+`site:`-scoped searches are only as good as the domain list. High-impact reports increasingly live on **dedicated domains** that do not match any known government, think tank, or outlet URL pattern. Examples:
+
+- The **International AI Safety Report 2026** (Yoshua Bengio, 30+ countries) lives on `internationalaisafetyreport.org` — not on `gov.uk`, `oecd.ai`, or any summit domain. A `site:gov.uk TrustLLM` query will never find it.
+- **Privacy International** reports live on `privacyinternational.org` — an NGO that falls between "think tank" and "government" categories. No outlet sweep query targeted it.
+
+These documents are Tier 0-1 material. They are invisible to outlet sweeps because the domain is not in the registry.
+
+**How to avoid this blind spot:**
+
+1. **Run name-first queries without `site:` filters.** After the outlet sweep, run queries like `"International AI Safety Report" TrustLLM` or `"Privacy International" DoxBench` — searching for the *report name* or *organization name* paired with your tool name. These succeed regardless of hosting domain.
+2. **Run topic-proximity queries without `site:` filters.** A search like `AI geolocation privacy policy report DoxBench 2026` will surface documents on any domain, including unexpected ones.
+3. **When a new major report is announced in the news, add its domain to the registry immediately.** Do not wait for the next full audit to discover it lives on a new domain.
+4. **Periodically check "landmark reports" lists.** Major AI governance documents are tracked by FLI, OECD, Stanford HAI, and others. Scan those trackers for new report URLs, then search inside them.
+
+The rule: **outlet sweeps find known sources; name-first and topic-proximity searches find unknown sources.** Always run both.
+
 ### How to execute Dimension 8
 
 1. **Build the full term list** — extract every tool name, paper acronym, distinctive phrase, and author name from `data/publications.json` and `data/open-source.json`. Include at least 50+ terms.

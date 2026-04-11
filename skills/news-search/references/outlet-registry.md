@@ -101,6 +101,8 @@ If a result appears in these outlets, it is Tier 1 coverage.
 | Alan Turing Institute | turing.ac.uk | UK national AI institute |
 | World Economic Forum | weforum.org | Global AI governance reports |
 | OECD AI Policy Observatory | oecd.ai | International AI policy tracker |
+| International AI Safety Report | internationalaisafetyreport.org | Multi-government AI safety assessment (Bengio-led, 30+ countries) |
+| Privacy International | privacyinternational.org | Digital rights, surveillance, AI privacy policy |
 | IEEE Standards Association | standards.ieee.org | AI/ML technical standards |
 | ISO | iso.org | International standards |
 
