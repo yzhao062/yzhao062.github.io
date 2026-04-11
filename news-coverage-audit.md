@@ -1,6 +1,6 @@
 # News & Media Coverage Audit — Yue Zhao / FORTIS Lab
 
-*Updated: 2026-04-08. Full audit via /news-search skill (all 8 dimensions).*
+*Updated: 2026-04-10. Full audit via /news-search skill (all 8 dimensions).*
 *All 8 dimensions complete across all 121 items (104 papers + 17 tools).*
 *Citation verification applied: every item names or cites the work, person, lab, or co-author.*
 
@@ -20,15 +20,17 @@ Items where government bodies, policy organizations, or foundation model compani
 | 6 | TrustLLM | **Future of Life Institute** | Official benchmark in AI Safety Index (Winter 2025). Pages 7, 11, 13, 21, 27, 43, 46. Full indicator definition p.46. | Dec 2025 |
 | 7 | TrustLLM | **Future of Life Institute** | Dedicated TrustLLM Indicator Data Sheet with scores for 8 AI companies. | Nov 2025 |
 | 8 | PyOD | **European Space Agency (ESA/ESOC)** | All 30 anomaly detection algorithms in the OPS-SAT spacecraft telemetry benchmark implemented using PyOD 1.1.2. Published in **Nature Scientific Data** (2025). | 2025 |
+| 8b | TrustLLM | **International AI Safety Report 2026** | Citation #881. Led by Yoshua Bengio, authored by 100+ AI experts, backed by 30+ countries and international organisations. Published Feb 2026. | Feb 2026 |
+| 8c | DoxBench | **Privacy International** | Cited on p.28, footnote 56: "Luo W., Qiming Z., Lu T., Liu X., Zhao Y., Xiang Z., Xiao C., 'Doxing via the Lens: Revealing Privacy Leakage in Image Geolocation for Agentic Multi-Modal Large Reasoning Model'" in "Nowhere to Hide? Privacy Risks and Policy Implications of AI Geolocation." | Feb 2026 |
 
-**Source URLs:** [Senate PDF](https://www.hsgac.senate.gov/wp-content/uploads/2024.06.11-Hedge-Fund-Use-of-AI-Report.pdf) · [CDAO Toolkit](https://www.ai.mil/Portals/137/Documents/Resources%20Page/2024-12GenAI-Responsible-AI-Toolkit.pdf) · [NIST PDF](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-2e2025.pdf) · [FLI Inaugural](https://futureoflife.org/ai-policy/ai-experts-major-ai-companies-have-significant-safety-gaps/) · [FLI Summer](https://futureoflife.org/ai-safety-index-summer-2025/) · [FLI Winter](https://futureoflife.org/ai-safety-index-winter-2025/) · [FLI Indicator Sheet](https://futureoflife.org/wp-content/uploads/2025/11/Indicator-TrustLLM_Benchmark.pdf) · [ESA OPS-SAT](https://www.nature.com/articles/s41597-025-05035-3)
+**Source URLs:** [Senate PDF](https://www.hsgac.senate.gov/wp-content/uploads/2024.06.11-Hedge-Fund-Use-of-AI-Report.pdf) · [CDAO Toolkit](https://www.ai.mil/Portals/137/Documents/Resources%20Page/2024-12GenAI-Responsible-AI-Toolkit.pdf) · [NIST PDF](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-2e2025.pdf) · [FLI Inaugural](https://futureoflife.org/ai-policy/ai-experts-major-ai-companies-have-significant-safety-gaps/) · [FLI Summer](https://futureoflife.org/ai-safety-index-summer-2025/) · [FLI Winter](https://futureoflife.org/ai-safety-index-winter-2025/) · [FLI Indicator Sheet](https://futureoflife.org/wp-content/uploads/2025/11/Indicator-TrustLLM_Benchmark.pdf) · [ESA OPS-SAT](https://www.nature.com/articles/s41597-025-05035-3) · [Intl AI Safety Report](https://internationalaisafetyreport.org/publication/international-ai-safety-report-2026) · [Privacy Intl](https://www.privacyinternational.org/report/5736/nowhere-hide-privacy-risks-and-policy-implications-ai-geolocation)
 
-**Dimension 8 (PDF deep search) status:** Searched 25+ governance PDFs + regulated verticals for all 104 papers + 17 tools. TrustLLM confirmed in Senate HSGAC, DoD CDAO, NIST AI 100-2e2025, and FLI x4 (inaugural, summer, winter, indicator sheet). PyOD confirmed in ESA OPS-SAT benchmark.
+**Dimension 8 (PDF deep search) status:** Searched 25+ governance PDFs + regulated verticals for all 104 papers + 17 tools. TrustLLM confirmed in Senate HSGAC, DoD CDAO, NIST AI 100-2e2025, FLI x4 (inaugural, summer, winter, indicator sheet), and International AI Safety Report 2026. DoxBench confirmed in Privacy International report. PyOD confirmed in ESA OPS-SAT benchmark.
 
-**D8 candidates needing manual PDF verification:**
-- **OWASP GenAI Solutions Landscape Q2 2026** — agent-audit/Aegis inclusion unconfirmed; needs manual check of the landscape graphic.
+**D8 candidates resolved:**
+- ~~**OWASP GenAI Solutions Landscape Q2 2026**~~ — manually checked Apr 10; no universities or academic tools listed. Cleared.
 
-**Count: 8 government/policy citations (TrustLLM x7, PyOD x1)**
+**Count: 10 government/policy citations (TrustLLM x8, PyOD x1, DoxBench x1)**
 
 ---
 
@@ -45,7 +47,7 @@ Independent third-party coverage by outlets not affiliated with you, your lab, o
 | 9 | TrustGen | Microsoft Research | Research listing | Part of ICLR 2026 portfolio | 2026 | D3 | [Link](https://www.microsoft.com/en-us/research/publication/trustgen-a-platform-of-dynamic-benchmarking-on-the-trustworthiness-of-generative-foundation-models/) |
 | 10 | TrustLLM | MarkTechPost | AI newsletter | "Navigating the Complexity of Trustworthiness in LLMs: A Deep Dive into the TRUST LLM Framework" | Jan 2024 | D3 | [Link](https://www.marktechpost.com/2024/01/16/navigating-the-complexity-of-trustworthiness-in-llms-a-deep-dive-into-the-trust-llm-framework/) |
 | 11 | DrugAgent | MarkTechPost | Tech blog article | "Meet DrugAgent: A Multi-Agent Framework for Automating ML in Drug Discovery" | Dec 2024 | D3 | [Link](https://www.marktechpost.com/2024/12/01/meet-drugagent-a-multi-agent-framework-for-automating-machine-learning-in-drug-discovery/) |
-| 12 | DrugAgent | Nature Biotechnology | Journal citation | Cited in "Agentic AI and the rise of in silico team science" | 2026 | D4 | [Link](https://www.nature.com/articles/s41587-026-03035-1) — **needs manual verification** |
+| 12 | DrugAgent | Nature Biotechnology | Journal citation | Cited in "Agentic AI and the rise of in silico team science" — names DrugAgent as agent querying specialized databases for drug-target interactions | 2026 | D4 | [Link](https://www.nature.com/articles/s41587-026-03035-1) |
 | 13 | TDC | Harvard Medical School News | University PR | "Can AI transform the way we discover new drugs?" | Nov 2022 | D3 | [Link](https://hms.harvard.edu/news/can-ai-transform-way-we-discover-new-drugs) |
 | 14 | TDC | Phys.org | Science syndication | Syndication of Harvard article | Nov 2022 | D3 | [Link](https://phys.org/news/2022-11-ai-drugs.html) |
 | 15 | TDC | Amazon Science | Industry research | "Cracking the code of how diseases affect the body" | May 2023 | D3 | [Link](https://www.amazon.science/research-awards/success-stories/cracking-the-code-of-how-diseases-affect-the-body) |
@@ -85,8 +87,12 @@ Independent third-party coverage by outlets not affiliated with you, your lab, o
 | 36d | PyOD/ADBench | Elder Research | Enterprise consulting | "Business Insights Meet Analytics Skills in Anomaly Detection" — recommends PyOD and ADBench | Mar 2025 | D10 | [Link](https://www.elderresearch.com/blog/business-insights-meet-analytics-skills-in-anomaly-detection/) |
 | 36e | PyOD | KDnuggets | Data science outlet | "Outlier Detection Methods Cheat Sheet" — names PyOD, Yue Zhao | Feb 2019 | D10 | [Link](https://www.kdnuggets.com/2019/02/outlier-detection-methods-cheat-sheet.html) |
 | 36f | PyOD | Data Reply IT | Enterprise consulting | "Anomaly Detection made easy with PyOD" (European IT consulting, Reply Group) | 2023 | D10 | [Link](https://medium.com/data-reply-it-datatech/anomaly-detection-made-easy-with-pyod-960faf6da4e5) |
+| 36g | PyOD 2 | Towards Data Science | Data science blog | "Boosting Your Anomaly Detection With LLMs" — dedicated article on PyOD 2's LLM-powered model selection | Sep 2025 | D3 | [Link](https://towardsdatascience.com/boosting-your-anomaly-detection-with-llms/) |
+| 36h | JailDAM | Brian D. Colwell | Security reference | "The Big List of AI Jailbreaking References and Resources" — curated list, names JailDAM and Yue Zhao | 2025 | D5 | [Link](https://briandcolwell.com/the-big-list-of-ai-jailbreaking-references-and-resources/) |
+| 36i | PyOD | Number Analytics | Industry blog | "Advanced Nonparametric Outlier Identification" — names PyOD as "a comprehensive library for anomaly detection" | 2025 | D3 | [Link](https://www.numberanalytics.com/blog/advanced-nonparametric-outlier-identification) |
+| 36j | DrugAgent | bioengineer.org | Science news | "Agentic AI Sparks In Silico Team Science Boom" — syndication of Nature Biotech article, names DrugAgent | Feb 2026 | D4 | [Link](https://bioengineer.org/agentic-ai-sparks-in-silico-team-science-boom/) |
 
-**Count: 47 external third-party items**
+**Count: 51 external third-party items**
 
 ---
 
@@ -147,8 +153,15 @@ External parties building on, integrating, or teaching your tools -- not coverag
 | 66t | PyOD | **Platform** | Spanish: 2 tutorials (Aprende Machine Learning, Medium/Carlos Millan) |
 | 66u | PyOD | **Platform** | Chinese: 智东西 (Zhidx) lecture preview, Bilibili video (9.3K+ views) |
 | 66v | TrustLLM | **Platform** | Chinese: 专知 (Zhuanzhi) TrustLLM coverage |
+| 66w | DoxBench | **Platform** | Liner.com quick review + Moonlight.io literature review |
+| 66x | AD-AGENT | **Platform** | Moonlight.io literature review |
+| 66y | MetaOOD | **Platform** | Liner.com quick review + aimodels.fyi paper details |
+| 66z | JailDAM | **Platform** | aimodels.fyi paper details + Bohrium (Chinese academic platform) |
+| 66aa | DPU | **Platform** | Moonlight.io literature review + paperreading.club |
+| 66ab | Multiple (ICLR 2026) | **Platform** | Paper Digest ICLR 2026 highlights (DoxBench, TrustGen, DecAlign, FigEdit) |
+| 66ac | Can MLLMs do TSAD? | **Platform** | alphaXiv discussion page |
 
-**Count: 51 ecosystem adoption items**
+**Count: 58 ecosystem adoption items**
 
 ---
 
@@ -199,9 +212,11 @@ Items authored by you, your students, or posted by your team. Useful context but
 ## Upcoming Visibility Opportunities
 
 1. **ICLR 2026** (Apr 24-28): DoxBench, FigEdit, DecAlign, TrustGen. DoxBench strongest outreach candidate.
-2. **ACM AI and Agentic Systems** (May 26-29): agent-audit presentation.
-3. **ACL 2026** (Jul 2-7): CoAct, Defenses Against Prompt Attacks, Topology Matters.
-4. **Adobe Research blog**: May cover FigEdit in ICLR roundup.
+2. **机器之心 ICLR 2026 Paper Sharing** (Apr 18, Beijing): DoxBench/FigEdit/TrustGen may get Chinese media coverage from this event.
+3. **USC Viterbi "USC at ICLR 2026"** — expect article within 2 weeks of conference (late Apr / early May).
+4. **ACM AI and Agentic Systems** (May 26-29): agent-audit presentation.
+5. **ACL 2026** (Jul 2-7): CoAct, Defenses Against Prompt Attacks, Topology Matters.
+6. **Adobe Research blog**: May cover FigEdit in ICLR roundup.
 
 ---
 
@@ -218,7 +233,7 @@ Items authored by you, your students, or posted by your team. Useful context but
 | Think tanks | Stanford HAI, CSET, CAIS, Brookings, RAND, WEF, OECD, Turing | Topic coverage only |
 | Foundation model system cards | OpenAI (8), Anthropic (5), Meta, Google, DeepSeek (2), Qwen, Phi-4, Cohere, Gemma, Yi | No citations |
 | Government (beyond Senate) | White House (3), NIST AI 600-1, GAO, Congress.gov, NSF.gov, OSTI.gov | No citations by name |
-| International government | EU AI Office, ENISA, UK gov, OECD iLibrary, UNESCO, G7/G20 | No citations by name |
+| International government | EU AI Office, ENISA, UK gov, OECD iLibrary, UNESCO, G7/G20 | **International AI Safety Report 2026 cites TrustLLM** (citation #881). Other sources: no citations by name. |
 | **Regulated verticals (D8)** | OCC, FDIC, FINRA, SEC, CFTC (finance); FDA (healthcare); NASA, FAA (aerospace); CISA (cybersecurity); DARPA, MITRE, DOE (defense); telecom; insurance; security vendors (Splunk, Elastic, CrowdStrike, Palo Alto, Fortinet) | **No confirmed citations**. Topic-relevant PDFs found but none cite PyOD/ADBench/COPOD by name. |
 | Standards bodies | MITRE ATLAS, MLCommons, Cloud Security Alliance | No citations |
 | Korean tech (Tistory) | Searched | 3 PyOD tutorials found (D10) — corrected from prior negative |
@@ -230,12 +245,12 @@ Items authored by you, your students, or posted by your team. Useful context but
 
 | Ledger | Count |
 |--------|-------|
-| Government/Policy citations | 8 |
-| External third-party media | 47 |
-| Ecosystem adoption | 51 |
+| Government/Policy citations | 10 |
+| External third-party media | 51 |
+| Ecosystem adoption | 58 |
 | First-party/community | 6 |
 | Awards/recognitions | 18 |
-| **Total verified items** | **130** |
+| **Total verified items** | **143** |
 
 - **104 papers + 17 tools** searched across all 8 dimensions
 - **11,551 Google Scholar citations** (Apr 2026)
@@ -261,7 +276,9 @@ For grant narratives only. These do not name your work.
 
 **ChatGPT geolocation (DoxBench topic, paper not cited):** Tom's Hardware, Cloudwards, Cybernews, TechRadar, TechSpot, WinBuzzer, AI Commission
 
-**Government (topic, tools not cited):** GAO AI Accountability Framework, GAO Fraud/Improper Payments, Congress 119th hearing, Nextgov x2, OWASP Top 10 Agentic, OWASP AISVS, ENISA AI/Cybersecurity, UK Gov marketplace
+**Government (topic, tools not cited):** GAO AI Accountability Framework, GAO Fraud/Improper Payments, Congress 119th hearing, Nextgov x2, OWASP Top 10 Agentic, OWASP AISVS, ENISA AI/Cybersecurity, UK Gov marketplace, OWASP Agentic AI Solutions Landscape Q2 2026 (no universities or academic tools listed)
+
+**Auditable agents (topic, tools not cited):** ISACA "The Growing Challenge of Auditing Agentic AI" (2025)
 
 ---
 
@@ -302,4 +319,14 @@ For grant narratives only. These do not name your work.
 
 - External reports merged: 5 new media, 5 new patents, Ericsson research paper, 14 non-English sources (Korean x3, Japanese x4, German x5, Spanish x2), corrected negative results
 
-**Previous total: 64 items. New total: 130 items (+66).**
+**Previous total: 64 items. New total (Apr 9): 130 items (+66).**
+
+**Apr 10 targeted search (+13):**
+- **Tier 0 (Ledger 1):** International AI Safety Report 2026 — TrustLLM citation #881 (Yoshua Bengio, 30+ countries, Feb 2026). Privacy International "Nowhere to Hide?" — DoxBench cited p.28, footnote 56 (Feb 2026).
+- **Ledger 2:** TDS "Boosting Your Anomaly Detection With LLMs" (PyOD 2, Sep 2025); Brian D. Colwell "Big List of AI Jailbreaking" (JailDAM); Number Analytics (PyOD); bioengineer.org DrugAgent syndication (Feb 2026).
+- **Ledger 3:** 7 new Tier 5 platform entries (Liner x2, Moonlight x3, aimodels.fyi x2, Paper Digest ICLR 2026, alphaXiv, Bohrium, paperreading.club).
+- DrugAgent/Nature Biotech (#12) verification flag removed (confirmed names DrugAgent).
+- OWASP D8 candidate cleared (manually checked: no academic tools listed).
+- Topic Validation: added OWASP Landscape Q2 2026 (negative), ISACA auditing article.
+
+**New total: 143 items (+13 from Apr 9).**
