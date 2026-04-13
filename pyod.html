@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Yue Zhao">
+  <meta name="description" content="PyOD 3 is the most comprehensive Python library for anomaly detection: 60+ detectors across tabular, time series, graph, text, and image data, with an ADEngine orchestration core and an agentic investigation layer driven through natural language.">
+  <meta name="keywords" content="PyOD, PyOD 3, anomaly detection, outlier detection, Python, ADEngine, agentic anomaly detection, od-expert, MCP, multi-modal, tabular, time series, graph, text, image, Yue Zhao, USC, FORTIS Lab">
+  <title>PyOD 3 | Agentic Anomaly Detection at Scale</title>
+  <link rel="canonical" href="https://viterbi-web.usc.edu/~yzhao010/pyod.html">
+  <link rel="icon" type="image/x-icon" href="images/logo2.ico">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="PyOD 3 | Agentic Anomaly Detection at Scale">
+  <meta property="og:description" content="60+ detectors across tabular, time series, graph, text, and image data, with an ADEngine orchestration core and an agentic investigation layer driven via natural language. 38M+ downloads.">
+  <meta property="og:url" content="https://viterbi-web.usc.edu/~yzhao010/pyod.html">
+  <meta property="og:image" content="https://viterbi-web.usc.edu/~yzhao010/images/logo.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="PyOD 3 | Agentic Anomaly Detection at Scale">
+  <meta name="twitter:description" content="60+ detectors across tabular, time series, graph, text, and image data, with an ADEngine orchestration core and an agentic investigation layer driven via natural language.">
+  <meta name="twitter:image" content="https://viterbi-web.usc.edu/~yzhao010/images/logo.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareSourceCode",
+    "name": "PyOD",
+    "description": "PyOD 3 is the most comprehensive Python library for anomaly detection, spanning tabular, time series, graph, text, and image data, with an ADEngine orchestration core and an agentic investigation layer.",
+    "url": "https://viterbi-web.usc.edu/~yzhao010/pyod.html",
+    "codeRepository": "https://github.com/yzhao062/pyod",
+    "programmingLanguage": "Python",
+    "softwareVersion": "3.1.0",
+    "author": {
+      "@type": "Person",
+      "name": "Yue Zhao"
+    }
+  }
+  </script>
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preload" as="image" href="images/rsz_300.jpg">
+  <link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap.min.css" onerror="this.onerror=null;this.href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css';">
+  <script src="assets/vendor/bootstrap/bootstrap.bundle.min.js" defer onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js';"></script>
+  <link rel="preload" href="assets/vendor/fontawesome/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.onerror=null;this.rel='stylesheet';this.href='https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css';">
+  <noscript><link rel="stylesheet" href="assets/vendor/fontawesome/css/all.min.css"></noscript>
+  <link rel="stylesheet" href="css/common.css">
+  <script src="assets/js/layout-shell.js" defer></script>
+  <style>
+    .pyod-layer-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 10px 0 18px 0;
+      font-size: 0.95rem;
+    }
+    .pyod-layer-table th,
+    .pyod-layer-table td {
+      padding: 10px 14px;
+      border-bottom: 1px solid #f0eded;
+      vertical-align: top;
+      text-align: left;
+    }
+    .pyod-layer-table th {
+      background: #fafafa;
+      font-weight: 700;
+      color: #444;
+    }
+    .pyod-layer-table td:first-child {
+      font-weight: 700;
+      color: #990000;
+      white-space: nowrap;
+    }
+    .pyod-pillar-card {
+      border-left: 4px solid #F26178;
+      background: #fff7f2;
+      padding: 14px 18px;
+      margin: 10px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    pre.pyod-code-block {
+      background: #1e1e1e;
+      color: #e6e6e6;
+      padding: 14px 16px;
+      border-radius: 6px;
+      font-family: "Consolas", "Menlo", monospace;
+      font-size: 0.88rem;
+      line-height: 1.5;
+      overflow-x: auto;
+      margin: 10px 0 18px 0;
+      white-space: pre;
+      word-wrap: normal;
+    }
+    pre.pyod-code-block .kw { color: #c586c0; }
+    pre.pyod-code-block .fn { color: #dcdcaa; }
+    pre.pyod-code-block .co { color: #6a9955; font-style: italic; }
+    .pyod-impact-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 10px 0 18px 0;
+      font-size: 0.92rem;
+    }
+    .pyod-impact-table th,
+    .pyod-impact-table td {
+      padding: 10px 14px;
+      border-bottom: 1px solid #f0eded;
+      vertical-align: top;
+      text-align: left;
+    }
+    .pyod-impact-table th {
+      background: #fafafa;
+      font-weight: 700;
+      color: #444;
+      white-space: nowrap;
+    }
+    .pyod-impact-table td:first-child {
+      font-weight: 700;
+      color: #7a2a2a;
+      white-space: nowrap;
+    }
+  </style>
+</head>
+<body>
+  <div id="navbar"></div>
+  <script src="assets/js/webstat-tracker.js" defer></script>
+  <noscript><img src="https://app.ardalio.com/7/5/1866123.png" alt=""></noscript>
+
+  <div class="container">
+    <div class="row">
+      <div id="sidebar" class="col-md-3 col-12 content-spacing"></div>
+      <div class="col-md-9 col-12 content-spacing">
+        <h1 style="color:#990000;">PyOD 3</h1>
+        <p style="font-size:1.1rem; font-weight:700; color:#7a2a2a; margin-top:-4px;">Agentic anomaly detection at scale.</p>
+
+        <p>
+          <strong>PyOD</strong>, established in 2017, is the longest-running and most widely used Python library for
+          anomaly detection, with <strong>38+ million downloads</strong> on PyPI and 9K+ stars on GitHub. It serves
+          both academic research and commercial products across finance, healthcare, industrial systems, and space.
+        </p>
+        <p>
+          <strong>PyOD 3</strong> extends the library along two dimensions at once. It spans 60+ detectors across
+          <strong>tabular, time series, graph, text, and image</strong> data, and it adds an intelligent
+          orchestration core (<code>ADEngine</code>) and an <strong>agentic investigation layer</strong> so AI
+          agents can drive an expert-level anomaly detection workflow on your data in plain English. The classic
+          <code>fit</code>/<code>predict</code> API stays unchanged; nothing existing breaks.
+        </p>
+
+        <p>
+          <a href="https://github.com/yzhao062/pyod"><i class="fab fa-github" aria-hidden="true"></i> GitHub Repository</a>
+          |
+          <a href="https://github.com/yzhao062/pyod/stargazers"><i class="fas fa-star" aria-hidden="true"></i> Star on GitHub</a>
+          |
+          <a href="https://pyod.readthedocs.io"><i class="fas fa-book" aria-hidden="true"></i> Documentation</a>
+          |
+          <a href="https://arxiv.org/abs/2412.12154"><i class="fas fa-file-alt" aria-hidden="true"></i> Paper (arXiv)</a>
+          |
+          <a href="https://pyod.readthedocs.io/en/latest/impact.html"><i class="fas fa-chart-line" aria-hidden="true"></i> Impact</a>
+          |
+          <a href="opensource.html"><i class="fas fa-wrench" aria-hidden="true"></i> Back to Open Source</a>
+        </p>
+
+        <p style="background:#fff7f2; border-left:4px solid #F26178; padding:10px 14px; margin:10px 0 14px 0;">
+          If PyOD is useful in your research or product, please
+          <a href="https://github.com/yzhao062/pyod/stargazers"><strong>star the GitHub repository</strong></a>
+          to help more practitioners discover it.
+        </p>
+
+        <hr>
+
+        <img src="images/pyod-agentic-demo.png"
+             alt="PyOD 3 agentic investigation demo: a real 5-turn conversation between an AI agent and PyOD on the UCI Cardiotocography dataset"
+             style="width:100%; max-width:720px; display:block; margin:12px auto;"
+             loading="lazy" decoding="async">
+        <p style="font-size:0.88rem; color:#666; margin-top:4px; margin-bottom:18px; text-align:center;">
+          <strong>Figure:</strong> A real 5-turn agentic investigation on the UCI Cardiotocography dataset.
+          The agent plans the run, compares detectors through <code>ADEngine</code>, assesses quality, and
+          iterates, all in plain English. See the
+          <a href="https://pyod.readthedocs.io/en/latest/examples/agentic.html">full walkthrough</a>
+          or the
+          <a href="https://htmlpreview.github.io/?https://github.com/yzhao062/pyod/blob/development/examples/agentic_demo.html">interactive HTML demo</a>.
+        </p>
+
+        <h2 style="color:#990000;">Three Ways to Use PyOD</h2>
+        <p>
+          PyOD 3 is organized around three layers. You can start at any layer and drop down when you need finer control,
+          or move up when you want the library to do the orchestration for you.
+        </p>
+
+        <table class="pyod-layer-table">
+          <thead>
+            <tr>
+              <th style="width:18%;">Layer</th>
+              <th style="width:27%;">Name</th>
+              <th>When to use</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Layer 1</td>
+              <td>Classic API</td>
+              <td>You already know which detector you want and want full control over hyperparameters.</td>
+            </tr>
+            <tr>
+              <td>Layer 2</td>
+              <td><code>ADEngine</code></td>
+              <td>You want PyOD to choose, compare, and assess detectors automatically, with quality metrics across multiple runs.</td>
+            </tr>
+            <tr>
+              <td>Layer 3</td>
+              <td>Agentic Investigation</td>
+              <td>You want an AI agent to drive the full anomaly detection workflow through natural conversation.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>
+          Layers 2 and 3 are powered by <code>ADEngine</code>, PyOD's intelligent orchestration core. Layer 3 adds
+          two agentic activation paths: the <code>od-expert</code> skill for Claude Code
+          (installed via <code>pyod install skill</code>) and an MCP server
+          (<code>pyod mcp serve</code>, an alias for <code>python -m pyod.mcp_server</code>) that works with any
+          MCP-compatible LLM out of the box.
+        </p>
+
+        <h2 style="color:#990000;">Outlier Detection with 5 Lines of Code</h2>
+<pre class="pyod-code-block"><span class="co"># pip install pyod</span>
+<span class="kw">from</span> pyod.models.iforest <span class="kw">import</span> IForest
+clf = <span class="fn">IForest</span>()
+clf.<span class="fn">fit</span>(X_train)
+y_train_scores = clf.decision_scores_          <span class="co"># training anomaly scores</span>
+y_test_scores  = clf.<span class="fn">decision_function</span>(X_test)  <span class="co"># test anomaly scores</span></pre>
+
+        <h2 style="color:#990000;">Multi-Modal Coverage</h2>
+        <p>
+          PyOD 3 ships 60+ detectors under one consistent API. You no longer need separate libraries for different
+          data modalities.
+        </p>
+        <table class="pyod-layer-table">
+          <thead>
+            <tr>
+              <th style="width:22%;">Modality</th>
+              <th>What is covered</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Tabular</td>
+              <td>Classical statistical, proximity-based, probabilistic, and deep learning detectors (ECOD, COPOD, IForest, KNN, LOF, PCA, AutoEncoder, DeepSVDD, and more).</td>
+            </tr>
+            <tr>
+              <td>Time series</td>
+              <td>TimeSeriesOD windowed bridge, MatrixProfile, SpectralResidual, KShape, SAND, LSTMAD, AnomalyTransformer.</td>
+            </tr>
+            <tr>
+              <td>Graph</td>
+              <td>DOMINANT, CoLA, CONAD, AnomalyDAE, GUIDE, Radar, ANOMALOUS, SCAN (PyTorch Geometric input).</td>
+            </tr>
+            <tr>
+              <td>Text / Image</td>
+              <td>EmbeddingOD and MultiModalOD pipelines via foundation model encoders (sentence-transformers, OpenAI, HuggingFace).</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          Routing across modalities is benchmark-informed using ADBench, TSB-AD, BOND, and NLP-ADBench, so the engine
+          can recommend appropriate detectors for the data at hand rather than defaulting to one family.
+        </p>
+
+        <h2 style="color:#990000;">Impact and Recognition</h2>
+        <p>
+          Selected highlights. The
+          <a href="https://pyod.readthedocs.io/en/latest/impact.html">full impact page</a>
+          on Read the Docs tracks citations, enterprise deployments, patents, books, courses, and international tutorials.
+        </p>
+        <table class="pyod-impact-table">
+          <tbody>
+            <tr>
+              <td>Space &amp; science</td>
+              <td>
+                European Space Agency
+                <a href="https://www.nature.com/articles/s41597-025-05035-3">OPS-SAT spacecraft telemetry benchmark</a>
+                (<em>Nature Scientific Data</em>, 2025) uses PyOD for all 30 anomaly detection algorithms.
+              </td>
+            </tr>
+            <tr>
+              <td>Enterprise deployment</td>
+              <td>
+                Walmart (1M+ daily pricing updates, KDD 2019),
+                Databricks (Kakapo framework integrating PyOD with MLflow / Hyperopt; insider-threat detection solution),
+                IQVIA (123K+ pharmacy claims),
+                Altair AI Studio,
+                Ericsson (patent
+                <a href="https://patents.google.com/patent/WO2023166515A1">WO2023166515A1</a>).
+              </td>
+            </tr>
+            <tr>
+              <td>Books</td>
+              <td>
+                <a href="https://www.manning.com/books/outlier-detection-in-python"><em>Outlier Detection in Python</em></a>
+                (Brett Kennedy, Manning);
+                <em>Handbook of Anomaly Detection with Python</em> (Chris Kuo, Columbia);
+                <a href="https://link.springer.com/book/10.1007/978-1-4842-8870-2"><em>Finding Ghosts in Your Data</em></a>
+                (Kevin Feasel, Apress).
+              </td>
+            </tr>
+            <tr>
+              <td>Courses</td>
+              <td>
+                DataCamp
+                <a href="https://www.datacamp.com/courses/anomaly-detection-in-python"><em>Anomaly Detection in Python</em></a>
+                (19M+ platform learners),
+                Manning
+                <a href="https://www.manning.com/liveproject/using-pyod-and-ensembles-methods">liveProject</a>,
+                O'Reilly video edition, multiple Udemy courses.
+              </td>
+            </tr>
+            <tr>
+              <td>Podcasts</td>
+              <td>
+                <a href="https://talkpython.fm/episodes/show/497/outlier-detection-with-python">Talk Python To Me #497</a>,
+                <a href="https://realpython.com/podcasts/rpp/208/">Real Python Podcast #208</a>.
+              </td>
+            </tr>
+            <tr>
+              <td>International</td>
+              <td>
+                Tutorials in 5 non-English languages: Chinese (CSDN, Zhihu, Sohu, Jiqizhixin,
+                <a href="https://www.aidoczh.com">aidoczh.com</a> full doc translation),
+                Japanese, Korean, German, Spanish.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2 style="color:#990000;">Citing PyOD</h2>
+        <p>
+          If you use PyOD in a scientific publication, please cite the PyOD 2 paper (the companion paper for the
+          intelligent model selection work) and, for the original library, the JMLR paper.
+        </p>
+<pre class="pyod-code-block">@inproceedings{chen2025pyod,
+  title     = {PyOD 2: A Python Library for Outlier Detection with LLM-powered Model Selection},
+  author    = {Chen, Sihan and Qian, Zhuangzhuang and Siu, Wingchun and Hu, Xingcan
+               and Li, Jiaqi and Li, Shawn and Qin, Yuehan and Yang, Tiankai
+               and Xiao, Zhuo and Ye, Wanghao and others},
+  booktitle = {Companion Proceedings of the ACM on Web Conference 2025},
+  pages     = {2807--2810},
+  year      = {2025}
+}
+
+@article{zhao2019pyod,
+  title   = {PyOD: A Python Toolbox for Scalable Outlier Detection},
+  author  = {Zhao, Yue and Nasrullah, Zain and Li, Zheng},
+  journal = {Journal of Machine Learning Research},
+  year    = {2019},
+  volume  = {20},
+  number  = {96},
+  pages   = {1--7}
+}</pre>
+      </div>
+    </div>
+  </div>
+
+  <div id="myFooter"></div>
+</body>
+</html>

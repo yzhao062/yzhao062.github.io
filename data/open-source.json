@@ -3,7 +3,7 @@
     "name": "PyOD",
     "category": "Library",
     "role": "Primary",
-    "description": "A Python library for outlier and anomaly detection, integrating classical and deep learning methods with a unified interface.",
+    "description": "PyOD 3 is the most comprehensive Python library for anomaly detection: 60+ detectors across tabular, time series, graph, text, and image data, with an ADEngine orchestration core and an agentic investigation layer driven through natural language. 38M+ downloads.",
     "repo_url": "https://github.com/yzhao062/pyod",
     "docs_url": "https://pyod.readthedocs.io",
     "paper_url": "https://arxiv.org/abs/2412.12154",
