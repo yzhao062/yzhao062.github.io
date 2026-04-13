@@ -1,10 +1,10 @@
 # Citation Affiliation Audit
 
-*Generated: 2026-04-09 via OpenAlex API*
+*Generated: 2026-04-13 via OpenAlex API*
 
 **What this is:** Papers that cite your work, where at least one author is affiliated with a notable institution.
 This means "researchers AT [institution] cited your tool" -- not "[institution] officially endorses your tool."
-Surveys excluded. 44 papers with citations found on OpenAlex (out of 99 non-survey papers). 1589 unique citing papers analyzed.
+Surveys excluded. 44 papers with citations found on OpenAlex (out of 99 non-survey papers). 1595 unique citing papers analyzed.
 
 ## Tier 0: Government, Space Agencies, National Labs, Defense, Foundation Model Cos
 
