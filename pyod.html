@@ -27,7 +27,7 @@
     "url": "https://viterbi-web.usc.edu/~yzhao010/pyod.html",
     "codeRepository": "https://github.com/yzhao062/pyod",
     "programmingLanguage": "Python",
-    "softwareVersion": "3.1.0",
+    "softwareVersion": "3.2.1",
     "author": {
       "@type": "Person",
       "name": "Yue Zhao"
@@ -163,14 +163,14 @@
 
         <hr>
 
-        <img src="images/pyod-agentic-demo.png"
-             alt="PyOD 3 agentic investigation demo: a real 5-turn conversation between an AI agent and PyOD on the UCI Cardiotocography dataset"
+        <img src="https://raw.githubusercontent.com/yzhao062/pyod/development/docs/figs/agentic-demo.png"
+             alt="PyOD 3 agentic investigation demo: a 4-turn conversation between an AI agent and PyOD on the diabetes screening (PIMA) dataset, with side-callout od-expert decision panels"
              style="width:100%; max-width:720px; display:block; margin:12px auto;"
              loading="lazy" decoding="async">
         <p style="font-size:0.88rem; color:#666; margin-top:4px; margin-bottom:18px; text-align:center;">
-          <strong>Figure:</strong> A real 5-turn agentic investigation on the UCI Cardiotocography dataset.
-          The agent plans the run, compares detectors through <code>ADEngine</code>, assesses quality, and
-          iterates, all in plain English. See the
+          <strong>Figure:</strong> A 4-turn agentic investigation on the diabetes screening (PIMA) dataset,
+          with side-callout <em>od-expert decisions</em> panels. The agent plans the run, compares detectors
+          through <code>ADEngine</code>, assesses quality, and iterates, all in plain English. See the
           <a href="https://pyod.readthedocs.io/en/latest/examples/agentic.html">full walkthrough</a>
           or the
           <a href="https://htmlpreview.github.io/?https://github.com/yzhao062/pyod/blob/development/examples/agentic_demo.html">interactive HTML demo</a>.
@@ -215,6 +215,35 @@
           (installed via <code>pyod install skill</code>) and an MCP server
           (<code>pyod mcp serve</code>, an alias for <code>python -m pyod.mcp_server</code>) that works with any
           MCP-compatible LLM out of the box.
+        </p>
+
+        <h2 style="color:#990000;">Inside the od-expert skill</h2>
+        <p>
+          Shipped in PyOD v3.2.x, <code>od-expert</code> is an expert distillation rather than a thin
+          wrapper over <code>ADEngine</code>. The top-level <code>SKILL.md</code> always loads a
+          <strong>master decision tree</strong> that picks the right starting detector for tabular,
+          time series, graph, text, or image data; a <strong>top-10 critical pitfalls</strong>
+          list covering the failure modes that silently produce wrong results (unscaled features for
+          distance-based detectors, contamination assumed instead of estimated, deep learning on
+          tiny data, single-detector runs, and so on); and <strong>11 adaptive escalation triggers</strong>
+          that tell the agent when to pause and ask the user instead of running autonomously.
+        </p>
+        <p>
+          Six on-demand reference files load only when the task hits their modality or phase:
+          <code>workflow.md</code> (autonomous loop, result interpretation, canonical worked example),
+          <code>pitfalls.md</code> (extended pitfalls organized by phase and tagged by severity),
+          and one file per modality (<code>tabular.md</code>, <code>time_series.md</code>, <code>graph.md</code>,
+          <code>text_image.md</code>), each with a decision table, a KB-derived detector list, and a
+          worked example. Those per-modality tables are expert heuristics, not promises of exact
+          <code>ADEngine</code> planner output; the live selection still comes from <code>state.plans</code>.
+        </p>
+        <p>
+          CI also includes a safety-net test (<code>test_skill_api_refs.py</code>) that walks
+          every <code>state.X</code> and <code>engine.X(...)</code> reference in the skill content
+          through a live <code>ADEngine</code> plus <code>InvestigationState</code> dry run across tabular,
+          time series, and text data, and uses <code>inspect.signature</code> to catch invalid keyword
+          arguments. The hybrid hand-written and KB-derived maintenance pattern is documented at
+          <code>docs/skill_maintenance.rst</code>.
         </p>
 
         <h2 style="color:#990000;">Outlier Detection with 5 Lines of Code</h2>
