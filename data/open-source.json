@@ -8,7 +8,7 @@
     "docs_url": "https://pyod.readthedocs.io",
     "paper_url": "https://arxiv.org/abs/2412.12154",
     "demo_url": "",
-    "stars": 9786,
+    "stars": 9789,
     "tags": [
       "Anomaly Detection",
       "Outlier Detection",
@@ -63,7 +63,7 @@
     "docs_url": "https://trusteval-docs.readthedocs.io",
     "paper_url": "https://arxiv.org/abs/2502.14296",
     "demo_url": "",
-    "stars": 128,
+    "stars": 129,
     "tags": [
       "Trustworthy AI",
       "LLM Evaluation",
@@ -119,7 +119,7 @@
     "docs_url": "",
     "paper_url": "",
     "demo_url": "",
-    "stars": 9248,
+    "stars": 9249,
     "tags": [
       "Awesome List",
       "Anomaly Detection",
@@ -265,7 +265,7 @@
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/agent-audit.html",
     "paper_url": "https://arxiv.org/abs/2603.22853",
     "demo_url": "https://pypi.org/project/agent-audit/",
-    "stars": 149,
+    "stars": 150,
     "tags": [
       "AI Agent Security",
       "Security Audit",
