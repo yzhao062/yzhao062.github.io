@@ -8,7 +8,7 @@
     "docs_url": "https://pyod.readthedocs.io",
     "paper_url": "https://arxiv.org/abs/2412.12154",
     "demo_url": "",
-    "stars": 9781,
+    "stars": 9786,
     "tags": [
       "Anomaly Detection",
       "Outlier Detection",
@@ -16,7 +16,7 @@
       "Machine Learning",
       "PyTorch"
     ],
-    "last_updated_at": "2026-04-13T18:23:02Z"
+    "last_updated_at": "2026-04-14T21:26:17Z"
   },
   {
     "name": "AD-AGENT",
@@ -27,14 +27,14 @@
     "docs_url": "https://usc-fortis.github.io/AD-AGENT/",
     "paper_url": "https://arxiv.org/abs/2505.12594",
     "demo_url": "",
-    "stars": 97,
+    "stars": 98,
     "tags": [
       "LLM Agents",
       "Anomaly Detection",
       "Multi-Modal",
       "Automation"
     ],
-    "last_updated_at": "2026-04-08T03:19:05Z"
+    "last_updated_at": "2026-04-14T22:40:45Z"
   },
   {
     "name": "TrustLLM",
@@ -119,7 +119,7 @@
     "docs_url": "",
     "paper_url": "",
     "demo_url": "",
-    "stars": 9246,
+    "stars": 9248,
     "tags": [
       "Awesome List",
       "Anomaly Detection",
@@ -284,7 +284,7 @@
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/aegis.html",
     "paper_url": "https://arxiv.org/abs/2603.12621",
     "demo_url": "https://github.com/Justin0504/Aegis/blob/main/docs/images/readme_demo1.gif",
-    "stars": 341,
+    "stars": 342,
     "tags": [
       "AI Agent Security",
       "Policy Enforcement",
