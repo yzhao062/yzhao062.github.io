@@ -82,6 +82,7 @@ After bootstrap, run **all** of the following checks and report results in a sho
    - `[features] fast_mode` should be `true`
    
    If the file does not exist and Codex is expected, note that too.
+4. **GitHub Actions versions** -- If `.github/workflows/` exists, scan workflow YAML files for action version pins that are below the minimums in the GitHub Actions Standards section. Report any outdated actions with the file name and suggested version so the user can batch-update them. If all actions meet the minimums, skip this item silently.
 
 ## User Profile
 
@@ -183,6 +184,20 @@ After bootstrap, run **all** of the following checks and report results in a sho
 - Filesystem commands like `cp` and `mv` are fine for scratch and temporary files. Moves or renames that affect git-tracked files should be reviewed before executing.
 - **Avoid inline Python with `#` comments in quoted arguments.** Claude Code flags "newline followed by `#` inside a quoted argument" as a path-hiding risk and prompts for approval. Instead, write the code to a `.py` file and run `python <script>.py`.
 
+## GitHub Actions Standards
+
+GitHub is deprecating Node.js 20 actions. Runners begin using Node.js 24 by default on June 2, 2026, and GitHub's public changelog currently says Node.js 20 removal will happen later in fall 2026. Keep workflow action pins at or above the first Node.js 24 major for the GitHub-maintained actions below:
+
+| Action | Minimum version (Node.js 24) | Replaces |
+|--------|------------------------------|----------|
+| `actions/checkout` | **v5** | v3, v4 |
+| `actions/setup-python` | **v6** | v5 |
+| `actions/setup-node` | **v5** | v4 |
+| `actions/upload-artifact` | **v6** | v4, v5 |
+| `actions/download-artifact` | **v7** | v4, v5, v6 |
+
+When the session start check (item 4) detects older versions, list the affected files and suggest the minimum Node.js 24 version from this table. If a repository intentionally wants the latest major instead of the minimum compatible major, flag that as a separate manual upgrade because later majors can include behavior changes. If a workflow pins a SHA instead of a tag (e.g., `actions/checkout@abc123`), flag it for manual review rather than auto-suggesting a tag. For self-hosted runners, also remind the user that these Node.js 24 actions require an Actions Runner version that supports Node.js 24.
+
 ## Environment Notes
 
 - Prefer a Miniforge-managed Python interpreter. Miniforge ships both `conda` and `mamba`; prefer `mamba` for install and create operations (faster C++ solver) and fall back to `conda` only when a command is not supported by mamba (e.g., `conda rename`).
@@ -199,7 +214,7 @@ After bootstrap, run **all** of the following checks and report results in a sho
   - To migrate from npm: `npm uninstall -g @anthropic-ai/claude-code` first. From winget: `winget uninstall Anthropic.ClaudeCode` first.
   - Native installs auto-update in the background by default. Use `/config` inside Claude Code to set the release channel (`latest` or `stable`). Run `claude doctor` to inspect updater status, and `claude update` to force an immediate update check.
   - To disable auto-updates, set `DISABLE_AUTOUPDATER=1` in the environment or add `"env": {"DISABLE_AUTOUPDATER": "1"}` to `~/.claude/settings.json`. Note: a legacy top-level `autoUpdates` key in `~/.claude.json` is ignored on native installs because `autoUpdatesProtectedForNative` neutralizes it.
-- **Claude Code effort level**: The persisted `effortLevel` key in any `settings.json` only accepts `low`, `medium`, or `high`. Writing `"effortLevel": "max"` is silently discarded on read (the schema uses `.catch(undefined)`), so setting `max` that way is a no-op. To get `max` as a persistent default across every project and session, set the env var `CLAUDE_CODE_EFFORT_LEVEL=max`. The recommended place is `"env": {"CLAUDE_CODE_EFFORT_LEVEL": "max"}` inside `~/.claude/settings.json` (same mechanism used for `DISABLE_AUTOUPDATER`). The shared `user/settings.json` in this repo already sets this env entry, and bootstrap merges it into `~/.claude/settings.json`, so running bootstrap once on any consuming project lands the user-level default. Runtime precedence is managed policy > `CLAUDE_CODE_EFFORT_LEVEL` env var > persisted `effortLevel` in settings.json (resolved as local > project > user) > Claude Code's built-in default. The env var also outranks session-level controls. When `CLAUDE_CODE_EFFORT_LEVEL` is set, neither `--effort` at launch nor `/effort <level>` inside a session changes the current session, and the slash command prints a warning that the env var is overriding the live effort; `/effort low|medium|high|auto` still writes the persisted user setting, so that value takes effect once the env var is cleared, while `/effort max` has no lasting effect (`max` is not a valid persisted value). When the env var is unset, `--effort` at launch is a session-only override, `/effort low|medium|high|auto` updates the persisted user setting, and `/effort max` is session-only because `max` is not a valid persisted value.
+- **Claude Code effort level**: As of Claude Code v2.1.111, the `/effort` slider exposes five levels: `low`, `medium`, `high`, `xhigh`, `max`. The persisted `effortLevel` key in `settings.json` accepts `low`, `medium`, `high`, and `xhigh` (v2.1.111 added `xhigh` as a valid persisted value). `max` remains session-only: selecting `max` via `/effort` silently does not persist. To get `max` as a persistent default across every project and session, set the env var `CLAUDE_CODE_EFFORT_LEVEL=max` in `~/.claude/settings.json` under `"env"`. The shared `user/settings.json` in this repo sets the env var, and bootstrap merges it into `~/.claude/settings.json`, so running bootstrap once on any consuming project lands the user-level default. Runtime precedence: managed policy > `CLAUDE_CODE_EFFORT_LEVEL` env var > persisted `effortLevel` (local > project > user) > Claude Code's built-in default. When the env var is set, it outranks `--effort` at launch and `/effort` inside a session; the slash command prints a warning that the env var is overriding the live effort. When the env var is unset, `--effort <level>` at launch is a session-only override, `/effort low|medium|high|xhigh` updates the persisted user setting, and `/effort max` is session-only.
 
 ## Submodule Workflow
 

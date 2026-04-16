@@ -1,6 +1,7 @@
 # News & Media Coverage Audit — Yue Zhao / FORTIS Lab
 
-*Updated: 2026-04-11 (targeted searches: agent-audit, Aegis, Auditable Agents, agent/LLM/VLM last-author works, DPU, Political-LLM, Treble, ADBench, Computing Resources, plus under-searched high-star tools).*
+*Updated: 2026-04-16 (5-day delta check — no new verified items; three D8 candidates flagged for next PDF pass).*
+*Previous: 2026-04-11 (targeted searches: agent-audit, Aegis, Auditable Agents, agent/LLM/VLM last-author works, DPU, Political-LLM, Treble, ADBench, Computing Resources, plus under-searched high-star tools).*
 *All 8 dimensions complete across all 121 items (104 papers + 17 tools).*
 *Citation verification applied: every item names or cites the work, person, lab, or co-author.*
 
@@ -282,6 +283,8 @@ Items authored by you, your students, or posted by your team. Useful context but
 | Standards bodies | MITRE ATLAS, MLCommons, Cloud Security Alliance | No citations |
 | Korean tech (Tistory) | Searched | 3 PyOD tutorials found (D10) — corrected from prior negative |
 | German tech (Heise.de) | Searched | No results on Heise; 5 other German sources found (D10) |
+| Stanford AI Index 2026 (overview pages) | Apr 16 | No mention in Responsible AI, Science, Technical Performance chapter overviews. Full PDF remains a D8 candidate (size cap on WebFetch). |
+| Name-collision false positives (Apr 16) | agentlayer.medium "Aegis+TrustLLM" smart contract audit | Different projects — arXiv:2403.16073 (not Yue Zhao's TrustLLM) and AgentLayer's web3 Aegis (not FORTIS Aegis). Cleared. |
 
 ---
 
@@ -412,3 +415,15 @@ For grant narratives only. These do not name your work.
 - Anomaly-Detection-Resources (9,239 stars) has surprisingly little dedicated coverage — visibility flows through PyOD rather than the resources repo itself.
 
 **New total: 187 items (+17 from 170).**
+
+**Apr 16 delta check (5-day window since Apr 11, no new verified items):**
+- Ran targeted Dim 1/3/4/5 queries: "Yue Zhao" + USC recent news; Auditable Agents (arXiv:2604.05485); agent-audit/Aegis April 2026; TrustLLM system cards; USC Viterbi ICLR 2026; DoxBench/FigEdit/TrustGen pre-conference; Chinese media TrustLLM 2026; FLI Spring 2026 (none released); Hacker News April 2026; Stanford AI Index 2026 overview pages; International AI Safety Report 2026 extended summary.
+- **No new confirmed citations.** Auditable Agents (posted Apr 7) still too recent for external coverage. USC Viterbi "USC at ICLR 2026" roundup not yet published (conference is Apr 24-28). FLI AI Safety Index Spring 2026 not yet released.
+- **D8 candidates deferred to next PDF pass:**
+  - **Stanford AI Index 2026** (released Apr 15, 2026, 400+ page PDF at hai.stanford.edu/assets/files/ai_index_report_2026.pdf) — chapter overview pages show no mention of TrustLLM/PyOD/USC tools, but the full PDF could not be retrieved via WebFetch (size cap). Re-check via local PDF extraction in next full audit.
+  - **Fast Company "AI's most important benchmark in 2026? Trust"** (fastcompany.com/91462096/ai-trust-benchmark-2026-openai-anthropic) — fetch returned 403; article title directly matches TrustLLM's framing. Retry with alternate method.
+  - **eWeek "Stanford AI Index 2026: The Trust Gap Hits Critical Levels"** — fetch returned 403. Retry.
+- **Name-collision clarifications (not coverage):**
+  - **agentlayer.medium.com "Aegis + TrustLLM" smart contract auditing** — VERIFIED as different projects. Their "TrustLLM" is arXiv:2403.16073 (Solidity auditing, two-stage fine-tuning), not Yue Zhao's TrustLLM (arXiv:2401.05561). Their "Aegis" is AgentLayer's web3 auditor, not FORTIS's Aegis (arXiv:2603.12621). Add to negative-results to prevent re-investigation.
+  - **"TRUST" decentralized framework** (arXiv:2510.20188) — different project from TrustLLM; name similarity only.
+- **Upcoming opportunities reconfirmed:** ICLR 2026 in Rio Apr 24-28 (DoxBench, FigEdit, DecAlign, TrustGen); 机器之心 ICLR 2026 Paper Sharing in Beijing Apr 18; expect USC Viterbi "USC at ICLR 2026" roundup late Apr / early May.
