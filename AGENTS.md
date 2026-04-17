@@ -97,23 +97,23 @@ At the start of every new session, after bootstrap, emit a **session start banne
 ### Format
 
 ```
-📦 anywhere-agents active
+📦 agent-config active
    ├── OS: <platform>
    ├── Agent: <agent name> · <model> · effort=<level>
    ├── Codex: <config summary> (or "not configured")
-   ├── Skills: <count> shipped (<comma-separated names>)
+   ├── Skills: <N> local (<names>) + <M> shared (<names>)
    ├── Hooks: PreToolUse <guard.py>, SessionStart <session_bootstrap.py>
    └── Session check: all clear
 ```
 
-If anything is off, replace `all clear` with a semicolon-separated list of concrete issues, each actionable in one short clause (e.g., `⚠ actions/checkout@v4 in .github/workflows/validate.yml:17 — bump to v5; Codex config.toml missing model key`). Keep the whole banner to six lines plus the check line.
+If anything is off, replace `all clear` with a semicolon-separated list of concrete issues, each actionable in one short clause (e.g., `⚠ actions/checkout@v4 in .github/workflows/validate.yml:17 — bump to v5; Codex config.toml missing model key`). Keep the whole banner to six lines plus the check line. The skills row may wrap visually when many names are present; do not omit a local or shared bucket just to preserve terminal width.
 
 ### How to populate each field
 
 1. **OS** — read from the session environment (`win32`, `darwin`, `linux`). Use this elsewhere to pick platform-specific behavior (terminal review path on Windows, MCP on macOS/Linux, `.ps1` vs `.sh`).
 2. **Agent** — the tool you are running as (Claude Code, Codex, etc.), the model name if exposed, and effort level. User prefers the highest available model at max effort; flag any drift once in the banner, not every turn.
 3. **Codex** — read `~/.codex/config.toml` (or `%USERPROFILE%\.codex\config.toml` on Windows). If present, summarize `model` · `model_reasoning_effort` · `service_tier` · `[features].fast_mode` on one line. Expected values: `model = "gpt-5.4"` (or latest), `model_reasoning_effort = "xhigh"`, `service_tier = "fast"`, `[features] fast_mode = true`. If the file is missing and Codex is expected, say `not configured`.
-4. **Skills** — count and list shipped skill directories. Check `skills/` (project-local) first, then `.agent-config/repo/skills/` (bootstrapped). Use the directory names.
+4. **Skills** — list both active sets. Count directories under `skills/` (project-local) and `.agent-config/repo/skills/` (bootstrapped). For the shared count/list, exclude any shared skill whose name also exists under project-local `skills/`, because project-local overrides shared on name conflict. Format: `<N> local (<names>) + <M> shared (<names>)`. Omit either half if empty (e.g., `4 shared (...)` when the consumer has no project-local `skills/`).
 5. **Hooks** — check `~/.claude/hooks/` for `guard.py` (PreToolUse) and `session_bootstrap.py` (SessionStart). If one is missing, include it in the Session check line as an issue.
 6. **Session check** — scan `.github/workflows/*.yml` for action version pins below the minimums in the GitHub Actions Standards section. Combine with any Codex-config or hook drift detected above. Emit `all clear` only when nothing needs attention.
 
