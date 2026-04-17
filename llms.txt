@@ -14,6 +14,7 @@
 - [FORTIS Lab](https://viterbi-web.usc.edu/~yzhao010/lab.html): current PhD students, lab members, and alumni
 - [Publications](https://viterbi-web.usc.edu/~yzhao010/publications.html): full publication list with abstracts and links
 - [Open Source](https://viterbi-web.usc.edu/~yzhao010/opensource.html): open-source projects with GitHub stars, docs, and paper links
+- [anywhere-agents](https://viterbi-web.usc.edu/~yzhao010/anywhere-agents.html): one config to rule all your AI agents; portable, effective, safer; maintained configuration for Claude Code and Codex
 - [agent-audit](https://viterbi-web.usc.edu/~yzhao010/agent-audit.html): security auditing tool for AI agent code
 - [Aegis](https://viterbi-web.usc.edu/~yzhao010/aegis.html): open-source firewall for AI agents
 - [Teaching](https://viterbi-web.usc.edu/~yzhao010/teaching.html): courses taught at USC
@@ -32,6 +33,7 @@ These files are directly accessible and contain machine-readable data:
 ## Flagship Open-Source Projects
 
 - [PyOD](https://github.com/yzhao062/pyod): Python library for outlier and anomaly detection (9,700+ stars)
+- [anywhere-agents](https://github.com/yzhao062/anywhere-agents): one config to rule all your AI agents; portable, effective, safer; maintained configuration for Claude Code and Codex
 - [agent-audit](https://github.com/HeadyZhang/agent-audit): security auditing tool for AI agent code with OWASP Agentic Top 10 checks
 - [Aegis](https://github.com/Justin0504/Aegis): open-source firewall for AI agents with pre-execution blocking and audit trails
 - [TrustLLM](https://github.com/HowieHwong/TrustLLM): trustworthiness benchmark for large language models

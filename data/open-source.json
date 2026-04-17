@@ -311,5 +311,25 @@
       "Library"
     ],
     "last_updated_at": "2023-01-14T04:46:24Z"
+  },
+  {
+    "name": "anywhere-agents",
+    "category": "Developer Toolkit",
+    "role": "Primary",
+    "description": "One config to rule all your AI agents: portable across every project and session, effective through curated writing, routing, and skills, and safer via a PreToolUse guard that blocks destructive Git and GitHub commands. Supports Claude Code and Codex today, with plans to grow.",
+    "repo_url": "https://github.com/yzhao062/anywhere-agents",
+    "docs_url": "https://anywhere-agents.readthedocs.io",
+    "paper_url": "",
+    "demo_url": "",
+    "stars": 22,
+    "tags": [
+      "Claude Code",
+      "Codex",
+      "AI Agents",
+      "Developer Tools",
+      "Configuration",
+      "MCP"
+    ],
+    "last_updated_at": "2026-04-17T06:40:30Z"
   }
 ]

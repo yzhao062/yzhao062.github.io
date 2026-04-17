@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Yue Zhao">
+  <meta name="description" content="anywhere-agents is one config to rule all your AI agents: portable across every project and session, effective through curated writing, routing, and skills, and safer via a PreToolUse guard that blocks destructive Git and GitHub commands. Supports Claude Code and Codex today, with plans to grow.">
+  <meta name="keywords" content="anywhere-agents, Claude Code, Codex, AI agents, agent configuration, Claude skills, Claude hooks, MCP, developer tools, dotfiles for agents, Yue Zhao">
+  <title>anywhere-agents | One Config to Rule All Your AI Agents</title>
+  <link rel="canonical" href="https://viterbi-web.usc.edu/~yzhao010/anywhere-agents.html">
+  <link rel="icon" type="image/x-icon" href="images/logo2.ico">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="anywhere-agents | One Config to Rule All Your AI Agents">
+  <meta property="og:description" content="One config to rule all your AI agents: portable, effective, safer. A maintained, opinionated configuration for Claude Code and Codex with shared skills, session hooks, and bootstrap scripts.">
+  <meta property="og:url" content="https://viterbi-web.usc.edu/~yzhao010/anywhere-agents.html">
+  <meta property="og:image" content="https://viterbi-web.usc.edu/~yzhao010/images/logo.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="anywhere-agents | One Config to Rule All Your AI Agents">
+  <meta name="twitter:description" content="One config to rule all your AI agents: portable, effective, safer. A maintained, opinionated configuration for Claude Code and Codex with shared skills, session hooks, and bootstrap scripts.">
+  <meta name="twitter:image" content="https://viterbi-web.usc.edu/~yzhao010/images/logo.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareSourceCode",
+    "name": "anywhere-agents",
+    "description": "One config to rule all your AI agents: portable across every project and session, effective through curated writing, routing, and skills, and safer via a PreToolUse guard that blocks destructive Git and GitHub commands. Supports Claude Code and Codex today, with plans to grow.",
+    "url": "https://viterbi-web.usc.edu/~yzhao010/anywhere-agents.html",
+    "codeRepository": "https://github.com/yzhao062/anywhere-agents",
+    "downloadUrl": "https://pypi.org/project/anywhere-agents/",
+    "programmingLanguage": "Python",
+    "license": "https://www.apache.org/licenses/LICENSE-2.0",
+    "author": {
+      "@type": "Person",
+      "name": "Yue Zhao"
+    }
+  }
+  </script>
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preload" as="image" href="images/rsz_300.jpg">
+  <link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap.min.css" onerror="this.onerror=null;this.href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css';">
+  <script src="assets/vendor/bootstrap/bootstrap.bundle.min.js" defer onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js';"></script>
+  <link rel="preload" href="assets/vendor/fontawesome/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.onerror=null;this.rel='stylesheet';this.href='https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css';">
+  <noscript><link rel="stylesheet" href="assets/vendor/fontawesome/css/all.min.css"></noscript>
+  <link rel="stylesheet" href="css/common.css">
+  <script src="assets/js/layout-shell.js" defer></script>
+</head>
+<body>
+  <div id="navbar"></div>
+  <script src="assets/js/webstat-tracker.js" defer></script>
+  <noscript><img src="https://app.ardalio.com/7/5/1866123.png" alt=""></noscript>
+
+  <div class="container">
+    <div class="row">
+      <div id="sidebar" class="col-md-3 col-12 content-spacing"></div>
+      <div class="col-md-9 col-12 content-spacing">
+        <h1 style="color:#990000;">anywhere-agents</h1>
+        <p style="font-size:1.1rem; font-weight:700; color:#7a2a2a; margin-top:-4px;">One config to rule all your AI agents: portable, effective, safer.</p>
+        <p>
+          <strong>anywhere-agents</strong> is a maintained, opinionated configuration that follows your AI coding
+          agents across every project, every machine, and every session. It ships shared skills, session hooks,
+          and a small bootstrap script so behavior stays
+          <strong>portable</strong> (it works the same in every repository),
+          <strong>effective</strong> (curated writing rules, task routing, and skills),
+          and <strong>safer</strong> (a PreToolUse guard blocks destructive Git and GitHub commands).
+          Supports Claude Code and Codex today, with plans to grow.
+        </p>
+        <p>
+          I built and maintain this project because my own daily work spans many repositories and multiple agents,
+          and every project was repeating the same setup: which skills to install, which hooks to wire up, which MCP
+          servers to register, and which safety defaults to apply. anywhere-agents packages that setup into a single
+          reusable configuration that stays fresh on every session.
+        </p>
+        <p>
+          This project sits across our <strong>Developer Tools for AI</strong> and
+          <strong>AI Safety &amp; Security</strong> directions, through session-start checks, a PreToolUse guard
+          for destructive commands, and routing of review, figure, and writing tasks to the right skill.
+        </p>
+        <p>
+          <a href="https://github.com/yzhao062/anywhere-agents"><i class="fab fa-github" aria-hidden="true"></i> GitHub Repository</a>
+          |
+          <a href="https://github.com/yzhao062/anywhere-agents/stargazers"><i class="fas fa-star" aria-hidden="true"></i> Star on GitHub</a>
+          |
+          <a href="https://anywhere-agents.readthedocs.io"><i class="fas fa-book" aria-hidden="true"></i> Documentation</a>
+          |
+          <a href="https://pypi.org/project/anywhere-agents/"><i class="fas fa-cube" aria-hidden="true"></i> PyPI Package</a>
+          |
+          <a href="https://www.npmjs.com/package/anywhere-agents"><i class="fab fa-npm" aria-hidden="true"></i> npm Package</a>
+          |
+          <a href="opensource.html"><i class="fas fa-wrench" aria-hidden="true"></i> Back to Open Source</a>
+        </p>
+
+        <p style="background:#fff7f2; border-left:4px solid #F26178; padding:10px 14px; margin:10px 0 14px 0;">
+          If this project is useful in your workflow, please
+          <a href="https://github.com/yzhao062/anywhere-agents/stargazers"><strong>star the GitHub repository</strong></a>
+          to help more practitioners discover it.
+        </p>
+
+        <hr>
+        <h2 style="color:#990000;">Why this project</h2>
+        <p>
+          AI coding agents are now used across many repositories by the same person or team. Without a shared
+          configuration, preferences drift: per-repo <code>CLAUDE.md</code> files fall out of sync, copy-pasted
+          settings diverge on every tweak, and safety defaults live only in people's heads and have to be re-explained
+          in every session. anywhere-agents publishes one curated configuration that any project can inherit in two
+          lines of setup. The maintainer improves one file; every consuming repository picks it up on the next session.
+        </p>
+
+        <h2 style="color:#990000;">Core capabilities</h2>
+        <ul>
+          <li>Idempotent bootstrap (PowerShell and Bash) that refreshes shared defaults, skills, and settings on every session.</li>
+          <li>Shared skills for review (<code>implement-review</code>), routing (<code>my-router</code>), figure building (<code>ci-mockup-figure</code>), and README polish (<code>readme-polish</code>), with pointer commands for Claude Code.</li>
+          <li>Session-start banner with environment checks (OS, agent, skills, hooks) and a GitHub Actions version audit.</li>
+          <li>PreToolUse guard (<code>guard.py</code>) that refuses to silently run destructive Git and GitHub commands such as <code>push --force</code>, <code>reset --hard</code>, and <code>gh pr merge</code>.</li>
+          <li>SessionStart hook (<code>session_bootstrap.py</code>) that refreshes shared config before any work begins.</li>
+          <li>Codex MCP integration and recommended Codex defaults (fast inference tier, high reasoning effort).</li>
+          <li>Cross-agent writing defaults: banned AI-tell words, formatting rules, and sentence-variety guidance.</li>
+        </ul>
+
+        <h2 style="color:#990000;">Quick start</h2>
+        <p>Install and bootstrap in any project root:</p>
+        <pre style="background:#f8f8f8; border:1px solid #ddd; border-radius:8px; padding:12px;"><code>pipx run anywhere-agents   # Python path (zero-install with pipx)
+npx anywhere-agents        # Node.js path (zero-install with Node 14+)</code></pre>
+        <p>
+          After bootstrap, the next session of Claude Code or Codex reads the shared <code>AGENTS.md</code>, inherits
+          all defaults, and picks up future upstream changes automatically through <code>git pull</code>. Per-project
+          overrides go in <code>AGENTS.local.md</code>, which bootstrap never overwrites.
+        </p>
+
+        <h2 style="color:#990000;">Fork and customize</h2>
+        <p>
+          Everything is plain Markdown, Python, and JSON. Fork the repository, swap in your own skills or writing
+          rules, and keep pulling upstream updates with <code>git merge upstream/main</code>. Groups and teams can
+          publish their own shared configuration the same way.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div id="myFooter"></div>
+</body>
+</html>
