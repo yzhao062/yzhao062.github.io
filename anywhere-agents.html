@@ -66,10 +66,11 @@
           Supports Claude Code and Codex today, with plans to grow.
         </p>
         <p>
-          I built and maintain this project because my own daily work spans many repositories and multiple agents,
-          and every project was repeating the same setup: which skills to install, which hooks to wire up, which MCP
-          servers to register, and which safety defaults to apply. anywhere-agents packages that setup into a single
-          reusable configuration that stays fresh on every session.
+          This is the sanitized public release of the agent config I have run daily since early 2026 across research,
+          paper writing, and development work on macOS, Windows, and Linux. Before publishing it, every project was
+          repeating the same setup: which skills to install, which hooks to wire up, which MCP servers to register,
+          and which safety defaults to apply. anywhere-agents packages that setup into a single reusable configuration
+          that stays fresh on every session.
         </p>
         <p>
           This project sits across our <strong>Developer Tools for AI</strong> and
@@ -106,25 +107,100 @@
           lines of setup. The maintainer improves one file; every consuming repository picks it up on the next session.
         </p>
 
-        <h2 style="color:#990000;">Core capabilities</h2>
+        <h2 style="color:#990000;">What it does in practice</h2>
+        <p>
+          Five concrete scenarios capture what changes when a project adopts this config.
+        </p>
+
+        <h3 style="color:#990000; font-size:1.08rem; margin-top:14px;">A. Add to any project</h3>
+        <p>Run the installer once in the project root:</p>
+        <pre style="background:#f8f8f8; border:1px solid #ddd; border-radius:8px; padding:12px;"><code>pipx run anywhere-agents   # Python (zero-install with pipx)
+npx anywhere-agents        # Node.js (zero-install with Node 14+)</code></pre>
+        <p>
+          The next Claude Code session reads the shared <code>AGENTS.md</code> automatically and inherits every
+          default: writing style, Git safety, session checks, and skill routing. For Codex and other agents, start
+          the session by asking the agent to read <code>@AGENTS.md</code>. Per-project overrides live in
+          <code>AGENTS.local.md</code>, which bootstrap never touches.
+        </p>
+
+        <h3 style="color:#990000; font-size:1.08rem; margin-top:14px;">B. Review before you push</h3>
+        <p>
+          Ask Claude Code: <em>"review this."</em> The router picks the <code>implement-review</code> skill, which
+          picks a content lens (code, paper, proposal, or general) based on the staged diff. Codex reads the diff and
+          writes <code>CodexReview.md</code> with findings tagged High, Medium, and Low, plus exact
+          <code>file:line</code> references. Claude Code applies the fixes and re-stages; the loop runs until nothing
+          is left to flag.
+        </p>
+
+        <h3 style="color:#990000; font-size:1.08rem; margin-top:14px;">C. Writing that does not sound like an AI</h3>
+        <p>
+          The shared <code>AGENTS.md</code> bans roughly 40 AI-tell words (including <code>delve</code>,
+          <code>pivotal</code>, <code>underscore</code>, <code>paramount</code>, <code>groundbreaking</code>,
+          <code>trailblazing</code>, and <code>unprecedented</code>). It also blocks em-dashes as casual punctuation,
+          preserves the input format (LaTeX stays LaTeX, prose stays prose), and stops the agent from appending a tidy
+          summary sentence to every paragraph.
+        </p>
+        <p style="margin-bottom:4px;"><strong>Without this config</strong> (default AI voice):</p>
+        <blockquote style="border-left:4px solid #F26178; background:#fff7f2; padding:10px 14px; margin:4px 0 6px 0; font-style:italic;">
+          We delve into a pivotal realm, a multifaceted endeavor that underscores a paramount facet of outlier
+          detection, paving the way for groundbreaking advances that will reimagine the trailblazing work of our
+          predecessors and, in so doing, garner unprecedented attention in this burgeoning field.
+        </blockquote>
+        <p style="font-size:0.88rem; color:#666; margin-top:0;">
+          One sentence. 43 words. Multiple banned AI-tell terms. No structure; each clause adds more filler.
+        </p>
+        <p style="margin-bottom:4px; margin-top:10px;"><strong>With this config</strong>:</p>
+        <blockquote style="border-left:4px solid #3a7d44; background:#f4faf5; padding:10px 14px; margin:4px 0 6px 0;">
+          We examine outlier detection along three dimensions: coverage, interpretability, and scale. Each matters;
+          none alone is sufficient. Prior work has addressed one or two of these in isolation; this work integrates all three.
+        </blockquote>
+        <p style="font-size:0.88rem; color:#666; margin-top:0;">
+          Three sentences. 33 words. Zero banned words. Semicolons and colons in place of dashes. One idea per
+          sentence; the last sentence actually says something about the contribution.
+        </p>
+
+        <h3 style="color:#990000; font-size:1.08rem; margin-top:14px;">D. Git safety catches mistakes before they happen</h3>
+        <p>
+          Every destructive Git or GitHub command (<code>push --force</code>, <code>reset --hard</code>,
+          <code>gh pr merge</code>, <code>git branch -D</code>, <code>git rebase</code>, and similar) passes through
+          a PreToolUse hook (<code>guard.py</code>) that refuses to proceed silently. Read-only operations
+          (<code>status</code>, <code>diff</code>, <code>log</code>) stay fast.
+        </p>
+        <p style="font-size:0.88rem; color:#666; margin-bottom:4px;">Example guard prompt (illustrative; the actual hook formats decision reasons at runtime):</p>
+        <pre style="background:#f8f8f8; border:1px solid #ddd; border-radius:8px; padding:12px;"><code>[guard.py] STOP. Destructive command detected.
+  command:   git push --force origin main
+  category:  destructive push
+This is destructive. Are you sure? (y/N)</code></pre>
+        <p>
+          Shell deletes (<code>rm -rf</code>) are gated separately through Claude Code's built-in permission prompts
+          configured in <code>user/settings.json</code>.
+        </p>
+
+        <h3 style="color:#990000; font-size:1.08rem; margin-top:14px;">E. The settings you did not know you were missing</h3>
+        <p>
+          Most Claude Code and Codex users never touch effort level, Codex MCP config, GitHub Actions version pins,
+          or banned AI-tell vocabulary, and run suboptimal defaults without knowing. This project ships the
+          recommended default stack in one install:
+        </p>
         <ul>
-          <li>Idempotent bootstrap (PowerShell and Bash) that refreshes shared defaults, skills, and settings on every session.</li>
-          <li>Shared skills for review (<code>implement-review</code>), routing (<code>my-router</code>), figure building (<code>ci-mockup-figure</code>), and README polish (<code>readme-polish</code>), with pointer commands for Claude Code.</li>
-          <li>Session-start banner with environment checks (OS, agent, skills, hooks) and a GitHub Actions version audit.</li>
-          <li>PreToolUse guard (<code>guard.py</code>) that refuses to silently run destructive Git and GitHub commands such as <code>push --force</code>, <code>reset --hard</code>, and <code>gh pr merge</code>.</li>
-          <li>SessionStart hook (<code>session_bootstrap.py</code>) that refreshes shared config before any work begins.</li>
-          <li>Codex MCP integration and recommended Codex defaults (fast inference tier, high reasoning effort).</li>
-          <li>Cross-agent writing defaults: banned AI-tell words, formatting rules, and sentence-variety guidance.</li>
+          <li><code>CLAUDE_CODE_EFFORT_LEVEL=max</code> persisted across every session, merged into
+              <code>~/.claude/settings.json</code> by bootstrap.</li>
+          <li>Recommended Codex <code>config.toml</code> values (<code>model = "gpt-5.4"</code>,
+              <code>model_reasoning_effort = "xhigh"</code>, <code>service_tier = "fast"</code>), verified by the
+              session-start check.</li>
+          <li><code>guard.py</code> PreToolUse hook deployed to <code>~/.claude/hooks/</code>.</li>
+          <li><code>session_bootstrap.py</code> SessionStart hook that runs bootstrap at the start of every session.</li>
+          <li>Session-start check flags outdated GitHub Actions pins, missing Codex config, and session effort below
+              preference, without silently changing anything.</li>
         </ul>
 
-        <h2 style="color:#990000;">Quick start</h2>
-        <p>Install and bootstrap in any project root:</p>
-        <pre style="background:#f8f8f8; border:1px solid #ddd; border-radius:8px; padding:12px;"><code>pipx run anywhere-agents   # Python path (zero-install with pipx)
-npx anywhere-agents        # Node.js path (zero-install with Node 14+)</code></pre>
+        <h2 style="color:#990000;">How updates work</h2>
         <p>
-          After bootstrap, the next session of Claude Code or Codex reads the shared <code>AGENTS.md</code>, inherits
-          all defaults, and picks up future upstream changes automatically through <code>git pull</code>. Per-project
-          overrides go in <code>AGENTS.local.md</code>, which bootstrap never overwrites.
+          Updates are automatic for Claude Code through the SessionStart hook: every new session runs bootstrap
+          before the first turn, so the shared <code>AGENTS.md</code>, skills, and settings stay current. For Codex
+          or other agents without a SessionStart hook, tell the agent in the first message of a session:
+          <em>"read @AGENTS.md to run bootstrap, session checks, and task routing."</em> To force a refresh
+          mid-session, run <code>bash .agent-config/bootstrap.sh</code> (or <code>.ps1</code> on Windows).
         </p>
 
         <h2 style="color:#990000;">Fork and customize</h2>
