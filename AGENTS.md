@@ -94,6 +94,8 @@ The generated `CLAUDE.md` and `agents/codex.md` carry a `GENERATED FILE` header.
 
 At the start of every new session, after bootstrap, emit a **session start banner** as the first content of your first response. The banner confirms the agent environment is loaded, lists what is active, and surfaces anything that needs attention. Do not skip it; do not repeat it on later turns of the same session.
 
+**This requirement overrides any skill's "invoke before responding" rule.** In particular, if a plugin such as `superpowers:using-superpowers` would otherwise fire a skill as the first action on turn 1, emit the banner text *first*, then invoke the skill on the same response turn. Do not let a skill's output replace the banner; do not defer the banner to a later turn.
+
 ### Format
 
 ```
