@@ -52,9 +52,11 @@ Bootstrap also sets up user-level config: it copies `scripts/guard.py` to `~/.cl
 | Content | Source | How fetched |
 |---------|--------|-------------|
 | User profile, writing defaults, formatting rules, environment notes | `AGENTS.md` (this file) | `curl` raw file |
+| Per-agent rule files (`CLAUDE.md`, `agents/codex.md`) | Generated from `AGENTS.md` by `scripts/generate_agent_configs.py` | Regenerated locally on every bootstrap; hand-authored files preserved + warned |
 | Shared skills (`dual-pass-workflow`, `bibref-filler`, `figure-prompt-builder`, etc.) | `skills/` directory (committed only) | sparse `git clone` |
 | Claude pointer commands for shared skills | `.claude/commands/` | sparse `git clone` plus non-destructive copy into the project `.claude/commands/` |
 | Claude project defaults (`permissions`, `attribution`, etc.) | `.claude/settings.json` | sparse `git clone` plus key-level merge into the project `.claude/settings.json` on every run |
+| User-level hooks (`guard.py`, `session_bootstrap.py`) + settings | `scripts/` + `user/settings.json` | Scripts copied to `~/.claude/hooks/`; settings merged into `~/.claude/settings.json` (shared permissions, PreToolUse guard, SessionStart bootstrap hook, `CLAUDE_CODE_EFFORT_LEVEL=max`) |
 
 ### Override rules
 
@@ -64,6 +66,25 @@ Bootstrap also sets up user-level config: it copies `scripts/guard.py` to `~/.cl
 - Shared keys in `.claude/settings.json` are updated on every bootstrap run. Project-only keys are preserved. To override a shared key locally, use `.claude/settings.local.json`.
 - If a shared skill does not exist locally, the agent should use the fetched copy from `.agent-config/repo/skills/`.
 
+### Configuration Precedence
+
+Three independent configuration layers, each with its own precedence rules. When two rules conflict, the more specific source wins.
+
+**1. Agent rule files (Markdown)** — most specific wins:
+
+| Layer | File | Scope |
+|---|---|---|
+| 1 | `CLAUDE.local.md` / `agents/codex.local.md` | Per-agent + project-local. Hand-authored; never touched by bootstrap. |
+| 2 | `AGENTS.local.md` | Cross-agent + project-local. Hand-authored; never touched by bootstrap. |
+| 3 | `CLAUDE.md` / `agents/codex.md` | Per-agent, generated from `AGENTS.md` by `scripts/generate_agent_configs.py`. |
+| 4 | `AGENTS.md` | Cross-agent, synced from upstream on every bootstrap. |
+
+The generated `CLAUDE.md` and `agents/codex.md` carry a `GENERATED FILE` header. If a consumer project has a hand-authored `CLAUDE.md` (or `agents/codex.md`) without that header, the generator preserves it and warns loudly — it never silently overrides user work. To adopt upstream rules in that case, rename the hand-authored file to `CLAUDE.local.md` (which still wins via layer 1).
+
+**2. Claude Code settings (`settings.json`)** — follow Claude Code's own precedence: `managed policy` > `command-line arguments` > `.claude/settings.local.json` > `.claude/settings.json` > `~/.claude/settings.json`. Bootstrap only writes to the project-shared and user-level layers, and merges shared keys while preserving project-only keys.
+
+**3. Environment variables** — for effort level specifically: `managed policy > CLAUDE_CODE_EFFORT_LEVEL env var > persisted effortLevel > default`.
+
 ---
 
 <!-- Everything above this line is bootstrap setup instructions. -->
@@ -71,18 +92,30 @@ Bootstrap also sets up user-level config: it copies `scripts/guard.py` to `~/.cl
 
 ## Session Start Check
 
-After bootstrap, run **all** of the following checks and report results in a short summary. No shell commands are needed — all information is available from session environment and config files. Only flag items that need attention — if everything is correct, a one-line confirmation is sufficient.
+At the start of every new session, after bootstrap, emit a **session start banner** as the first content of your first response. The banner confirms the agent environment is loaded, lists what is active, and surfaces anything that needs attention. Do not skip it; do not repeat it on later turns of the same session.
 
-1. **OS** -- Read the platform from the session environment (e.g., `win32`, `darwin`, `linux`). Note it for platform-specific behavior (e.g., terminal review path on Windows, MCP on macOS/Linux).
-2. **Claude Code model and effort** (Claude Code sessions only) -- If the live session environment exposes model name and effort level, check them. The user prefers the highest available model (currently Opus) at max effort. If the session is on a different model or effort, mention it once — this is a preference, not a misconfiguration.
-3. **Codex config** -- Read `~/.codex/config.toml` (or `%USERPROFILE%\.codex\config.toml` on Windows). If the file exists, check these keys and report any that are missing or wrong:
-   - `model` should be `"gpt-5.4"` (or the latest available)
-   - `model_reasoning_effort` should be `"xhigh"`
-   - `service_tier` should be `"fast"`
-   - `[features] fast_mode` should be `true`
-   
-   If the file does not exist and Codex is expected, note that too.
-4. **GitHub Actions versions** -- If `.github/workflows/` exists, scan workflow YAML files for action version pins that are below the minimums in the GitHub Actions Standards section. Report any outdated actions with the file name and suggested version so the user can batch-update them. If all actions meet the minimums, skip this item silently.
+### Format
+
+```
+📦 anywhere-agents active
+   ├── OS: <platform>
+   ├── Agent: <agent name> · <model> · effort=<level>
+   ├── Codex: <config summary> (or "not configured")
+   ├── Skills: <count> shipped (<comma-separated names>)
+   ├── Hooks: PreToolUse <guard.py>, SessionStart <session_bootstrap.py>
+   └── Session check: all clear
+```
+
+If anything is off, replace `all clear` with a semicolon-separated list of concrete issues, each actionable in one short clause (e.g., `⚠ actions/checkout@v4 in .github/workflows/validate.yml:17 — bump to v5; Codex config.toml missing model key`). Keep the whole banner to six lines plus the check line.
+
+### How to populate each field
+
+1. **OS** — read from the session environment (`win32`, `darwin`, `linux`). Use this elsewhere to pick platform-specific behavior (terminal review path on Windows, MCP on macOS/Linux, `.ps1` vs `.sh`).
+2. **Agent** — the tool you are running as (Claude Code, Codex, etc.), the model name if exposed, and effort level. User prefers the highest available model at max effort; flag any drift once in the banner, not every turn.
+3. **Codex** — read `~/.codex/config.toml` (or `%USERPROFILE%\.codex\config.toml` on Windows). If present, summarize `model` · `model_reasoning_effort` · `service_tier` · `[features].fast_mode` on one line. Expected values: `model = "gpt-5.4"` (or latest), `model_reasoning_effort = "xhigh"`, `service_tier = "fast"`, `[features] fast_mode = true`. If the file is missing and Codex is expected, say `not configured`.
+4. **Skills** — count and list shipped skill directories. Check `skills/` (project-local) first, then `.agent-config/repo/skills/` (bootstrapped). Use the directory names.
+5. **Hooks** — check `~/.claude/hooks/` for `guard.py` (PreToolUse) and `session_bootstrap.py` (SessionStart). If one is missing, include it in the Session check line as an issue.
+6. **Session check** — scan `.github/workflows/*.yml` for action version pins below the minimums in the GitHub Actions Standards section. Combine with any Codex-config or hook drift detected above. Emit `all clear` only when nothing needs attention.
 
 ## User Profile
 
@@ -103,6 +136,7 @@ After bootstrap, run **all** of the following checks and report results in a sho
 - If the `superpowers` plugin is active, the router operates during the execution phase. Superpowers handles the outer workflow (brainstorm, plan, execute, verify); the router handles inner dispatch to the right domain skill.
 - If routing is ambiguous (multiple skills could apply), state the detected context and proposed skill, then ask the user to confirm.
 
+<!-- agent:codex -->
 ## Codex MCP Integration
 
 - Codex is available to Claude Code as an MCP server. Register it once at the user level so it applies to all projects and terminals (including PyCharm):
@@ -142,6 +176,7 @@ After bootstrap, run **all** of the following checks and report results in a sho
   - `C:\Users\<you>\AppData\Roaming\npm\codex.cmd` (process)
   - `C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe` (process, if Codex invokes PowerShell)
 - **Windows recommendation: use the terminal path.** On Windows (11 Build 26200+), the MCP path still has rough edges — residual approval prompts and Bitdefender false positives add friction even after the mitigations above. The terminal path (relay reviews via the Codex interactive terminal window) avoids both issues. Prefer the terminal path on Windows; use MCP on macOS/Linux where it works smoothly.
+<!-- /agent:codex -->
 
 ## Writing Defaults
 
@@ -208,6 +243,7 @@ When the session start check (item 4) detects older versions, list the affected 
 - If interpreter selection is still unclear, inspect Miniforge environments and local IDE settings before reporting that Python is missing.
 - **PyCharm default interpreter:** The `py312` conda environment is configured as the default interpreter for new projects via **File > New Projects Setup > Settings for New Projects > Python Interpreter**. Existing cloned repos should also point to this environment unless they require a project-specific venv.
 - GitHub CLI (`gh`) is used for PR and issue workflows. If `gh` is not found, remind the user to install it (`winget install GitHub.cli` on Windows, `brew install gh` on macOS) and authenticate with `gh auth login`.
+<!-- agent:claude -->
 - **Claude Code installation**: Prefer the **native installer**. Migrate off npm and winget when possible.
   - macOS: `curl -fsSL https://claude.ai/install.sh | sh`
   - Windows (PowerShell, no admin): `irm https://claude.ai/install.ps1 | iex` (requires Git for Windows)
@@ -215,6 +251,7 @@ When the session start check (item 4) detects older versions, list the affected 
   - Native installs auto-update in the background by default. Use `/config` inside Claude Code to set the release channel (`latest` or `stable`). Run `claude doctor` to inspect updater status, and `claude update` to force an immediate update check.
   - To disable auto-updates, set `DISABLE_AUTOUPDATER=1` in the environment or add `"env": {"DISABLE_AUTOUPDATER": "1"}` to `~/.claude/settings.json`. Note: a legacy top-level `autoUpdates` key in `~/.claude.json` is ignored on native installs because `autoUpdatesProtectedForNative` neutralizes it.
 - **Claude Code effort level**: As of Claude Code v2.1.111, the `/effort` slider exposes five levels: `low`, `medium`, `high`, `xhigh`, `max`. The persisted `effortLevel` key in `settings.json` accepts `low`, `medium`, `high`, and `xhigh` (v2.1.111 added `xhigh` as a valid persisted value). `max` remains session-only: selecting `max` via `/effort` silently does not persist. To get `max` as a persistent default across every project and session, set the env var `CLAUDE_CODE_EFFORT_LEVEL=max` in `~/.claude/settings.json` under `"env"`. The shared `user/settings.json` in this repo sets the env var, and bootstrap merges it into `~/.claude/settings.json`, so running bootstrap once on any consuming project lands the user-level default. Runtime precedence: managed policy > `CLAUDE_CODE_EFFORT_LEVEL` env var > persisted `effortLevel` (local > project > user) > Claude Code's built-in default. When the env var is set, it outranks `--effort` at launch and `/effort` inside a session; the slash command prints a warning that the env var is overriding the live effort. When the env var is unset, `--effort <level>` at launch is a session-only override, `/effort low|medium|high|xhigh` updates the persisted user setting, and `/effort max` is session-only.
+<!-- /agent:claude -->
 
 ## Submodule Workflow
 
