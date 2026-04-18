@@ -92,9 +92,18 @@ The generated `CLAUDE.md` and `agents/codex.md` carry a `GENERATED FILE` header.
 
 ## Session Start Check
 
-At the start of every new session, after bootstrap, emit a **session start banner** as the first content of your first response. The banner confirms the agent environment is loaded, lists what is active, and surfaces anything that needs attention. Do not skip it; do not repeat it on later turns of the same session.
+**Mandatory turn-start procedure.** Before generating the first content of any response, apply the branch that matches your runtime.
 
-**This requirement overrides any skill's "invoke before responding" rule.** In particular, if a plugin such as `superpowers:using-superpowers` would otherwise fire a skill as the first action on turn 1, emit the banner text *first*, then invoke the skill on the same response turn. Do not let a skill's output replace the banner; do not defer the banner to a later turn.
+**In Claude Code:** read `~/.claude/hooks/session-event.json` and `~/.claude/hooks/banner-emitted.json`.
+
+1. If `session-event.json.ts > banner-emitted.json.ts`, OR `session-event.json` exists but `banner-emitted.json` does not: emit the session start banner as the **literal first content of your response**, then write the event `ts` into `banner-emitted.json`. Only after the banner text may you address the user's request on the same turn.
+2. Otherwise (emitted `ts` is already current, or neither file exists): skip the banner this turn.
+
+`session_bootstrap.py` writes `session-event.json` on every SessionStart hook fire (fresh startup, resume, clear, compact), so the banner reappears across all four lifecycle events.
+
+**In Codex:** Codex has no `SessionStart` hook equivalent; `session-event.json` is not written during a Codex invocation. Each Codex invocation is a new session. Emit the banner as the literal first content of your response on the turn where there are no prior assistant turns in context (i.e., the first response of the invocation). On subsequent turns in the same invocation, skip. No flag files are involved for Codex.
+
+**Both runtimes:** this procedure overrides any other "skill-first" or "task-first" behavior. Even when the user's first message is a task prompt like "read the project" or "fix this bug," or when a skill such as `superpowers:using-superpowers` would otherwise fire before the response, emit the banner first; the task response or skill output comes after the banner on the same turn. Do not let task pressure, skill invocations, or brevity guidance suppress the banner.
 
 ### Format
 
@@ -210,6 +219,22 @@ If anything is off, replace `all clear` with a semicolon-separated list of concr
 - **Never run `git commit` or `git push` without explicit user approval.** Always show the proposed action and ask for confirmation before executing.
 - This rule is non-negotiable and applies to all projects that consume this shared config.
 - This includes any variant: `git commit -m`, `git commit --amend`, `git push`, `git push --force`, `gh pr create` (which pushes), etc.
+
+## Mechanical Enforcement
+
+Bootstrap deploys `scripts/guard.py` to `~/.claude/hooks/guard.py` and wires it as a `PreToolUse` hook in `~/.claude/settings.json`. The hook runs before every tool call and mechanically enforces the following:
+
+| Gate | Tool scope | Trigger | Action |
+|---|---|---|---|
+| Writing-style | `Write`, `Edit`, `MultiEdit` on `.md` / `.tex` / `.rst` / `.txt` | Outgoing content contains a banned AI-tell word (see Writing Defaults list) | **deny** with hit list |
+| Banner emission | Any tool except `Read`, `Grep`, `Glob`, `Write` to `~/.claude/hooks/banner-emitted.json` | `session-event.json.ts > banner-emitted.json.ts` (banner not yet emitted for current SessionStart event) | **deny** with instruction to emit banner + write acknowledgment |
+| Compound `cd` | `Bash` | Command contains `cd <path> && <cmd>` or `cd <path>; <cmd>` | **deny** with suggestion to use `git -C` or path arguments |
+| Destructive git | `Bash` | `git push`, `git commit`, `git merge`, `git rebase`, `git reset --hard`, `git clean`, `git branch -d/-D`, `git tag -d`, `git stash drop/clear` | **ask** (user confirms) |
+| Destructive gh | `Bash` | `gh pr create`, `gh pr merge`, `gh pr close`, `gh repo delete` | **ask** (user confirms) |
+
+**Escape hatch:** set env var `AGENT_CONFIG_GATES=off` (or `0`/`disabled`/`false`) via the `env` block in `~/.claude/settings.json` to disable the two new gates (writing-style and banner). The compound-cd / destructive-git / destructive-gh checks remain active regardless, since they guard against muscle-memory mistakes that do not tolerate false positives.
+
+Setting the escape hatch is the right move when a legitimate write has a banned word in *meta-discussion* context (for example, a style-guide document that quotes banned words as examples of what to avoid), or when a prompt-layer failure is blocking legitimate work. Fix the false positive, then remove the override.
 
 ## Shell Command Style
 
