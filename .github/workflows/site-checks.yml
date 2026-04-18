@@ -28,3 +28,9 @@ jobs:
           PUBLIC_URLS: "https://yzhao062.github.io/"
           PUBLIC_URLS_SOFT: "https://viterbi-web.usc.edu/~yzhao010/"
         run: python scripts/ci_check_site.py
+
+      - name: Install post_to_x dependencies
+        run: pip install -r scripts/requirements-post.txt
+
+      - name: Run post_to_x contract checks
+        run: python scripts/check_post_to_x_contract.py
