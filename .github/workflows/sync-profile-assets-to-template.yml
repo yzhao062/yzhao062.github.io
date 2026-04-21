@@ -21,10 +21,10 @@ jobs:
 
     steps:
       - name: Checkout source repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Checkout USC target repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           repository: yzhao062/USC-Proposal-Template-Yue
           token: ${{ secrets.TARGET_REPO_TOKEN }}
