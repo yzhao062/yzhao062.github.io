@@ -321,7 +321,7 @@
     "docs_url": "https://anywhere-agents.readthedocs.io",
     "paper_url": "",
     "demo_url": "",
-    "stars": 86,
+    "stars": 87,
     "tags": [
       "Claude Code",
       "Codex",
@@ -331,5 +331,25 @@
       "MCP"
     ],
     "last_updated_at": "2026-04-21T04:19:08Z"
+  },
+  {
+    "name": "agent-style",
+    "category": "Developer Toolkit",
+    "role": "Primary",
+    "description": "A drop-in rules package that shapes how AI coding and writing agents produce prose at generation time, using 21 curated English style rules (12 from canonical writing authorities; 9 from field observation of LLM output). Works with Claude Code, Codex, Copilot, Cursor, Aider, and other AGENTS.md-compliant tools.",
+    "repo_url": "https://github.com/yzhao062/agent-style",
+    "docs_url": "https://viterbi-web.usc.edu/~yzhao010/agent-style.html",
+    "paper_url": "",
+    "demo_url": "https://pypi.org/project/agent-style/",
+    "stars": 157,
+    "tags": [
+      "AI Agents",
+      "Agent Configuration",
+      "Writing Style",
+      "Prompt Engineering",
+      "Claude Code",
+      "Codex"
+    ],
+    "last_updated_at": "2026-04-21T03:46:46Z"
   }
 ]

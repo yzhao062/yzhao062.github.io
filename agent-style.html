@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Yue Zhao">
+  <meta name="description" content="agent-style is a drop-in rules package that shapes how AI coding and writing agents produce prose at generation time. 21 curated English style rules, 12 from canonical writing authorities and 9 from field observation of LLM output, load into the agent's system prompt so drafts conform before any review. Works with Claude Code, Codex, Copilot, Cursor, Aider, and other AGENTS.md-compliant tools.">
+  <meta name="keywords" content="agent-style, AI agents, Claude Code, Codex, GitHub Copilot, Cursor, Aider, agent configuration, writing style, style guide, prompt engineering, technical writing, Strunk and White, Orwell, Pinker, Gopen and Swan, AI writing rules, Yue Zhao">
+  <title>agent-style | Make AI Agents Write Like a Tech Pro</title>
+  <link rel="canonical" href="https://viterbi-web.usc.edu/~yzhao010/agent-style.html">
+  <link rel="icon" type="image/x-icon" href="images/logo2.ico">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="agent-style | Make AI Agents Write Like a Tech Pro">
+  <meta property="og:description" content="21 writing rules for AI coding and writing agents, loaded at generation time. 12 rules from canonical writing authorities (Strunk & White, Orwell, Pinker, Gopen & Swan); 9 from field observation of LLM output.">
+  <meta property="og:url" content="https://viterbi-web.usc.edu/~yzhao010/agent-style.html">
+  <meta property="og:image" content="https://viterbi-web.usc.edu/~yzhao010/images/agent-style-hero.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="agent-style | Make AI Agents Write Like a Tech Pro">
+  <meta name="twitter:description" content="21 writing rules for AI coding and writing agents, loaded at generation time. 12 rules from canonical writing authorities (Strunk & White, Orwell, Pinker, Gopen & Swan); 9 from field observation of LLM output.">
+  <meta name="twitter:image" content="https://viterbi-web.usc.edu/~yzhao010/images/agent-style-hero.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareSourceCode",
+    "name": "agent-style",
+    "description": "A drop-in rules package that shapes how AI coding and writing agents produce prose at generation time, using 21 curated English style rules (12 from canonical writing authorities; 9 from field observation of LLM output). Works with Claude Code, Codex, Copilot, Cursor, Aider, and other AGENTS.md-compliant tools.",
+    "url": "https://viterbi-web.usc.edu/~yzhao010/agent-style.html",
+    "codeRepository": "https://github.com/yzhao062/agent-style",
+    "downloadUrl": "https://pypi.org/project/agent-style/",
+    "programmingLanguage": "Python",
+    "license": [
+      "https://creativecommons.org/licenses/by/4.0/",
+      "https://opensource.org/license/mit/"
+    ],
+    "author": {
+      "@type": "Person",
+      "name": "Yue Zhao"
+    }
+  }
+  </script>
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preload" as="image" href="images/rsz_300.jpg">
+  <link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap.min.css" onerror="this.onerror=null;this.href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css';">
+  <script src="assets/vendor/bootstrap/bootstrap.bundle.min.js" defer onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js';"></script>
+  <link rel="preload" href="assets/vendor/fontawesome/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.onerror=null;this.rel='stylesheet';this.href='https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css';">
+  <noscript><link rel="stylesheet" href="assets/vendor/fontawesome/css/all.min.css"></noscript>
+  <link rel="stylesheet" href="css/common.css">
+  <script src="assets/js/layout-shell.js" defer></script>
+</head>
+<body>
+  <div id="navbar"></div>
+  <script src="assets/js/webstat-tracker.js" defer></script>
+  <noscript><img src="https://app.ardalio.com/7/5/1866123.png" alt=""></noscript>
+
+  <div class="container">
+    <div class="row">
+      <div id="sidebar" class="col-md-3 col-12 content-spacing"></div>
+      <div class="col-md-9 col-12 content-spacing">
+        <h1 style="color:#990000;">agent-style</h1>
+        <p style="font-size:1.1rem; font-weight:700; color:#7a2a2a; margin-top:-4px;">Make AI agents write like a tech pro.</p>
+
+        <figure style="margin:12px 0 18px 0;">
+          <img src="images/agent-style-hero.png"
+               alt="agent-style hero: the 21 writing rules on the top row (RULE-01 through RULE-12 canonical plus RULE-A through RULE-I field-observed), and on the bottom row a PR description as drafted by an AI agent with rule-violation highlights, next to the revised version at the same length budget."
+               loading="lazy" decoding="async"
+               style="max-width:100%; width:100%; height:auto; border:1px solid #e5e5e5; border-radius:8px;">
+          <figcaption style="font-size:0.88rem; color:#666; margin-top:6px;">
+            The 21 rules at a glance, and the kind of change they produce: an AI-drafted PR description on the left, the rules that fire in the middle, and the revised version on the right at the same length budget.
+          </figcaption>
+        </figure>
+
+        <p>
+          <strong>agent-style</strong> is a drop-in rules package that changes how AI coding and writing agents produce
+          prose. It ships 21 curated English style rules that the agent reads as part of its system prompt or project
+          config, so the first draft conforms to expected writing norms before any post-hoc review. Twelve rules come
+          from canonical writing authorities (Strunk &amp; White, Orwell, Pinker, Gopen &amp; Swan); nine come from
+          field observation of LLM output across research, proposal, and documentation work, 2022 to 2026.
+        </p>
+        <p>
+          The goal is not a post-hoc linter. The goal is to shape agent behavior at the moment of generation, so that
+          what comes out of Claude Code, Codex, GitHub Copilot, Cursor, Aider, and other AGENTS.md-compliant tools reads
+          like technical prose a person would write, not the default AI voice.
+        </p>
+        <p>
+          <a href="https://github.com/yzhao062/agent-style"><i class="fab fa-github" aria-hidden="true"></i> GitHub Repository</a>
+          |
+          <a href="https://github.com/yzhao062/agent-style/stargazers"><i class="fas fa-star" aria-hidden="true"></i> Star on GitHub</a>
+          |
+          <a href="https://pypi.org/project/agent-style/"><i class="fas fa-cube" aria-hidden="true"></i> PyPI Package</a>
+          |
+          <a href="https://www.npmjs.com/package/agent-style"><i class="fab fa-npm" aria-hidden="true"></i> npm Package</a>
+          |
+          <a href="opensource.html"><i class="fas fa-wrench" aria-hidden="true"></i> Back to Open Source</a>
+        </p>
+
+        <p style="background:#fff7f2; border-left:4px solid #F26178; padding:10px 14px; margin:10px 0 14px 0;">
+          If this ruleset improves your agent output, please
+          <a href="https://github.com/yzhao062/agent-style/stargazers"><strong>star the GitHub repository</strong></a>
+          to help more practitioners discover it.
+        </p>
+
+        <hr>
+        <h2 style="color:#990000;">Why rules at generation time</h2>
+        <p>
+          Most writing-style tools run after the draft exists: the agent writes something, a linter flags issues, and
+          someone (usually you) reconciles the two. That loop is slow, and it treats AI-tell vocabulary as a cosmetic
+          cleanup problem instead of a generation problem. agent-style takes the opposite approach: load the rules into
+          the agent's instruction stack so the first draft already follows them. Post-hoc review, when needed, runs
+          against a draft that is already close to the target.
+        </p>
+        <p>
+          The rules are split by origin. The agent reads both groups as peers.
+        </p>
+        <ul>
+          <li><strong><code>RULE-01..12</code> (canonical).</strong> Distilled from Strunk &amp; White, Orwell, Pinker,
+              and Gopen &amp; Swan; each rule cites its source by chapter, section, or essay rule. Covers tacit
+              knowledge, passive voice, concrete versus abstract language, needless words, dying metaphors, jargon,
+              affirmative form, calibrated claims, parallel structure, word order, stress position, and sentence length.</li>
+          <li><strong><code>RULE-A..I</code> (field-observed).</strong> Patterns logged from AI output across dozens of
+              writing projects and code releases, 2022 to 2026. Covers over-bulleting, em and en dashes as casual
+              punctuation, repeated sentence openers, overused transitions ("Additionally", "Furthermore"), paragraph
+              closers, term drift, title-case headings, citation discipline (the critical one), and contraction use.</li>
+        </ul>
+
+        <figure style="margin:10px 0 16px 0;">
+          <img src="images/agent-style-sources.png"
+               alt="The four writing authorities cited by RULE-01 through RULE-12: Strunk and White, The Elements of Style (1959); Orwell, Politics and the English Language (1946); Pinker, The Sense of Style (2014); Gopen and Swan, The Science of Scientific Writing (1990), with the rule IDs distilled from each source shown alongside."
+               loading="lazy" decoding="async"
+               style="max-width:100%; width:100%; height:auto; border:1px solid #e5e5e5; border-radius:8px;">
+          <figcaption style="font-size:0.88rem; color:#666; margin-top:6px;">
+            Canonical sources behind <code>RULE-01..12</code>. Each rule cites its source by chapter, section, or essay rule; every citation was verified against the original work.
+          </figcaption>
+        </figure>
+
+        <h2 style="color:#990000;">Two ways to use it</h2>
+        <p>
+          Install the CLI once (<code>pip install agent-style</code> or <code>npm install -g agent-style</code>), then
+          pick the paths you want. The two paths are complementary, not alternatives.
+        </p>
+
+        <h3 style="color:#990000; font-size:1.08rem; margin-top:14px;">A. Soft enforcement at generation time</h3>
+        <p>
+          One command per tool wires the ruleset into the agent's instruction file:
+        </p>
+        <pre style="background:#f8f8f8; border:1px solid #ddd; border-radius:8px; padding:12px;"><code>agent-style enable claude-code        # Claude Code
+agent-style enable agents-md          # Codex, Jules, Zed, Warp, Gemini CLI, VS Code, and other AGENTS.md tools
+agent-style enable cursor             # Cursor
+agent-style enable copilot            # GitHub Copilot (repo-wide)
+agent-style list-tools                # see all supported surfaces</code></pre>
+        <p>
+          Each adapter uses a safe install mode (<code>import-marker</code>, <code>append-block</code>, or
+          <code>owned-file</code>) that will not overwrite user-authored content. <code>agent-style disable &lt;tool&gt;</code>
+          reverses it.
+        </p>
+        <p>
+          Soft enforcement nudges the model; training-prior vocabulary can still leak into the first draft for prose
+          over a couple of hundred words. That is what the second path is for.
+        </p>
+
+        <h3 style="color:#990000; font-size:1.08rem; margin-top:14px;">B. style-review skill (opt-in second pass)</h3>
+        <p>
+          After a draft exists, ask for a review. The <code>style-review</code> skill runs a deterministic audit of the
+          draft against the 21 rules, reports per-rule counts and first violations, and on your confirmation writes a
+          polished copy beside the original.
+        </p>
+        <pre style="background:#f8f8f8; border:1px solid #ddd; border-radius:8px; padding:12px;"><code># Inside Claude Code (skill-host path):
+/style-review DESIGN.md
+
+# Anywhere pip or npm runs (CLI path):
+agent-style review DESIGN.md                # human-readable audit
+agent-style review DESIGN.md --audit-only   # machine-readable JSON
+agent-style review --compare a.md b.md      # A/B delta per rule</code></pre>
+        <p>
+          The source file is never touched; the revised draft lands at <code>DESIGN.reviewed.md</code> and you merge
+          hunks by hand. Semantic rules (vague claims, calibrated claims, citation discipline, stress position, term
+          drift, curse of knowledge, needless words) run through the skill host's model; the remaining structural rules
+          are deterministic and work from the CLI with no model needed.
+        </p>
+
+        <h2 style="color:#990000;">Does it work?</h2>
+        <p>
+          Sanity bench on 10 fixed prose tasks (5 PR descriptions, 3 design-doc sections, 2 commit messages), 2
+          generations each, flagship models drafting with <code>agent-style</code> loaded at generation time versus not.
+        </p>
+
+        <figure style="margin:10px 0 12px 0;">
+          <img src="images/agent-style-bench.png"
+               alt="agent-style v0.2.0 sanity bench: Claude Opus 4.7 goes from 62 AI-tell violations to 33 (minus 47 percent) and OpenAI GPT-5.4 goes from 26 to 20 (minus 23 percent) across 10 fixed prose tasks, with per-rule breakdown."
+               loading="lazy" decoding="async"
+               style="max-width:100%; width:100%; height:auto; border:1px solid #e5e5e5; border-radius:8px;">
+          <figcaption style="font-size:0.88rem; color:#666; margin-top:6px;">
+            Sanity bench on two flagship models, v0.2.0 release. Per-rule breakdown and full scorecard are in the repository under <code>docs/bench-0.2.0.md</code>.
+          </figcaption>
+        </figure>
+
+        <ul>
+          <li><strong>Claude Opus 4.7:</strong> 62 to 33 mechanical AI-tell violations (<span style="color:#990000;">&minus;47%</span>).</li>
+          <li><strong>OpenAI GPT-5.4:</strong> 26 to 20 violations (<span style="color:#990000;">&minus;23%</span>).</li>
+        </ul>
+        <p style="font-size:0.88rem; color:#666; margin-top:-4px;">
+          Numbers are directional, not statistically significant (40 calls per model). The ruleset reduces AI-tell
+          density on models where it matters; the size of the drop varies with the baseline. Gemini 2.5 Pro baseline is
+          already clean, so the ruleset has little headroom there; archived separately in the repository.
+        </p>
+
+        <h2 style="color:#990000;">Supported surfaces</h2>
+        <p>
+          v0.2.0 primary set ships adapters for:
+        </p>
+        <ul>
+          <li><strong>Claude Code</strong>, via an import marker in <code>CLAUDE.md</code>.</li>
+          <li><strong>AGENTS.md-compliant tools</strong> (Codex, Jules, Zed, Warp, Gemini CLI, VS Code, and others), via a
+              safe-append block in the existing <code>AGENTS.md</code>.</li>
+          <li><strong>GitHub Copilot</strong> (repo-wide and path-scoped).</li>
+          <li><strong>Cursor</strong>, via a rule file under <code>.cursor/rules/</code>.</li>
+          <li><strong>Anthropic Skills</strong>, via a skill file under <code>.claude/skills/</code>.</li>
+          <li><strong>Codex API</strong>, via a print-only system-prompt file you paste into your API call.</li>
+          <li><strong>Aider</strong>, via a conventions file plus a config snippet.</li>
+          <li><strong>Kiro (AWS IDE)</strong>, via a steering file.</li>
+        </ul>
+        <p>
+          Amazon Q Developer, JetBrains AI Assistant, Windsurf, Ollama, Replit Agent, OpenCode, Continue.dev, Tabnine,
+          and OpenAI Agents SDK skills are planned for v1.1; tracked in the repository's adapter matrix.
+        </p>
+
+        <h2 style="color:#990000;">Positioning</h2>
+        <p>
+          agent-style sits next to <a href="anywhere-agents.html"><strong>anywhere-agents</strong></a> in the
+          <strong>Developer Tools for AI</strong> direction. anywhere-agents ships the full agent configuration stack
+          (writing rules, routing, skills, hooks, bootstrap). agent-style is the writing-rule slice of that stack,
+          published as a standalone, dependency-free package so teams that do not want the full configuration can still
+          adopt the writing discipline. The same 21 rules are used in both places.
+        </p>
+
+        <h2 style="color:#990000;">Fork and contribute</h2>
+        <p>
+          Everything is plain Markdown with SPDX headers. Fork the repository, swap in your own rules or adapters, and
+          keep pulling upstream with <code>git merge upstream/main</code>. Contributions that add a canonical rule must
+          cite a source from the writing-authority bucket, include BAD and GOOD examples drawn from real technical
+          prose, and include a rationale for why the rule matters specifically for AI-agent-generated output. See
+          <code>CONTRIBUTING.md</code> in the repository for the full contribution guide.
+        </p>
+
+        <h2 style="color:#990000;">License</h2>
+        <p>
+          Dual-licensed with file-level SPDX boundaries: <code>RULES.md</code>, source lists, notices, and adapter
+          files are <a href="https://creativecommons.org/licenses/by/4.0/"><strong>CC BY 4.0</strong></a>; enforcement
+          code, generator scripts, and CI workflows are <a href="https://opensource.org/license/mit/"><strong>MIT</strong></a>.
+          Every source file carries an <code>SPDX-License-Identifier</code> header. See <code>NOTICE.md</code> in the
+          repository for the attribution snippet that consumers should retain on reuse.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div id="myFooter"></div>
+</body>
+</html>
