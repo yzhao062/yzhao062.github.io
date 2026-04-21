@@ -5,6 +5,8 @@
 > **Source repo test:** If `bootstrap/bootstrap.sh`, `bootstrap/bootstrap.ps1`, and `reference-skills/` all exist at the repo root, you are in the `agent-config` source repo (or a fork with the same layout). **Skip the bootstrap block below** and proceed directly to `## Session Start Check`. Do not execute the bootstrap script in the source repo; it would try to bootstrap itself.
 >
 > **Consumer repo path:** Otherwise, you are in a project that consumes the shared config. **You MUST execute the matching bootstrap block below at the start of every session, before responding to any user request or running session checks.** Use the PowerShell block on Windows and the Bash block on macOS/Linux. Bootstrap is idempotent: run it every session even if `.agent-config/` already exists, so shared config, skills, and settings are refreshed from upstream before any work begins. Do not treat the block below as reference documentation -- it is a required runtime command. After running, report the refresh result in one line (for example, "bootstrap: refreshed AGENTS.md, skills, settings").
+>
+> **Maintainer onboarding (source repo only):** If this is a fresh clone of `agent-config` or a new machine, read [`ONBOARDING.md`](./ONBOARDING.md) at the repo root. It is the one-page index pointing at `docs/anywhere-agents.md` (two-repo relationship), `../anywhere-agents/RELEASING.md` (release runbook), and `../anywhere-agents/CHANGELOG.md` (current version). This line is `agent-config` only and is stripped when sanitizing for `anywhere-agents`.
 
 ## Bootstrap: Shared Config and Skills
 
