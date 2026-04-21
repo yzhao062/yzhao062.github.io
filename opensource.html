@@ -424,71 +424,15 @@
                       </table>
                     </div>
 
-                    <div class="row g-3" style="margin-top: 0;">
-                      <div class="col-md-6 col-lg-3">
-                        <div class="empty-state" style="margin-top: 0; height: 100%;">
-                          <strong>Featured project:</strong>
-                          <a href="agent-style.html"><strong>agent-style</strong></a> -
-                          a drop-in rules package that changes how AI coding and writing agents produce prose:
-                          21 curated English style rules (12 from canonical writing authorities; 9 from field
-                          observation of LLM output) loaded at generation time, with an opt-in style-review skill
-                          for a second pass. Works with Claude Code, Codex, Copilot, Cursor, Aider, and other
-                          AGENTS.md-compliant tools.
-                          Links:
-                          <a href="https://github.com/yzhao062/agent-style">GitHub</a> |
-                          <a href="https://github.com/yzhao062/agent-style/stargazers">Star</a> |
-                          <a href="https://pypi.org/project/agent-style/">PyPI</a> |
-                          <a href="https://www.npmjs.com/package/agent-style">npm</a>.
-                        </div>
-                      </div>
-                      <div class="col-md-6 col-lg-3">
-                        <div class="empty-state" style="margin-top: 0; height: 100%;">
-                          <strong>Featured project:</strong>
-                          <a href="anywhere-agents.html"><strong>anywhere-agents</strong></a> -
-                          one config to rule all your AI agents: portable across every project and session,
-                          effective through curated writing, routing, and skills, and safer via a PreToolUse guard
-                          that blocks destructive Git and GitHub commands. Supports Claude Code and Codex today,
-                          with plans to grow.
-                          Links:
-                          <a href="https://github.com/yzhao062/anywhere-agents">GitHub</a> |
-                          <a href="https://github.com/yzhao062/anywhere-agents/stargazers">Star</a> |
-                          <a href="https://anywhere-agents.readthedocs.io">Docs</a> |
-                          <a href="https://pypi.org/project/anywhere-agents/">PyPI</a> |
-                          <a href="https://www.npmjs.com/package/anywhere-agents">npm</a>.
-                        </div>
-                      </div>
-                      <div class="col-md-6 col-lg-3">
-                        <div class="empty-state" style="margin-top: 0; height: 100%;">
-                          <strong>Featured project:</strong>
-                          <a href="agent-audit.html"><strong>agent-audit</strong></a> -
-                          an AI agent auditing and policy-checking tool with checks for OWASP Agentic Top 10 risks,
-                          taint-style flow analysis, and MCP configuration auditing. It sits mainly in AI Auditing &amp;
-                          Assurance, with direct overlap with AI Safety &amp; Security.
-                          In March 2026, it scanned 18,899 ClawHub skills and detected 13,947 vulnerabilities
-                          (including 1,996 BLOCK-level critical findings).
-                          Links:
-                          <a href="https://github.com/HeadyZhang/agent-audit">GitHub</a> |
-                          <a href="https://github.com/HeadyZhang/agent-audit/stargazers">Star</a> |
-                          <a href="https://pypi.org/project/agent-audit/">PyPI</a> |
-                          <a href="https://clawhub.ai/HeadyZhang/agent-audit-scanner">ClawHub</a>.
-                        </div>
-                      </div>
-                      <div class="col-md-6 col-lg-3">
-                        <div class="empty-state" style="margin-top: 0; height: 100%;">
-                          <strong>Featured project:</strong>
-                          <a href="aegis.html"><strong>Aegis</strong></a> -
-                          the open-source firewall for AI agents,
-                          with pre-execution blocking, human approvals, and tamper-evident audit trails.
-                          It sits mainly in AI Safety &amp; Security, while its audit trails also support AI Auditing &amp;
-                          Assurance in real deployments.
-                          Links:
-                          <a href="https://github.com/Justin0504/Aegis">GitHub</a> |
-                          <a href="https://github.com/Justin0504/Aegis/stargazers">Star</a> |
-                          <a href="https://arxiv.org/abs/2603.12621">Preprint</a> |
-                          <a href="https://github.com/Justin0504/Aegis/blob/main/docs/images/readme_demo1.gif">Demo</a>.
-                        </div>
-                      </div>
-                    </div>
+                    <h3 style="color:#990000; margin-top:18px; margin-bottom:10px;">Full Project Portfolio</h3>
+                    <p class="repo-meta" style="margin-bottom: 8px;">
+                      Flagship project pages:
+                      <a href="agent-style.html">agent-style</a>,
+                      <a href="anywhere-agents.html">anywhere-agents</a>,
+                      <a href="agent-audit.html">agent-audit</a>,
+                      <a href="aegis.html">Aegis</a>,
+                      <a href="pyod.html">PyOD 3</a>.
+                    </p>
                     <div style="margin: 10px 0 8px 0;">
                       <span class="repo-meta" style="margin-right: 8px;">Sort by:</span>
                       <button id="sort-attention" class="btn btn-sm btn-outline-secondary" type="button">Attention</button>
@@ -518,7 +462,7 @@
         var sortUpdateBtn = document.getElementById("sort-update");
         var STAR_CACHE_TTL_MS = 6 * 60 * 60 * 1000;
         var META_CACHE_TTL_MS = 6 * 60 * 60 * 1000;
-        var activeSortMode = "updated";
+        var activeSortMode = "attention";
         var loadedItems = [];
 
         function escapeHtml(value) {

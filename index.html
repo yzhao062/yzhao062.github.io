@@ -230,6 +230,65 @@
                           <a href="auditable-agents.html" style="color:#990000;">[Project Page]</a>
                         </div>
 
+                        <style>
+                          .fos-grid > [class*="col-"] { position: relative; }
+                          @media (min-width: 992px) {
+                            .fos-grid > [class*="col-"]:not(:nth-child(3n+1))::before {
+                              content: ""; position: absolute; left: 0; top: 4px; bottom: 4px;
+                              width: 1px; background: #ead5d5;
+                            }
+                          }
+                          @media (min-width: 768px) and (max-width: 991.98px) {
+                            .fos-grid > [class*="col-"]:not(:nth-child(2n+1))::before {
+                              content: ""; position: absolute; left: 0; top: 4px; bottom: 4px;
+                              width: 1px; background: #ead5d5;
+                            }
+                          }
+                        </style>
+                        <div style="
+                          background-color:#fff7f7;
+                          border-left:4px solid #990000;
+                          padding:14px 18px;
+                          margin:12px 0;
+                        ">
+                          <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:10px;">
+                            <strong style="color:#990000;">Featured Open Source</strong>
+                            <a href="opensource.html" style="color:#990000; font-size:0.9rem;">All Projects &rsaquo;</a>
+                          </div>
+                          <div class="row g-3 fos-grid">
+                            <div class="col-md-6 col-lg-4">
+                              <a href="agent-style.html" style="font-weight:600;">agent-style</a>
+                              <div style="color:#555; font-size:0.88rem; line-height:1.4;">
+                                21 writing rules for AI agents, loaded at generation time.
+                              </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                              <a href="anywhere-agents.html" style="font-weight:600;">anywhere-agents</a>
+                              <div style="color:#555; font-size:0.88rem; line-height:1.4;">
+                                One config for Claude Code and Codex across every project and session.
+                              </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                              <a href="agent-audit.html" style="font-weight:600;">agent-audit</a>
+                              <div style="color:#555; font-size:0.88rem; line-height:1.4;">
+                                OWASP Agentic Top 10 checks, taint analysis, and MCP auditing.
+                              </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                              <a href="aegis.html" style="font-weight:600;">Aegis</a>
+                              <div style="color:#555; font-size:0.88rem; line-height:1.4;">
+                                Pre-execution policy firewall for AI agents with audit trails.
+                              </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                              <a href="pyod.html" style="font-weight:600;">PyOD 3</a>
+                              <div style="color:#555; font-size:0.88rem; line-height:1.4;">
+                                Agentic anomaly detection: 60+ detectors, 38M+ downloads.
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
                         <p><strong style="color:#990000">Biography</strong>. <span id="bio-content"></span></p>
                         <script>
                             fetch('files/bio.txt')
