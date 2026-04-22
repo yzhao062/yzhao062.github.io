@@ -1,7 +1,8 @@
 # News & Media Coverage Audit — Yue Zhao / FORTIS Lab
 
-*Updated: 2026-04-16 (5-day delta check — no new verified items; three D8 candidates flagged for next PDF pass).*
-*Previous: 2026-04-11 (targeted searches: agent-audit, Aegis, Auditable Agents, agent/LLM/VLM last-author works, DPU, Political-LLM, Treble, ADBench, Computing Resources, plus under-searched high-star tools).*
+*Updated: 2026-04-22 (full-range parallel audit across 5 agents, plus targeted search — zero new verified third-party coverage; Stanford AI Index 2026 and 4 foundation-model system cards confirmed as negative after full-text PDF scan).*
+*Previous: 2026-04-16 (5-day delta check — no new verified items; three D8 candidates flagged for next PDF pass).*
+*Earlier: 2026-04-11 (targeted searches: agent-audit, Aegis, Auditable Agents, agent/LLM/VLM last-author works, DPU, Political-LLM, Treble, ADBench, Computing Resources, plus under-searched high-star tools).*
 *All 8 dimensions complete across all 121 items (104 papers + 17 tools).*
 *Citation verification applied: every item names or cites the work, person, lab, or co-author.*
 
@@ -427,3 +428,79 @@ For grant narratives only. These do not name your work.
   - **agentlayer.medium.com "Aegis + TrustLLM" smart contract auditing** — VERIFIED as different projects. Their "TrustLLM" is arXiv:2403.16073 (Solidity auditing, two-stage fine-tuning), not Yue Zhao's TrustLLM (arXiv:2401.05561). Their "Aegis" is AgentLayer's web3 auditor, not FORTIS's Aegis (arXiv:2603.12621). Add to negative-results to prevent re-investigation.
   - **"TRUST" decentralized framework** (arXiv:2510.20188) — different project from TrustLLM; name similarity only.
 - **Upcoming opportunities reconfirmed:** ICLR 2026 in Rio Apr 24-28 (DoxBench, FigEdit, DecAlign, TrustGen); 机器之心 ICLR 2026 Paper Sharing in Beijing Apr 18; expect USC Viterbi "USC at ICLR 2026" roundup late Apr / early May.
+
+**Apr 22 targeted search — KnowFM workshop acceptances, Cat-DPO preprint, agent-style, anywhere-agents (no new verified items):**
+
+- **Scope (5 items):** Auditable Agents (ACL 2026 KnowFM acceptance, non-archival; paper itself on arXiv since Apr 7), Multimodal Generative Engine Optimization / MGEO (ACL 2026 KnowFM, archival; arXiv:2601.12263), Cat-DPO (new preprint arXiv:2604.17299, posted Apr 19), agent-style (PyPI release, 157 GitHub stars), anywhere-agents (PyPI/npm release).
+- **Dimensions run:** 3 (outlet sweep), 4 (topic proximity), 5 (smart keywords), plus targeted `site:` queries on Hacker News, Reddit r/MachineLearning, DEV Community, MarkTechPost.
+- **Findings:** No third-party editorial coverage for any of the 5 items. All results trace back to first-party sources (arXiv abstract/HTML/PDF, GitHub repos, ResearchGate auto-mirror, Yue Zhao USC homepage, LinkedIn profile) or unrelated topic-only articles.
+  - Cat-DPO (3 days old) is expectedly too fresh for coverage.
+  - MGEO workshop acceptance not yet propagated beyond the OpenReview submission (Apr 21).
+  - Auditable Agents remains in the same position as Apr 11: strong topic-validation footprint, no direct coverage.
+  - agent-style/anywhere-agents: no third-party blog review, no Show HN thread, no Hacker News item, no DEV Community writeup found. Repo exists, README content is the only surface visible to search engines.
+- **Topic-only matches (Topic Validation, not coverage):** DeployHQ "How to Configure Every AI Coding Assistant" (covers AGENTS.md/CLAUDE.md/Cursor Rules — does not name agent-style or anywhere-agents). Several DEV Community AGENTS.md articles ("What is AGENTS.md and Why Should You Care?", "Agents.md — A New Standard for Coding Agents", "Steering AI Agents in Monorepos with AGENTS.md") cover the AGENTS.md concept without naming these tools.
+- **Name-collision hazards noted for future runs:**
+  - "Multimodal Generative Engine Optimization" ambiguates heavily with the marketing concept "Generative Engine Optimization" (GEO / LLM-SEO). Use "MGEO" + "vision-language model" + "rank manipulation" disambiguators.
+  - "AGENTS.md" queries return crowded results on a generic spec used by 20K+ projects; always pair with `yzhao062` or `"Yue Zhao"` or one of the 21-rule distinctive phrases.
+  - "Cat-DPO" has no known name-collision yet (unique enough).
+- **Upcoming opportunities:**
+  - Expected 1-2 week window for MarkTechPost / Synced / AI newsletters to pick up Auditable Agents given subject fit.
+  - ACL 2026 KnowFM workshop proceedings go live closer to the August conference — post-workshop coverage window opens then.
+  - Chinese AI press (机器之心, BAAI Community, Zhihu) historically covers AI-auditing and VLM-attack topics thoroughly; re-sweep in ~3-4 weeks.
+  - Watch arxiv.org/abs/2604.17299 listing pages (alphaXiv, Moonlight, aimodels.fyi, Emergent Mind) for Cat-DPO — these aggregators index within days.
+
+**New total: 187 items (unchanged from Apr 16; no new verified coverage this pass).**
+
+**Apr 22 full-range parallel audit (5 agents, all dimensions across 120+ items):**
+
+Dispatched 5 parallel research agents covering (A) tools+workshop delta since Apr 16, (B) Dim 8 PDF deep search with bypass of the 10 MB WebFetch cap, (C) Dim 3 outlet sweep across tech/security/newsletter press for 30 days, (D) Dim 7 non-English coverage 30/90-day window, (E) deep-dive media check on the two newly-launched tools. All 5 agents ran Dim 1/3/4/5/7/8 queries within their scopes.
+
+**Verified new coverage: 0 items.** The previously recorded 187 items are unchanged.
+
+Notable confirmed negatives worth logging (searched at full-text level, no matches for any FORTIS target term or arXiv ID):
+- **Stanford AI Index 2026** (`hai.stanford.edu/assets/files/ai_index_report_2026.pdf`, 423 pp, 38.7 MB): 138 unique arXiv IDs in bibliography, none match. **Confirmed negative** — prevents re-search.
+- **Anthropic Claude Opus 4.7 System Card** (232 pp, 14.2 MB): no TrustLLM, PyOD, DoxBench, or related citations.
+- **Google DeepMind Gemini 3 Pro Model Card** (9 pp) and **Frontier Safety Framework** (26 pp): none.
+- **OpenAI GPT-5 System Card** (60 pp) and **GPT-5.1-Codex-Max System Card** (27 pp): none.
+- **OWASP GenAI Q2 2026 Solutions Landscape** (Agentic + LLM/GenAI Apps + AI Red Teaming, ~48 pp total): none.
+- **NIST AI 800-3** (Feb 2026, 64 pp) and **NIST AI 800-2 Initial Public Draft** (39 pp): none.
+
+Deferred D8 candidates:
+- ~~**Fast Company "AI trust benchmark 2026"**~~ — mirror at fastcompany.co.za retrieved; no target terms. Cleared.
+- **eWeek "Stanford AI Index 2026: Trust Gap Hits Critical Levels"** — 403 on fetch; three adjacent AI-Index coverage articles (IEEE Spectrum, ArtificialIntelligence-News, The-Decoder) fetched cleanly and all returned NONE. Deferring eWeek to next pass.
+- **FLI AI Safety Index Spring 2026** — not released (current editions are Summer 2025 and Winter 2025). Re-check after next FLI release.
+- **NIST AI RMF Profile on Trustworthy AI in Critical Infrastructure** (announced Apr 7) — concept note only; no PDF URL resolved. Check in 2-4 weeks.
+
+Dim 3 outlet sweep (30-day window, 2026-03-22 to 2026-04-21):
+- Zero verified hits across venturebeat, technologyreview, spectrum.ieee.org, infoq, thenewstack, techcrunch, wired, arstechnica, theverge, darkreading, thehackernews, securityweek, bleepingcomputer, csoonline, therecord.media, deeplearning.ai, marktechpost, syncedreview, thegradient, importai.net, kdnuggets, towardsdatascience, analyticsvidhya, dev.to, aiacceleratorinstitute, aiproductivity, sitepoint.
+- Topic-only matches (not coverage): MarkTechPost "Enterprise AI Governance" (Mar 15 — uses "auditable agent execution" as generic concept), Stack Overflow Blog "Coding guidelines for AI agents" (Mar 26 — parallels agent-style concept but does not name it), DEV.to AI weekly roundups, Medium agentic-coding post.
+
+Dim 7 non-English (30/90-day window):
+- Zero verified hits in Chinese (jiqizhixin, BAAI, Zhihu, CSDN, Sohu, Tencent News, Sina, 36Kr, InfoQ.cn, dongaigc, thepaper.cn), Japanese (Qiita, Zenn), Korean (Tistory, Velog), or European (heise.de, lemondeinformatique.fr, eluniversal.com).
+- Chinese LLM-Safety digest posts on Zhihu for Jan-Mar 2026 cover TrustJudge (PKU/THU) and TrustBench, not Yue Zhao's TrustLLM — name collision, topic-only.
+- No 机器之心 syndication chain triggered yet for any 2026 item.
+
+Name-collision hazards logged (add to disambiguation list):
+- **TrustLLM**: European `trustllm.eu` project; smart-contract auditor "TrustLLM" at arXiv:2403.16073 (different from arXiv:2401.05561); Zhihu's "TrustJudge"/"TrustBench" posts are unrelated Chinese projects.
+- **Aegis**: extremely crowded — Red Hat `aegis-ai`, AgentLayer Aegis (smart-contract), `automorphic-ai/aegis`, `antropos17/Aegis`, three unrelated 2026 arXiv papers titled AEGIS. FORTIS Aegis requires "pre-execution firewall" + `Justin0504` or paper authors.
+- **MGEO**: collides with marketing "Generative Engine Optimization / GEO" (LLM-SEO); require "vision-language" or "rank manipulation" disambiguators.
+- **FORTIS**: video-game company "Fortis" (Las Vegas Sands / Steve Chiang) dominates VentureBeat index.
+- **Yue Zhao**: many homonyms (Salesforce Ventures principal, Yixue Zhao at USC ICT). Pair with USC, PyOD, FORTIS lab, or arXiv ID.
+- **agent-style**: ambiguates with style-guide articles that discuss "agent style". Disambiguate with `yzhao062` or "21 writing rules" or "Claude Code Codex".
+
+New tool launches (agent-style, anywhere-agents) — ecosystem signals only, no third-party coverage:
+- **agent-style**: GitHub 214 stars (up ~36% since 2026-04-21), 8 forks; PyPI 725 weekly downloads (v0.3.1). No Show HN thread, no DEV writeup, no podcast, no aggregator listing. Explicitly not listed in VoltAgent/awesome-agent-skills (1100+ entries) or awesomeclaude.ai/awesomeskills.dev.
+- **anywhere-agents**: GitHub 124 stars, 12 forks; PyPI 1,338 weekly downloads (v0.2.0 Apache-2.0); npm package exists. No third-party coverage found anywhere. HN Algolia API confirms no submission exists.
+- Both are still in the first-party-signal phase. Star and download growth is healthy; external editorial coverage has not yet triggered.
+
+New PDF candidates added to query bank for next audit:
+1. **NIST AI 800-3** (`nvlpubs.nist.gov/nistpubs/ai/NIST.AI.800-3.pdf`) — NIST's first benchmark-evaluation statistical framework; track for updates.
+2. **NIST AI 800-2 IPD** (`nvlpubs.nist.gov/nistpubs/ai/NIST.AI.800-2.ipd.pdf`) — automated benchmark best practices; track finalized version.
+3. **OWASP GenAI Q2 2026 landscape trio** (IDs 53437 / 53440 / 53629 at `genai.owasp.org/download/<id>/`).
+4. **McKinsey "State of AI trust in 2026: Shifting to the agentic era"** — retry as PDF export.
+5. **Stanford AI Index 2026 public dataset** (CSV bibliography extraction complements PDF grep).
+6. **Gemini 3.1 Pro Model Card** (`deepmind.google/models/model-cards/gemini-3-1-pro/`).
+7. **International AI Safety Report — Extended Summary for Policymakers** (separate PDF from full report).
+8. **CETaS / Alan Turing Institute Intl AI Safety Report page** (cetas.turing.ac.uk).
+
+**Running total: 187 verified items (unchanged from Apr 16).** Next scheduled pass: 2-4 weeks. Watch arXiv aggregators (alphaXiv, Moonlight, aimodels.fyi, Emergent Mind) for Cat-DPO listings within days; expect 1-2 week window for MarkTechPost / Synced pickup on Auditable Agents given subject fit.
