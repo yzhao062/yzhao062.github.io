@@ -8,7 +8,7 @@
     "docs_url": "https://pyod.readthedocs.io",
     "paper_url": "https://arxiv.org/abs/2412.12154",
     "demo_url": "",
-    "stars": 9812,
+    "stars": 9813,
     "tags": [
       "Anomaly Detection",
       "Outlier Detection",
@@ -119,7 +119,7 @@
     "docs_url": "",
     "paper_url": "",
     "demo_url": "",
-    "stars": 9260,
+    "stars": 9261,
     "tags": [
       "Awesome List",
       "Anomaly Detection",
@@ -210,7 +210,7 @@
     "docs_url": "https://tdcommons.ai",
     "paper_url": "https://proceedings.neurips.cc/paper/2021/hash/6a8d3b0f5987e0f6d3d2f5f65f02e3cc-Abstract.html",
     "demo_url": "",
-    "stars": 1234,
+    "stars": 1235,
     "tags": [
       "Therapeutics",
       "Benchmark",
@@ -265,7 +265,7 @@
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/agent-audit.html",
     "paper_url": "https://arxiv.org/abs/2603.22853",
     "demo_url": "https://pypi.org/project/agent-audit/",
-    "stars": 156,
+    "stars": 157,
     "tags": [
       "AI Agent Security",
       "Security Audit",
@@ -321,7 +321,7 @@
     "docs_url": "https://anywhere-agents.readthedocs.io",
     "paper_url": "",
     "demo_url": "",
-    "stars": 124,
+    "stars": 127,
     "tags": [
       "Claude Code",
       "Codex",
@@ -330,7 +330,7 @@
       "Configuration",
       "MCP"
     ],
-    "last_updated_at": "2026-04-21T04:19:08Z"
+    "last_updated_at": "2026-04-22T05:49:00Z"
   },
   {
     "name": "agent-style",
@@ -341,7 +341,7 @@
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/agent-style.html",
     "paper_url": "",
     "demo_url": "https://pypi.org/project/agent-style/",
-    "stars": 213,
+    "stars": 229,
     "tags": [
       "AI Agents",
       "Agent Configuration",
@@ -350,6 +350,6 @@
       "Claude Code",
       "Codex"
     ],
-    "last_updated_at": "2026-04-21T18:40:40Z"
+    "last_updated_at": "2026-04-22T05:59:50Z"
   }
 ]
