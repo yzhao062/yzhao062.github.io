@@ -112,13 +112,13 @@
     "email": "ayyu@usc.edu"
   },
   {
-    "group": "current",
+    "group": "past",
     "name": "Ziyi Wang",
     "profile_url": "https://www.linkedin.com/in/ziyi-zoe-wang-488122292/",
     "image": "images/others/Ziyiwang.webp",
     "alt": "Ziyi Wang",
     "research": "Generative AI, Human-centered AI",
-    "status_text": "Master Student",
+    "status_text": "Master Student → Now CS Ph.D. Student at TAMU (Fall 2026)",
     "email": "zoewang@umd.edu",
     "publications": [
       "Multimodal Generative Engine Optimization: Exploiting Cross-Modal Knowledge Grounding in VLM-Based Ranking, ACL KnowFM Workshop 2026",
