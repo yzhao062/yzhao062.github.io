@@ -34,3 +34,6 @@ jobs:
 
       - name: Run post_to_x contract checks
         run: python scripts/check_post_to_x_contract.py
+
+      - name: Run post_to_linkedin contract checks
+        run: python scripts/check_post_to_linkedin_contract.py
