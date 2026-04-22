@@ -64,6 +64,26 @@ Aegis "AI agent firewall" open source tool call security {YEAR}
 Aegis AI agent security "Justin0504" "Aojie Yuan" blog post news
 ```
 
+### anywhere-agents
+
+```
+anywhere-agents "portable AI agent config" Claude Code Codex {YEAR}
+anywhere-agents "AGENTS.md" "PreToolUse guard" destructive git block news blog
+"anywhere-agents" "Yue Zhao" writing routing skills agent config post
+site:pypi.org anywhere-agents OR "Yue Zhao"
+site:readthedocs.io "anywhere-agents" documentation adoption
+```
+
+### agent-style
+
+```
+agent-style "AI writing rules" Claude Code Codex Copilot AGENTS.md {YEAR}
+"agent-style" "Yue Zhao" style rules LLM prose generation news blog
+agent-style PyPI "drop-in rules package" LLM writing guide tutorial
+site:pypi.org/project/agent-style downloads adoption
+"AGENTS.md" style-review "agent-style" skill invocation {YEAR}
+```
+
 ### Other tools (run selectively — include any tool with 500+ stars or known media hooks)
 
 ```
@@ -414,6 +434,8 @@ typhoon forecasting AI LLM weather {YEAR}                                       
 "AI auditing" "agent security" OWASP agentic top 10 USC research cited {YEAR}       → agent-audit, Aegis
 "jailbreak detection" vision language model adaptive memory                         → JailDAM
 "prompt injection defense" shortcut heuristic surface pattern                       → Defenses Against Prompt Attacks
+"AI agent config" portable skills AGENTS.md Claude Code Codex {YEAR}                → anywhere-agents
+"AI writing style" LLM prose rules AGENTS.md style-review {YEAR}                    → agent-style
 ```
 
 ## § Dimension 5: Smart Paper Keywords
