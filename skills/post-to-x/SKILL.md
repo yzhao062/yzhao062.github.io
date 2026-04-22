@@ -43,6 +43,8 @@ If Gate 2 fails, stop and report **before posting**. Drafting and previewing may
 3. Preview dry-run   →  python scripts/post_to_x.py --dry-run --draft <path>
 4. Iterate           →  show preview, accept user edits, re-preview
 5. Post              →  python scripts/post_to_x.py --yes --draft <path>
+                        Attach images with --media <path> (repeatable, up to 4).
+                        In thread mode, media attaches to the first tweet only.
 6. Report URL        →  return https://x.com/i/web/status/<id>
 ```
 

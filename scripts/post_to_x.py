@@ -221,18 +221,29 @@ def _remediation_for(exc: BaseException | None) -> str:
     return ""
 
 
-def post_single(client: tweepy.Client, text: str) -> str:
-    resp = client.create_tweet(text=text)
+def post_single(
+    client: tweepy.Client, text: str, media_ids: list[str] | None = None
+) -> str:
+    kwargs: dict[str, object] = {"text": text}
+    if media_ids:
+        kwargs["media_ids"] = media_ids
+    resp = client.create_tweet(**kwargs)
     return resp.data["id"]
 
 
-def post_thread(client: tweepy.Client, parts: list[str]) -> list[str]:
+def post_thread(
+    client: tweepy.Client,
+    parts: list[str],
+    media_ids: list[str] | None = None,
+) -> list[str]:
     ids: list[str] = []
     reply_to: str | None = None
     for i, part in enumerate(parts, 1):
         kwargs: dict[str, object] = {"text": part}
         if reply_to is not None:
             kwargs["in_reply_to_tweet_id"] = reply_to
+        if i == 1 and media_ids:
+            kwargs["media_ids"] = media_ids
         try:
             resp = client.create_tweet(**kwargs)
         except tweepy.TweepyException as e:
@@ -241,6 +252,28 @@ def post_thread(client: tweepy.Client, parts: list[str]) -> list[str]:
             ) from e
         ids.append(resp.data["id"])
         reply_to = ids[-1]
+    return ids
+
+
+def upload_media(creds: dict[str, str], paths: list[Path]) -> list[str]:
+    """Upload media files via v1.1 API and return media_id strings.
+
+    v2 create_tweet accepts media_ids but v2 has no upload endpoint yet,
+    so we must authenticate v1.1 alongside to call media_upload().
+    """
+    if not paths:
+        return []
+    auth = tweepy.OAuth1UserHandler(
+        creds["X_API_KEY"],
+        creds["X_API_KEY_SECRET"],
+        creds["X_ACCESS_TOKEN"],
+        creds["X_ACCESS_TOKEN_SECRET"],
+    )
+    api_v1 = tweepy.API(auth)
+    ids: list[str] = []
+    for path in paths:
+        media = api_v1.media_upload(filename=str(path))
+        ids.append(media.media_id_string)
     return ids
 
 
@@ -272,6 +305,16 @@ def parse_args() -> argparse.Namespace:
     )
     ap.add_argument("--dry-run", action="store_true", help="Preview only, do not post")
     ap.add_argument("--yes", action="store_true", help="Skip confirmation prompt")
+    ap.add_argument(
+        "--media",
+        type=Path,
+        action="append",
+        default=[],
+        help=(
+            "Attach image/video (repeatable; up to 4 images per post). "
+            "In thread mode, media attaches to the first tweet only."
+        ),
+    )
     return ap.parse_args()
 
 
@@ -297,7 +340,20 @@ def main() -> int:
                 f"Add --thread to split, or shorten."
             )
 
+    media_paths: list[Path] = list(args.media)
+    if len(media_paths) > 4:
+        sys.exit(f"--media: {len(media_paths)} files given; X allows at most 4 per post.")
+    for path in media_paths:
+        if not path.exists():
+            sys.exit(f"Media file not found: {path}")
+
     preview(posts)
+    if media_paths:
+        target = "first tweet" if len(posts) > 1 else "post"
+        print(f"Media attachments ({len(media_paths)}, attached to {target}):")
+        for path in media_paths:
+            size_kb = path.stat().st_size / 1024
+            print(f"  - {path} ({size_kb:,.1f} KB)")
 
     has_todo = any(_TODO_MARKER in p for p in posts)
     if has_todo and not args.dry_run:
@@ -321,13 +377,14 @@ def main() -> int:
 
     creds = load_credentials()
     client = build_client(creds)
+    media_ids = upload_media(creds, media_paths) if media_paths else []
 
     try:
         if len(posts) == 1:
-            tid = post_single(client, posts[0])
+            tid = post_single(client, posts[0], media_ids or None)
             print(f"Posted: https://x.com/i/web/status/{tid}")
         else:
-            ids = post_thread(client, posts)
+            ids = post_thread(client, posts, media_ids or None)
             print(f"Thread posted ({len(ids)} tweets).")
             print(f"First:  https://x.com/i/web/status/{ids[0]}")
             print(f"Last:   https://x.com/i/web/status/{ids[-1]}")
