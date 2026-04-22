@@ -4,26 +4,26 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="author" content="Yue Zhao">
-  <meta name="description" content="Auditable Agents defines five dimensions of auditability for LLM agent systems and identifies three mechanism classes for making agent behavior reconstructable, checkable, and attributable.">
+  <meta name="description" content="Auditable Agents, accepted at the ACL 2026 KnowFM workshop, defines five auditability dimensions for accountable LLM agent systems.">
   <meta name="keywords" content="Auditable Agents, AI Auditing, Agent Auditability, Agent Accountability, AI Safety, AI Security, LLM Agents, Execution Tracing, Policy Checking, Runtime Guardrails, Auditability Card, agent-audit, Aegis, Yue Zhao, USC, FORTIS Lab">
   <title>Auditable Agents | A Framework for Accountable AI Agent Systems</title>
   <link rel="canonical" href="https://viterbi-web.usc.edu/~yzhao010/auditable-agents.html">
   <link rel="icon" type="image/x-icon" href="images/logo2.ico">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Auditable Agents | A Framework for Accountable AI Agent Systems">
-  <meta property="og:description" content="Five dimensions of auditability for LLM agent systems. No agent system can be accountable without auditability.">
+  <meta property="og:description" content="Five dimensions of auditability for LLM agent systems. Accepted at the ACL 2026 KnowFM workshop.">
   <meta property="og:url" content="https://viterbi-web.usc.edu/~yzhao010/auditable-agents.html">
   <meta property="og:image" content="https://viterbi-web.usc.edu/~yzhao010/images/auditable-agents-overview.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Auditable Agents | A Framework for Accountable AI Agent Systems">
-  <meta name="twitter:description" content="Five dimensions of auditability for LLM agent systems. No agent system can be accountable without auditability.">
+  <meta name="twitter:description" content="Five dimensions of auditability for LLM agent systems. Accepted at the ACL 2026 KnowFM workshop.">
   <meta name="twitter:image" content="https://viterbi-web.usc.edu/~yzhao010/images/auditable-agents-overview.png">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "ScholarlyArticle",
     "name": "Auditable Agents",
-    "description": "A position paper defining five dimensions of auditability for LLM agent systems and three mechanism classes for accountable deployment.",
+    "description": "A position paper defining five dimensions of auditability for LLM agent systems and three mechanism classes for accountable deployment. Accepted at the ACL 2026 Workshop on Towards Knowledgeable Foundation Models (KnowFM).",
     "url": "https://viterbi-web.usc.edu/~yzhao010/auditable-agents.html",
     "author": [
       {"@type": "Person", "name": "Yi Nian"},
@@ -33,7 +33,8 @@
       {"@type": "Person", "name": "Yue Zhao"}
     ],
     "datePublished": "2026-04-07",
-    "publisher": {"@type": "Organization", "name": "arXiv"}
+    "publisher": {"@type": "Organization", "name": "Association for Computational Linguistics"},
+    "releasedEvent": {"@type": "PublicationEvent", "name": "ACL 2026 Workshop on Towards Knowledgeable Foundation Models (KnowFM)"}
   }
   </script>
   <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
@@ -57,6 +58,7 @@
       <div class="col-md-9 col-12 content-spacing">
         <h1 style="color:#990000;">Auditable Agents</h1>
         <p style="font-size:1.1rem; font-weight:700; color:#7a2a2a; margin-top:-4px;">A framework for accountable AI agent systems.</p>
+        <p style="font-size:0.95rem; color:#7a2a2a; margin-top:-6px;"><i class="fas fa-award" aria-hidden="true"></i> Accepted at the <b>ACL 2026 Workshop on Towards Knowledgeable Foundation Models (KnowFM)</b>.</p>
 
         <p>
           LLM agents call tools, query databases, delegate tasks, and trigger external side effects.
@@ -64,10 +66,11 @@
           actions can be prevented; it is whether those actions remain answerable after deployment.
         </p>
         <p>
-          <strong>Auditable Agents</strong> is a position paper that defines what auditability means
-          for agent systems. It introduces five jointly necessary dimensions, identifies three mechanism
-          classes operating at successive temporal points, and provides layered empirical evidence that
-          the auditability gap is real, closable, and practically addressable.
+          <strong>Auditable Agents</strong> is a position paper accepted at the ACL 2026 KnowFM workshop
+          that defines what auditability means for agent systems. It introduces five jointly necessary
+          dimensions, identifies three mechanism classes operating at successive temporal points, and
+          provides layered empirical evidence that the auditability gap is real, closable, and practically
+          addressable.
         </p>
         <p>
           This work spans our <strong>AI Auditing &amp; Assurance</strong> direction (the framework

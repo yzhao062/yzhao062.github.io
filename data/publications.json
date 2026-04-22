@@ -50,8 +50,8 @@
     {
         "id": "conference-coact-co-active-preference-learning-with-human-ai-synergy",
         "section": "conference",
-        "title": "CoAct: Co-Active Preference Learning with Human-AI Synergy",
-        "paper_url": "https://openreview.net/forum?id=C7vPSoKofe",
+        "title": "CoAct: Co-Active LLM Preference Learning with Human-AI Synergy",
+        "paper_url": "https://arxiv.org/abs/2604.17501",
         "authors": "Ruiyao Xu, Mihir Parmar, Tiankai Yang, Zhengyu Hu, Yue Zhao, Kaize Ding.",
         "venue": "ACL, 2026",
         "year": 2026,
@@ -1137,13 +1137,26 @@
         "abstract": "PyOD is an open-source Python toolbox for performing scalable outlier detection on multivariate data. Uniquely, it provides access to a wide range of outlier detection algorithms, including established outlier ensembles and more recent neural network-based approaches, under a single, well-documented API designed for use by both practitioners and researchers."
     },
     {
-        "id": "preprint-auditable-agents",
+        "id": "preprint-cat-dpo",
         "section": "preprint",
+        "title": "Cat-DPO: Category-Adaptive Safety Alignment",
+        "paper_url": "https://arxiv.org/abs/2604.17299",
+        "authors": "Tiankai Yang, Yi Nian, Xinyuan Li, Ruiyao Xu, Kaize Ding, Yue Zhao",
+        "venue": "arXiv preprint",
+        "year": 2026,
+        "links": [],
+        "abstract": "Aligning large language models with human preferences must balance two competing goals: responding helpfully to legitimate requests and reliably refusing harmful ones. Most preference-based safety alignment methods collapse safety into a single scalar that is applied uniformly to every preference pair. The result is a model that looks safe on average but stays relatively unsafe on a minority of harm categories. We cast safety alignment as a per-category constrained optimization problem and derive Cat-DPO, a direct-preference-optimization algorithm with a separate adaptive safety margin for each harm category. The margin tightens when the model still produces unsafe responses on a category and relaxes once the model catches up, so the training signal tracks each category's current difficulty rather than averaging under one global rate. Across two LLM backbones and six preference-learning baselines, Cat-DPO improves aggregate helpfulness and harmlessness and compresses per-category safety variance and the best-to-worst gap, offering a drop-in per-category refinement of direct preference safety alignment."
+    },
+    {
+        "id": "conference-auditable-agents-knowfm",
+        "section": "workshop",
         "title": "Auditable Agents",
         "paper_url": "https://arxiv.org/abs/2604.05485",
         "authors": "Yi Nian, Aojie Yuan, Haiyue Zhang, Jiate Li, Yue Zhao",
-        "venue": "arXiv preprint",
+        "venue": "ACL Workshop on Towards Knowledgeable Foundation Models (KnowFM), 2026",
         "year": 2026,
+        "sort_date": "2026-08-01",
+        "sort_priority": 0,
         "links": [],
         "abstract": "LLM agents call tools, query databases, delegate tasks, and trigger external side effects. Once an agent system can act in the world, the question is no longer only whether harmful actions can be prevented -- it is whether those actions remain answerable after deployment. We distinguish accountability (the ability to determine compliance and assign responsibility), auditability (the system property that makes accountability possible), and auditing (the process of reconstructing behavior from trustworthy evidence). Our claim is direct: no agent system can be accountable without auditability. To make this operational, we define five dimensions of agent auditability, i.e., action recoverability, lifecycle coverage, policy checkability, responsibility attribution, and evidence integrity, and identify three mechanism classes (detect, enforce, recover) whose temporal information-and-intervention constraints explain why, in practice, no single approach suffices. We support the position with layered evidence rather than a single benchmark: lower-bound ecosystem measurements suggest that even basic security prerequisites for auditability are widely unmet (617 security findings across six prominent open-source projects); runtime feasibility results show that pre-execution mediation with tamper-evident records adds only 8.3 ms median overhead; and controlled recovery experiments show that responsibility-relevant information can be partially recovered even when conventional logs are missing. We propose an Auditability Card for agent systems and identify six open research problems organized by mechanism class."
     },
@@ -1230,13 +1243,15 @@
         "abstract": "Recent advances in Large Language Models (LLMs) have incentivized the development of LLM-as-a-judge, an application of LLMs where they are used as judges to decide the quality of a certain piece of text given a certain context. However, previous studies have demonstrated that LLM-as-a-judge can be biased towards different aspects of the judged texts, which often do not align with human preference. One of the identified biases is language bias, which indicates that the decision of LLM-as-a-judge can differ based on the language of the judged texts. In this paper, we study two types of language bias in pairwise LLM-as-a-judge: (1) performance disparity between languages when the judge is prompted to compare options from the same language, and (2) bias towards options written in major languages when the judge is prompted to compare options of two different languages. We find that for same-language judging, there exist significant performance disparities across language families, with European languages consistently outperforming African languages, and this bias is more pronounced in culturally-related subjects. For inter-language judging, we observe that most models favor English answers, and that this preference is influenced more by answer language than question language. Finally, we investigate whether language bias is in fact caused by low-perplexity bias, a previously identified bias of LLM-as-a-judge, and we find that while perplexity is slightly correlated with language bias, language bias cannot be fully explained by perplexity only."
     },
     {
-        "id": "preprint-multimodal-geo",
-        "section": "preprint",
-        "title": "Multimodal Generative Engine Optimization: Rank Manipulation for Vision-Language Model Rankers",
+        "id": "conference-mgeo-knowfm",
+        "section": "workshop",
+        "title": "Multimodal Generative Engine Optimization: Exploiting Cross-Modal Knowledge Grounding in VLM-Based Ranking",
         "paper_url": "https://arxiv.org/abs/2601.12263",
         "authors": "Yixuan Du, Chenxiao Yu, Haoyan Xu, Ziyi Wang, Yue Zhao, Xiyang Hu",
-        "venue": "arXiv preprint",
+        "venue": "ACL Workshop on Towards Knowledgeable Foundation Models (KnowFM), 2026",
         "year": 2026,
+        "sort_date": "2026-08-01",
+        "sort_priority": 0,
         "links": [],
         "abstract": "Vision-Language Models (VLMs) are rapidly replacing unimodal encoders in modern retrieval and recommendation systems. While their capabilities are well-documented, their robustness against adversarial manipulation in competitive ranking scenarios remains largely unexplored. In this paper, we uncover a critical vulnerability in VLM-based product search: multimodal ranking attacks. We present Multimodal Generative Engine Optimization (MGEO), a novel adversarial framework that enables a malicious actor to unfairly promote a target product by jointly optimizing imperceptible image perturbations and fluent textual suffixes. Unlike existing attacks that treat modalities in isolation, MGEO employs an alternating gradient-based optimization strategy to exploit the deep cross-modal coupling within the VLM. Extensive experiments on real-world datasets using state-of-the-art models demonstrate that our coordinated attack significantly outperforms text-only and image-only baselines. These findings reveal that multimodal synergy, typically a strength of VLMs, can be weaponized to compromise the integrity of search rankings without triggering conventional content filters."
     },

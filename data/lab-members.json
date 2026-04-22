@@ -121,6 +121,7 @@
     "status_text": "Master Student",
     "email": "zoewang@umd.edu",
     "publications": [
+      "Multimodal Generative Engine Optimization: Exploiting Cross-Modal Knowledge Grounding in VLM-Based Ranking, ACL KnowFM Workshop 2026",
       "Mitigating Hallucinations in Large Language Models via Causal Reasoning, AAAI 2026",
       "Few-Shot Graph Out-of-Distribution Detection with LLMs, ECML PKDD 2025",
       "JailDAM: Jailbreak Detection with Adaptive Memory for Vision-Language Model, COLM 2025"
@@ -134,7 +135,10 @@
     "alt": "Haiyue Zhang",
     "research": "LLM & Agent Security / GEO",
     "status_text": "Master Student",
-    "email": "haiyuez@usc.edu"
+    "email": "haiyuez@usc.edu",
+    "publications": [
+      "Auditable Agents, ACL KnowFM Workshop 2026"
+    ]
   },
   {
     "group": "past",
