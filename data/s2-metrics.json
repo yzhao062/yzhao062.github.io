@@ -1,0 +1,3697 @@
+{
+  "generated_at": "2026-04-24T06:34:37Z",
+  "source": "Semantic Scholar Graph API",
+  "input_publications": 105,
+  "matched": 105,
+  "unmatched": 0,
+  "low_confidence": 0,
+  "totals": {
+    "citationCount": 7390,
+    "influentialCitationCount": 535
+  },
+  "top_by_citations": [
+    {
+      "id": "journal-diffusion-models-a-comprehensive-survey-of-methods-and-applications",
+      "title": "Diffusion Models: A Comprehensive Survey of Methods and Applications",
+      "citationCount": 2145,
+      "influentialCitationCount": 70,
+      "s2_url": "https://www.semanticscholar.org/paper/e342165a614588878ad0f4bc9bacf3905df34d08"
+    },
+    {
+      "id": "journal-pyod-a-python-toolbox-for-scalable-outlier-detection",
+      "title": "PyOD: A Python Toolbox for Scalable Outlier Detection",
+      "citationCount": 871,
+      "influentialCitationCount": 59,
+      "s2_url": "https://www.semanticscholar.org/paper/5239f449210b089b75ab335fc74720dbf2e02b58"
+    },
+    {
+      "id": "journal-ecod-unsupervised-outlier-detection-using-empirical-cumulative-distribution-functions",
+      "title": "ECOD: Unsupervised Outlier Detection Using Empirical Cumulative Distribution Functions",
+      "citationCount": 449,
+      "influentialCitationCount": 41,
+      "s2_url": "https://www.semanticscholar.org/paper/5a212bb4307008f27018edc0b8d873f4e9657d17"
+    },
+    {
+      "id": "conference-adbench-anomaly-detection-benchmark",
+      "title": "ADBench: Anomaly Detection Benchmark",
+      "citationCount": 423,
+      "influentialCitationCount": 63,
+      "s2_url": "https://www.semanticscholar.org/paper/0bff4af924788d9779041513b6894385eac51ffd"
+    },
+    {
+      "id": "conference-therapeutics-data-commons-machine-learning-datasets-and-tasks-for-drug-discovery-and-development",
+      "title": "Therapeutics Data Commons: Machine Learning Datasets and Tasks for Drug Discovery and Development",
+      "citationCount": 413,
+      "influentialCitationCount": 54,
+      "s2_url": "https://www.semanticscholar.org/paper/54ca116f1e9a45768a3a2c47a4608ff34adefa0c"
+    },
+    {
+      "id": "conference-copod",
+      "title": "COPOD: Copula-Based Outlier Detection",
+      "citationCount": 401,
+      "influentialCitationCount": 38,
+      "s2_url": "https://www.semanticscholar.org/paper/ba2061d70b2b2ef881bced2fd5898e2bd4ee7a70"
+    },
+    {
+      "id": "conference-trustllm-trustworthiness-in-large-language-models",
+      "title": "TrustLLM: Trustworthiness in Large Language Models",
+      "citationCount": 321,
+      "influentialCitationCount": 31,
+      "s2_url": "https://www.semanticscholar.org/paper/fb4dc0178e5d7347b1615c48caf05347b6e5eb48"
+    },
+    {
+      "id": "conference-revisiting-time-series-outlier-detection-definitions-and-benchmarks",
+      "title": "Revisiting Time Series Outlier Detection: Definitions and Benchmarks",
+      "citationCount": 231,
+      "influentialCitationCount": 28,
+      "s2_url": "https://www.semanticscholar.org/paper/28c51370671c4b6acb8690fdedb2ea4afe85f854"
+    },
+    {
+      "id": "journal-artificial-intelligence-foundation-for-therapeutic-science",
+      "title": "Artificial Intelligence Foundation for Therapeutic Science",
+      "citationCount": 174,
+      "influentialCitationCount": 7,
+      "s2_url": "https://www.semanticscholar.org/paper/e017e0034fba16b37958b517064d9bf7ecac5f54"
+    },
+    {
+      "id": "conference-lscp",
+      "title": "LSCP: Locally Selective Combination in Parallel Outlier Ensembles",
+      "citationCount": 151,
+      "influentialCitationCount": 13,
+      "s2_url": "https://www.semanticscholar.org/paper/6d5e8e85ca8120bbd7983e6850a11aced1e27a7b"
+    },
+    {
+      "id": "conference-xgbod",
+      "title": "XGBOD: Improving Supervised Outlier Detection with Unsupervised Representation Learning",
+      "citationCount": 146,
+      "influentialCitationCount": 17,
+      "s2_url": "https://www.semanticscholar.org/paper/49785334abf54313682b940c25e7a52cdbe941e9"
+    },
+    {
+      "id": "conference-bond-benchmarking-unsupervised-outlier-node-detection-on-static-attributed-graphs",
+      "title": "BOND: Benchmarking Unsupervised Outlier Node Detection on Static Attributed Graphs",
+      "citationCount": 144,
+      "influentialCitationCount": 15,
+      "s2_url": "https://www.semanticscholar.org/paper/fea848dfcf44e67fe149bbcebcb52c92fba40f28"
+    },
+    {
+      "id": "conference-employee-turnover",
+      "title": "Employee Turnover Prediction with Machine Learning: A Reliable Approach",
+      "citationCount": 144,
+      "influentialCitationCount": 5,
+      "s2_url": "https://www.semanticscholar.org/paper/16a031e95e2848c9a8f70a995a1c202079464303"
+    },
+    {
+      "id": "conference-contrastive-attributed-network-ad",
+      "title": "Contrastive Attributed Network Anomaly Detection with Data Augmentation",
+      "citationCount": 125,
+      "influentialCitationCount": 13,
+      "s2_url": "https://www.semanticscholar.org/paper/f2c848f23189120ace52c0a9fb155f2c199bf613"
+    },
+    {
+      "id": "conference-automatic-unsupervised-outlier-model-selection",
+      "title": "Automatic Unsupervised Outlier Model Selection",
+      "citationCount": 94,
+      "influentialCitationCount": 21,
+      "s2_url": "https://www.semanticscholar.org/paper/f14c949c0f95792c0077ac63cf21a880b6b58a60"
+    }
+  ],
+  "unmatched_publications": [],
+  "low_confidence_matches": [],
+  "papers": [
+    {
+      "id": "conference-a-survey-on-llm-based-conversational-user-simulation",
+      "title": "A Survey on LLM-based Conversational User Simulation",
+      "venue": "EACL, 2026",
+      "year": 2026,
+      "matched_by": "title-search",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "9cff034a325d963f638b07fca403b5b6c2fa4af7",
+        "corpusId": 286864919,
+        "title": "A Survey on LLM-based Conversational User Simulation",
+        "url": "https://www.semanticscholar.org/paper/9cff034a325d963f638b07fca403b5b6c2fa4af7",
+        "venue": "Conference of the European Chapter of the Association for Computational Linguistics",
+        "year": 2026,
+        "publicationDate": null,
+        "citationCount": 0,
+        "influentialCitationCount": 0,
+        "referenceCount": 200,
+        "externalIds": {
+          "DBLP": "conf/eacl/NiWWKDXCLBMMAWLZZYKGTSW26",
+          "DOI": "10.18653/v1/2026.eacl-long.200",
+          "CorpusId": 286864919
+        },
+        "authors": [
+          "B. Ni",
+          "Yu Wang",
+          "Leyao Wang",
+          "B. Kveton",
+          "Franck Dernoncourt",
+          "Yungui Xia",
+          "Hongjie Chen",
+          "Reuben Luera"
+        ]
+      }
+    },
+    {
+      "id": "conference-can-multimodal-llms-perform-time-series-anomaly-detection",
+      "title": "Can Multimodal LLMs Perform Time Series Anomaly Detection?",
+      "venue": "WWW, 2026",
+      "year": 2026,
+      "matched_by": "identifier:ARXIV",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "fc6b3ce994c60f1b85738c28ef5bee4ef2ce3b3d",
+        "corpusId": 276580600,
+        "title": "Can Multimodal LLMs Perform Time Series Anomaly Detection?",
+        "url": "https://www.semanticscholar.org/paper/fc6b3ce994c60f1b85738c28ef5bee4ef2ce3b3d",
+        "venue": "Proceedings of the ACM Web Conference 2026",
+        "year": 2025,
+        "publicationDate": "2025-02-25",
+        "citationCount": 17,
+        "influentialCitationCount": 4,
+        "referenceCount": 87,
+        "externalIds": {
+          "ArXiv": "2502.17812",
+          "DBLP": "journals/corr/abs-2502-17812",
+          "DOI": "10.1145/3774904.3792376",
+          "CorpusId": 276580600
+        },
+        "authors": [
+          "Xiongxiao Xu",
+          "Haoran Wang",
+          "Yueqing Liang",
+          "Philip S. Yu",
+          "Yue Zhao",
+          "Kai Shu"
+        ]
+      }
+    },
+    {
+      "id": "conference-charts-are-not-images-on-the-challenges-of-scientific-chart-editing",
+      "title": "Charts Are Not Images: On the Challenges of Scientific Chart Editing",
+      "venue": "ICLR, 2026",
+      "year": 2026,
+      "matched_by": "identifier:ARXIV",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "3b8929a3ffb04dc678b4eb724875cac151639819",
+        "corpusId": 283449975,
+        "title": "Charts Are Not Images: On the Challenges of Scientific Chart Editing",
+        "url": "https://www.semanticscholar.org/paper/3b8929a3ffb04dc678b4eb724875cac151639819",
+        "venue": "arXiv.org",
+        "year": 2025,
+        "publicationDate": "2025-11-30",
+        "citationCount": 2,
+        "influentialCitationCount": 0,
+        "referenceCount": 80,
+        "externalIds": {
+          "DBLP": "journals/corr/abs-2512-00752",
+          "ArXiv": "2512.00752",
+          "DOI": "10.48550/arXiv.2512.00752",
+          "CorpusId": 283449975
+        },
+        "authors": [
+          "Li Li",
+          "Ryan A. Rossi",
+          "Sungchul Kim",
+          "Sunav Choudhary",
+          "Franck Dernoncourt",
+          "Puneet Mathur",
+          "Zhengzhong Tu",
+          "Yue Zhao"
+        ]
+      }
+    },
+    {
+      "id": "conference-coact-co-active-preference-learning-with-human-ai-synergy",
+      "title": "CoAct: Co-Active LLM Preference Learning with Human-AI Synergy",
+      "venue": "ACL, 2026",
+      "year": 2026,
+      "matched_by": "identifier:ARXIV",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "b29916ad4cdf354fa8c73aee9b428bac6d0b14d2",
+        "corpusId": 287634615,
+        "title": "CoAct: Co-Active LLM Preference Learning with Human-AI Synergy",
+        "url": "https://www.semanticscholar.org/paper/b29916ad4cdf354fa8c73aee9b428bac6d0b14d2",
+        "venue": "",
+        "year": 2026,
+        "publicationDate": "2026-04-19",
+        "citationCount": 0,
+        "influentialCitationCount": 0,
+        "referenceCount": 67,
+        "externalIds": {
+          "ArXiv": "2604.17501",
+          "CorpusId": 287634615
+        },
+        "authors": [
+          "Ruiyao Xu",
+          "Mihir Parmar",
+          "Tiankai Yang",
+          "Zhengyu Hu",
+          "Yue Zhao",
+          "Kaize Ding"
+        ]
+      }
+    },
+    {
+      "id": "conference-decalign-hierarchical-cross-modal-alignment-for-decoupled-multimodal-representation-learning",
+      "title": "DecAlign: Hierarchical Cross-Modal Alignment for Decoupled Multimodal Representation Learning",
+      "venue": "ICLR, 2026",
+      "year": 2026,
+      "matched_by": "identifier:ARXIV",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "8bcf57931ef79e35e711ef48795888dc7b4a9322",
+        "corpusId": 277066544,
+        "title": "DecAlign: Hierarchical Cross-Modal Alignment for Decoupled Multimodal Representation Learning",
+        "url": "https://www.semanticscholar.org/paper/8bcf57931ef79e35e711ef48795888dc7b4a9322",
+        "venue": "arXiv.org",
+        "year": 2025,
+        "publicationDate": "2025-03-14",
+        "citationCount": 16,
+        "influentialCitationCount": 0,
+        "referenceCount": 84,
+        "externalIds": {
+          "ArXiv": "2503.11892",
+          "DBLP": "journals/corr/abs-2503-11892",
+          "DOI": "10.48550/arXiv.2503.11892",
+          "CorpusId": 277066544
+        },
+        "authors": [
+          "Chengxuan Qian",
+          "Shuo Xing",
+          "Li Li",
+          "Yue Zhao",
+          "Zhengzhong Tu"
+        ]
+      }
+    },
+    {
+      "id": "conference-defenses-against-prompt-attacks-learn-surface-heuristics",
+      "title": "Defenses Against Prompt Attacks Learn Surface Heuristics",
+      "venue": "ACL, 2026",
+      "year": 2026,
+      "matched_by": "identifier:ARXIV",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "3c18ecc8a7656d459dc3a011fbe8ad3babeb7343",
+        "corpusId": 284647511,
+        "title": "Defenses Against Prompt Attacks Learn Surface Heuristics",
+        "url": "https://www.semanticscholar.org/paper/3c18ecc8a7656d459dc3a011fbe8ad3babeb7343",
+        "venue": "arXiv.org",
+        "year": 2026,
+        "publicationDate": "2026-01-12",
+        "citationCount": 2,
+        "influentialCitationCount": 0,
+        "referenceCount": 25,
+        "externalIds": {
+          "ArXiv": "2601.07185",
+          "DBLP": "journals/corr/abs-2601-07185",
+          "DOI": "10.48550/arXiv.2601.07185",
+          "CorpusId": 284647511
+        },
+        "authors": [
+          "Li Li",
+          "Chenxiao Yu",
+          "Zhiyu Ni",
+          "Hao Li",
+          "C. Peris",
+          "Chaowei Xiao",
+          "Yue Zhao"
+        ]
+      }
+    },
+    {
+      "id": "conference-doxing-via-the-lens-revealing-location-related-privacy-leakage-on-multi-modal-large-reasoning-models",
+      "title": "Doxing via the Lens: Revealing Location-related Privacy Leakage on Multi-modal Large Reasoning Models",
+      "venue": "ICLR, 2026",
+      "year": 2026,
+      "matched_by": "identifier:ARXIV",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "57a74c1927a8b174fdf11f1a684f6bb3204068bd",
+        "corpusId": 279260470,
+        "title": "Doxing via the Lens: Revealing Location-related Privacy Leakage on Multi-modal Large Reasoning Models",
+        "url": "https://www.semanticscholar.org/paper/57a74c1927a8b174fdf11f1a684f6bb3204068bd",
+        "venue": "",
+        "year": 2025,
+        "publicationDate": "2025-04-27",
+        "citationCount": 9,
+        "influentialCitationCount": 2,
+        "referenceCount": 76,
+        "externalIds": {
+          "ArXiv": "2504.19373",
+          "CorpusId": 279260470
+        },
+        "authors": [
+          "Weidi Luo",
+          "Tianyu Lu",
+          "Qiming Zhang",
+          "Xiaogeng Liu",
+          "Bin Hu",
+          "Yue Zhao",
+          "Jieyu Zhao",
+          "Song Gao"
+        ]
+      }
+    },
+    {
+      "id": "conference-mitigating-hallucinations-in-large-language-models-via-causal-reasoning",
+      "title": "Mitigating Hallucinations in Large Language Models via Causal Reasoning",
+      "venue": "AAAI, 2026",
+      "year": 2026,
+      "matched_by": "identifier:ARXIV",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "e972a2f80601098749d81f1c33ff4f99b01df332",
+        "corpusId": 280677463,
+        "title": "Mitigating Hallucinations in Large Language Models via Causal Reasoning",
+        "url": "https://www.semanticscholar.org/paper/e972a2f80601098749d81f1c33ff4f99b01df332",
+        "venue": "arXiv.org",
+        "year": 2025,
+        "publicationDate": "2025-08-17",
+        "citationCount": 7,
+        "influentialCitationCount": 0,
+        "referenceCount": 25,
+        "externalIds": {
+          "DBLP": "journals/corr/abs-2508-12495",
+          "ArXiv": "2508.12495",
+          "DOI": "10.48550/arXiv.2508.12495",
+          "CorpusId": 280677463
+        },
+        "authors": [
+          "Yuangang Li",
+          "Yiqing Shen",
+          "Yi Nian",
+          "Jiechao Gao",
+          "Ziyi Wang",
+          "Chenxiao Yu",
+          "Li Li",
+          "Jie Wang"
+        ]
+      }
+    },
+    {
+      "id": "conference-topology-matters-measuring-memory-leakage-in-multi-agent-llms",
+      "title": "Topology Matters: Measuring Memory Leakage in Multi-Agent LLMs",
+      "venue": "ACL (Findings), 2026",
+      "year": 2026,
+      "matched_by": "identifier:ARXIV",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "015fe40fd5cf1c2b7a069fbcf495c51ef52887c2",
+        "corpusId": 283557493,
+        "title": "Topology Matters: Measuring Memory Leakage in Multi-Agent LLMs",
+        "url": "https://www.semanticscholar.org/paper/015fe40fd5cf1c2b7a069fbcf495c51ef52887c2",
+        "venue": "arXiv.org",
+        "year": 2025,
+        "publicationDate": "2025-12-04",
+        "citationCount": 3,
+        "influentialCitationCount": 1,
+        "referenceCount": 16,
+        "externalIds": {
+          "ArXiv": "2512.04668",
+          "DBLP": "journals/corr/abs-2512-04668",
+          "DOI": "10.48550/arXiv.2512.04668",
+          "CorpusId": 283557493
+        },
+        "authors": [
+          "Jinbo Liu",
+          "Defu Cao",
+          "Yifei Wei",
+          "Tianyao Su",
+          "Yuan Liang",
+          "Yushun Dong",
+          "Yue Zhao",
+          "Xiyang Hu"
+        ]
+      }
+    },
+    {
+      "id": "conference-trustgen-a-platform-of-dynamic-benchmarking-on-the-trustworthiness-of-generative-foundation-models",
+      "title": "TrustGen: A Platform of Dynamic Benchmarking on the Trustworthiness of Generative Foundation Models",
+      "venue": "ICLR, 2026",
+      "year": 2026,
+      "matched_by": "identifier:ARXIV",
+      "title_match_score": 0.5714,
+      "s2": {
+        "paperId": "076b0fb092c0206ade61298c570b9915cdb30e84",
+        "corpusId": 276482740,
+        "title": "On the Trustworthiness of Generative Foundation Models: Guideline, Assessment, and Perspective",
+        "url": "https://www.semanticscholar.org/paper/076b0fb092c0206ade61298c570b9915cdb30e84",
+        "venue": "arXiv.org",
+        "year": 2025,
+        "publicationDate": "2025-02-20",
+        "citationCount": 48,
+        "influentialCitationCount": 1,
+        "referenceCount": 0,
+        "externalIds": {
+          "DBLP": "journals/corr/abs-2502-14296",
+          "ArXiv": "2502.14296",
+          "DOI": "10.48550/arXiv.2502.14296",
+          "CorpusId": 276482740
+        },
+        "authors": [
+          "Yue Huang",
+          "Chujie Gao",
+          "Siyuan Wu",
+          "Haoran Wang",
+          "Xiangqi Wang",
+          "Yujun Zhou",
+          "Yanbo Wang",
+          "Jiayi Ye"
+        ]
+      }
+    },
+    {
+      "id": "conference-a-personalized-conversational-benchmark-towards-simulating-personalized-conversations",
+      "title": "A Personalized Conversational Benchmark: Towards Simulating Personalized Conversations",
+      "venue": "NeurIPS Workshop on Multi-Turn Interactions in Large Language Models (MTI-LLM), 2025",
+      "year": 2025,
+      "matched_by": "identifier:ARXIV",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "0776603716e2661362829e5109742ccf3e79aaae",
+        "corpusId": 278768764,
+        "title": "A Personalized Conversational Benchmark: Towards Simulating Personalized Conversations",
+        "url": "https://www.semanticscholar.org/paper/0776603716e2661362829e5109742ccf3e79aaae",
+        "venue": "arXiv.org",
+        "year": 2025,
+        "publicationDate": "2025-05-20",
+        "citationCount": 13,
+        "influentialCitationCount": 0,
+        "referenceCount": 43,
+        "externalIds": {
+          "DBLP": "journals/corr/abs-2505-14106",
+          "ArXiv": "2505.14106",
+          "DOI": "10.48550/arXiv.2505.14106",
+          "CorpusId": 278768764
+        },
+        "authors": [
+          "Li Li",
+          "Peilin Cai",
+          "Ryan A. Rossi",
+          "Franck Dernoncourt",
+          "B. Kveton",
+          "Ju-Ying Wu",
+          "Tong Yu",
+          "Linxin Song"
+        ]
+      }
+    },
+    {
+      "id": "conference-a-survey-on-model-extraction-attacks-and-defenses-for-large-language-models",
+      "title": "A Survey on Model Extraction Attacks and Defenses for Large Language Models",
+      "venue": "KDD (Lecture-Style Tutorial Track), 2025",
+      "year": 2025,
+      "matched_by": "identifier:ARXIV",
+      "title_match_score": 0.6914,
+      "s2": {
+        "paperId": "7044d075fba8c188f716a25618d522c808a67a96",
+        "corpusId": 276575154,
+        "title": "A Survey of Model Extraction Attacks and Defenses in Distributed Computing Environments",
+        "url": "https://www.semanticscholar.org/paper/7044d075fba8c188f716a25618d522c808a67a96",
+        "venue": "arXiv.org",
+        "year": 2025,
+        "publicationDate": "2025-02-22",
+        "citationCount": 8,
+        "influentialCitationCount": 0,
+        "referenceCount": 60,
+        "externalIds": {
+          "DBLP": "journals/corr/abs-2502-16065",
+          "ArXiv": "2502.16065",
+          "DOI": "10.48550/arXiv.2502.16065",
+          "CorpusId": 276575154
+        },
+        "authors": [
+          "Kaixiang Zhao",
+          "Lincan Li",
+          "Kaize Ding",
+          "Neil Zhenqiang Gong",
+          "Yue Zhao",
+          "Yushun Dong"
+        ]
+      }
+    },
+    {
+      "id": "conference-ad-agent-a-multi-agent-framework-for-end-to-end-anomaly-detection",
+      "title": "AD-AGENT: A Multi-agent Framework for End-to-end Anomaly Detection",
+      "venue": "Findings of IJCNLP-AACL, 2025",
+      "year": 2025,
+      "matched_by": "identifier:ARXIV",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "99657f0d9c4977cc7824c13e40520787d1171c09",
+        "corpusId": 278741020,
+        "title": "AD-AGENT: A Multi-agent Framework for End-to-end Anomaly Detection",
+        "url": "https://www.semanticscholar.org/paper/99657f0d9c4977cc7824c13e40520787d1171c09",
+        "venue": "IJCNLP-AACL",
+        "year": 2025,
+        "publicationDate": "2025-05-19",
+        "citationCount": 4,
+        "influentialCitationCount": 1,
+        "referenceCount": 25,
+        "externalIds": {
+          "DBLP": "conf/ijcnlp/YangLSWQSCHZ25",
+          "ArXiv": "2505.12594",
+          "DOI": "10.48550/arXiv.2505.12594",
+          "CorpusId": 278741020
+        },
+        "authors": [
+          "Tiankai Yang",
+          "Junjun Liu",
+          "Wingchun Siu",
+          "Jiahang Wang",
+          "Zhuangzhuang Qian",
+          "Chanjuan Song",
+          "Cheng Cheng",
+          "Xiyang Hu"
+        ]
+      }
+    },
+    {
+      "id": "conference-ad-llm-benchmarking-large-language-models-for-anomaly-detection",
+      "title": "AD-LLM: Benchmarking Large Language Models for Anomaly Detection",
+      "venue": "ACL (Findings), 2025",
+      "year": 2025,
+      "matched_by": "identifier:ARXIV",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "6db25af3b87e1fa821d3fefc47185a7ff08739ca",
+        "corpusId": 274777563,
+        "title": "AD-LLM: Benchmarking Large Language Models for Anomaly Detection",
+        "url": "https://www.semanticscholar.org/paper/6db25af3b87e1fa821d3fefc47185a7ff08739ca",
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "year": 2024,
+        "publicationDate": "2024-12-15",
+        "citationCount": 32,
+        "influentialCitationCount": 2,
+        "referenceCount": 64,
+        "externalIds": {
+          "DBLP": "journals/corr/abs-2412-11142",
+          "ArXiv": "2412.11142",
+          "DOI": "10.48550/arXiv.2412.11142",
+          "CorpusId": 274777563
+        },
+        "authors": [
+          "Tiankai Yang",
+          "Yi Nian",
+          "Li Li",
+          "Ruiyao Xu",
+          "Yuangang Li",
+          "Jiaqi Li",
+          "Zhuo Xiao",
+          "Xiyang Hu"
+        ]
+      }
+    },
+    {
+      "id": "conference-dpu-dynamic-prototype-updating-for-multimodal-out-of-distribution-detection",
+      "title": "DPU: Dynamic Prototype Updating for Multimodal Out-of-Distribution Detection",
+      "venue": "CVPR, 2025",
+      "year": 2025,
+      "matched_by": "title-search",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "28582980cc55e3ed002fae2cf0e9b9b92714694b",
+        "corpusId": 273993220,
+        "title": "DPU: Dynamic Prototype Updating for Multimodal Out-of-Distribution Detection",
+        "url": "https://www.semanticscholar.org/paper/28582980cc55e3ed002fae2cf0e9b9b92714694b",
+        "venue": "arXiv.org",
+        "year": 2024,
+        "publicationDate": "2024-11-12",
+        "citationCount": 21,
+        "influentialCitationCount": 1,
+        "referenceCount": 0,
+        "externalIds": {
+          "DBLP": "journals/corr/abs-2411-08227",
+          "ArXiv": "2411.08227",
+          "DOI": "10.48550/arXiv.2411.08227",
+          "CorpusId": 273993220
+        },
+        "authors": [
+          "Li Li",
+          "Huixian Gong",
+          "Hao Dong",
+          "Tiankai Yang",
+          "Zhengzhong Tu",
+          "Yue Zhao"
+        ]
+      }
+    },
+    {
+      "id": "conference-drugagent-automating-ai-aided-drug-discovery-programming-through-llm-multi-agent-collaboration",
+      "title": "DrugAgent: Automating AI-aided Drug Discovery Programming through LLM Multi-Agent Collaboration",
+      "venue": "AAAI Workshop on Foundation Models for Biological Discoveries (FMs4Bio), 2025",
+      "year": 2025,
+      "matched_by": "identifier:ARXIV",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "e321349644c97f0c0d0147c09690e2485d2d61c4",
+        "corpusId": 274234223,
+        "title": "DrugAgent: Automating AI-aided Drug Discovery Programming through LLM Multi-Agent Collaboration",
+        "url": "https://www.semanticscholar.org/paper/e321349644c97f0c0d0147c09690e2485d2d61c4",
+        "venue": "arXiv.org",
+        "year": 2024,
+        "publicationDate": "2024-11-24",
+        "citationCount": 38,
+        "influentialCitationCount": 4,
+        "referenceCount": 66,
+        "externalIds": {
+          "DBLP": "journals/corr/abs-2411-15692",
+          "ArXiv": "2411.15692",
+          "DOI": "10.48550/arXiv.2411.15692",
+          "CorpusId": 274234223
+        },
+        "authors": [
+          "Sizhe Liu",
+          "Yizhou Lu",
+          "Siyu Chen",
+          "Xiyang Hu",
+          "Jieyu Zhao",
+          "Tianfan Fu",
+          "Yue Zhao"
+        ]
+      }
+    },
+    {
+      "id": "conference-dyflow-dynamic-workflow-framework-for-agentic-reasoning",
+      "title": "DyFlow: Dynamic Workflow Framework for Agentic Reasoning",
+      "venue": "NeurIPS, 2025",
+      "year": 2025,
+      "matched_by": "title-search",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "adcf542438d49fc056e2c78eec19ef99ca8adc45",
+        "corpusId": 281681609,
+        "title": "DyFlow: Dynamic Workflow Framework for Agentic Reasoning",
+        "url": "https://www.semanticscholar.org/paper/adcf542438d49fc056e2c78eec19ef99ca8adc45",
+        "venue": "arXiv.org",
+        "year": 2025,
+        "publicationDate": "2025-09-30",
+        "citationCount": 6,
+        "influentialCitationCount": 1,
+        "referenceCount": 37,
+        "externalIds": {
+          "DBLP": "journals/corr/abs-2509-26062",
+          "ArXiv": "2509.26062",
+          "DOI": "10.48550/arXiv.2509.26062",
+          "CorpusId": 281681609
+        },
+        "authors": [
+          "Yanbo Wang",
+          "Zixiang Xu",
+          "Yue Huang",
+          "Xiangqi Wang",
+          "Zirui Song",
+          "Lang Gao",
+          "Chenxi Wang",
+          "Xiangru Tang"
+        ]
+      }
+    },
+    {
+      "id": "conference-edit-away-and-my-face-will-not-stay-personal-biometric-defense-against-malicious-generative-editing",
+      "title": "Edit Away and My Face Will Not Stay: Personal Biometric Defense against Malicious Generative Editing",
+      "venue": "CVPR, 2025",
+      "year": 2025,
+      "matched_by": "title-search",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "66167d826908a02bc675f49fba5165ccb05690a0",
+        "corpusId": 274281021,
+        "title": "Edit Away and My Face Will not Stay: Personal Biometric Defense against Malicious Generative Editing",
+        "url": "https://www.semanticscholar.org/paper/66167d826908a02bc675f49fba5165ccb05690a0",
+        "venue": "Computer Vision and Pattern Recognition",
+        "year": 2024,
+        "publicationDate": "2024-11-25",
+        "citationCount": 11,
+        "influentialCitationCount": 1,
+        "referenceCount": 71,
+        "externalIds": {
+          "DBLP": "journals/corr/abs-2411-16832",
+          "ArXiv": "2411.16832",
+          "DOI": "10.1109/CVPR52734.2025.02217",
+          "CorpusId": 274281021
+        },
+        "authors": [
+          "Hanhui Wang",
+          "Yihua Zhang",
+          "Ruizheng Bai",
+          "Yue Zhao",
+          "Sijia Liu",
+          "Zhengzhong Tu"
+        ]
+      }
+    },
+    {
+      "id": "conference-few-shot-graph-out-of-distribution-detection-with-llms",
+      "title": "Few-Shot Graph Out-of-Distribution Detection with LLMs",
+      "venue": "ECML PKDD, 2025",
+      "year": 2025,
+      "matched_by": "identifier:ARXIV",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "b585a0efc97216c5ed2f13945cdd58af74d7f183",
+        "corpusId": 277435331,
+        "title": "Few-Shot Graph Out-of-Distribution Detection with LLMs",
+        "url": "https://www.semanticscholar.org/paper/b585a0efc97216c5ed2f13945cdd58af74d7f183",
+        "venue": "ECML/PKDD",
+        "year": 2025,
+        "publicationDate": "2025-03-28",
+        "citationCount": 11,
+        "influentialCitationCount": 0,
+        "referenceCount": 31,
+        "externalIds": {
+          "DBLP": "journals/corr/abs-2503-22097",
+          "ArXiv": "2503.22097",
+          "DOI": "10.48550/arXiv.2503.22097",
+          "CorpusId": 277435331
+        },
+        "authors": [
+          "Haoyan Xu",
+          "Zhengtao Yao",
+          "Yushun Dong",
+          "Ziyi Wang",
+          "Ryan A. Rossi",
+          "Mengyuan Li",
+          "Yue Zhao"
+        ]
+      }
+    },
+    {
+      "id": "conference-from-selection-to-generation-a-survey-of-llm-based-active-learning",
+      "title": "From Selection to Generation: A Survey of LLM-based Active Learning",
+      "venue": "ACL, 2025",
+      "year": 2025,
+      "matched_by": "identifier:ARXIV",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "28681a980b1cbeea9fc431134342a3e6672e7f69",
+        "corpusId": 276408942,
+        "title": "From Selection to Generation: A Survey of LLM-based Active Learning",
+        "url": "https://www.semanticscholar.org/paper/28681a980b1cbeea9fc431134342a3e6672e7f69",
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "year": 2025,
+        "publicationDate": "2025-02-17",
+        "citationCount": 17,
+        "influentialCitationCount": 0,
+        "referenceCount": 89,
+        "externalIds": {
+          "DBLP": "journals/corr/abs-2502-11767",
+          "ArXiv": "2502.11767",
+          "DOI": "10.48550/arXiv.2502.11767",
+          "CorpusId": 276408942
+        },
+        "authors": [
+          "Yu Xia",
+          "Subhojyoti Mukherjee",
+          "Zhouhang Xie",
+          "Junda Wu",
+          "Xintong Li",
+          "Ryan Aponte",
+          "Hanjia Lyu",
+          "Joe Barrow"
+        ]
+      }
+    },
+    {
+      "id": "conference-jaildam-jailbreak-detection-with-adaptive-memory-for-vision-language-model",
+      "title": "JailDAM: Jailbreak Detection with Adaptive Memory for Vision-Language Model",
+      "venue": "COLM, 2025",
+      "year": 2025,
+      "matched_by": "title-search",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "ea96d8cef6e1969117a69c974ade36a6fe31cbe6",
+        "corpusId": 277621096,
+        "title": "JailDAM: Jailbreak Detection with Adaptive Memory for Vision-Language Model",
+        "url": "https://www.semanticscholar.org/paper/ea96d8cef6e1969117a69c974ade36a6fe31cbe6",
+        "venue": "arXiv.org",
+        "year": 2025,
+        "publicationDate": "2025-04-03",
+        "citationCount": 4,
+        "influentialCitationCount": 1,
+        "referenceCount": 46,
+        "externalIds": {
+          "ArXiv": "2504.03770",
+          "DBLP": "journals/corr/abs-2504-03770",
+          "DOI": "10.48550/arXiv.2504.03770",
+          "CorpusId": 277621096
+        },
+        "authors": [
+          "Yi Nian",
+          "Shenzhe Zhu",
+          "Yuehan Qin",
+          "Li Li",
+          "Ziyi Wang",
+          "Chaowei Xiao",
+          "Yue Zhao"
+        ]
+      }
+    },
+    {
+      "id": "conference-llm-empowered-patient-provider-communication-a-data-centric-survey-from-a-clinical-perspective",
+      "title": "LLM-Empowered Patient-Provider Communication: A Data-Centric Survey From a Clinical Perspective",
+      "venue": "Findings of IJCNLP-AACL, 2025",
+      "year": 2025,
+      "matched_by": "title-search",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "14afc0a04a733de5ff1430d6edfa5cd42653ab0d",
+        "corpusId": 285789801,
+        "title": "LLM-Empowered Patient-Provider Communication: A Data-Centric Survey From a Clinical Perspective",
+        "url": "https://www.semanticscholar.org/paper/14afc0a04a733de5ff1430d6edfa5cd42653ab0d",
+        "venue": "IJCNLP-AACL",
+        "year": 2025,
+        "publicationDate": null,
+        "citationCount": 1,
+        "influentialCitationCount": 0,
+        "referenceCount": 0,
+        "externalIds": {
+          "DBLP": "conf/ijcnlp/ShaoSZLLSBZPHCD25",
+          "DOI": "10.18653/v1/2025.findings-ijcnlp.40",
+          "CorpusId": 285789801
+        },
+        "authors": [
+          "Ruosi Shao",
+          "Md Shamim Seraj",
+          "Kangyi Zhao",
+          "Yi Luo",
+          "Lincan Li",
+          "Bolin Shen",
+          "Averi Bates",
+          "Yue Zhao"
+        ]
+      }
+    },
+    {
+      "id": "conference-learning-from-the-storm-a-multivariate-machine-learning-approach-to-predicting-hurricane-induced-economic-losses",
+      "title": "Learning from the Storm: A Multivariate Machine Learning Approach to Predicting Hurricane-Induced Economic Losses",
+      "venue": "ACM SIGSPATIAL SpatialConnect Workshop, 2025",
+      "year": 2025,
+      "matched_by": "identifier:ARXIV",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "ca9c8cb9e7b41a79b7481c757db144a5ddd9e868",
+        "corpusId": 280000405,
+        "title": "Learning from the Storm: A Multivariate Machine Learning Approach to Predicting Hurricane-Induced Economic Losses",
+        "url": "https://www.semanticscholar.org/paper/ca9c8cb9e7b41a79b7481c757db144a5ddd9e868",
+        "venue": "Proceedings of the 1st ACM SIGSPATIAL International Workshop on Spatial Intelligence for Smart and Connected Communities",
+        "year": 2025,
+        "publicationDate": "2025-06-22",
+        "citationCount": 2,
+        "influentialCitationCount": 0,
+        "referenceCount": 24,
+        "externalIds": {
+          "DBLP": "journals/corr/abs-2506-17964",
+          "ArXiv": "2506.17964",
+          "DOI": "10.48550/arXiv.2506.17964",
+          "CorpusId": 280000405
+        },
+        "authors": [
+          "Bolin Shen",
+          "E. Ozguven",
+          "Yue Zhao",
+          "Guang Wang",
+          "Yiqun Xie",
+          "Yushun Dong"
+        ]
+      }
+    },
+    {
+      "id": "conference-metaood-automatic-selection-of-ood-detection-models",
+      "title": "MetaOOD: Automatic Selection of OOD Detection Models",
+      "venue": "ICLR, 2025",
+      "year": 2025,
+      "matched_by": "title-search",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "b11951e19c5603abe8812d74a8b73922b810a83a",
+        "corpusId": 273162261,
+        "title": "MetaOOD: Automatic Selection of OOD Detection Models",
+        "url": "https://www.semanticscholar.org/paper/b11951e19c5603abe8812d74a8b73922b810a83a",
+        "venue": "International Conference on Learning Representations",
+        "year": 2024,
+        "publicationDate": "2024-10-04",
+        "citationCount": 17,
+        "influentialCitationCount": 1,
+        "referenceCount": 68,
+        "externalIds": {
+          "DBLP": "conf/iclr/QinZND025",
+          "ArXiv": "2410.03074",
+          "DOI": "10.48550/arXiv.2410.03074",
+          "CorpusId": 273162261
+        },
+        "authors": [
+          "Yuehan Qin",
+          "Yichi Zhang",
+          "Yi Nian",
+          "Xueying Ding",
+          "Yue Zhao"
+        ]
+      }
+    },
+    {
+      "id": "conference-nlp-adbench-nlp-anomaly-detection-benchmark",
+      "title": "NLP-ADBench: NLP Anomaly Detection Benchmark",
+      "venue": "EMNLP Findings, 2025",
+      "year": 2025,
+      "matched_by": "identifier:ARXIV",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "34696e5a654f970f9f5cc8cb1e1dade81b5fcae1",
+        "corpusId": 274581617,
+        "title": "NLP-ADBench: NLP Anomaly Detection Benchmark",
+        "url": "https://www.semanticscholar.org/paper/34696e5a654f970f9f5cc8cb1e1dade81b5fcae1",
+        "venue": "Conference on Empirical Methods in Natural Language Processing",
+        "year": 2024,
+        "publicationDate": "2024-12-06",
+        "citationCount": 15,
+        "influentialCitationCount": 2,
+        "referenceCount": 35,
+        "externalIds": {
+          "ArXiv": "2412.04784",
+          "DBLP": "conf/emnlp/LiLXYNHZ25",
+          "DOI": "10.48550/arXiv.2412.04784",
+          "CorpusId": 274581617
+        },
+        "authors": [
+          "Yuangang Li",
+          "Jiaqi Li",
+          "Zhuo Xiao",
+          "Tiankai Yang",
+          "Yi Nian",
+          "Xiyang Hu",
+          "Yue Zhao"
+        ]
+      }
+    },
+    {
+      "id": "conference-navigating-between-explainability-and-extractability-in-machine-learning-as-a-service",
+      "title": "Navigating Between Explainability and Extractability in Machine Learning as a Service",
+      "venue": "IEEE ICDM BlueSky Track, 2025",
+      "year": 2025,
+      "matched_by": "title-search",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "f9c5e922142f158100fc980bd14fda4ed00280ca",
+        "corpusId": 286464260,
+        "title": "Navigating Between Explainability and Extractability in Machine Learning as a Service",
+        "url": "https://www.semanticscholar.org/paper/f9c5e922142f158100fc980bd14fda4ed00280ca",
+        "venue": "2025 IEEE International Conference on Data Mining Workshops (ICDMW)",
+        "year": 2025,
+        "publicationDate": "2025-11-12",
+        "citationCount": 1,
+        "influentialCitationCount": 0,
+        "referenceCount": 26,
+        "externalIds": {
+          "DBLP": "conf/icdm/NimaseZD25",
+          "DOI": "10.1109/ICDMW69685.2025.00305",
+          "CorpusId": 286464260
+        },
+        "authors": [
+          "Ojas Nimase",
+          "Yue Zhao",
+          "Yushun Dong"
+        ]
+      }
+    },
+    {
+      "id": "conference-pyod-2-a-python-library-for-outlier-detection-with-llm-powered-model-selection",
+      "title": "PyOD 2: A Python Library for Outlier Detection with LLM-powered Model Selection",
+      "venue": "The Web Conference (Demo Track), 2025",
+      "year": 2025,
+      "matched_by": "identifier:ARXIV",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "5fa733e8e17fdb6a60ff46e80d5a3115dea6ae1b",
+        "corpusId": 274789416,
+        "title": "PyOD 2: A Python Library for Outlier Detection with LLM-powered Model Selection",
+        "url": "https://www.semanticscholar.org/paper/5fa733e8e17fdb6a60ff46e80d5a3115dea6ae1b",
+        "venue": "The Web Conference",
+        "year": 2024,
+        "publicationDate": "2024-12-11",
+        "citationCount": 21,
+        "influentialCitationCount": 0,
+        "referenceCount": 23,
+        "externalIds": {
+          "DBLP": "conf/www/ChenQSHLLQ0XYZD25",
+          "ArXiv": "2412.12154",
+          "DOI": "10.1145/3701716.3715196",
+          "CorpusId": 274789416
+        },
+        "authors": [
+          "Sihan Chen",
+          "Zhuangzhuang Qian",
+          "Wingchun Siu",
+          "Xingcan Hu",
+          "Jiaqi Li",
+          "Li Li",
+          "Yuehan Qin",
+          "Tiankai Yang"
+        ]
+      }
+    },
+    {
+      "id": "conference-retrieval-reasoning-large-language-model-based-synthetic-clinical-trial-generation",
+      "title": "Retrieval-Reasoning Large Language Model-based Synthetic Clinical Trial Generation",
+      "venue": "ACM BCB, 2025",
+      "year": 2025,
+      "matched_by": "identifier:ARXIV",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "53973de6c2c8ce9fa372289ae4c8ff179e364c31",
+        "corpusId": 273374951,
+        "title": "Retrieval-Reasoning Large Language Model-based Synthetic Clinical Trial Generation",
+        "url": "https://www.semanticscholar.org/paper/53973de6c2c8ce9fa372289ae4c8ff179e364c31",
+        "venue": "ACM International Conference on Bioinformatics, Computational Biology and Biomedicine",
+        "year": 2024,
+        "publicationDate": "2024-10-16",
+        "citationCount": 7,
+        "influentialCitationCount": 0,
+        "referenceCount": 37,
+        "externalIds": {
+          "ArXiv": "2410.12476",
+          "DBLP": "conf/bcb/Xu0LZ025",
+          "DOI": "10.1145/3765612.3767193",
+          "CorpusId": 273374951
+        },
+        "authors": [
+          "Zerui Xu",
+          "Fang Wu",
+          "Yingzhou Lu",
+          "Yuanyuan Zhang",
+          "Yue Zhao"
+        ]
+      }
+    },
+    {
+      "id": "conference-secure-on-device-video-ood-detection-without-backpropagation",
+      "title": "Secure On-Device Video OOD Detection Without Backpropagation",
+      "venue": "ICCV, 2025",
+      "year": 2025,
+      "matched_by": "identifier:ARXIV",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "1c9f672caaafdab279393d762048f170904be29d",
+        "corpusId": 276903014,
+        "title": "Secure On-Device Video OOD Detection Without Backpropagation",
+        "url": "https://www.semanticscholar.org/paper/1c9f672caaafdab279393d762048f170904be29d",
+        "venue": "arXiv.org",
+        "year": 2025,
+        "publicationDate": "2025-03-08",
+        "citationCount": 13,
+        "influentialCitationCount": 0,
+        "referenceCount": 51,
+        "externalIds": {
+          "DBLP": "journals/corr/abs-2503-06166",
+          "ArXiv": "2503.06166",
+          "DOI": "10.48550/arXiv.2503.06166",
+          "CorpusId": 276903014
+        },
+        "authors": [
+          "Li Li",
+          "Peilin Cai",
+          "Yuxiao Zhou",
+          "Zhiyu Ni",
+          "Renjie Liang",
+          "You Qin",
+          "Yi Nian",
+          "Zhengzhong Tu"
+        ]
+      }
+    },
+    {
+      "id": "conference-socialmaze-a-benchmark-for-evaluating-social-reasoning-in-large-language-models",
+      "title": "SocialMaze: A Benchmark for Evaluating Social Reasoning in Large Language Models",
+      "venue": "NeurIPS Workshop on Socially Responsible and Trustworthy Foundation Models (ResponsibleFM), 2025",
+      "year": 2025,
+      "matched_by": "identifier:ARXIV",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "9a59b5a3c9ea997e98d166eb2b2f3012a4c759f6",
+        "corpusId": 278996591,
+        "title": "SocialMaze: A Benchmark for Evaluating Social Reasoning in Large Language Models",
+        "url": "https://www.semanticscholar.org/paper/9a59b5a3c9ea997e98d166eb2b2f3012a4c759f6",
+        "venue": "arXiv.org",
+        "year": 2025,
+        "publicationDate": "2025-05-29",
+        "citationCount": 6,
+        "influentialCitationCount": 0,
+        "referenceCount": 0,
+        "externalIds": {
+          "ArXiv": "2505.23713",
+          "DBLP": "journals/corr/abs-2505-23713",
+          "DOI": "10.48550/arXiv.2505.23713",
+          "CorpusId": 278996591
+        },
+        "authors": [
+          "Zixiang Xu",
+          "Yanbo Wang",
+          "Yue Huang",
+          "Jiayi Ye",
+          "Haomin Zhuang",
+          "Zirui Song",
+          "Lang Gao",
+          "Chenxi Wang"
+        ]
+      }
+    },
+    {
+      "id": "conference-trusteval-a-dynamic-evaluation-toolkit-on-trustworthiness-of-generative-foundation-models",
+      "title": "TRUSTEVAL: A Dynamic Evaluation Toolkit on Trustworthiness of Generative Foundation Models",
+      "venue": "NAACL (Demo Track), 2025",
+      "year": 2025,
+      "matched_by": "title-search",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "a2e0a278edcfc3b81f177195119340313303c20c",
+        "corpusId": 279189709,
+        "title": "TRUSTEVAL: A Dynamic Evaluation Toolkit on Trustworthiness of Generative Foundation Models",
+        "url": "https://www.semanticscholar.org/paper/a2e0a278edcfc3b81f177195119340313303c20c",
+        "venue": "North American Chapter of the Association for Computational Linguistics",
+        "year": 2025,
+        "publicationDate": null,
+        "citationCount": 7,
+        "influentialCitationCount": 0,
+        "referenceCount": 0,
+        "externalIds": {
+          "DBLP": "conf/naacl/0005Y0G0C0025",
+          "DOI": "10.18653/v1/2025.naacl-demo.8",
+          "CorpusId": 279189709
+        },
+        "authors": [
+          "Yanbo Wang",
+          "Jiayi Ye",
+          "Siyuan Wu",
+          "Chujie Gao",
+          "Yue Huang",
+          "Xiuying Chen",
+          "Yue Zhao",
+          "Xiangliang Zhang"
+        ]
+      }
+    },
+    {
+      "id": "conference-treble-counterfactual-vlms-a-causal-approach-to-hallucination",
+      "title": "Treble Counterfactual VLMs: A Causal Approach to Hallucination",
+      "venue": "EMNLP Findings, 2025",
+      "year": 2025,
+      "matched_by": "identifier:ARXIV",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "03a6ef144e3068629f59ab268752430c758670ac",
+        "corpusId": 276902483,
+        "title": "Treble Counterfactual VLMs: A Causal Approach to Hallucination",
+        "url": "https://www.semanticscholar.org/paper/03a6ef144e3068629f59ab268752430c758670ac",
+        "venue": "Conference on Empirical Methods in Natural Language Processing",
+        "year": 2025,
+        "publicationDate": "2025-03-08",
+        "citationCount": 21,
+        "influentialCitationCount": 0,
+        "referenceCount": 55,
+        "externalIds": {
+          "DBLP": "conf/emnlp/LiQSZQYZ25",
+          "ArXiv": "2503.06169",
+          "DOI": "10.48550/arXiv.2503.06169",
+          "CorpusId": 276902483
+        },
+        "authors": [
+          "Li Li",
+          "Jiashu Qu",
+          "Yuxiao Zhou",
+          "Yuehan Qin",
+          "Tiankai Yang",
+          "Yue Zhao"
+        ]
+      }
+    },
+    {
+      "id": "conference-typhoformer-language-augmented-transformer-for-accurate-typhoon-track-forecasting",
+      "title": "TyphoFormer: Language-Augmented Transformer for Accurate Typhoon Track Forecasting",
+      "venue": "ACM SIGSPATIAL, 2025",
+      "year": 2025,
+      "matched_by": "identifier:ARXIV",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "7c302d4f8a85c1719fb6ac3aab113d4cb942cf7c",
+        "corpusId": 279999675,
+        "title": "TyphoFormer: Language-Augmented Transformer for Accurate Typhoon Track Forecasting",
+        "url": "https://www.semanticscholar.org/paper/7c302d4f8a85c1719fb6ac3aab113d4cb942cf7c",
+        "venue": "SIGSPATIAL/GIS",
+        "year": 2025,
+        "publicationDate": "2025-06-21",
+        "citationCount": 3,
+        "influentialCitationCount": 0,
+        "referenceCount": 24,
+        "externalIds": {
+          "DBLP": "conf/gis/LiO00XD25",
+          "ArXiv": "2506.17609",
+          "DOI": "10.1145/3748636.3763223",
+          "CorpusId": 279999675
+        },
+        "authors": [
+          "Lincan Li",
+          "E. Ozguven",
+          "Yue Zhao",
+          "Guang Wang",
+          "Yiqun Xie",
+          "Yushun Dong"
+        ]
+      }
+    },
+    {
+      "id": "workshop-autobench-v",
+      "title": "AutoBench-V: Can Large Vision-Language Models Benchmark Themselves?",
+      "venue": "ICML 2025 DataWorld Workshop",
+      "year": 2025,
+      "matched_by": "identifier:ARXIV",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "5b7ad7b37bdc9fb43e054d18e2d918de33ecb8d8",
+        "corpusId": 273653744,
+        "title": "AutoBench-V: Can Large Vision-Language Models Benchmark Themselves?",
+        "url": "https://www.semanticscholar.org/paper/5b7ad7b37bdc9fb43e054d18e2d918de33ecb8d8",
+        "venue": "arXiv.org",
+        "year": 2024,
+        "publicationDate": "2024-10-28",
+        "citationCount": 19,
+        "influentialCitationCount": 1,
+        "referenceCount": 69,
+        "externalIds": {
+          "DBLP": "journals/corr/abs-2410-21259",
+          "ArXiv": "2410.21259",
+          "DOI": "10.48550/arXiv.2410.21259",
+          "CorpusId": 273653744
+        },
+        "authors": [
+          "Han Bao",
+          "Yue Huang",
+          "Yanbo Wang",
+          "Jiayi Ye",
+          "Xiangqi Wang",
+          "Xiuying Chen",
+          "Mohamed Elhoseiny",
+          "Xiangliang Zhang"
+        ]
+      }
+    },
+    {
+      "id": "conference-fast-unsupervised-deep-outlier-model-selection-with-hypernetworks",
+      "title": "Fast Unsupervised Deep Outlier Model Selection with Hypernetworks",
+      "venue": "KDD, 2024",
+      "year": 2024,
+      "matched_by": "identifier:ARXIV",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "0a0872114d63efee24b74d61f0e63b473fdaf2f6",
+        "corpusId": 263342064,
+        "title": "Fast Unsupervised Deep Outlier Model Selection with Hypernetworks",
+        "url": "https://www.semanticscholar.org/paper/0a0872114d63efee24b74d61f0e63b473fdaf2f6",
+        "venue": "Knowledge Discovery and Data Mining",
+        "year": 2023,
+        "publicationDate": "2023-07-20",
+        "citationCount": 11,
+        "influentialCitationCount": 0,
+        "referenceCount": 50,
+        "externalIds": {
+          "DBLP": "journals/corr/abs-2307-10529",
+          "ArXiv": "2307.10529",
+          "DOI": "10.1145/3637528.3672003",
+          "CorpusId": 263342064
+        },
+        "authors": [
+          "Xueying Ding",
+          "Yue Zhao",
+          "L. Akoglu"
+        ]
+      }
+    },
+    {
+      "id": "conference-hyperparameter-optimization-for-unsupervised-outlier-detection",
+      "title": "Hyperparameter Optimization for Unsupervised Outlier Detection",
+      "venue": "AutoML, 2024",
+      "year": 2024,
+      "matched_by": "title-search",
+      "title_match_score": 0.9612,
+      "s2": {
+        "paperId": "8b4190fb7b79f621ed64c97e9d713e9781c35476",
+        "corpusId": 252780025,
+        "title": "HPOD: Hyperparameter Optimization for Unsupervised Outlier Detection",
+        "url": "https://www.semanticscholar.org/paper/8b4190fb7b79f621ed64c97e9d713e9781c35476",
+        "venue": "AutoML",
+        "year": 2022,
+        "publicationDate": "2022-08-24",
+        "citationCount": 5,
+        "influentialCitationCount": 0,
+        "referenceCount": 67,
+        "externalIds": {
+          "ArXiv": "2208.11727",
+          "DBLP": "conf/automl/0016A24",
+          "CorpusId": 252780025
+        },
+        "authors": [
+          "Yue Zhao",
+          "L. Akoglu"
+        ]
+      }
+    },
+    {
+      "id": "conference-multiood-scaling-out-of-distribution-detection-for-multiple-modalities",
+      "title": "MultiOOD: Scaling Out-of-Distribution Detection for Multiple Modalities",
+      "venue": "NeurIPS, 2024",
+      "year": 2024,
+      "matched_by": "identifier:ARXIV",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "f9ac68dc1fdd070a65a71c739e7135361c0d3006",
+        "corpusId": 270063845,
+        "title": "MultiOOD: Scaling Out-of-Distribution Detection for Multiple Modalities",
+        "url": "https://www.semanticscholar.org/paper/f9ac68dc1fdd070a65a71c739e7135361c0d3006",
+        "venue": "Neural Information Processing Systems",
+        "year": 2024,
+        "publicationDate": "2024-05-27",
+        "citationCount": 33,
+        "influentialCitationCount": 1,
+        "referenceCount": 73,
+        "externalIds": {
+          "DBLP": "conf/nips/Dong0CF24",
+          "ArXiv": "2405.17419",
+          "DOI": "10.48550/arXiv.2405.17419",
+          "CorpusId": 270063845
+        },
+        "authors": [
+          "Hao Dong",
+          "Yue Zhao",
+          "Eleni Chatzi",
+          "Olga Fink"
+        ]
+      }
+    },
+    {
+      "id": "conference-preference-optimization-for-molecule-synthesis-with-conditional-residual-energy-based-models",
+      "title": "Preference Optimization for Molecule Synthesis with Conditional Residual Energy-based Models",
+      "venue": "ICML, 2024",
+      "year": 2024,
+      "matched_by": "title-search",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "39aaca98b537985d00437e89100d2b5eff674b76",
+        "corpusId": 270226718,
+        "title": "Preference Optimization for Molecule Synthesis with Conditional Residual Energy-based Models",
+        "url": "https://www.semanticscholar.org/paper/39aaca98b537985d00437e89100d2b5eff674b76",
+        "venue": "International Conference on Machine Learning",
+        "year": 2024,
+        "publicationDate": "2024-06-04",
+        "citationCount": 8,
+        "influentialCitationCount": 0,
+        "referenceCount": 0,
+        "externalIds": {
+          "DBLP": "journals/corr/abs-2406-02066",
+          "ArXiv": "2406.02066",
+          "DOI": "10.48550/arXiv.2406.02066",
+          "CorpusId": 270226718
+        },
+        "authors": [
+          "Songtao Liu",
+          "Hanjun Dai",
+          "Yue Zhao",
+          "Peng Liu"
+        ]
+      }
+    },
+    {
+      "id": "conference-towards-reproducible-automated-and-scalable-anomaly-detection",
+      "title": "Towards Reproducible, Automated, and Scalable Anomaly Detection",
+      "venue": "AAAI New Faculty Highlights, 2024",
+      "year": 2024,
+      "matched_by": "title-search",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "6bf1b250715b6504c233c5764b1da9c9131f012f",
+        "corpusId": 266599337,
+        "title": "Towards Reproducible, Automated, and Scalable Anomaly Detection",
+        "url": "https://www.semanticscholar.org/paper/6bf1b250715b6504c233c5764b1da9c9131f012f",
+        "venue": "AAAI Conference on Artificial Intelligence",
+        "year": 2024,
+        "publicationDate": "2024-03-24",
+        "citationCount": 4,
+        "influentialCitationCount": 0,
+        "referenceCount": 7,
+        "externalIds": {
+          "DBLP": "conf/aaai/Zhao24a",
+          "DOI": "10.1609/aaai.v38i20.30303",
+          "CorpusId": 266599337
+        },
+        "authors": [
+          "Yue Zhao"
+        ]
+      }
+    },
+    {
+      "id": "conference-trustllm-trustworthiness-in-large-language-models",
+      "title": "TrustLLM: Trustworthiness in Large Language Models",
+      "venue": "ICML, 2024",
+      "year": 2024,
+      "matched_by": "title-search",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "fb4dc0178e5d7347b1615c48caf05347b6e5eb48",
+        "corpusId": 266933236,
+        "title": "TrustLLM: Trustworthiness in Large Language Models",
+        "url": "https://www.semanticscholar.org/paper/fb4dc0178e5d7347b1615c48caf05347b6e5eb48",
+        "venue": "arXiv.org",
+        "year": 2024,
+        "publicationDate": "2024-01-10",
+        "citationCount": 321,
+        "influentialCitationCount": 31,
+        "referenceCount": 0,
+        "externalIds": {
+          "DBLP": "journals/corr/abs-2401-05561",
+          "ArXiv": "2401.05561",
+          "DOI": "10.48550/arXiv.2401.05561",
+          "CorpusId": 266933236
+        },
+        "authors": [
+          "Lichao Sun",
+          "Yue Huang",
+          "Haoran Wang",
+          "Siyuan Wu",
+          "Qihui Zhang",
+          "Chujie Gao",
+          "Yixin Huang",
+          "Wenhan Lyu"
+        ]
+      }
+    },
+    {
+      "id": "conference-adgym-design-choices-for-deep-anomaly-detection",
+      "title": "ADGym: Design Choices for Deep Anomaly Detection",
+      "venue": "NeurIPS, 2023",
+      "year": 2023,
+      "matched_by": "title-search",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "c504e0fd14f2f364d1b51139f2e4b28123725e64",
+        "corpusId": 263153022,
+        "title": "ADGym: Design Choices for Deep Anomaly Detection",
+        "url": "https://www.semanticscholar.org/paper/c504e0fd14f2f364d1b51139f2e4b28123725e64",
+        "venue": "Neural Information Processing Systems",
+        "year": 2023,
+        "publicationDate": "2023-09-27",
+        "citationCount": 27,
+        "influentialCitationCount": 0,
+        "referenceCount": 89,
+        "externalIds": {
+          "ArXiv": "2309.15376",
+          "DBLP": "conf/nips/JiangHZHHWH023",
+          "DOI": "10.48550/arXiv.2309.15376",
+          "CorpusId": 263153022
+        },
+        "authors": [
+          "Minqi Jiang",
+          "Chaochuan Hou",
+          "Ao Zheng",
+          "Songqiao Han",
+          "Hailiang Huang",
+          "Qi Wen",
+          "Xiyang Hu",
+          "Yue Zhao"
+        ]
+      }
+    },
+    {
+      "id": "conference-admoe-anomaly-detection-with-mixture-of-experts-from-noisy-labels",
+      "title": "ADMoE: Anomaly Detection with Mixture-of-Experts from Noisy Labels",
+      "venue": "AAAI, 2023",
+      "year": 2023,
+      "matched_by": "identifier:ARXIV",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "f1305bbd54db0345533906726e3425f742312c55",
+        "corpusId": 251765104,
+        "title": "ADMoE: Anomaly Detection with Mixture-of-Experts from Noisy Labels",
+        "url": "https://www.semanticscholar.org/paper/f1305bbd54db0345533906726e3425f742312c55",
+        "venue": "AAAI Conference on Artificial Intelligence",
+        "year": 2022,
+        "publicationDate": "2022-08-24",
+        "citationCount": 39,
+        "influentialCitationCount": 2,
+        "referenceCount": 54,
+        "externalIds": {
+          "ArXiv": "2208.11290",
+          "DBLP": "conf/aaai/0016ZMMA23",
+          "DOI": "10.48550/arXiv.2208.11290",
+          "CorpusId": 251765104
+        },
+        "authors": [
+          "Yue Zhao",
+          "Guoqing Zheng",
+          "Subhabrata Mukherjee",
+          "R. McCann",
+          "A. Awadallah"
+        ]
+      }
+    },
+    {
+      "id": "conference-dsv-an-alignment-validation-loss-for-self-supervised-outlier-model-selection",
+      "title": "DSV: An Alignment Validation Loss for Self-supervised Outlier Model Selection",
+      "venue": "ECML/PKDD, 2023",
+      "year": 2023,
+      "matched_by": "identifier:ARXIV",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "f03cec99e75dc74ab653b2598da16dc606c15da5",
+        "corpusId": 259847208,
+        "title": "DSV: An Alignment Validation Loss for Self-supervised Outlier Model Selection",
+        "url": "https://www.semanticscholar.org/paper/f03cec99e75dc74ab653b2598da16dc606c15da5",
+        "venue": "ECML/PKDD",
+        "year": 2023,
+        "publicationDate": "2023-07-13",
+        "citationCount": 10,
+        "influentialCitationCount": 0,
+        "referenceCount": 31,
+        "externalIds": {
+          "DBLP": "journals/corr/abs-2307-06534",
+          "ArXiv": "2307.06534",
+          "DOI": "10.48550/arXiv.2307.06534",
+          "CorpusId": 259847208
+        },
+        "authors": [
+          "Jaemin Yoo",
+          "Yue Zhao",
+          "Lingxiao Zhao",
+          "L. Akoglu"
+        ]
+      }
+    },
+    {
+      "id": "conference-do-not-train-it-a-linear-neural-architecture-search-of-graph-neural-networks",
+      "title": "Do Not Train It: A Linear Neural Architecture Search of Graph Neural Networks",
+      "venue": "ICML, 2023",
+      "year": 2023,
+      "matched_by": "title-search",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "c1a13ed7ef722e6442ef4f3ffdd7614b9d8dc8ac",
+        "corpusId": 258841168,
+        "title": "Do Not Train It: A Linear Neural Architecture Search of Graph Neural Networks",
+        "url": "https://www.semanticscholar.org/paper/c1a13ed7ef722e6442ef4f3ffdd7614b9d8dc8ac",
+        "venue": "International Conference on Machine Learning",
+        "year": 2023,
+        "publicationDate": "2023-05-23",
+        "citationCount": 14,
+        "influentialCitationCount": 0,
+        "referenceCount": 65,
+        "externalIds": {
+          "DBLP": "journals/corr/abs-2305-14065",
+          "ArXiv": "2305.14065",
+          "DOI": "10.48550/arXiv.2305.14065",
+          "CorpusId": 258841168
+        },
+        "authors": [
+          "Peng Xu",
+          "Lin Zhang",
+          "Xuan Liu",
+          "Jiaqi Sun",
+          "Yue Zhao",
+          "Haiqing Yang",
+          "Bei Yu"
+        ]
+      }
+    },
+    {
+      "id": "conference-tod-gpu-accelerated-outlier-detection-via-tensor-operations",
+      "title": "TOD: GPU-accelerated Outlier Detection via Tensor Operations",
+      "venue": "VLDB, 2023",
+      "year": 2023,
+      "matched_by": "title-search",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "9d4b2da6e25326ceb89d372cf4e35fe8e0e82765",
+        "corpusId": 249921384,
+        "title": "TOD: GPU-accelerated Outlier Detection via Tensor Operations",
+        "url": "https://www.semanticscholar.org/paper/9d4b2da6e25326ceb89d372cf4e35fe8e0e82765",
+        "venue": "Proceedings of the VLDB Endowment",
+        "year": 2021,
+        "publicationDate": "2021-10-26",
+        "citationCount": 10,
+        "influentialCitationCount": 0,
+        "referenceCount": 107,
+        "externalIds": {
+          "ArXiv": "2110.14007",
+          "DBLP": "journals/pvldb/ZhaoCJ22",
+          "CorpusId": 249921384
+        },
+        "authors": [
+          "Yue Zhao",
+          "George H. Chen",
+          "Zhihao Jia"
+        ]
+      }
+    },
+    {
+      "id": "conference-adbench-anomaly-detection-benchmark",
+      "title": "ADBench: Anomaly Detection Benchmark",
+      "venue": "NeurIPS, 2022",
+      "year": 2022,
+      "matched_by": "title-search",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "0bff4af924788d9779041513b6894385eac51ffd",
+        "corpusId": 249889853,
+        "title": "ADBench: Anomaly Detection Benchmark",
+        "url": "https://www.semanticscholar.org/paper/0bff4af924788d9779041513b6894385eac51ffd",
+        "venue": "Neural Information Processing Systems",
+        "year": 2022,
+        "publicationDate": "2022-06-19",
+        "citationCount": 423,
+        "influentialCitationCount": 63,
+        "referenceCount": 203,
+        "externalIds": {
+          "DBLP": "journals/corr/abs-2206-09426",
+          "ArXiv": "2206.09426",
+          "DOI": "10.48550/arXiv.2206.09426",
+          "CorpusId": 249889853
+        },
+        "authors": [
+          "Songqiao Han",
+          "Xiyang Hu",
+          "Hailiang Huang",
+          "Mingqi Jiang",
+          "Yue Zhao"
+        ]
+      }
+    },
+    {
+      "id": "conference-bond-benchmarking-unsupervised-outlier-node-detection-on-static-attributed-graphs",
+      "title": "BOND: Benchmarking Unsupervised Outlier Node Detection on Static Attributed Graphs",
+      "venue": "NeurIPS, 2022",
+      "year": 2022,
+      "matched_by": "title-search",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "fea848dfcf44e67fe149bbcebcb52c92fba40f28",
+        "corpusId": 252918562,
+        "title": "BOND: Benchmarking Unsupervised Outlier Node Detection on Static Attributed Graphs",
+        "url": "https://www.semanticscholar.org/paper/fea848dfcf44e67fe149bbcebcb52c92fba40f28",
+        "venue": "Neural Information Processing Systems",
+        "year": 2022,
+        "publicationDate": "2022-06-21",
+        "citationCount": 144,
+        "influentialCitationCount": 15,
+        "referenceCount": 106,
+        "externalIds": {
+          "DBLP": "conf/nips/LiuDZDHZDCPSSLC22",
+          "ArXiv": "2206.10071",
+          "DOI": "10.52202/068431-1959",
+          "CorpusId": 252918562
+        },
+        "authors": [
+          "Kay Liu",
+          "Yingtong Dou",
+          "Yue Zhao",
+          "Xueying Ding",
+          "Xiyang Hu",
+          "Ruitong Zhang",
+          "Kaize Ding",
+          "Canyu Chen"
+        ]
+      }
+    },
+    {
+      "id": "conference-contrastive-attributed-network-ad",
+      "title": "Contrastive Attributed Network Anomaly Detection with Data Augmentation",
+      "venue": "PAKDD, 2022",
+      "year": 2022,
+      "matched_by": "title-search",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "f2c848f23189120ace52c0a9fb155f2c199bf613",
+        "corpusId": 248865671,
+        "title": "Contrastive Attributed Network Anomaly Detection with Data Augmentation",
+        "url": "https://www.semanticscholar.org/paper/f2c848f23189120ace52c0a9fb155f2c199bf613",
+        "venue": "Pacific-Asia Conference on Knowledge Discovery and Data Mining",
+        "year": 2022,
+        "publicationDate": null,
+        "citationCount": 125,
+        "influentialCitationCount": 13,
+        "referenceCount": 44,
+        "externalIds": {
+          "DBLP": "conf/pakdd/XuHZDL22",
+          "DOI": "10.1007/978-3-031-05936-0_35",
+          "CorpusId": 248865671
+        },
+        "authors": [
+          "Zhiming Xu",
+          "Xiao Huang",
+          "Yue Zhao",
+          "Yushun Dong",
+          "Jundong Li"
+        ]
+      }
+    },
+    {
+      "id": "conference-elect-toward-unsupervised-outlier-model-selection",
+      "title": "ELECT: Toward Unsupervised Outlier Model Selection",
+      "venue": "ICDM, 2022",
+      "year": 2022,
+      "matched_by": "identifier:ARXIV",
+      "title_match_score": 0.9348,
+      "s2": {
+        "paperId": "155d9c8000e7e862886e01ea9b8011652673d9ae",
+        "corpusId": 253265214,
+        "title": "Toward Unsupervised Outlier Model Selection",
+        "url": "https://www.semanticscholar.org/paper/155d9c8000e7e862886e01ea9b8011652673d9ae",
+        "venue": "Industrial Conference on Data Mining",
+        "year": 2022,
+        "publicationDate": "2022-11-01",
+        "citationCount": 30,
+        "influentialCitationCount": 2,
+        "referenceCount": 49,
+        "externalIds": {
+          "DBLP": "journals/corr/abs-2211-01834",
+          "ArXiv": "2211.01834",
+          "DOI": "10.1109/ICDM54844.2022.00088",
+          "CorpusId": 253265214
+        },
+        "authors": [
+          "Yue Zhao",
+          "Sean Zhang",
+          "L. Akoglu"
+        ]
+      }
+    },
+    {
+      "id": "conference-automatic-unsupervised-outlier-model-selection",
+      "title": "Automatic Unsupervised Outlier Model Selection",
+      "venue": "NeurIPS, 2021",
+      "year": 2021,
+      "matched_by": "title-search",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "f14c949c0f95792c0077ac63cf21a880b6b58a60",
+        "corpusId": 245149155,
+        "title": "Automatic Unsupervised Outlier Model Selection",
+        "url": "https://www.semanticscholar.org/paper/f14c949c0f95792c0077ac63cf21a880b6b58a60",
+        "venue": "Neural Information Processing Systems",
+        "year": 2021,
+        "publicationDate": null,
+        "citationCount": 94,
+        "influentialCitationCount": 21,
+        "referenceCount": 63,
+        "externalIds": {
+          "DBLP": "conf/nips/ZhaoRA21",
+          "CorpusId": 245149155
+        },
+        "authors": [
+          "Yue Zhao"
+        ]
+      }
+    },
+    {
+      "id": "conference-revisiting-time-series-outlier-detection-definitions-and-benchmarks",
+      "title": "Revisiting Time Series Outlier Detection: Definitions and Benchmarks",
+      "venue": "NeurIPS, 2021",
+      "year": 2021,
+      "matched_by": "title-search",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "28c51370671c4b6acb8690fdedb2ea4afe85f854",
+        "corpusId": 237258098,
+        "title": "Revisiting Time Series Outlier Detection: Definitions and Benchmarks",
+        "url": "https://www.semanticscholar.org/paper/28c51370671c4b6acb8690fdedb2ea4afe85f854",
+        "venue": "NeurIPS Datasets and Benchmarks",
+        "year": 2021,
+        "publicationDate": null,
+        "citationCount": 231,
+        "influentialCitationCount": 28,
+        "referenceCount": 76,
+        "externalIds": {
+          "DBLP": "conf/nips/LaiZXZWH21",
+          "CorpusId": 237258098
+        },
+        "authors": [
+          "Kwei-Herng Lai",
+          "D. Zha",
+          "Junjie Xu",
+          "Yue Zhao",
+          "Guanchu Wang"
+        ]
+      }
+    },
+    {
+      "id": "conference-suod-accelerating-large-scale-unsupervised-heterogeneous-outlier-detection",
+      "title": "SUOD: Accelerating Large-scale Unsupervised Heterogeneous Outlier Detection",
+      "venue": "MLSys, 2021",
+      "year": 2021,
+      "matched_by": "title-search",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "6d14a6dcf63d17845dd3207cb97f2bfc425b54cd",
+        "corpusId": 222302654,
+        "title": "SUOD: Accelerating Large-Scale Unsupervised Heterogeneous Outlier Detection",
+        "url": "https://www.semanticscholar.org/paper/6d14a6dcf63d17845dd3207cb97f2bfc425b54cd",
+        "venue": "Conference on Machine Learning and Systems",
+        "year": 2021,
+        "publicationDate": null,
+        "citationCount": 75,
+        "influentialCitationCount": 5,
+        "referenceCount": 52,
+        "externalIds": {
+          "DBLP": "conf/mlsys/0016H0WWWYBLXW021",
+          "CorpusId": 222302654
+        },
+        "authors": [
+          "Yue Zhao",
+          "Xiyang Hu",
+          "Cheng Cheng",
+          "Cong Wang",
+          "Changling wan",
+          "Wen Wang",
+          "Jianing Yang",
+          "Haoping Bai"
+        ]
+      }
+    },
+    {
+      "id": "workshop-tods",
+      "title": "TODS: An Automated Time Series Outlier Detection System",
+      "venue": "AAAI (Demo), 2021",
+      "year": 2021,
+      "matched_by": "title-search",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "e8daa57c6d8c37e5c91f8086071456a31a0c209b",
+        "corpusId": 221819569,
+        "title": "TODS: An Automated Time Series Outlier Detection System",
+        "url": "https://www.semanticscholar.org/paper/e8daa57c6d8c37e5c91f8086071456a31a0c209b",
+        "venue": "AAAI Conference on Artificial Intelligence",
+        "year": 2020,
+        "publicationDate": "2020-09-18",
+        "citationCount": 80,
+        "influentialCitationCount": 1,
+        "referenceCount": 8,
+        "externalIds": {
+          "MAG": "3087172118",
+          "DBLP": "journals/corr/abs-2009-09822",
+          "ArXiv": "2009.09822",
+          "DOI": "10.1609/aaai.v35i18.18012",
+          "CorpusId": 221819569
+        },
+        "authors": [
+          "K. Lai",
+          "D. Zha",
+          "Guanchu Wang",
+          "Junjie Xu",
+          "Yue Zhao",
+          "Devesh Kumar",
+          "Yile Chen",
+          "Purav Zumkhawaka"
+        ]
+      }
+    },
+    {
+      "id": "conference-therapeutics-data-commons-machine-learning-datasets-and-tasks-for-drug-discovery-and-development",
+      "title": "Therapeutics Data Commons: Machine Learning Datasets and Tasks for Drug Discovery and Development",
+      "venue": "NeurIPS, 2021",
+      "year": 2021,
+      "matched_by": "title-search",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "54ca116f1e9a45768a3a2c47a4608ff34adefa0c",
+        "corpusId": 237264044,
+        "title": "Therapeutics Data Commons: Machine Learning Datasets and Tasks for Drug Discovery and Development",
+        "url": "https://www.semanticscholar.org/paper/54ca116f1e9a45768a3a2c47a4608ff34adefa0c",
+        "venue": "NeurIPS Datasets and Benchmarks",
+        "year": 2021,
+        "publicationDate": "2021-02-18",
+        "citationCount": 413,
+        "influentialCitationCount": 54,
+        "referenceCount": 181,
+        "externalIds": {
+          "DBLP": "conf/nips/HuangFG0RLCXSZ21",
+          "ArXiv": "2102.09548",
+          "CorpusId": 237264044
+        },
+        "authors": [
+          "Kexin Huang",
+          "Tianfan Fu",
+          "Wenhao Gao",
+          "Yue Zhao",
+          "Yusuf H. Roohani",
+          "J. Leskovec",
+          "Connor W. Coley",
+          "Cao Xiao"
+        ]
+      }
+    },
+    {
+      "id": "conference-data-denoising-scrna",
+      "title": "A Data Denoising Approach to Optimize Functional Clustering of Single Cell RNA-sequencing Data",
+      "venue": "IEEE BIBM, 2020",
+      "year": 2020,
+      "matched_by": "title-search",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "06673b2410b919a26c4ca4c923f2d4780a0adddd",
+        "corpusId": 231618271,
+        "title": "A data denoising approach to optimize functional clustering of single cell RNA-sequencing data",
+        "url": "https://www.semanticscholar.org/paper/06673b2410b919a26c4ca4c923f2d4780a0adddd",
+        "venue": "IEEE International Conference on Bioinformatics and Biomedicine",
+        "year": 2020,
+        "publicationDate": "2020-12-16",
+        "citationCount": 2,
+        "influentialCitationCount": 0,
+        "referenceCount": 13,
+        "externalIds": {
+          "DBLP": "conf/bibm/WanJZCCWZ20",
+          "DOI": "10.1109/BIBM49941.2020.9313483",
+          "CorpusId": 231618271
+        },
+        "authors": [
+          "Changlin Wan",
+          "D. Jia",
+          "Yue Zhao",
+          "Wennan Chang",
+          "Sha Cao",
+          "Xiao Wang",
+          "Chi Zhang"
+        ]
+      }
+    },
+    {
+      "id": "conference-autoaudit",
+      "title": "AutoAudit: Mining Accounting and Time-Evolving Graphs",
+      "venue": "IEEE BigData, 2020",
+      "year": 2020,
+      "matched_by": "title-search",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "f6eb5977ca5980d6fd0b32e96a01ff9f4bb82b57",
+        "corpusId": 226226486,
+        "title": "AutoAudit: Mining Accounting and Time-Evolving Graphs",
+        "url": "https://www.semanticscholar.org/paper/f6eb5977ca5980d6fd0b32e96a01ff9f4bb82b57",
+        "venue": "2020 IEEE International Conference on Big Data (Big Data)",
+        "year": 2020,
+        "publicationDate": "2020-11-01",
+        "citationCount": 37,
+        "influentialCitationCount": 4,
+        "referenceCount": 28,
+        "externalIds": {
+          "DBLP": "journals/corr/abs-2011-00447",
+          "ArXiv": "2011.00447",
+          "MAG": "3096617130",
+          "DOI": "10.1109/BigData50022.2020.9378346",
+          "CorpusId": 226226486
+        },
+        "authors": [
+          "Meng-Chieh Lee",
+          "Yue Zhao",
+          "Aluna Wang",
+          "P. Liang",
+          "L. Akoglu",
+          "V. Tseng",
+          "C. Faloutsos"
+        ]
+      }
+    },
+    {
+      "id": "conference-copod",
+      "title": "COPOD: Copula-Based Outlier Detection",
+      "venue": "IEEE ICDM, 2020",
+      "year": 2020,
+      "matched_by": "title-search",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "ba2061d70b2b2ef881bced2fd5898e2bd4ee7a70",
+        "corpusId": 221819414,
+        "title": "COPOD: Copula-Based Outlier Detection",
+        "url": "https://www.semanticscholar.org/paper/ba2061d70b2b2ef881bced2fd5898e2bd4ee7a70",
+        "venue": "Industrial Conference on Data Mining",
+        "year": 2020,
+        "publicationDate": "2020-09-20",
+        "citationCount": 401,
+        "influentialCitationCount": 38,
+        "referenceCount": 15,
+        "externalIds": {
+          "DBLP": "conf/icdm/LiZBIH20",
+          "ArXiv": "2009.09463",
+          "MAG": "3087668759",
+          "DOI": "10.1109/ICDM50108.2020.00135",
+          "CorpusId": 221819414
+        },
+        "authors": [
+          "Zheng Li",
+          "Yue Zhao",
+          "N. Botta",
+          "C. Ionescu",
+          "Xiyang Hu"
+        ]
+      }
+    },
+    {
+      "id": "workshop-combo",
+      "title": "Combining Machine Learning Models using combo Library",
+      "venue": "AAAI (Demo), 2020",
+      "year": 2020,
+      "matched_by": "title-search",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "4fd8a1fbf3a1d1a4992d37af4d0fcabed212425c",
+        "corpusId": 204743799,
+        "title": "Combining Machine Learning Models using combo Library",
+        "url": "https://www.semanticscholar.org/paper/4fd8a1fbf3a1d1a4992d37af4d0fcabed212425c",
+        "venue": "AAAI Conference on Artificial Intelligence",
+        "year": 2019,
+        "publicationDate": "2019-09-21",
+        "citationCount": 11,
+        "influentialCitationCount": 0,
+        "referenceCount": 10,
+        "externalIds": {
+          "DBLP": "conf/aaai/ZhaoWCD20",
+          "MAG": "3038113349",
+          "ArXiv": "1910.07988",
+          "DOI": "10.1609/aaai.v34i09.7111",
+          "CorpusId": 204743799
+        },
+        "authors": [
+          "Yue Zhao",
+          "Xuejian Wang",
+          "Cheng Cheng",
+          "Xueying Ding"
+        ]
+      }
+    },
+    {
+      "id": "conference-dsr",
+      "title": "DSR: An Accurate Single Image Super Resolution Approach for Various Degradations",
+      "venue": "IEEE ICME, 2020",
+      "year": 2020,
+      "matched_by": "title-search",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "f6ee031cce4c45201dcaedd768efb9808bd14387",
+        "corpusId": 221120815,
+        "title": "Dsr: An Accurate Single Image Super Resolution Approach For Various Degradations",
+        "url": "https://www.semanticscholar.org/paper/f6ee031cce4c45201dcaedd768efb9808bd14387",
+        "venue": "IEEE International Conference on Multimedia and Expo",
+        "year": 2020,
+        "publicationDate": "2020-07-01",
+        "citationCount": 6,
+        "influentialCitationCount": 0,
+        "referenceCount": 21,
+        "externalIds": {
+          "DBLP": "conf/icmcs/Mei0L20",
+          "MAG": "3034373993",
+          "DOI": "10.1109/ICME46284.2020.9102941",
+          "CorpusId": 221120815
+        },
+        "authors": [
+          "Yiqun Mei",
+          "Yue Zhao",
+          "W. Liang"
+        ]
+      }
+    },
+    {
+      "id": "workshop-suod-aaai2020",
+      "title": "SUOD: Toward Scalable Unsupervised Outlier Detection",
+      "venue": "AAAI Workshop, 2020",
+      "year": 2020,
+      "matched_by": "identifier:ARXIV",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "5eeb8200e270f00bc2c8cf64b7c966e961460e56",
+        "corpusId": 208305424,
+        "title": "SUOD: Toward Scalable Unsupervised Outlier Detection",
+        "url": "https://www.semanticscholar.org/paper/5eeb8200e270f00bc2c8cf64b7c966e961460e56",
+        "venue": "arXiv.org",
+        "year": 2020,
+        "publicationDate": "2020-02-08",
+        "citationCount": 8,
+        "influentialCitationCount": 1,
+        "referenceCount": 38,
+        "externalIds": {
+          "ArXiv": "2002.03222",
+          "DBLP": "journals/corr/abs-2002-03222",
+          "MAG": "3004854517",
+          "CorpusId": 208305424
+        },
+        "authors": [
+          "Yue Zhao",
+          "Xueying Ding",
+          "Jianing Yang",
+          "Haoping Bai"
+        ]
+      }
+    },
+    {
+      "id": "workshop-sync-icdmw",
+      "title": "SynC: A Copula based Framework for Generating Synthetic Data from Aggregated Sources",
+      "venue": "IEEE ICDMW, 2020",
+      "year": 2020,
+      "matched_by": "title-search",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "69290c24a67857804054eb1913286f08cb2f87ff",
+        "corpusId": 221818867,
+        "title": "SynC: A Copula based Framework for Generating Synthetic Data from Aggregated Sources",
+        "url": "https://www.semanticscholar.org/paper/69290c24a67857804054eb1913286f08cb2f87ff",
+        "venue": "2020 International Conference on Data Mining Workshops (ICDMW)",
+        "year": 2020,
+        "publicationDate": "2020-09-20",
+        "citationCount": 36,
+        "influentialCitationCount": 3,
+        "referenceCount": 34,
+        "externalIds": {
+          "DBLP": "journals/corr/abs-2009-09471",
+          "MAG": "3087148058",
+          "ArXiv": "2009.09471",
+          "DOI": "10.1109/ICDMW51313.2020.00082",
+          "CorpusId": 221818867
+        },
+        "authors": [
+          "Zheng Li",
+          "Yue Zhao",
+          "Jialin Fu"
+        ]
+      }
+    },
+    {
+      "id": "workshop-sync-aaai",
+      "title": "SynC: A Unified Framework for Generating Synthetic Population with Gaussian Copula",
+      "venue": "AAAI Workshop, 2020",
+      "year": 2020,
+      "matched_by": "identifier:ARXIV",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "c3175ff0dc5f1b1e67c9cae1c40a2a809c0792ab",
+        "corpusId": 119310800,
+        "title": "SynC: A Unified Framework for Generating Synthetic Population with Gaussian Copula",
+        "url": "https://www.semanticscholar.org/paper/c3175ff0dc5f1b1e67c9cae1c40a2a809c0792ab",
+        "venue": "arXiv.org",
+        "year": 2019,
+        "publicationDate": "2019-04-16",
+        "citationCount": 9,
+        "influentialCitationCount": 0,
+        "referenceCount": 42,
+        "externalIds": {
+          "MAG": "2939259040",
+          "DBLP": "journals/corr/abs-1904-07998",
+          "ArXiv": "1904.07998",
+          "CorpusId": 119310800
+        },
+        "authors": [
+          "Colin Wan",
+          "Zheng Li",
+          "Yue Zhao"
+        ]
+      }
+    },
+    {
+      "id": "conference-lscp",
+      "title": "LSCP: Locally Selective Combination in Parallel Outlier Ensembles",
+      "venue": "SDM, 2019",
+      "year": 2019,
+      "matched_by": "title-search",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "6d5e8e85ca8120bbd7983e6850a11aced1e27a7b",
+        "corpusId": 54445467,
+        "title": "LSCP: Locally Selective Combination in Parallel Outlier Ensembles",
+        "url": "https://www.semanticscholar.org/paper/6d5e8e85ca8120bbd7983e6850a11aced1e27a7b",
+        "venue": "SDM",
+        "year": 2018,
+        "publicationDate": "2018-12-04",
+        "citationCount": 151,
+        "influentialCitationCount": 13,
+        "referenceCount": 41,
+        "externalIds": {
+          "DBLP": "conf/sdm/ZhaoNHL19",
+          "MAG": "2902415114",
+          "ArXiv": "1812.01528",
+          "DOI": "10.1137/1.9781611975673.66",
+          "CorpusId": 54445467
+        },
+        "authors": [
+          "Yue Zhao",
+          "M. K. Hryniewicki",
+          "Zain Nasrullah",
+          "Zheng Li"
+        ]
+      }
+    },
+    {
+      "id": "conference-music-artist-crnn",
+      "title": "Music Artist Classification with Convolutional Recurrent Neural Networks",
+      "venue": "IJCNN, 2019",
+      "year": 2019,
+      "matched_by": "title-search",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "fd0668757e0b6354f8212a4029792563f686ebf2",
+        "corpusId": 58006486,
+        "title": "Music Artist Classification with Convolutional Recurrent Neural Networks",
+        "url": "https://www.semanticscholar.org/paper/fd0668757e0b6354f8212a4029792563f686ebf2",
+        "venue": "IEEE International Joint Conference on Neural Network",
+        "year": 2019,
+        "publicationDate": "2019-01-14",
+        "citationCount": 51,
+        "influentialCitationCount": 6,
+        "referenceCount": 36,
+        "externalIds": {
+          "DBLP": "conf/ijcnn/NasrullahZ19",
+          "MAG": "2977423666",
+          "ArXiv": "1901.04555",
+          "DOI": "10.1109/IJCNN.2019.8851988",
+          "CorpusId": 58006486
+        },
+        "authors": [
+          "Zain Nasrullah",
+          "Yue Zhao"
+        ]
+      }
+    },
+    {
+      "id": "workshop-dcso",
+      "title": "DCSO: Dynamic Combination of Detector Scores for Outlier Ensembles",
+      "venue": "KDD Workshop, 2018",
+      "year": 2018,
+      "matched_by": "identifier:ARXIV",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "84982ceb485f86d38b807565ab5f6aab0b0e36e6",
+        "corpusId": 53475766,
+        "title": "DCSO: Dynamic Combination of Detector Scores for Outlier Ensembles",
+        "url": "https://www.semanticscholar.org/paper/84982ceb485f86d38b807565ab5f6aab0b0e36e6",
+        "venue": "arXiv.org",
+        "year": 2019,
+        "publicationDate": "2019-11-23",
+        "citationCount": 25,
+        "influentialCitationCount": 2,
+        "referenceCount": 39,
+        "externalIds": {
+          "DBLP": "journals/corr/abs-1911-10418",
+          "MAG": "2989818618",
+          "ArXiv": "1911.10418",
+          "CorpusId": 53475766
+        },
+        "authors": [
+          "Yue Zhao"
+        ]
+      }
+    },
+    {
+      "id": "conference-employee-turnover",
+      "title": "Employee Turnover Prediction with Machine Learning: A Reliable Approach",
+      "venue": "IntelliSys, 2018",
+      "year": 2018,
+      "matched_by": "title-search",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "16a031e95e2848c9a8f70a995a1c202079464303",
+        "corpusId": 62981809,
+        "title": "Employee Turnover Prediction with Machine Learning: A Reliable Approach",
+        "url": "https://www.semanticscholar.org/paper/16a031e95e2848c9a8f70a995a1c202079464303",
+        "venue": "Intelligent Systems with Applications",
+        "year": 2018,
+        "publicationDate": "2018-09-06",
+        "citationCount": 144,
+        "influentialCitationCount": 5,
+        "referenceCount": 44,
+        "externalIds": {
+          "MAG": "2900215310",
+          "DBLP": "conf/intellisys/ZhaoHCFZ18",
+          "DOI": "10.1007/978-3-030-01057-7_56",
+          "CorpusId": 62981809
+        },
+        "authors": [
+          "Yue Zhao",
+          "M. K. Hryniewicki",
+          "Francesca Cheng",
+          "Boyang Fu",
+          "Xiaoyu Zhu"
+        ]
+      }
+    },
+    {
+      "id": "conference-xgbod",
+      "title": "XGBOD: Improving Supervised Outlier Detection with Unsupervised Representation Learning",
+      "venue": "IJCNN, 2018",
+      "year": 2018,
+      "matched_by": "title-search",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "49785334abf54313682b940c25e7a52cdbe941e9",
+        "corpusId": 52988666,
+        "title": "XGBOD: Improving Supervised Outlier Detection with Unsupervised Representation Learning",
+        "url": "https://www.semanticscholar.org/paper/49785334abf54313682b940c25e7a52cdbe941e9",
+        "venue": "IEEE International Joint Conference on Neural Network",
+        "year": 2018,
+        "publicationDate": "2018-07-01",
+        "citationCount": 146,
+        "influentialCitationCount": 17,
+        "referenceCount": 31,
+        "externalIds": {
+          "MAG": "2991113470",
+          "ArXiv": "1912.00290",
+          "DBLP": "conf/ijcnn/ZhaoH18",
+          "DOI": "10.1109/IJCNN.2018.8489605",
+          "CorpusId": 52988666
+        },
+        "authors": [
+          "Yue Zhao",
+          "M. K. Hryniewicki"
+        ]
+      }
+    },
+    {
+      "id": "conference-touch-auth-smartwatch",
+      "title": "An Empirical Study of Touch-based Authentication Methods on Smartwatches",
+      "venue": "ISWC, 2017",
+      "year": 2017,
+      "matched_by": "identifier:ARXIV",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "e86e988d3f5d25fe8482a130b61e86b0a5ed50ee",
+        "corpusId": 2877971,
+        "title": "An empirical study of touch-based authentication methods on smartwatches",
+        "url": "https://www.semanticscholar.org/paper/e86e988d3f5d25fe8482a130b61e86b0a5ed50ee",
+        "venue": "International Workshop on the Semantic Web",
+        "year": 2017,
+        "publicationDate": "2017-09-11",
+        "citationCount": 11,
+        "influentialCitationCount": 1,
+        "referenceCount": 15,
+        "externalIds": {
+          "DBLP": "journals/corr/abs-1710-04608",
+          "ArXiv": "1710.04608",
+          "MAG": "2752952544",
+          "DOI": "10.1145/3123021.3123049",
+          "CorpusId": 2877971
+        },
+        "authors": [
+          "Yue Zhao",
+          "Z. Qiu",
+          "Yiqing Yang",
+          "Weiwei Li",
+          "Mingming Fan"
+        ]
+      }
+    },
+    {
+      "id": "journal-don-t-let-it-hallucinate-premise-verification-via-retrieval-augmented-logical-reasoning",
+      "title": "Don’t Let It Hallucinate: Premise Verification via Retrieval-Augmented Logical Reasoning",
+      "venue": "Transactions on Machine Learning Research (TMLR), 2026",
+      "year": 2026,
+      "matched_by": "identifier:ARXIV",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "c46b80340f397511625c250438435460d1b66909",
+        "corpusId": 277634095,
+        "title": "Don't Let It Hallucinate: Premise Verification via Retrieval-Augmented Logical Reasoning",
+        "url": "https://www.semanticscholar.org/paper/c46b80340f397511625c250438435460d1b66909",
+        "venue": "Trans. Mach. Learn. Res.",
+        "year": 2025,
+        "publicationDate": "2025-04-08",
+        "citationCount": 9,
+        "influentialCitationCount": 0,
+        "referenceCount": 48,
+        "externalIds": {
+          "ArXiv": "2504.06438",
+          "DBLP": "journals/tmlr/QinLNYZM26",
+          "DOI": "10.48550/arXiv.2504.06438",
+          "CorpusId": 277634095
+        },
+        "authors": [
+          "Yuehan Qin",
+          "Li Li",
+          "Yi Nian",
+          "Xinyan Velocity Yu",
+          "Yue Zhao",
+          "Xuezhe Ma"
+        ]
+      }
+    },
+    {
+      "id": "journal-lego-learn-label-efficient-graph-open-set-learning",
+      "title": "LEGO-Learn: Label-Efficient Graph Open-Set Learning",
+      "venue": "Transactions on Machine Learning Research (TMLR), 2025",
+      "year": 2025,
+      "matched_by": "title-search",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "f1861e3438c986382aac6ec4a6d1bbde5560c52d",
+        "corpusId": 273507218,
+        "title": "LEGO-Learn: Label-Efficient Graph Open-Set Learning",
+        "url": "https://www.semanticscholar.org/paper/f1861e3438c986382aac6ec4a6d1bbde5560c52d",
+        "venue": "Trans. Mach. Learn. Res.",
+        "year": 2024,
+        "publicationDate": "2024-10-21",
+        "citationCount": 12,
+        "influentialCitationCount": 0,
+        "referenceCount": 54,
+        "externalIds": {
+          "DBLP": "journals/corr/abs-2410-16386",
+          "ArXiv": "2410.16386",
+          "DOI": "10.48550/arXiv.2410.16386",
+          "CorpusId": 273507218
+        },
+        "authors": [
+          "Haoyan Xu",
+          "Kay Liu",
+          "Z. Yao",
+          "Philip S. Yu",
+          "Kaize Ding",
+          "Yue Zhao"
+        ]
+      }
+    },
+    {
+      "id": "journal-nng-mix-improving-semi-supervised-anomaly-detection-with-pseudo-anomaly-generation",
+      "title": "NNG-Mix: Improving Semi-supervised Anomaly Detection with Pseudo-anomaly Generation",
+      "venue": "IEEE Transactions on Neural Networks and Learning Systems, 2024",
+      "year": 2024,
+      "matched_by": "identifier:ARXIV",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "7f278c6b9fea0bdda5efa7e354f18afae8ed76d5",
+        "corpusId": 265295323,
+        "title": "NNG-Mix: Improving Semi-Supervised Anomaly Detection With Pseudo-Anomaly Generation",
+        "url": "https://www.semanticscholar.org/paper/7f278c6b9fea0bdda5efa7e354f18afae8ed76d5",
+        "venue": "IEEE Transactions on Neural Networks and Learning Systems",
+        "year": 2023,
+        "publicationDate": "2023-11-20",
+        "citationCount": 24,
+        "influentialCitationCount": 1,
+        "referenceCount": 64,
+        "externalIds": {
+          "DBLP": "journals/tnn/DongFZCF25",
+          "ArXiv": "2311.11961",
+          "DOI": "10.1109/TNNLS.2024.3497801",
+          "CorpusId": 265295323,
+          "PubMed": "40030225"
+        },
+        "authors": [
+          "Hao Dong",
+          "Gaëtan Frusque",
+          "Yue Zhao",
+          "Eleni Chatzi",
+          "Olga Fink"
+        ]
+      }
+    },
+    {
+      "id": "journal-diffusion-models-a-comprehensive-survey-of-methods-and-applications",
+      "title": "Diffusion Models: A Comprehensive Survey of Methods and Applications",
+      "venue": "ACM Computing Surveys, 2023",
+      "year": 2023,
+      "matched_by": "identifier:ARXIV",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "e342165a614588878ad0f4bc9bacf3905df34d08",
+        "corpusId": 252070859,
+        "title": "Diffusion Models: A Comprehensive Survey of Methods and Applications",
+        "url": "https://www.semanticscholar.org/paper/e342165a614588878ad0f4bc9bacf3905df34d08",
+        "venue": "ACM Computing Surveys",
+        "year": 2022,
+        "publicationDate": "2022-09-02",
+        "citationCount": 2145,
+        "influentialCitationCount": 70,
+        "referenceCount": 393,
+        "externalIds": {
+          "DBLP": "journals/csur/YangZSHXZZCY24",
+          "ArXiv": "2209.00796",
+          "DOI": "10.1145/3626235",
+          "CorpusId": 252070859
+        },
+        "authors": [
+          "Ling Yang",
+          "Zhilong Zhang",
+          "Shenda Hong",
+          "Runsheng Xu",
+          "Yue Zhao",
+          "Yingxia Shao",
+          "Wentao Zhang",
+          "Ming-Hsuan Yang"
+        ]
+      }
+    },
+    {
+      "id": "journal-the-need-for-unsupervised-outlier-model-selection-a-review-and-evaluation-of-internal-evaluation-strategies",
+      "title": "The Need for Unsupervised Outlier Model Selection: A Review and Evaluation of Internal Evaluation Strategies",
+      "venue": "ACM SIGKDD Explorations Newsletter, 2023",
+      "year": 2023,
+      "matched_by": "title-search",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "94247afc9114dcbc7dee149f74ff42524edf493c",
+        "corpusId": 259343328,
+        "title": "The Need for Unsupervised Outlier Model Selection: A Review and Evaluation of Internal Evaluation Strategies",
+        "url": "https://www.semanticscholar.org/paper/94247afc9114dcbc7dee149f74ff42524edf493c",
+        "venue": "SIGKDD Explorations",
+        "year": 2023,
+        "publicationDate": "2023-06-22",
+        "citationCount": 49,
+        "influentialCitationCount": 2,
+        "referenceCount": 58,
+        "externalIds": {
+          "DBLP": "journals/sigkdd/Ma0ZA23",
+          "DOI": "10.1145/3606274.3606277",
+          "CorpusId": 259343328
+        },
+        "authors": [
+          "Martin Q. Ma",
+          "Yue Zhao",
+          "Xiaorong Zhang",
+          "L. Akoglu"
+        ]
+      }
+    },
+    {
+      "id": "journal-artificial-intelligence-foundation-for-therapeutic-science",
+      "title": "Artificial Intelligence Foundation for Therapeutic Science",
+      "venue": "Nature Chemical Biology, 2022",
+      "year": 2022,
+      "matched_by": "title-search",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "e017e0034fba16b37958b517064d9bf7ecac5f54",
+        "corpusId": 252436971,
+        "title": "Artificial intelligence foundation for therapeutic science",
+        "url": "https://www.semanticscholar.org/paper/e017e0034fba16b37958b517064d9bf7ecac5f54",
+        "venue": "Nature Chemical Biology",
+        "year": 2022,
+        "publicationDate": "2022-09-21",
+        "citationCount": 174,
+        "influentialCitationCount": 7,
+        "referenceCount": 22,
+        "externalIds": {
+          "DOI": "10.1038/s41589-022-01131-2",
+          "CorpusId": 252436971,
+          "PubMed": "36131149"
+        },
+        "authors": [
+          "Kexin Huang",
+          "Tianfan Fu",
+          "Wenhao Gao",
+          "Yue Zhao",
+          "Yusuf H. Roohani",
+          "J. Leskovec",
+          "Connor W. Coley",
+          "Cao Xiao"
+        ]
+      }
+    },
+    {
+      "id": "journal-ecod-unsupervised-outlier-detection-using-empirical-cumulative-distribution-functions",
+      "title": "ECOD: Unsupervised Outlier Detection Using Empirical Cumulative Distribution Functions",
+      "venue": "TKDE, 2022",
+      "year": 2022,
+      "matched_by": "identifier:ARXIV",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "5a212bb4307008f27018edc0b8d873f4e9657d17",
+        "corpusId": 245650768,
+        "title": "ECOD: Unsupervised Outlier Detection Using Empirical Cumulative Distribution Functions",
+        "url": "https://www.semanticscholar.org/paper/5a212bb4307008f27018edc0b8d873f4e9657d17",
+        "venue": "IEEE Transactions on Knowledge and Data Engineering",
+        "year": 2022,
+        "publicationDate": "2022-01-02",
+        "citationCount": 449,
+        "influentialCitationCount": 41,
+        "referenceCount": 80,
+        "externalIds": {
+          "DBLP": "journals/corr/abs-2201-00382",
+          "ArXiv": "2201.00382",
+          "DOI": "10.1109/TKDE.2022.3159580",
+          "CorpusId": 245650768
+        },
+        "authors": [
+          "Zheng Li",
+          "Yue Zhao",
+          "Xiyang Hu",
+          "N. Botta",
+          "C. Ionescu",
+          "George H. Chen"
+        ]
+      }
+    },
+    {
+      "id": "journal-pyod-a-python-toolbox-for-scalable-outlier-detection",
+      "title": "PyOD: A Python Toolbox for Scalable Outlier Detection",
+      "venue": "JMLR, 2019.",
+      "year": 2019,
+      "matched_by": "title-search",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "5239f449210b089b75ab335fc74720dbf2e02b58",
+        "corpusId": 57573700,
+        "title": "PyOD: A Python Toolbox for Scalable Outlier Detection",
+        "url": "https://www.semanticscholar.org/paper/5239f449210b089b75ab335fc74720dbf2e02b58",
+        "venue": "Journal of machine learning research",
+        "year": 2019,
+        "publicationDate": "2019-01-06",
+        "citationCount": 871,
+        "influentialCitationCount": 59,
+        "referenceCount": 33,
+        "externalIds": {
+          "MAG": "2963445059",
+          "ArXiv": "1901.01588",
+          "DBLP": "journals/jmlr/ZhaoNL19",
+          "CorpusId": 57573700
+        },
+        "authors": [
+          "Yue Zhao",
+          "Zain Nasrullah",
+          "Zheng Li"
+        ]
+      }
+    },
+    {
+      "id": "preprint-cat-dpo",
+      "title": "Cat-DPO: Category-Adaptive Safety Alignment",
+      "venue": "arXiv preprint",
+      "year": 2026,
+      "matched_by": "identifier:ARXIV",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "8a8fd0ee96f166abb64ffb5818ce9fdeadee7e67",
+        "corpusId": 287634673,
+        "title": "Cat-DPO: Category-Adaptive Safety Alignment",
+        "url": "https://www.semanticscholar.org/paper/8a8fd0ee96f166abb64ffb5818ce9fdeadee7e67",
+        "venue": "",
+        "year": 2026,
+        "publicationDate": "2026-04-19",
+        "citationCount": 0,
+        "influentialCitationCount": 0,
+        "referenceCount": 44,
+        "externalIds": {
+          "ArXiv": "2604.17299",
+          "CorpusId": 287634673
+        },
+        "authors": [
+          "Tiankai Yang",
+          "Yi Nian",
+          "Xinyuan Li",
+          "Ruiyao Xu",
+          "Kaize Ding",
+          "Yue Zhao"
+        ]
+      }
+    },
+    {
+      "id": "conference-auditable-agents-knowfm",
+      "title": "Auditable Agents",
+      "venue": "ACL Workshop on Towards Knowledgeable Foundation Models (KnowFM), 2026",
+      "year": 2026,
+      "matched_by": "identifier:ARXIV",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "68b36166fc40be04f47379c336e3c4497b9e624d",
+        "corpusId": 287208542,
+        "title": "Auditable Agents",
+        "url": "https://www.semanticscholar.org/paper/68b36166fc40be04f47379c336e3c4497b9e624d",
+        "venue": "",
+        "year": 2026,
+        "publicationDate": "2026-04-07",
+        "citationCount": 1,
+        "influentialCitationCount": 0,
+        "referenceCount": 38,
+        "externalIds": {
+          "ArXiv": "2604.05485",
+          "CorpusId": 287208542
+        },
+        "authors": [
+          "Yi Nian",
+          "Aojie Yuan",
+          "Haiyu Zhang",
+          "Jiate Li",
+          "Yue Zhao"
+        ]
+      }
+    },
+    {
+      "id": "preprint-cross-user-contamination",
+      "title": "No Attacker Needed: Unintentional Cross-User Contamination in Shared-State LLM Agents",
+      "venue": "arXiv preprint",
+      "year": 2026,
+      "matched_by": "identifier:ARXIV",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "ddf10be49bd029082fd421a32268a9ecf158df35",
+        "corpusId": 287072279,
+        "title": "No Attacker Needed: Unintentional Cross-User Contamination in Shared-State LLM Agents",
+        "url": "https://www.semanticscholar.org/paper/ddf10be49bd029082fd421a32268a9ecf158df35",
+        "venue": "",
+        "year": 2026,
+        "publicationDate": "2026-04-01",
+        "citationCount": 1,
+        "influentialCitationCount": 0,
+        "referenceCount": 51,
+        "externalIds": {
+          "ArXiv": "2604.01350",
+          "CorpusId": 287072279
+        },
+        "authors": [
+          "Tiankai Yang",
+          "Jiate Li",
+          "Yi Nian",
+          "Shen Dong",
+          "Ruiyao Xu",
+          "Ryan A. Rossi",
+          "Kaize Ding",
+          "Yue Zhao"
+        ]
+      }
+    },
+    {
+      "id": "preprint-someone-hid-it",
+      "title": "\"Someone Hid It\": Query-Agnostic Black-Box Attacks on LLM-Based Retrieval",
+      "venue": "arXiv preprint",
+      "year": 2026,
+      "matched_by": "identifier:ARXIV",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "123d2022dec4316921afc1cac16194d8c4bdccad",
+        "corpusId": 285270212,
+        "title": "\"Someone Hid It\": Query-Agnostic Black-Box Attacks on LLM-Based Retrieval",
+        "url": "https://www.semanticscholar.org/paper/123d2022dec4316921afc1cac16194d8c4bdccad",
+        "venue": "arXiv.org",
+        "year": 2026,
+        "publicationDate": "2026-01-30",
+        "citationCount": 2,
+        "influentialCitationCount": 0,
+        "referenceCount": 40,
+        "externalIds": {
+          "DBLP": "journals/corr/abs-2602-00364",
+          "ArXiv": "2602.00364",
+          "DOI": "10.48550/arXiv.2602.00364",
+          "CorpusId": 285270212
+        },
+        "authors": [
+          "Jiate Li",
+          "Defu Cao",
+          "Li Li",
+          "Wei Yang",
+          "Yuehan Qin",
+          "Chenxiao Yu",
+          "Tiannuo Yang",
+          "Ryan A. Rossi"
+        ]
+      }
+    },
+    {
+      "id": "preprint-aegis",
+      "title": "AEGIS: No Tool Call Left Unchecked -- A Pre-Execution Firewall and Audit Layer for AI Agents",
+      "venue": "arXiv preprint",
+      "year": 2026,
+      "matched_by": "identifier:ARXIV",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "c67408b6affa8d47e7bd1cf82798eea8a59fde4c",
+        "corpusId": 286517472,
+        "title": "AEGIS: No Tool Call Left Unchecked -- A Pre-Execution Firewall and Audit Layer for AI Agents",
+        "url": "https://www.semanticscholar.org/paper/c67408b6affa8d47e7bd1cf82798eea8a59fde4c",
+        "venue": "",
+        "year": 2026,
+        "publicationDate": "2026-03-13",
+        "citationCount": 1,
+        "influentialCitationCount": 0,
+        "referenceCount": 17,
+        "externalIds": {
+          "ArXiv": "2603.12621",
+          "CorpusId": 286517472
+        },
+        "authors": [
+          "Aojie Yuan",
+          "Zhiyuan Su",
+          "Yue Zhao"
+        ]
+      }
+    },
+    {
+      "id": "preprint-agent-audit",
+      "title": "Agent Audit: A Security Analysis System for LLM Agent Applications",
+      "venue": "arXiv preprint",
+      "year": 2026,
+      "matched_by": "identifier:ARXIV",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "d39238464760ae9c9f884f390efd0c2ac37d52aa",
+        "corpusId": 286774601,
+        "title": "Agent Audit: A Security Analysis System for LLM Agent Applications",
+        "url": "https://www.semanticscholar.org/paper/d39238464760ae9c9f884f390efd0c2ac37d52aa",
+        "venue": "",
+        "year": 2026,
+        "publicationDate": "2026-03-24",
+        "citationCount": 3,
+        "influentialCitationCount": 0,
+        "referenceCount": 17,
+        "externalIds": {
+          "ArXiv": "2603.22853",
+          "CorpusId": 286774601
+        },
+        "authors": [
+          "Haiyu Zhang",
+          "Yi Nian",
+          "Yue Zhao"
+        ]
+      }
+    },
+    {
+      "id": "preprint-agent-banana",
+      "title": "Agent Banana: High-Fidelity Image Editing with Agentic Thinking and Tooling",
+      "venue": "arXiv preprint",
+      "year": 2026,
+      "matched_by": "identifier:ARXIV",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "3fad43c53fa50fae8e20c51c0cb9eb36943d7b91",
+        "corpusId": 285462350,
+        "title": "Agent Banana: High-Fidelity Image Editing with Agentic Thinking and Tooling",
+        "url": "https://www.semanticscholar.org/paper/3fad43c53fa50fae8e20c51c0cb9eb36943d7b91",
+        "venue": "arXiv.org",
+        "year": 2026,
+        "publicationDate": "2026-02-09",
+        "citationCount": 8,
+        "influentialCitationCount": 0,
+        "referenceCount": 56,
+        "externalIds": {
+          "DBLP": "journals/corr/abs-2602-09084",
+          "ArXiv": "2602.09084",
+          "DOI": "10.48550/arXiv.2602.09084",
+          "CorpusId": 285462350
+        },
+        "authors": [
+          "Ruijie Ye",
+          "Jiayi Zhang",
+          "Zhuoxin Liu",
+          "Zihao Zhu",
+          "Siyuan Yang",
+          "Li Li",
+          "Tianfu Fu",
+          "Franck Dernoncourt"
+        ]
+      }
+    },
+    {
+      "id": "preprint-benchmarking-knowledge-extraction-rag",
+      "title": "Benchmarking Knowledge-Extraction Attack and Defense on Retrieval-Augmented Generation",
+      "venue": "arXiv preprint",
+      "year": 2026,
+      "matched_by": "identifier:ARXIV",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "e0e8d5eab36868b810c744da4f631a2efdc09c48",
+        "corpusId": 285462357,
+        "title": "Benchmarking Knowledge-Extraction Attack and Defense on Retrieval-Augmented Generation",
+        "url": "https://www.semanticscholar.org/paper/e0e8d5eab36868b810c744da4f631a2efdc09c48",
+        "venue": "arXiv.org",
+        "year": 2026,
+        "publicationDate": "2026-02-10",
+        "citationCount": 1,
+        "influentialCitationCount": 0,
+        "referenceCount": 55,
+        "externalIds": {
+          "DBLP": "journals/corr/abs-2602-09319",
+          "ArXiv": "2602.09319",
+          "DOI": "10.48550/arXiv.2602.09319",
+          "CorpusId": 285462357
+        },
+        "authors": [
+          "Zhisheng Qi",
+          "Utkarsh Sahu",
+          "Li Ma",
+          "Haoyu Han",
+          "Ryan A. Rossi",
+          "Franck Dernoncourt",
+          "M. Halappanavar",
+          "Nesreen K. Ahmed"
+        ]
+      }
+    },
+    {
+      "id": "preprint-fairness-or-fluency",
+      "title": "Fairness or Fluency? An Investigation into Language Bias of Pairwise LLM-as-a-Judge",
+      "venue": "arXiv preprint",
+      "year": 2026,
+      "matched_by": "identifier:ARXIV",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "a6628e6a15b787a3dac4acbfeebed76d56c875d3",
+        "corpusId": 284911150,
+        "title": "Fairness or Fluency? An Investigation into Language Bias of Pairwise LLM-as-a-Judge",
+        "url": "https://www.semanticscholar.org/paper/a6628e6a15b787a3dac4acbfeebed76d56c875d3",
+        "venue": "arXiv.org",
+        "year": 2026,
+        "publicationDate": "2026-01-20",
+        "citationCount": 2,
+        "influentialCitationCount": 0,
+        "referenceCount": 30,
+        "externalIds": {
+          "DBLP": "journals/corr/abs-2601-13649",
+          "ArXiv": "2601.13649",
+          "DOI": "10.48550/arXiv.2601.13649",
+          "CorpusId": 284911150
+        },
+        "authors": [
+          "Xiaolin Zhou",
+          "Zheng Luo",
+          "Yicheng Gao",
+          "Qixuan Chen",
+          "Xiyang Hu",
+          "Yue Zhao",
+          "Ruishan Liu"
+        ]
+      }
+    },
+    {
+      "id": "conference-mgeo-knowfm",
+      "title": "Multimodal Generative Engine Optimization: Exploiting Cross-Modal Knowledge Grounding in VLM-Based Ranking",
+      "venue": "ACL Workshop on Towards Knowledgeable Foundation Models (KnowFM), 2026",
+      "year": 2026,
+      "matched_by": "identifier:ARXIV",
+      "title_match_score": 0.5859,
+      "s2": {
+        "paperId": "84564051e1c33812f1dfcf1ae4a73f7e59e654e3",
+        "corpusId": 284909900,
+        "title": "Multimodal Generative Engine Optimization: Rank Manipulation for Vision-Language Model Rankers",
+        "url": "https://www.semanticscholar.org/paper/84564051e1c33812f1dfcf1ae4a73f7e59e654e3",
+        "venue": "arXiv.org",
+        "year": 2026,
+        "publicationDate": "2026-01-18",
+        "citationCount": 1,
+        "influentialCitationCount": 0,
+        "referenceCount": 12,
+        "externalIds": {
+          "DBLP": "journals/corr/abs-2601-12263",
+          "ArXiv": "2601.12263",
+          "DOI": "10.48550/arXiv.2601.12263",
+          "CorpusId": 284909900
+        },
+        "authors": [
+          "Yixuan Du",
+          "Chenxiao Yu",
+          "Haoyan Xu",
+          "Ziyi Wang",
+          "Yue Zhao",
+          "Xiyang Hu"
+        ]
+      }
+    },
+    {
+      "id": "preprint-sovereign-os",
+      "title": "Sovereign-OS: A Charter-Governed Operating System for Autonomous AI Agents with Verifiable Fiscal Discipline",
+      "venue": "arXiv preprint",
+      "year": 2026,
+      "matched_by": "identifier:ARXIV",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "f819b738400f5e6485aca231f62e31a7374b9f1b",
+        "corpusId": 286572179,
+        "title": "Sovereign-OS: A Charter-Governed Operating System for Autonomous AI Agents with Verifiable Fiscal Discipline",
+        "url": "https://www.semanticscholar.org/paper/f819b738400f5e6485aca231f62e31a7374b9f1b",
+        "venue": "",
+        "year": 2026,
+        "publicationDate": "2026-03-14",
+        "citationCount": 1,
+        "influentialCitationCount": 0,
+        "referenceCount": 21,
+        "externalIds": {
+          "ArXiv": "2603.14011",
+          "CorpusId": 286572179
+        },
+        "authors": [
+          "Aojie Yuan",
+          "Haiyu Zhang",
+          "Ziyi Wang",
+          "Yue Zhao"
+        ]
+      }
+    },
+    {
+      "id": "preprint-autonomy-tax",
+      "title": "The Autonomy Tax: Defense Training Breaks LLM Agents",
+      "venue": "arXiv preprint",
+      "year": 2026,
+      "matched_by": "identifier:ARXIV",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "064e99edb10404a43f0aa04813a68ae6da2728e2",
+        "corpusId": 286751457,
+        "title": "The Autonomy Tax: Defense Training Breaks LLM Agents",
+        "url": "https://www.semanticscholar.org/paper/064e99edb10404a43f0aa04813a68ae6da2728e2",
+        "venue": "",
+        "year": 2026,
+        "publicationDate": "2026-03-19",
+        "citationCount": 1,
+        "influentialCitationCount": 0,
+        "referenceCount": 29,
+        "externalIds": {
+          "ArXiv": "2603.19423",
+          "CorpusId": 286751457
+        },
+        "authors": [
+          "Li Li",
+          "Yue Zhao"
+        ]
+      }
+    },
+    {
+      "id": "preprint-tracing-moral-foundations",
+      "title": "Tracing Moral Foundations in Large Language Models",
+      "venue": "arXiv preprint",
+      "year": 2026,
+      "matched_by": "identifier:ARXIV",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "42b5bfcdbd82a845a1f34800fd4940dbecd943a9",
+        "corpusId": 284597360,
+        "title": "Tracing Moral Foundations in Large Language Models",
+        "url": "https://www.semanticscholar.org/paper/42b5bfcdbd82a845a1f34800fd4940dbecd943a9",
+        "venue": "arXiv.org",
+        "year": 2026,
+        "publicationDate": "2026-01-09",
+        "citationCount": 2,
+        "influentialCitationCount": 0,
+        "referenceCount": 64,
+        "externalIds": {
+          "DBLP": "journals/corr/abs-2601-05437",
+          "ArXiv": "2601.05437",
+          "DOI": "10.48550/arXiv.2601.05437",
+          "CorpusId": 284597360
+        },
+        "authors": [
+          "Chenxiao Yu",
+          "Bowen Yi",
+          "Farzan Karimi-Malekabadi",
+          "Suhaib Abdurahman",
+          "Jin Ye",
+          "Shrikanth S. Narayanan",
+          "Yue Zhao",
+          "Morteza Dehghani"
+        ]
+      }
+    },
+    {
+      "id": "preprint-implicit-execution-tracing",
+      "title": "When Only the Final Text Survives: Implicit Execution Tracing for Multi-Agent Attribution",
+      "venue": "arXiv preprint",
+      "year": 2026,
+      "matched_by": "identifier:ARXIV",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "f0c3d9b3c6cb1fff572b24595bd6753023a5a781",
+        "corpusId": 286643540,
+        "title": "When Only the Final Text Survives: Implicit Execution Tracing for Multi-Agent Attribution",
+        "url": "https://www.semanticscholar.org/paper/f0c3d9b3c6cb1fff572b24595bd6753023a5a781",
+        "venue": "",
+        "year": 2026,
+        "publicationDate": "2026-03-18",
+        "citationCount": 2,
+        "influentialCitationCount": 0,
+        "referenceCount": 51,
+        "externalIds": {
+          "ArXiv": "2603.17445",
+          "CorpusId": 286643540
+        },
+        "authors": [
+          "Yi Nian",
+          "Haosen Cao",
+          "Shenzhe Zhu",
+          "Henry Peng Zou",
+          "Qingqing Luan",
+          "Yue Zhao"
+        ]
+      }
+    },
+    {
+      "id": "preprint-survey-mea-distributed",
+      "title": "A Survey of Model Extraction Attacks and Defenses in Distributed Computing Environments",
+      "venue": "arXiv preprint",
+      "year": 2025,
+      "matched_by": "identifier:ARXIV",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "7044d075fba8c188f716a25618d522c808a67a96",
+        "corpusId": 276575154,
+        "title": "A Survey of Model Extraction Attacks and Defenses in Distributed Computing Environments",
+        "url": "https://www.semanticscholar.org/paper/7044d075fba8c188f716a25618d522c808a67a96",
+        "venue": "arXiv.org",
+        "year": 2025,
+        "publicationDate": "2025-02-22",
+        "citationCount": 8,
+        "influentialCitationCount": 0,
+        "referenceCount": 60,
+        "externalIds": {
+          "DBLP": "journals/corr/abs-2502-16065",
+          "ArXiv": "2502.16065",
+          "DOI": "10.48550/arXiv.2502.16065",
+          "CorpusId": 276575154
+        },
+        "authors": [
+          "Kaixiang Zhao",
+          "Lincan Li",
+          "Kaize Ding",
+          "Neil Zhenqiang Gong",
+          "Yue Zhao",
+          "Yushun Dong"
+        ]
+      },
+      "duplicate_of": "conference-a-survey-on-model-extraction-attacks-and-defenses-for-large-language-models"
+    },
+    {
+      "id": "preprint-mea-graph-foundation",
+      "title": "A Systematic Study of Model Extraction Attacks on Graph Foundation Models",
+      "venue": "arXiv preprint",
+      "year": 2025,
+      "matched_by": "identifier:ARXIV",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "b04400b984ebb406b5d32ccc615081778dcebc8f",
+        "corpusId": 283072985,
+        "title": "A Systematic Study of Model Extraction Attacks on Graph Foundation Models",
+        "url": "https://www.semanticscholar.org/paper/b04400b984ebb406b5d32ccc615081778dcebc8f",
+        "venue": "arXiv.org",
+        "year": 2025,
+        "publicationDate": "2025-11-14",
+        "citationCount": 1,
+        "influentialCitationCount": 0,
+        "referenceCount": 45,
+        "externalIds": {
+          "ArXiv": "2511.11912",
+          "DBLP": "journals/corr/abs-2511-11912",
+          "DOI": "10.48550/arXiv.2511.11912",
+          "CorpusId": 283072985
+        },
+        "authors": [
+          "Haoyan Xu",
+          "Ruizhi Qian",
+          "Jiate Li",
+          "Yushun Dong",
+          "Minghao Lin",
+          "Hanson Yan",
+          "Zhengtao Yao",
+          "Qinghua Liu"
+        ]
+      }
+    },
+    {
+      "id": "preprint-mole-pair",
+      "title": "Can Molecular Foundation Models Know What They Don't Know? A Simple Remedy with Preference Optimization",
+      "venue": "arXiv preprint",
+      "year": 2025,
+      "matched_by": "identifier:ARXIV",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "2ec727753b0eede7d663ef6a1dee17814e882084",
+        "corpusId": 281682589,
+        "title": "Can Molecular Foundation Models Know What They Don't Know? A Simple Remedy with Preference Optimization",
+        "url": "https://www.semanticscholar.org/paper/2ec727753b0eede7d663ef6a1dee17814e882084",
+        "venue": "arXiv.org",
+        "year": 2025,
+        "publicationDate": "2025-09-29",
+        "citationCount": 1,
+        "influentialCitationCount": 0,
+        "referenceCount": 54,
+        "externalIds": {
+          "DBLP": "journals/corr/abs-2509-25509",
+          "ArXiv": "2509.25509",
+          "DOI": "10.48550/arXiv.2509.25509",
+          "CorpusId": 281682589
+        },
+        "authors": [
+          "Langzhou He",
+          "Junyou Zhu",
+          "Fangxin Wang",
+          "Junhua Liu",
+          "Haoyan Xu",
+          "Yue Zhao",
+          "Philip S. Yu",
+          "Qitian Wu"
+        ]
+      }
+    },
+    {
+      "id": "preprint-climatellm",
+      "title": "ClimateLLM: Efficient Weather Forecasting via Frequency-Aware Large Language Models",
+      "venue": "arXiv preprint",
+      "year": 2025,
+      "matched_by": "identifier:ARXIV",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "4bf24146ff102b640f191da50858f2f08a61d88f",
+        "corpusId": 276408298,
+        "title": "ClimateLLM: Efficient Weather Forecasting via Frequency-Aware Large Language Models",
+        "url": "https://www.semanticscholar.org/paper/4bf24146ff102b640f191da50858f2f08a61d88f",
+        "venue": "arXiv.org",
+        "year": 2025,
+        "publicationDate": "2025-02-16",
+        "citationCount": 10,
+        "influentialCitationCount": 1,
+        "referenceCount": 135,
+        "externalIds": {
+          "DBLP": "journals/corr/abs-2502-11059",
+          "ArXiv": "2502.11059",
+          "DOI": "10.48550/arXiv.2502.11059",
+          "CorpusId": 276408298
+        },
+        "authors": [
+          "Shixuan Li",
+          "Wei Yang",
+          "Peiyu Zhang",
+          "Xiongye Xiao",
+          "De-An Cao",
+          "Yuehan Qin",
+          "Xiaole Zhang",
+          "Yue Zhao"
+        ]
+      }
+    },
+    {
+      "id": "preprint-glip-ood",
+      "title": "GLIP-OOD: Zero-Shot Graph OOD Detection with Graph Foundation Model",
+      "venue": "arXiv preprint",
+      "year": 2025,
+      "matched_by": "identifier:ARXIV",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "4a4479acbe79402b7b8301e3d176dbb10541d6cd",
+        "corpusId": 278208241,
+        "title": "GLIP-OOD: Zero-Shot Graph OOD Detection with Graph Foundation Model",
+        "url": "https://www.semanticscholar.org/paper/4a4479acbe79402b7b8301e3d176dbb10541d6cd",
+        "venue": "",
+        "year": 2025,
+        "publicationDate": "2025-04-29",
+        "citationCount": 2,
+        "influentialCitationCount": 0,
+        "referenceCount": 36,
+        "externalIds": {
+          "ArXiv": "2504.21186",
+          "CorpusId": 278208241
+        },
+        "authors": [
+          "Haoyan Xu",
+          "Zhengtao Yao",
+          "Xuzhi Zhang",
+          "Ziyi Wang",
+          "Langzhou He",
+          "Yushun Dong",
+          "Philip S. Yu",
+          "Mengyuan Li"
+        ]
+      }
+    },
+    {
+      "id": "preprint-goe-llm",
+      "title": "Graph Synthetic Out-of-Distribution Exposure with Large Language Models",
+      "venue": "arXiv preprint",
+      "year": 2025,
+      "matched_by": "identifier:ARXIV",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "2b550cd50358675dbe8a2a97538c0bc26757ae86",
+        "corpusId": 278207621,
+        "title": "Graph Synthetic Out-of-Distribution Exposure with Large Language Models",
+        "url": "https://www.semanticscholar.org/paper/2b550cd50358675dbe8a2a97538c0bc26757ae86",
+        "venue": "arXiv.org",
+        "year": 2025,
+        "publicationDate": "2025-04-29",
+        "citationCount": 5,
+        "influentialCitationCount": 1,
+        "referenceCount": 37,
+        "externalIds": {
+          "DBLP": "journals/corr/abs-2504-21198",
+          "ArXiv": "2504.21198",
+          "DOI": "10.48550/arXiv.2504.21198",
+          "CorpusId": 278207621
+        },
+        "authors": [
+          "Haoyan Xu",
+          "Zhengtao Yao",
+          "Ziyi Wang",
+          "Zhan Cheng",
+          "Xiyang Hu",
+          "Mengyuan Li",
+          "Yue Zhao"
+        ]
+      }
+    },
+    {
+      "id": "preprint-tag-ad",
+      "title": "LLM-Powered Text-Attributed Graph Anomaly Detection via Retrieval-Augmented Reasoning",
+      "venue": "arXiv preprint",
+      "year": 2025,
+      "matched_by": "identifier:ARXIV",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "0abff425f52448fe874bced16f69468cb832545f",
+        "corpusId": 283243713,
+        "title": "LLM-Powered Text-Attributed Graph Anomaly Detection via Retrieval-Augmented Reasoning",
+        "url": "https://www.semanticscholar.org/paper/0abff425f52448fe874bced16f69468cb832545f",
+        "venue": "arXiv.org",
+        "year": 2025,
+        "publicationDate": "2025-11-16",
+        "citationCount": 1,
+        "influentialCitationCount": 0,
+        "referenceCount": 36,
+        "externalIds": {
+          "ArXiv": "2511.17584",
+          "DBLP": "journals/corr/abs-2511-17584",
+          "DOI": "10.48550/arXiv.2511.17584",
+          "CorpusId": 283243713
+        },
+        "authors": [
+          "Haoyan Xu",
+          "Ruizhi Qian",
+          "Zhengtao Yao",
+          "Ziyi Liu",
+          "Li Li",
+          "Yuqi Li",
+          "Yanshu Li",
+          "Wenqing Zheng"
+        ]
+      }
+    },
+    {
+      "id": "preprint-learning-route-llms-bandit",
+      "title": "Learning to Route LLMs from Bandit Feedback: One Policy, Many Trade-offs",
+      "venue": "arXiv preprint",
+      "year": 2025,
+      "matched_by": "identifier:ARXIV",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "50a1f84b32519800a96fec02081ce22151c3faa6",
+        "corpusId": 281951264,
+        "title": "Learning to Route LLMs from Bandit Feedback: One Policy, Many Trade-offs",
+        "url": "https://www.semanticscholar.org/paper/50a1f84b32519800a96fec02081ce22151c3faa6",
+        "venue": "arXiv.org",
+        "year": 2025,
+        "publicationDate": "2025-10-08",
+        "citationCount": 7,
+        "influentialCitationCount": 2,
+        "referenceCount": 36,
+        "externalIds": {
+          "ArXiv": "2510.07429",
+          "DBLP": "journals/corr/abs-2510-07429",
+          "DOI": "10.48550/arXiv.2510.07429",
+          "CorpusId": 281951264
+        },
+        "authors": [
+          "Wang Wei",
+          "Tiankai Yang",
+          "Hongjie Chen",
+          "Yue Zhao",
+          "Franck Dernoncourt",
+          "Ryan A. Rossi",
+          "Hoda Eldardiry"
+        ]
+      }
+    },
+    {
+      "id": "preprint-m3ood",
+      "title": "M3OOD: Automatic Selection of Multimodal OOD Detectors",
+      "venue": "arXiv preprint",
+      "year": 2025,
+      "matched_by": "identifier:ARXIV",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "2e3a29b9bfc7fa19148a8506481c3ebb1afb1c5d",
+        "corpusId": 280677117,
+        "title": "M3OOD: Automatic Selection of Multimodal OOD Detectors",
+        "url": "https://www.semanticscholar.org/paper/2e3a29b9bfc7fa19148a8506481c3ebb1afb1c5d",
+        "venue": "arXiv.org",
+        "year": 2025,
+        "publicationDate": "2025-08-16",
+        "citationCount": 0,
+        "influentialCitationCount": 0,
+        "referenceCount": 52,
+        "externalIds": {
+          "ArXiv": "2508.11936",
+          "DBLP": "journals/corr/abs-2508-11936",
+          "DOI": "10.48550/arXiv.2508.11936",
+          "CorpusId": 280677117
+        },
+        "authors": [
+          "Yuehan Qin",
+          "Li Li",
+          "Defu Cao",
+          "Tiankai Yang",
+          "Yue Zhao"
+        ]
+      }
+    },
+    {
+      "id": "preprint-stealthrank",
+      "title": "StealthRank: LLM Ranking Manipulation via Stealthy Prompt Optimization",
+      "venue": "arXiv preprint",
+      "year": 2025,
+      "matched_by": "identifier:ARXIV",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "b4c36c67677fb21e771cb6983804ed6b22e88df9",
+        "corpusId": 277627907,
+        "title": "StealthRank: LLM Ranking Manipulation via Stealthy Prompt Optimization",
+        "url": "https://www.semanticscholar.org/paper/b4c36c67677fb21e771cb6983804ed6b22e88df9",
+        "venue": "arXiv.org",
+        "year": 2025,
+        "publicationDate": "2025-04-08",
+        "citationCount": 12,
+        "influentialCitationCount": 2,
+        "referenceCount": 60,
+        "externalIds": {
+          "ArXiv": "2504.05804",
+          "DBLP": "journals/corr/abs-2504-05804",
+          "DOI": "10.48550/arXiv.2504.05804",
+          "CorpusId": 277627907
+        },
+        "authors": [
+          "Yiming Tang",
+          "Yi Fan",
+          "Chenxiao Yu",
+          "Tiankai Yang",
+          "Yue Zhao",
+          "Xiyang Hu"
+        ]
+      }
+    },
+    {
+      "id": "preprint-tagfn",
+      "title": "TAGFN: A Text-Attributed Graph Dataset for Fake News Detection in the Age of LLMs",
+      "venue": "arXiv preprint",
+      "year": 2025,
+      "matched_by": "identifier:ARXIV",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "144d6fe04c584881575e1ce264949018b0fc9f63",
+        "corpusId": 283261614,
+        "title": "TAGFN: A Text-Attributed Graph Dataset for Fake News Detection in the Age of LLMs",
+        "url": "https://www.semanticscholar.org/paper/144d6fe04c584881575e1ce264949018b0fc9f63",
+        "venue": "arXiv.org",
+        "year": 2025,
+        "publicationDate": "2025-11-26",
+        "citationCount": 0,
+        "influentialCitationCount": 0,
+        "referenceCount": 25,
+        "externalIds": {
+          "ArXiv": "2511.21624",
+          "DBLP": "journals/corr/abs-2511-21624",
+          "DOI": "10.48550/arXiv.2511.21624",
+          "CorpusId": 283261614
+        },
+        "authors": [
+          "Kay Liu",
+          "Yuwei Han",
+          "Haoyan Xu",
+          "Henry Peng Zou",
+          "Yue Zhao",
+          "Philip S. Yu"
+        ]
+      }
+    },
+    {
+      "id": "preprint-computing-resources-fm",
+      "title": "The Role of Computing Resources in Publishing Foundation Model Research",
+      "venue": "arXiv preprint",
+      "year": 2025,
+      "matched_by": "identifier:ARXIV",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "6e5ab7c23be78c9a9df213a40b170dbc3ed16e65",
+        "corpusId": 282102253,
+        "title": "The Role of Computing Resources in Publishing Foundation Model Research",
+        "url": "https://www.semanticscholar.org/paper/6e5ab7c23be78c9a9df213a40b170dbc3ed16e65",
+        "venue": "arXiv.org",
+        "year": 2025,
+        "publicationDate": "2025-10-15",
+        "citationCount": 3,
+        "influentialCitationCount": 0,
+        "referenceCount": 35,
+        "externalIds": {
+          "ArXiv": "2510.13621",
+          "DBLP": "journals/corr/abs-2510-13621",
+          "DOI": "10.48550/arXiv.2510.13621",
+          "CorpusId": 282102253
+        },
+        "authors": [
+          "Yuexing Hao",
+          "Yue Huang",
+          "Haoran Zhang",
+          "Chenyang Zhao",
+          "Zhenwen Liang",
+          "Paul Pu Liang",
+          "Yue Zhao",
+          "Lichao Sun"
+        ]
+      }
+    },
+    {
+      "id": "preprint-llm-political-simulation",
+      "title": "A Large-Scale Simulation on Large Language Models for Decision-Making in Political Science",
+      "venue": "arXiv preprint",
+      "year": 2024,
+      "matched_by": "identifier:ARXIV",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "66d89814faca6ca8209cf23ca4ce64e91ab5d035",
+        "corpusId": 274965200,
+        "title": "A Large-Scale Simulation on Large Language Models for Decision-Making in Political Science",
+        "url": "https://www.semanticscholar.org/paper/66d89814faca6ca8209cf23ca4ce64e91ab5d035",
+        "venue": "",
+        "year": 2024,
+        "publicationDate": "2024-12-19",
+        "citationCount": 7,
+        "influentialCitationCount": 0,
+        "referenceCount": 59,
+        "externalIds": {
+          "ArXiv": "2412.15291",
+          "CorpusId": 274965200
+        },
+        "authors": [
+          "Chenxiao Yu",
+          "Jin Ye",
+          "Yuangang Li",
+          "Zheng Li",
+          "Emilio Ferrara",
+          "Xiyang Hu",
+          "Yue Zhao"
+        ]
+      }
+    },
+    {
+      "id": "preprint-personalized-mllm-survey",
+      "title": "Personalized Multimodal Large Language Models: A Survey",
+      "venue": "arXiv preprint",
+      "year": 2024,
+      "matched_by": "identifier:ARXIV",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "c29f2c6a432113506657337f3d9c417c645352df",
+        "corpusId": 274446432,
+        "title": "Personalized Multimodal Large Language Models: A Survey",
+        "url": "https://www.semanticscholar.org/paper/c29f2c6a432113506657337f3d9c417c645352df",
+        "venue": "arXiv.org",
+        "year": 2024,
+        "publicationDate": "2024-12-03",
+        "citationCount": 13,
+        "influentialCitationCount": 0,
+        "referenceCount": 0,
+        "externalIds": {
+          "DBLP": "journals/corr/abs-2412-02142",
+          "ArXiv": "2412.02142",
+          "DOI": "10.48550/arXiv.2412.02142",
+          "CorpusId": 274446432
+        },
+        "authors": [
+          "Junda Wu",
+          "Hanjia Lyu",
+          "Yu Xia",
+          "Zhehao Zhang",
+          "Joe Barrow",
+          "Ishita Kumar",
+          "Mehrnoosh Mirtaheri",
+          "Hongjie Chen"
+        ]
+      }
+    },
+    {
+      "id": "preprint-political-llm",
+      "title": "Political-LLM: Large Language Models in Political Science",
+      "venue": "arXiv preprint",
+      "year": 2024,
+      "matched_by": "identifier:ARXIV",
+      "title_match_score": 1.0,
+      "s2": {
+        "paperId": "aa7b433150591d9eae496a168cea670216775e23",
+        "corpusId": 274610424,
+        "title": "Political-LLM: Large Language Models in Political Science",
+        "url": "https://www.semanticscholar.org/paper/aa7b433150591d9eae496a168cea670216775e23",
+        "venue": "arXiv.org",
+        "year": 2024,
+        "publicationDate": "2024-12-09",
+        "citationCount": 32,
+        "influentialCitationCount": 0,
+        "referenceCount": 0,
+        "externalIds": {
+          "DBLP": "journals/corr/abs-2412-06864",
+          "ArXiv": "2412.06864",
+          "DOI": "10.48550/arXiv.2412.06864",
+          "CorpusId": 274610424
+        },
+        "authors": [
+          "Lincan Li",
+          "Jiaqi Li",
+          "Catherine Chen",
+          "Fred Gui",
+          "Hongjian Yang",
+          "Chenxiao Yu",
+          "Zhengguang Wang",
+          "J. Cai"
+        ]
+      }
+    }
+  ],
+  "duplicate_s2_papers": 1,
+  "identifier_low_similarity": 3,
+  "duplicate_s2_paper_matches": [
+    {
+      "paperId": "7044d075fba8c188f716a25618d522c808a67a96",
+      "canonical_id": "conference-a-survey-on-model-extraction-attacks-and-defenses-for-large-language-models",
+      "duplicate_id": "preprint-survey-mea-distributed",
+      "canonical_title": "A Survey on Model Extraction Attacks and Defenses for Large Language Models",
+      "duplicate_title": "A Survey of Model Extraction Attacks and Defenses in Distributed Computing Environments",
+      "citationCount": 8,
+      "influentialCitationCount": 0
+    }
+  ],
+  "identifier_low_similarity_matches": [
+    {
+      "id": "conference-trustgen-a-platform-of-dynamic-benchmarking-on-the-trustworthiness-of-generative-foundation-models",
+      "title": "TrustGen: A Platform of Dynamic Benchmarking on the Trustworthiness of Generative Foundation Models",
+      "s2_title": "On the Trustworthiness of Generative Foundation Models: Guideline, Assessment, and Perspective",
+      "paperId": "076b0fb092c0206ade61298c570b9915cdb30e84",
+      "score": 0.5714
+    },
+    {
+      "id": "conference-a-survey-on-model-extraction-attacks-and-defenses-for-large-language-models",
+      "title": "A Survey on Model Extraction Attacks and Defenses for Large Language Models",
+      "s2_title": "A Survey of Model Extraction Attacks and Defenses in Distributed Computing Environments",
+      "paperId": "7044d075fba8c188f716a25618d522c808a67a96",
+      "score": 0.6914
+    },
+    {
+      "id": "conference-mgeo-knowfm",
+      "title": "Multimodal Generative Engine Optimization: Exploiting Cross-Modal Knowledge Grounding in VLM-Based Ranking",
+      "s2_title": "Multimodal Generative Engine Optimization: Rank Manipulation for Vision-Language Model Rankers",
+      "paperId": "84564051e1c33812f1dfcf1ae4a73f7e59e654e3",
+      "score": 0.5859
+    }
+  ],
+  "unique_matched": 104
+}

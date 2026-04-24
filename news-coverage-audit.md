@@ -1,9 +1,10 @@
 # News & Media Coverage Audit — Yue Zhao / FORTIS Lab
 
-*Updated: 2026-04-22 (full-range parallel audit across 5 agents, plus targeted search — zero new verified third-party coverage; Stanford AI Index 2026 and 4 foundation-model system cards confirmed as negative after full-text PDF scan).*
+*Updated: 2026-04-24 (parallel 5-agent full sweep: +19 verified items; LLNL/DOE SafeAI report cites TrustLLM, Deloitte Germany PDF cites ADBench as industry evidence, plus platform/tool ecosystem additions).*
+*Previous: 2026-04-22 (full-range parallel audit across 5 agents, plus targeted search — zero new verified third-party coverage; Stanford AI Index 2026 and 4 foundation-model system cards confirmed as negative after full-text PDF scan).*
 *Previous: 2026-04-16 (5-day delta check — no new verified items; three D8 candidates flagged for next PDF pass).*
 *Earlier: 2026-04-11 (targeted searches: agent-audit, Aegis, Auditable Agents, agent/LLM/VLM last-author works, DPU, Political-LLM, Treble, ADBench, Computing Resources, plus under-searched high-star tools).*
-*All 8 dimensions complete across all 121 items (104 papers + 17 tools).*
+*All 8 dimensions complete across all 124 items (105 papers + 19 tools).*
 *Citation verification applied: every item names or cites the work, person, lab, or co-author.*
 
 ---
@@ -24,15 +25,16 @@ Items where government bodies, policy organizations, or foundation model compani
 | 8 | PyOD | **European Space Agency (ESA/ESOC)** | All 30 anomaly detection algorithms in the OPS-SAT spacecraft telemetry benchmark implemented using PyOD 1.1.2. Published in **Nature Scientific Data** (2025). | 2025 |
 | 8b | TrustLLM | **International AI Safety Report 2026** | Citation #881. Led by Yoshua Bengio, authored by 100+ AI experts, backed by 30+ countries and international organisations. Published Feb 2026. | Feb 2026 |
 | 8c | DoxBench | **Privacy International** | Cited on p.28, footnote 56: "Luo W., Qiming Z., Lu T., Liu X., Zhao Y., Xiang Z., Xiao C., 'Doxing via the Lens: Revealing Privacy Leakage in Image Geolocation for Agentic Multi-Modal Large Reasoning Model'" in "Nowhere to Hide? Privacy Risks and Policy Implications of AI Geolocation." | Feb 2026 |
+| 8d | TrustLLM | **LLNL / DOE National Labs SafeAI report** | "Safety in Artificial Intelligence: Challenges and Opportunities for the U.S. National Labs and Beyond" cites "Position: TrustLLM: Trustworthiness in Large Language Models" as reference [34]. | Dec 2024 |
 
-**Source URLs:** [Senate PDF](https://www.hsgac.senate.gov/wp-content/uploads/2024.06.11-Hedge-Fund-Use-of-AI-Report.pdf) · [CDAO Toolkit](https://www.ai.mil/Portals/137/Documents/Resources%20Page/2024-12GenAI-Responsible-AI-Toolkit.pdf) · [NIST PDF](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-2e2025.pdf) · [FLI Inaugural](https://futureoflife.org/ai-policy/ai-experts-major-ai-companies-have-significant-safety-gaps/) · [FLI Summer](https://futureoflife.org/ai-safety-index-summer-2025/) · [FLI Winter](https://futureoflife.org/ai-safety-index-winter-2025/) · [FLI Indicator Sheet](https://futureoflife.org/wp-content/uploads/2025/11/Indicator-TrustLLM_Benchmark.pdf) · [ESA OPS-SAT](https://www.nature.com/articles/s41597-025-05035-3) · [Intl AI Safety Report](https://internationalaisafetyreport.org/publication/international-ai-safety-report-2026) · [Privacy Intl](https://www.privacyinternational.org/report/5736/nowhere-hide-privacy-risks-and-policy-implications-ai-geolocation)
+**Source URLs:** [Senate PDF](https://www.hsgac.senate.gov/wp-content/uploads/2024.06.11-Hedge-Fund-Use-of-AI-Report.pdf) · [CDAO Toolkit](https://www.ai.mil/Portals/137/Documents/Resources%20Page/2024-12GenAI-Responsible-AI-Toolkit.pdf) · [NIST PDF](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-2e2025.pdf) · [FLI Inaugural](https://futureoflife.org/ai-policy/ai-experts-major-ai-companies-have-significant-safety-gaps/) · [FLI Summer](https://futureoflife.org/ai-safety-index-summer-2025/) · [FLI Winter](https://futureoflife.org/ai-safety-index-winter-2025/) · [FLI Indicator Sheet](https://futureoflife.org/wp-content/uploads/2025/11/Indicator-TrustLLM_Benchmark.pdf) · [ESA OPS-SAT](https://www.nature.com/articles/s41597-025-05035-3) · [Intl AI Safety Report](https://internationalaisafetyreport.org/publication/international-ai-safety-report-2026) · [Privacy Intl](https://www.privacyinternational.org/report/5736/nowhere-hide-privacy-risks-and-policy-implications-ai-geolocation) · [LLNL SafeAI PDF](https://data-science.llnl.gov/sites/data_science/files/2024-12/SafeAIforDOE%20Digital.pdf)
 
-**Dimension 8 (PDF deep search) status:** Searched 25+ governance PDFs + regulated verticals for all 104 papers + 17 tools. TrustLLM confirmed in Senate HSGAC, DoD CDAO, NIST AI 100-2e2025, FLI x4 (inaugural, summer, winter, indicator sheet), and International AI Safety Report 2026. DoxBench confirmed in Privacy International report. PyOD confirmed in ESA OPS-SAT benchmark.
+**Dimension 8 (PDF deep search) status:** Searched 25+ governance PDFs + regulated verticals for all 105 papers + 19 tools. TrustLLM confirmed in Senate HSGAC, DoD CDAO, NIST AI 100-2e2025, FLI x4 (inaugural, summer, winter, indicator sheet), International AI Safety Report 2026, and LLNL/DOE SafeAI. DoxBench confirmed in Privacy International report. PyOD confirmed in ESA OPS-SAT benchmark. Deloitte Germany AIxAML was verified and recorded under ecosystem/industry evidence.
 
 **D8 candidates resolved:**
 - ~~**OWASP GenAI Solutions Landscape Q2 2026**~~ — manually checked Apr 10; no universities or academic tools listed. Cleared.
 
-**Count: 10 government/policy citations (TrustLLM x8, PyOD x1, DoxBench x1)**
+**Count: 11 government/policy citations (TrustLLM x9, PyOD x1, DoxBench x1)**
 
 ---
 
@@ -102,14 +104,18 @@ Independent third-party coverage by outlets not affiliated with you, your lab, o
 | 36q | Anomaly-Detection-Resources | R-bloggers | R community aggregator | Syndication of paulvanderlaken article — large data science readership | Dec 2019 | D3 | [Link](https://www.r-bloggers.com/2019/12/anomaly-detection-resources/) |
 | 36r | CS-Paper-Checklist | HelloGitHub | Open-source discovery platform | Featured in Monthly Vol. 110 (#36 in "Other" section), 1.6k stars | May 2025 | D3 | [Link](https://hellogithub.com/en/periodical/volume/110) |
 | 36s | CS-Paper-Checklist | Efficient Coder (高效码农) | Tech blog | "The Ultimate CS Paper Writing Checklist: Expert Tips for High-Impact Research" — links to repo | May 2025 | D3 | [Link](https://www.xugj520.cn/en/archives/computer-science-paper-checklist-2.html) |
+| 36t | TrustGen | Vector Institute | ICLR 2026 research roundup | "Vector researchers advance representation learning and deep learning research at ICLR 2026" — names TrustGen and Yue Zhao | Apr 2026 | D3 | [Link](https://vectorinstitute.ai/vector-researchers-advance-representation-learning-and-deep-learning-research-at-iclr-2026/) |
+| 36u | FigEdit ("Charts Are Not Images") | Adobe Research | Research listing | "Charts Are Not Images: On the Challenges of Scientific Chart Editing" — names the ICLR 2026 paper and Yue Zhao | Apr 2026 | D3 | [Link](https://research.adobe.com/publication/charts-are-not-images-on-the-challenges-of-scientific-chart-editing/) |
 
-**Count: 60 external third-party items**
+**Count: 62 external third-party items**
 
 ---
 
 ## Ledger 3: Ecosystem Adoption (books, podcasts, courses, enterprise integrations, patents, platforms)
 
 External parties building on, integrating, or teaching your tools -- not coverage about you, but adoption evidence.
+
+*Note: rows added in the Apr 24 sweep use compact platform-cluster units; each row counts as one verified item while the detail cell lists the platforms found in that cluster.*
 
 | # | Work Named | Type | Detail |
 |---|-----------|------|--------|
@@ -206,8 +212,24 @@ External parties building on, integrating, or teaching your tools -- not coverag
 | 66bj | Anomaly-Detection-Resources | **Platform** | CSDN x2: human-written survey referencing repo + PyOD tutorial linking resources |
 | 66bk | CS-Paper-Checklist | **Platform** | CSDN: dedicated article "提升计算机科学论文质量的实用指南" |
 | 66bl | CS-Paper-Checklist | **Platform** | Scholar's Corner (lujie.ac.cn): listed under "Academic Writing Tips" with direct repo link |
+| 66bm | Cat-DPO | **Platform** | New arXiv aggregator and AI-news listings after Apr 22: alphaXiv, Bytez, Gist.Science, Moonlight, ResearchTrend.AI, AI Navigate, haebom/slashpage. |
+| 66bn | Topology Matters | **Platform** | alphaXiv, Bytez, Moonlight, aimodels.fyi, ChatPaper, ResearchTrend.AI, and haebom/slashpage pages name the memory-leakage paper and Yue Zhao. |
+| 66bo | Auditable Agents | **Platform** | alphaXiv, Bytez, Gist.Science, ResearchTrend.AI, Code of Paper, and haebom/slashpage pages name the paper and Yue Zhao. |
+| 66bp | Aegis | **Platform** | Hugging Face Papers, Gist.Science, ResearchTrend.AI, PULRC Portal, DeepDyve, and alphaXiv pages name AEGIS and the tool-call firewall paper. |
+| 66bq | DoxBench | **Platform** | Additional DoxBench coverage on Zhuanzhi, haebom/slashpage, Gist.Science, ResearchTrend.AI, ChatPaper, and Hugging Face Papers; Liner already recorded in 66w. |
+| 66br | TrustGen | **Platform** | BAAI Community and CSDN pages name TrustGen, Yue Zhao, the project page, arXiv link, and GitHub repo. |
+| 66bs | PyOD / PyOD 3 | **Platform** | SourceForge mirror, newreleases.io v3.0.0 release tracker, AitFind project page, LibHunt alternatives, DeepWiki docs, and OSSInsight comparison pages name PyOD/PyOD 3. |
+| 66bt | agent-audit | **Platform** | Skillget listing, ClawHub Agent Audit Scanner listing, and SoftwareSeni awesome-ai-agents list name agent-audit as an AI-agent security scanner. |
+| 66bu | agent-style / anywhere-agents | **Platform** | [Replicate Hype](https://hype.replicate.dev/?filter=past_week&sources=GitHub%2CHuggingFace%2CReddit%2CReplicate) Apr 22 trending page lists `yzhao062/agent-style` and `yzhao062/anywhere-agents`; package registries and docs remain first-party or registry-only. |
+| 66bv | PersonaConvBench | **Platform** | alphaXiv, Hugging Face Papers, Bytez, Moonlight, aimodels.fyi, and ResearchTrend.AI pages name the personalized conversation benchmark. |
+| 66bw | Defenses Against Prompt Attacks | **Platform** | Bytez, Moonlight, ResearchTrend.AI, and J-GLOBAL pages name the surface-heuristics prompt-attack paper; alphaXiv already recorded in 66ai. |
+| 66bx | Mitigating Hallucinations via Causal Reasoning | **Platform** | alphaXiv, Bytez, aimodels.fyi, ChatPaper, ResearchTrend.AI, J-GLOBAL, and haebom/slashpage pages name the causal-reasoning hallucination paper. |
+| 66by | AD-LLM / NLP-ADBench | **Platform** | alphaXiv, Bytez, Moonlight, ChatPaper, ResearchTrend.AI, J-GLOBAL, Hugging Face Papers, and SelectDataset pages name AD-LLM and/or NLP-ADBench. |
+| 66bz | Secure On-Device Video OOD / SocialMaze / MGEO | **Platform** | alphaXiv, Bytez, Moonlight, aimodels.fyi, ChatPaper, ResearchTrend.AI, Hugging Face dataset, and ResearchTrend/MGEO pages name these 2025-2026 papers. |
+| 66ca | Tool long tail | **Platform** | ADBench on Ecosyste.ms; TODS on Datahut and Ecosyste.ms; TDC on AIPOCH; PyGOD on Cloudsmith and Reddit r/MachineLearning; combo on PythonFix; TrustEval-toolkit on GitCode. |
+| 66cb | ADBench | **Consulting** | [Deloitte Germany AIxAML PDF](https://www.deloitte.com/content/dam/assets-zone2/de/de/docs/services/consulting/2025/Deloitte-Compliance-AIxAML.pdf) cites Han et al. (2022), ADBench, as the source of an anomaly-detection figure in an anti-money-laundering transaction-monitoring solution. |
 
-**Count: 93 ecosystem adoption items**
+**Count: 109 ecosystem adoption items**
 
 ---
 
@@ -275,16 +297,17 @@ Items authored by you, your students, or posted by your team. Useful context but
 | Security press | Dark Reading, SecurityWeek, SC Magazine, Bleeping Computer, Krebs, The Record, CSO Online, CyberNews | No hits by name |
 | AI newsletters | The Batch, Import AI, The Gradient, Synced Review | No hits |
 | Industry analysts | Gartner, Forrester, IDC | No hits by name. Forrester "AEGIS" is their own framework (name collision). |
-| Consulting firms | McKinsey, Deloitte, PwC, Accenture, EY, KPMG | Topic coverage only |
+| Consulting firms | McKinsey, Deloitte, PwC, Accenture, EY, KPMG | **Deloitte Germany AIxAML cites ADBench**. Other firm sources remain topic coverage only. |
 | Think tanks | Stanford HAI, CSET, CAIS, Brookings, RAND, WEF, OECD, Turing | Topic coverage only |
-| Foundation model system cards | OpenAI (8), Anthropic (5), Meta, Google, DeepSeek (2), Qwen, Phi-4, Cohere, Gemma, Yi | No citations |
+| Foundation model system cards | OpenAI (8), Anthropic (5), Meta, Google, DeepSeek (2), Qwen, Phi-4, Cohere, Gemma, Yi; Apr 24 re-check included OpenAI GPT-5.5 / GPT-5.4 Thinking, Anthropic, DeepMind Gemini 3/3.1, Meta Llama, and Microsoft Phi candidates | No citations |
 | Government (beyond Senate) | White House (3), NIST AI 600-1, GAO, Congress.gov, NSF.gov, OSTI.gov | No citations by name |
 | International government | EU AI Office, ENISA, UK gov, OECD iLibrary, UNESCO, G7/G20 | **International AI Safety Report 2026 cites TrustLLM** (citation #881). Other sources: no citations by name. |
-| **Regulated verticals (D8)** | OCC, FDIC, FINRA, SEC, CFTC (finance); FDA (healthcare); NASA, FAA (aerospace); CISA (cybersecurity); DARPA, MITRE, DOE (defense); telecom; insurance; security vendors (Splunk, Elastic, CrowdStrike, Palo Alto, Fortinet) | **No confirmed citations**. Topic-relevant PDFs found but none cite PyOD/ADBench/COPOD by name. |
+| **Regulated verticals (D8)** | OCC, FDIC, FINRA, SEC, CFTC (finance); FDA (healthcare); NASA, FAA (aerospace); CISA (cybersecurity); DARPA, MITRE, DOE (defense); telecom; insurance; security vendors (Splunk, Elastic, CrowdStrike, Palo Alto, Fortinet) | **Deloitte Germany AIxAML cites ADBench** and LLNL/DOE SafeAI cites TrustLLM. Other topic-relevant PDFs found but none cite target work by name. |
 | Standards bodies | MITRE ATLAS, MLCommons, Cloud Security Alliance | No citations |
 | Korean tech (Tistory) | Searched | 3 PyOD tutorials found (D10) — corrected from prior negative |
 | German tech (Heise.de) | Searched | No results on Heise; 5 other German sources found (D10) |
-| Stanford AI Index 2026 (overview pages) | Apr 16 | No mention in Responsible AI, Science, Technical Performance chapter overviews. Full PDF remains a D8 candidate (size cap on WebFetch). |
+| Stanford AI Index 2026 (overview pages, full PDF, public CSV dataset) | Apr 24 | Confirmed negative for target terms and arXiv IDs. |
+| Apr 24 full sweep topic-only / false positives | VentureBeat, The Hacker News, CSO Online, OpenAI Privacy Filter coverage, FLI Spring 2026, NIST AI 800-3, NIST AI 800-2 IPD, International AI Safety Report extended summary, OWASP GenAI Q2 2026 trio | No new direct citations. FLI Spring 2026 not released/found. New AEGIS hits mostly unrelated projects. ECOD false positives mostly "decode/decoding." |
 | Name-collision false positives (Apr 16) | agentlayer.medium "Aegis+TrustLLM" smart contract audit | Different projects — arXiv:2403.16073 (not Yue Zhao's TrustLLM) and AgentLayer's web3 Aegis (not FORTIS Aegis). Cleared. |
 
 ---
@@ -293,14 +316,14 @@ Items authored by you, your students, or posted by your team. Useful context but
 
 | Ledger | Count |
 |--------|-------|
-| Government/Policy citations | 10 |
-| External third-party media | 60 |
-| Ecosystem adoption | 93 |
+| Government/Policy citations | 11 |
+| External third-party media | 62 |
+| Ecosystem adoption | 109 |
 | First-party/community | 6 |
 | Awards/recognitions | 18 |
-| **Total verified items** | **187** |
+| **Total verified items** | **206** |
 
-- **104 papers + 17 tools** searched across all 8 dimensions
+- **105 papers + 19 tools** searched across all 8 dimensions
 - **11,551 Google Scholar citations** (Apr 2026)
 - **39.11M+ PyPI downloads** for PyOD
 - **1,846 Semantic Scholar citations** for Diffusion Models survey
@@ -503,4 +526,10 @@ New PDF candidates added to query bank for next audit:
 7. **International AI Safety Report — Extended Summary for Policymakers** (separate PDF from full report).
 8. **CETaS / Alan Turing Institute Intl AI Safety Report page** (cetas.turing.ac.uk).
 
-**Running total: 187 verified items (unchanged from Apr 16).** Next scheduled pass: 2-4 weeks. Watch arXiv aggregators (alphaXiv, Moonlight, aimodels.fyi, Emergent Mind) for Cat-DPO listings within days; expect 1-2 week window for MarkTechPost / Synced pickup on Auditable Agents given subject fit.
+**Apr 24 parallel full sweep (+19 verified items):**
+- **Ledger 1 (+1):** LLNL/DOE SafeAI report cites TrustLLM.
+- **Ledger 2 (+2):** Vector Institute ICLR 2026 roundup names TrustGen and Yue Zhao; Adobe Research page names FigEdit/Charts Are Not Images and Yue Zhao.
+- **Ledger 3 (+16):** New platform and ecosystem rows added for Cat-DPO, Topology Matters, Auditable Agents, Aegis, DoxBench, TrustGen, PyOD/PyOD 3, agent-audit, agent-style/anywhere-agents, PersonaConvBench, Defenses Against Prompt Attacks, Mitigating Hallucinations, AD-LLM/NLP-ADBench, Secure On-Device Video OOD/SocialMaze/MGEO, long-tail tool listings, and Deloitte Germany AIxAML citing ADBench as consulting/industry evidence.
+- **Confirmed negatives:** No new direct hits in the requested major outlet set (USC Viterbi, MarkTechPost, Synced, Jiqizhixin, The Paper, VentureBeat, TechCrunch, Wired, MIT Tech Review, IEEE Spectrum, InfoQ, The New Stack, Dark Reading, The Hacker News, SecurityWeek, BleepingComputer, CSO, The Record, KDnuggets, TDS, Analytics Vidhya). NIST AI 800-3, NIST AI 800-2 IPD, Stanford AI Index 2026 full PDF/dataset, International AI Safety Report extended summary, OWASP GenAI Q2 2026, major system-card candidates, and FLI Spring 2026 remained negative or unreleased.
+
+**Running total: 206 verified items.** Next scheduled pass: 2-4 weeks. Watch for USC Viterbi ICLR 2026 roundup, MarkTechPost/Synced coverage of Auditable Agents or Cat-DPO, and the next FLI AI Safety Index release.

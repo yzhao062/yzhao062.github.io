@@ -79,13 +79,21 @@ def check_required_files(errors: list[str]) -> None:
 
 def check_json_files(errors: list[str]) -> None:
     data_dir = ROOT / "data"
+    object_json = {"s2-metrics.json"}
 
     # Parse each file once; store results for per-file field checks below.
-    parsed: dict[str, list | None] = {}
+    parsed: dict[str, list | dict | None] = {}
     for path in sorted(data_dir.glob("*.json")):
         obj = load_json(path, errors)
         if obj is None:
             parsed[path.name] = None
+            continue
+        if path.name in object_json:
+            if not isinstance(obj, dict):
+                errors.append(f"Expected top-level JSON object in {path.as_posix()}")
+                parsed[path.name] = None
+            else:
+                parsed[path.name] = obj
             continue
         if not isinstance(obj, list):
             errors.append(f"Expected top-level JSON array in {path.as_posix()}")

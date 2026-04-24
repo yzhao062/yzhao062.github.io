@@ -1,10 +1,10 @@
 # Citation Affiliation Audit
 
-*Generated: 2026-04-13 via OpenAlex API*
+*Generated: 2026-04-24 via OpenAlex API*
 
 **What this is:** Papers that cite your work, where at least one author is affiliated with a notable institution.
 This means "researchers AT [institution] cited your tool" -- not "[institution] officially endorses your tool."
-Surveys excluded. 44 papers with citations found on OpenAlex (out of 99 non-survey papers). 1595 unique citing papers analyzed.
+Surveys excluded. 44 papers with citations found on OpenAlex (out of 100 non-survey papers). 1605 unique citing papers analyzed.
 
 ## Tier 0: Government, Space Agencies, National Labs, Defense, Foundation Model Cos
 
@@ -283,10 +283,10 @@ Surveys excluded. 44 papers with citations found on OpenAlex (out of 99 non-surv
 
 ## Coverage
 
-**Papers with citations on OpenAlex:** 44/99
+**Papers with citations on OpenAlex:** 44/100
 
-**Indexed but 0 citations (46):** Can Multimodal LLMs Perform Time Series , Charts Are Not Images: On the Challenges, Defenses Against Prompt Attacks Learn Su, Doxing via the Lens: Revealing Location-, Mitigating Hallucinations in Large Langu, Topology Matters: Measuring Memory Leaka, A Personalized Conversational Benchmark:, AD-AGENT: A Multi-agent Framework for En, Edit Away and My Face Will Not Stay: Per, Few-Shot Graph Out-of-Distribution Detec, JailDAM: Jailbreak Detection with Adapti, LLM-Empowered Patient-Provider Communica, Learning from the Storm: A Multivariate , MetaOOD: Automatic Selection of OOD Dete, Navigating Between Explainability and Ex, SocialMaze: A Benchmark for Evaluating S, TRUSTEVAL: A Dynamic Evaluation Toolkit , AutoBench-V: Can Large Vision-Language M, Hyperparameter Optimization for Unsuperv, DSV: An Alignment Validation Loss for Se, ... and 26 more
+**Indexed but 0 citations (47):** Can Multimodal LLMs Perform Time Series , Charts Are Not Images: On the Challenges, CoAct: Co-Active LLM Preference Learning, Defenses Against Prompt Attacks Learn Su, Doxing via the Lens: Revealing Location-, Mitigating Hallucinations in Large Langu, Topology Matters: Measuring Memory Leaka, A Personalized Conversational Benchmark:, AD-AGENT: A Multi-agent Framework for En, Edit Away and My Face Will Not Stay: Per, Few-Shot Graph Out-of-Distribution Detec, JailDAM: Jailbreak Detection with Adapti, LLM-Empowered Patient-Provider Communica, Learning from the Storm: A Multivariate , MetaOOD: Automatic Selection of OOD Dete, Navigating Between Explainability and Ex, SocialMaze: A Benchmark for Evaluating S, TRUSTEVAL: A Dynamic Evaluation Toolkit , AutoBench-V: Can Large Vision-Language M, Hyperparameter Optimization for Unsuperv, ... and 27 more
 
-**Not found on OpenAlex (9):** CoAct: Co-Active Preference Learning wit, DecAlign: Hierarchical Cross-Modal Align, TrustGen: A Platform of Dynamic Benchmar, DyFlow: Dynamic Workflow Framework for A, Secure On-Device Video OOD Detection Wit, ELECT: Toward Unsupervised Outlier Model, Don’t Let It Hallucinate: Premise Verifi, Auditable Agents... (arXiv preprint), Can Molecular Foundation Models Know Wha
+**Not found on OpenAlex (9):** DecAlign: Hierarchical Cross-Modal Align, TrustGen: A Platform of Dynamic Benchmar, DyFlow: Dynamic Workflow Framework for A, Secure On-Device Video OOD Detection Wit, ELECT: Toward Unsupervised Outlier Model, Don’t Let It Hallucinate: Premise Verifi, Auditable Agents... (ACL Workshop on Tow, Multimodal Generative Engine Optimizatio, Can Molecular Foundation Models Know Wha
 
 *OpenAlex coverage improves over time. Re-run in 3-6 months to capture newly indexed papers.*
