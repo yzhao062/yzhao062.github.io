@@ -36,3 +36,5 @@ cv/*.nav
 cv/*.snm
 cv/*.vrb
 cv/*.pdf
+
+agent-config.local.yaml
