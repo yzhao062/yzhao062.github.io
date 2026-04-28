@@ -132,6 +132,23 @@ If anything is off, replace `all clear` with a semicolon-separated list of concr
 5. **Hooks** — check `~/.claude/hooks/` for `guard.py` (PreToolUse) and `session_bootstrap.py` (SessionStart). If one is missing, include it in the Session check line as an issue.
 6. **Session check** — scan `.github/workflows/*.yml` for action version pins below the minimums in the GitHub Actions Standards section. Combine with any Codex-config or hook drift detected above. Emit `all clear` only when nothing needs attention.
 
+7. **Pack deployment** — perform this check exactly:
+
+    a. Read user-level config: on Windows `%APPDATA%\anywhere-agents\config.yaml`; on POSIX `$XDG_CONFIG_HOME/anywhere-agents/config.yaml`, default `~/.config/anywhere-agents/config.yaml`. If absent, `user_packs = []`.
+
+    b. Read durable project config: `agent-config.yaml` then merge `agent-config.local.yaml` overrides by name. `AGENT_CONFIG_PACKS` env var is **excluded**. If both files absent, `project_packs = []`.
+
+    c. For each pack `u` in `user_packs`, normalize its identity tuple `(u.name, normalize_pack_source_url(u.source.url), u.source.ref)`. Find any pack `p` in `project_packs` with the same `u.name` (case-sensitive name match). If `project_packs` contains duplicate-named entries (e.g., the same name in both `agent-config.yaml` and `agent-config.local.yaml`), apply local-overrides-tracked: keep only the local entry. Count `u` toward `gap_count` if either: no matching `p` exists, OR `p`'s normalized identity tuple differs from `u`'s.
+
+    d. Read `.agent-config/pack-lock.json` (the project-local lock written by the composer). For each entry in `data.packs`, count it toward `update_count` when **both** `latest_known_head` and `resolved_commit` are non-empty strings AND `latest_known_head != resolved_commit`. The optional `latest_known_head` / `fetched_at` fields land via `pack verify` (which runs `git ls-remote` opportunistically and lock-bracket-merges the result) and via composer fetches at install time. Old locks predating v0.5.2 omit both fields and contribute zero — no migration needed.
+
+    e. Compose the banner contribution from both counts. Each is a half-clause; drop the half whose count is 0; emit `all clear` only when both are 0:
+
+       - `gap_count > 0` → ``⚠ <gap_count> user-level pack(s) not deployed (run `anywhere-agents pack verify --fix`)``
+       - `update_count > 0` → ``ℹ <update_count> pack update(s) available (run `anywhere-agents pack verify --fix`)``
+
+       Append the surviving half-clauses to the Session check line, semicolon-separated. The CLI command differs from v0.5.1: v0.5.2 collapses the verify-then-bootstrap dance into `pack verify --fix`, which now invokes the composer subprocess after writing config rows.
+
 ## User Profile
 
 - These are user-level defaults that can be reused across projects unless a local repo rule or task-specific instruction is stricter.
