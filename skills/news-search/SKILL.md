@@ -25,13 +25,16 @@ Read these files before starting:
 
 ## Execution Model
 
-If parallel workers and web search are available, run dimensions in parallel; otherwise process dimensions sequentially. Batch queries conservatively to stay within tool rate limits. Read all three reference files before starting:
+If parallel workers and web search are available, run dimensions in parallel; otherwise process dimensions sequentially. Batch queries conservatively to stay within tool rate limits. Read these reference files before starting:
 
-1. `references/search-queries.md` — query bank (not exhaustive; see triage rules below)
-2. `references/outlet-registry.md` — outlet classification and `site:` domain lists
-3. `references/search-strategy.md` — techniques for finding indirect coverage, when to persist vs. stop, name disambiguation
+1. `references/search-queries.md`: query bank (not exhaustive; see triage rules below)
+2. `references/outlet-registry.md`: outlet classification and `site:` domain lists
+3. `references/search-strategy.md`: techniques for finding indirect coverage, when to persist vs. stop, name disambiguation
+4. `references/candidate-schema.md`: Phase A and Phase B candidate record contract
+5. `references/disclaimer-patterns.md`: AI-generated, aggregator, translation, templated-database, and blocked-page detection
+6. `references/domain-registry.md`: seed domains by source class and `outlet_class` values for Phase A
 
-After all searches complete, merge results into `news-coverage-audit.md` using the tier structure in the Output section. If `news-coverage-audit.md` does not yet exist, create it with the full tier structure and negative-results table as a fresh audit.
+Run the two-phase pipeline described below. Phase A gathers candidates into `news-search-candidates.jsonl` and does not edit `news-coverage-audit.md`. Phase B verifies each candidate, classifies the survivors, records dropped candidates in the candidate file, and writes only kept rows to `news-coverage-audit.md` using the tier structure in the Output section. If `news-coverage-audit.md` does not yet exist, Phase B creates it with the full tier structure and negative-results table as a fresh audit.
 
 ### Query Bank Triage Rules
 
@@ -45,6 +48,44 @@ For items not in the query bank, generate queries at runtime:
 - **All papers at top venues from the current or prior year**: add Dimension 5 smart-keyword entries
 - **Older papers and low-star tools**: still search with at least one Dimension 5 smart-keyword query each
 - **Preprints**: search with distinctive claim keywords
+
+---
+
+## Pipeline: Two-Phase Output
+
+Each audit runs in two phases. Phase A discovers candidates without classifying them. Phase B reads each candidate, runs verification checks, and assigns a tier. Splitting the two lets the candidate list be reviewed before any classification work commits to a row in the audit ledger.
+
+### Phase A: Candidate Gathering
+
+Run all dimensions (D1 through D10) and emit candidates as JSON-Lines records to `news-search-candidates.jsonl` at the project root. Do not assign tiers yet. Do not write to `news-coverage-audit.md` yet.
+
+Each candidate carries the schema in `references/candidate-schema.md`: URL, title, snippet, surfacing query, outlet class, fetch timestamp, plus empty placeholders for the Phase B fields (flags, direct-mention, tier, notes).
+
+When Phase A completes, present the candidate count grouped by dimension and outlet class to the user. The user (or a reviewer such as Codex) can scan the candidate list and flag wrong query routing or wrong outlet-class tagging before Phase B starts. This is the cheap, parallelizable stage; treat it as re-runnable.
+
+Add `news-search-candidates.jsonl` to `.git/info/exclude` (local, untracked) before the first run so `git add -A` does not stage scratch output.
+
+### Phase B: Verify and Classify
+
+For each candidate in `news-search-candidates.jsonl`, fetch the page and apply four checks in order:
+
+1. **Direct-mention / topic-validation routing** (the citation verification rule in the Output section). If the page names the work, person, lab, co-author, institution, or direct URL per one of clauses 1 to 6, fill `direct_mention` and continue as coverage. If it does not pass direct mention but clearly covers the same topic area, set `tier: "topic-validation"` and keep it for the Topic Validation appendix, not a coverage ledger. If it is neither direct coverage nor topic validation, set `tier: "dropped"` and record the drop reason in `notes`.
+2. **Disclaimer / aggregator detection** (`references/disclaimer-patterns.md`). Run the regex sweep on fetched content. Set entries in the candidate's `flags[]` field. Hard caps:
+   - `ai_generated` and `aggregator` are capped at Tier 3 regardless of outlet domain.
+   - `machine_translated` is capped at Tier 3 unless `editorial_translation` is also set.
+   - `paywall_or_blocked` is held for manual verification, not classified from snippet alone.
+3. **Tier assignment** per the tier structure in the Output section. Assign coverage tiers (Tier 0 through Tier 5) only to candidates that pass direct mention; topic-only candidates keep `tier: topic-validation` from step 1.
+4. **Registry harvest status**. For each kept coverage row, set `registry_status` to `existing` or `new` after checking the page's registered domain against `references/domain-registry.md`. Leave `registry_status` empty on dropped and topic-validation rows.
+
+Phase B writes direct-coverage rows (Tier 0 through Tier 5) to the coverage ledgers, topic-only rows (`tier == 'topic-validation'`) to the Topic Validation appendix, and keeps dropped rows (`tier == 'dropped'`) in `news-search-candidates.jsonl` for auditability. The full candidates file stays at the project root through the audit so a reviewer can audit drop decisions, not only the kept rows.
+
+### Domain Registry and Post-Round Harvest
+
+`references/domain-registry.md` lists known high-value source classes (gov / policy PDFs, EU research projects, patents, China tech media, security research blogs, AI-newsletter aggregators, and others) with seed domains. Phase A queries fan out to seeded domains in addition to the open dragnet, never instead of it. The registry is a recall floor, not a filter.
+
+After each audit, harvest the domains of every confirmed Phase B hit and append new ones to the registry under the appropriate class. If no class fits, create one (lowercase-hyphenated name). This is the only way the registry stays current as new outlet types appear; without it, the registry freezes and re-discovery cost recurs.
+
+Once a quarter, run a registry-disabled pass (open dragnet only) to surface new outlet classes the registry has not seen yet. This is what catches the next surprise category.
 
 ---
 
@@ -220,8 +261,9 @@ Separate appendix (not a tier):
 2. **Topic Validation appendix** — articles that cover the same topic but do not name your work
 3. **Negative Results table** — outlet types searched with no results (prevents re-searching)
 4. **Upcoming Opportunities** — imminent conferences, journalist contacts from prior coverage
-5. **Summary Statistics** — separate counts per ledger, not a single aggregate. Report: government/policy total, external media total, ecosystem total, awards total.
-6. **Coverage matrix** — per-item appendix or CSV with one row per paper/tool, dimensions searched (D1-D8), and outcome (coverage/topic-only/none). This makes the audit auditable.
+5. **Summary Statistics** — separate counts per ledger, not a single aggregate. Report: government/policy total, external media total, ecosystem total, first-party/community total, and awards total.
+6. **Coverage matrix** — per-item appendix or CSV with one row per paper/tool, dimensions searched (D1-D10), Phase A candidate count, and Phase B outcome (kept/topic-only/dropped/none). This makes the audit auditable.
+7. **Registry harvest summary** — list of new domains added to `references/domain-registry.md` from this round's confirmed Phase B hits, grouped by class. Empty list is fine and should still be reported, so the harvest step stays visible across rounds.
 
 ### Incremental Updates
 
@@ -233,9 +275,9 @@ When running a targeted search (not full audit), append new findings to the exis
 
 | Mode | When | Dimensions to run |
 |------|------|-------------------|
-| **Full audit** | Once per semester, before portfolio updates | All 8 dimensions |
-| **Targeted** | After a specific paper acceptance or tool release | Dims 1, 3, 4, 5 scoped to that item |
-| **Quick check** | Before grant submissions | Dims 1, 6, 8 (citations, impact, government PDFs) |
+| **Full audit** | Once per semester, before portfolio updates | All 10 dimensions (D1-D10) |
+| **Targeted** | After a specific paper acceptance or tool release | Dims 1, 3, 4, 5 scoped to that item, plus D8 when policy or PDF evidence is plausible |
+| **Quick check** | Before grant submissions | Dims 1, 6, 8, 10 (citations, impact, government PDFs, external deep research) |
 | **Topic monitor** | When a trending topic connects to your work | Dim 4 only, focused on that topic |
 | **Ecosystem check** | Before broader-impact statements | Dim 7 (education, code ecosystem, global) |
 | **PDF deep search** | Before tenure materials or when a specific gov report is suspected | Dim 8 only, with candidate PDF list |

@@ -117,7 +117,7 @@ Similarly, "Aegis" is extremely crowded (Forrester AEGIS, Red Hat aegis-ai, mult
 - An **enterprise deployment** or **policy citation** might exist but has not been searched for
 
 ### Stop when:
-- You have searched all 8 dimensions for a given paper/tool
+- You have searched all 10 dimensions (D1-D10) for a given paper/tool, treating D9 and D10 as corpus-level passes that may have already been run for the round
 - The same 10 results keep appearing across different queries
 - The paper is too recent (< 2 weeks since arXiv posting) for news to have appeared
 - The paper is on a niche topic with no trending connection
@@ -206,7 +206,7 @@ All results go into `news-coverage-audit.md`. Each entry must include:
 - [Outlet Name](URL) — "Headline" (Date) — names: {paper/tool/person named} — verified: {yes/no}
 ```
 
-Tag each entry with the dimension that found it (D1-D8) so future audits know which strategies produced results.
+Tag each entry with the dimension that found it (D1-D10) so future audits know which strategies produced results.
 
 Items that fail verification go in the **Topic Validation** appendix with this format:
 

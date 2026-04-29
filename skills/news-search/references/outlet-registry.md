@@ -64,22 +64,14 @@ If a result appears in these outlets, it is Tier 1 coverage.
 
 ---
 
-## Tier 1.5 Outlets (policy, government, VC)
+## Tier 1.5 Outlets (policy, trade press, VC)
 
-### Government & Legislative
+### Government Trade Press
+
+Outlets that report on government rather than publish government documents. The U.S. government-publishing domains (congress.gov, senate.gov, house.gov, gao.gov, whitehouse.gov, federalregister.gov, nist.gov, nsf.gov, energy.gov, etc.) live in their Tier 0 home under "Government Document Sources" below; do not duplicate them here.
 
 | Outlet | Domain | Focus |
 |--------|--------|-------|
-| Federal Register | federalregister.gov | US government notices, RFIs, rules |
-| Congress.gov | congress.gov | Bills, resolutions, committee reports |
-| Senate.gov | senate.gov | Senate reports, hearing testimony |
-| House.gov | house.gov | House reports, hearing testimony |
-| CRS Reports | crsreports.congress.gov | Congressional Research Service |
-| GAO | gao.gov | Government accountability reports |
-| White House | whitehouse.gov | Executive orders, AI policy |
-| NIST | nist.gov | Standards, security frameworks, RFIs |
-| NSF | nsf.gov | Award announcements, research highlights |
-| DOE | energy.gov | National lab reports |
 | FedScoop | fedscoop.com | Federal IT policy news |
 | MeriTalk | meritalk.com | Government IT news |
 | NextGov/FCW | nextgov.com | Federal technology news |
@@ -156,21 +148,34 @@ If a result appears in these outlets, it is Tier 1 coverage.
 
 ---
 
-## Government Document Sources (Tier 2 if names your work)
+## Government Document Sources (Tier 0 if names your work)
 
-These are high-value for tenure cases. Search for your tool/paper names within these.
+These are high-value for tenure cases. Search for your tool/paper names within these. Phase A should tag candidates from these domains with `outlet_class: gov-pdf` per `references/domain-registry.md`. This section is the single home for U.S. government-publishing domains; do not duplicate them in Tier 1.5.
 
 | Source | Domain | How to search |
 |--------|--------|---------------|
 | Congress.gov full text | congress.gov | Search bills, reports, hearings for tool names |
+| Senate Reports | senate.gov | Senate committee reports, hearing testimony PDFs |
+| House Reports | house.gov | House committee reports, hearing testimony PDFs |
 | CRS Reports | crsreports.congress.gov | Congressional Research Service analyses |
 | GAO Reports | gao.gov | Government accountability studies |
-| Executive Orders | whitehouse.gov | AI-related executive orders |
+| White House / Executive | whitehouse.gov | Executive orders, OMB memos, OSTP reports |
 | Federal Register | federalregister.gov | RFIs, rules, notices mentioning AI tools |
+| NIST (main) | nist.gov | NIST announcements, RFIs, blog (publication PDFs at nvlpubs.nist.gov) |
 | NIST Publications | nvlpubs.nist.gov | Standards documents, special publications |
-| DOE Technical Reports | osti.gov | Department of Energy/national lab reports |
-| USPTO Patents | patents.google.com | Patents citing your papers |
-| NSF Award Search | nsf.gov/awardsearch | Awards mentioning your work |
+| NSF | nsf.gov | NSF announcements, dear colleague letters, program solicitations; awards mentioning your work via the /awardsearch path |
+| DOE | energy.gov | Department of Energy publications |
+| DOE Technical Reports | osti.gov | National lab reports |
+
+## Patent Sources (Tier 3 ecosystem evidence if names your work)
+
+Patents are a separate source class from government documents. Phase A should tag candidates from these domains with `outlet_class: patent`. See `references/domain-registry.md` § Patents for the seeded domain list. Patent hits belong in the Ecosystem adoption ledger; only elevate to a higher tier if a separate government or policy report independently cites the same work.
+
+| Source | Domain | How to search |
+|--------|--------|---------------|
+| Google Patents | patents.google.com | Full-text search and citation links |
+| WIPO PatentScope | patentscope.wipo.int | Global patent database |
+| USPTO | uspto.gov | USPTO patent search and PAIR |
 
 ---
 

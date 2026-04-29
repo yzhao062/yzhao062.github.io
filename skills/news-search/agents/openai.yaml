@@ -1,2 +1,9 @@
-instructions: Read and follow skills/news-search/SKILL.md. Also read all three reference files before starting: skills/news-search/references/search-queries.md, skills/news-search/references/outlet-registry.md, and skills/news-search/references/search-strategy.md.
+instructions: >-
+  Read and follow skills/news-search/SKILL.md. Before starting, also read these six reference files:
+  skills/news-search/references/search-queries.md,
+  skills/news-search/references/outlet-registry.md,
+  skills/news-search/references/search-strategy.md,
+  skills/news-search/references/candidate-schema.md,
+  skills/news-search/references/disclaimer-patterns.md,
+  and skills/news-search/references/domain-registry.md.
 model: gpt-5.4
