@@ -14,6 +14,10 @@ on:
     - cron: '0 9 * * 1,3,5'   # Mon/Wed/Fri 9:00 UTC — refresh stars/dates
   workflow_dispatch:
 
+concurrency:
+  group: build-cv-pdf
+  cancel-in-progress: false
+
 jobs:
   build-cv:
     runs-on: ubuntu-latest
@@ -89,4 +93,15 @@ jobs:
           fi
 
           git commit -m "Update CV PDF and generated open-source.tex"
-          git push
+
+          # Retry push with rebase to handle races against other workflows
+          n=0
+          until git push; do
+            n=$((n+1))
+            if [ $n -ge 3 ]; then
+              echo "Push failed after 3 attempts" >&2
+              exit 1
+            fi
+            echo "Push attempt $n failed; pulling with rebase and retrying..."
+            git pull --rebase origin main
+          done
