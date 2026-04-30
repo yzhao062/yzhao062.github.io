@@ -2771,9 +2771,9 @@
       }
     },
     {
-      "id": "preprint-someone-hid-it",
+      "id": "conference-someone-hid-it-query-agnostic-black-box-attacks-on-llm-based-retrieval",
       "title": "\"Someone Hid It\": Query-Agnostic Black-Box Attacks on LLM-Based Retrieval",
-      "venue": "arXiv preprint",
+      "venue": "ICML, 2026",
       "year": 2026,
       "matched_by": "identifier:ARXIV",
       "title_match_score": 1.0,
