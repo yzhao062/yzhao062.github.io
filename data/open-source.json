@@ -8,7 +8,7 @@
     "docs_url": "https://pyod.readthedocs.io",
     "paper_url": "https://arxiv.org/abs/2412.12154",
     "demo_url": "",
-    "stars": 9834,
+    "stars": 9836,
     "tags": [
       "Anomaly Detection",
       "Outlier Detection",
@@ -45,7 +45,7 @@
     "docs_url": "https://trustllmbenchmark.github.io/TrustLLM-Website/",
     "paper_url": "https://openreview.net/forum?id=bWUU0LwwMp",
     "demo_url": "",
-    "stars": 623,
+    "stars": 624,
     "tags": [
       "Trustworthy AI",
       "LLM Evaluation",
@@ -284,7 +284,7 @@
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/aegis.html",
     "paper_url": "https://arxiv.org/abs/2603.12621",
     "demo_url": "https://github.com/Justin0504/Aegis/blob/main/docs/images/readme_demo1.gif",
-    "stars": 347,
+    "stars": 348,
     "tags": [
       "AI Agent Security",
       "Policy Enforcement",
@@ -321,7 +321,7 @@
     "docs_url": "https://anywhere-agents.readthedocs.io",
     "paper_url": "",
     "demo_url": "",
-    "stars": 165,
+    "stars": 166,
     "tags": [
       "Claude Code",
       "Codex",
@@ -341,7 +341,7 @@
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/agent-style.html",
     "paper_url": "",
     "demo_url": "https://pypi.org/project/agent-style/",
-    "stars": 383,
+    "stars": 388,
     "tags": [
       "AI Agents",
       "Agent Configuration",
