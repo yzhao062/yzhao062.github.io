@@ -1,0 +1,4 @@
+interface:
+  display_name: "CI Mockup Figure"
+  short_description: "Build interactive HTML mockups of systems, flowcharts, and timelines, then capture as space-efficient figures"
+  default_prompt: "Use $ci-mockup-figure to build an interactive HTML mockup for the figure I need, with view switching and capture mode, then guide me through screenshot capture and LaTeX insertion."

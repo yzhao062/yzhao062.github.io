@@ -1,14 +1,14 @@
 # Citation Affiliation Audit
 
-*Generated: 2026-04-24 via OpenAlex API*
+*Generated: 2026-05-06 via OpenAlex API*
 
 **What this is:** Papers that cite your work, where at least one author is affiliated with a notable institution.
 This means "researchers AT [institution] cited your tool" -- not "[institution] officially endorses your tool."
-Surveys excluded. 44 papers with citations found on OpenAlex (out of 100 non-survey papers). 1605 unique citing papers analyzed.
+Surveys excluded. 44 papers with citations found on OpenAlex (out of 100 non-survey papers). 1615 unique citing papers analyzed.
 
 ## Tier 0: Government, Space Agencies, National Labs, Defense, Foundation Model Cos
 
-**24 entries**
+**25 entries**
 
 | Category | Institution | Country | Your Work Cited | Citing Paper | Year |
 |----------|-----------|---------|----------------|-------------|------|
@@ -25,6 +25,7 @@ Surveys excluded. 44 papers with citations found on OpenAlex (out of 100 non-sur
 | National Lab | Pacific Northwest National Laboratory | US | Artificial Intelligence Foundation  | Current and future directions in network biology | 2024 |
 | National Lab | Brookhaven National Laboratory | US | Artificial Intelligence Foundation  | Current and future directions in network biology | 2024 |
 | National Lab | Sandia National Laboratories | US | LSCP: Locally Selective Combination | Ensemble Grammar Induction For Detecting Anomalies in Time S | 2020 |
+| Research Institute | Fraunhofer Institute for Translational Medicine and Pharmacology | DE | Artificial Intelligence Foundation  | Human-supervised Agentic AI for Hypothesis Generation and Ex | 2026 |
 | Research Institute | Fraunhofer Institute for Translational Medicine and Pharmacology | DE | Artificial Intelligence Foundation  | Computational drug repurposing: approaches, evaluation of in | 2025 |
 | Research Institute | Fraunhofer Institute for Algorithms and Scientific Computing | DE | Artificial Intelligence Foundation  | Computational drug repurposing: approaches, evaluation of in | 2025 |
 | Research Institute | Fraunhofer Institute for Open Communication Systems | DE | PyOD: A Python Toolbox for Scalable | Morphological Profiling Dataset of EU-OPENSCREEN Bioactive C | 2024 |
@@ -39,7 +40,7 @@ Surveys excluded. 44 papers with citations found on OpenAlex (out of 100 non-sur
 
 ## Tier 1: Big Tech, Finance, Pharma, Healthcare, Industrial
 
-**150 entries**
+**151 entries**
 
 | Category | Institution | Country | Your Work Cited | Citing Paper | Year |
 |----------|-----------|---------|----------------|-------------|------|
@@ -114,8 +115,8 @@ Surveys excluded. 44 papers with citations found on OpenAlex (out of 100 non-sur
 | Big Tech | IBM Research - Tokyo | JP | Artificial Intelligence Foundation  | Accelerating material design with the generative toolkit for | 2023 |
 | Big Tech | IBM Research - Almaden | US | Artificial Intelligence Foundation  | Accelerating material design with the generative toolkit for | 2023 |
 | Big Tech | IBM Research - Zurich | CH | Artificial Intelligence Foundation  | The rise of automated curiosity-driven discoveries in chemis | 2023 |
-| Big Tech | Google (United States) | US | Artificial Intelligence Foundation  | Olympus, enhanced: benchmarking mixed-parameter and multi-ob | 2023 |
 | Big Tech | IBM Research - Thomas J. Watson Research Center | US | Artificial Intelligence Foundation  | Evaluating the roughness of structure–property relationships | 2023 |
+| Big Tech | Google (United States) | US | Artificial Intelligence Foundation  | Olympus, enhanced: benchmarking mixed-parameter and multi-ob | 2023 |
 | Big Tech | Salesforce (United States) | US | ECOD: Unsupervised Outlier Detectio | Unsupervised Skin Lesion Segmentation via Structural Entropy | 2023 |
 | Big Tech | Microsoft Research Asia (China) | CN | ECOD: Unsupervised Outlier Detectio | UADB: Unsupervised Anomaly Detection Booster | 2023 |
 | Big Tech | Amazon (United Kingdom) | GB | ECOD: Unsupervised Outlier Detectio | Low-Count Time Series Anomaly Detection | 2023 |
@@ -126,6 +127,7 @@ Surveys excluded. 44 papers with citations found on OpenAlex (out of 100 non-sur
 | Big Tech | Alibaba Group (China) | CN | Revisiting Time Series Outlier Dete | TFAD | 2022 |
 | Big Tech | Alibaba Group (United States) | US | Revisiting Time Series Outlier Dete | TFAD | 2022 |
 | Big Tech | IBM Research - Thomas J. Watson Research Center | US | Revisiting Time Series Outlier Dete | Deep Learning for Time Series Anomaly Detection: A Survey | 2022 |
+| Big Tech | Microsoft (Brazil) | BR | Employee Turnover Prediction with M | EMPLOYEE TURNOVER INTENTION - MAPPING PROFILES UNDER A DECIS | 2022 |
 | Big Tech | Huawei Technologies (France) | FR | SUOD: Toward Scalable Unsupervised  | The New Abnormal: Network Anomalies in the AI Era | 2021 |
 | Big Tech | Alibaba Group (China) | CN | LSCP: Locally Selective Combination | A spatial-compositional feature fusion convolutional autoenc | 2021 |
 | Big Tech | Adobe Systems (United States) | US | LSCP: Locally Selective Combination | IPOF: An Extremely and Excitingly Simple Outlier Detection B | 2021 |
@@ -180,8 +182,8 @@ Surveys excluded. 44 papers with citations found on OpenAlex (out of 100 non-sur
 | Pharma | AstraZeneca (United Kingdom) | GB | Artificial Intelligence Foundation  | Representation Learning of Human Disease Mechanisms for a Fo | 2024 |
 | Pharma | AstraZeneca (Australia) | AU | Artificial Intelligence Foundation  | Representation Learning of Human Disease Mechanisms for a Fo | 2024 |
 | Pharma | AstraZeneca (Sweden) | SE | Therapeutics Data Commons: Machine  | Machine learning for small molecule drug discovery in academ | 2023 |
-| Pharma | Novartis Institutes for BioMedical Research | None | Therapeutics Data Commons: Machine  | Machine learning for small molecule drug discovery in academ | 2023 |
 | Pharma | Novartis (Switzerland) | CH | Therapeutics Data Commons: Machine  | Machine learning for small molecule drug discovery in academ | 2023 |
+| Pharma | Novartis Institutes for BioMedical Research | None | Therapeutics Data Commons: Machine  | Machine learning for small molecule drug discovery in academ | 2023 |
 | Pharma | Pfizer (Germany) | DE | Therapeutics Data Commons: Machine  | Equivariant Graph Neural Networks for Toxicity Prediction | 2023 |
 | Pharma | Novartis (United States) | US | Artificial Intelligence Foundation  | Computer‐aided evaluation and exploration of chemical spaces | 2023 |
 | Pharma | Novartis (Switzerland) | CH | Therapeutics Data Commons: Machine  | Chemoinformatics and Artificial Intelligence Colloquium: Pro | 2022 |
@@ -220,6 +222,7 @@ Surveys excluded. 44 papers with citations found on OpenAlex (out of 100 non-sur
 | Los Alamos National Laboratory | National Lab | 2 |
 | Brookhaven National Laboratory | National Lab | 2 |
 | Deutsche Bundesbank | Central Bank | 2 |
+| Fraunhofer Institute for Translational Medicine and Pharmacology | Research Institute | 2 |
 | Robert Bosch (United States) | Industrial | 2 |
 | Visa (United States) | Finance | 2 |
 | Huawei Technologies (France) | Big Tech | 2 |
@@ -232,8 +235,8 @@ Surveys excluded. 44 papers with citations found on OpenAlex (out of 100 non-sur
 | IBM Research - Tokyo | Big Tech | 2 |
 | IBM Research - Almaden | Big Tech | 2 |
 | AstraZeneca (United States) | Pharma | 2 |
-| Google (United States) | Big Tech | 2 |
 | IBM Research - Ireland | Big Tech | 2 |
+| Google (United States) | Big Tech | 2 |
 | Pfizer (Germany) | Pharma | 2 |
 | AstraZeneca (United Kingdom) | Pharma | 2 |
 | Roche (Switzerland) | Pharma | 2 |
@@ -244,7 +247,6 @@ Surveys excluded. 44 papers with citations found on OpenAlex (out of 100 non-sur
 | Sandia National Laboratories | National Lab | 1 |
 | Google DeepMind (United Kingdom) | Foundation Model Co | 1 |
 | Pacific Northwest National Laboratory | National Lab | 1 |
-| Fraunhofer Institute for Translational Medicine and Pharmacology | Research Institute | 1 |
 | Fraunhofer Institute for Algorithms and Scientific Computing | Research Institute | 1 |
 | Centers for Disease Control and Prevention | US Government | 1 |
 | Deutsches Elektronen-Synchrotron DESY | International Lab | 1 |
@@ -269,13 +271,14 @@ Surveys excluded. 44 papers with citations found on OpenAlex (out of 100 non-sur
 | Morgan Stanley (United States) | Finance | 1 |
 | Baidu (China) | Big Tech | 1 |
 | Honeywell (France) | Industrial | 1 |
+| Microsoft (Brazil) | Big Tech | 1 |
 | Nvidia (United States) | Big Tech | 1 |
 | Google (United Kingdom) | Big Tech | 1 |
 | Microsoft (Netherlands) | Big Tech | 1 |
+| Novartis (United States) | Pharma | 1 |
 | Sanofi (United States) | Pharma | 1 |
 | Sanofi (China) | Pharma | 1 |
 | Sanofi (Germany) | Pharma | 1 |
-| Novartis (United States) | Pharma | 1 |
 | AstraZeneca (Brazil) | Pharma | 1 |
 | AstraZeneca (Australia) | Pharma | 1 |
 | Salesforce (United States) | Big Tech | 1 |
@@ -285,8 +288,8 @@ Surveys excluded. 44 papers with citations found on OpenAlex (out of 100 non-sur
 
 **Papers with citations on OpenAlex:** 44/100
 
-**Indexed but 0 citations (47):** Can Multimodal LLMs Perform Time Series , Charts Are Not Images: On the Challenges, CoAct: Co-Active LLM Preference Learning, Defenses Against Prompt Attacks Learn Su, Doxing via the Lens: Revealing Location-, Mitigating Hallucinations in Large Langu, Topology Matters: Measuring Memory Leaka, A Personalized Conversational Benchmark:, AD-AGENT: A Multi-agent Framework for En, Edit Away and My Face Will Not Stay: Per, Few-Shot Graph Out-of-Distribution Detec, JailDAM: Jailbreak Detection with Adapti, LLM-Empowered Patient-Provider Communica, Learning from the Storm: A Multivariate , MetaOOD: Automatic Selection of OOD Dete, Navigating Between Explainability and Ex, SocialMaze: A Benchmark for Evaluating S, TRUSTEVAL: A Dynamic Evaluation Toolkit , AutoBench-V: Can Large Vision-Language M, Hyperparameter Optimization for Unsuperv, ... and 27 more
+**Indexed but 0 citations (48):** Can Multimodal LLMs Perform Time Series , Charts Are Not Images: On the Challenges, CoAct: Co-Active LLM Preference Learning, Defenses Against Prompt Attacks Learn Su, Doxing via the Lens: Revealing Location-, Mitigating Hallucinations in Large Langu, "Someone Hid It": Query-Agnostic Black-B, Topology Matters: Measuring Memory Leaka, A Personalized Conversational Benchmark:, AD-AGENT: A Multi-agent Framework for En, Edit Away and My Face Will Not Stay: Per, Few-Shot Graph Out-of-Distribution Detec, JailDAM: Jailbreak Detection with Adapti, LLM-Empowered Patient-Provider Communica, Learning from the Storm: A Multivariate , MetaOOD: Automatic Selection of OOD Dete, Navigating Between Explainability and Ex, Secure On-Device Video OOD Detection Wit, SocialMaze: A Benchmark for Evaluating S, TRUSTEVAL: A Dynamic Evaluation Toolkit , ... and 28 more
 
-**Not found on OpenAlex (9):** DecAlign: Hierarchical Cross-Modal Align, TrustGen: A Platform of Dynamic Benchmar, DyFlow: Dynamic Workflow Framework for A, Secure On-Device Video OOD Detection Wit, ELECT: Toward Unsupervised Outlier Model, Don’t Let It Hallucinate: Premise Verifi, Auditable Agents... (ACL Workshop on Tow, Multimodal Generative Engine Optimizatio, Can Molecular Foundation Models Know Wha
+**Not found on OpenAlex (8):** DecAlign: Hierarchical Cross-Modal Align, TrustGen: A Platform of Dynamic Benchmar, DyFlow: Dynamic Workflow Framework for A, ELECT: Toward Unsupervised Outlier Model, Don’t Let It Hallucinate: Premise Verifi, Auditable Agents... (ACL Workshop on Tow, Multimodal Generative Engine Optimizatio, Can Molecular Foundation Models Know Wha
 
 *OpenAlex coverage improves over time. Re-run in 3-6 months to capture newly indexed papers.*

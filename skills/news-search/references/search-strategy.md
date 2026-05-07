@@ -167,13 +167,43 @@ The rule: **outlet sweeps find known sources; name-first and topic-proximity sea
 ### How to execute Dimension 8
 
 1. **Build the full term list** — extract every tool name, paper acronym, distinctive phrase, and author name from `data/publications.json` and `data/open-source.json`. Include at least 50+ terms.
-2. **Download candidate PDFs** — use the query bank to find report URLs, then download them.
-3. **Extract text and search** — use PyMuPDF (`fitz`) or `pdftotext` to extract text from every page, then regex-search for every term on the full term list.
-4. **Filter false positives** — common false positives include:
-   - "ECOD" matching "decoding", "encoder/decoder" — filter by checking surrounding context
-   - "Yue Zhao" matching a different person with the same name — filter by checking if the context relates to your work (anomaly detection, AI safety, etc.)
-   - "Aegis" matching NVIDIA's Aegis dataset or Forrester's AEGIS framework — filter by checking for "pre-execution firewall" or "tool call" context
+2. **Download candidate PDFs** — use the query bank to find report URLs, then download them. See "Bypassing Cloudflare / SSR shells / 403 reverse-proxies" below for fetch tactics when scripted requests are blocked.
+3. **Extract text and search** — run `python skills/news-search/scripts/pdf_term_scan.py <pdf_path>`. The scanner uses PyMuPDF (`fitz`), runs the FORTIS term list with word-boundary regex for short uppercase tools, and filters known false positives (ECOD inside decoder / BOND inside bonded / MAMA inside mammal / SUOD inside pseudo). Update its `TERMS` and `FALSE_POSITIVE_CTX` constants when the inventory or new collisions appear.
+4. **Filter additional false positives at audit time** — common false positives the scanner's lexical filter cannot catch:
+   - "Yue Zhao" matching a different person with the same name (Yuchen Zhao, Siyan Zhao, Qingyue Zhao, W. Zhao WildChat, D. Zhao Swiss Cheese) — filter by checking if the context relates to anomaly detection / AI safety / USC / yzhao062. See `references/disambiguation-registry.md`.
+   - "Aegis" matching NVIDIA's Aegis dataset, Forrester AEGIS framework, RedHat aegis-ai, aegis-protocol, MIT CSAIL Aegis hardware — filter by requiring "pre-execution firewall" or "tool call" context.
+   - "TrustLLM" matching the EU Horizon `trustllm.eu` multilingual LLM project — filter by requiring arXiv:2401.05561 or Lichao Sun.
 5. **Search ALL terms in ALL PDFs** — do not search only for TrustLLM. Search for every single one of your 104 papers and 17 tools. A book chapter on COPOD or a patent citing PyOD is just as valuable as a system card citing TrustLLM.
+
+### Bypassing Cloudflare / SSR shells / 403 reverse-proxies
+
+Many high-value sources (gao.gov, docs.house.gov, media.defense.gov, openai.com, web.archive.org/save) refuse default scripted fetches with 403 / 520 / Cloudflare interstitial. The fix is a real Chrome User-Agent plus the document-fetch headers a browser would send. Confirmed working on the 2026-05-07 round for 8/8 previously-blocked PDFs at gov / defense / EU / FM-co domains.
+
+PowerShell template (works on Windows; equivalent `curl -H` works on POSIX):
+
+```powershell
+$headers = @{
+    "User-Agent"      = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+    "Accept"          = "application/pdf,*/*;q=0.8"
+    "Accept-Language" = "en-US,en;q=0.9"
+    "Sec-Fetch-Dest"  = "document"
+    "Sec-Fetch-Mode"  = "navigate"
+    "Sec-Fetch-Site"  = "none"
+    "Sec-Fetch-User"  = "?1"
+    "Upgrade-Insecure-Requests" = "1"
+}
+Invoke-WebRequest -Uri $url -Headers $headers -OutFile $out -MaximumRedirection 5 -TimeoutSec 60
+```
+
+Diagnostic flags that the page is **not** real content even though HTTP 200 came back:
+
+- Raw HTML shorter than ~5 KB while the URL is a multi-section document.
+- Body contains `_cf_chl_opt`, `cf-challenge`, `__cf_chl_tk`, or `Enable JavaScript and cookies to continue` — Cloudflare interstitial.
+- Body contains only a JSON shell or a `<script>` tag that fetches the real content client-side — modern SSR shell (Wells Fargo R-512394 careers page is the round-3 example).
+
+When a scripted fetch returns a shell, fall back to: (a) Google's cached snippet (often has the rendered DOM at indexing time), (b) Wayback Machine via `https://web.archive.org/web/<url>` — the *retrieval* path is rarely blocked even when `web.archive.org/save/<url>` is, (c) an aggregator mirror (Greenhouse / Lever / Ashby / DFJ Growth / Glassdoor / LinkedIn / Indeed / Hiring Our Heroes for JDs), or (d) ask the user to capture a logged-in browser snapshot into `news-snapshots/`. Never claim absence on a 403 / shell — that's a fetch failure, not a verification.
+
+When `web.archive.org/save/<url>` itself returns "Sorry, Job failed" (OpenAI Careers `technical-intelligence-analyst` had this on 2026-05-07), the source has blocked the Internet Archive crawler. Do not retry — record as "Wayback unavailable, source-side block" and rely on local browser-captured `.html` / `.pdf` sidecars in `news-snapshots/`.
 
 ---
 
@@ -186,6 +216,22 @@ The rule: **outlet sweeps find known sources; name-first and topic-proximity sea
 1. Read the article snippet in the search result. Does it mention a specific tool name (PyOD, TrustLLM, Aegis, agent-audit), a paper title, the PI name ("Yue Zhao"), or the lab ("FORTIS")?
 2. If the snippet is ambiguous, fetch the URL and search for the name within the page.
 3. If the article only discusses the same topic (e.g., "AI agent security is the challenge of 2026") without naming your work, it goes in the **Topic Validation appendix**, not in the tier structure.
+
+### Snippet-only evidence is not verified evidence
+
+WebSearch snippets are paraphrased / summarized by the search engine and can carry hallucinated content that does not appear in the source. The 2026-05-07 round caught one example: GAO-26-108695 was claimed by the WebSearch summary to name TrustLLM as a "representative system for AI auditing"; manual PDF download + PyMuPDF text extraction confirmed the PDF says nothing of the sort. The snippet was a model synthesis, not a source quote.
+
+Hard rule: **a candidate that would land in Tier 0 (government / foundation-model official document / standards / analyst report) or Tier 1 (mainstream press / national lab / high-impact policy) cannot be promoted on snippet evidence alone.** Phase B must re-fetch the source with `pdf_term_scan.py` (PDFs) or a real-UA HTTP fetch (web pages) and confirm the verbatim quote, before counting. If the source is gated and cannot be re-fetched, set `tier_guess: phase_b_priority` and leave it as a candidate; do not count.
+
+Tier 2 / Tier 3 candidates can be entered on snippet evidence if the snippet contains the verbatim tool-name token (no paraphrase risk on a literal substring) — but the audit row should record the snippet text, not a paraphrase, so the next reviewer can spot synthesis.
+
+### Pre-tier filter: first-party / already-tracked drops
+
+Before assigning a tier, check these drop conditions. They were each stepped into during the 2026-05-07 round:
+
+- **First-party hosting**: pages on the PI's current or prior institution that are about the PI's own work (e.g., `cs.usc.edu/~yzhao010/...`, the PI's CMU PhD-era profile at `heinz.cmu.edu/faculty-research/profiles/zhao-yue`, an NSF PAR record of the PI's own grant output at `par.nsf.gov/servlets/purl/<id>`, or a journal mirror of the PI's own paper at `jmlr.csail.mit.edu/papers/v20/19-011.html`). These are not external coverage. Drop with `tier_guess: first_party`.
+- **Already-tracked award URL**: the canonical landing page for an award already recorded in Ledger 5 (e.g., Amazon Research Awards recipient profile, AAAI New Faculty Highlights program page). The award itself is the news; the URL is the citation, not a separate news row. Drop with `tier_guess: already_tracked`.
+- **Coauthor-institution publication listing**: a research-listing page on a coauthor institution's site (Microsoft Research, Adobe Research, CMU Tepper, Lehigh Engineering Resolve) that is a bare publication entry, not editorial. Per the audit's Ledger 2 inclusion rule, demote to Ledger 3 (institutional research listing).
 
 ### Common false positives
 

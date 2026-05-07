@@ -1,0 +1,4 @@
+interface:
+  display_name: "Dual Pass Workflow"
+  short_description: "Add build and audit passes"
+  default_prompt: "Use $dual-pass-workflow as the outer workflow around the task-specific skill so one pass builds and another pass audits."

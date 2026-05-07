@@ -1,0 +1,4 @@
+interface:
+  display_name: "Figure Prompt Builder"
+  short_description: "Turn explanatory figure ideas into copy-ready downstream image-model prompts"
+  default_prompt: "Use $figure-prompt-builder to decide what explanatory figure this section needs, pick a small number of structural or style donors when helpful, distill the core message into a concise figure brief, and write a prompt pack I can paste into a downstream image model."

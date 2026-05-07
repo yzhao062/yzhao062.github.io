@@ -1,0 +1,4 @@
+interface:
+  display_name: "Bibref Filler"
+  short_description: "Add verified citations without invented bibrefs"
+  default_prompt: "Use $bibref-filler to add new external verified bibrefs in the target files. First confirm that you can resolve canonical paper metadata in the current environment. Never cite a paper unless you have exact verified metadata from a canonical source or the exact local entry. Full text is not required, but fabricated metadata is forbidden. Put every machine-added entry into a separate working.bib next to the active main bib files, keep curated bib files stable, and leave visible TODOs instead of guessing."

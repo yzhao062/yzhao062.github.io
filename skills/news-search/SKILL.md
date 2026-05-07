@@ -29,10 +29,12 @@ If parallel workers and web search are available, run dimensions in parallel; ot
 
 1. `references/search-queries.md`: query bank (not exhaustive; see triage rules below)
 2. `references/outlet-registry.md`: outlet classification and `site:` domain lists
-3. `references/search-strategy.md`: techniques for finding indirect coverage, when to persist vs. stop, name disambiguation
+3. `references/search-strategy.md`: techniques for finding indirect coverage, when to persist vs. stop, name disambiguation, Cloudflare/SSR-shell fetch tactics, and the Phase B "snippet alone is not verified" rule
 4. `references/candidate-schema.md`: Phase A and Phase B candidate record contract
 5. `references/disclaimer-patterns.md`: AI-generated, aggregator, translation, templated-database, and blocked-page detection
 6. `references/domain-registry.md`: seed domains by source class and `outlet_class` values for Phase A
+7. `references/disambiguation-registry.md`: cumulative tool-name and person-name collision rules + verified-negative leads from prior rounds (consult before counting any borderline match)
+8. `scripts/pdf_term_scan.py`: PyMuPDF-based FORTIS-term scanner with built-in false-positive filters; canonical Phase B PDF-deep-search tool. Run as `python skills/news-search/scripts/pdf_term_scan.py <pdf_path>`.
 
 Run the two-phase pipeline described below. Phase A gathers candidates into `news-search-candidates.jsonl` and does not edit `news-coverage-audit.md`. Phase B verifies each candidate, classifies the survivors, records dropped candidates in the candidate file, and writes only kept rows to `news-coverage-audit.md` using the tier structure in the Output section. If `news-coverage-audit.md` does not yet exist, Phase B creates it with the full tier structure and negative-results table as a fresh audit.
 
@@ -67,15 +69,22 @@ Add `news-search-candidates.jsonl` to `.git/info/exclude` (local, untracked) bef
 
 ### Phase B: Verify and Classify
 
-For each candidate in `news-search-candidates.jsonl`, fetch the page and apply four checks in order:
+For each candidate in `news-search-candidates.jsonl`, fetch the page and apply five checks in order:
 
-1. **Direct-mention / topic-validation routing** (the citation verification rule in the Output section). If the page names the work, person, lab, co-author, institution, or direct URL per one of clauses 1 to 6, fill `direct_mention` and continue as coverage. If it does not pass direct mention but clearly covers the same topic area, set `tier: "topic-validation"` and keep it for the Topic Validation appendix, not a coverage ledger. If it is neither direct coverage nor topic validation, set `tier: "dropped"` and record the drop reason in `notes`.
-2. **Disclaimer / aggregator detection** (`references/disclaimer-patterns.md`). Run the regex sweep on fetched content. Set entries in the candidate's `flags[]` field. Hard caps:
+1. **Pre-tier filter: first-party / already-tracked / disambiguation drops**. Before running the citation rule, drop the candidate if it falls into any of these patterns (each was stepped into during the 2026-05-07 round):
+   - First-party hosting on the PI's current or prior institution (e.g., the PI's CMU PhD-era profile, an NSF PAR record of the PI's own grant output, a journal mirror of the PI's own paper).
+   - Already-tracked award URL — the canonical landing page for an award already recorded in Ledger 5.
+   - Coauthor-institution publication listing — a bare research-listing page on a coauthor institution's site (Microsoft Research, Adobe Research, etc.) that is not editorial; demote to Ledger 3.
+   - Name-collision drop — the match is on a different person ("Yue Zhao" → Yuchen / Siyan / Qingyue / W. / D. Zhao) or a different project ("Aegis" → Forrester AEGIS / NVIDIA Aegis / RedHat aegis-ai; "TrustLLM" → trustllm.eu; "TDC" → TDCJ / J&J Therapeutics Discovery). Consult `references/disambiguation-registry.md`.
+2. **Direct-mention / topic-validation routing** (the citation verification rule in the Output section). If the page names the work, person, lab, co-author, institution, or direct URL per one of clauses 1 to 6, fill `direct_mention` and continue as coverage. If it does not pass direct mention but clearly covers the same topic area, set `tier: "topic-validation"` and keep it for the Topic Validation appendix, not a coverage ledger. If it is neither direct coverage nor topic validation, set `tier: "dropped"` and record the drop reason in `notes`.
+
+   **Snippet alone is not verified evidence** for Tier 0 / Tier 1 candidates. WebSearch summaries can synthesize content that does not appear in the source (the 2026-05-07 round caught this with GAO-26-108695: snippet claimed TrustLLM citation; manual PDF extraction confirmed the PDF says nothing of the sort). Tier 0 / Tier 1 promotion requires direct fetch of the source — `pdf_term_scan.py` for PDFs, real-UA HTTP for web pages. If the source is gated and cannot be re-fetched, set `tier_guess: phase_b_priority` and leave as a candidate; do not count.
+3. **Disclaimer / aggregator detection** (`references/disclaimer-patterns.md`). Run the regex sweep on fetched content. Set entries in the candidate's `flags[]` field. Hard caps:
    - `ai_generated` and `aggregator` are capped at Tier 3 regardless of outlet domain.
    - `machine_translated` is capped at Tier 3 unless `editorial_translation` is also set.
    - `paywall_or_blocked` is held for manual verification, not classified from snippet alone.
-3. **Tier assignment** per the tier structure in the Output section. Assign coverage tiers (Tier 0 through Tier 5) only to candidates that pass direct mention; topic-only candidates keep `tier: topic-validation` from step 1.
-4. **Registry harvest status**. For each kept coverage row, set `registry_status` to `existing` or `new` after checking the page's registered domain against `references/domain-registry.md`. Leave `registry_status` empty on dropped and topic-validation rows.
+4. **Tier assignment** per the tier structure in the Output section. Assign coverage tiers (Tier 0 through Tier 5) only to candidates that pass direct mention; topic-only candidates keep `tier: topic-validation` from step 1.
+5. **Registry harvest status**. For each kept coverage row, set `registry_status` to `existing` or `new` after checking the page's registered domain against `references/domain-registry.md`. Leave `registry_status` empty on dropped and topic-validation rows.
 
 Phase B writes direct-coverage rows (Tier 0 through Tier 5) to the coverage ledgers, topic-only rows (`tier == 'topic-validation'`) to the Topic Validation appendix, and keeps dropped rows (`tier == 'dropped'`) in `news-search-candidates.jsonl` for auditability. The full candidates file stays at the project root through the audit so a reviewer can audit drop decisions, not only the kept rows.
 
@@ -249,6 +258,20 @@ All tiers below require the citation verification rule above. If a result does n
 
 Separate appendix (not a tier):
 - **Topic Validation** — articles covering the same topic area without naming your work. Useful for grant narratives ("our research addresses concerns raised in McKinsey's 2026 report on agentic AI security") but not website news items.
+
+#### Tier 0(b) extension: foundation-model-company careers pages
+
+A first-party foundation-model-company job posting that names a FORTIS tool as expected operational tooling (e.g., the OpenAI "Technical Intelligence Analyst" Qualifications block naming PyOD as anomaly-detection tooling) qualifies as Tier 0(b)-equivalent **only when all of the following hold**:
+
+1. **First-party host.** The canonical URL is the company's own careers domain (`openai.com/careers/...`, `anthropic.com/jobs/...`, `deepmind.google/careers/...`, `ai.meta.com/careers/...`, etc.), not a Greenhouse / Lever / Ashby / DFJ Growth / Glassdoor / LinkedIn / Indeed mirror. ATS mirrors are kept under `mirrors[]` in the candidate record but never count as the load-bearing citation.
+2. **Tool named as operational tooling, not background literature.** The mention sits in Qualifications, Responsibilities, or Tech Stack as a tool the hire is expected to use, not in a "see also" or "related work" footnote.
+3. **Durable snapshot exists.** A Wayback Machine archive URL OR a committed local sidecar pair (HTML + PDF in `news-snapshots/<slug>-<YYYY-MM-DD>.{html,pdf}`) is in the repo, with a Markdown index file documenting the live URL, capture date, verification method, and verbatim quote. Sidecars must be captured from a logged-in browser session when the live URL is behind Cloudflare; PDF must be re-verified with `python skills/news-search/scripts/pdf_term_scan.py <pdf_path>`.
+
+When all three hold, the candidate goes into Ledger 1 (Government/Policy citations) under Tier 0(b) with a Source URLs row that includes the live URL, mirror URLs, and the snapshot index path. The #8g precedent (`news-snapshots/openai-careers-technical-intelligence-analyst-2026-05-07.md`) is the reference shape; new entries follow that index format.
+
+If the live URL is reachable but no snapshot exists yet, set `tier_guess: phase_b_priority` and `status: paywall_or_blocked` (or `candidate` with a snapshot-pending note in `notes`). Do not promote to Ledger 1 from a snippet alone — careers pages go stale within weeks of the role being filled, so an unsnapshotted Tier 0(b) claim becomes unverifiable as soon as OpenAI / Anthropic rotates the URL.
+
+Non-FM-co careers pages (Wells Fargo, Capital One, JPMC, Pfizer, Goldman, etc.) follow the same snapshot-or-hold rule but classify under Ledger 3 (ecosystem adoption — enterprise operational adoption evidence), not Ledger 1 / Tier 0(b). Only foundation-model companies get the Tier 0(b) lift; the rationale is that FM-co operational tooling decisions are themselves treated as authoritative signal in the way GAO / NIST PDFs are. A non-FM enterprise JD naming a tool is operational adoption evidence comparable to a code import or vendor whitepaper, which is Ledger 3 territory; it is not third-party media (Ledger 2) and it is not a government / FM-co citation (Ledger 1).
 
 ### Required Sections in Output File
 

@@ -1,0 +1,1 @@
+Read and follow the skill definition at `skills/post-to-x/SKILL.md`.

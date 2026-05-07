@@ -1,6 +1,7 @@
 # News & Media Coverage Audit — Yue Zhao / FORTIS Lab
 
-*Updated: 2026-04-29 (parallel news-search skill deep sweep: +12 verified items; DoD CDAO names PyOD as Production / High-maturity OOD tool with embedded workflow link, Sina / 机器之心Pro covers DoxBench, RAXE + Promptfoo cluster covers UCC paper (Ledger 2), plus tool and platform ecosystem additions; ledger placement refined same day after manual PDF + web verification of every new source; USC Viterbi ICLR roundup dropped — USC institutional PR for conference papers is out of scope).*
+*Updated: 2026-05-07 (weekly parallel news-search skill sweep + Codex Round 1 review promotions: +34 verified items; MITRE LILAC cites TrustLLM, Google/DeepMind TxGemma uses TDC in official report/docs, OpenAI Careers names PyOD, Samsung SDS Korean editorial covers TrustLLM, Apache Beam / PostHog / MLflow / Genentech ship first-class PyOD integration code, gatodo newsletter covers CDCR-SFT, Wikipedia Anomaly detection lists PyOD, PyOD GitHub Dependents aggregate snapshot 5,493 repos + 139 packages; OpenAI/Anthropic/DeepMind system-card re-checks stayed negative).*
+*Previous: 2026-04-29 (parallel news-search skill deep sweep: +12 verified items; DoD CDAO names PyOD as Production / High-maturity OOD tool with embedded workflow link, Sina / 机器之心Pro covers DoxBench, RAXE + Promptfoo cluster covers UCC paper (Ledger 2), plus tool and platform ecosystem additions; ledger placement refined same day after manual PDF + web verification of every new source; USC Viterbi ICLR roundup dropped — USC institutional PR for conference papers is out of scope).*
 *Previous: 2026-04-24 (parallel 5-agent full sweep: +19 verified items; LLNL/DOE SafeAI report cites TrustLLM, Deloitte Germany PDF cites ADBench as industry evidence, plus platform/tool ecosystem additions).*
 *Previous: 2026-04-22 (full-range parallel audit across 5 agents, plus targeted search — zero new verified third-party coverage; Stanford AI Index 2026 and 4 foundation-model system cards confirmed as negative after full-text PDF scan).*
 *Previous: 2026-04-16 (5-day delta check — no new verified items; three D8 candidates flagged for next PDF pass).*
@@ -28,21 +29,26 @@ Items where government bodies, policy organizations, or foundation model compani
 | 8b | TrustLLM | **International AI Safety Report 2026** | Citation #881. Led by Yoshua Bengio, authored by 100+ AI experts, backed by 30+ countries and international organisations. Published Feb 2026. | Feb 2026 |
 | 8c | DoxBench | **Privacy International** | Cited on p.28, footnote 56: "Luo W., Qiming Z., Lu T., Liu X., Zhao Y., Xiang Z., Xiao C., 'Doxing via the Lens: Revealing Privacy Leakage in Image Geolocation for Agentic Multi-Modal Large Reasoning Model'" in "Nowhere to Hide? Privacy Risks and Policy Implications of AI Geolocation." | Feb 2026 |
 | 8d | TrustLLM | **LLNL / DOE National Labs SafeAI report** | "Safety in Artificial Intelligence: Challenges and Opportunities for the U.S. National Labs and Beyond" cites "Position: TrustLLM: Trustworthiness in Large Language Models" as reference [34]. | Dec 2024 |
+| 8e | TrustLLM | **MITRE LILAC v1 technical report** | "Emerging Risks and Mitigations for Public Chatbots: LILAC v1" cites TrustLLM in the text and reference list as a test case / metric for LLM trustworthiness. MITRE report MTR240382, approved for public release. | Sep 2024 |
+| 8f | TDC | **Google DeepMind / Google Research TxGemma** | Official TxGemma report and Google Developers pages name Therapeutics Data Commons (TDC) as the task/data source for TxGemma training and evaluation across 66 therapeutic development tasks. | Apr 2025 |
+| 8g | PyOD | **OpenAI Careers** | Official OpenAI Careers "Technical Intelligence Analyst, San Francisco" listing, Qualifications section: "Have experience with anomaly detection tools, such as PyOD, and discovery processes for surfacing novel or low-prevalence patterns." Operational adoption signal from a foundation-model company; placed in Ledger 1 as Tier 0(b)-equivalent foundation-model-company official content. Live URL is volatile (careers pages are pulled when roles close) and Wayback Save Page Now returns "Job failed" because OpenAI blocks the Internet Archive crawler; durable evidence is kept locally at [`news-snapshots/openai-careers-technical-intelligence-analyst-2026-05-07.md`](news-snapshots/openai-careers-technical-intelligence-analyst-2026-05-07.md) with browser-captured `.html` / `.pdf` sidecars in the same folder. | May 2026 |
 
-**Source URLs:** [Senate PDF](https://www.hsgac.senate.gov/wp-content/uploads/2024.06.11-Hedge-Fund-Use-of-AI-Report.pdf) · [CDAO Toolkit](https://www.ai.mil/Portals/137/Documents/Resources%20Page/2024-12GenAI-Responsible-AI-Toolkit.pdf) · [NIST PDF](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-2e2025.pdf) · [FLI Inaugural](https://futureoflife.org/ai-policy/ai-experts-major-ai-companies-have-significant-safety-gaps/) · [FLI Summer](https://futureoflife.org/ai-safety-index-summer-2025/) · [FLI Winter](https://futureoflife.org/ai-safety-index-winter-2025/) · [FLI Indicator Sheet](https://futureoflife.org/wp-content/uploads/2025/11/Indicator-TrustLLM_Benchmark.pdf) · [ESA OPS-SAT](https://www.nature.com/articles/s41597-025-05035-3) · [Intl AI Safety Report](https://internationalaisafetyreport.org/publication/international-ai-safety-report-2026) · [Privacy Intl](https://www.privacyinternational.org/report/5736/nowhere-hide-privacy-risks-and-policy-implications-ai-geolocation) · [LLNL SafeAI PDF](https://data-science.llnl.gov/sites/data_science/files/2024-12/SafeAIforDOE%20Digital.pdf)
+**Source URLs:** [Senate PDF](https://www.hsgac.senate.gov/wp-content/uploads/2024.06.11-Hedge-Fund-Use-of-AI-Report.pdf) · [CDAO Toolkit](https://www.ai.mil/Portals/137/Documents/Resources%20Page/2024-12GenAI-Responsible-AI-Toolkit.pdf) · [NIST PDF](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-2e2025.pdf) · [FLI Inaugural](https://futureoflife.org/ai-policy/ai-experts-major-ai-companies-have-significant-safety-gaps/) · [FLI Summer](https://futureoflife.org/ai-safety-index-summer-2025/) · [FLI Winter](https://futureoflife.org/ai-safety-index-winter-2025/) · [FLI Indicator Sheet](https://futureoflife.org/wp-content/uploads/2025/11/Indicator-TrustLLM_Benchmark.pdf) · [ESA OPS-SAT](https://www.nature.com/articles/s41597-025-05035-3) · [Intl AI Safety Report](https://internationalaisafetyreport.org/publication/international-ai-safety-report-2026) · [Privacy Intl](https://www.privacyinternational.org/report/5736/nowhere-hide-privacy-risks-and-policy-implications-ai-geolocation) · [LLNL SafeAI PDF](https://data-science.llnl.gov/sites/data_science/files/2024-12/SafeAIforDOE%20Digital.pdf) · [MITRE LILAC PDF](https://www.mitre.org/sites/default/files/2024-10/PR-24-2767-Emerging-Risks-Mitigations-Public-Chatbots-LILAC-v1.pdf) · [TxGemma report](https://storage.googleapis.com/research-media/txgemma/txgemma-report.pdf) · [Google TxGemma docs](https://developers.google.com/health-ai-developer-foundations/txgemma) · [OpenAI Careers](https://openai.com/careers/technical-intelligence-analyst-san-francisco/) · [snapshot](news-snapshots/openai-careers-technical-intelligence-analyst-2026-05-07.md)
 
-**Dimension 8 (PDF deep search) status:** Searched 25+ governance PDFs + regulated verticals for all 105 papers + 19 tools. TrustLLM confirmed in Senate HSGAC, DoD CDAO, NIST AI 100-2e2025, FLI x4 (inaugural, summer, winter, indicator sheet), International AI Safety Report 2026, and LLNL/DOE SafeAI. DoxBench confirmed in Privacy International report. PyOD confirmed in ESA OPS-SAT benchmark and DoD CDAO toolkit. Deloitte Germany AIxAML was verified and recorded under ecosystem/industry evidence.
+**Dimension 8 (PDF deep search) status:** Searched 25+ governance PDFs + regulated verticals for all 105 papers + 19 tools. TrustLLM confirmed in Senate HSGAC, DoD CDAO, NIST AI 100-2e2025, FLI x4 (inaugural, summer, winter, indicator sheet), International AI Safety Report 2026, LLNL/DOE SafeAI, and MITRE LILAC. DoxBench confirmed in Privacy International report. PyOD confirmed in ESA OPS-SAT benchmark, DoD CDAO toolkit, and the official OpenAI Careers Technical Intelligence Analyst listing. TDC confirmed in Google/DeepMind TxGemma official report/docs. Deloitte Germany AIxAML was verified and recorded under ecosystem/industry evidence.
 
 **D8 candidates resolved:**
 - ~~**OWASP GenAI Solutions Landscape Q2 2026**~~ — manually checked Apr 10; no universities or academic tools listed. Cleared.
 
-**Count: 12 government/policy citations (TrustLLM x9, PyOD x2, DoxBench x1)**
+**Count: 15 government/policy/foundation-model citations (TrustLLM x10, PyOD x3, DoxBench x1, TDC x1)**
 
 ---
 
 ## Ledger 2: External Third-Party Media
 
 Independent third-party coverage by outlets not affiliated with you, your lab, or your co-authors. These are the items a promotion committee would consider "external recognition."
+
+**Inclusion rule:** Bare publication-listing pages from coauthor institutions are tracked in Ledger 3 unless they include clear editorial/news treatment. Legacy Ledger 2 research-listing rows are kept pending a future cleanup pass.
 
 | # | Work Named | Outlet | Type | Headline | Date | Dim | URL |
 |---|-----------|--------|------|----------|------|-----|-----|
@@ -111,8 +117,14 @@ Independent third-party coverage by outlets not affiliated with you, your lab, o
 | 36w | DoxBench | Sina / 机器之心Pro syndication | Chinese tech media | "一张照片、一句简单提示词，被ChatGPT人肉开盒" -- 机器之心Pro original reporting via Sina, names "南加州大学教授赵越（Yue Zhao）团队", paper title "Doxing via the Lens", and arXiv:2504.19373 | Apr 2026 | D7 | [Link](https://k.sina.cn/article_3996876140_ee3b7d6c001014qs2.html) |
 | 36y | Auditable Agents | Awesome Agents | AI news / science brief | "MedGemma 1.5, Smarter MCTS, and Auditing AI Agents" -- editorial section "Auditable Agents -- 617 Reasons to Pay Attention" links arXiv:2604.05485 and names co-authors Yi Nian and Aojie Yuan; Yue Zhao not named directly (passes direct-mention rule via co-authors) | Apr 2026 | D5 | [Link](https://awesomeagents.ai/science/medgemma-mcts-auditable-agents/) |
 | 36aa | No Attacker Needed / UCC paper | Promptfoo, RAXE Labs, SecTools.tw, Gist.Science, Fugu-MT | Mixed-source security cluster (one row per cluster convention) | "Unintentional Cross-User Contamination in Shared-State LLM Agents", arXiv:2604.01350. Editorial: RAXE RADAR-2026-004 (full author list including Yue Zhao). Templated DB entry: Promptfoo Security DB (paper named, no authors). AI-generated / aggregator (also referenced; would otherwise belong in Ledger 3 if split): SecTools.tw archive 793 ("本文由 AI 產生、整理與撰寫" disclaimer), Gist.Science DE auto-translated mirror, Fugu-MT machine-translation page. | Apr 2026 | D5/D7 | [Promptfoo](https://www.promptfoo.dev/lm-security-db/vuln/benign-cross-user-contamination-6ea37d04) · [RAXE](https://raxe.ai/labs/radar/radar-2026-004) · [SecTools](https://sectools.tw/archives/793) · [Gist DE](https://gist.science/de/paper/2604.01350) · [Fugu-MT](https://fugumt.com/fugumt/paper_check/2604.01350v1) |
+| 36ab | The Autonomy Tax | The Autonomy Review | Agent research briefing | "Your Agent Pays a Tax Every Time It Plays It Safe..." directly covers "The Autonomy Tax: Defense Training Breaks LLM Agents" and links arXiv:2603.19423. | Mar 2026 | D4 | [Link](https://www.theautonomyreview.com/your-agent-pays-a-tax-every-time-it-plays-it-safe-and-san-francisco-just-marched-on-the-industry-449b296b) |
+| 36ac | PyOD / ADBench | Fora Soft | Industry playbook | "The Ultimate Guide to Machine Learning Algorithms for Anomaly Detection (2026 Playbook)" names PyOD V3, ADEngine, the od-expert workflow, and ADBench benchmark datasets. | Jun 2025 / Apr 2026 update | D2/D10 | [Link](https://www.forasoft.com/blog/article/machine-learning-algorithms-anomaly-detection) |
+| 36ad | Aegis | The Weather Report | Agent-security blog | "A firewall that learns from clean agent traces..." benchmarks Praetor against Aegis and cites "AEGIS: No Tool Call Left Unchecked, A Pre-Execution Firewall and Audit Layer for AI Agents." | May 2026 | D4/D5 | [Link](https://theweatherreport.ai/posts/praetor-agent-firewall/) |
+| 36ae | SUOD | Rubik's Code | AI research blog | "Top 3 Artificial Intelligence Research Papers - February 2020" includes a dedicated section on "SUOD: Toward Scalable Unsupervised Outlier Detection." | Mar 2020 | D2/D7 | [Link](https://rubikscode.net/2020/03/02/top-3-artificial-intelligence-research-papers-february-2020/) |
+| 36aj | TrustLLM | EthicAI, JOBIRUN, WebProNews | Policy/news explainer cluster | Third-party explainers about FLI AI Safety Index name TrustLLM alongside HELM/AIR-Bench/CAIS safety evaluations; JOBIRUN gives a Japanese report explainer, EthicAI covers Winter 2025 safety failures, and WebProNews mentions TrustLLM via the AI Safety Index. | 2025-2026 | D7/D10 | [EthicAI](https://ethicai.net/frontier-ai-safety-failures) · [JOBIRUN](https://jobirun.com/fli-ai-safety-index-report-summer-2025-overview/) · [WebProNews](https://www.webpronews.com/ai-frameworks-under-siege-rce-flaws-and-malware-surge-threaten-40-of-dev-pipelines/) |
+| 36ak | TrustLLM | **Samsung SDS Insights** | Korean enterprise editorial | "LLM 평가 방법론" — names TrustLLM as flagship LLM trustworthiness evaluation framework; reference list cites Huang, Yue, et al. "TrustLLM: Trustworthiness in Large Language Models" arXiv:2401.05561 (Yue Zhao co-author). | 2026 | D7 | [Link](https://www.samsungsds.com/kr/insights/llm-evaluations.html) |
 
-**Count: 65 external third-party items**
+**Count: 71 external third-party items**
 
 *Re-classification on 2026-04-29 web verification: #36v USC Viterbi (USC at ICLR 2026 institutional PR) dropped from the count entirely — USC institutional PR for conference papers is treated as out of scope and is not tracked in any ledger; legacy USC rows #17, #18, #18b-e are kept in place pending a future cleanup pass. #36x SecTools.tw 713 (Auditable Agents) and #36z SecTools.tw 854 (Agent Audit) moved to Ledger 3 #66ci and #66cj after both pages were found to carry an explicit "本文由 AI 產生、整理與撰寫" (AI-generated) disclaimer.*
 
@@ -222,11 +234,11 @@ External parties building on, integrating, or teaching your tools -- not coverag
 | 66bm | Cat-DPO | **Platform** | New arXiv aggregator and AI-news listings after Apr 22: alphaXiv, Bytez, Gist.Science, Moonlight, ResearchTrend.AI, AI Navigate, haebom/slashpage. |
 | 66bn | Topology Matters | **Platform** | alphaXiv, Bytez, Moonlight, aimodels.fyi, ChatPaper, ResearchTrend.AI, and haebom/slashpage pages name the memory-leakage paper and Yue Zhao. |
 | 66bo | Auditable Agents | **Platform** | alphaXiv, Bytez, Gist.Science, ResearchTrend.AI, Code of Paper, and haebom/slashpage pages name the paper and Yue Zhao. |
-| 66bp | Aegis | **Platform** | Hugging Face Papers, Gist.Science, ResearchTrend.AI, PULRC Portal, DeepDyve, and alphaXiv pages name AEGIS and the tool-call firewall paper. |
+| 66bp | Aegis | **Platform** | Hugging Face Papers, Gist.Science, ResearchTrend.AI, PULRC Portal, DeepDyve, alphaXiv, Cool Papers, Skillget, and Hacker News Show HN pages name AEGIS and the tool-call firewall paper. |
 | 66bq | DoxBench | **Platform** | Additional DoxBench coverage on Zhuanzhi, haebom/slashpage, Gist.Science, ResearchTrend.AI, ChatPaper, and Hugging Face Papers; Liner already recorded in 66w. |
 | 66br | TrustGen | **Platform** | BAAI Community and CSDN pages name TrustGen, Yue Zhao, the project page, arXiv link, and GitHub repo. |
 | 66bs | PyOD / PyOD 3 | **Platform** | SourceForge mirror, newreleases.io v3.0.0 release tracker, AitFind project page, LibHunt alternatives, DeepWiki docs, and OSSInsight comparison pages name PyOD/PyOD 3. |
-| 66bt | agent-audit | **Platform** | Skillget listing, ClawHub Agent Audit Scanner listing, and SoftwareSeni awesome-ai-agents list name agent-audit as an AI-agent security scanner. |
+| 66bt | agent-audit | **Platform** | Skillget listing, ClawHub Agent Audit Scanner listing, SoftwareSeni awesome-ai-agents list, MCP Market server/skill listings, PyPI, piwheels, and Safety DB name agent-audit as an AI-agent/MCP security scanner. |
 | 66bu | agent-style / anywhere-agents | **Platform** | [Replicate Hype](https://hype.replicate.dev/?filter=past_week&sources=GitHub%2CHuggingFace%2CReddit%2CReplicate) Apr 22 trending page lists `yzhao062/agent-style` and `yzhao062/anywhere-agents`; ToolHunter later published an external tool directory/review for `agent-style`; package registries and docs remain first-party or registry-only. |
 | 66bv | PersonaConvBench | **Platform** | alphaXiv, Hugging Face Papers, Bytez, Moonlight, aimodels.fyi, and ResearchTrend.AI pages name the personalized conversation benchmark. |
 | 66bw | Defenses Against Prompt Attacks | **Platform** | Bytez, Moonlight, ResearchTrend.AI, J-GLOBAL, AI Security News, and AI Security Portal pages name the surface-heuristics prompt-attack paper; alphaXiv already recorded in 66ai. |
@@ -243,8 +255,34 @@ External parties building on, integrating, or teaching your tools -- not coverag
 | 66ch | IET / Fairness or Fluency? / Someone Hid It | **Platform** | Cool Papers, ChatPaper, GoatStack, and ResearchTrend.AI pages name these 2026 LLM evaluation, attribution, and retrieval-security papers with Yue Zhao. |
 | 66ci | Auditable Agents | **Platform** | SecTools.tw 2.0 archive 713 ([link](https://sectools.tw/archives/713)) carries an "本文由 AI 產生、整理與撰寫" (AI-generated) disclaimer at the top and bottom; the page names "Auditable Agents", arXiv:2604.05485, and the full author list including Yue Zhao. Downgraded from initial Ledger 2 #36x placement on 2026-04-29 web verification. |
 | 66cj | Agent Audit | **Platform** | SecTools.tw 2.0 archive 854 ([link](https://sectools.tw/archives/854)) carries the same "本文由 AI 產生、整理與撰寫" (AI-generated) disclaimer; the page names "Agent Audit: A Security Analysis System for LLM Agent Applications", arXiv:2603.22853, and the author list (Haiyue Zhang et al.; Yue Zhao not directly named on this page, but Haiyue Zhang is co-author). Downgraded from initial Ledger 2 #36z placement on 2026-04-29 web verification. |
+| 66ck | LangSkills | **Academic / platform** | "Recipes for Agents: Understanding Skills and Their Open Questions" cites `LabRAI/LangSkills` as reference [32]; Safety DB and piwheels also list `langskills-rai`. |
+| 66cl | PyOD / LSCP | **Patent** | US20230017157A1 (Flowhow / Ben-Gurion University medical-device protection) says 11 unsupervised anomaly detection algorithms were used, some implemented by the PyOD toolbox, and names LSCP among ensemble methods. |
+| 66cm | PyOD / COPOD | **Patent** | WO2023192130A1 (Dun & Bradstreet semantic directions / entity targeting) names the open-source PyOD library, the `yzhao062/pyod` GitHub URL, LOF, COPOD, and the JMLR PyOD citation. |
+| 66cn | PyOD | **Patent** | US12074893B2 (Visa user network activity anomaly detection; same family as US11711391B2 / WO2022082091A1) cites "PyOD: A Python Toolbox for Scalable Outlier Detection" in non-patent literature. |
+| 66co | LSCP | **Patent** | CN111880983A/B (CAN bus anomaly detection, Beijing Topsec) cites Yue Zhao et al., "LSCP: Locally Selective Combination in Parallel Outlier Ensembles", as non-patent literature. |
+| 66cp | PyOD / ECOD / COPOD | **Finance research / applied deployment** | Springer Nature Discover Data article "A hybrid framework of anomaly detection for mutual fund parent companies" uses four PyOD algorithms (KNN, ECOD, COPOD, IForest) in a Morningstar-linked mutual-fund parent-company anomaly-detection workflow. |
+| 66cq | PyOD | **Audit workflow** | Syntora "Integrate AI Anomaly Detection into Your Audit Workflow" says its ledger anomaly-detection service would build a Python service using PyOD for Isolation Forest modeling. |
+| 66cr | TrustLLM | **Academic citation cluster** | 2025-2026 downstream papers in npj Artificial Intelligence, Requirements Engineering, Engineering Applications of Artificial Intelligence, and npj Digital Medicine cite or discuss TrustLLM in trustworthiness / healthcare AI contexts. |
+| 66cs | DoxBench | **Follow-on research / AI-assisted news** | ReasonBreak / "Disrupting Hierarchical Reasoning" evaluates on DoxBench for geographic privacy protection; AI CERTs News also names DoxBench and GeoMiner in a ChatGPT location-risk article, with an explicit AI-generated/assisted disclaimer. |
+| 66ct | The Autonomy Tax | **Platform** | SecTools.tw archive 729 carries an AI-generated disclaimer and directly names "The Autonomy Tax: Defense Training Breaks LLM Agents", Shawn Li, Yue Zhao, arXiv:2603.19423, and DOI 10.48550/arXiv.2603.19423. |
+| 66cu | PyOD / PyOD 2 | **Scientific uptake** | ACS Analytical Chemistry article "Unsupervised Machine Learning for Differential Analysis in Proteomics" uses PyOD version 2; the 2026 ACS comment on that paper says the reviewed UMLAD algorithms primarily come from PyOD 2 and cites the PyOD 2 WWW Companion paper. |
+| 66cv | PyOD | **Education / training** | Additional course and syllabus pages from Python Charmers, Datastat, RX-M, and WUNU name PyOD or PyOD docs in anomaly-detection training contexts. |
+| 66cw | TDC | **Education / platform** | Harvard AIM2 course project page, IntuitionLabs biotech evaluation guide, Hugging Face TDC mirror, and Emergent Mind topic page name Therapeutics Data Commons (TDC) as a dataset/benchmark resource. |
+| 66cx | 2025-2026 paper long tail | **Platform** | Direct paper pages/reviews for DyFlow (Deep Paper), M3OOD (OSLLM.ai/Nemati), ClimateLLM (Moonlight), Mole-PAIR / molecular foundation model uncertainty (aimodels.fyi), model-extraction surveys (Moonlight / Cool Papers), graph foundation model extraction (Cool Papers), CDCR-SFT (Emergent Mind), and hurricane economic-loss prediction (Moonlight) name the relevant papers and/or Yue Zhao. |
+| 66cz | ADMoE | **Institutional research listing** | Microsoft Research Redmond page lists "ADMoE: Anomaly Detection with Mixture-of-Experts from Noisy Labels", Yue Zhao, Microsoft co-authors, AAAI 2023, and the proprietary enterprise security dataset result. Demoted from initial Ledger 2 placement because it is a coauthor-institution publication listing. |
+| 66da | AutoAudit | **Institutional research listing** | CMU Tepper Accounting AI Lab page lists "AutoAudit: Mining Accounting and Time-Evolving Graphs", Yue Zhao, and applied audit/accounting framing. Demoted from initial Ledger 2 placement because it is a coauthor-institution publication listing. |
+| 66db | LLM-based Conversational User Simulation | **Institutional research listing** | Adobe Research page lists the EACL 2026 survey, publication date Mar 29 2026, Yue Zhao among authors, and intelligent-agents/NLP research areas. Demoted from initial Ledger 2 placement because it is a coauthor-institution publication listing. |
+| 66dc | PersonaConvBench | **Institutional research listing** | Adobe Research page lists the NeurIPS 2025 MTI-LLM workshop paper, Yue Zhao among authors, and "Spotlight paper (top 5%)." Demoted from initial Ledger 2 placement because it is a coauthor-institution publication listing. |
+| 66dd | CDCR-SFT | **External newsletter** | gatodo (Christopher Berry) "Bowling Shoe Agents" newsletter (Nov 25, 2025) — dedicated section "Mitigating Hallucinations in Large Language Models via Causal Reasoning" naming the paper title, CDCR-SFT, and the 95.33% CLADDER state-of-the-art result. [Link](https://www.gatodo.com/bowling-shoe-agents/) |
+| 66de | PyOD | **Enterprise / open-source platform integration** | **Apache Software Foundation / apache/beam** (8.5K+ stars). First-class PyOD ModelHandler in `sdks/python/apache_beam/ml/anomaly/detectors/pyod_adapter.py` (`from pyod.models.base import BaseDetector as PyODBaseDetector`), accompanying `pyod_adapter_test.py`, example notebook `anomaly_detection_iforest.ipynb`, and YAML log_analysis pipeline. Apache Beam underlies Google Cloud Dataflow. [Link](https://github.com/apache/beam) |
+| 66df | PyOD | **Enterprise / production analytics integration** | **PostHog / posthog** (34K+ stars, YC unicorn product analytics). Production alerting subsystem at `posthog/tasks/alerts/detectors/pyod_detectors/` with `BasePyODDetector` wrapper class and ten detector files (KNN, IForest, COPOD, ECOD, OCSVM, LOF, PCA, HBOS) wrapping PyOD models for live-traffic alerting. [Link](https://github.com/PostHog/posthog) |
+| 66dg | PyOD | **Official docs / community flavor** | **MLflow / mlflow** (25.8K+ stars, official AI engineering platform). MLflow Community Flavors documentation lists PyOD as canonical anomaly-detection flavor with worked KNN-detector code example via `mlflavors`; cross-listed across versions 2.4.x through 3.11. [Link](https://github.com/mlflow/mlflow/blob/master/docs/docs/classic-ml/community-model-flavors/index.mdx) |
+| 66dh | PyOD / ADBench | **Pharma code adoption** | **Genentech (Roche) / data-detective** — modular validation framework for heterogeneous multimodal data on Genentech's official GitHub org. Dedicated `adbench_validator_method_factory.py`, `adbench_multimodal`, and `adbench_ood_inference` factories import from `pyod.models...` for drug-discovery data validation. Yue Zhao not among Genentech repo authors — true external T2 pharma adoption. [Link](https://github.com/Genentech/data-detective) |
+| 66di | PyOD | **Aggregate code adoption** | **GitHub Dependents snapshot 2026-05-07:** 5,493 public repositories and 139 packages depend on `yzhao062/pyod` per the official GitHub Dependents network graph. Quantitative ecosystem-scale signal; sampled per-organization adopters above (Apache Beam, PostHog, MLflow, Genentech) were drawn from this leaderboard. Re-snapshot quarterly. [Link](https://github.com/yzhao062/pyod/network/dependents) |
 
-**Count: 117 ecosystem adoption items**
+*Note: Nature Scientific Reports x3 ADBench scientific-uptake cluster (s41598-025-88050-z, s41598-024-72982-z, s41598-025-28976-6) demoted back to candidate pool in Codex Round 2 because the rows rested on WebSearch-snippet confirmation only; full-text fetch was Nature-IDP gated. Per the "snippet alone is not verified evidence" rule, awaiting direct article fetch before re-promotion.*
+
+**Count: 141 ecosystem adoption items**
 
 ---
 
@@ -287,8 +325,9 @@ Items authored by you, your students, or posted by your team. Useful context but
 | 87 | CMU Presidential Fellowship | -- |
 | 88 | AAAI New Faculty Highlights | 2024 |
 | 89 | TDC -- Nature Chemical Biology | 2022 |
+| 90 | PyOD — Wikipedia (en) "Anomaly detection" Software section names PyOD; reference list cites Zhao, Nasrullah, Li 2019 JMLR. [Link](https://en.wikipedia.org/wiki/Anomaly_detection) | continuous |
 
-**Count: 18 awards/recognitions**
+**Count: 19 awards/recognitions/encyclopedia entries**
 
 ---
 
@@ -298,8 +337,9 @@ Items authored by you, your students, or posted by your team. Useful context but
 2. **机器之心 ICLR 2026 Paper Sharing** (Apr 18, Beijing): DoxBench has readable Sina/机器之心Pro syndication recorded in #36w; continue watching for FigEdit/TrustGen.
 3. **USC Viterbi "USC at ICLR 2026"** -- published Apr 23, not tracked (USC institutional PR for conference papers is out of scope).
 4. **ACM AI and Agentic Systems** (May 26-29): agent-audit presentation.
-5. **ACL 2026** (Jul 2-7): CoAct, Defenses Against Prompt Attacks, Topology Matters.
-6. **Adobe Research blog**: FigEdit research listing resolved in #36u; watch for a broader ICLR roundup.
+5. **Agent Skills '26** (May 26, 2026 at ACM CAIS): organizer page names Yue Zhao / USC; watch for coverage of the 3,984-skills audit talk.
+6. **ACL 2026** (Jul 2-7): CoAct, Defenses Against Prompt Attacks, Topology Matters.
+7. **Adobe Research blog**: FigEdit research listing resolved in #36u; watch for a broader ICLR roundup.
 
 ---
 
@@ -316,9 +356,11 @@ Items authored by you, your students, or posted by your team. Useful context but
 | Consulting firms | McKinsey, Deloitte, PwC, Accenture, EY, KPMG | **Deloitte Germany AIxAML cites ADBench**. Other firm sources remain topic coverage only. |
 | Think tanks | Stanford HAI, CSET, CAIS, Brookings, RAND, WEF, OECD, Turing | Topic coverage only |
 | Foundation model system cards | OpenAI (8), Anthropic (5), Meta, Google, DeepSeek (2), Qwen, Phi-4, Cohere, Gemma, Yi; Apr 24 and Apr 29 re-checks included OpenAI GPT-5.5 / GPT-5.4 Thinking, Anthropic, DeepMind Gemini 3/3.1, Meta Llama, and Microsoft Phi candidates | No citations |
+| Foundation model system cards / jobs (May 7) | OpenAI GPT-5.2/GPT-5.1/GPT-5/GPT-5.1-Codex-Max/ChatGPT Agent/o3/o4-mini/Deep Research/o1/gpt-oss; Anthropic Claude Mythos/Opus 4.6/Sonnet 4.6; DeepMind Gemini 3.1/Flash Image/Flash Audio/Flash-Lite; Meta, Mistral, xAI, Cohere exact searches | No new system-card citations. OpenAI Careers "Technical Intelligence Analyst" names PyOD and is recorded in Ledger 1 #8g (foundation-model-company official content). Earlier third-party mirrors of the Quantitative Threat Forecasting Analyst role naming PyOD 2.0 remain candidate-only unless an official OpenAI URL resurfaces. |
 | Government (beyond Senate) | White House (3), NIST AI 600-1, GAO, Congress.gov, NSF.gov, OSTI.gov | No citations by name |
 | International government | EU AI Office, ENISA, UK gov, OECD iLibrary, UNESCO, G7/G20 | **International AI Safety Report 2026 cites TrustLLM** (citation #881). Other sources: no citations by name. |
 | **Regulated verticals (D8)** | OCC, FDIC, FINRA, SEC, CFTC (finance); FDA (healthcare); NASA, FAA (aerospace); CISA (cybersecurity); DARPA, MITRE, DOE (defense); telecom; insurance; security vendors (Splunk, Elastic, CrowdStrike, Palo Alto, Fortinet) | **Deloitte Germany AIxAML cites ADBench**, LLNL/DOE SafeAI cites TrustLLM, and DoD CDAO names PyOD. Other topic-relevant PDFs found but none cite target work by name. |
+| MITRE / standards-adjacent (May 7) | MITRE LILAC v1, MITRE CWE, MITRE ATLAS exact searches | MITRE LILAC cites TrustLLM and is recorded in Ledger 1. MITRE CWE-1039 cites CommanderSong with Yue Zhao as co-author; USENIX/DBLP/arXiv confirm a real 2018 CommanderSong paper with a Yue Zhao author (USENIX affiliation: SKLOIS / UCAS), but CommanderSong is not in `data/publications.json`, so identity/inventory status is still pending. No MITRE ATLAS direct hit. |
 | Standards bodies | MITRE ATLAS, MLCommons, Cloud Security Alliance | No citations |
 | Korean tech (Tistory) | Searched | 3 PyOD tutorials found (D10) — corrected from prior negative |
 | German tech (Heise.de) | Searched | No results on Heise; Gist.Science DE covers No Attacker Needed, and 5 earlier German sources found (D10) |
@@ -332,12 +374,12 @@ Items authored by you, your students, or posted by your team. Useful context but
 
 | Ledger | Count |
 |--------|-------|
-| Government/Policy citations | 12 |
-| External third-party media | 65 |
-| Ecosystem adoption | 117 |
+| Government/Policy citations | 15 |
+| External third-party media | 71 |
+| Ecosystem adoption | 141 |
 | First-party/community | 6 |
-| Awards/recognitions | 18 |
-| **Total verified items** | **218** |
+| Awards/recognitions | 19 |
+| **Total verified items** | **252** |
 
 - **105 papers + 19 tools** searched across all 8 core dimensions plus D9/D10 follow-up checks
 - **11,551 Google Scholar citations** (Apr 2026)
@@ -346,9 +388,9 @@ Items authored by you, your students, or posted by your team. Useful context but
 - **~285 Semantic Scholar citations** for TrustLLM
 - **5+ books** with dedicated chapters on PyOD/COPOD/ECOD (Manning, Columbia, Apress, Routledge, IntechOpen)
 - **2 podcasts** naming PyOD
-- **4 online courses** teaching PyOD (DataCamp, Udemy x2, O'Reilly video)
-- **4 enterprise integrations** (Databricks x2, Walmart, IQVIA), 1 vendor whitepaper (Altair), and 1 EU research project deliverable cluster (SEDIMARK Horizon Europe D3.1 p.18, D5.2)
-- **7 patents** citing PyOD/COPOD/ECOD (Ericsson, EU x2, US x2, China x2)
+- **5+ online courses/training pages** teaching PyOD (DataCamp, Udemy x2, O'Reilly video, Python Charmers / Datastat / RX-M / WUNU cluster)
+- **8 enterprise integrations** (Databricks x2, Walmart, IQVIA, Apache Beam / Apache Software Foundation, PostHog, MLflow community flavor, Genentech/Roche Data Detective), 1 vendor whitepaper (Altair), 1 EU research project deliverable cluster (SEDIMARK Horizon Europe D3.1 p.18, D5.2), plus finance/audit workflow evidence from Discover Data and Syntora; PyOD GitHub Dependents aggregate snapshot 2026-05-07 = 5,493 repos + 139 packages
+- **11 patents** citing PyOD/COPOD/ECOD/LSCP (WIPO x2, EU x2, US x4, China x3)
 - **1 Nature Scientific Data publication** using PyOD (ESA OPS-SAT)
 
 ---
@@ -373,7 +415,16 @@ For grant narratives only. These do not name your work.
 
 ---
 
-## Changes from Previous Audit (2026-04-08 refresh)
+## Changes from Previous Audit
+
+**May 7 weekly parallel sweep + Codex Round 1+2 review promotions (+34):**
+- **Ledger 1 (+3):** MITRE LILAC v1 technical report cites TrustLLM; Google DeepMind / Google Research TxGemma report and Google Developers pages use TDC for training/evaluation; OpenAI Careers Technical Intelligence Analyst listing names PyOD as an Intelligence & Investigations tool.
+- **Ledger 2 (+6):** The Autonomy Review covers The Autonomy Tax; Fora Soft covers PyOD/ADBench; The Weather Report compares Aegis; Rubik's Code covers SUOD; EthicAI/JOBIRUN/WebProNews explain FLI/TrustLLM; Samsung SDS Insights Korean editorial names TrustLLM as flagship LLM trustworthiness evaluation framework.
+- **Ledger 3 (+24):** Microsoft Research / CMU Tepper / Adobe Research coauthor-institution listings moved here from initial Ledger 2 placement; LangSkills reference; four new patent rows; Discover Data / Morningstar finance research; Syntora audit workflow; TrustLLM academic-citation cluster; DoxBench follow-on/AI-assisted-news cluster; SecTools Autonomy Tax AI-generated page; ACS PyOD 2 proteomics uptake; PyOD education cluster; TDC education/platform cluster; 2025-2026 paper-platform tail; gatodo (CDCR-SFT) external newsletter; **enterprise code-adoption rows:** Apache Beam (Apache Software Foundation, 8.5K stars, first-class PyOD ModelHandler), PostHog (34K stars, ten-detector production alerting subsystem), MLflow (25.8K stars, community-flavor docs), Genentech/Roche Data Detective (pharma drug-discovery validators); PyOD GitHub dependents aggregate snapshot (5,493 repos + 139 packages, 2026-05-07).
+- **Ledger 5 (+1):** Wikipedia (en) "Anomaly detection" — Software section names PyOD; reference list cites Zhao/Nasrullah/Li 2019 JMLR.
+- **Candidate-only / held:** OpenAI Quantitative Threat Forecasting Analyst — held until a first-party OpenAI/Ashby rendered snapshot is committed (Cloudflare returned 6.3KB JS shell on 2026-05-07; would promote to Ledger 1 #8h with #8g-pattern evidence on capture). Wells Fargo Principal Platform Engineer R-512394 — held until a rendered Wells Fargo page, Wayback copy, or browser snapshot is committed (returned 403 on 2026-05-07; would promote to Ledger 3 enterprise operational adoption on capture). Nature Scientific Reports x3 ADBench scientific-uptake cluster — demoted back to candidate pool in Codex Round 2 because the row rested on WebSearch-snippet confirmation only; full-text fetch was Nature-IDP gated. Re-promote after direct article fetch records reference-list evidence per the "snippet alone is not verified evidence" rule. MITRE CWE-1039 / CommanderSong kept out of count because the paper is not in `data/publications.json` and the Yue Zhao identity/inventory decision is pending.
+- **Confirmed negatives:** OpenAI/Anthropic/DeepMind/Meta/Mistral/xAI/Cohere system-card searches, major tech/security/business press, OWASP/MITRE ATLAS/CSA/MLCommons, analyst/consulting sources, GAO/CRS accessible pages, and EU CORDIS had no new direct target hit beyond rows recorded above.
+- **Skill upgrades (Round 1 + 2):** `skills/news-search/scripts/pdf_term_scan.py` rewritten to load every paper title and tool name from `data/publications.json` + `data/open-source.json` plus arXiv IDs (215 terms versus 38 hard-coded) so the full-audit-mode contract is met. `skills/news-search/SKILL.md` adds an explicit Tier 0(b) FM-co-careers exception (first-party FM-co JD naming a tool as operational tooling counts as Tier 0(b) only with a durable local or public snapshot, referencing #8g precedent); non-FM-co careers pages classify under Ledger 3 (ecosystem adoption) per Codex Round 2. `skills/news-search/references/candidate-schema.md` now documents the extended Phase A/B fields and the `status` lifecycle (`candidate` / `candidate-promote` / `counted` / `dropped` / `dropped_name_collision` / `verified-negative` / `paywall_or_blocked`) used by the active JSONL. `skills/news-search/references/disambiguation-registry.md` carries cumulative collision rules and verified-negative leads from this round. `.gitattributes` extended with binary declarations for PDF / DOCX / image types so `git diff --check` no longer treats binary assets as text.
 
 **New items added this pass:**
 - #4: Tom's Hardware -- REMOVED (DoxBench citation could not be verified; moved to Topic Validation)
