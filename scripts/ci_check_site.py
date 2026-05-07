@@ -353,7 +353,20 @@ def normalize_local_ref(url: str) -> str | None:
 
 def check_local_refs(errors: list[str]) -> None:
     pattern = re.compile(r'(?:href|src)\s*=\s*"([^"]+)"', re.IGNORECASE)
-    html_files = sorted(ROOT.rglob("*.html"))
+    # Skip directories that are not part of the published site:
+    # - `news-snapshots/`: out-of-band evidence captures (Chrome "Save Page As Webpage,
+    #   Complete") used as durable citation backups for volatile external pages such as
+    #   the OpenAI #8g careers listing; the companion `_files/` directories are
+    #   deliberately excluded from the repo (too large, vendor-specific cache), so the
+    #   saved HTML references many local assets that do not exist in the working tree
+    #   by design.
+    # - `out/`: gitignored LaTeX / local-build output (CV PDF intermediates, agent
+    #   scratch directories). Not present in CI but may exist in dev clones.
+    skip_top_level = {"news-snapshots", "out"}
+    html_files = sorted(
+        h for h in ROOT.rglob("*.html")
+        if not (set(h.relative_to(ROOT).parts) & skip_top_level)
+    )
     for html in html_files:
         rel_html = html.relative_to(ROOT).as_posix()
         text = read_text(html, errors)
