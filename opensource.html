@@ -238,6 +238,8 @@
     .type-media { background: #fff8f0; color: #8a5c2a; }
     .type-consulting { background: #f7f3ec; color: #6d4d20; }
     .type-institute { background: #eef7f6; color: #17665d; }
+    .type-fmco { background: #ecf4f3; color: #0a4a44; }
+    .type-platform { background: #f4f0fa; color: #4a3d6d; }
 
     .impact-source {
       font-size: 0.82rem;
@@ -275,15 +277,38 @@
                       <a href="https://claude.com/contact-sales/claude-for-oss">Anthropic Claude for Open Source Program</a>.
                       For all repositories, see <a href="https://github.com/yzhao062">my GitHub profile</a>.
                     </p>
+                    <div style="background:#fff7f7; border-left:4px solid #990000; padding:10px 14px; margin:10px 0 14px 0; font-size:0.95rem;">
+                      <strong style="color:#990000;">External adoption:</strong>
+                      PyOD is named by
+                      <a href="#pyod-impact">OpenAI</a>
+                      as expected operational tooling in its Technical Intelligence Analyst role,
+                      shipped as a first-class ModelHandler in
+                      <a href="#pyod-impact">Apache Beam</a> (Apache Software Foundation),
+                      runs the live-traffic alerting subsystem in
+                      <a href="#pyod-impact">PostHog</a> (34K+ stars),
+                      is the canonical anomaly-detection flavor in
+                      <a href="#pyod-impact">MLflow's</a> community-flavor docs,
+                      and is embedded in
+                      <a href="#pyod-impact">Genentech (Roche)</a> drug-discovery validators.
+                      Across the wider ecosystem,
+                      <a href="https://github.com/yzhao062/pyod/network/dependents">5,493 public repositories and 139 packages</a>
+                      depend on PyOD (May 2026 snapshot).
+                      DoD CDAO lists PyOD and TrustLLM; ESA OPS-SAT uses PyOD; NIST AI 100-2e2025 and the FLI AI Safety Index cite TrustLLM.
+                    </div>
                     <h3 style="color:#990000; margin-top:18px; margin-bottom:14px;">Adoption &amp; Recognition</h3>
 
                     <!-- PyOD -->
                     <div id="pyod-impact" class="impact-card">
                       <h4>PyOD <span style="font-weight:400; color:#555; font-size:0.9rem;">— Python Library for Outlier Detection</span></h4>
-                      <div class="impact-subtitle">9,800+ stars &middot; 39M+ downloads &middot; <a href="https://github.com/yzhao062/pyod">GitHub</a></div>
+                      <div class="impact-subtitle">9,800+ stars &middot; 39M+ downloads &middot; 5,493 dependent repos + 139 packages (<a href="https://github.com/yzhao062/pyod/network/dependents">GitHub Dependents</a>, May 2026) &middot; <a href="https://github.com/yzhao062/pyod">GitHub</a></div>
                       <table class="impact-table">
                         <colgroup><col class="col-type"><col class="col-evidence"><col class="col-source"></colgroup><thead><tr><th>Type</th><th>Evidence</th><th>Source</th></tr></thead>
                         <tbody>
+                          <tr>
+                            <td><span class="impact-type type-fmco">AI Lab</span></td>
+                            <td>OpenAI Careers names PyOD as expected operational tooling in the Technical Intelligence Analyst job posting Qualifications block: "Have experience with anomaly detection tools, such as PyOD, and discovery processes for surfacing novel or low-prevalence patterns."</td>
+                            <td class="impact-source"><a href="https://openai.com/careers/technical-intelligence-analyst-san-francisco/">OpenAI</a> &middot; <a href="news-snapshots/openai-careers-technical-intelligence-analyst-2026-05-07.md">snapshot</a></td>
+                          </tr>
                           <tr>
                             <td><span class="impact-type type-gov">Space Agency</span></td>
                             <td>Selected by ESA for OPS-SAT spacecraft telemetry benchmark (all 30 algorithms)</td>
@@ -298,6 +323,26 @@
                             <td><span class="impact-type type-policy">EU Project</span></td>
                             <td>SEDIMARK Horizon Europe D3.1 (p.18) names PyOD and TODS in the outlier-detection module of the EU data-space toolbox</td>
                             <td class="impact-source"><a href="https://sedimark.eu/wp-content/uploads/2024/01/D3.1-Energy-efficient-AI-based-toolset-for-improving-data-quality.pdf">SEDIMARK D3.1</a></td>
+                          </tr>
+                          <tr>
+                            <td><span class="impact-type type-platform">Platform</span></td>
+                            <td>Apache Software Foundation / Apache Beam (8.5K+ stars) ships a first-class PyOD ModelHandler at <code>sdks/python/apache_beam/ml/anomaly/detectors/pyod_adapter.py</code>; Apache Beam underlies Google Cloud Dataflow</td>
+                            <td class="impact-source"><a href="https://github.com/apache/beam/blob/master/sdks/python/apache_beam/ml/anomaly/detectors/pyod_adapter.py">apache/beam</a></td>
+                          </tr>
+                          <tr>
+                            <td><span class="impact-type type-enterprise">Enterprise</span></td>
+                            <td>PostHog (34K+ stars, YC unicorn product analytics) runs a multi-detector PyOD subsystem at <code>posthog/tasks/alerts/detectors/pyod_detectors/</code> for live-traffic alerting (eight algorithm wrappers: KNN, IForest, COPOD, ECOD, OCSVM, LOF, PCA, HBOS)</td>
+                            <td class="impact-source"><a href="https://github.com/PostHog/posthog/tree/master/posthog/tasks/alerts/detectors/pyod_detectors">PostHog/posthog</a></td>
+                          </tr>
+                          <tr>
+                            <td><span class="impact-type type-platform">Platform</span></td>
+                            <td>MLflow (25.8K+ stars) official community-flavor docs list PyOD as the canonical anomaly-detection flavor with worked KNN-detector example via <code>mlflavors</code></td>
+                            <td class="impact-source"><a href="https://github.com/mlflow/mlflow/blob/master/docs/docs/classic-ml/community-model-flavors/index.mdx">mlflow/mlflow</a></td>
+                          </tr>
+                          <tr>
+                            <td><span class="impact-type type-pharma">Pharma</span></td>
+                            <td>Genentech (Roche) Data Detective embeds PyOD/ADBench in its drug-discovery validator factories (<code>adbench_validator_method_factory.py</code>, <code>adbench_multimodal</code>, <code>adbench_ood_inference</code>)</td>
+                            <td class="impact-source"><a href="https://github.com/Genentech/data-detective">Genentech/data-detective</a></td>
                           </tr>
                           <tr>
                             <td><span class="impact-type type-enterprise">Enterprise</span></td>
@@ -315,16 +360,6 @@
                             <td class="impact-source"><a href="https://arxiv.org/abs/2003.05731">SUOD Paper</a></td>
                           </tr>
                           <tr>
-                            <td><span class="impact-type type-education">Education</span></td>
-                            <td>Featured in 5 books (Manning, O'Reilly, Apress, Routledge, IntechOpen)</td>
-                            <td class="impact-source"><a href="https://www.manning.com/books/outlier-detection-in-python">Manning</a></td>
-                          </tr>
-                          <tr>
-                            <td><span class="impact-type type-education">Education</span></td>
-                            <td>DataCamp course with dedicated chapter (19M+ platform learners)</td>
-                            <td class="impact-source"><a href="https://www.datacamp.com/courses/anomaly-detection-in-python">DataCamp</a></td>
-                          </tr>
-                          <tr>
                             <td><span class="impact-type type-enterprise">Enterprise</span></td>
                             <td>Ericsson Anomaly Detection Framework (E-ADF) built on PyOD</td>
                             <td class="impact-source"><a href="https://www.ericsson.com/en/blog/2020/7/how-to-make-anomaly-detection-more-accessible">Ericsson Blog</a></td>
@@ -333,6 +368,21 @@
                             <td><span class="impact-type type-patent">Patents</span></td>
                             <td>7 patents cite PyOD/COPOD/ECOD (Ericsson, EU x2, US x2, China x2); recent additions include Actimize US20230267468A1 (fraud / anomalous-transaction ML)</td>
                             <td class="impact-source"><a href="https://patents.google.com/patent/WO2023166515A1/en">Ericsson</a> &middot; <a href="https://patents.google.com/patent/US20230267468A1">Actimize</a></td>
+                          </tr>
+                          <tr>
+                            <td><span class="impact-type type-education">Encyclopedia</span></td>
+                            <td>Wikipedia "Anomaly detection" Software section names PyOD; reference list cites Zhao, Nasrullah, Li 2019 JMLR</td>
+                            <td class="impact-source"><a href="https://en.wikipedia.org/wiki/Anomaly_detection">Wikipedia</a></td>
+                          </tr>
+                          <tr>
+                            <td><span class="impact-type type-education">Education</span></td>
+                            <td>Featured in 5 books (Manning, O'Reilly, Apress, Routledge, IntechOpen)</td>
+                            <td class="impact-source"><a href="https://www.manning.com/books/outlier-detection-in-python">Manning</a></td>
+                          </tr>
+                          <tr>
+                            <td><span class="impact-type type-education">Education</span></td>
+                            <td>DataCamp course with dedicated chapter (19M+ platform learners)</td>
+                            <td class="impact-source"><a href="https://www.datacamp.com/courses/anomaly-detection-in-python">DataCamp</a></td>
                           </tr>
                         </tbody>
                       </table>
@@ -354,6 +404,11 @@
                             <td><span class="impact-type type-enterprise">Enterprise</span></td>
                             <td>Cited in papers with authors affiliated with Microsoft Research, Tencent, Amazon, BlackRock, Visa, Bosch, Siemens, and Ericsson</td>
                             <td class="impact-source"><a href="citation-affiliation-audit.md">Audit details</a></td>
+                          </tr>
+                          <tr>
+                            <td><span class="impact-type type-pharma">Pharma</span></td>
+                            <td>Genentech (Roche) Data Detective uses ADBench in <code>adbench_validator_method_factory.py</code>, <code>adbench_multimodal</code>, and <code>adbench_ood_inference</code> validator factories for drug-discovery data validation</td>
+                            <td class="impact-source"><a href="https://github.com/Genentech/data-detective">Genentech/data-detective</a></td>
                           </tr>
                         </tbody>
                       </table>
@@ -400,6 +455,11 @@
                             <td><span class="impact-type type-media">Media</span></td>
                             <td>Featured by 机器之心 (Jiqizhixin) and 澎湃新闻 (The Paper)</td>
                             <td class="impact-source"><a href="https://www.jiqizhixin.com/articles/2024-02-08-8">机器之心</a> · <a href="https://www.thepaper.cn/newsDetail_forward_26315865">澎湃</a></td>
+                          </tr>
+                          <tr>
+                            <td><span class="impact-type type-media">Enterprise Editorial</span></td>
+                            <td>Samsung SDS Insights treats TrustLLM as a flagship LLM trustworthiness evaluation framework in its Korean enterprise editorial; reference list cites arXiv:2401.05561</td>
+                            <td class="impact-source"><a href="https://www.samsungsds.com/kr/insights/llm-evaluations.html">Samsung SDS</a></td>
                           </tr>
                         </tbody>
                       </table>
