@@ -555,13 +555,13 @@
     {
         "id": "workshop-autobench-v",
         "section": "workshop",
-        "title": "AutoBench-V: Can Large Vision-Language Models Benchmark Themselves?",
+        "title": "AutoDavis: Automatic and Dynamic Evaluation Protocol of Large Vision-Language Models on Visual Question-Answering?",
         "paper_url": "https://arxiv.org/abs/2410.21259",
         "authors": "Han Bao, Yue Huang, Yanbo Wang, Jiayi Ye, Xiangqi Wang, Xiuying Chen, Yue Zhao, Tianyi Zhou, Mohamed Elhoseiny, Xiangliang Zhang",
         "venue": "ICML 2025 DataWorld Workshop",
         "year": 2025,
         "links": [],
-        "abstract": "Large Vision-Language Models (LVLMs) have become essential for advancing the integration of visual and linguistic information. However, the evaluation of LVLMs presents significant challenges as the evaluation benchmark always demands lots of human cost for its construction, and remains static, lacking flexibility once constructed. Even though automatic evaluation has been explored in textual modality, the visual modality remains under-explored. As a result, in this work, we address a question: \"Can LVLMs themselves be used to benchmark each other in the visual automatically domain?\". We introduce AutoBench-V, an automated framework for serving evaluation on demand, i.e., benchmarking LVLMs based on specific aspects of model capability. AutoBench-V leverages text-to-image models to generate relevant image samples and then utilizes LVLMs to orchestrate visual question-answering (VQA) tasks, completing the evaluation process efficiently and flexibly. Through an extensive evaluation of nine popular LVLMs across five demanded user inputs (i.e., evaluation capabilities), the framework shows effectiveness and reliability."
+        "abstract": "Large Vision-Language Models (LVLMs) have become essential for advancing the integration of visual and linguistic information. However, the evaluation of LVLMs presents significant challenges as the evaluation benchmark always demands lots of human cost for its construction, and remains static, lacking flexibility once constructed. Even though automatic evaluation has been explored in textual modality, the visual modality remains under-explored. As a result, in this work, we address a question: \"Can LVLMs themselves be used to benchmark each other in the visual automatically domain?\". We introduce AutoDavis, an automated framework for serving evaluation on demand, i.e., benchmarking LVLMs based on specific aspects of model capability. AutoDavis leverages text-to-image models to generate relevant image samples and then utilizes LVLMs to orchestrate visual question-answering (VQA) tasks, completing the evaluation process efficiently and flexibly. Through an extensive evaluation of nine popular LVLMs across five demanded user inputs (i.e., evaluation capabilities), the framework shows effectiveness and reliability."
     },
     {
         "id": "conference-fast-unsupervised-deep-outlier-model-selection-with-hypernetworks",
