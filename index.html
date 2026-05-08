@@ -4,20 +4,20 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="author" content="Yue Zhao">
-  <meta name="description" content="Yue Zhao is a USC assistant professor building methods, benchmarks, and open-source tools for AI auditing — making AI systems inspectable, safe, and accountable.">
-  <meta name="keywords" content="Yue Zhao, USC, AI Auditing, AI Assurance, AI Safety, AI Security, AI for Science and Society, Agent Systems, Agentic AI, Execution Tracing, Runtime Guardrails, Foundation Models, Climate AI, Healthcare AI, Computational Social Systems">
+  <meta name="description" content="Yue Zhao is a USC assistant professor building methods, benchmarks, and open-source tools for AI auditing: making AI systems inspectable, safe, and accountable.">
+  <meta name="keywords" content="Yue Zhao, USC, AI Auditing, AI Assurance, AI Safety, AI Security, Anomaly Detection, Outlier Detection, AI for Science and Society, Agent Systems, Agentic AI, Execution Tracing, Runtime Guardrails, Foundation Models, Climate AI, Healthcare AI, Computational Social Systems">
 
   <title>Yue Zhao | AI Auditing</title>
   <link rel="canonical" href="https://viterbi-web.usc.edu/~yzhao010/">
   <link rel="icon" type="image/x-icon" href="images/logo2.ico">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Yue Zhao | AI Auditing">
-  <meta property="og:description" content="USC assistant professor building methods, benchmarks, and open-source tools for AI auditing — making AI systems inspectable, safe, and accountable.">
+  <meta property="og:description" content="USC assistant professor building methods, benchmarks, and open-source tools for AI auditing: making AI systems inspectable, safe, and accountable.">
   <meta property="og:url" content="https://viterbi-web.usc.edu/~yzhao010/">
   <meta property="og:image" content="https://viterbi-web.usc.edu/~yzhao010/images/logo.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Yue Zhao | AI Auditing">
-  <meta name="twitter:description" content="USC assistant professor building methods, benchmarks, and open-source tools for AI auditing — making AI systems inspectable, safe, and accountable.">
+  <meta name="twitter:description" content="USC assistant professor building methods, benchmarks, and open-source tools for AI auditing: making AI systems inspectable, safe, and accountable.">
   <meta name="twitter:image" content="https://viterbi-web.usc.edu/~yzhao010/images/logo.png">
   <script type="application/ld+json">
   {
@@ -43,6 +43,8 @@
         "AI Assurance",
         "AI Safety",
         "AI Security",
+        "Anomaly Detection",
+        "Outlier Detection",
         "AI for Science and Society",
         "Agent Systems",
         "Agentic AI",
@@ -151,6 +153,15 @@
                             My research addresses this gap: I build the methods, benchmarks, and open-source
                             tools for <strong>AI auditing</strong>.
                           </p>
+                          <p style="margin:0 0 10px 0;">
+                            Methodologically, this work extends my prior research on
+                            <strong>anomaly and outlier detection</strong>
+                            (the basis of the <a href="pyod.html">PyOD</a> ecosystem)
+                            from data-distribution settings to foundation-model behavior and
+                            autonomous-agent decision traces, where unsafe, anomalous, or
+                            out-of-policy actions must be detected and reconstructed for audit
+                            before deployment.
+                          </p>
                           <p style="margin:0;">
                             This work spans three connected directions: how to inspect and evaluate AI
                             systems (auditing and assurance), what failure modes and attack surfaces to
@@ -186,8 +197,9 @@
                                 in multi-agent interaction, together with runtime guardrails such as policy enforcement and approval
                                 workflows for tool-using agents. Representative systems include <a href="aegis.html">Aegis</a>,
                                 with <a href="anywhere-agents.html">anywhere-agents</a> adding a lightweight developer-facing
-                                guard that blocks destructive Git and GitHub commands during AI-assisted coding. This
-                                direction is also informed by my earlier work on anomaly detection and out-of-distribution detection.
+                                guard that blocks destructive Git and GitHub commands during AI-assisted coding.
+                                This direction draws on a decade of anomaly-detection methodology built through the
+                                <a href="pyod.html">PyOD</a> ecosystem (current major release: PyOD 3), now extended toward LLMs and autonomous agents.
                               </p>
                               <p style="font-family:'Poppins','Segoe UI',sans-serif; font-size:0.93rem; color:#7a2a2a;">
                                 <strong>Keywords:</strong> LLM Safety, Agent Safety, AI Security, AI Agent Security, Runtime Guardrails, Policy Enforcement, Hallucination Mitigation, Jailbreak Detection, Prompt Attacks, Privacy Leakage, Model Extraction, Robustness, OOD Detection, Anomaly Detection
@@ -222,6 +234,7 @@
                           a position paper defining five dimensions of auditability for LLM agent systems
                           and three mechanism classes for making agent behavior reconstructable, checkable,
                           and attributable. No agent system can be accountable without auditability.
+                          This paper frames how my anomaly-detection and open-source auditing work can inform agent decision auditing.
                           <br>
                           <a href="https://arxiv.org/abs/2604.05485" style="color:#990000;">[arXiv]</a>
                           <a href="https://arxiv.org/pdf/2604.05485" style="color:#990000;">[PDF]</a>

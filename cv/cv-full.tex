@@ -111,6 +111,13 @@ inspection of what they do or why.
 My research addresses this gap: I build the methods, benchmarks, and
 open-source tools for \textbf{AI auditing}.
 
+Methodologically, this work extends my prior research on
+\textbf{anomaly and outlier detection} (the basis of the PyOD ecosystem)
+from data-distribution settings to foundation-model behavior and
+autonomous-agent decision traces, where unsafe, anomalous, or
+out-of-policy actions must be detected and reconstructed for audit
+before deployment.
+
 This work spans three connected directions:
 how to inspect and evaluate AI systems (\textbf{auditing and assurance}),
 what failure modes and attack surfaces to audit for (\textbf{safety and security}),
@@ -153,8 +160,9 @@ privacy leakage, model extraction, and failures in multi-agent interaction,
 together with runtime guardrails such as policy enforcement and approval
 workflows for tool-using agents.
 Representative systems include Aegis.
-This direction is also informed by my earlier work on anomaly detection
-and out-of-distribution detection.
+This direction draws on a decade of anomaly-detection methodology built
+through the PyOD ecosystem (current major release: PyOD 3), now extended
+toward LLMs and autonomous agents.
 
 \vspace{-0.15in}
 \begin{tabular}{@{}p{0.475\textwidth}p{0.475\textwidth}}

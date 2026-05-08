@@ -1,11 +1,11 @@
 # Yue Zhao — AI Auditing
 
-> Yue Zhao is an Assistant Professor of Computer Science at the University of Southern California (USC), where he leads the FORTIS Lab. His research focuses on AI auditing — building methods, benchmarks, and open-source tools that make AI systems inspectable, safe, and accountable.
+> Yue Zhao is an Assistant Professor of Computer Science at the University of Southern California (USC), where he leads the FORTIS Lab. His research focuses on AI auditing: building methods, benchmarks, and open-source tools that make AI systems inspectable, safe, and accountable, with a decade of foundational work on anomaly and outlier detection at scale.
 
 ## Research Areas
 
 - **AI Auditing & Assurance**: execution tracing, audit-ready evidence, policy and behavior checking, ecosystem-scale risk scanning, runtime monitoring, agent skill evaluation
-- **AI Safety & Security**: hallucinations, jailbreaks, prompt attacks, privacy leakage, model extraction, runtime guardrails, policy enforcement
+- **AI Safety & Security**: hallucinations, jailbreaks, prompt attacks, privacy leakage, model extraction, runtime guardrails, policy enforcement; informed by a decade of anomaly-detection methodology from the PyOD ecosystem (current major release: PyOD 3)
 - **AI for Science & Society**: climate and weather forecasting, healthcare and biomedicine, computational social systems
 
 ## Key Pages
