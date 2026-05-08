@@ -58,12 +58,6 @@ The Rising Star track is open to:
 
 Applicants from underrepresented institutions and international applicants are encouraged to apply.
 
-> **[CONFIRM: industry research scientist scope.]** Two options:
-> - (a) Restrict the Rising Star track to academic-track candidates only.
-> - (b) Also welcome candidates targeting industry research-scientist roles at labs that publish at IEEE BigData.
->
-> Recommendation: (a) for the inaugural year to keep the program tightly scoped, then expand if the OC sees demand. AMA Panel sign-up can independently widen its eligibility.
-
 ## Submission Requirements (Rising Star Track)
 
 Each application must be submitted as a single PDF containing:
@@ -122,21 +116,11 @@ The Faculty AMA Panel sign-up form will be linked from the conference website on
 
 Each accepted Rising Star must register for IEEE BigData 2026 and present in person at Sheraton Phoenix Downtown. Remote presentations are not accepted for the Rising Star track. Faculty AMA Panel participation also requires in-person conference registration.
 
-> **[CONFIRM: travel support policy for Rising Stars.]** Three options:
-> - (a) Self-pay (matches the PhD Forum default).
-> - (b) Track funds a partial travel stipend, e.g., \$500-\$750 per Rising Star (matches the Tutorials honorarium of \$500).
-> - (c) Reduced or waived registration for accepted Rising Stars.
->
-> A speaker-funding line is the single biggest accessibility lever and a common ask from international applicants.
+The Organizing Committee plans to provide either a travel award or reduced registration for accepted Rising Stars. The specific form will be confirmed in October 2026 once the conference financial situation is finalized.
 
 ## Recording
 
-> **[CONFIRM: recording and post-conference release policy for Rising Star talks.]** Three options:
-> - (a) No recording; in-person only.
-> - (b) Record talks and release on the IEEE BigData 2026 website after the conference, with speaker opt-out.
-> - (c) Record talks but keep them in a private archive accessible only to FFH speakers and committee.
->
-> Recommendation: (a) for the inaugural year as a safe default, then move to (b) opt-in once the OC has a recording workflow. The Faculty AMA Panel is not recorded under any policy, since candidates need to ask sensitive questions frankly.
+Rising Star talks are not recorded for the inaugural year and are presented in person only. The Faculty AMA Panel is not recorded under any policy, since candidates need to ask sensitive questions frankly.
 
 ## Future Faculty Highlights Cochairs
 
@@ -160,8 +144,5 @@ Questions about eligibility, materials, or the program can be sent to the track 
 A condensed list of the inline **[CONFIRM]** items above, for OC discussion. This section will be removed from the public CFP.
 
 1. **AMA scope, sign-up flow, panelist policy**: closed to academic job-market candidates (recommended); panelist mix.
-2. **Industry research scientist eligibility for Rising Stars**: academic-track only (recommended for year one), or include industry research-scientist candidates.
-3. **Deadline calibration**: confirm Sept 15 / Oct 15 / Oct 31 / Nov 15 / Nov 30.
-4. **CyberChair Rising Star track route plus AMA sign-up form**.
-5. **Travel support policy for Rising Stars**: self-pay, partial stipend, or registration waiver.
-6. **Recording policy for Rising Star talks**: no recording for year one (recommended), opt-out public release, or private archive. AMA is never recorded.
+2. **Deadline calibration**: confirm Oct 24 / Nov 7 / Nov 21 / Dec 5; AMA sign-up closes Dec 5.
+3. **CyberChair Rising Star track route plus AMA sign-up form**.
