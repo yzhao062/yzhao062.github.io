@@ -1,12 +1,12 @@
 {
   "generated_at": "2026-04-24T06:34:37Z",
   "source": "Semantic Scholar Graph API",
-  "input_publications": 105,
-  "matched": 105,
+  "input_publications": 104,
+  "matched": 104,
   "unmatched": 0,
   "low_confidence": 0,
   "totals": {
-    "citationCount": 7390,
+    "citationCount": 7382,
     "influentialCitationCount": 535
   },
   "top_by_citations": [
@@ -1389,38 +1389,6 @@
           "Yue Zhao",
           "Eleni Chatzi",
           "Olga Fink"
-        ]
-      }
-    },
-    {
-      "id": "conference-preference-optimization-for-molecule-synthesis-with-conditional-residual-energy-based-models",
-      "title": "Preference Optimization for Molecule Synthesis with Conditional Residual Energy-based Models",
-      "venue": "ICML, 2024",
-      "year": 2024,
-      "matched_by": "title-search",
-      "title_match_score": 1.0,
-      "s2": {
-        "paperId": "39aaca98b537985d00437e89100d2b5eff674b76",
-        "corpusId": 270226718,
-        "title": "Preference Optimization for Molecule Synthesis with Conditional Residual Energy-based Models",
-        "url": "https://www.semanticscholar.org/paper/39aaca98b537985d00437e89100d2b5eff674b76",
-        "venue": "International Conference on Machine Learning",
-        "year": 2024,
-        "publicationDate": "2024-06-04",
-        "citationCount": 8,
-        "influentialCitationCount": 0,
-        "referenceCount": 0,
-        "externalIds": {
-          "DBLP": "journals/corr/abs-2406-02066",
-          "ArXiv": "2406.02066",
-          "DOI": "10.48550/arXiv.2406.02066",
-          "CorpusId": 270226718
-        },
-        "authors": [
-          "Songtao Liu",
-          "Hanjun Dai",
-          "Yue Zhao",
-          "Peng Liu"
         ]
       }
     },
