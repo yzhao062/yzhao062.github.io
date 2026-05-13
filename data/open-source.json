@@ -16,7 +16,7 @@
       "Machine Learning",
       "PyTorch"
     ],
-    "last_updated_at": "2026-05-13T07:57:19Z"
+    "last_updated_at": "2026-05-13T20:41:20Z"
   },
   {
     "name": "AD-AGENT",
@@ -174,7 +174,7 @@
     "docs_url": "https://docs.pygod.org",
     "paper_url": "http://jmlr.org/papers/v25/23-0963.html",
     "demo_url": "",
-    "stars": 1492,
+    "stars": 1493,
     "tags": [
       "Graph Anomaly Detection",
       "PyTorch Geometric",
@@ -265,7 +265,7 @@
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/agent-audit.html",
     "paper_url": "https://arxiv.org/abs/2603.22853",
     "demo_url": "https://pypi.org/project/agent-audit/",
-    "stars": 169,
+    "stars": 170,
     "tags": [
       "AI Agent Security",
       "Security Audit",
@@ -321,7 +321,7 @@
     "docs_url": "https://anywhere-agents.readthedocs.io",
     "paper_url": "",
     "demo_url": "",
-    "stars": 171,
+    "stars": 172,
     "tags": [
       "Claude Code",
       "Codex",
@@ -341,7 +341,7 @@
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/agent-style.html",
     "paper_url": "",
     "demo_url": "https://pypi.org/project/agent-style/",
-    "stars": 431,
+    "stars": 432,
     "tags": [
       "AI Agents",
       "Agent Configuration",
