@@ -1,12 +1,12 @@
-# Yue Zhao: AI Auditing across the Deployment Stack
+# Yue Zhao: AI Risk Audit and Control across the Deployment Stack
 
-> Yue Zhao is an Assistant Professor of Computer Science at the University of Southern California (USC), where he leads the FORTIS Lab. AI systems are deployed faster than their behavior can be checked. His lab builds methods, benchmarks, and open-source tools for auditing AI behavior across the deployment stack: anomaly detection in data, trustworthiness evaluation of foundation models, and runtime audit of deployed agent systems. The current frontier is moving these methods from research artifacts into deployment-time infrastructure for high-stakes AI.
+> Yue Zhao is an Assistant Professor of Computer Science at the University of Southern California (USC), where he leads the FORTIS Lab. AI systems are deployed faster than their risks can be measured or controlled. His lab builds methods, benchmarks, and open-source tools for AI risk audit and control across the deployment stack: anomaly and out-of-distribution detection in data, trust and robustness evaluation of foundation models, and runtime audit and control of deployed agent systems. The current frontier is moving these methods from research artifacts into deployment-time infrastructure for high-stakes AI.
 
 ## Research Areas
 
-The same audit method scales across three layers of the AI stack:
+The same risk audit and control agenda spans three layers of the AI stack:
 
-- **Agent Layer: Audit and Runtime Defenses**: auditability frameworks for reconstruction, checking, and attribution of agent behavior; runtime control surfaces that intercept tool calls before they fire; agent-specific failure modes (over-privilege, cross-user contamination, the autonomy tax of defense training); category-adaptive training-time defenses. Three time-scale defenses anchor this stack: training-time alignment, pre-deployment audit, and runtime tool-call mediation.
+- **Agent Layer: Risk Audit and Runtime Control**: auditability frameworks for reconstruction, checking, and attribution of agent behavior; runtime control surfaces that intercept tool calls before they fire; agent-specific failure modes (over-privilege, cross-user contamination, the autonomy tax of defense training); category-adaptive training-time defenses. Three time-scale defenses anchor this stack: training-time alignment, pre-deployment audit, and runtime tool-call mediation.
 - **Foundation-Model Layer: Trust and Robustness**: jailbreak detection for vision-language models, causal analysis of hallucination, query-agnostic attacks on retrieval-augmented generation, LLM-as-anomaly-detector benchmarks. Community efforts like TrustLLM are tracked as collaborative consortium contributions, separate from lab-led work.
 - **Data Layer: Anomaly and Out-of-Distribution Detection**: PyOD ecosystem (current major release: PyOD 3), ADBench, NLP-ADBench, automatic OOD detector selection, modality-specific OOD methods for graphs, multimodal data, and video, few-shot cross-domain OOD detection.
 
