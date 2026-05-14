@@ -219,11 +219,23 @@ When `web.archive.org/save/<url>` itself returns "Sorry, Job failed" (OpenAI Car
 
 ### Snippet-only evidence is not verified evidence
 
-WebSearch snippets are paraphrased / summarized by the search engine and can carry hallucinated content that does not appear in the source. The 2026-05-07 round caught one example: GAO-26-108695 was claimed by the WebSearch summary to name TrustLLM as a "representative system for AI auditing"; manual PDF download + PyMuPDF text extraction confirmed the PDF says nothing of the sort. The snippet was a model synthesis, not a source quote.
+WebSearch snippets are paraphrased / summarized by the search engine and can carry hallucinated content that does not appear in the source. Two confirmed instances of this failure mode are recorded as named precedents:
+
+1. **GAO-26-108695 (2026-05-07 round).** WebSearch summary claimed the report names TrustLLM as a "representative system for AI auditing". Manual PDF download + PyMuPDF text extraction confirmed the PDF says nothing of the sort. The snippet was a model synthesis, not a source quote.
+
+2. **Stanford HAI 2026 AI Index, Responsible AI chapter (2026-05-13 round).** WebSearch summary claimed the chapter says, verbatim: *"The indicator measures a model's overall trustworthiness using the TrustLLM benchmark, a comprehensive framework spanning six dimensions: truthfulness, safety, fairness, robustness, privacy, and machine ethics."* The phrasing matches TrustLLM's published self-description almost word-for-word, which is exactly what made the snippet look like a copy out of the AI Index. The full 423-page Stanford AI Index 2026 PDF was already on file as a verified-negative from the 2026-04-22 round (138 unique arXiv IDs in the bibliography, none matching arXiv:2401.05561). The wide-run agent's snippet contradicted that manual scan; user re-verification 2026-05-13 confirmed the manual scan was correct and the report does not name TrustLLM. The snippet was the search engine stitching TrustLLM's own self-description onto the AI Index page in the summary, not a quote from the source.
+
+Common shape of the failure: the synthesized snippet reads as a clean, copy-pastable quote because it borrows phrasing that already exists somewhere (often the tool's self-description, abstract, or canonical landing-page copy). The search engine has indexed both the candidate document and the donor document, and the auto-summary can splice the two without flagging the splice. A snippet that looks "too verbatim", especially when its phrasing exactly matches a tool's self-promotional copy, is a tell.
+
+**Detection heuristics, applied before promotion:**
+
+- **Look up the candidate source in the existing Negative Results table.** If it is already recorded as verified-negative, the burden is on the new snippet, not on the prior manual scan. Re-verify before trusting the snippet.
+- **Compare the snippet to the tool's own canonical descriptions** (GitHub README first paragraph, project landing page, arXiv abstract). A near-exact match raises suspicion of donor-splicing.
+- **For long PDFs**, default to assuming the snippet is summarizer output, not a quote. Promote only after `pdf_term_scan.py` returns a positive hit.
 
 Hard rule: **a candidate that would land in Tier 0 (government / foundation-model official document / standards / analyst report) or Tier 1 (mainstream press / national lab / high-impact policy) cannot be promoted on snippet evidence alone.** Phase B must re-fetch the source with `pdf_term_scan.py` (PDFs) or a real-UA HTTP fetch (web pages) and confirm the verbatim quote, before counting. If the source is gated and cannot be re-fetched, set `tier_guess: phase_b_priority` and leave it as a candidate; do not count.
 
-Tier 2 / Tier 3 candidates can be entered on snippet evidence if the snippet contains the verbatim tool-name token (no paraphrase risk on a literal substring) — but the audit row should record the snippet text, not a paraphrase, so the next reviewer can spot synthesis.
+Tier 2 / Tier 3 candidates can be entered on snippet evidence if the snippet contains the verbatim tool-name token (no paraphrase risk on a literal substring), but the audit row should record the snippet text, not a paraphrase, so the next reviewer can spot synthesis.
 
 ### Pre-tier filter: first-party / already-tracked drops
 
