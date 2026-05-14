@@ -8,7 +8,7 @@
     "docs_url": "https://pyod.readthedocs.io",
     "paper_url": "https://arxiv.org/abs/2412.12154",
     "demo_url": "",
-    "stars": 9842,
+    "stars": 9844,
     "tags": [
       "Anomaly Detection",
       "Outlier Detection",
@@ -119,7 +119,7 @@
     "docs_url": "",
     "paper_url": "",
     "demo_url": "",
-    "stars": 9283,
+    "stars": 9285,
     "tags": [
       "Awesome List",
       "Anomaly Detection",
@@ -174,7 +174,7 @@
     "docs_url": "https://docs.pygod.org",
     "paper_url": "http://jmlr.org/papers/v25/23-0963.html",
     "demo_url": "",
-    "stars": 1493,
+    "stars": 1494,
     "tags": [
       "Graph Anomaly Detection",
       "PyTorch Geometric",
@@ -341,7 +341,7 @@
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/agent-style.html",
     "paper_url": "",
     "demo_url": "https://pypi.org/project/agent-style/",
-    "stars": 435,
+    "stars": 436,
     "tags": [
       "AI Agents",
       "Agent Configuration",
