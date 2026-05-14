@@ -119,7 +119,7 @@
     "docs_url": "",
     "paper_url": "",
     "demo_url": "",
-    "stars": 9282,
+    "stars": 9283,
     "tags": [
       "Awesome List",
       "Anomaly Detection",
@@ -192,7 +192,7 @@
     "docs_url": "http://tods-doc.github.io",
     "paper_url": "https://arxiv.org/abs/2009.09822",
     "demo_url": "",
-    "stars": 1660,
+    "stars": 1659,
     "tags": [
       "Time Series",
       "Anomaly Detection",
@@ -341,7 +341,7 @@
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/agent-style.html",
     "paper_url": "",
     "demo_url": "https://pypi.org/project/agent-style/",
-    "stars": 432,
+    "stars": 435,
     "tags": [
       "AI Agents",
       "Agent Configuration",
