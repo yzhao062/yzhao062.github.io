@@ -104,107 +104,83 @@
 
 \section{\sc Research Summary}
 
-AI systems are being deployed faster than they can be verified.
-Foundation models and autonomous agents now make consequential decisions,
-execute code, and interact with external services, often without systematic
-inspection of what they do or why.
-My research addresses this gap: I build the methods, benchmarks, and
-open-source tools for \textbf{AI auditing}.
-
-Methodologically, this work extends my prior research on
-\textbf{anomaly and outlier detection} (the basis of the PyOD ecosystem)
-from data-distribution settings to foundation-model behavior and
-autonomous-agent decision traces, where unsafe, anomalous, or
-out-of-policy actions must be detected and reconstructed for audit
-before deployment.
-
-This work spans three connected directions:
-how to inspect and evaluate AI systems (\textbf{auditing and assurance}),
-what failure modes and attack surfaces to audit for (\textbf{safety and security}),
-and where accountability is not optional (\textbf{science and society}).
+AI systems are deployed faster than their behavior can be checked.
+My lab builds methods, benchmarks, and open-source tools for
+\textbf{auditing AI behavior} across the deployment stack:
+\textit{anomaly detection in data},
+\textit{trustworthiness evaluation of foundation models}, and
+\textit{runtime audit of deployed agent systems}.
+The current frontier is moving these methods from research artifacts into
+\textbf{deployment-time infrastructure} for high-stakes AI.
 
 
-{\color{uscred}\textbf{1. AI Auditing \& Assurance}}\\
-Developing methods, benchmarks, and open-source systems for AI auditing
-and assurance in foundation models and agent systems.
-This includes execution tracing, audit-ready evidence, policy and behavior
-checking, ecosystem-scale risk scanning, runtime monitoring, and agent
-skill evaluation.
-The goal is to make deployed systems easier to inspect, govern, and trust.
-Representative systems include agent-audit and TrustLLM.
+{\color{uscred}\textbf{1. Agent Layer: Audit and Runtime Defenses}}\\
+At the agent layer, deployed systems act through tools, APIs, and shared state,
+making behavior the primary failure surface. This thread covers auditability
+frameworks, runtime control surfaces, agent-specific failure modes, and
+time-scale defenses spanning training, pre-deployment, and runtime.
 
 \vspace{-0.15in}
 \begin{tabular}{@{}p{0.475\textwidth}p{0.475\textwidth}}
 \begin{list1}
-\item AI Auditing
-\item AI Assurance
+\item AI Agent Auditing
 \item Agent Systems
-\item Execution Tracing
+\item Multi-Agent Systems
+\item Behavior Verification
 \end{list1}
 &
 \begin{list1}
-\item Policy Checking
-\item Runtime Monitoring
-\item Evaluation Frameworks
-\item Risk Analysis
-\end{list1}
-\end{tabular}
-
-
-{\color{uscred}\textbf{2. AI Safety \& Security}}\\
-Studying failure modes, attack surfaces, and runtime control layers in
-large language models and agent systems, and designing methods to detect,
-block, and mitigate unsafe or compromised behavior.
-Representative topics include hallucinations, jailbreaks, prompt attacks,
-privacy leakage, model extraction, and failures in multi-agent interaction,
-together with runtime guardrails such as policy enforcement and approval
-workflows for tool-using agents.
-Representative systems include Aegis.
-This direction draws on a decade of anomaly-detection methodology built
-through the PyOD ecosystem (current major release: PyOD 3), now extended
-toward LLMs and autonomous agents.
-
-\vspace{-0.15in}
-\begin{tabular}{@{}p{0.475\textwidth}p{0.475\textwidth}}
-\begin{list1}
-\item LLM Safety
-\item Agent Safety
-\item AI Security
 \item AI Agent Security
 \item Runtime Guardrails
 \item Policy Enforcement
 \end{list1}
-&
-\begin{list1}
-\item Hallucination Mitigation
-\item Jailbreak Detection
-\item Prompt Attacks
-\item Privacy Leakage
-\item Robustness
-\item OOD \& Anomaly Detection
-\end{list1}
 \end{tabular}
 
 
-{\color{uscred}\textbf{3. AI for Science \& Society}}\\
-Building reliable AI methods for domains where correctness, safety,
-and accountability matter, including climate and weather forecasting,
-healthcare and biomedicine, and computational social systems.
-These applications also serve as demanding testbeds for auditing,
-assurance, and safety methods.
+{\color{uscred}\textbf{2. Foundation-Model Layer: Trust and Robustness}}\\
+Foundation models add a new failure surface between data and agents: behavior
+under attack, hallucination, and adversarial robustness of retrieval. My lab
+measures these surfaces through jailbreak detection for vision-language models,
+causal analysis of hallucination, retrieval-augmented generation attacks, and
+LLM-as-anomaly-detector benchmarks.
 
 \vspace{-0.15in}
 \begin{tabular}{@{}p{0.475\textwidth}p{0.475\textwidth}}
 \begin{list1}
-\item AI for Science
-\item Scientific Foundation Models
-\item Climate \& Weather Modeling
+\item Foundation-Model Trust
+\item Trustworthiness Benchmarks
+\item LLM Hallucination
+\item Jailbreak Detection
 \end{list1}
 &
 \begin{list1}
-\item Healthcare \& Biomedicine
-\item Computational Social Systems
-\item Decision Modeling
+\item RAG Security
+\item Adversarial Robustness
+\item Multimodal Trust
+\end{list1}
+\end{tabular}
+
+
+{\color{uscred}\textbf{3. Data Layer: Anomaly and Out-of-Distribution Detection}}\\
+All audit grounds in distinguishing in-distribution from out-of-distribution
+behavior. This is my methodological root, started with the PyOD ecosystem and
+ADBench, and continuing through benchmarks for NLP, automatic OOD detector
+selection, and modality-specific OOD methods for graphs, multimodal data, and
+video.
+
+\vspace{-0.15in}
+\begin{tabular}{@{}p{0.475\textwidth}p{0.475\textwidth}}
+\begin{list1}
+\item Anomaly Detection
+\item Outlier Detection
+\item Out-of-Distribution Detection
+\item Distribution Shift
+\end{list1}
+&
+\begin{list1}
+\item Multimodal OOD
+\item Graph OOD
+\item Benchmark Design
 \end{list1}
 \end{tabular}
 
