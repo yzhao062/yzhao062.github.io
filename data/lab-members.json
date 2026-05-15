@@ -49,13 +49,13 @@
     ]
   },
   {
-    "group": "current",
+    "group": "past",
     "name": "Jinbo Liu",
     "profile_url": "https://www.linkedin.com/in/jinbo-liu-4717a3302/?locale=en_US/",
     "image": "images/others/jinbo.webp",
     "alt": "Jinbo Liu",
     "research": "Multi-Agent, Time Series",
-    "status_text": "Master Student",
+    "status_text": "Master Student → Now Ph.D. Student at ASU (Fall 2026)",
     "email": "jinboliu@usc.edu",
     "publications": [
       "Topology Matters: Measuring Memory Leakage in Multi-Agent LLMs, Findings of ACL 2026"
@@ -92,7 +92,7 @@
     ]
   },
   {
-    "group": "current",
+    "group": "past",
     "name": "Jiale Tan",
     "profile_url": "https://www.linkedin.com/in/jiale-jacky-tan-32484a32a/",
     "image": "images/others/jialetan.webp",
