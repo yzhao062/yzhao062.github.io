@@ -109,13 +109,15 @@ AWARD_NAME & TYPE & DATE \\
 
 Some dual-update events also warrant a news item in the News section of `index.html` (top of the list, newest first). Add a news item — in addition to the dual update — when any of the following happens:
 
-- A paper is **newly accepted** to a venue (including moves from preprint → conference/workshop/journal). Mention the title, venue, and lead author.
+- A paper is **newly accepted** to a venue (including moves from preprint → conference/workshop/journal). Mention the title, venue, and lead author when Yue-led credit framing supports that; otherwise credit the lead team or use neutral co-author framing.
 - A paper wins a **best paper / spotlight / oral** award.
 - A new **grant or award** is received (PI or co-PI).
 - A **PhD student passes their qualifying exam** or other major milestone.
 - A new **open-source release** that is significant enough to flag publicly.
 
 Match the tone and length of nearby items. For paper acceptance, a one-sentence congratulations with the venue in italics and an arXiv link is enough. Do not invent a homepage URL for a co-author you cannot verify; just write the name in plain text.
+
+**Credit framing.** Check author positions before writing. When Yue is last (or co-last) author, or when a Yue-advised student is first author, use possessive framing ("Our paper", "Our group's work", "led by [student first author]"). When Yue is a middle author and no Yue-advised student is first author, the work is led by another lab; use neutral framing such as "Co-authored", "Collaborative paper at ...", or "Two papers Yue co-authored" instead of "Our paper", and do not introduce external first authors as "lead author" in a way that implies Yue is the senior advisor. The goal is to acknowledge the contribution without overclaiming credit from the leading lab.
 
 If the user already has a relevant news item drafted or asks you to skip the news, do not add one.
 

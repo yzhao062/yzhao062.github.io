@@ -553,15 +553,16 @@
         "abstract": "Accurate typhoon track forecasting is crucial for early system warning and disaster response. While Transformer-based models have demonstrated strong performance in modeling the temporal dynamics of dense trajectories of humans and vehicles in smart cities, they usually lack access to broader contextual knowledge that enhances the forecasting reliability of sparse meteorological trajectories, such as typhoon tracks. To address this challenge, we propose TyphoFormer, a novel framework that incorporates natural language descriptions as auxiliary prompts to improve typhoon trajectory forecasting. For each time step, we use Large Language Model (LLM) to generate concise textual descriptions based on the numerical attributes recorded in the North Atlantic hurricane database. The language descriptions capture high-level meteorological semantics and are embedded as auxiliary special tokens prepended to the numerical time series input. By integrating both textual and sequential information within a unified Transformer encoder, TyphoFormer enables the model to leverage contextual cues that are otherwise inaccessible through numerical features alone. Extensive experiments are conducted on HURDAT2 benchmark, results show that TyphoFormer consistently outperforms other state-of-the-art baseline methods, particularly under challenging scenarios involving nonlinear path shifts and limited historical observations."
     },
     {
-        "id": "workshop-autobench-v",
-        "section": "workshop",
-        "title": "AutoDavis: Automatic and Dynamic Evaluation Protocol of Large Vision-Language Models on Visual Question-Answering?",
-        "paper_url": "https://arxiv.org/abs/2410.21259",
+        "id": "conference-autodavis-kdd",
+        "section": "conference",
+        "title": "AutoDavis: Automatic and Dynamic Evaluation Protocol of Large Vision-Language Models on Visual Question-Answering",
+        "paper_url": "https://openreview.net/forum?id=efJnaeB3vo",
         "authors": "Han Bao, Yue Huang, Yanbo Wang, Jiayi Ye, Xiangqi Wang, Xiuying Chen, Yue Zhao, Tianyi Zhou, Mohamed Elhoseiny, Xiangliang Zhang",
-        "venue": "ICML 2025 DataWorld Workshop",
-        "year": 2025,
+        "venue": "KDD D&B Track, 2026",
+        "year": 2026,
+        "sort_date": "2026-08-09",
         "links": [],
-        "abstract": "Large Vision-Language Models (LVLMs) have become essential for advancing the integration of visual and linguistic information. However, the evaluation of LVLMs presents significant challenges as the evaluation benchmark always demands lots of human cost for its construction, and remains static, lacking flexibility once constructed. Even though automatic evaluation has been explored in textual modality, the visual modality remains under-explored. As a result, in this work, we address a question: \"Can LVLMs themselves be used to benchmark each other in the visual automatically domain?\". We introduce AutoDavis, an automated framework for serving evaluation on demand, i.e., benchmarking LVLMs based on specific aspects of model capability. AutoDavis leverages text-to-image models to generate relevant image samples and then utilizes LVLMs to orchestrate visual question-answering (VQA) tasks, completing the evaluation process efficiently and flexibly. Through an extensive evaluation of nine popular LVLMs across five demanded user inputs (i.e., evaluation capabilities), the framework shows effectiveness and reliability."
+        "abstract": "Large Vision-Language Models (LVLMs) have become essential for advancing the integration of visual and linguistic information. While existing benchmarks have laid a solid foundation for evaluation, they are often static, resource-intensive to build, and limited in adaptability. In comparison, automatic evaluation has shown promise in the textual domain, but the visual modality remains far less explored. To advance this frontier, in this work, we introduce AutoDavis, a first-of-its-kind automatic and dynamic evaluation protocol that enables on-demand benchmarking of LVLMs across specific capability dimensions. AutoDavis leverages text-to-image models to generate relevant image samples and then utilizes LVLMs to orchestrate visual question-answering (VQA) tasks, completing the evaluation process efficiently and flexibly. To ensure data diversity, our framework employs a hierarchical aspect-driven generation process enhanced with semantic graph-based constraints. To safeguard reliability, the framework incorporates a self-validation mechanism to detect and correct errors, along with an error-driven adjustment module to mitigate potential bias. Through an extensive evaluation of 11 popular LVLMs across five demanded user inputs (i.e., evaluation capabilities), the framework shows effectiveness and reliability, offering a new paradigm for dynamic benchmarking of multimodal intelligence."
     },
     {
         "id": "conference-fast-unsupervised-deep-outlier-model-selection-with-hypernetworks",
@@ -1250,15 +1251,22 @@
         "abstract": "We study instruction-based image editing under professional workflows and identify three persistent challenges: (i) editors often over-edit, modifying content beyond the user's intent; (ii) existing models are largely single-turn, while multi-turn edits can alter object faithfulness; and (iii) evaluation at around 1K resolution is misaligned with real workflows that often operate on ultra high-definition images (e.g., 4K). We propose Agent Banana, a hierarchical agentic planner-executor framework for high-fidelity, object-aware, deliberative editing. Agent Banana introduces two key mechanisms: (1) Context Folding, which compresses long interaction histories into structured memory for stable long-horizon control; and (2) Image Layer Decomposition, which performs localized layer-based edits to preserve non-target regions while enabling native-resolution outputs. To support rigorous evaluation, we build HDD-Bench, a high-definition, dialogue-based benchmark featuring verifiable stepwise targets and native 4K images (11.8M pixels) for diagnosing long-horizon failures. On HDD-Bench, Agent Banana achieves the best multi-turn consistency and background fidelity (e.g., IC 0.871, SSIM-OM 0.84, LPIPS-OM 0.12) while remaining competitive on instruction following, and also attains strong performance on standard single-turn editing benchmarks. We hope this work advances reliable, professional-grade agentic image editing and its integration into real workflows."
     },
     {
-        "id": "preprint-benchmarking-knowledge-extraction-rag",
-        "section": "preprint",
+        "id": "conference-benchmarking-rag-extraction",
+        "section": "conference",
         "title": "Benchmarking Knowledge-Extraction Attack and Defense on Retrieval-Augmented Generation",
         "paper_url": "https://arxiv.org/abs/2602.09319",
         "authors": "Zhisheng Qi, Utkarsh Sahu, Li Ma, Haoyu Han, Ryan Rossi, Franck Dernoncourt, Mahantesh Halappanavar, Nesreen Ahmed, Yushun Dong, Yue Zhao, Yu Zhang, Yu Wang",
-        "venue": "arXiv preprint",
+        "venue": "KDD D&B Track, 2026",
         "year": 2026,
+        "sort_date": "2026-08-09",
         "links": [],
-        "abstract": "Retrieval-Augmented Generation (RAG) has become a cornerstone of knowledge-intensive applications, including enterprise chatbots, healthcare assistants, and agentic memory management. However, recent studies show that knowledge-extraction attacks can recover sensitive knowledge-base content through maliciously crafted queries, raising serious concerns about intellectual property theft and privacy leakage. While prior work has explored individual attack and defense techniques, the research landscape remains fragmented, spanning heterogeneous retrieval embeddings, diverse generation models, and evaluations based on non-standardized metrics and inconsistent datasets. To address this gap, we introduce the first systematic benchmark for knowledge-extraction attacks on RAG systems. Our benchmark covers a broad spectrum of attack and defense strategies, representative retrieval embedding models, and both open- and closed-source generators, all evaluated under a unified experimental framework with standardized protocols across multiple datasets. By consolidating the experimental landscape and enabling reproducible, comparable evaluation, this benchmark provides actionable insights and a practical foundation for developing privacy-preserving RAG systems in the face of emerging knowledge extraction threats. Our code is available here."
+        "badges": [
+            {
+                "text": "Oral Presentation",
+                "color": ""
+            }
+        ],
+        "abstract": "Retrieval-Augmented Generation (RAG) has become a cornerstone of agentic, knowledge-intensive applications, ranging from enterprise chatbots to healthcare assistants. Recent studies, however, show that knowledge-extraction attacks can recover sensitive knowledge-base content through maliciously crafted queries, raising serious concerns about intellectual property theft and privacy leakage. While prior work has explored individual attack and defense techniques, the research landscape remains fragmented, spanning heterogeneous retrieval embeddings, diverse generation models, and evaluations based on non-standardized metrics and inconsistent datasets. To address this gap, we introduce the first systematic benchmark for knowledge-extraction attacks on RAG systems. Our benchmark covers a broad spectrum of attack and defense strategies, representative retrieval embedding models, and both open- and closed-source generators, all evaluated under a unified experimental framework with standardized protocols across multiple datasets. By consolidating the experimental landscape and enabling reproducible, comparable evaluation, this benchmark provides actionable insights and a practical foundation for developing privacy-preserving RAG systems in the face of emerging extraction threats."
     },
     {
         "id": "preprint-fairness-or-fluency",
