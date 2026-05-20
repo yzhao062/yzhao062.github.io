@@ -8,7 +8,7 @@
     "docs_url": "https://pyod.readthedocs.io",
     "paper_url": "https://arxiv.org/abs/2412.12154",
     "demo_url": "",
-    "stars": 9844,
+    "stars": 9848,
     "tags": [
       "Anomaly Detection",
       "Outlier Detection",
@@ -16,7 +16,7 @@
       "Machine Learning",
       "PyTorch"
     ],
-    "last_updated_at": "2026-05-13T20:41:20Z"
+    "last_updated_at": "2026-05-19T20:12:42Z"
   },
   {
     "name": "AD-AGENT",
@@ -45,7 +45,7 @@
     "docs_url": "https://trustllmbenchmark.github.io/TrustLLM-Website/",
     "paper_url": "https://openreview.net/forum?id=bWUU0LwwMp",
     "demo_url": "",
-    "stars": 626,
+    "stars": 627,
     "tags": [
       "Trustworthy AI",
       "LLM Evaluation",
@@ -265,7 +265,7 @@
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/agent-audit.html",
     "paper_url": "https://arxiv.org/abs/2603.22853",
     "demo_url": "https://pypi.org/project/agent-audit/",
-    "stars": 171,
+    "stars": 172,
     "tags": [
       "AI Agent Security",
       "Security Audit",
@@ -284,7 +284,7 @@
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/aegis.html",
     "paper_url": "https://arxiv.org/abs/2603.12621",
     "demo_url": "https://github.com/Justin0504/Aegis/blob/main/docs/images/readme_demo1.gif",
-    "stars": 356,
+    "stars": 358,
     "tags": [
       "AI Agent Security",
       "Policy Enforcement",
@@ -292,7 +292,7 @@
       "Audit Trail",
       "Human-in-the-Loop"
     ],
-    "last_updated_at": "2026-04-18T05:25:42Z"
+    "last_updated_at": "2026-05-20T11:52:18Z"
   },
   {
     "name": "combo",
@@ -330,7 +330,7 @@
       "Configuration",
       "MCP"
     ],
-    "last_updated_at": "2026-05-18T04:31:16Z"
+    "last_updated_at": "2026-05-20T04:27:39Z"
   },
   {
     "name": "agent-style",
@@ -341,7 +341,7 @@
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/agent-style.html",
     "paper_url": "",
     "demo_url": "https://pypi.org/project/agent-style/",
-    "stars": 446,
+    "stars": 452,
     "tags": [
       "AI Agents",
       "Agent Configuration",
