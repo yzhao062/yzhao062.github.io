@@ -59,7 +59,7 @@ Each audit runs in two phases. Phase A discovers candidates without classifying 
 
 ### Phase A: Candidate Gathering
 
-Run all dimensions (D1 through D10) and emit candidates as JSON-Lines records to `news-search-candidates.jsonl` at the project root. Do not assign tiers yet. Do not write to `news-coverage-audit.md` yet.
+Run news-search dimensions D1-D8 plus D10 and emit candidates as JSON-Lines records to `news-search-candidates.jsonl` at the project root. Handle citation-affiliation evidence through the freshness-gated [[citation-audit]] hook (see "Cross-skill: citation-audit integration" below), not as a Phase A candidate dimension. Do not assign tiers yet. Do not write to `news-coverage-audit.md` yet.
 
 Each candidate carries the schema in `references/candidate-schema.md`: URL, title, snippet, surfacing query, outlet class, fetch timestamp, plus empty placeholders for the Phase B fields (flags, direct-mention, tier, notes).
 
@@ -285,7 +285,7 @@ Non-FM-co careers pages (Wells Fargo, Capital One, JPMC, Pfizer, Goldman, etc.) 
 3. **Negative Results table** — outlet types searched with no results (prevents re-searching)
 4. **Upcoming Opportunities** — imminent conferences, journalist contacts from prior coverage
 5. **Summary Statistics** — separate counts per ledger, not a single aggregate. Report: government/policy total, external media total, ecosystem total, first-party/community total, and awards total.
-6. **Coverage matrix** — per-item appendix or CSV with one row per paper/tool, dimensions searched (D1-D10), Phase A candidate count, and Phase B outcome (kept/topic-only/dropped/none). This makes the audit auditable.
+6. **Coverage matrix** — per-item appendix or CSV with one row per paper/tool, dimensions searched (D1-D8 plus D10; D9 is now handled by the standalone [[citation-audit]] skill), Phase A candidate count, and Phase B outcome (kept/topic-only/dropped/none). This makes the audit auditable.
 7. **Registry harvest summary** — list of new domains added to `references/domain-registry.md` from this round's confirmed Phase B hits, grouped by class. Empty list is fine and should still be reported, so the harvest step stays visible across rounds.
 
 ### Incremental Updates
@@ -298,26 +298,26 @@ When running a targeted search (not full audit), append new findings to the exis
 
 | Mode | When | Dimensions to run |
 |------|------|-------------------|
-| **Full audit** | Once per semester, before portfolio updates | All 10 dimensions (D1-D10) |
+| **Full audit** | Once per semester, before portfolio updates | All 9 news-coverage dimensions (D1-D8 + D10) plus a freshness-gated hook into the standalone [[citation-audit]] skill (see "Cross-skill: citation-audit integration" below) |
 | **Targeted** | After a specific paper acceptance or tool release | Dims 1, 3, 4, 5 scoped to that item, plus D8 when policy or PDF evidence is plausible |
 | **Quick check** | Before grant submissions | Dims 1, 6, 8, 10 (citations, impact, government PDFs, external deep research) |
 | **Topic monitor** | When a trending topic connects to your work | Dim 4 only, focused on that topic |
 | **Ecosystem check** | Before broader-impact statements | Dim 7 (education, code ecosystem, global) |
 | **PDF deep search** | Before tenure materials or when a specific gov report is suspected | Dim 8 only, with candidate PDF list |
-| **Affiliation audit** | Before tenure/promotion, after major citation milestones | Dim 9 (citation affiliation analysis) |
+| **Affiliation audit** | Before tenure / promotion, after major citation milestones | Invoke the standalone `/citation-audit` skill (was D9 here before; split out as its own skill at `skills/citation-audit/SKILL.md`) |
 | **External deep research** | After automated audit, as a complement pass | Dim 10 (external LLM deep research) |
 
 ---
 
 ## Dimension 10: External LLM Deep Research
 
-**Purpose:** Use external deep research tools (ChatGPT Deep Research, Gemini Deep Research, Claude on claude.ai, or similar) as a complement to the automated Dimensions 1-9. These tools have browsing capabilities, PDF reading, and search strategies that differ from Claude Code's WebSearch, and consistently find items the automated audit misses.
+**Purpose:** Use external deep research tools (ChatGPT Deep Research, Gemini Deep Research, Claude on claude.ai, or similar) as a complement to the automated Dimensions 1-8. These tools have browsing capabilities, PDF reading, and search strategies that differ from Claude Code's WebSearch, and consistently find items the automated audit misses.
 
 **Why this matters:** In practice, external deep research tools found the NIST AI 100-2e2025 citation, a third FLI AI Safety Index edition, 5 additional patents, and non-English coverage in Korean/German/Spanish that the automated audit missed entirely. These tools are not a substitute for the structured audit (they lack the systematic coverage and verification discipline), but they are a strong complement.
 
 ### How to run
 
-1. After completing Dimensions 1-9, generate a self-contained prompt for external deep research tools. The prompt should include the full tool/paper inventory, what to search for, and the citation verification rule. See `references/search-queries.md` for the base query bank, but the prompt should be open-ended ("search broadly and creatively — I do not know where the coverage is").
+1. After completing Dimensions 1-8 and reading the freshness state of the standalone citation-audit hook, generate a self-contained prompt for external deep research tools. The prompt should include the full tool/paper inventory, what to search for, and the citation verification rule. See `references/search-queries.md` for the base query bank, but the prompt should be open-ended ("search broadly and creatively — I do not know where the coverage is").
 2. Run the prompt in 1-3 external tools. Different tools have different search indices and browsing capabilities; running multiple increases coverage.
 3. Save the raw output to `external-research/` in the project root. Name each file by source and date: `{source}-{YYYY-MM}.md` (e.g., `chatgpt-deep-research-2026-04.md`, `gemini-2026-04.md`, `claude-2026-04.md`). Date the files so future runs know what was already searched and when. Running once per quarter is sufficient; monthly if a major release or conference just happened.
 4. Diff the external findings against the existing audit. Use an agent to extract only genuinely new items (not already in `news-coverage-audit.md`).
@@ -338,51 +338,36 @@ When running a targeted search (not full audit), append new findings to the exis
 
 ---
 
-## Dimension 9: Citation Affiliation Analysis
+## Cross-skill: citation-audit integration
 
-**Purpose:** Find citing papers where at least one author is affiliated with a notable institution (government agencies, space agencies, national labs, defense contractors, foundation model companies, Fortune 500, pharma, financial institutions). This surfaces adoption evidence that web search and PDF search miss entirely.
+Bibliometric citation-affiliation audit (formerly Dimension 9 inside this skill) now lives in its own skill at `skills/citation-audit/SKILL.md` (slash command: `/citation-audit`). The two skills divide the external-impact landscape:
 
-**Important framing:** This finds "researchers AT [institution] cited your tool" -- not "[institution] officially endorses your tool." The distinction matters for how results are presented in grant narratives and tenure materials.
+- **news-search** (this skill): editorial coverage. Press, blogs, government PDFs, ecosystem, deep-research-tool output. Output: `news-coverage-audit.md`.
+- **[[citation-audit]]**: bibliometric coverage. Citing-paper author affiliations via OpenAlex and Dimensions Analytics. Output: `citation-affiliation-audit.md`.
 
-### How it works
+The "Full audit" mode of this skill hooks citation-audit results into the editorial report so the final `news-coverage-audit.md` captures both sides of impact evidence. The hook is freshness-gated, not always-on, because a full citation audit takes 30-80 minutes and may not be appropriate every time news-search runs.
 
-Run `scripts/citation_affiliation_audit.py`, which uses the OpenAlex API to:
-1. **Load ALL papers** from `data/publications.json` (not a hand-picked subset). The script reads the full inventory and only excludes surveys.
-2. Find each paper on OpenAlex by arXiv ID, DOI, or title search. Title matching uses a two-pass strategy: exact normalized-title match first, then prefix-anchor (pre-colon acronym like "PyOD:", "TrustGen:") plus high word overlap (50%+ with prefix, 70%+ without). This prevents false positives from ambiguous or short titles.
-3. **Query citing papers per work** using OpenAlex's `filter=cites:{work_id}` syntax. Per-work queries preserve the mapping from each citing paper back to which of your works it cites, which is critical for the output table. This is slower than batching but produces accurate attribution.
-4. Extract author institution affiliations from every citing paper.
-5. Pattern-match institutions against Tier 0 targets (government, space, national labs, defense, foundation model companies) and Tier 1 targets (Big Tech, finance, pharma, healthcare, industrial).
-6. Deduplicate and write results to `citation-affiliation-audit.md`.
+### Hook procedure
 
-### Comprehensiveness rule
+When running the "Full audit" Run Mode, perform the following before writing `news-coverage-audit.md`:
 
-**Search every paper, not just the high-profile ones.** You do not know where the gold lies. The ESA OPS-SAT citation came from PyOD (obvious), but NASA JPL cited a less obvious paper. The CDC cited ECOD, not PyOD. Deutsche Bundesbank cited ECOD. Morgan Stanley cited XGBOD. Coverage can come from any paper. The script must read `data/publications.json` and search ALL non-survey entries. Do not skip papers because they have low citation counts or seem unlikely to have notable adopters.
+1. Check whether `citation-affiliation-audit.md` exists at the project root.
+2. If **missing**: tell the user "Citation affiliation audit has never run on this project; recommend running `/citation-audit --source both` (or `--source openalex` if no Dimensions credentials) before the news-search full audit." Do not auto-invoke the long citation audit without confirmation.
+3. If **fresh** (mtime within the last 30 days): copy citation-affiliation-audit.md's Tier 0 and Tier 1 tables verbatim into `news-coverage-audit.md` under a `## Citation Affiliation Evidence (integrated from citation-audit)` section. Specifically:
+   - Reproduce the **full Tier 0 table** (all rows), with the same `Category | Institution | Country | Your Work Cited | Citing Paper | Year | Source` columns.
+   - Reproduce the **full Tier 1 table** (all rows), same columns.
+   - Reproduce the **Summary by Institution** subsection.
+   - Reproduce the **per-source Coverage** subsections (so the freshness gate and source coverage stay visible in the merged report).
+   - Add a one-line freshness stamp at the top of the section citing the audit's generation date.
+   - Add a link back to `citation-affiliation-audit.md` for the canonical separate copy.
+4. If **stale** (mtime older than 30 days): integrate the same content, prefix the section header with `(stale, regenerate via /citation-audit)`, and surface the staleness to the user. Do not silently truncate.
 
-### What to exclude
+The hook never re-runs the citation audit silently; that decision belongs to the user. The hook only reads the existing file and integrates its full content into the unified report.
 
-- **Survey papers** (e.g., Diffusion Models survey): OpenAlex conflates papers with similar titles, producing massive false positive rates. Only include tools, benchmarks, and methods papers. The script filters these automatically using title keywords like "comprehensive survey", "a survey on", "a survey of".
-- **Papers with ambiguous short names** (e.g., "BOND"): The script uses title-word overlap verification (>30%) to confirm the right paper was found. If OpenAlex returns biology papers for a graph anomaly detection tool, the match is rejected.
-- **Grant-funded affiliations vs. employment:** NIH appears as an affiliation on many papers, but most are university researchers with NIH grants, not NIH intramural staff. The output uses the framing "researchers AT [institution]" to avoid overclaiming. NIH Clinical Center and NIH intramural programs are stronger signals than generic "National Institutes of Health".
+### Why full integration, not summary
 
-### Known Limitations
+`news-coverage-audit.md` is the single artifact a tenure / promotion reader or grant reviewer scans for external-impact evidence. Forcing them to follow a link into a separate `citation-affiliation-audit.md` (which they may not realize exists) creates a gap in the impact story. Truncating to "top 10 hits" loses the long-tail Tier 1 evidence that often matters most for broader-impact narratives (e.g., a niche citation from Capital One or Mayo Clinic adds new domain breadth that a top-10 list might drop). Embedding the full tables verbatim keeps the integrated report self-contained while the standalone `citation-affiliation-audit.md` remains canonical for incremental re-runs.
 
-- **OpenAlex coverage gaps:** OpenAlex has incomplete coverage for papers published before ~2022 and its citation index lags behind Google Scholar significantly (e.g., PyOD shows ~24 citations on OpenAlex vs. 1,000+ on Scholar). This means the audit systematically undercounts. Run it as a lower-bound estimate, not an exhaustive census.
-- **Google Scholar has no API.** Scholar has the most complete citation data but cannot be queried programmatically. For high-priority papers where OpenAlex returns few results, consider manual Scholar spot-checks.
-- **Semantic Scholar** has better coverage than OpenAlex for CS papers but its affiliation data is mostly empty. It is not useful for this audit.
-- **Re-run periodically.** OpenAlex backfills citation data over time. A paper that shows 0 citations today may show 50 in six months. Re-run at least once per semester. Very recent preprints (2026) will only appear in future runs.
-- **The script tries arXiv ID lookup first** (from `paper_url` in `publications.json`), then falls back to title search. arXiv lookup is more reliable for CS papers but still requires OpenAlex to have ingested the paper.
+### Why the hook is one-way
 
-### Improving Coverage
-
-OpenAlex covers ~50% of papers as of Apr 2026. To close the gap:
-- **Semantic Scholar API** (`api.semanticscholar.org/graph/v1/paper/{id}/citations`): better CS coverage than OpenAlex, but affiliation data is mostly empty. Useful as a second pass to find citing papers that OpenAlex missed, then cross-reference those citing paper titles back to OpenAlex for institution data.
-- **Web of Science / Scopus APIs**: best affiliation data but require USC library credentials. Use for manual verification of Tier 0 claims.
-- **Re-running the script** every 3-6 months is the simplest way to improve coverage, since OpenAlex backfills continuously.
-
-### Output
-
-Results go to `citation-affiliation-audit.md` at the project root, separate from the news coverage audit. The file includes:
-- Tier 0 table (government, space, national labs, defense, foundation model companies)
-- Tier 1 table (Big Tech, finance, pharma, healthcare, industrial)
-- Summary by institution (counts)
-- Methodology note about framing (affiliated researchers, not institutional endorsement)
+The hook is news-search reading citation-audit's output, not citation-audit calling into news-search. This keeps the two skills independent: the citation-audit pipeline (OpenAlex / Dimensions DSL, Tier 0 / Tier 1 regex patterns, per-source coverage merging) does not need to know anything about editorial-coverage discovery. The single integration surface is the `citation-affiliation-audit.md` file, which both skills agree on as the contract.

@@ -1,6 +1,7 @@
 # News & Media Coverage Audit — Yue Zhao / FORTIS Lab
 
-*Updated: 2026-05-13 (Claude independent wide 8-lane parallel news-search Phase A + Phase B, then Codex Round 1 review: +8 net new rows on top of Codex Phase A (0 unique Ledger 2 + 8 Ledger 3) plus 4 evidence upgrades to existing Ledger 2 rows after Codex caught 4 duplicate-URL candidates that the Phase A lane skip-list missed. Headline finds: Microsoft Research first-party publication listing names Yue Zhao with USC affiliation #26 on the TrustLLM page; thepaper.cn dedicated Chinese TrustLLM feature with verbatim arXiv link; TrustLLM 2026 mainstream-venue academic citation cluster confirmed via OpenAlex graph across ACS Env Sci Tech, Springer Requirements Engineering, ACM/IEEE HRI 2026, Wiley TIBR, Springer CCIS, Springer Frontiers of CS; Justin0504/Aegis third-party implementation cites arXiv 2603.12621 by name; first Russian-language Habr cluster (Otus, Garda, Rosatom); Japanese developer-blog expansion (codemajin, tam5917, Qiita); Juejin Chinese tutorial; mala-lab Awesome AD Foundation Models awesome list; aggregator paper-page cluster across HuggingFace Papers / DoxBench dataset / alphaxiv / papers.cool. Manual-verification outcomes 2026-05-13: Stanford HAI 2026 AI Index Responsible AI chapter dropped to verified-negative after the user confirmed the WebSearch snippet was a search-engine summarizer synthesis and the PDF does not name TrustLLM; aiproductivity.ai Aegis article and jiqizhixin.com TrustLLM feature verified by the user but recorded as evidence upgrades to existing rows #21 and #34b respectively (not new rows); Datawhale WeChat lecture by Yue Zhao (then CMU) added as new Ledger 3 #66dv; ACM Computing Surveys "Towards Trustworthy AI" review (doi:10.1145/3777382) folded into the #66do TrustLLM 2026 mainstream-venue cluster.)*
+*Updated: 2026-05-19 (Full /news-search Full audit run: 8-lane parallel Phase A across D1-D8 → 166 unique candidates → 4-batch parallel Phase B verification → +21 verified ledger rows (0 Ledger 1, 0 Ledger 2, 7 Ledger 3, 13 Ledger 4, 1 Ledger 5) plus full citation-audit hook integration (39 Tier 0 + 207 Tier 1 institution-affiliation rows embedded from regenerated citation-affiliation-audit.md after two Dimensions DSL bug fixes: arXiv ID prefix, title_only search type). Highest-promise D4 lead OWASP Gen AI Q2 2026 Solutions Landscape PDF verified-negative on direct fetch. No new Tier 0 hits in D8 PDF deep search across 22 fresh PDFs. New disambiguation: Hangbo Zhao, Wei Zhao (SiriuS), AuditLuma, Moonshot Kiwi-do. Manual verification backlog: 11 entries flagged.)*
+*Previous: 2026-05-13 (Claude independent wide 8-lane parallel news-search Phase A + Phase B, then Codex Round 1 review: +8 net new rows on top of Codex Phase A (0 unique Ledger 2 + 8 Ledger 3) plus 4 evidence upgrades to existing Ledger 2 rows after Codex caught 4 duplicate-URL candidates that the Phase A lane skip-list missed. Headline finds: Microsoft Research first-party publication listing names Yue Zhao with USC affiliation #26 on the TrustLLM page; thepaper.cn dedicated Chinese TrustLLM feature with verbatim arXiv link; TrustLLM 2026 mainstream-venue academic citation cluster confirmed via OpenAlex graph across ACS Env Sci Tech, Springer Requirements Engineering, ACM/IEEE HRI 2026, Wiley TIBR, Springer CCIS, Springer Frontiers of CS; Justin0504/Aegis third-party implementation cites arXiv 2603.12621 by name; first Russian-language Habr cluster (Otus, Garda, Rosatom); Japanese developer-blog expansion (codemajin, tam5917, Qiita); Juejin Chinese tutorial; mala-lab Awesome AD Foundation Models awesome list; aggregator paper-page cluster across HuggingFace Papers / DoxBench dataset / alphaxiv / papers.cool. Manual-verification outcomes 2026-05-13: Stanford HAI 2026 AI Index Responsible AI chapter dropped to verified-negative after the user confirmed the WebSearch snippet was a search-engine summarizer synthesis and the PDF does not name TrustLLM; aiproductivity.ai Aegis article and jiqizhixin.com TrustLLM feature verified by the user but recorded as evidence upgrades to existing rows #21 and #34b respectively (not new rows); Datawhale WeChat lecture by Yue Zhao (then CMU) added as new Ledger 3 #66dv; ACM Computing Surveys "Towards Trustworthy AI" review (doi:10.1145/3777382) folded into the #66do TrustLLM 2026 mainstream-venue cluster.)*
 *Previous: 2026-05-13 (Codex Phase A wide news-search draft + Claude Phase B verification: +6 verified, +1 demoted Ledger 2 to Ledger 3, +2 source URLs dropped from inside cluster rows; PyShine covers agent-style, The Fintech Mag names PyOD as fintech fraud-detection alternative, Oracle FCCM product docs name PyOD/Yue Zhao (Oracle IoT half dropped after URL 404), RedTeams AI lists TrustLLM, PySAD docs integrate PyOD, non-English PyOD/ADBench cluster narrowed to Volcengine + GitCode + Sohu after Inferri 403 and Qiita duplicate of #42 Databricks Kakapo, Growth Japan CDCR-SFT moved to Ledger 3 after AI-generated disclaimer found on source page; topic-only May 2026 agent-security press added below).*
 *Previous: 2026-05-07 (weekly parallel news-search skill sweep + Codex Round 1 review promotions: +34 verified items; MITRE LILAC cites TrustLLM, Google/DeepMind TxGemma uses TDC in official report/docs, OpenAI Careers names PyOD, Samsung SDS Korean editorial covers TrustLLM, Apache Beam / PostHog / MLflow / Genentech ship first-class PyOD integration code, gatodo newsletter covers CDCR-SFT, Wikipedia Anomaly detection lists PyOD, PyOD GitHub Dependents aggregate snapshot 5,493 repos + 139 packages; OpenAI/Anthropic/DeepMind system-card re-checks stayed negative).*
 *Previous: 2026-04-29 (parallel news-search skill deep sweep: +12 verified items; DoD CDAO names PyOD as Production / High-maturity OOD tool with embedded workflow link, Sina / 机器之心Pro covers DoxBench, RAXE + Promptfoo cluster covers UCC paper (Ledger 2), plus tool and platform ecosystem additions; ledger placement refined same day after manual PDF + web verification of every new source; USC Viterbi ICLR roundup dropped — USC institutional PR for conference papers is out of scope).*
@@ -639,3 +640,508 @@ New PDF candidates added to query bank for next audit:
 - **Confirmed negatives:** No new direct hits in MarkTechPost, Synced, The Batch, The Gradient, VentureBeat, TechCrunch, Wired, MIT Tech Review, IEEE Spectrum, InfoQ, The New Stack, Dark Reading, The Hacker News, SecurityWeek, BleepingComputer, CSO, The Record, Forbes, Fortune, Bloomberg, Reuters, WSJ, or FT. No new direct citations found in OpenAI, Anthropic, DeepMind, Meta, xAI, OWASP, NIST, GAO, CRS, EU, OECD, UNESCO, RAND, Brookings, CSET, or Stanford HAI sources beyond the rows already recorded. FLI Spring 2026 was still not released/found.
 
 **Running total: 267 verified items (252 prior + 7 May 13 Codex Phase A draft rows verified by Claude + 8 May 13 Claude independent wide-run rows verified by Claude, of which 2 unlocked via user manual verification: Datawhale WeChat lecture (added as #66dv) and ACM Computing Surveys "Towards Trustworthy AI" review (folded into the #66do cluster). An additional 4 May 13 wide-run leads (Microsoft Research TrustLLM, thepaper.cn TrustLLM, aiproductivity.ai Aegis, jiqizhixin TrustLLM) hit exact-URL duplicates of existing rows #7, #5, #21, #34b and are not counted as new rows; their May 13 verification work is recorded as evidence upgrades on those existing rows. The duplicate catch came from Codex Round 1 review of the wide-run draft.** Phase B verified-negative on manual check 2026-05-13: Stanford HAI 2026 AI Index Responsible AI chapter. The WebSearch snippet "uses the TrustLLM benchmark, a comprehensive framework spanning six dimensions" turned out to be a search-engine summarizer synthesis, not verbatim PDF text; the actual report does not name TrustLLM. Recorded in `news-search-candidates.jsonl` as a cautionary precedent. Lesson reinforced: never count a snippet-only Tier 0 / Tier 1 candidate without PDF or direct-fetch confirmation, even when the snippet reads as verbatim; this is the same failure mode as the 2026-05-07 GAO-26-108695 case. (The lesson belongs in `skills/news-search/references/search-strategy.md` as a named search-engine-summarizer-synthesis example; pending a separate commit to skill specs.) Next scheduled pass: 2-4 weeks. Watch for MarkTechPost/Synced coverage of Auditable Agents or Cat-DPO, follow-up Adobe/ACL/ACM roundups, and the next FLI AI Safety Index release.
+
+---
+
+**May 19 parallel news-search Full audit (8-lane parallel Phase A + 4-batch parallel Phase B + citation-audit hook integration):**
+
+This round ran the complete `/news-search` Full audit pipeline for the first time as a single orchestrated workflow: 8 parallel Phase A agents fanned across Dimensions 1-8 (D9 is now the standalone [[citation-audit]] skill), aggregated to 166 unique candidate URLs, then 4 parallel Phase B verification agents fetched and applied the citation-verification rule. Net: **+21 verified ledger rows** plus citation-audit hook integration.
+
+**Running total after May 19: 288 verified items (267 prior, per the coverage-matrix total, + 21 May 19 verified ledger rows).**
+
+- **Ledger 1 (+0):** No new Tier 0 hits in the 6-day delta window. D8 PDF deep search scanned 22 fresh PDFs (Anthropic Opus 4.7, Mythos Preview, RSP v3.0/v3.1, OpenAI Sora 2, xAI Grok 4.1 + Frontier Framework, NIST AI 800-3 / GCR 26-069 / CSWP 50 / IR 8259r1, NIST NCCoE AI Agent ID/Authz, AISI Frontier Trends + Alignment Eval, FMF briefs, Five Eyes Careful Adoption Agentic AI Services, MITRE ATLAS OpenClaw, FINRA 2026 Annual Report, WEF Global Risks 2026, NBER w33998, OECD AI Papers No. 56, AuditBench, Anthropic Risk Report Feb 2026) — all 0 FORTIS term hits. Re-validated TrustLLM citation #881 in International AI Safety Report 2026 (already #8b). OWASP Gen AI Q2 2026 Solutions Landscape PDF was the highest-promise D4 lead but fetched 4.3 MB image-heavy PDF returned 0 FORTIS hits — track next quarterly OWASP refresh.
+
+- **Ledger 2 (+0):** Mainstream press and institutional features dry in this window. USC Viterbi 'USC at ICLR 2026' institutional PR (`viterbischool.usc.edu/news/2026/04/usc-at-iclr-2026/`) does name DoxBench, Charts Are Not Images, and DecAlign with Yue Zhao credit — but per the Apr 29 audit rule USC institutional PR for conference papers is out of scope; not counted. The aiproductivity.ai best-agent-platforms blog (`aiproductivity.ai/blog/best-ai-agent-platforms/`) snippet claimed Aegis + agent-audit references but the page returned HTTP 403 to WebFetch; flagged for manual logged-in re-fetch (see Manual Verification Backlog below).
+
+- **Ledger 3 (+7):** Ecosystem adoption and dedicated platform/tutorial rows:
+  - **L3.1** (D5) [Doxing via the Lens: Revealing Location-related Privacy Leakage on Multi-modal L](https://liner.com/review/doxing-via-the-lens-revealing-locationrelated-privacy-leakage-on-multimodal). Verified via WebFetch: Names DoxBench dataset and lists 'Weidi Luo, Tianyu Lu and 9 others' as authors (Yue Zhao would be among 9 others but not explicitly quoted). Page carries explicit AI-generation disclaimer 'This...
+  - **L3.2** (D5) [[Literature Review] AD-AGENT: A Multi-agent Framework for End-to-end Anomaly Det](https://www.themoonlight.io/en/review/ad-agent-a-multi-agent-framework-for-end-to-end-anomaly-detection). Verified via WebFetch: paper title cited (rule 1 hit). No author/institution attribution. Moonlight is an aggregator with implicit AI-generation framing ('Moonlight, your AI research colleague'). Caps Tier 3. Ledger 3...
+  - **L3.3** (D5) [[Literature Review] DrugAgent: Automating AI-aided Drug Discovery Programming th](https://www.themoonlight.io/en/review/drugagent-automating-ai-aided-drug-discovery-programming-through-llm-multi-agent-collaboration). Verified via WebFetch: paper title cited; no author/institution attribution. Same aggregator pattern as AD-AGENT/Moonlight. Caps Tier 3. Ledger 3 ecosystem.
+  - **L3.4** (D5) [[Multi-Agent Framework] DrugAgent: Automating AI-Driven Drug Discovery Programmi](https://readqvick.medium.com/multi-agent-framework-drugagent-automating-ai-driven-drug-discovery-programming-with-4ad68122dcbf). Verified via WebFetch (after 302 redirect to medium.com/advancedai/...): Medium AdvancedAI publication post by QvickRead summarizing DrugAgent. Direct arXiv link (rule 6) and paper title citation. Tier 3 dedicated blo...
+  - **L3.5** (D5) [[Literature Review] StealthRank: LLM Ranking Manipulation via Stealthy Prompt Op](https://www.themoonlight.io/en/review/stealthrank-llm-ranking-manipulation-via-stealthy-prompt-optimization). Verified via WebFetch: paper title cited. No author/institution. Aggregator pattern. Caps Tier 3. Ledger 3.
+  - **L3.6** (D5) [Chapter 3: Empirical Cumulative Distribution-based Outlier Detection (ECOD)](https://www.linkedin.com/pulse/handbook-anomaly-detection-python-outlier-3-ecod-kuo-ph-d-cpcu). VERIFIED via WebFetch: LinkedIn Pulse handbook chapter dedicated to ECOD by Chris Kuo, PhD (CPCU), published Jan 28 2023. Direct verbatim TKDE 2022 citation naming Yue Zhao as co-author + extensive use of PyOD library...
+  - **L3.7** (D6) [Moonlight literature review — MacrOData](https://www.themoonlight.io/en/review/macrodata-new-benchmarks-of-thousands-of-datasets-for-tabular-outlier-detection). Moonlight.io is an ai-aggregator domain class (hard cap at Tier 3). The review names ADBench by tool name (rule 1 met) but does not name Han et al. or Yue Zhao. Suggest add to existing Ledger 3 platform cluster — poss...
+
+- **Ledger 4 (+13):** First-party / academic community rows:
+  - **L4.1** (D5) [Paper page - Doxing via the Lens: Revealing Privacy Leakage in Image Geolocation](https://huggingface.co/papers/2504.19373). Verified via WebFetch: HF paper page lists Yue Zhao (USC) as co-author. First-party paper page; route to Ledger 4 (first-party/community).
+  - **L4.2** (D5) [GEO-Detective: Unveiling Location Privacy Risks in Images with LLM Agents](https://arxiv.org/html/2511.22441). Verified via WebFetch: downstream paper cites DoxBench with abbreviated reference key [LZLLZXX25] (which decodes to Luo-Lu-Liu-Liu-Zhang-Hu-Xiang-Xiao-25, FORTIS co-authors). Academic downstream citation; route to Led...
+  - **L4.3** (D5) [AD-AGENT: A Multi-agent Framework for End-to-end Anomaly Detection - ACL Antholo](https://aclanthology.org/2025.findings-ijcnlp.11/). Verified via WebFetch: canonical academic publication page (Findings IJCNLP-AACL 2025, pages 191-205, DOI 10.18653/v1/2025.findings-ijcnlp.11). Yue Zhao co-author confirmed. Ledger 4 (first-party/community) / first-pa...
+  - **L4.4** (D5) [Chasing Compute - Foundation Model Research](https://mit-calc.csail.mit.edu/). Verified via WebFetch: MIT CSAIL Chasing Compute project home page lists Yue Zhao as co-author with affiliation 'School of Advanced Computing, USC' AND the full paper title 'Chasing Compute: The Role of Computing Reso...
+  - **L4.5** (D5) [Defenses Against Prompt Attacks Learn Surface Heuristics / alphaXiv](https://www.alphaxiv.org/overview/2601.07185). Verified via WebFetch: alphaXiv overview page for arXiv 2601.07185. Title matches; alphaXiv is academic-community surface (other alphaXiv pages already in baseline at Ledger 4). Ledger 4 (first-party/community).
+  - **L4.6** (D5) [Agent Banana: High-Fidelity Image Editing with Agentic Thinking and Tooling / al](https://www.alphaxiv.org/abs/2602.09084). Verified via WebFetch: alphaXiv overview page for arXiv 2602.09084. Title matches. Ledger 4 (first-party/community).
+  - **L4.7** (D5) [Paper page - Agent Banana: High-Fidelity Image Editing with Agentic Thinking and](https://huggingface.co/papers/2602.09084). Verified via WebFetch: full HF paper page. Yue Zhao (USC) as co-author 9 of 13. First-party paper page; Ledger 4 (first-party/community).
+  - **L4.8** (D5) [SkillSieve: A Hierarchical Triage Framework for Detecting Malicious AI Agent Ski](https://arxiv.org/pdf/2604.06550). VERIFIED via pdf_term_scan.py: SkillSieve cites FORTIS Agent Audit (Zhang, Nian, Zhao 2026) as reference [25]. Ledger 4 (first-party/community) downstream citation; route to Ledger 4 first-party/community OR D6 citati...
+  - **L4.9** (D5) [ECOD: Unsupervised Outlier Detection Using Empirical Cumulative Distribution Fun](https://publications.pik-potsdam.de/pubman/faces/ViewItemFullPage.jsp;jsessionid=6mmJz7UditS93d-Lm2hwFDbtnkulHLbLNJ1DtvCR.se97?itemId=item_26927_1&view=EXPORT). Verified via WebFetch: PIK Potsdam publications repository entry for ECOD. Two PIK authors (Nicola Botta, Cezar Ionescu) are co-authors on the paper, so this is a coauthor-institution publication listing (not external...
+  - **L4.10** (D6) [MacrOData: New Benchmarks of Thousands of Datasets for Tabular Outlier Detection](https://arxiv.org/abs/2602.09329). Direct follow-up paper by Akoglu lab (CMU) extending ADBench. Verified citation of ADBench Han et al. 2022 in arXiv HTML body and references. New downstream academic citation; complements 66cs / 66ca tool-long-tail cl...
+  - **L4.11** (D6) [Awesome-Anomaly-Detection-with-Large-Language-Model (mala-lab)](https://github.com/mala-lab/Awesome-Anomaly-Detection-with-Large-Language-Model). NEW mala-lab curated list (sister to baseline foundation-models repo). Names PyOD 2 (with yzhao062 code link) and AD-LLM (FORTIS work). Suggest add to Ledger 3 platform cluster row alongside existing mala-lab tracking...
+  - **L4.12** (D6) [Awesome-Deep-Graph-Anomaly-Detection (mala-lab, TKDE 2025 survey companion)](https://github.com/mala-lab/Awesome-Deep-Graph-Anomaly-Detection). NEW mala-lab curated list, TKDE 2025 survey companion (Qiao, Tong, An, King, Aggarwal, Pang, "Deep Graph Anomaly Detection: A Survey and New Perspectives"). Names PyOD 2 (yzhao062 code link) and BOND benchmark. The TK...
+  - **L4.13** (D7) [【世界初】OOD検出 ≅ NEITHER ≅ 龍樹の空 — 機械学習と中観仏教の構造的同型 (PyOD 20アルゴリズム実証) #異常検知](https://qiita.com/fc0web/items/5193208c7403b871126b). language=ja; verified Phase B 2026-05-19 via WebFetch. Article cites PyOD JMLR 2019 with author Zhao Y. (rule 1+2 met). Apr 8-9 2026 publication. Novel framing (Buddhist Madhyamaka philosophy + PyOD empirical run on 2...
+
+- **Ledger 5 (+1):** Awards and recognitions:
+  - **L5.1** (D1) [Award Recipients - ACM SIGSPATIAL](https://www.sigspatial.org/people/award-recipients/). Direct mention confirmed: official ACM SIGSPATIAL award index naming Yue Zhao (USC) as co-author of Best Short Paper (TyphoFormer). Canonical first-party award page. Ledger 5 (awards/recognitions). Complements existin...
+
+- **Citation-affiliation hook (from /citation-audit; this is the formerly D9 dimension, now its own skill at `skills/citation-audit/`):** Embedded full Tier 0 and Tier 1 tables from `citation-affiliation-audit.md` (regenerated 2026-05-19 with the OpenAlex + Dimensions Analytics two-source combined audit after two real-data bug fixes: arXiv ID Dimensions DSL field requires the `arXiv:` prefix, and the default search type is `full_data` not `title_only` — both bugs caught by running the audit, not by static review). Headline numbers: 102 non-survey papers, OpenAlex found 43 with citations (1,624 unique citing papers), Dimensions found 30 (1,176 unique citing papers), 7 cross-source confirmed. **Tier 0 institutions citing FORTIS work: 39 entries** (notable: NIH × 3, Brookhaven × 3, Sandia × 2, LANL × 2, PNNL × 1, Argonne × 1, JPL × 1, DLR × 1, DESY × 1, Bundesbank × 3, CDC × 1, Meta Platforms × 5, OpenAI × 2, Google DeepMind × 1, RAND × 1). **Tier 1 institutions: 207 entries** (Microsoft Research 9, Tencent 8, AstraZeneca 7+5, IBM Research Zurich 7, Amazon 6+3, IBM Watson 6, Microsoft Research Asia 7, Adobe 5+2, Huawei 5+3, Alibaba 5, Merck 5+4, BlackRock 3+2, Visa 2+1, Robert Bosch 3+1, etc.). The embedded tables follow this round summary.
+
+- **Topic Validation (+56):** D4 topic-proximity sweep produced 56 topic-only rows (broad agent-security, anomaly-detection landscape, ChatGPT geolocation phenomenon coverage) recorded as context for grant narratives but not counted as direct coverage. Not enumerated individually — see `skills/news-search/scratch/phase-b-verified-B_paper.jsonl` and `phase-b-verified-A_news.jsonl` (`tier_guess: topic-validation`).
+
+- **Verified-negative recorded (+33):** Major FM-co system cards (Anthropic Opus 4.7, Mythos Preview, RSP v3.0/v3.1, Risk Report Feb 2026; OpenAI Sora 2; xAI Grok 4.1, Frontier Framework), NIST series (AI 800-3, GCR 26-069, CSWP 50, IR 8259r1, NCCoE AI Agent ID/Authz Concept Paper), AISI (Frontier Trends, Alignment Eval arXiv:2604.00788), FMF (3 issue briefs), Five Eyes Careful Adoption Agentic AI Services guide, MITRE ATLAS OpenClaw Investigation MTR-26-00176-1, FINRA 2026 Annual Regulatory Oversight Report, WEF Global Risks Report 2026, NBER w33998 'AI and the Fed', OECD AI Papers No. 56 (Feb 2026), AuditBench (arXiv:2602.22755), OWASP Gen AI Q2 2026 Solutions Landscape, CVPR 2026 ComputeReporting policy page + CRF PDF (does NOT name the Hao/Zhao/Ghassemi paper that motivated the policy), npj AI s44387-026-00076-4 (paywall held — see manual verification backlog), ACM CSUR Jun 2026 diffusion survey (10.1145/3783986, verified via arXiv preprint 2404.18886v3 — does NOT cite the Yang/.../Zhao 2023 CSUR diffusion survey).
+
+- **Disambiguation registry recommendations (add to `skills/news-search/references/disambiguation-registry.md`):**
+  - **Hangbo Zhao** — USC AME/BME assistant professor, junior research award recipient 2026. Surfaced as false positive on the USC Viterbi 'People Behind the Work 2026 Awards' page under Yue Zhao searches.
+  - **Wei Zhao (SiriuS)** — *Zhao, W. et al. (2025), SiriuS: Self-improving multi-agent systems via bootstrapped reasoning, arXiv:2502.04780*. Surfaced as 'Zhao et al., 2025[49]' in OECD AI Papers No. 56 (Feb 2026, p.20).
+  - **AuditLuma** — CSDN-hosted AI code-audit project. Recurring collision target for `agent-audit` queries; not related to FORTIS agent-audit.
+  - **Moonshot AI Kiwi-do** — different from Moonlight.io paper-aggregator outlet (the 'Moonlight' name collision).
+  - **Hangbo Zhao + Wei Zhao + AuditLuma + Moonshot Kiwi-do**: 4 new collision targets logged this round.
+
+- **Domain registry harvest (add to `skills/news-search/references/domain-registry.md`):**
+  - `mit-calc.csail.mit.edu` (class: `university` / coauthor-institution project page)
+  - `publications.pik-potsdam.de` (class: `university` / coauthor-institution publications repository)
+  - `medium.com/advancedai` (class: `tech-blog` / Medium publication)
+
+- **Manual verification backlog (URLs that returned 403 / 404 / paywall and need a logged-in browser re-fetch):**
+  - `aiproductivity.ai/blog/best-ai-agent-platforms/` — snippet claimed Aegis + agent-audit references; verify direct mention or set verified-negative.
+  - `tomshardware.com/.../chatgpt-becomes-a-formidable-geo-guesser` — phenomenon-discovery piece; verify whether DoxBench is named or only the underlying ChatGPT capability.
+  - `www.nature.com/articles/s44387-026-00076-4` — npj AI healthcare review (Mar 2026); 303 → idp.nature.com auth. May overlap with existing #66cr TrustLLM npj cluster.
+  - `sciencedirect.com/.../S1566253525005895` — Elsevier Information Fusion AD foundation-models survey; 403.
+  - `securityboulevard.com/2026/02/openclaw-...` — 403 (cross-post of NSFOCUS analysis; NSFOCUS original was verified-negative for FORTIS).
+  - `aimodels.fyi/papers/arxiv/jaildam-...` — 403 (likely aggregator; tier cap 3 if reachable).
+  - `researchgate.net/publication/402481760_Sovereign-OS` — 403 (ResearchGate routinely blocks WebFetch).
+  - `forum.cspaper.org/topic/170/...` — 301 → article removed.
+  - `github.com/openclaw/openclaw/discussions/36663` — 410 'Discussions disabled' (phantom from search-engine cache).
+  - `paperswithcode.com/paper/stealthrank-...` — 302 → 404.
+  - GAO 26-107859 + GAO 25-107197 + fdd.org Mar 2026 + federalnewsnetwork May 2026 — all 403 to WebFetch.
+
+- **D10 External Deep Research:** Out of scope for this automated audit pass. The user runs this manually in ChatGPT Deep Research / Gemini Deep Research / claude.ai with a self-contained prompt; output goes to `external-research/{source}-2026-05.md`. Prompt template generated in this audit cycle is at `external-research/PROMPT-2026-05-19.md` (see file). Run quarterly.
+
+- **Codex Phase B review (skipped):** Codex review of Phase B output was skipped this round because the implementation-review cycle for the citation-audit skill split was already in flight earlier in the same session. The Phase A/B agents themselves apply the citation-verification rule with verbatim quotes; Codex review can be added in a follow-up pass if any of the 21 candidate-promote rows are questioned.
+
+Lessons reinforced this round:
+- **Static review does not catch API semantics.** Three /implement-review rounds + a smoke test all passed for the citation-audit Dimensions integration before this Full audit caught two real bugs (arxiv_id prefix, default search-type) only when actually running against the publication inventory. The fail-loud `_query_dimensions` wrapper from Round 1 of that review cycle paid off here.
+- **Highest-promise topic-proximity lead was wrong.** OWASP Gen AI Q2 2026 Solutions Landscape PDF was flagged `phase_b_priority` by the D4 agent and was the single highest-promise D8-style PDF this round — fetched 4.3 MB, 0 hits. Worth retrying when the next OWASP edition lands.
+- **PDF term scan beats LLM summarization for citation extraction.** B_paper Phase B caught a SkillSieve (arXiv:2604.06550) citation of agent-audit only via `pdf_term_scan.py`; the WebFetch summarizer missed it. Continue routing all candidate PDFs through the term scanner.
+
+## Citation Affiliation Evidence (integrated from /citation-audit skill, 2026-05-19)
+
+*The following section is integrated verbatim from `citation-affiliation-audit.md` per the news-search cross-skill citation-audit hook. Canonical copy lives in that separate file; this embed makes the unified report self-contained for tenure / promotion / grant readers. Re-run the standalone audit with `/citation-audit --source both` to refresh.*
+
+
+*Generated: 2026-05-19 via OpenAlex + Dimensions*
+
+**What this is:** Papers that cite your work, where at least one author is affiliated with a notable institution.
+This means "researchers AT [institution] cited your tool" -- not "[institution] officially endorses your tool."
+
+Per-source coverage of the 102 non-survey papers:
+- **OpenAlex**: 43 papers with citations; 1624 unique citing papers analyzed.
+- **Dimensions**: 30 papers with citations; 1176 unique citing papers analyzed.
+
+### Tier 0: Government, Space Agencies, National Labs, Defense, Foundation Model Cos
+
+**39 entries**
+
+| Category | Institution | Country | Your Work Cited | Citing Paper | Year | Source |
+|----------|-----------|---------|----------------|-------------|------|--------|
+| Central Bank | Deutsche Bundesbank | DE | ECOD: Unsupervised Outlier Detectio | Diffusion-Scheduled Denoising Autoencoders for Anomaly Detec | 2025 | openalex |
+| Central Bank | Deutsche Bundesbank | DE | The Need for Unsupervised Outlier M | RECol: Reconstruction Error Columns for Outlier Detection | 2023 | openalex |
+| Central Bank | Deutsche Bundesbank | Germany | The Need for Unsupervised Outlier M | RECol: Reconstruction Error Columns for Outlier Detection | 2023 | dimensions |
+| Defense/Research | RAND Corporation | United States | COPOD: Copula-Based Outlier Detecti | A robust unsupervised method for outlier set detection | 2025 | dimensions |
+| Foundation Model Co | OpenAI (United States) | US | Therapeutics Data Commons: Machine  | RL-Finetuning of OpenAI o1-mini to Enhance Biomedical Reason | 2025 | openalex |
+| Foundation Model Co | Meta Platforms Inc | United States | COPOD: Copula-Based Outlier Detecti | Detecting Tiny Performance Regressions at Hyperscale | 2025 | dimensions |
+| Foundation Model Co | Meta Platforms Inc | United States | COPOD: Copula-Based Outlier Detecti | TSB-AutoAD: Towards Automated Solutions for Time-Series Anom | 2025 | dimensions |
+| Foundation Model Co | Meta Platforms Inc | United States | The Need for Unsupervised Outlier M | EasyAD: A Demonstration of Automated Solutions for Time-Seri | 2025 | dimensions |
+| Foundation Model Co | Meta Platforms Inc | United States | The Need for Unsupervised Outlier M | TSB-AutoAD: Towards Automated Solutions for Time-Series Anom | 2025 | dimensions |
+| Foundation Model Co | OpenAI (United States) | US | ADBench: Anomaly Detection Benchmar | Diffusion Models: A Comprehensive Survey of Methods and Appl | 2023 | openalex |
+| Foundation Model Co | Google DeepMind (United Kingdom) | GB | Artificial Intelligence Foundation  | Scientific discovery in the age of artificial intelligence | 2023 | openalex |
+| Foundation Model Co | Meta Platforms Inc | United States | COPOD: Copula-Based Outlier Detecti | Data-Efficient and Interpretable Tabular Anomaly Detection | 2023 | dimensions |
+| Foundation Model Co | DeepMind Technologies Ltd | United Kingdom | Artificial Intelligence Foundation  | Scientific discovery in the age of artificial intelligence | 2023 | dimensions |
+| International Lab | Deutsches Elektronen-Synchrotron DESY | DE | ECOD: Unsupervised Outlier Detectio | Data-Based Condition Monitoring and Disturbance Classificati | 2024 | openalex |
+| National Lab | Argonne National Laboratory | US | TODS: An Automated Time Series Outl | A novel sensor-driven framework for preemptive failure detec | 2025 | openalex+dimensions |
+| National Lab | Brookhaven National Laboratory | United States | COPOD: Copula-Based Outlier Detecti | Performance analysis and data reduction for exascale scienti | 2025 | dimensions |
+| National Lab | Sandia National Laboratories | United States | COPOD: Copula-Based Outlier Detecti | Performance analysis and data reduction for exascale scienti | 2025 | dimensions |
+| National Lab | Los Alamos National Laboratory | US | Therapeutics Data Commons: Machine  | Linear graphlet models for accurate and interpretable chemin | 2024 | openalex |
+| National Lab | Los Alamos National Laboratory | US | Therapeutics Data Commons: Machine  | Linear Graphlet Models for Accurate and Interpretable Chemin | 2024 | openalex |
+| National Lab | Brookhaven National Laboratory | US | Therapeutics Data Commons: Machine  | Leveraging Active Subspaces to Capture Epistemic Model Uncer | 2024 | openalex |
+| National Lab | Pacific Northwest National Laboratory | US | Artificial Intelligence Foundation  | Current and future directions in network biology | 2024 | openalex+dimensions |
+| National Lab | Brookhaven National Laboratory | US | Artificial Intelligence Foundation  | Current and future directions in network biology | 2024 | openalex+dimensions |
+| National Lab | Sandia National Laboratories | US | LSCP: Locally Selective Combination | Ensemble Grammar Induction For Detecting Anomalies in Time S | 2020 | openalex |
+| Research Institute | Fraunhofer Institute for Translational Medicine and Pharmacology | DE | Artificial Intelligence Foundation  | Human-supervised Agentic AI for Hypothesis Generation and Ex | 2026 | openalex |
+| Research Institute | Fraunhofer Society | Germany | Artificial Intelligence Foundation  | Human-supervised Agentic AI for Hypothesis Generation and Ex | 2026 | dimensions |
+| Research Institute | Fraunhofer Institute for Translational Medicine and Pharmacology | DE | Artificial Intelligence Foundation  | Computational drug repurposing: approaches, evaluation of in | 2025 | openalex |
+| Research Institute | Fraunhofer Institute for Algorithms and Scientific Computing | DE | Artificial Intelligence Foundation  | Computational drug repurposing: approaches, evaluation of in | 2025 | openalex+dimensions |
+| Research Institute | Fraunhofer Society | Germany | Artificial Intelligence Foundation  | Computational drug repurposing: approaches, evaluation of in | 2025 | dimensions |
+| Research Institute | Fraunhofer Institute for Open Communication Systems | DE | PyOD: A Python Toolbox for Scalable | Morphological Profiling Dataset of EU-OPENSCREEN Bioactive C | 2024 | openalex |
+| Research Institute | Fraunhofer Institute for Applied Information Technology | Germany | COPOD: Copula-Based Outlier Detecti | Privacy and Utility Evaluation of Synthetic Tabular Data for | 2024 | dimensions |
+| Research Institute | Fraunhofer Institute for Mechatronic Systems Design | DE | TODS: An Automated Time Series Outl | Meta-learning for Automated Selection of Anomaly Detectors f | 2023 | openalex |
+| Research Institute | Fraunhofer Institute for Mechatronic Systems Design | DE | LSCP: Locally Selective Combination | Meta-learning for Automated Selection of Anomaly Detectors f | 2023 | openalex |
+| Research Institute | Fraunhofer Institute for Mechatronic Systems Design | Germany | TODS: An Automated Time Series Outl | Meta-learning for Automated Selection of Anomaly Detectors f | 2023 | dimensions |
+| Space Agency | Deutsches Zentrum für Luft- und Raumfahrt e. V. (DLR) | DE | ADBench: Anomaly Detection Benchmar | Collaborative Representation-Based Attention Network for Hyp | 2025 | openalex |
+| Space Agency | Jet Propulsion Laboratory | US | ADBench: Anomaly Detection Benchmar | Anomaly Detection for Spacecraft Radios Based on Open-Loop R | 2024 | openalex |
+| US Government | National Institutes of Health | US | TrustLLM: Trustworthiness in Large  | Economics and Equity of Large Language Models: Health Care P | 2024 | openalex+dimensions |
+| US Government | National Institutes of Health | US | Artificial Intelligence Foundation  | Current and future directions in network biology | 2024 | openalex |
+| US Government | Centers for Disease Control and Prevention | US | ECOD: Unsupervised Outlier Detectio | Sequence-based detection of emerging antigenically novel inf | 2024 | openalex |
+| US Government | National Institutes of Health | US | ECOD: Unsupervised Outlier Detectio | Unsupervised quality assurance for brain MR image rigid regi | 2023 | openalex |
+
+### Tier 1: Big Tech, Finance, Pharma, Healthcare, Industrial
+
+**207 entries**
+
+| Category | Institution | Country | Your Work Cited | Citing Paper | Year | Source |
+|----------|-----------|---------|----------------|-------------|------|--------|
+| Big Tech | Huawei Technologies (China) | CN | Treble Counterfactual VLMs: A Causa | A Survey of Multimodal Hallucination Evaluation and Detectio | 2026 | openalex |
+| Big Tech | Adobe Systems (United States) | US | DPU: Dynamic Prototype Updating for | Few-Shot Graph Out-of-Distribution Detection with LLMs | 2025 | openalex |
+| Big Tech | Amazon (United States) | US | TrustLLM: Trustworthiness in Large  | REAL Sampling: Boosting Factuality and Diversity of Open-end | 2025 | openalex |
+| Big Tech | Amazon (Germany) | DE | TrustLLM: Trustworthiness in Large  | REAL Sampling: Boosting Factuality and Diversity of Open-end | 2025 | openalex |
+| Big Tech | Tencent (China) | CN | ADBench: Anomaly Detection Benchmar | M3DM-NR: RGB-3D Noisy-Resistant Industrial Anomaly Detection | 2025 | openalex |
+| Big Tech | Amazon (United States) | US | ADBench: Anomaly Detection Benchmar | REACT: Residual-Adaptive Contextual Tuning for Fast Model Ad | 2025 | openalex |
+| Big Tech | Intel (United Kingdom) | GB | ADBench: Anomaly Detection Benchmar | Beyond Academic Benchmarks: Critical Analysis and Best Pract | 2025 | openalex |
+| Big Tech | Amazon (United States) | US | BOND: Benchmarking Unsupervised Out | TGTOD: A Global Temporal Graph Transformer for Outlier Detec | 2025 | openalex |
+| Big Tech | IBM Research - Thomas J. Watson Research Center | US | Contrastive Attributed Network Anom | Deep Graph Anomaly Detection: A Survey and New Perspectives | 2025 | openalex |
+| Big Tech | Tencent (China) | CN | Contrastive Attributed Network Anom | How to use Graph Data in the Wild to Help Graph Anomaly Dete | 2025 | openalex |
+| Big Tech | Huawei Technologies (United States) | US | TODS: An Automated Time Series Outl | TAB: Unified Benchmarking of Time Series Anomaly Detection M | 2025 | openalex |
+| Big Tech | Huawei Technologies (China) | CN | TODS: An Automated Time Series Outl | TAB: Unified Benchmarking of Time Series Anomaly Detection M | 2025 | openalex |
+| Big Tech | IBM Research - Zurich | CH | Therapeutics Data Commons: Machine  | Foundation models for materials discovery – current state an | 2025 | openalex |
+| Big Tech | IBM (United States) | US | Therapeutics Data Commons: Machine  | Foundation models for materials discovery – current state an | 2025 | openalex |
+| Big Tech | IBM Research - Thomas J. Watson Research Center | US | Therapeutics Data Commons: Machine  | Foundation models for materials discovery – current state an | 2025 | openalex |
+| Big Tech | Intel (United States) | US | Therapeutics Data Commons: Machine  | A framework for evaluating the chemical knowledge and reason | 2025 | openalex |
+| Big Tech | Nvidia (United Kingdom) | GB | Therapeutics Data Commons: Machine  | Boosting the predictive power of protein representations wit | 2025 | openalex |
+| Big Tech | Baidu (China) | CN | Employee Turnover Prediction with M | A Comprehensive Survey of Artificial Intelligence Techniques | 2025 | openalex |
+| Big Tech | Microsoft Research (United Kingdom) | GB | NNG-Mix: Improving Semi-supervised  | Distribution Shifts at Scale: Out-of-distribution Detection  | 2025 | openalex |
+| Big Tech | IBM Research - Zurich | CH | Artificial Intelligence Foundation  | Foundation models for materials discovery – current state an | 2025 | openalex |
+| Big Tech | IBM (United States) | US | Artificial Intelligence Foundation  | Foundation models for materials discovery – current state an | 2025 | openalex |
+| Big Tech | IBM Research - Thomas J. Watson Research Center | US | Artificial Intelligence Foundation  | Foundation models for materials discovery – current state an | 2025 | openalex |
+| Big Tech | IBM (United States) | US | Artificial Intelligence Foundation  | GP-MoLFormer: a foundation model for molecular generation | 2025 | openalex |
+| Big Tech | Microsoft Research Asia (China) | CN | Artificial Intelligence Foundation  | Controlling risks of AI in chemical science with agents | 2025 | openalex+dimensions |
+| Big Tech | Amazon (United States) | US | ECOD: Unsupervised Outlier Detectio | REACT: Residual-Adaptive Contextual Tuning for Fast Model Ad | 2025 | openalex |
+| Big Tech | Huawei Technologies (China) | CN | ECOD: Unsupervised Outlier Detectio | Compatible Unsupervised Anomaly Detection with Multi-Perspec | 2025 | openalex |
+| Big Tech | Adobe Inc | United States | DPU: Dynamic Prototype Updating for | Few-Shot Graph Out-of-Distribution Detection with LLMs | 2025 | dimensions |
+| Big Tech | Tencent Technology Shenzhen Co Ltd | China | Contrastive Attributed Network Anom | How to use Graph Data in the Wild to Help Graph Anomaly Dete | 2025 | dimensions |
+| Big Tech | Huawei Technologies Co Ltd | China | TODS: An Automated Time Series Outl | TAB: Unified Benchmarking of Time Series Anomaly Detection M | 2025 | dimensions |
+| Big Tech | Huawei Technologies Co Ltd | China | COPOD: Copula-Based Outlier Detecti | Compatible Unsupervised Anomaly Detection with Multi-Perspec | 2025 | dimensions |
+| Big Tech | Amazon Web Services Inc | United States | COPOD: Copula-Based Outlier Detecti | REACT: Residual-Adaptive Contextual Tuning for Fast Model Ad | 2025 | dimensions |
+| Big Tech | Baidu Inc | China | Employee Turnover Prediction with M | A Comprehensive Survey of Artificial Intelligence Techniques | 2025 | dimensions |
+| Big Tech | Amazon Web Services Inc | United States | The Need for Unsupervised Outlier M | Hyperparameter Optimization in Machine Learning | 2025 | dimensions |
+| Big Tech | Amazon (United States) | US | TrustLLM: Trustworthiness in Large  | Economics and Equity of Large Language Models: Health Care P | 2024 | openalex |
+| Big Tech | Adobe Systems (United States) | US | TrustLLM: Trustworthiness in Large  | Benchmark suites instead of leaderboards for evaluating AI f | 2024 | openalex |
+| Big Tech | Tencent (China) | CN | ADBench: Anomaly Detection Benchmar | IM-IAD: Industrial Image Anomaly Detection Benchmark in Manu | 2024 | openalex |
+| Big Tech | Microsoft Research (United Kingdom) | GB | ADBench: Anomaly Detection Benchmar | Building AI Agents for Autonomous Clouds: Challenges and Des | 2024 | openalex |
+| Big Tech | Tencent (China) | CN | ADBench: Anomaly Detection Benchmar | SoftPatch+: Fully unsupervised anomaly classification and se | 2024 | openalex |
+| Big Tech | Huawei Technologies (China) | CN | Contrastive Attributed Network Anom | You Can't Ignore Either: Unifying Structure and Feature Deno | 2024 | openalex |
+| Big Tech | Microsoft (United States) | US | Automatic Unsupervised Outlier Mode | End-to-End AutoML for Unsupervised Log Anomaly Detection | 2024 | openalex |
+| Big Tech | Intel (United States) | US | Revisiting Time Series Outlier Dete | A Robust Framework for Evaluation of Unsupervised Time-Serie | 2024 | openalex |
+| Big Tech | IBM Research - Ireland | IE | Therapeutics Data Commons: Machine  | Knowledge Enhanced Representation Learning for Drug Discover | 2024 | openalex |
+| Big Tech | IBM Research - Zurich | CH | Therapeutics Data Commons: Machine  | Knowledge Enhanced Representation Learning for Drug Discover | 2024 | openalex |
+| Big Tech | Huawei Technologies (China) | CN | XGBOD: Improving Supervised Outlier | Towards Online and Safe Configuration Tuning with Semi-super | 2024 | openalex |
+| Big Tech | IBM Research - Ireland | IE | Artificial Intelligence Foundation  | Knowledge Enhanced Representation Learning for Drug Discover | 2024 | openalex |
+| Big Tech | IBM Research - Zurich | CH | Artificial Intelligence Foundation  | Knowledge Enhanced Representation Learning for Drug Discover | 2024 | openalex |
+| Big Tech | IBM Research - Thomas J. Watson Research Center | US | Artificial Intelligence Foundation  | A physics-inspired approach to the understanding of molecula | 2024 | openalex |
+| Big Tech | Microsoft Research (United Kingdom) | GB | ECOD: Unsupervised Outlier Detectio | Outlier Detection in Temporal and Spatial Sequences Via Corr | 2024 | openalex |
+| Big Tech | Amazon Web Services Inc | United States | TrustLLM: Trustworthiness in Large  | Economics and Equity of Large Language Models: Health Care P | 2024 | dimensions |
+| Big Tech | Adobe Inc | United States | TrustLLM: Trustworthiness in Large  | Benchmark suites instead of leaderboards for evaluating AI f | 2024 | dimensions |
+| Big Tech | Huawei Technologies Co Ltd | China | Contrastive Attributed Network Anom | You Can't Ignore Either: Unifying Structure and Feature Deno | 2024 | dimensions |
+| Big Tech | IBM Research GmbH | Switzerland | AutoAudit: Mining Accounting and Ti | Graph Feature Preprocessor: Real-time Subgraph-based Feature | 2024 | dimensions |
+| Big Tech | Amazon.com Inc | United States | COPOD: Copula-Based Outlier Detecti | Rethinking Robust Multivariate Time Series Anomaly Detection | 2024 | dimensions |
+| Big Tech | IBM Research - India | India | COPOD: Copula-Based Outlier Detecti | Enabling Programmable Metric Flows | 2024 | dimensions |
+| Big Tech | Samsung Electronics Co Ltd | South Korea | COPOD: Copula-Based Outlier Detecti | Relative Frequency-Rank Encoding for Unsupervised Network An | 2024 | dimensions |
+| Big Tech | Tencent (China) | CN | ADBench: Anomaly Detection Benchmar | Improving Generalizability of Graph Anomaly Detection Models | 2023 | openalex |
+| Big Tech | Microsoft Research (United Kingdom) | GB | ADBench: Anomaly Detection Benchmar | ADMoE: Anomaly Detection with Mixture-of-Experts from Noisy  | 2023 | openalex |
+| Big Tech | Microsoft Research Asia (China) | CN | ADBench: Anomaly Detection Benchmar | UADB: Unsupervised Anomaly Detection Booster | 2023 | openalex |
+| Big Tech | Alibaba Group (China) | CN | ADBench: Anomaly Detection Benchmar | ADPal: Automatic Detection of Troubled Users in Online Servi | 2023 | openalex |
+| Big Tech | Tencent (China) | CN | BOND: Benchmarking Unsupervised Out | Improving Generalizability of Graph Anomaly Detection Models | 2023 | openalex |
+| Big Tech | Microsoft Research (United Kingdom) | GB | BOND: Benchmarking Unsupervised Out | ADMoE: Anomaly Detection with Mixture-of-Experts from Noisy  | 2023 | openalex |
+| Big Tech | Tencent (China) | CN | Contrastive Attributed Network Anom | Improving Generalizability of Graph Anomaly Detection Models | 2023 | openalex |
+| Big Tech | Microsoft Research (United Kingdom) | GB | Automatic Unsupervised Outlier Mode | ADMoE: Anomaly Detection with Mixture-of-Experts from Noisy  | 2023 | openalex |
+| Big Tech | Alibaba Group (United States) | US | Revisiting Time Series Outlier Dete | DCdetector: Dual Attention Contrastive Representation Learni | 2023 | openalex |
+| Big Tech | Alibaba Group (China) | CN | Revisiting Time Series Outlier Dete | DCdetector: Dual Attention Contrastive Representation Learni | 2023 | openalex |
+| Big Tech | Microsoft Research (United Kingdom) | GB | SUOD: Accelerating Large-scale Unsu | TraceArk: Towards Actionable Performance Anomaly Alerting fo | 2023 | openalex |
+| Big Tech | Microsoft (Norway) | NO | SUOD: Accelerating Large-scale Unsu | TraceArk: Towards Actionable Performance Anomaly Alerting fo | 2023 | openalex |
+| Big Tech | Microsoft Research Asia (China) | CN | SUOD: Accelerating Large-scale Unsu | UADB: Unsupervised Anomaly Detection Booster | 2023 | openalex |
+| Big Tech | IBM Research - Zurich | CH | Therapeutics Data Commons: Machine  | Accelerating material design with the generative toolkit for | 2023 | openalex |
+| Big Tech | IBM (United Kingdom) | GB | Therapeutics Data Commons: Machine  | Accelerating material design with the generative toolkit for | 2023 | openalex |
+| Big Tech | IBM Research - Tokyo | JP | Therapeutics Data Commons: Machine  | Accelerating material design with the generative toolkit for | 2023 | openalex |
+| Big Tech | IBM Research - Almaden | US | Therapeutics Data Commons: Machine  | Accelerating material design with the generative toolkit for | 2023 | openalex |
+| Big Tech | Google (United States) | US | Therapeutics Data Commons: Machine  | Olympus, enhanced: benchmarking mixed-parameter and multi-ob | 2023 | openalex |
+| Big Tech | Microsoft Research (United Kingdom) | GB | AutoAudit: Mining Accounting and Ti | ADMoE: Anomaly Detection with Mixture-of-Experts from Noisy  | 2023 | openalex |
+| Big Tech | Microsoft Research (United Kingdom) | GB | LSCP: Locally Selective Combination | ADMoE: Anomaly Detection with Mixture-of-Experts from Noisy  | 2023 | openalex |
+| Big Tech | Microsoft Research Asia (China) | CN | Music Artist Classification with Co | MovieFactory: Automatic Movie Creation from Text using Large | 2023 | openalex |
+| Big Tech | Nvidia (United States) | US | Artificial Intelligence Foundation  | Scientific discovery in the age of artificial intelligence | 2023 | openalex |
+| Big Tech | Google (United Kingdom) | GB | Artificial Intelligence Foundation  | Scientific discovery in the age of artificial intelligence | 2023 | openalex |
+| Big Tech | Microsoft Research Asia (China) | CN | Artificial Intelligence Foundation  | Scientific discovery in the age of artificial intelligence | 2023 | openalex+dimensions |
+| Big Tech | Microsoft (Netherlands) | NL | Artificial Intelligence Foundation  | Scientific discovery in the age of artificial intelligence | 2023 | openalex |
+| Big Tech | IBM Research - Zurich | CH | Artificial Intelligence Foundation  | Accelerating material design with the generative toolkit for | 2023 | openalex |
+| Big Tech | IBM (United Kingdom) | GB | Artificial Intelligence Foundation  | Accelerating material design with the generative toolkit for | 2023 | openalex |
+| Big Tech | IBM Research - Tokyo | JP | Artificial Intelligence Foundation  | Accelerating material design with the generative toolkit for | 2023 | openalex |
+| Big Tech | IBM Research - Almaden | US | Artificial Intelligence Foundation  | Accelerating material design with the generative toolkit for | 2023 | openalex |
+| Big Tech | IBM Research - Zurich | CH | Artificial Intelligence Foundation  | The rise of automated curiosity-driven discoveries in chemis | 2023 | openalex |
+| Big Tech | IBM Research - Thomas J. Watson Research Center | US | Artificial Intelligence Foundation  | Evaluating the roughness of structure–property relationships | 2023 | openalex |
+| Big Tech | Google (United States) | US | Artificial Intelligence Foundation  | Olympus, enhanced: benchmarking mixed-parameter and multi-ob | 2023 | openalex |
+| Big Tech | Salesforce (United States) | US | ECOD: Unsupervised Outlier Detectio | Unsupervised Skin Lesion Segmentation via Structural Entropy | 2023 | openalex |
+| Big Tech | Microsoft Research Asia (China) | CN | ECOD: Unsupervised Outlier Detectio | UADB: Unsupervised Anomaly Detection Booster | 2023 | openalex |
+| Big Tech | Amazon (United Kingdom) | GB | ECOD: Unsupervised Outlier Detectio | Low-Count Time Series Anomaly Detection | 2023 | openalex |
+| Big Tech | Amazon (United States) | US | ECOD: Unsupervised Outlier Detectio | Low-Count Time Series Anomaly Detection | 2023 | openalex |
+| Big Tech | Amazon (United Kingdom) | GB | ECOD: Unsupervised Outlier Detectio | Low-count Time Series Anomaly Detection | 2023 | openalex |
+| Big Tech | Tencent Technology Shenzhen Co Ltd | China | Contrastive Attributed Network Anom | Improving Generalizability of Graph Anomaly Detection Models | 2023 | dimensions |
+| Big Tech | Google LLC | United States | COPOD: Copula-Based Outlier Detecti | Data-Efficient and Interpretable Tabular Anomaly Detection | 2023 | dimensions |
+| Big Tech | Microsoft Research Asia (China) | China | COPOD: Copula-Based Outlier Detecti | UADB: Unsupervised Anomaly Detection Booster | 2023 | dimensions |
+| Big Tech | IBM Research GmbH | Switzerland | Artificial Intelligence Foundation  | The rise of automated curiosity-driven discoveries in chemis | 2023 | dimensions |
+| Big Tech | Nvidia Corp | United States | Artificial Intelligence Foundation  | Scientific discovery in the age of artificial intelligence | 2023 | dimensions |
+| Big Tech | Huawei Technologies (France) | FR | Automatic Unsupervised Outlier Mode | Human readable network troubleshooting based on anomaly dete | 2022 | openalex |
+| Big Tech | Samsung (South Korea) | KR | Revisiting Time Series Outlier Dete | Towards a Rigorous Evaluation of Time-Series Anomaly Detecti | 2022 | openalex |
+| Big Tech | Alibaba Group (China) | CN | Revisiting Time Series Outlier Dete | TFAD | 2022 | openalex |
+| Big Tech | Alibaba Group (United States) | US | Revisiting Time Series Outlier Dete | TFAD | 2022 | openalex |
+| Big Tech | IBM Research - Thomas J. Watson Research Center | US | Revisiting Time Series Outlier Dete | Deep Learning for Time Series Anomaly Detection: A Survey | 2022 | openalex |
+| Big Tech | Microsoft (Brazil) | BR | Employee Turnover Prediction with M | EMPLOYEE TURNOVER INTENTION - MAPPING PROFILES UNDER A DECIS | 2022 | openalex |
+| Big Tech | Alibaba DAMO Academy | China | COPOD: Copula-Based Outlier Detecti | GraphAD | 2022 | dimensions |
+| Big Tech | Huawei Technologies (France) | FR | SUOD: Toward Scalable Unsupervised  | The New Abnormal: Network Anomalies in the AI Era | 2021 | openalex |
+| Big Tech | Alibaba Group (China) | CN | LSCP: Locally Selective Combination | A spatial-compositional feature fusion convolutional autoenc | 2021 | openalex |
+| Big Tech | Adobe Systems (United States) | US | LSCP: Locally Selective Combination | IPOF: An Extremely and Excitingly Simple Outlier Detection B | 2021 | openalex |
+| Big Tech | Tencent (China) | CN | Music Artist Classification with Co | Large-scale singer recognition using deep metric learning: a | 2021 | openalex |
+| Big Tech | Adobe Systems (United States) | US | XGBOD: Improving Supervised Outlier | Towards addressing unauthorized sharing of subscriptions | 2021 | openalex |
+| Big Tech | Adobe Systems (United States) | US | XGBOD: Improving Supervised Outlier | Virtual-SRE For Monitoring Large Scale Time-series Data | 2021 | openalex |
+| Big Tech | IBM Research - Tokyo | Japan | AutoAudit: Mining Accounting and Ti | Cash flow prediction of a bank deposit using scalable graph  | 2021 | dimensions |
+| Big Tech | Alibaba Group Holding Ltd | China | Combining Machine Learning Models u | A spatial-compositional feature fusion convolutional autoenc | 2021 | dimensions |
+| Big Tech | QQ Music BU Tencent Music Entertainment (TME), Shenzhen, China | China | Music Artist Classification with Co | Large-scale singer recognition using deep metric learning: a | 2021 | dimensions |
+| Big Tech | Alibaba Group (China) | CN | LSCP: Locally Selective Combination | Modeling Heterogeneous Statistical Patterns in High-dimensio | 2020 | openalex |
+| Big Tech | Nvidia Corp | United States | Combining Machine Learning Models u | Machine Learning in Python: Main Developments and Technology | 2020 | dimensions |
+| Big Tech | Samsung (South Korea) | KR | An Empirical Study of Touch-based A | The Personal Identification Chord | 2018 | openalex |
+| Consulting | Deloitte (United States) | US | SUOD: Accelerating Large-scale Unsu | Fraud detection in healthcare claims using machine learning: | 2024 | openalex |
+| Finance | BlackRock (United States) | US | ADBench: Anomaly Detection Benchmar | Can an unsupervised clustering algorithm reproduce a categor | 2024 | openalex |
+| Finance | BlackRock (United States) | US | The Need for Unsupervised Outlier M | Can an unsupervised clustering algorithm reproduce a categor | 2024 | openalex |
+| Finance | BlackRock Inc | United States | The Need for Unsupervised Outlier M | Can an unsupervised clustering algorithm reproduce a categor | 2024 | dimensions |
+| Finance | Visa (United States) | US | ADBench: Anomaly Detection Benchmar | Tackling Diverse Minorities in Imbalanced Classification | 2023 | openalex |
+| Finance | Capital One (United States) | US | TODS: An Automated Time Series Outl | From Detection to Action: a Human-in-the-loop Toolkit for An | 2023 | openalex |
+| Finance | Visa (United Kingdom) | GB | TODS: An Automated Time Series Outl | Time Series Synthesis Using the Matrix Profile for Anonymiza | 2023 | openalex |
+| Finance | Morgan Stanley (United States) | US | SynC: A Copula based Framework for  | A supervised generative optimization approach for tabular da | 2023 | openalex |
+| Finance | Visa (United States) | US | XGBOD: Improving Supervised Outlier | Tackling Diverse Minorities in Imbalanced Classification | 2023 | openalex |
+| Finance | BlackRock (United States) | US | The Need for Unsupervised Outlier M | Quantifying Outlierness of Funds from their Categories using | 2023 | openalex |
+| Finance | Capital One NA | United States | TODS: An Automated Time Series Outl | From Detection to Action: a Human-in-the-loop Toolkit for An | 2023 | dimensions |
+| Finance | BlackRock Inc | United States | The Need for Unsupervised Outlier M | Quantifying Outlierness of Funds from their Categories using | 2023 | dimensions |
+| Healthcare | Mayo Clinic in Florida | US | TrustLLM: Trustworthiness in Large  | Ethical framework for responsible foundational models in med | 2025 | openalex |
+| Healthcare | Cleveland Clinic London | United Kingdom | Combining Machine Learning Models u | Applications of Artificial Intelligence in Gastrointestinal  | 2024 | dimensions |
+| Industrial | Robert Bosch (United States) | US | ADBench: Anomaly Detection Benchmar | Model Selection of Anomaly Detectors in the Absence of Label | 2025 | openalex |
+| Industrial | Robert Bosch (Germany) | DE | XGBOD: Improving Supervised Outlier | The OPS-SAT benchmark for detecting anomalies in satellite t | 2025 | openalex |
+| Industrial | Robert Bosch (United States) | US | The Need for Unsupervised Outlier M | Model Selection of Anomaly Detectors in the Absence of Label | 2025 | openalex |
+| Industrial | Robert Bosch (Germany) | DE | ECOD: Unsupervised Outlier Detectio | The OPS-SAT benchmark for detecting anomalies in satellite t | 2025 | openalex |
+| Industrial | Siemens SRL | Romania | TODS: An Automated Time Series Outl | A decentralised architecture for secure exchange of assets i | 2025 | dimensions |
+| Industrial | Siemens (China) | CN | ADBench: Anomaly Detection Benchmar | PARs: Predicate-based Association Rules for Efficient and Ac | 2024 | openalex |
+| Industrial | Honeywell (France) | FR | Employee Turnover Prediction with M | Identifying Survival-Changing Sequential Patterns for Employ | 2023 | openalex |
+| Industrial | Robert Bosch (Germany) | DE | SUOD: Accelerating Large-scale Unsu | On Why the System Makes the Corner Case: AI-based Holistic A | 2022 | openalex |
+| Industrial | Robert Bosch GmbH | Germany | COPOD: Copula-Based Outlier Detecti | On Why the System Makes the Corner Case: AI-based Holistic A | 2022 | dimensions |
+| Industrial | Bosch Termotechnologia SA | Portugal | COPOD: Copula-Based Outlier Detecti | Predictive maintenance on sensorized stamping presses by tim | 2022 | dimensions |
+| Pharma | AstraZeneca AB | Sweden | DrugAgent: Automating AI-aided Drug | Democratising real-world drug discovery through agentic AI | 2026 | dimensions |
+| Pharma | AstraZeneca UK Ltd | United Kingdom | DrugAgent: Automating AI-aided Drug | Democratising real-world drug discovery through agentic AI | 2026 | dimensions |
+| Pharma | Novartis (China) | CN | Therapeutics Data Commons: Machine  | Machine Learning for Toxicity Prediction Using Chemical Stru | 2025 | openalex |
+| Pharma | Eli Lilly (United States) | US | Therapeutics Data Commons: Machine  | Machine Learning for Toxicity Prediction Using Chemical Stru | 2025 | openalex |
+| Pharma | AstraZeneca (Sweden) | SE | Therapeutics Data Commons: Machine  | Machine Learning for Toxicity Prediction Using Chemical Stru | 2025 | openalex |
+| Pharma | Pfizer (United States) | US | Therapeutics Data Commons: Machine  | Machine Learning for Toxicity Prediction Using Chemical Stru | 2025 | openalex |
+| Pharma | Sanofi (France) | FR | Therapeutics Data Commons: Machine  | Machine Learning for Toxicity Prediction Using Chemical Stru | 2025 | openalex |
+| Pharma | Merck & Co., Inc., Rahway, NJ, USA (United States) | US | Therapeutics Data Commons: Machine  | Data Scaling and Generalization Insights for Medicinal Chemi | 2025 | openalex |
+| Pharma | Roche (Switzerland) | CH | Artificial Intelligence Foundation  | Combinatorial prediction of therapeutic perturbations using  | 2025 | openalex |
+| Pharma | Merck & Co., Inc., Rahway, NJ, USA (United States) | US | Artificial Intelligence Foundation  | Combinatorial prediction of therapeutic perturbations using  | 2025 | openalex |
+| Pharma | Merck & Co Inc | United States | Therapeutics Data Commons: Machine  | Data Scaling and Generalization Insights for Medicinal Chemi | 2025 | dimensions |
+| Pharma | Eli Lilly and Co | United States | Therapeutics Data Commons: Machine  | Machine Learning for Toxicity Prediction Using Chemical Stru | 2025 | dimensions |
+| Pharma | Eli Lilly and Co Ltd | United Kingdom | Therapeutics Data Commons: Machine  | Machine Learning for Toxicity Prediction Using Chemical Stru | 2025 | dimensions |
+| Pharma | AstraZeneca AB | Sweden | Therapeutics Data Commons: Machine  | Machine Learning for Toxicity Prediction Using Chemical Stru | 2025 | dimensions |
+| Pharma | Pfizer GmbH | Germany | Therapeutics Data Commons: Machine  | Machine Learning for Toxicity Prediction Using Chemical Stru | 2025 | dimensions |
+| Pharma | Merck & Co Inc | United States | Therapeutics Data Commons: Machine  | Machine Learning for Toxicity Prediction Using Chemical Stru | 2025 | dimensions |
+| Pharma | F Hoffmann La Roche AG | Switzerland | Artificial Intelligence Foundation  | Combinatorial prediction of therapeutic perturbations using  | 2025 | dimensions |
+| Pharma | Merck & Co Inc | United States | Artificial Intelligence Foundation  | Combinatorial prediction of therapeutic perturbations using  | 2025 | dimensions |
+| Pharma | AstraZeneca (Sweden) | SE | Therapeutics Data Commons: Machine  | Human-in-the-loop active learning for goal-oriented molecule | 2024 | openalex |
+| Pharma | AstraZeneca (Sweden) | SE | Therapeutics Data Commons: Machine  | Using test-time augmentation to investigate explainable AI:  | 2024 | openalex |
+| Pharma | AstraZeneca (Japan) | JP | Therapeutics Data Commons: Machine  | Registries in Machine Learning-Based Drug Discovery: A Short | 2024 | openalex |
+| Pharma | AstraZeneca (Finland) | FI | Therapeutics Data Commons: Machine  | Registries in Machine Learning-Based Drug Discovery: A Short | 2024 | openalex |
+| Pharma | AstraZeneca (United Kingdom) | GB | Therapeutics Data Commons: Machine  | Registries in Machine Learning-Based Drug Discovery: A Short | 2024 | openalex |
+| Pharma | Novartis (Switzerland) | CH | Artificial Intelligence Foundation  | A call for an industry-led initiative to critically assess m | 2024 | openalex |
+| Pharma | Merck & Co., Inc., Rahway, NJ, USA (United States) | US | Artificial Intelligence Foundation  | A call for an industry-led initiative to critically assess m | 2024 | openalex |
+| Pharma | Pfizer (Germany) | DE | Artificial Intelligence Foundation  | A call for an industry-led initiative to critically assess m | 2024 | openalex |
+| Pharma | AstraZeneca (Sweden) | SE | Artificial Intelligence Foundation  | A call for an industry-led initiative to critically assess m | 2024 | openalex |
+| Pharma | Sanofi (France) | FR | Artificial Intelligence Foundation  | Deep Batch Active Learning for Drug Discovery | 2024 | openalex |
+| Pharma | Sanofi (United States) | US | Artificial Intelligence Foundation  | Deep Batch Active Learning for Drug Discovery | 2024 | openalex |
+| Pharma | Sanofi (China) | CN | Artificial Intelligence Foundation  | Deep Batch Active Learning for Drug Discovery | 2024 | openalex |
+| Pharma | Sanofi (Germany) | DE | Artificial Intelligence Foundation  | Deep Batch Active Learning for Drug Discovery | 2024 | openalex |
+| Pharma | Roche (Switzerland) | CH | Artificial Intelligence Foundation  | Combinatorial prediction of therapeutic perturbations using  | 2024 | openalex |
+| Pharma | Merck & Co., Inc., Rahway, NJ, USA (United States) | US | Artificial Intelligence Foundation  | Combinatorial prediction of therapeutic perturbations using  | 2024 | openalex |
+| Pharma | AstraZeneca (Brazil) | BR | Artificial Intelligence Foundation  | Representation Learning of Human Disease Mechanisms for a Fo | 2024 | openalex |
+| Pharma | AstraZeneca (United States) | US | Artificial Intelligence Foundation  | Representation Learning of Human Disease Mechanisms for a Fo | 2024 | openalex |
+| Pharma | AstraZeneca (Sweden) | SE | Artificial Intelligence Foundation  | Representation Learning of Human Disease Mechanisms for a Fo | 2024 | openalex |
+| Pharma | AstraZeneca (United Kingdom) | GB | Artificial Intelligence Foundation  | Representation Learning of Human Disease Mechanisms for a Fo | 2024 | openalex |
+| Pharma | AstraZeneca (Australia) | AU | Artificial Intelligence Foundation  | Representation Learning of Human Disease Mechanisms for a Fo | 2024 | openalex |
+| Pharma | AstraZeneca AB | Sweden | Therapeutics Data Commons: Machine  | Human-in-the-loop active learning for goal-oriented molecule | 2024 | dimensions |
+| Pharma | AstraZeneca UK Ltd | United Kingdom | Artificial Intelligence Foundation  | Representation Learning of Human Disease Mechanisms for a Fo | 2024 | dimensions |
+| Pharma | AstraZeneca AB | Sweden | Artificial Intelligence Foundation  | Representation Learning of Human Disease Mechanisms for a Fo | 2024 | dimensions |
+| Pharma | Novartis Pharma AG | Switzerland | Artificial Intelligence Foundation  | A call for an industry-led initiative to critically assess m | 2024 | dimensions |
+| Pharma | AstraZeneca AB | Sweden | Artificial Intelligence Foundation  | A call for an industry-led initiative to critically assess m | 2024 | dimensions |
+| Pharma | Merck & Co Inc | United States | Artificial Intelligence Foundation  | A call for an industry-led initiative to critically assess m | 2024 | dimensions |
+| Pharma | F Hoffmann La Roche AG | Switzerland | Artificial Intelligence Foundation  | Combinatorial prediction of therapeutic perturbations using  | 2024 | dimensions |
+| Pharma | Merck & Co Inc | United States | Artificial Intelligence Foundation  | Combinatorial prediction of therapeutic perturbations using  | 2024 | dimensions |
+| Pharma | AstraZeneca (Sweden) | SE | Therapeutics Data Commons: Machine  | Machine learning for small molecule drug discovery in academ | 2023 | openalex |
+| Pharma | Novartis (Switzerland) | CH | Therapeutics Data Commons: Machine  | Machine learning for small molecule drug discovery in academ | 2023 | openalex |
+| Pharma | Novartis Institutes for BioMedical Research | None | Therapeutics Data Commons: Machine  | Machine learning for small molecule drug discovery in academ | 2023 | openalex |
+| Pharma | Pfizer (Germany) | DE | Therapeutics Data Commons: Machine  | Equivariant Graph Neural Networks for Toxicity Prediction | 2023 | openalex |
+| Pharma | Novartis (United States) | US | Artificial Intelligence Foundation  | Computer‐aided evaluation and exploration of chemical spaces | 2023 | openalex |
+| Pharma | Novartis Institutes for Biomedical Research Inc | United States | Artificial Intelligence Foundation  | Computer‐aided evaluation and exploration of chemical spaces | 2023 | dimensions |
+| Pharma | Sanofi China Investment Co Ltd | China | Artificial Intelligence Foundation  | Deep Batch Active Learning for Drug Discovery | 2023 | dimensions |
+| Pharma | Sanofi Aventis Deutschland GmbH | Germany | Artificial Intelligence Foundation  | Deep Batch Active Learning for Drug Discovery | 2023 | dimensions |
+| Pharma | Sanofi SA | France | Artificial Intelligence Foundation  | Deep Batch Active Learning for Drug Discovery | 2023 | dimensions |
+| Pharma | Sanofi Pasteur Biologics LLC | United States | Artificial Intelligence Foundation  | Deep Batch Active Learning for Drug Discovery | 2023 | dimensions |
+| Pharma | Novartis (Switzerland) | CH | Therapeutics Data Commons: Machine  | Chemoinformatics and Artificial Intelligence Colloquium: Pro | 2022 | openalex |
+| Pharma | Novartis Institutes for BioMedical Research | None | Therapeutics Data Commons: Machine  | Chemoinformatics and Artificial Intelligence Colloquium: Pro | 2022 | openalex |
+| Pharma | AstraZeneca (Sweden) | SE | Therapeutics Data Commons: Machine  | Hierarchical Clustering Split for Low-Bias Evaluation of Dru | 2021 | openalex |
+| Pharma | AstraZeneca (United States) | US | Therapeutics Data Commons: Machine  | Hierarchical Clustering Split for Low-Bias Evaluation of Dru | 2021 | openalex |
+| Retail | Walmart (United States) | US | PyOD: A Python Toolbox for Scalable | Anomaly Detection for an E-commerce Pricing System | 2019 | openalex |
+| Telecom | Ericsson (Sweden) | SE | TODS: An Automated Time Series Outl | Resilient automatic model selection for mobility prediction | 2025 | openalex |
+| Telecom | Global AI Accelerator, Ericsson, Chennai, India | India | COPOD: Copula-Based Outlier Detecti | Adaptive Thresholding Heuristic for KPI Anomaly Detection | 2024 | dimensions |
+| Telecom | Ericsson (Sweden) | SE | ADBench: Anomaly Detection Benchmar | Data-Efficient Automatic Model Selection in Unsupervised Ano | 2022 | openalex |
+| Telecom | Ericsson (Sweden) | SE | Automatic Unsupervised Outlier Mode | Data-Efficient Automatic Model Selection in Unsupervised Ano | 2022 | openalex |
+| Telecom | Cisco Systems (United States) | US | TODS: An Automated Time Series Outl | Traffic Anomaly Detection Via Conditional Normalizing Flow | 2022 | openalex |
+| Telecom | Cisco Systems Inc | United States | TODS: An Automated Time Series Outl | Traffic Anomaly Detection Via Conditional Normalizing Flow | 2022 | dimensions |
+
+### Summary by Institution
+
+| Institution | Category | Work-Citations |
+|-----------|----------|---------------|
+| Microsoft Research (United Kingdom) | Big Tech | 9 |
+| Tencent (China) | Big Tech | 8 |
+| Microsoft Research Asia (China) | Big Tech | 7 |
+| AstraZeneca (Sweden) | Pharma | 7 |
+| IBM Research - Zurich | Big Tech | 7 |
+| Amazon (United States) | Big Tech | 6 |
+| IBM Research - Thomas J. Watson Research Center | Big Tech | 6 |
+| Adobe Systems (United States) | Big Tech | 5 |
+| Huawei Technologies (China) | Big Tech | 5 |
+| Alibaba Group (China) | Big Tech | 5 |
+| AstraZeneca AB | Pharma | 5 |
+| Merck & Co Inc | Pharma | 5 |
+| Meta Platforms Inc | Foundation Model Co | 5 |
+| Merck & Co., Inc., Rahway, NJ, USA (United States) | Pharma | 4 |
+| National Institutes of Health | US Government | 3 |
+| Ericsson (Sweden) | Telecom | 3 |
+| BlackRock (United States) | Finance | 3 |
+| Robert Bosch (Germany) | Industrial | 3 |
+| Fraunhofer Institute for Mechatronic Systems Design | Research Institute | 3 |
+| IBM (United States) | Big Tech | 3 |
+| Novartis (Switzerland) | Pharma | 3 |
+| IBM Research - Tokyo | Big Tech | 3 |
+| Brookhaven National Laboratory | National Lab | 3 |
+| Deutsche Bundesbank | Central Bank | 3 |
+| Amazon Web Services Inc | Big Tech | 3 |
+| Huawei Technologies Co Ltd | Big Tech | 3 |
+| OpenAI (United States) | Foundation Model Co | 2 |
+| Visa (United States) | Finance | 2 |
+| Robert Bosch (United States) | Industrial | 2 |
+| Huawei Technologies (France) | Big Tech | 2 |
+| Samsung (South Korea) | Big Tech | 2 |
+| Alibaba Group (United States) | Big Tech | 2 |
+| Intel (United States) | Big Tech | 2 |
+| Sanofi (France) | Pharma | 2 |
+| Novartis Institutes for BioMedical Research | Pharma | 2 |
+| IBM (United Kingdom) | Big Tech | 2 |
+| IBM Research - Almaden | Big Tech | 2 |
+| AstraZeneca (United States) | Pharma | 2 |
+| IBM Research - Ireland | Big Tech | 2 |
+| Google (United States) | Big Tech | 2 |
+| Pfizer (Germany) | Pharma | 2 |
+| Los Alamos National Laboratory | National Lab | 2 |
+| AstraZeneca (United Kingdom) | Pharma | 2 |
+| Sandia National Laboratories | National Lab | 2 |
+| Fraunhofer Institute for Translational Medicine and Pharmacology | Research Institute | 2 |
+| Roche (Switzerland) | Pharma | 2 |
+| Amazon (United Kingdom) | Big Tech | 2 |
+| Adobe Inc | Big Tech | 2 |
+| AstraZeneca UK Ltd | Pharma | 2 |
+| Tencent Technology Shenzhen Co Ltd | Big Tech | 2 |
+| IBM Research GmbH | Big Tech | 2 |
+| Nvidia Corp | Big Tech | 2 |
+| BlackRock Inc | Finance | 2 |
+| Fraunhofer Society | Research Institute | 2 |
+| F Hoffmann La Roche AG | Pharma | 2 |
+| Mayo Clinic in Florida | Healthcare | 1 |
+| Amazon (Germany) | Big Tech | 1 |
+| Jet Propulsion Laboratory | Space Agency | 1 |
+| Siemens (China) | Industrial | 1 |
+| Deutsches Zentrum für Luft- und Raumfahrt e. V. (DLR) | Space Agency | 1 |
+| Intel (United Kingdom) | Big Tech | 1 |
+| Microsoft (United States) | Big Tech | 1 |
+| Deloitte (United States) | Consulting | 1 |
+| Microsoft (Norway) | Big Tech | 1 |
+| Huawei Technologies (United States) | Big Tech | 1 |
+| Argonne National Laboratory | National Lab | 1 |
+| Cisco Systems (United States) | Telecom | 1 |
+| Capital One (United States) | Finance | 1 |
+| Visa (United Kingdom) | Finance | 1 |
+| Novartis (China) | Pharma | 1 |
+| Eli Lilly (United States) | Pharma | 1 |
+| Pfizer (United States) | Pharma | 1 |
+| Nvidia (United Kingdom) | Big Tech | 1 |
+| AstraZeneca (Japan) | Pharma | 1 |
+| AstraZeneca (Finland) | Pharma | 1 |
+| Morgan Stanley (United States) | Finance | 1 |
+| Baidu (China) | Big Tech | 1 |
+| Honeywell (France) | Industrial | 1 |
+| Microsoft (Brazil) | Big Tech | 1 |
+| Nvidia (United States) | Big Tech | 1 |
+| Google DeepMind (United Kingdom) | Foundation Model Co | 1 |
+| Google (United Kingdom) | Big Tech | 1 |
+| Microsoft (Netherlands) | Big Tech | 1 |
+| Pacific Northwest National Laboratory | National Lab | 1 |
+| Fraunhofer Institute for Algorithms and Scientific Computing | Research Institute | 1 |
+| Novartis (United States) | Pharma | 1 |
+| Sanofi (United States) | Pharma | 1 |
+| Sanofi (China) | Pharma | 1 |
+| Sanofi (Germany) | Pharma | 1 |
+| AstraZeneca (Brazil) | Pharma | 1 |
+| AstraZeneca (Australia) | Pharma | 1 |
+| Salesforce (United States) | Big Tech | 1 |
+| Centers for Disease Control and Prevention | US Government | 1 |
+| Deutsches Elektronen-Synchrotron DESY | International Lab | 1 |
+| Walmart (United States) | Retail | 1 |
+| Fraunhofer Institute for Open Communication Systems | Research Institute | 1 |
+| Siemens SRL | Industrial | 1 |
+| Capital One NA | Finance | 1 |
+| Cisco Systems Inc | Telecom | 1 |
+| Eli Lilly and Co | Pharma | 1 |
+| Eli Lilly and Co Ltd | Pharma | 1 |
+| Pfizer GmbH | Pharma | 1 |
+| RAND Corporation | Defense/Research | 1 |
+| Amazon.com Inc | Big Tech | 1 |
+| IBM Research - India | Big Tech | 1 |
+| Samsung Electronics Co Ltd | Big Tech | 1 |
+| Fraunhofer Institute for Applied Information Technology | Research Institute | 1 |
+| Global AI Accelerator, Ericsson, Chennai, India | Telecom | 1 |
+| Google LLC | Big Tech | 1 |
+| Robert Bosch GmbH | Industrial | 1 |
+| Alibaba DAMO Academy | Big Tech | 1 |
+| Bosch Termotechnologia SA | Industrial | 1 |
+| Cleveland Clinic London | Healthcare | 1 |
+| Alibaba Group Holding Ltd | Big Tech | 1 |
+| QQ Music BU Tencent Music Entertainment (TME), Shenzhen, China | Big Tech | 1 |
+| Baidu Inc | Big Tech | 1 |
+| Novartis Pharma AG | Pharma | 1 |
+| Novartis Institutes for Biomedical Research Inc | Pharma | 1 |
+| DeepMind Technologies Ltd | Foundation Model Co | 1 |
+| Sanofi China Investment Co Ltd | Pharma | 1 |
+| Sanofi Aventis Deutschland GmbH | Pharma | 1 |
+| Sanofi SA | Pharma | 1 |
+| Sanofi Pasteur Biologics LLC | Pharma | 1 |
+
+### Coverage
+
+**Sources used:** OpenAlex + Dimensions
+
+#### OpenAlex
+
+**Papers with citations:** 43/102
+
+**Indexed but 0 citations (51):** Can Multimodal LLMs Perform Time Series , Charts Are Not Images: On the Challenges, CoAct: Co-Active LLM Preference Learning, Defenses Against Prompt Attacks Learn Su, Doxing via the Lens: Revealing Location-, Mitigating Hallucinations in Large Langu, "Someone Hid It": Query-Agnostic Black-B, Topology Matters: Measuring Memory Leaka, A Personalized Conversational Benchmark:, AD-AGENT: A Multi-agent Framework for En, Edit Away and My Face Will Not Stay: Per, Few-Shot Graph Out-of-Distribution Detec, JailDAM: Jailbreak Detection with Adapti, LLM-Empowered Patient-Provider Communica, Learning from the Storm: A Multivariate , MetaOOD: Automatic Selection of OOD Dete, Navigating Between Explainability and Ex, Secure On-Device Video OOD Detection Wit, SocialMaze: A Benchmark for Evaluating S, TRUSTEVAL: A Dynamic Evaluation Toolkit , ... and 31 more
+
+**Not found (8):** DecAlign: Hierarchical Cross-Modal Align, TrustGen: A Platform of Dynamic Benchmar, DyFlow: Dynamic Workflow Framework for A, AutoDavis: Automatic and Dynamic Evaluat, ELECT: Toward Unsupervised Outlier Model, Auditable Agents... (ACL Workshop on Tow, Multimodal Generative Engine Optimizatio, Can Molecular Foundation Models Know Wha
+
+#### Dimensions
+
+**Papers with citations:** 30/102
+
+**Indexed but 0 citations (69):** Can Multimodal LLMs Perform Time Series , Charts Are Not Images: On the Challenges, CoAct: Co-Active LLM Preference Learning, Defenses Against Prompt Attacks Learn Su, Mitigating Hallucinations in Large Langu, "Someone Hid It": Query-Agnostic Black-B, Topology Matters: Measuring Memory Leaka, TrustGen: A Platform of Dynamic Benchmar, A Personalized Conversational Benchmark:, AD-AGENT: A Multi-agent Framework for En, DyFlow: Dynamic Workflow Framework for A, Edit Away and My Face Will Not Stay: Per, Few-Shot Graph Out-of-Distribution Detec, JailDAM: Jailbreak Detection with Adapti, LLM-Empowered Patient-Provider Communica, Learning from the Storm: A Multivariate , MetaOOD: Automatic Selection of OOD Dete, NLP-ADBench: NLP Anomaly Detection Bench, Navigating Between Explainability and Ex, Retrieval-Reasoning Large Language Model, ... and 49 more
+
+**Not found (3):** AutoDavis: Automatic and Dynamic Evaluat, Automatic Unsupervised Outlier Model Sel, Revisiting Time Series Outlier Detection
+
+*OpenAlex coverage improves over time. Re-run in 3-6 months to capture newly indexed papers; Dimensions has better CS coverage and complements OpenAlex on per-paper citation graphs.*
+
+*Cross-source dedup uses exact (institution, citing_title, cited_work) matching. Variants like 'Google' vs 'Google LLC' or punctuation-variant titles may produce near-duplicate rows that span sources.*
