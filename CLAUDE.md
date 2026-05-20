@@ -62,7 +62,7 @@ If a local `skills/<skill-name>/SKILL.md` exists in the project repo, the local 
 Copying `.agent-config/repo/.claude/commands/*.md` only overwrites command files with the same name as the shared repo and does not delete unrelated project-local commands.
 Merge shared Claude project defaults (e.g., `permissions`, `attribution`) from `.agent-config/repo/.claude/settings.json` into the project `.claude/settings.json`. Shared keys are updated on every bootstrap run; project-only keys are preserved. Merge requires Python; if unavailable the existing file is left untouched.
 Add `.agent-config/` to the project's `.gitignore` so fetched files are not committed.
-Bootstrap also sets up user-level config: it copies `scripts/guard.py` to `~/.claude/hooks/` (a PreToolUse hook that guards against destructive commands) and merges `user/settings.json` into `~/.claude/settings.json` (shared permissions, hook wiring, and the `CLAUDE_CODE_EFFORT_LEVEL=max` env entry that sets the default effort level). Remove the user-level section from the bootstrap script if this is not wanted.
+Bootstrap also sets up user-level config: it copies `scripts/guard.py` to `~/.claude/hooks/` (a PreToolUse hook that guards against destructive commands) and `scripts/statusline.py` to `~/.claude/statusline.py` (a statusLine renderer showing Claude Max + Codex 5h / weekly quota), and merges `user/settings.json` into `~/.claude/settings.json` (shared permissions, hook wiring, statusLine command, and the `CLAUDE_CODE_EFFORT_LEVEL=max` env entry that sets the default effort level). Remove the user-level section from the bootstrap script if this is not wanted.
 ````
 
 ### What gets shared
@@ -74,7 +74,7 @@ Bootstrap also sets up user-level config: it copies `scripts/guard.py` to `~/.cl
 | Shared skills (`implement-review`, `my-router`, `ci-mockup-figure`, `readme-polish`) | `skills/` directory (committed only) | sparse `git clone` |
 | Claude pointer commands for shared skills | `.claude/commands/` | sparse `git clone` plus non-destructive copy into the project `.claude/commands/` |
 | Claude project defaults (`permissions`, `attribution`, etc.) | `.claude/settings.json` | sparse `git clone` plus key-level merge into the project `.claude/settings.json` on every run |
-| User-level hooks (`guard.py`, `session_bootstrap.py`) + settings | `scripts/` + `user/settings.json` | Scripts copied to `~/.claude/hooks/`; settings merged into `~/.claude/settings.json` (shared permissions, PreToolUse guard, SessionStart bootstrap hook, `CLAUDE_CODE_EFFORT_LEVEL=max`) |
+| User-level scripts (`guard.py`, `session_bootstrap.py`, `statusline.py`) + settings | `scripts/` + `user/settings.json` | Hooks copied to `~/.claude/hooks/`, statusline to `~/.claude/statusline.py`; settings merged into `~/.claude/settings.json` (shared permissions, PreToolUse guard, SessionStart bootstrap hook, statusLine command, `CLAUDE_CODE_EFFORT_LEVEL=max`) |
 
 ### Override rules
 
@@ -148,22 +148,19 @@ If anything is off, replace `all clear` with a semicolon-separated list of concr
 5. **Hooks** — check `~/.claude/hooks/` for `guard.py` (PreToolUse) and `session_bootstrap.py` (SessionStart). If one is missing, include it in the Session check line as an issue.
 6. **Session check** — scan `.github/workflows/*.yml` for action version pins below the minimums in the GitHub Actions Standards section. Combine with any Codex-config or hook drift detected above. Emit `all clear` only when nothing needs attention.
 
-7. **Pack deployment** — perform this check exactly:
+7. **Pack deployment** — compute two counts:
 
-    a. Read user-level config: on Windows `%APPDATA%\anywhere-agents\config.yaml`; on POSIX `$XDG_CONFIG_HOME/anywhere-agents/config.yaml`, default `~/.config/anywhere-agents/config.yaml`. If absent, `user_packs = []`.
+    **a. user_packs**: read `%APPDATA%\anywhere-agents\config.yaml` (Windows) or `$XDG_CONFIG_HOME/anywhere-agents/config.yaml` / `~/.config/anywhere-agents/config.yaml` (POSIX); empty list if absent. `AGENT_CONFIG_PACKS` env var is excluded.
 
-    b. Read durable project config: `agent-config.yaml` then merge `agent-config.local.yaml` overrides by name. `AGENT_CONFIG_PACKS` env var is **excluded**. If both files absent, `project_packs = []`.
+    **b. project_packs**: read `agent-config.yaml` then merge `agent-config.local.yaml` by name; if both are absent, use an empty list. Local entries win on duplicates.
 
-    c. For each pack `u` in `user_packs`, normalize its identity tuple `(u.name, normalize_pack_source_url(u.source.url), u.source.ref)`. Find any pack `p` in `project_packs` with the same `u.name` (case-sensitive name match). If `project_packs` contains duplicate-named entries (e.g., the same name in both `agent-config.yaml` and `agent-config.local.yaml`), apply local-overrides-tracked: keep only the local entry. Count `u` toward `gap_count` if either: no matching `p` exists, OR `p`'s normalized identity tuple differs from `u`'s.
+    **c. gap_count**: for each `u` in user_packs, normalize `(name, normalize_pack_source_url(url), ref)`. Increment if no matching `p` in project_packs by case-sensitive name, OR if `p`'s normalized tuple differs from `u`'s.
 
-    d. Read `.agent-config/pack-lock.json` (the project-local lock written by the composer). For each entry in `data.packs`, count it toward `update_count` when **both** `latest_known_head` and `resolved_commit` are non-empty strings AND `latest_known_head != resolved_commit`. The optional `latest_known_head` / `fetched_at` fields land via `pack verify` (which runs `git ls-remote` opportunistically and lock-bracket-merges the result) and via composer fetches at install time. Old locks predating v0.5.2 omit both fields and contribute zero — no migration needed.
+    **d. update_count**: for each entry in `.agent-config/pack-lock.json` `data.packs`, increment when both `latest_known_head` and `resolved_commit` are non-empty AND they differ. (Lock entries predating v0.5.2 lack these fields and contribute zero.)
 
-    e. Compose the banner contribution from both counts. Each is a half-clause; drop the half whose count is 0; emit `all clear` only when both are 0:
-
-       - `gap_count > 0` → ``⚠ <gap_count> user-level pack(s) not deployed (run `anywhere-agents pack verify --fix`)``
-       - `update_count > 0` → ``ℹ <update_count> pack update(s) available (run `anywhere-agents pack verify --fix`)``
-
-       Append the surviving half-clauses to the Session check line, semicolon-separated. The CLI command differs from v0.5.1: v0.5.2 collapses the verify-then-bootstrap dance into `pack verify --fix`, which now invokes the composer subprocess after writing config rows.
+    **e. emit**: each non-zero count contributes a half-clause to the Session check line (semicolon-separated; `all clear` when both zero):
+    - gap_count > 0 → ``⚠ <gap_count> user-level pack(s) not deployed (run `anywhere-agents pack verify --fix`)``
+    - update_count > 0 → ``ℹ <update_count> pack update(s) available (run `anywhere-agents pack verify --fix`)``
 
 ## User Profile
 
@@ -176,6 +173,16 @@ If anything is off, replace `all clear` with a semicolon-separated list of concr
 - **Claude Code** is the primary workhorse: drafting, implementation, research, and heavy-lifting tasks.
 - **Codex** is the gatekeeper: review, feedback, and quality checks on work produced by Claude Code or the user.
 - When both agents are available, default to this division of labor unless the user overrides it.
+
+## Agent Fungibility
+
+- The default routing (Claude Code primary, Codex gatekeeper) is a default, not a hard requirement. Two scenarios must remain workable: (1) **absence**, when one agent is unavailable (service outage, regional block, quota exhaustion, hardware-induced refusal); (2) **reversal testing**, when the user deliberately swaps primary and gatekeeper roles to evaluate quality drift.
+- **Principle**: not 1:1 replication. Core functions must work when either agent is absent or when roles are reversed. Where an ergonomic helper exists for one agent only (e.g., a hand-crafted slash command), the function must still be reachable via underlying primitives. Define "core function" by user value (review loop, structured dispatch, health check), not by surface convenience.
+- **How to apply** when designing or refactoring agent-facing skills, scripts, or docs:
+  - Default routing is fine; just make the alternative reachable.
+  - A skill, hook, or script that hard-codes one agent's CLI (`codex exec`, `claude -p`) should document or wire the other side's equivalent at the same time, even if the implementation is deferred.
+  - Docs that name one agent in step instructions should call out the cross-vendor equivalent at least once near the top, so a session reading the doc under role reversal can still proceed.
+  - When the deferred half ships later, the principle is satisfied; do not block the primary half on simultaneous parity.
 
 ## Task Routing
 
@@ -219,15 +226,25 @@ Bootstrap deploys `scripts/guard.py` to `~/.claude/hooks/guard.py` and wires it 
 
 | Gate | Tool scope | Trigger | Action |
 |---|---|---|---|
-| Writing-style | `Write`, `Edit`, `MultiEdit` on `.md` / `.tex` / `.rst` / `.txt` | Outgoing content contains a banned AI-tell word (see Writing Defaults list) | **deny** with hit list |
+| Writing-style | `Write`, `Edit`, `MultiEdit` on `.md` / `.tex` / `.rst` / `.txt` | Outgoing content contains a banned AI-tell word (see Writing Defaults list) | **deny** with hit list and inline `Suggested rewrite:` line naming concrete alternatives |
 | Banner emission | Any tool except `Read`, `Grep`, `Glob`, `Skill`, `Task`, `TodoWrite`, `BashOutput`, `WebFetch`, `WebSearch`, `ToolSearch`, `LS`, `NotebookRead`; plus `Write`/`Edit`/`MultiEdit` whose target path exactly equals `<project-root>/.agent-config/banner-emitted.json` after absolute-path normalization and Windows case folding | `<project-root>/.agent-config/session-event.json.ts > <project-root>/.agent-config/banner-emitted.json.ts`. `<project-root>` is found by walking up from `cwd` until `.agent-config/bootstrap.{sh,ps1}` is present. Source repos (no `.agent-config/`) and unrelated directories skip the gate entirely | **deny** with instruction to emit banner + write acknowledgment to the per-project ack file |
-| Compound `cd` | `Bash` | Command contains `cd <path> && <cmd>` or `cd <path>; <cmd>` | **deny** with suggestion to use `git -C` or path arguments |
+| Compound `cd` | `Bash` | Command contains `cd <path> && <cmd>` or `cd <path>; <cmd>` | **deny** with inline `Suggested rewrite:` line (e.g. `git -C <path> <cmd>` for git, or pass the path as an argument) |
 | Destructive git | `Bash` | `git push`, `git commit`, `git merge`, `git rebase`, `git reset --hard`, `git clean`, `git branch -d/-D`, `git tag -d`, `git stash drop/clear` | **ask** (user confirms) |
 | Destructive gh | `Bash` | `gh pr create`, `gh pr merge`, `gh pr close`, `gh repo delete` | **ask** (user confirms) |
 
-**Escape hatch:** set env var `AGENT_CONFIG_GATES=off` (or `0`/`disabled`/`false`) via the `env` block in `~/.claude/settings.json` to disable the two new gates (writing-style and banner). The compound-cd / destructive-git / destructive-gh checks remain active regardless, since they guard against muscle-memory mistakes that do not tolerate false positives.
+**Round 6 noise audit (v0.7.0):** Deny messages embed a concrete `Suggested rewrite:` line so an autonomous agent (`/implement-review auto`, headless `claude -p`, any unattended loop) can lift the reroute in one model turn instead of inferring it. Destructive operations stay `ask` because they have no agent-side reroute; human approval is the contract.
 
-Setting the escape hatch is the right move when a legitimate write has a banned word in *meta-discussion* context (for example, a style-guide document that quotes banned words as examples of what to avoid), or when a prompt-layer failure is blocking legitimate work. Fix the false positive, then remove the override.
+**Escape hatches:** set the corresponding env var in the `env` block of `~/.claude/settings.json`. Disable values: `off` / `0` / `disabled` / `false` / `no`.
+
+| Env var | Disables |
+|---|---|
+| `AGENT_STYLE_HOOK=off` | Writing-style gate only |
+| `AGENT_COMPOUND_CD_HOOK=off` | Compound-cd gate only |
+| `AGENT_CONFIG_GATES=off` | Legacy blanket: writing-style + banner only (BC-preserved) |
+
+**Destructive git / gh approval is NOT bypassable by ANY env var.** No escape hatch turns the `ask` prompt into pass-through. The guards have no automatic reroute; human approval is the contract. The advertised env-var set lives in `scripts/guard.py:_ESCAPE_HATCH_ENV_NAMES`; a static literal-scan test enforces that no future hook env var can be added without registering it there.
+
+Set a per-guard escape env when a legitimate write has a banned word in *meta-discussion* context (a style-guide document that quotes banned words as examples; a CHANGELOG entry that cites one). Prefer the narrowest env that unblocks (`AGENT_STYLE_HOOK=off` over `AGENT_CONFIG_GATES=off`) so the other gates stay live. Remove the override after the write.
 
 ## Shell Command Style
 
@@ -263,7 +280,7 @@ When the session start check (item 4) detects older versions, list the affected 
   - Windows (PowerShell, no admin): `irm https://claude.ai/install.ps1 | iex` (requires Git for Windows)
   - To migrate from npm: `npm uninstall -g @anthropic-ai/claude-code` first. From winget: `winget uninstall Anthropic.ClaudeCode` first.
   - Native installs auto-update in the background by default. Use `/config` inside Claude Code to set the release channel (`latest` or `stable`). Run `claude doctor` to inspect updater status, and `claude update` to force an immediate update check.
-  - To disable auto-updates, set `DISABLE_AUTOUPDATER=1` in the environment or add `"env": {"DISABLE_AUTOUPDATER": "1"}` to `~/.claude/settings.json`. The env var takes precedence regardless of other flags. **Caveat:** if you migrated from npm or winget, an earlier install may have left `"autoUpdates": false` at the top level of `~/.claude.json`. Observed behavior is that the native updater daemon never spawns when that flag was already false at launch, even with `autoUpdatesProtectedForNative: true`. Bootstrap now heals this by flipping the stale flag to `true` on every run, so the env-var path is the only supported way to opt out.
+  - To disable auto-updates, set `DISABLE_AUTOUPDATER=1` in the environment or add `"env": {"DISABLE_AUTOUPDATER": "1"}` to `~/.claude/settings.json`. The env var takes precedence regardless of other flags.
 - **Claude Code effort level**: As of Claude Code v2.1.111, the `/effort` slider exposes five levels: `low`, `medium`, `high`, `xhigh`, `max`. The persisted `effortLevel` key in `settings.json` accepts `low`, `medium`, `high`, and `xhigh` (v2.1.111 added `xhigh` as a valid persisted value). `max` remains session-only: selecting `max` via `/effort` silently does not persist. To get `max` as a persistent default across every project and session, set the env var `CLAUDE_CODE_EFFORT_LEVEL=max` in `~/.claude/settings.json` under `"env"`. The shared `user/settings.json` in this repo sets the env var, and bootstrap merges it into `~/.claude/settings.json`, so running bootstrap once on any consuming project lands the user-level default. Runtime precedence: managed policy > `CLAUDE_CODE_EFFORT_LEVEL` env var > persisted `effortLevel` (local > project > user) > Claude Code's built-in default. When the env var is set, it outranks `--effort` at launch and `/effort` inside a session; the slash command prints a warning that the env var is overriding the live effort. When the env var is unset, `--effort <level>` at launch is a session-only override, `/effort low|medium|high|xhigh` updates the persisted user setting, and `/effort max` is session-only.
 
 ## Local Skills Precedence
