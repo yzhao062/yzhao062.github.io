@@ -1,0 +1,4 @@
+interface:
+  display_name: "Bibref Verify"
+  short_description: "Audit existing bibrefs before submission"
+  default_prompt: "Use $bibref-verify to audit the target paper's existing .bib file before submission. Keep the .bib read-only, verify suspicious entries against canonical sources and S2 when available, write REFERENCE-CHECK.md with fix blocks, and mark partial runs when S2, Codex, or web verification is unavailable."

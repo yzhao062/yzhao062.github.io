@@ -57,8 +57,7 @@ bash .agent-config/bootstrap.sh
 This bootstrap flow refreshes the consuming repo's root `AGENTS.md` on every run: by default it composes the shared upstream copy with the `agent-style` rule pack (requires Python 3 + PyYAML; bootstrap attempts a best-effort `pip install --user pyyaml` when missing). When rule-pack composition is disabled (`rule_packs: []` in `agent-config.yaml`) or unavailable (Python or PyYAML absent after the auto-install attempt), the root `AGENTS.md` is written verbatim from the shared upstream copy. If a project later needs repo-local overrides, put them in `AGENTS.local.md`.
 
 Read and follow the rules in `.agent-config/AGENTS.md` as baseline defaults. Any rule in `AGENTS.local.md` overrides the shared default.
-When a skill is invoked, read its SKILL.md from `.agent-config/repo/skills/<skill-name>/SKILL.md`.
-If a local `skills/<skill-name>/SKILL.md` exists in the project repo, the local copy takes precedence.
+When a skill is invoked, resolve its `SKILL.md` using this order, first hit wins: `skills/<skill-name>/SKILL.md` (project-local), then `.claude/skills/<skill-name>/SKILL.md` (pack-deployed by `anywhere-agents pack install`; `.claude/` prefix is a historical Claude Code convention but the contents are agent-agnostic), then `.agent-config/repo/skills/<skill-name>/SKILL.md` (bootstrapped from upstream).
 Copying `.agent-config/repo/.claude/commands/*.md` only overwrites command files with the same name as the shared repo and does not delete unrelated project-local commands.
 Merge shared Claude project defaults (e.g., `permissions`, `attribution`) from `.agent-config/repo/.claude/settings.json` into the project `.claude/settings.json`. Shared keys are updated on every bootstrap run; project-only keys are preserved. Merge requires Python; if unavailable the existing file is left untouched.
 Add `.agent-config/` to the project's `.gitignore` so fetched files are not committed.
@@ -80,9 +79,9 @@ Bootstrap also sets up user-level config: it copies `scripts/guard.py` to `~/.cl
 
 - If `AGENTS.local.md` exists in the project root, read and follow it after `AGENTS.md`. Rules in `AGENTS.local.md` override the shared defaults.
 - Rules in `AGENTS.local.md` always win over shared defaults. Do not edit the root `AGENTS.md` for local overrides, as bootstrap will overwrite it.
-- Project-local `skills/<name>/SKILL.md` always wins over the shared copy of the same skill.
+- Project-local `skills/<name>/SKILL.md` always wins over pack-deployed and bootstrapped copies of the same skill.
 - Shared keys in `.claude/settings.json` are updated on every bootstrap run. Project-only keys are preserved. To override a shared key locally, use `.claude/settings.local.json`.
-- If a shared skill does not exist locally, the agent should use the fetched copy from `.agent-config/repo/skills/`.
+- If no project-local copy exists, use `.claude/skills/<name>/SKILL.md` when present; otherwise use the fetched shared copy from `.agent-config/repo/skills/`.
 
 ### Configuration Precedence
 
@@ -117,7 +116,7 @@ The generated `CLAUDE.md` and `agents/codex.md` carry a `GENERATED FILE` header.
 1. If `session-event.json.ts > banner-emitted.json.ts`, OR `session-event.json` exists but `banner-emitted.json` does not: emit the session start banner as the **literal first content of your response**, then write the event `ts` into `<project-root>/.agent-config/banner-emitted.json`. Only after the banner text may you address the user's request on the same turn.
 2. Otherwise (emitted `ts` is already current, or neither file exists): skip the banner this turn.
 
-`session_bootstrap.py` writes `session-event.json` on every SessionStart hook fire (fresh startup, resume, clear, compact), so the banner reappears across all four lifecycle events. Flag files are per-project, so opening multiple Claude Code windows in different consumer repos does not cause cross-session interference.
+`session_bootstrap.py` writes `session-event.json` on SessionStart hook fires whose `source` is `startup`, `resume`, or `clear`, so the banner reappears across the three lifecycle events that reset conversation context. On `source: compact`, the prior banner ack survives in the summarized context, so the hook skips the event write and the banner does not re-fire. A 10-second debounce suppresses duplicate event writes when the hook fires twice in rapid succession for the same lifecycle event. Flag files are per-project, so opening multiple Claude Code windows in different consumer repos does not cause cross-session interference.
 
 **In a source repo (`agent-config` or `anywhere-agents`, no `.agent-config/` at the root):** the banner gate in `guard.py` is not active and the flag-file mechanism does not apply. Emit the banner on the first response of the session (turn with no prior assistant turns in context); skip on subsequent turns. Compact / resume / clear cannot be mechanically distinguished here.
 
@@ -132,19 +131,19 @@ The generated `CLAUDE.md` and `agents/codex.md` carry a `GENERATED FILE` header.
    ├── OS: <platform>
    ├── Claude Code: <version>[ → <latest>] (auto-update: <on|off>) · <model> · effort=<level>
    ├── Codex: <version>[ → <latest>] · <model> · <reasoning> · <tier> · fast_mode=<bool>
-   ├── Skills: <N> local (<names>) + <M> shared (<names>)
+   ├── Skills: <N> local (<names>) + <P> pack (<names>) + <M> shared (<names>)
    ├── Hooks: PreToolUse <guard.py>, SessionStart <session_bootstrap.py>
    └── Session check: all clear
 ```
 
-If anything is off, replace `all clear` with a semicolon-separated list of concrete issues, each actionable in one short clause (e.g., `⚠ actions/checkout@v4 in .github/workflows/validate.yml:17 — bump to v5; Codex config.toml missing model key`). Keep the whole banner to six lines plus the check line. The skills row may wrap visually when many names are present; do not omit a local or shared bucket just to preserve terminal width.
+If anything is off, replace `all clear` with a semicolon-separated list of concrete issues, each actionable in one short clause (e.g., `⚠ actions/checkout@v4 in .github/workflows/validate.yml:17 — bump to v5; Codex config.toml missing model key`). Keep the whole banner to six lines plus the check line. The skills row may wrap visually when many names are present; do not omit a local, pack, or shared bucket just to preserve terminal width.
 
 ### How to populate each field
 
 1. **OS** — read from the session environment (`win32`, `darwin`, `linux`). Use this elsewhere to pick platform-specific behavior (terminal review path on Windows, MCP on macOS/Linux, `.ps1` vs `.sh`).
 2. **Claude Code** — format: `Claude Code <current>[ → <latest>] (auto-update: <on|off>) · <model> · effort=<level>`. Current version comes from Claude Code's startup header or `claude --version`. Read `~/.claude/hooks/version-cache.json` for `claude_latest`; render ` → <latest>` **only when current differs** from latest. Determine `auto-update: on` when `DISABLE_AUTOUPDATER` is not `1` in the effective env (OS env or `env` block in `~/.claude/settings.json`) AND `~/.claude.json` top-level `autoUpdates` is not explicitly `false` — a missing key counts as `on` because native installs auto-update by default. Only explicit `autoUpdates: false` (which bootstrap heals on the next run) or the disable env var means `off`. User prefers the highest available model at max effort; flag any drift once in the banner, not every turn.
 3. **Codex** — format: `Codex <current>[ → <latest>] · <model> · <reasoning> · <tier> · fast_mode=<bool>`. Current version from `codex --version`. Latest from `~/.claude/hooks/version-cache.json` `codex_latest` (render ` → <latest>` only when current differs). Config from `~/.codex/config.toml` (or `%USERPROFILE%\.codex\config.toml` on Windows): `model` · `model_reasoning_effort` · `service_tier` · `[features].fast_mode`. Expected values: `model = "gpt-5.5"` (or latest), `model_reasoning_effort = "xhigh"`, `service_tier = "fast"`, `[features] fast_mode = true`. If the binary is not on PATH, show `Codex: not installed`. If the binary exists but `config.toml` is missing, show version + `not configured` in place of the config summary.
-4. **Skills** — list both active sets. Count directories under `skills/` (project-local) and `.agent-config/repo/skills/` (bootstrapped). For the shared count/list, exclude any shared skill whose name also exists under project-local `skills/`, because project-local overrides shared on name conflict. Format: `<N> local (<names>) + <M> shared (<names>)`. Omit either half if empty (e.g., `4 shared (...)` when the consumer has no project-local `skills/`).
+4. **Skills** — list all active skill buckets. Count directories under `skills/` (project-local), `.claude/skills/` (pack-deployed by `anywhere-agents pack install`), and `.agent-config/repo/skills/` (bootstrapped from upstream). Apply the lookup precedence from "Local Skills Precedence" when counting: exclude pack-deployed names that are shadowed by a project-local skill, and exclude bootstrapped names that are shadowed by either a project-local or a pack-deployed skill. Format: `<N> local (<names>) + <P> pack (<names>) + <M> shared (<names>)`. Omit empty buckets (e.g., `2 pack (...) + 4 shared (...)` when the consumer has no project-local skills, or `4 shared (...)` when only the bootstrapped bucket is non-empty).
 5. **Hooks** — check `~/.claude/hooks/` for `guard.py` (PreToolUse) and `session_bootstrap.py` (SessionStart). If one is missing, include it in the Session check line as an issue.
 6. **Session check** — scan `.github/workflows/*.yml` for action version pins below the minimums in the GitHub Actions Standards section. Combine with any Codex-config or hook drift detected above. Emit `all clear` only when nothing needs attention.
 
@@ -184,9 +183,15 @@ If anything is off, replace `all clear` with a semicolon-separated list of concr
   - Docs that name one agent in step instructions should call out the cross-vendor equivalent at least once near the top, so a session reading the doc under role reversal can still proceed.
   - When the deferred half ships later, the principle is satisfied; do not block the primary half on simultaneous parity.
 
+## Memory and Persistence
+
+- This configuration targets multi-agent use (Claude Code, Codex, and others). A single agent's private memory is therefore not a reliable home for durable context: one agent's per-account memory is not readable by the other agents, and it does not travel across accounts or machines.
+- Prefer version-controlled local files for anything that must persist across agents, sessions, accounts, or machines: the project `README`, a `docs/` note, a `PLAN-*.md` or notes file, a `CHANGELOG`, or `AGENTS.local.md`. Version control is the portable, agent-independent memory.
+- Use an agent's built-in memory only for short, agent-local convenience, and treat the version-controlled copy as authoritative. Do not record project state, decisions, or records solely in agent memory.
+
 ## Task Routing
 
-- Before starting a task, read the router skill to determine which domain skill to use. Look for it in this order: `skills/my-router/SKILL.md` (repo-local), then `.agent-config/repo/skills/my-router/SKILL.md` (bootstrapped from shared config).
+- Before starting a task, read the router skill to determine which domain skill to use. Look for it in this order: `skills/my-router/SKILL.md` (repo-local), then `.claude/skills/my-router/SKILL.md` (pack-deployed), then `.agent-config/repo/skills/my-router/SKILL.md` (bootstrapped from shared config).
 - The router inspects prompt keywords, file types, and project structure to dispatch automatically. Do not ask the user which skill to use when the routing table provides a clear match.
 - If the `superpowers` plugin is active, the router operates during the execution phase. Superpowers handles the outer workflow (brainstorm, plan, execute, verify); the router handles inner dispatch to the right domain skill.
 - If routing is ambiguous (multiple skills could apply), state the detected context and proposed skill, then ask the user to confirm.
@@ -235,6 +240,7 @@ If anything is off, replace `all clear` with a semicolon-separated list of concr
 - Avoid heavy dash use. Do not use em dashes (`—`) or en dashes (`–`) as casual sentence punctuation. Prefer commas, semicolons, colons, or parentheses instead. En dashes in numeric ranges (e.g., `1–3`, `2020–2025`), paired names, or citations are fine. Normal hyphenation in compound words and technical terms (e.g., `command-line`, `co-PI`, `zero-shot`) is fine and should not be avoided.
 - Break extremely long or complex sentences into shorter, more readable ones. If a sentence has multiple clauses or nested qualifications, split it.
 - Vary sentence length and structure. Prefer not to start several consecutive sentences with the same word or phrase. Avoid overusing transition words like "Additionally" or "Furthermore." Not every paragraph needs a tidy summary sentence at the end. Mix short, direct sentences with longer ones to keep the writing natural.
+- When showing the user text whose purpose is to be copied into an external destination (an email reply, a chat message, a spreadsheet or table cell, a document), present that text in a fenced code block so it copies cleanly with line breaks and formatting intact. This applies to copy-paste-destined drafts, not to ordinary explanatory answers.
 
 ## Git Safety
 
@@ -249,10 +255,14 @@ Bootstrap deploys `scripts/guard.py` to `~/.claude/hooks/guard.py` and wires it 
 | Gate | Tool scope | Trigger | Action |
 |---|---|---|---|
 | Writing-style | `Write`, `Edit`, `MultiEdit` on `.md` / `.tex` / `.rst` / `.txt` | Outgoing content contains a banned AI-tell word (see Writing Defaults list) | **deny** with hit list and inline `Suggested rewrite:` line naming concrete alternatives |
-| Banner emission | Any tool except `Read`, `Grep`, `Glob`, `Skill`, `Task`, `TodoWrite`, `BashOutput`, `WebFetch`, `WebSearch`, `ToolSearch`, `LS`, `NotebookRead`; plus `Write`/`Edit`/`MultiEdit` whose target path exactly equals `<project-root>/.agent-config/banner-emitted.json` after absolute-path normalization and Windows case folding | `<project-root>/.agent-config/session-event.json.ts > <project-root>/.agent-config/banner-emitted.json.ts`. `<project-root>` is found by walking up from `cwd` until `.agent-config/bootstrap.{sh,ps1}` is present. Source repos (no `.agent-config/`) and unrelated directories skip the gate entirely | **deny** with instruction to emit banner + write acknowledgment to the per-project ack file |
+| Banner emission | Any tool except `Read`, `Grep`, `Glob`, `Skill`, `Task`, `TodoWrite`, `BashOutput`, `WebFetch`, `WebSearch`, `ToolSearch`, `LS`, `NotebookRead`; plus `Write`/`Edit`/`MultiEdit` whose target path exactly equals `<project-root>/.agent-config/banner-emitted.json` after absolute-path normalization and Windows case folding | `<project-root>/.agent-config/session-event.json.ts > <project-root>/.agent-config/banner-emitted.json.ts`. `<project-root>` is found by walking up from `cwd` until `.agent-config/bootstrap.{sh,ps1}` is present. Source repos (no `.agent-config/`) and unrelated directories skip the gate entirely | **first arm** (banner-emitted.json absent): **deny** with instruction to emit banner + write acknowledgment to the per-project ack file. **Re-arm** (ack file exists but ts is stale, including malformed JSON): pass-through with a `[banner-gate] SessionStart re-fire detected ...` advisory line on stderr. The agent should still re-emit the banner on its next textual response per the rule in § "Session Start Check", but tool calls are not blocked (issue anywhere-agents#7). |
 | Compound `cd` | `Bash` | Command contains `cd <path> && <cmd>` or `cd <path>; <cmd>` | **deny** with inline `Suggested rewrite:` line (e.g. `git -C <path> <cmd>` for git, or pass the path as an argument) |
-| Destructive git | `Bash` | `git push`, `git commit`, `git merge`, `git rebase`, `git reset --hard`, `git clean`, `git branch -d/-D`, `git tag -d`, `git stash drop/clear` | **ask** (user confirms) |
-| Destructive gh | `Bash` | `gh pr create`, `gh pr merge`, `gh pr close`, `gh repo delete` | **ask** (user confirms) |
+| Destructive git | `Bash` + `PowerShell` | `git push`, `git commit`, `git merge`, `git rebase`, `git reset --hard`, `git clean`, `git branch -d/-D`, `git checkout --`, `git tag -d`, `git stash drop/clear` | **ask** (user confirms) |
+| Destructive / publish gh | `Bash` + `PowerShell` | `gh pr create/merge/close`, `gh repo delete`, `gh release create/delete/upload/edit` | **ask** (user confirms) |
+| Publish | `Bash` + `PowerShell` | `npm publish`, `npm unpublish`, `twine upload`, `python -m twine upload` | **ask** (user confirms) |
+| File / device destruction | `Bash` + `PowerShell` | Bash `rm -rf`/`-fr`/`-r -f`, `dd`, `mkfs*`, `shred`; PowerShell `Remove-Item` (+ aliases `rm`/`del`/`rd`/`rmdir`) with `-Recurse`/`-r`/`/s` | **ask** (user confirms) |
+
+**Mandatory risk classification (tool-agnostic):** the four `ask` rows above are one classifier that runs for the `Bash` AND `PowerShell` tools (legacy payloads count as Bash). It keys on the EXACT leading token of each sub-command (split on `;` / `&&` / `||` / `|`), never a substring scan, so quoted strings like `echo "rm -rf"` or `Write-Output "Remove-Item -Recurse"` pass. It strips transparent prefix runners (`sudo`, `doas`, `env`, `command`, `nohup`, `setsid`, inline `VAR=VALUE`) and sees through built-in command-carrying wrappers (`ssh`, `bash`/`sh`/`zsh -c`, `docker exec`/`run`, `pwsh`/`powershell -Command`, Windows `cmd /c`/`/k`, `timeout`, `xargs`) up to `MAX_WRAPPER_DEPTH`, asking when nesting exceeds it. `python -c`, the low-frequency prefixes `nice`/`ionice`/`stdbuf`/`time`, and custom/private wrappers (a personal job-runner, etc.) are treated as **opaque** documented non-goals: their argument semantics are not inferable from the command text, and substring-scanning arbitrary arguments would reintroduce false-positive alarm fatigue. The user-level allow-list pairs `Bash(*)` with `PowerShell(*)`, so the native permission layer is allow-by-default and this hook is the sole risk arbiter on both shells.
 
 **Round 6 noise audit (v0.7.0):** Deny messages embed a concrete `Suggested rewrite:` line so an autonomous agent (`/implement-review auto`, headless `claude -p`, any unattended loop) can lift the reroute in one model turn instead of inferring it. Destructive operations stay `ask` because they have no agent-side reroute; human approval is the contract.
 
@@ -264,7 +274,7 @@ Bootstrap deploys `scripts/guard.py` to `~/.claude/hooks/guard.py` and wires it 
 | `AGENT_COMPOUND_CD_HOOK=off` | Compound-cd gate only |
 | `AGENT_CONFIG_GATES=off` | Legacy blanket: writing-style + banner only (BC-preserved) |
 
-**Destructive git / gh approval is NOT bypassable by ANY env var.** No escape hatch turns the `ask` prompt into pass-through. The guards have no automatic reroute; human approval is the contract. The advertised env-var set lives in `scripts/guard.py:_ESCAPE_HATCH_ENV_NAMES`; a static literal-scan test enforces that no future hook env var can be added without registering it there.
+**The mandatory risk set (destructive git, destructive/publish gh, package publishes, file/device destruction) is NOT bypassable by ANY env var.** No escape hatch turns the `ask` prompt into pass-through. The guards have no automatic reroute; human approval is the contract. The advertised env-var set lives in `scripts/guard.py:_ESCAPE_HATCH_ENV_NAMES`; a static literal-scan test enforces that no future hook env var can be added without registering it there.
 
 Set a per-guard escape env when a legitimate write has a banned word in *meta-discussion* context (a style-guide document that quotes banned words as examples; a CHANGELOG entry that cites one). Prefer the narrowest env that unblocks (`AGENT_STYLE_HOOK=off` over `AGENT_CONFIG_GATES=off`) so the other gates stay live. Remove the override after the write.
 
@@ -277,6 +287,11 @@ Set a per-guard escape env when a legitimate write has a banned word in *meta-di
 - Examples of invocations that always require explicit approval: `git commit`, `git push`, `git reset`, `git checkout`, `git rebase`, `git merge`, `git branch -d`, `git remote add/remove`, `git tag <name>` (creating/deleting), `git stash drop`.
 - Filesystem commands like `cp` and `mv` are fine for scratch and temporary files. Moves or renames that affect git-tracked files should be reviewed before executing.
 - **Avoid inline Python with `#` comments in quoted arguments.** Claude Code flags "newline followed by `#` inside a quoted argument" as a path-hiding risk and prompts for approval. Instead, write the code to a `.py` file and run `python <script>.py`.
+
+## Tool-Use Reliability
+
+- Treat a tool's "cannot open / encrypted / unreadable / unsupported" report on a file as a possible false positive, not a final verdict. PDFs are the common case: a read may report a PDF as encrypted when it actually opens fine. Before telling the user a file cannot be read, retry once and try an alternate read path (re-read with a page range, `pdftotext`, render to an image, or a different tool). Report failure only after an alternate path also fails, and say which paths were tried.
+- The same caution applies to other transient-looking tool failures: a single failed attempt is weak evidence. Prefer one retry or an alternate route over reporting a blocked result, unless the failure is clearly deterministic.
 
 ## GitHub Actions Standards
 
@@ -301,7 +316,11 @@ When the session start check (item 4) detects older versions, list the affected 
 ## Local Skills Precedence
 
 - If the workspace contains a `skills/` directory, treat repo-local skills as the default source of truth for that project.
-- When a task matches a skill name and both a repo-local `skills/<skill-name>/SKILL.md` and an installed global skill exist, prefer the repo-local skill.
+- **Skill lookup order** for every agent (Claude Code, Codex, or any future agent): when resolving a skill by name, try paths in this order, first hit wins:
+  1. `skills/<skill-name>/SKILL.md`: project-local, hand-authored or vendored.
+  2. `.claude/skills/<skill-name>/SKILL.md`: pack-deployed by `anywhere-agents pack install`. The `.claude/` prefix is a historical Claude Code convention; the SKILL.md contents are agent-agnostic. A v1.0 architecture pass is the right place to revisit the directory name.
+  3. `.agent-config/repo/skills/<skill-name>/SKILL.md`: shared config bootstrapped from upstream.
+  This is the same lookup order encoded in the Claude Code slash-command pointers at `.claude/commands/<name>.md` (per the issue #6 fix), so an agent reading either the pointer file or this rule resolves the same skill the same way.
 - When using a repo-local skill, read `skills/<skill-name>/SKILL.md` and its local `references/`, `scripts/`, and `assets/` before falling back to any globally installed copy.
 - Do not modify a globally installed skill when a repo-local skill of the same name exists, unless the user explicitly asks to update the global copy too.
 - If a repo-local skill overrides a global skill, state briefly that the local project copy is being used.
@@ -310,10 +329,11 @@ When the session start check (item 4) detects older versions, list the affected 
 
 - Skills under `skills/` are shared between coding agents (Codex, Claude Code, and any future agent).
 - `skills/<skill-name>/SKILL.md` is the single source of truth for each skill. Agent-specific config files (e.g., `agents/openai.yaml`) are thin wrappers and must not duplicate or override the logic in `SKILL.md`.
-- Claude Code accesses these skills via pointer commands in `.claude/commands/`. Each pointer file references the corresponding `SKILL.md` rather than duplicating its content.
+- Claude Code has an ergonomic helper: slash-command pointers in `.claude/commands/<name>.md`. Each pointer file references the corresponding `SKILL.md` rather than duplicating its content. Codex and other agents reach the same `SKILL.md` content via the documented "Local Skills Precedence" lookup order above; no slash-command equivalent is required.
+- Pack-deployed skills (third-party packs installed by `anywhere-agents pack install`) land under `.claude/skills/<name>/` as a cross-agent location. The directory name carries a historical Claude Code prefix; the SKILL.md contents are agent-agnostic and resolvable by Codex through the same lookup order. A future plan-review pass on `pack-architecture.md` is the right place to consider renaming the location to a vendor-neutral path.
 - Bootstrap sync should copy only the shared repo's `.claude/commands/*.md` files into the project `.claude/commands/` directory and should not delete unrelated project-local commands.
 - When editing a skill, modify `SKILL.md` and its `references/` or `scripts/` directly. Do not create agent-specific forks of the same content.
-- If a new skill is added, create both the `skills/<skill-name>/SKILL.md` structure and a matching `.claude/commands/<skill-name>.md` pointer so both agents can use it immediately.
+- If a new skill is added, create both the `skills/<skill-name>/SKILL.md` structure and a matching `.claude/commands/<skill-name>.md` pointer so Claude Code's slash-command surface stays in sync; Codex reaches the same skill through the lookup order without needing a pointer.
 
 <!-- rule-pack:agent-style:begin version=v0.3.5 sha256=3c28c2886f0ffdb1310f3676f87893fbf15aa0810eef5317e628492ec5d6100b -->
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
