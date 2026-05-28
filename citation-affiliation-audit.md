@@ -1,13 +1,13 @@
 # Citation Affiliation Audit
 
-*Generated: 2026-05-19 via OpenAlex + Dimensions*
+*Generated: 2026-05-28 via OpenAlex + Dimensions*
 
 **What this is:** Papers that cite your work, where at least one author is affiliated with a notable institution.
 This means "researchers AT [institution] cited your tool" -- not "[institution] officially endorses your tool."
 
 Per-source coverage of the 102 non-survey papers:
-- **OpenAlex**: 43 papers with citations; 1624 unique citing papers analyzed.
-- **Dimensions**: 30 papers with citations; 1176 unique citing papers analyzed.
+- **OpenAlex**: 43 papers with citations; 1637 unique citing papers analyzed.
+- **Dimensions**: 30 papers with citations; 1186 unique citing papers analyzed.
 
 ## Tier 0: Government, Space Agencies, National Labs, Defense, Foundation Model Cos
 
@@ -57,7 +57,7 @@ Per-source coverage of the 102 non-survey papers:
 
 ## Tier 1: Big Tech, Finance, Pharma, Healthcare, Industrial
 
-**207 entries**
+**209 entries**
 
 | Category | Institution | Country | Your Work Cited | Citing Paper | Year | Source |
 |----------|-----------|---------|----------------|-------------|------|--------|
@@ -71,8 +71,8 @@ Per-source coverage of the 102 non-survey papers:
 | Big Tech | Amazon (United States) | US | BOND: Benchmarking Unsupervised Out | TGTOD: A Global Temporal Graph Transformer for Outlier Detec | 2025 | openalex |
 | Big Tech | IBM Research - Thomas J. Watson Research Center | US | Contrastive Attributed Network Anom | Deep Graph Anomaly Detection: A Survey and New Perspectives | 2025 | openalex |
 | Big Tech | Tencent (China) | CN | Contrastive Attributed Network Anom | How to use Graph Data in the Wild to Help Graph Anomaly Dete | 2025 | openalex |
-| Big Tech | Huawei Technologies (United States) | US | TODS: An Automated Time Series Outl | TAB: Unified Benchmarking of Time Series Anomaly Detection M | 2025 | openalex |
 | Big Tech | Huawei Technologies (China) | CN | TODS: An Automated Time Series Outl | TAB: Unified Benchmarking of Time Series Anomaly Detection M | 2025 | openalex |
+| Big Tech | Huawei Technologies (United States) | US | TODS: An Automated Time Series Outl | TAB: Unified Benchmarking of Time Series Anomaly Detection M | 2025 | openalex |
 | Big Tech | IBM Research - Zurich | CH | Therapeutics Data Commons: Machine  | Foundation models for materials discovery – current state an | 2025 | openalex |
 | Big Tech | IBM (United States) | US | Therapeutics Data Commons: Machine  | Foundation models for materials discovery – current state an | 2025 | openalex |
 | Big Tech | IBM Research - Thomas J. Watson Research Center | US | Therapeutics Data Commons: Machine  | Foundation models for materials discovery – current state an | 2025 | openalex |
@@ -124,6 +124,8 @@ Per-source coverage of the 102 non-survey papers:
 | Big Tech | Microsoft Research (United Kingdom) | GB | BOND: Benchmarking Unsupervised Out | ADMoE: Anomaly Detection with Mixture-of-Experts from Noisy  | 2023 | openalex |
 | Big Tech | Tencent (China) | CN | Contrastive Attributed Network Anom | Improving Generalizability of Graph Anomaly Detection Models | 2023 | openalex |
 | Big Tech | Microsoft Research (United Kingdom) | GB | Automatic Unsupervised Outlier Mode | ADMoE: Anomaly Detection with Mixture-of-Experts from Noisy  | 2023 | openalex |
+| Big Tech | Huawei Technologies (China) | CN | Revisiting Time Series Outlier Dete | DeepDiscord: Dual Contrastive Coding for Transferable Time S | 2023 | openalex |
+| Big Tech | Huawei Technologies (United Kingdom) | GB | Revisiting Time Series Outlier Dete | DeepDiscord: Dual Contrastive Coding for Transferable Time S | 2023 | openalex |
 | Big Tech | Alibaba Group (United States) | US | Revisiting Time Series Outlier Dete | DCdetector: Dual Attention Contrastive Representation Learni | 2023 | openalex |
 | Big Tech | Alibaba Group (China) | CN | Revisiting Time Series Outlier Dete | DCdetector: Dual Attention Contrastive Representation Learni | 2023 | openalex |
 | Big Tech | Microsoft Research (United Kingdom) | GB | SUOD: Accelerating Large-scale Unsu | TraceArk: Towards Actionable Performance Anomaly Alerting fo | 2023 | openalex |
@@ -178,6 +180,8 @@ Per-source coverage of the 102 non-survey papers:
 | Big Tech | Nvidia Corp | United States | Combining Machine Learning Models u | Machine Learning in Python: Main Developments and Technology | 2020 | dimensions |
 | Big Tech | Samsung (South Korea) | KR | An Empirical Study of Touch-based A | The Personal Identification Chord | 2018 | openalex |
 | Consulting | Deloitte (United States) | US | SUOD: Accelerating Large-scale Unsu | Fraud detection in healthcare claims using machine learning: | 2024 | openalex |
+| Consulting | PricewaterhouseCoopers (Canada) | CA | DCSO: Dynamic Combination of Detect | LSCP: Locally Selective Combination in Parallel Outlier Ense | 2019 | openalex |
+| Consulting | PricewaterhouseCoopers (Canada) | CA | Employee Turnover Prediction with M | LSCP: Locally Selective Combination in Parallel Outlier Ense | 2019 | openalex |
 | Finance | BlackRock (United States) | US | ADBench: Anomaly Detection Benchmar | Can an unsupervised clustering algorithm reproduce a categor | 2024 | openalex |
 | Finance | BlackRock (United States) | US | The Need for Unsupervised Outlier M | Can an unsupervised clustering algorithm reproduce a categor | 2024 | openalex |
 | Finance | BlackRock Inc | United States | The Need for Unsupervised Outlier M | Can an unsupervised clustering algorithm reproduce a categor | 2024 | dimensions |
@@ -213,11 +217,10 @@ Per-source coverage of the 102 non-survey papers:
 | Pharma | Merck & Co., Inc., Rahway, NJ, USA (United States) | US | Artificial Intelligence Foundation  | Combinatorial prediction of therapeutic perturbations using  | 2025 | openalex |
 | Pharma | Merck & Co Inc | United States | Therapeutics Data Commons: Machine  | Data Scaling and Generalization Insights for Medicinal Chemi | 2025 | dimensions |
 | Pharma | Eli Lilly and Co | United States | Therapeutics Data Commons: Machine  | Machine Learning for Toxicity Prediction Using Chemical Stru | 2025 | dimensions |
-| Pharma | Eli Lilly and Co Ltd | United Kingdom | Therapeutics Data Commons: Machine  | Machine Learning for Toxicity Prediction Using Chemical Stru | 2025 | dimensions |
 | Pharma | AstraZeneca AB | Sweden | Therapeutics Data Commons: Machine  | Machine Learning for Toxicity Prediction Using Chemical Stru | 2025 | dimensions |
 | Pharma | Pfizer GmbH | Germany | Therapeutics Data Commons: Machine  | Machine Learning for Toxicity Prediction Using Chemical Stru | 2025 | dimensions |
+| Pharma | Eli Lilly and Co Ltd | United Kingdom | Therapeutics Data Commons: Machine  | Machine Learning for Toxicity Prediction Using Chemical Stru | 2025 | dimensions |
 | Pharma | Merck & Co Inc | United States | Therapeutics Data Commons: Machine  | Machine Learning for Toxicity Prediction Using Chemical Stru | 2025 | dimensions |
-| Pharma | F Hoffmann La Roche AG | Switzerland | Artificial Intelligence Foundation  | Combinatorial prediction of therapeutic perturbations using  | 2025 | dimensions |
 | Pharma | Merck & Co Inc | United States | Artificial Intelligence Foundation  | Combinatorial prediction of therapeutic perturbations using  | 2025 | dimensions |
 | Pharma | AstraZeneca (Sweden) | SE | Therapeutics Data Commons: Machine  | Human-in-the-loop active learning for goal-oriented molecule | 2024 | openalex |
 | Pharma | AstraZeneca (Sweden) | SE | Therapeutics Data Commons: Machine  | Using test-time augmentation to investigate explainable AI:  | 2024 | openalex |
@@ -245,7 +248,6 @@ Per-source coverage of the 102 non-survey papers:
 | Pharma | Novartis Pharma AG | Switzerland | Artificial Intelligence Foundation  | A call for an industry-led initiative to critically assess m | 2024 | dimensions |
 | Pharma | AstraZeneca AB | Sweden | Artificial Intelligence Foundation  | A call for an industry-led initiative to critically assess m | 2024 | dimensions |
 | Pharma | Merck & Co Inc | United States | Artificial Intelligence Foundation  | A call for an industry-led initiative to critically assess m | 2024 | dimensions |
-| Pharma | F Hoffmann La Roche AG | Switzerland | Artificial Intelligence Foundation  | Combinatorial prediction of therapeutic perturbations using  | 2024 | dimensions |
 | Pharma | Merck & Co Inc | United States | Artificial Intelligence Foundation  | Combinatorial prediction of therapeutic perturbations using  | 2024 | dimensions |
 | Pharma | AstraZeneca (Sweden) | SE | Therapeutics Data Commons: Machine  | Machine learning for small molecule drug discovery in academ | 2023 | openalex |
 | Pharma | Novartis (Switzerland) | CH | Therapeutics Data Commons: Machine  | Machine learning for small molecule drug discovery in academ | 2023 | openalex |
@@ -278,10 +280,10 @@ Per-source coverage of the 102 non-survey papers:
 | Microsoft Research Asia (China) | Big Tech | 7 |
 | AstraZeneca (Sweden) | Pharma | 7 |
 | IBM Research - Zurich | Big Tech | 7 |
+| Huawei Technologies (China) | Big Tech | 6 |
 | Amazon (United States) | Big Tech | 6 |
 | IBM Research - Thomas J. Watson Research Center | Big Tech | 6 |
 | Adobe Systems (United States) | Big Tech | 5 |
-| Huawei Technologies (China) | Big Tech | 5 |
 | Alibaba Group (China) | Big Tech | 5 |
 | AstraZeneca AB | Pharma | 5 |
 | Merck & Co Inc | Pharma | 5 |
@@ -317,6 +319,7 @@ Per-source coverage of the 102 non-survey papers:
 | Los Alamos National Laboratory | National Lab | 2 |
 | AstraZeneca (United Kingdom) | Pharma | 2 |
 | Sandia National Laboratories | National Lab | 2 |
+| PricewaterhouseCoopers (Canada) | Consulting | 2 |
 | Fraunhofer Institute for Translational Medicine and Pharmacology | Research Institute | 2 |
 | Roche (Switzerland) | Pharma | 2 |
 | Amazon (United Kingdom) | Big Tech | 2 |
@@ -327,7 +330,6 @@ Per-source coverage of the 102 non-survey papers:
 | Nvidia Corp | Big Tech | 2 |
 | BlackRock Inc | Finance | 2 |
 | Fraunhofer Society | Research Institute | 2 |
-| F Hoffmann La Roche AG | Pharma | 2 |
 | Mayo Clinic in Florida | Healthcare | 1 |
 | Amazon (Germany) | Big Tech | 1 |
 | Jet Propulsion Laboratory | Space Agency | 1 |
@@ -335,6 +337,7 @@ Per-source coverage of the 102 non-survey papers:
 | Deutsches Zentrum für Luft- und Raumfahrt e. V. (DLR) | Space Agency | 1 |
 | Intel (United Kingdom) | Big Tech | 1 |
 | Microsoft (United States) | Big Tech | 1 |
+| Huawei Technologies (United Kingdom) | Big Tech | 1 |
 | Deloitte (United States) | Consulting | 1 |
 | Microsoft (Norway) | Big Tech | 1 |
 | Huawei Technologies (United States) | Big Tech | 1 |
@@ -373,8 +376,8 @@ Per-source coverage of the 102 non-survey papers:
 | Capital One NA | Finance | 1 |
 | Cisco Systems Inc | Telecom | 1 |
 | Eli Lilly and Co | Pharma | 1 |
-| Eli Lilly and Co Ltd | Pharma | 1 |
 | Pfizer GmbH | Pharma | 1 |
+| Eli Lilly and Co Ltd | Pharma | 1 |
 | RAND Corporation | Defense/Research | 1 |
 | Amazon.com Inc | Big Tech | 1 |
 | IBM Research - India | Big Tech | 1 |
@@ -413,9 +416,9 @@ Per-source coverage of the 102 non-survey papers:
 
 **Papers with citations:** 30/102
 
-**Indexed but 0 citations (69):** Can Multimodal LLMs Perform Time Series , Charts Are Not Images: On the Challenges, CoAct: Co-Active LLM Preference Learning, Defenses Against Prompt Attacks Learn Su, Mitigating Hallucinations in Large Langu, "Someone Hid It": Query-Agnostic Black-B, Topology Matters: Measuring Memory Leaka, TrustGen: A Platform of Dynamic Benchmar, A Personalized Conversational Benchmark:, AD-AGENT: A Multi-agent Framework for En, DyFlow: Dynamic Workflow Framework for A, Edit Away and My Face Will Not Stay: Per, Few-Shot Graph Out-of-Distribution Detec, JailDAM: Jailbreak Detection with Adapti, LLM-Empowered Patient-Provider Communica, Learning from the Storm: A Multivariate , MetaOOD: Automatic Selection of OOD Dete, NLP-ADBench: NLP Anomaly Detection Bench, Navigating Between Explainability and Ex, Retrieval-Reasoning Large Language Model, ... and 49 more
+**Indexed but 0 citations (70):** Can Multimodal LLMs Perform Time Series , Charts Are Not Images: On the Challenges, CoAct: Co-Active LLM Preference Learning, Defenses Against Prompt Attacks Learn Su, Mitigating Hallucinations in Large Langu, "Someone Hid It": Query-Agnostic Black-B, Topology Matters: Measuring Memory Leaka, TrustGen: A Platform of Dynamic Benchmar, A Personalized Conversational Benchmark:, AD-AGENT: A Multi-agent Framework for En, DyFlow: Dynamic Workflow Framework for A, Edit Away and My Face Will Not Stay: Per, Few-Shot Graph Out-of-Distribution Detec, JailDAM: Jailbreak Detection with Adapti, LLM-Empowered Patient-Provider Communica, Learning from the Storm: A Multivariate , MetaOOD: Automatic Selection of OOD Dete, NLP-ADBench: NLP Anomaly Detection Bench, Navigating Between Explainability and Ex, Retrieval-Reasoning Large Language Model, ... and 50 more
 
-**Not found (3):** AutoDavis: Automatic and Dynamic Evaluat, Automatic Unsupervised Outlier Model Sel, Revisiting Time Series Outlier Detection
+**Not found (2):** AutoDavis: Automatic and Dynamic Evaluat, Revisiting Time Series Outlier Detection
 
 *OpenAlex coverage improves over time. Re-run in 3-6 months to capture newly indexed papers; Dimensions has better CS coverage and complements OpenAlex on per-paper citation graphs.*
 

@@ -22,6 +22,10 @@ This file complements `search-strategy.md` ("Common false positives" table) by c
 - **MIT CSAIL Aegis (secure processor)** — Trusted Computing Group hardware project, predates LLMs.
 - **AegisAI email-security startup** — surfaced under SecurityWeek search.
 - **Help Net Security Asqav / Sage / Praetor** — competitor agent-firewall projects that mention AEGIS by USC as prior art *but do not always cite by full name*. Treat as topic-adjacent unless the paper title or arXiv ID is named.
+- **TechFides AEGIS** (`techfides.com`, "AEGIS: Governing the Agentic Enterprise"): commercial six-layer enterprise AI-governance product ($15K-$400K+); no USC disambiguators present across two fetches. Verified 2026-05-28.
+- **CloudMatos "Aegis" / "Aegis Gateway"** (`cloudmatos.ai`): the vendor's own Istio+OPA-for-agents runtime policy/observability gateway (full blog series plus a dedicated product page at `cloudmatos.ai/solution/aegis-gateway/`). The product and blog pages were fetchable on 2026-05-28 and confirm a CloudMatos commercial product, not a FORTIS AEGIS hit; some automated fetchers receive a catch-all 404 shell for non-JS clients. Verified 2026-05-28.
+- **Authensor "Aegis" scanner** (`authensor.com`, npm `@authensor/aegis`): commercial prompt-injection / memory-poisoning detector. Verified 2026-05-28.
+- **Beam AI "AEGIS framework"** (`beam.ai`): a generic threat-modeling framework paired with MAESTRO, not the FORTIS paper. Verified 2026-05-28.
 
 ### TrustLLM
 
@@ -139,7 +143,7 @@ Leads that repeatedly surface like positives but are confirmed not to name FORTI
 |---|---|---|
 | Pinterest Engineering — "Bring Your Own Algorithm to Anomaly Detection" (Wu / Tallam / Bajaj, Medium) | 2026-05-07 D7 | Cites EGADs (Yahoo) and Prophet (Meta), not PyOD. |
 | Anthropic Threat Intelligence Engineer JD | 2026-05-07 D2-careers | Lists YARA / Sigma / Snort / Suricata / Passive DNS / Netflow / SIEM-native queries. No PyOD or any FORTIS tool. The closest peer to OpenAI #8g but does not replicate the pattern. |
-| Anthropic Detection & Response Security Engineer JD | 2026-05-07 D2-careers | Lists EDR / SIEM / SOAR / Kubernetes / LLMs. No FORTIS tool. The "agent-style workflows" phrase here is generic English, not a `agent-style` repo reference. |
+| Anthropic Detection & Response Security Engineer JD | 2026-05-07 D2-careers | Lists EDR / SIEM / SOAR / Kubernetes / LLMs. No FORTIS tool. The "agent-style workflows" phrase here is generic English, not a `agent-style` repo reference. Re-checked 2026-05-28: the current Greenhouse title is "Security Software Engineer, Detection & Response Platform" (same role, renamed); still no FORTIS tool. |
 | Anthropic Petri v1 / Petri v2 alignment posts | 2026-05-07 D3c | Parallel agent-auditing work; cites UK AISI Inspect / Palisade / ProntoQA / NLTK / LMSYS / Souly et al. Does NOT cite TrustLLM / Aegis / agent-audit / Auditable Agents. |
 | MarkTechPost "Navigating the Complexity of Trustworthiness in LLMs" (Jan 2024) | 2026-05-07 D3a | Article about TRUST LLM but does NOT name Yue Zhao, Lichao Sun, Xiangliang Zhang, or any author/institution. Topic-only despite tier-2 outlet appearance. (Existing audit Ledger 2 #10 may be optimistic; flagged for review.) |
 | ISACA — "The Growing Challenge of Auditing Agentic AI" (2025) | 2026-05-07 D5 | Strong topic match for Auditable Agents framework; does NOT name the paper, arXiv:2604.05485, or co-authors. Topic-validation only. |
@@ -155,6 +159,9 @@ Leads that repeatedly surface like positives but are confirmed not to name FORTI
 | MITRE ATLAS NIST CSRC Sept 2025 deck | 2026-05-07 D8 | 0 hits. |
 | FBI IC3 Principles for Secure AI Integration (Dec 2025) | 2026-05-07 D8 | 0 hits. |
 | WO2023057798A1 (Isolation Forest Edge Patent) | 2026-05-07 D2 | Verified does NOT cite PyOD or Zhao et al. |
+| OpenAI Careers, Data Science Manager, Integrity JD | 2026-05-28 D2-careers | Live OpenAI page fetchable on 2026-05-28. Lists "anomaly detection" as a generic data-science technique and does NOT name PyOD or any FORTIS tool. Distinct from #8g (Technical Intelligence Analyst, which names PyOD verbatim). |
+| Anthropic ML/Research Engineer, Safeguards JD | 2026-05-28 D2-careers | Names only generic "anomaly detection systems" and "classifiers"; no PyOD or FORTIS tool. Peer of the existing Anthropic Threat-Intelligence and Detection-and-Response JD negatives. |
+| Agent-governance vendor/consulting blogs (EY, Microsoft Agent Governance Toolkit, Databricks Unity AI Gateway, Acceldata, Beam AI, Sysdig, Kai Waehner/Confluent, GovTech, Ariel Softwares, Indext Data Lab, Waxell, LoginRadius) | 2026-05-28 D4/D5 | Agent-auditing/governance topic coverage; none names a FORTIS work on direct fetch. Beam AI "AEGIS framework" is a generic threat-modeling framework, not FORTIS Aegis. |
 
 ## How to Use This File
 

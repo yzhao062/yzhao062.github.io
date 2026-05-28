@@ -1,6 +1,8 @@
 # News & Media Coverage Audit — Yue Zhao / FORTIS Lab
 
-*Updated: 2026-05-20 (Independent Codex /news-search rerun: 6 live parallel lanes plus main-thread D8/D10 replacement sweeps; 2 extra lanes hit thread/context limits and were compensated by narrower main-thread checks. Net +4 verified Ledger 3 rows, 0 Ledger 1, 0 Ledger 2, 0 Ledger 4, 0 Ledger 5. New rows: additional COPOD/ECOD/SUOD patent hit, MDPI Sensors 2026 AD-AGENT/AD-LLM survey uptake, FORTIS over-privilege platform cluster, and Machine Brief Agent Audit article. Evidence upgrades but no new count: MarkTechPost TrustLLM, Microsoft AFMR TrustLLM, Virtue AI TrustGen, ResearchTrend/Skillget AEGIS, AI Wiki PyOD. Held or dropped: CN114298123A did not directly verify a FORTIS work, APIs.io direct page unresolved, KI-Syndikat direct page did not verify, Wells Fargo canonical job page no longer contains PyOD, LinkedIn login-only, CSPaper removed, Tom's Hardware topic-only.)*
+*Updated: 2026-05-28 (Claude independent 8-lane parallel news-search rerun on top of the Codex same-day round. 71 raw candidates, 45 net-new after dedup, Phase B kept 4, all marginal; net +0 counted ledger rows (Ledger 1/2/3/4/5 all +0). The 4 Phase-B keeps were folded or dropped, not counted: NLP-ADBench ACL Anthology venue-official proceedings page folded into #66by; TrustGen ICLR 2026 venue-official poster folded into #66br; AEGIS ResearchGate auto-mirror folded into #66bp (Tier 3 aggregator cap); the EACL 2026 'A Survey on LLM-based Conversational User Simulation' OpenReview page dropped as the PI's own off-portfolio co-authorship, already tracked as #66db. Added a Negative Results row and 12 Topic Validation entries. New 'Aegis' commercial-product name-collisions recorded in disambiguation-registry.md: TechFides AEGIS, CloudMatos Aegis Gateway, Authensor Aegis scanner, Beam AI generic 'AEGIS framework'. Verified negatives this round include the OpenAI 'Data Science Manager, Integrity' careers JD (lists generic anomaly detection, does not name PyOD; distinct from #8g) and two Anthropic Safeguards / Detection-and-Response JDs. Caveat: the D1 person/lab discovery lane crashed mid-run with no structured output; a single-lane D1 rerun found no net-new person/lab coverage. 3 candidates held unfetchable behind 403/anti-bot: Scilit, alphaXiv, an OpenAI Emerging-Risk-Operations careers page. (CloudMatos initially read as unfetchable to the workflow fetcher but was reachable on direct fetch and is recorded as a commercial-product collision in disambiguation-registry.md.))*
+*Previous: 2026-05-28 (Codex /news-search + /citation-audit full sweep: 4 live parallel web lanes plus regenerated OpenAlex + Dimensions citation-affiliation audit. Net +4 verified Ledger 3 rows, 0 Ledger 1, 0 Ledger 2, 0 Ledger 4, 0 Ledger 5. New rows: ByteVanguard FORTIS over-privilege security blog, IBM / Justia US11979421B2 PyOD network-traffic patent, AgentArxiv UCC discussion page, and AIModels.fyi TyphoFormer paper explainer. Evidence upgrades but no new count: OpenAI Careers PyOD still live; Google Cloud Dataflow renders the Apache Beam PyOD notebook; Hugging Face AEGIS page; AI News CX Agent Audit page; English Moonlight FORTIS page; Hugging Face NLP-ADBench dataset; PySAD GitHub; CSDN / Tistory PyOD tutorials. Verified negatives: current OpenAI / Anthropic high-authority PDFs and release pages, government / standards sweep, analyst / consulting sweep, and mainstream outlet sweep produced no new direct Tier 0 / Tier 1 / Ledger 2 hit. Citation-affiliation hook refreshed to 39 Tier 0 + 209 Tier 1 institution-affiliation rows.)*
+*Previous: 2026-05-20 (Independent Codex /news-search rerun: 6 live parallel lanes plus main-thread D8/D10 replacement sweeps; 2 extra lanes hit thread/context limits and were compensated by narrower main-thread checks. Net +4 verified Ledger 3 rows, 0 Ledger 1, 0 Ledger 2, 0 Ledger 4, 0 Ledger 5. New rows: additional COPOD/ECOD/SUOD patent hit, MDPI Sensors 2026 AD-AGENT/AD-LLM survey uptake, FORTIS over-privilege platform cluster, and Machine Brief Agent Audit article. Evidence upgrades but no new count: MarkTechPost TrustLLM, Microsoft AFMR TrustLLM, Virtue AI TrustGen, ResearchTrend/Skillget AEGIS, AI Wiki PyOD. Held or dropped: CN114298123A did not directly verify a FORTIS work, APIs.io direct page unresolved, KI-Syndikat direct page did not verify, Wells Fargo canonical job page no longer contains PyOD, LinkedIn login-only, CSPaper removed, Tom's Hardware topic-only.)*
 *Previous: 2026-05-19 (Full /news-search Full audit run: 8-lane parallel Phase A across D1-D8 → 166 unique candidates → 4-batch parallel Phase B verification → +21 verified ledger rows (0 Ledger 1, 0 Ledger 2, 7 Ledger 3, 13 Ledger 4, 1 Ledger 5) plus full citation-audit hook integration (39 Tier 0 + 207 Tier 1 institution-affiliation rows embedded from regenerated citation-affiliation-audit.md after two Dimensions DSL bug fixes: arXiv ID prefix, title_only search type). Highest-promise D4 lead OWASP Gen AI Q2 2026 Solutions Landscape PDF verified-negative on direct fetch. No new Tier 0 hits in D8 PDF deep search across 22 fresh PDFs. New disambiguation: Hangbo Zhao, Wei Zhao (SiriuS), AuditLuma, Moonshot Kiwi-do. Manual verification backlog: 11 entries flagged.)*
 *Previous: 2026-05-13 (Claude independent wide 8-lane parallel news-search Phase A + Phase B, then Codex Round 1 review: +8 net new rows on top of Codex Phase A (0 unique Ledger 2 + 8 Ledger 3) plus 4 evidence upgrades to existing Ledger 2 rows after Codex caught 4 duplicate-URL candidates that the Phase A lane skip-list missed. Headline finds: Microsoft Research first-party publication listing names Yue Zhao with USC affiliation #26 on the TrustLLM page; thepaper.cn dedicated Chinese TrustLLM feature with verbatim arXiv link; TrustLLM 2026 mainstream-venue academic citation cluster confirmed via OpenAlex graph across ACS Env Sci Tech, Springer Requirements Engineering, ACM/IEEE HRI 2026, Wiley TIBR, Springer CCIS, Springer Frontiers of CS; Justin0504/Aegis third-party implementation cites arXiv 2603.12621 by name; first Russian-language Habr cluster (Otus, Garda, Rosatom); Japanese developer-blog expansion (codemajin, tam5917, Qiita); Juejin Chinese tutorial; mala-lab Awesome AD Foundation Models awesome list; aggregator paper-page cluster across HuggingFace Papers / DoxBench dataset / alphaxiv / papers.cool. Manual-verification outcomes 2026-05-13: Stanford HAI 2026 AI Index Responsible AI chapter dropped to verified-negative after the user confirmed the WebSearch snippet was a search-engine summarizer synthesis and the PDF does not name TrustLLM; aiproductivity.ai Aegis article and jiqizhixin.com TrustLLM feature verified by the user but recorded as evidence upgrades to existing rows #21 and #34b respectively (not new rows); Datawhale WeChat lecture by Yue Zhao (then CMU) added as new Ledger 3 #66dv; ACM Computing Surveys "Towards Trustworthy AI" review (doi:10.1145/3777382) folded into the #66do TrustLLM 2026 mainstream-venue cluster.)*
 *Previous: 2026-05-13 (Codex Phase A wide news-search draft + Claude Phase B verification: +6 verified, +1 demoted Ledger 2 to Ledger 3, +2 source URLs dropped from inside cluster rows; PyShine covers agent-style, The Fintech Mag names PyOD as fintech fraud-detection alternative, Oracle FCCM product docs name PyOD/Yue Zhao (Oracle IoT half dropped after URL 404), RedTeams AI lists TrustLLM, PySAD docs integrate PyOD, non-English PyOD/ADBench cluster narrowed to Volcengine + GitCode + Sohu after Inferri 403 and Qiita duplicate of #42 Databricks Kakapo, Growth Japan CDCR-SFT moved to Ledger 3 after AI-generated disclaimer found on source page; topic-only May 2026 agent-security press added below).*
@@ -10,7 +12,7 @@
 *Previous: 2026-04-22 (full-range parallel audit across 5 agents, plus targeted search — zero new verified third-party coverage; Stanford AI Index 2026 and 4 foundation-model system cards confirmed as negative after full-text PDF scan).*
 *Previous: 2026-04-16 (5-day delta check — no new verified items; three D8 candidates flagged for next PDF pass).*
 *Earlier: 2026-04-11 (targeted searches: agent-audit, Aegis, Auditable Agents, agent/LLM/VLM last-author works, DPU, Political-LLM, Treble, ADBench, Computing Resources, plus under-searched high-star tools).*
-*All 8 core dimensions plus D9/D10 follow-up checks complete across all 124 items (105 papers + 19 tools).*
+*All 8 core dimensions plus D9/D10 follow-up checks complete across the current inventory (107 papers + 19 tools; citation-audit excludes 5 survey papers, leaving 102 non-survey papers).*
 *Citation verification applied: every item names or cites the work, person, lab, or co-author.*
 
 ---
@@ -239,16 +241,16 @@ External parties building on, integrating, or teaching your tools -- not coverag
 | 66bm | Cat-DPO | **Platform** | New arXiv aggregator and AI-news listings after Apr 22: alphaXiv, Bytez, Gist.Science, Moonlight, ResearchTrend.AI, AI Navigate, haebom/slashpage. |
 | 66bn | Topology Matters | **Platform** | alphaXiv, Bytez, Moonlight, aimodels.fyi, ChatPaper, ResearchTrend.AI, and haebom/slashpage pages name the memory-leakage paper and Yue Zhao. |
 | 66bo | Auditable Agents | **Platform** | alphaXiv, Bytez, Gist.Science, ResearchTrend.AI, Code of Paper, and haebom/slashpage pages name the paper and Yue Zhao. |
-| 66bp | Aegis | **Platform** | Hugging Face Papers, Gist.Science, ResearchTrend.AI, PULRC Portal, DeepDyve, alphaXiv, Cool Papers, Skillget, and Hacker News Show HN pages name AEGIS and the tool-call firewall paper. |
+| 66bp | Aegis | **Platform** | Hugging Face Papers, Gist.Science, ResearchTrend.AI, PULRC Portal, DeepDyve, alphaXiv, Cool Papers, Skillget, Hacker News Show HN, and a ResearchGate auto-mirror (publication 402147498, arXiv:2603.12621; added 2026-05-28, Tier 3 aggregator cap) name AEGIS and the tool-call firewall paper. |
 | 66bq | DoxBench | **Platform** | Additional DoxBench coverage on Zhuanzhi, haebom/slashpage, Gist.Science, ResearchTrend.AI, ChatPaper, and Hugging Face Papers; Liner already recorded in 66w. |
-| 66br | TrustGen | **Platform** | BAAI Community and CSDN pages name TrustGen, Yue Zhao, the project page, arXiv link, and GitHub repo. |
+| 66br | TrustGen | **Platform** | BAAI Community, CSDN, and the ICLR 2026 venue-official poster page (iclr.cc/virtual/2026/poster/10010583; added 2026-05-28) name TrustGen, Yue Zhao, the project page, arXiv link, and GitHub repo. |
 | 66bs | PyOD / PyOD 3 | **Platform** | SourceForge mirror, newreleases.io v3.0.0 release tracker, AitFind project page, LibHunt alternatives, DeepWiki docs, and OSSInsight comparison pages name PyOD/PyOD 3. |
 | 66bt | agent-audit | **Platform** | Skillget listing, ClawHub Agent Audit Scanner listing, SoftwareSeni awesome-ai-agents list, MCP Market server/skill listings, PyPI, piwheels, and Safety DB name agent-audit as an AI-agent/MCP security scanner. |
 | 66bu | agent-style / anywhere-agents | **Platform** | [Replicate Hype](https://hype.replicate.dev/?filter=past_week&sources=GitHub%2CHuggingFace%2CReddit%2CReplicate) Apr 22 trending page lists `yzhao062/agent-style` and `yzhao062/anywhere-agents`; ToolHunter later published an external tool directory/review for `agent-style`; package registries and docs remain first-party or registry-only. |
 | 66bv | PersonaConvBench | **Platform** | alphaXiv, Hugging Face Papers, Bytez, Moonlight, aimodels.fyi, and ResearchTrend.AI pages name the personalized conversation benchmark. |
 | 66bw | Defenses Against Prompt Attacks | **Platform** | Bytez, Moonlight, ResearchTrend.AI, J-GLOBAL, AI Security News, and AI Security Portal pages name the surface-heuristics prompt-attack paper; alphaXiv already recorded in 66ai. |
 | 66bx | Mitigating Hallucinations via Causal Reasoning | **Platform** | alphaXiv, Bytez, aimodels.fyi, ChatPaper, ResearchTrend.AI, J-GLOBAL, and haebom/slashpage pages name the causal-reasoning hallucination paper. |
-| 66by | AD-LLM / NLP-ADBench | **Platform** | alphaXiv, Bytez, Moonlight, ChatPaper, ResearchTrend.AI, J-GLOBAL, Hugging Face Papers, SelectDataset, PromptLayer, Papers With Code, BAAI Community, and aimodels.fyi pages name AD-LLM and/or NLP-ADBench. |
+| 66by | AD-LLM / NLP-ADBench | **Platform** | alphaXiv, Bytez, Moonlight, ChatPaper, ResearchTrend.AI, J-GLOBAL, Hugging Face Papers, SelectDataset, PromptLayer, Papers With Code, BAAI Community, aimodels.fyi, and the ACL Anthology venue-official EMNLP Findings 2025 proceedings page for NLP-ADBench (aclanthology.org/2025.findings-emnlp.133; added 2026-05-28) name AD-LLM and/or NLP-ADBench. |
 | 66bz | Secure On-Device Video OOD / SocialMaze / MGEO | **Platform** | alphaXiv, Bytez, Moonlight, aimodels.fyi, ChatPaper, ResearchTrend.AI, Hugging Face dataset, and ResearchTrend/MGEO pages name these 2025-2026 papers. |
 | 66ca | Tool long tail | **Platform** | ADBench on Ecosyste.ms and Liner; TODS on Datahut, Context7, and Ecosyste.ms; TDC on AIPOCH; PyGOD on Cloudsmith, fxis.ai, Open Source Security Atlas, and Reddit r/MachineLearning; SUOD on Beeks/piwheels; combo on PythonFix, PyPIStats, Pepy, and conda-forge; TrustEval-toolkit on GitCode. |
 | 66cb | ADBench | **Consulting** | [Deloitte Germany AIxAML PDF](https://www.deloitte.com/content/dam/assets-zone2/de/de/docs/services/consulting/2025/Deloitte-Compliance-AIxAML.pdf) cites Han et al. (2022), ADBench, as the source of an anomaly-detection figure in an anti-money-laundering transaction-monitoring solution. |
@@ -300,7 +302,7 @@ External parties building on, integrating, or teaching your tools -- not coverag
 
 *Note: Nature Scientific Reports x3 ADBench scientific-uptake cluster (s41598-025-88050-z, s41598-024-72982-z, s41598-025-28976-6) demoted back to candidate pool in Codex Round 2 because the rows rested on WebSearch-snippet confirmation only; full-text fetch was Nature-IDP gated. Per the "snippet alone is not verified evidence" rule, awaiting direct article fetch before re-promotion.*
 
-**Count: 154 ecosystem adoption items (141 prior + 5 earlier May 13 rows from Codex draft + 8 May 13 rows from Claude independent wide run, last of which is #66dv Datawhale lecture writeup unlocked via user manual verification 2026-05-13; ACM Computing Surveys "Towards Trustworthy AI" review folded into the existing #66do TrustLLM 2026 academic cluster, also via user manual verification)**
+**Count: 169 ecosystem adoption items (154 main-ledger rows through May 13, +7 May 19 append-only verified rows, +4 May 20 append-only verified rows, +4 May 28 append-only verified rows).**
 
 ---
 
@@ -317,7 +319,7 @@ Items authored by you, your students, or posted by your team. Useful context but
 | 70 | -- | Encyclopedia | Grokipedia entry |
 | 71 | Yue Zhao | Amazon Science | Author page on Amazon Science platform |
 
-**Count: 6 first-party/community items**
+**Count: 19 first-party/community items (6 main-ledger rows plus 13 May 19 append-only verified rows).**
 
 ---
 
@@ -345,7 +347,7 @@ Items authored by you, your students, or posted by your team. Useful context but
 | 89 | TDC -- Nature Chemical Biology | 2022 |
 | 90 | PyOD — Wikipedia (en) "Anomaly detection" Software section names PyOD; reference list cites Zhao, Nasrullah, Li 2019 JMLR. [Link](https://en.wikipedia.org/wiki/Anomaly_detection) | continuous |
 
-**Count: 19 awards/recognitions/encyclopedia entries**
+**Count: 20 awards/recognitions/encyclopedia entries (19 main-ledger rows plus the May 19 ACM SIGSPATIAL award-index row).**
 
 ---
 
@@ -385,6 +387,7 @@ Items authored by you, your students, or posted by your team. Useful context but
 | Stanford AI Index 2026 (overview pages, full PDF, public CSV dataset) | Apr 24 | Confirmed negative for target terms and arXiv IDs. |
 | Apr 24 full sweep topic-only / false positives | VentureBeat, The Hacker News, CSO Online, OpenAI Privacy Filter coverage, FLI Spring 2026, NIST AI 800-3, NIST AI 800-2 IPD, International AI Safety Report extended summary, OWASP GenAI Q2 2026 trio | No new direct citations. FLI Spring 2026 not released/found. New AEGIS hits mostly unrelated projects. ECOD false positives mostly "decode/decoding." |
 | Name-collision false positives (Apr 16) | agentlayer.medium "Aegis+TrustLLM" smart contract audit | Different projects — arXiv:2403.16073 (not Yue Zhao's TrustLLM) and AgentLayer's web3 Aegis (not FORTIS Aegis). Cleared. |
+| FM-co careers JDs + agent-governance vendor/consulting blogs (May 28 Claude) | OpenAI "Data Science Manager, Integrity"; Anthropic "ML/Research Engineer, Safeguards" and "Security Software Engineer, Detection & Response"; EY, Microsoft Agent Governance Toolkit, Databricks Unity AI Gateway, Acceldata, Beam AI, Sysdig, GovTech, Kai Waehner/Confluent, Ariel Softwares, Indext Data Lab, Waxell, LoginRadius | No FORTIS naming on direct fetch. FM-co JDs list generic "anomaly detection"/"classifiers" but NOT PyOD (distinct from #8g, which names PyOD verbatim). Beam AI "AEGIS framework" is a generic threat-modeling framework, not FORTIS Aegis. New commercial-product "Aegis" collisions (TechFides, CloudMatos, Authensor) recorded in disambiguation-registry.md. |
 
 ---
 
@@ -394,12 +397,12 @@ Items authored by you, your students, or posted by your team. Useful context but
 |--------|-------|
 | Government/Policy citations | 15 |
 | External third-party media | 73 (71 prior + 2 May 13 rows verified by Claude 2026-05-13; 4 wide-run candidates were dropped as exact-URL duplicates of existing rows #5, #7, #21, #34b after Codex Round 1 review, and the May 13 verification work for those four URLs is recorded as evidence upgrades on those existing rows rather than new counted rows) |
-| Ecosystem adoption | 154 (141 prior + 13 May 13 rows verified by Claude 2026-05-13; 5 from Codex Phase A draft and 8 from Claude independent wide run + manual-verified unlock) |
-| First-party/community | 6 |
-| Awards/recognitions | 19 |
-| **Total verified items** | **267 (252 prior + 15 May 13 rows verified by Claude 2026-05-13, of which 1 ACM CSUR was folded into the #66do cluster via user manual verification and 1 Datawhale row was unlocked via user manual verification; 4 additional May 13 wide-run leads count as evidence upgrades on existing rows rather than new rows)** |
+| Ecosystem adoption | 169 (154 main-ledger rows through May 13 + 7 May 19 + 4 May 20 + 4 May 28 append-only verified rows) |
+| First-party/community | 19 (6 main-ledger rows + 13 May 19 append-only verified rows) |
+| Awards/recognitions | 20 (19 main-ledger rows + 1 May 19 append-only ACM SIGSPATIAL award-index row) |
+| **Total verified items** | **296 (267 through May 13 + 21 May 19 + 4 May 20 + 4 May 28; exact-URL duplicates and same-cluster evidence upgrades are not counted as new rows)** |
 
-- **105 papers + 19 tools** searched across all 8 core dimensions plus D9/D10 follow-up checks
+- **107 papers + 19 tools** searched across all 8 core dimensions plus D9/D10 follow-up checks (citation-audit used 102 non-survey papers)
 - **11,551 Google Scholar citations** (Apr 2026)
 - **39.11M+ PyPI downloads** for PyOD
 - **1,846 Semantic Scholar citations** for Diffusion Models survey
@@ -430,6 +433,8 @@ For grant narratives only. These do not name your work.
 **LLM election prediction (topic, papers not cited):** Science (AAAS) "How AIs responded to the 2024 US presidential election -- in real time" (covers MIT CSAIL study, not USC papers); MIT Technology Review "AI's impact on elections is being overblown" (Sep 2024); Nature x2 ("Performance and biases of LLMs in public opinion simulation"; "Persuading voters using human-AI dialogues"); Newsweek x2 (AI election predictions); Semafor x2 (Aaru AI polling startup); Benzinga (Aaru); Brookings x2 ("How AI will transform the 2024 elections"; "Impact of generative AI in a global election year"); Pew Research (public concern over AI in elections); Harvard Ash Center "Using AI for Political Polling"; BYU (GPT-3 voter simulation); Chinese media: The Paper/澎湃新闻 x2 (AI election prediction, LLM voter simulation), Tencent News/南方周末 (Fudan agent-based election prediction), 36kr (Aaru), CSDN (ElectionSim Fudan), Al Jazeera Chinese; International: Carnegie Endowment "AI and Democracy" (Jan 2026); East Asia Forum (Korea elections); IDEA French "L'IA au service de la gestion electorale"; Korean academic journal (US election prediction models)
 
 **Compute inequality in AI research (topic, paper not cited):** HPCwire "The Compute Divide in AI-Driven Science" (75% of AI supercomputing US-based, Nov 2025); VentureBeat "AI research finds a compute divide" (covers Ahmed & Wahed "De-democratization of AI"); Stanford HAI AI Index 2025 (academics 1-8 GPUs vs industry thousands, 90% of notable models from industry); TIME "US Just Made a Crucial Step Toward Democratizing AI Access" (NAIRR pilot); Brookings "How the NAIRR can pilot inclusive AI"; MIT Technology Review "AI is making inequality worse"; Nature x2 ("AI can supercharge inequality"; "AI scientists are changing research"); CFR "How 2026 Could Decide the Future of AI"; Digital Economy Trends 2026 "The AI Divide"; BAAI Community (AI large model training cost surge)
+
+**May 28 (Claude independent sweep) topic-only additions (agent auditing/governance/skills, FORTIS tools not cited):** O'Reilly Radar "Agent Skills Work but ... Building Them Wrong" (agent-skill over-privilege; cites SkillsBench, AgentSkillOS, SkillOrchestra, and a 31,132-skill security analysis arXiv:2601.10338, not the FORTIS skills paper arXiv:2605.09163); Ariel Softwares, Medium/Indext Data Lab, Beam AI, Waxell AI, LoginRadius, Acceldata, Kai Waehner (Confluent), Sysdig (how-to-audit / governance / agent-skill explainers naming only EU AI Act, NIST AI RMF, ISO 42001/27001, OWASP LLM Top 10, ISACA, or vendor tooling); Databricks "Unity AI Gateway" agent-governance blog (names MLflow/Cursor/Codex/Claude Code, no FORTIS term); GovTech (Lohrmann) "Top 26 Security Predictions for 2026"; GitHub/VoltAgent "Awesome AI Agent Papers" community list (363+ papers incl. an 82-paper AI Agent Security section, zero FORTIS work). All verified to not name FORTIS work on direct fetch (two passes each where reachable).
 
 ---
 
@@ -741,19 +746,35 @@ Lessons reinforced this round:
 - **Highest-promise topic-proximity lead was wrong.** OWASP Gen AI Q2 2026 Solutions Landscape PDF was flagged `phase_b_priority` by the D4 agent and was the single highest-promise D8-style PDF this round — fetched 4.3 MB, 0 hits. Worth retrying when the next OWASP edition lands.
 - **PDF term scan beats LLM summarization for citation extraction.** B_paper Phase B caught a SkillSieve (arXiv:2604.06550) citation of agent-audit only via `pdf_term_scan.py`; the WebFetch summarizer missed it. Continue routing all candidate PDFs through the term scanner.
 
-## Citation Affiliation Evidence (integrated from /citation-audit skill, 2026-05-19)
+**May 28 Codex full sweep with local /news-search and /citation-audit skills (+4 Ledger 3, citation-affiliation refresh):**
 
-*The following section is integrated verbatim from `citation-affiliation-audit.md` per the news-search cross-skill citation-audit hook. Canonical copy lives in that separate file; this embed makes the unified report self-contained for tenure / promotion / grant readers. Re-run the standalone audit with `/citation-audit --source both` to refresh.*
+This was an independent full-sweep refresh using four live parallel web lanes (policy/PDF/FM-co, media/outlets, ecosystem/tool adoption, and smart paper search) plus a regenerated OpenAlex + Dimensions citation-affiliation audit. The search covered the current `data/publications.json` and `data/open-source.json` inventory. Exact-URL duplicates and same-cluster resurfacing were treated as evidence upgrades, not new rows.
 
+**Running total after May 28: 296 verified items (292 prior + 4 May 28 verified ledger rows).**
 
-*Generated: 2026-05-19 via OpenAlex + Dimensions*
+- **Ledger 1 (+0):** No new government, standards, foundation-model-system-card, analyst, or first-party foundation-model-company official source was promoted. The OpenAI "Technical Intelligence Analyst" careers page remains live and still names PyOD, but it is the exact URL already counted as #8g, so it is an evidence refresh only. Current high-authority PDFs and release pages checked by direct fetch or PDF text search included OpenAI Frontier Governance Framework, GPT-5.5 System Card, Anthropic Claude Opus 4.8 release page, and Anthropic's May 2026 AI-orchestrated cyber-espionage report; all were verified-negative for FORTIS terms.
+- **Ledger 2 (+0):** Mainstream tech, business, security, institutional, and non-English press remained dry for new direct coverage. TechRadar's May 26 financial-services agent-security article is topic validation only because it discusses least privilege and auditability without naming Yue Zhao, FORTIS, PyOD, TrustLLM, Aegis, agent-audit, DoxBench, or a FORTIS paper title.
+- **Ledger 3 (+4):**
+  - **L3.1** (D3/D5 security blog) [ByteVanguard, "Tool-Enabled AI Agents and the Privilege Problem"](https://bytevanguard.com/2026/05/20/tool-enabled-ai-agents-and-the-privilege-problem/) references "arXiv: FORTIS - Benchmarking Over-Privilege in Agent Skills" in its source list and frames the article around over-privileged tool-enabled agents. Direct fetch verified the reference; no AI-generated disclaimer was found. Count as low-tier external security-blog / ecosystem evidence, not Ledger 2.
+  - **L3.2** (D2 patent) [Justia / U.S. Patent 11,979,421, "Cluster-based outlier scoring of network traffic"](https://patents.justia.com/patent/11979421) says the model manager can use the PyOD Python toolkit for anomaly detection. Count as one new patent-family ecosystem row. The related application page is not counted separately.
+  - **L3.3** (D5/D7 paper-discussion platform) [AgentArxiv discussion page for "No Attacker Needed: Unintentional Cross-User Contamination in Shared-State LLM Agents"](https://www.agentarxiv.org/papers/cmnkka8gm0001i3j1dnm8k09e) directly names the UCC paper and discusses its shared-state-agent failure mode. Count as a low-tier platform / discussion surface; it complements, but does not duplicate, the Promptfoo / RAXE / SecTools cluster for the same paper.
+  - **L3.4** (D5 platform explainer) [AIModels.fyi TyphoFormer page](https://www.aimodels.fyi/papers/arxiv/typhoformer-language-augmented-transformer-accurate-typhoon-track) names "TyphoFormer: Language-Augmented Transformer for Accurate Typhoon Track Forecasting" and lists Yue Zhao among the authors. Count as a low-tier paper explainer / platform surface for the SIGSPATIAL award paper.
+- **Evidence upgrades, no new count:** Google Cloud Dataflow's official notebook renders the Apache Beam anomaly-detection example and installs `pyod==2.0.3`, but this is the same Apache Beam PyOD integration already counted in #66de. Hugging Face's AEGIS paper page, AI News CX's Agent Audit article, English Moonlight FORTIS page, Hugging Face NLP-ADBench dataset, PySAD GitHub README, CSDN / Tistory PyOD tutorials, PyPI / ReadTheDocs package pages, and TrustEval-toolkit GitHub page strengthen existing platform, package, or integration clusters without changing counts.
+- **Held or dropped:** Oracle AutoMLx anomaly-detection notebook remains held because direct fetch redirects to a documentation index; do not promote from the search snippet. Generalist Programmer's PyOD package guide was dropped as templated / SEO-style and technically unreliable. Gate.com Nesa profile mentions Yue Zhao and PyOD but is crypto-promotional, outside the date window, and too low-relevance for this audit.
+- **Citation-affiliation hook:** Standalone `citation-affiliation-audit.md` was regenerated on 2026-05-28 via OpenAlex + Dimensions: 102 non-survey papers searched, OpenAlex found 43 papers with citations and 1,637 unique citing papers, Dimensions found 30 papers with citations and 1,186 unique citing papers, with 39 Tier 0 and 209 Tier 1 institution-affiliation rows. The embedded section below was refreshed from the canonical file.
+
+## Citation Affiliation Evidence (integrated from /citation-audit skill, 2026-05-28)
+
+*The following section is integrated from citation-affiliation-audit.md per the news-search cross-skill citation-audit hook. Canonical copy lives in that separate file; this embed keeps the unified report self-contained for tenure / promotion / grant readers. Re-run the standalone audit with /citation-audit --source both to refresh.*
+
+*Generated: 2026-05-28 via OpenAlex + Dimensions*
 
 **What this is:** Papers that cite your work, where at least one author is affiliated with a notable institution.
 This means "researchers AT [institution] cited your tool" -- not "[institution] officially endorses your tool."
 
 Per-source coverage of the 102 non-survey papers:
-- **OpenAlex**: 43 papers with citations; 1624 unique citing papers analyzed.
-- **Dimensions**: 30 papers with citations; 1176 unique citing papers analyzed.
+- **OpenAlex**: 43 papers with citations; 1637 unique citing papers analyzed.
+- **Dimensions**: 30 papers with citations; 1186 unique citing papers analyzed.
 
 ### Tier 0: Government, Space Agencies, National Labs, Defense, Foundation Model Cos
 
@@ -803,7 +824,7 @@ Per-source coverage of the 102 non-survey papers:
 
 ### Tier 1: Big Tech, Finance, Pharma, Healthcare, Industrial
 
-**207 entries**
+**209 entries**
 
 | Category | Institution | Country | Your Work Cited | Citing Paper | Year | Source |
 |----------|-----------|---------|----------------|-------------|------|--------|
@@ -817,8 +838,8 @@ Per-source coverage of the 102 non-survey papers:
 | Big Tech | Amazon (United States) | US | BOND: Benchmarking Unsupervised Out | TGTOD: A Global Temporal Graph Transformer for Outlier Detec | 2025 | openalex |
 | Big Tech | IBM Research - Thomas J. Watson Research Center | US | Contrastive Attributed Network Anom | Deep Graph Anomaly Detection: A Survey and New Perspectives | 2025 | openalex |
 | Big Tech | Tencent (China) | CN | Contrastive Attributed Network Anom | How to use Graph Data in the Wild to Help Graph Anomaly Dete | 2025 | openalex |
-| Big Tech | Huawei Technologies (United States) | US | TODS: An Automated Time Series Outl | TAB: Unified Benchmarking of Time Series Anomaly Detection M | 2025 | openalex |
 | Big Tech | Huawei Technologies (China) | CN | TODS: An Automated Time Series Outl | TAB: Unified Benchmarking of Time Series Anomaly Detection M | 2025 | openalex |
+| Big Tech | Huawei Technologies (United States) | US | TODS: An Automated Time Series Outl | TAB: Unified Benchmarking of Time Series Anomaly Detection M | 2025 | openalex |
 | Big Tech | IBM Research - Zurich | CH | Therapeutics Data Commons: Machine  | Foundation models for materials discovery – current state an | 2025 | openalex |
 | Big Tech | IBM (United States) | US | Therapeutics Data Commons: Machine  | Foundation models for materials discovery – current state an | 2025 | openalex |
 | Big Tech | IBM Research - Thomas J. Watson Research Center | US | Therapeutics Data Commons: Machine  | Foundation models for materials discovery – current state an | 2025 | openalex |
@@ -870,6 +891,8 @@ Per-source coverage of the 102 non-survey papers:
 | Big Tech | Microsoft Research (United Kingdom) | GB | BOND: Benchmarking Unsupervised Out | ADMoE: Anomaly Detection with Mixture-of-Experts from Noisy  | 2023 | openalex |
 | Big Tech | Tencent (China) | CN | Contrastive Attributed Network Anom | Improving Generalizability of Graph Anomaly Detection Models | 2023 | openalex |
 | Big Tech | Microsoft Research (United Kingdom) | GB | Automatic Unsupervised Outlier Mode | ADMoE: Anomaly Detection with Mixture-of-Experts from Noisy  | 2023 | openalex |
+| Big Tech | Huawei Technologies (China) | CN | Revisiting Time Series Outlier Dete | DeepDiscord: Dual Contrastive Coding for Transferable Time S | 2023 | openalex |
+| Big Tech | Huawei Technologies (United Kingdom) | GB | Revisiting Time Series Outlier Dete | DeepDiscord: Dual Contrastive Coding for Transferable Time S | 2023 | openalex |
 | Big Tech | Alibaba Group (United States) | US | Revisiting Time Series Outlier Dete | DCdetector: Dual Attention Contrastive Representation Learni | 2023 | openalex |
 | Big Tech | Alibaba Group (China) | CN | Revisiting Time Series Outlier Dete | DCdetector: Dual Attention Contrastive Representation Learni | 2023 | openalex |
 | Big Tech | Microsoft Research (United Kingdom) | GB | SUOD: Accelerating Large-scale Unsu | TraceArk: Towards Actionable Performance Anomaly Alerting fo | 2023 | openalex |
@@ -924,6 +947,8 @@ Per-source coverage of the 102 non-survey papers:
 | Big Tech | Nvidia Corp | United States | Combining Machine Learning Models u | Machine Learning in Python: Main Developments and Technology | 2020 | dimensions |
 | Big Tech | Samsung (South Korea) | KR | An Empirical Study of Touch-based A | The Personal Identification Chord | 2018 | openalex |
 | Consulting | Deloitte (United States) | US | SUOD: Accelerating Large-scale Unsu | Fraud detection in healthcare claims using machine learning: | 2024 | openalex |
+| Consulting | PricewaterhouseCoopers (Canada) | CA | DCSO: Dynamic Combination of Detect | LSCP: Locally Selective Combination in Parallel Outlier Ense | 2019 | openalex |
+| Consulting | PricewaterhouseCoopers (Canada) | CA | Employee Turnover Prediction with M | LSCP: Locally Selective Combination in Parallel Outlier Ense | 2019 | openalex |
 | Finance | BlackRock (United States) | US | ADBench: Anomaly Detection Benchmar | Can an unsupervised clustering algorithm reproduce a categor | 2024 | openalex |
 | Finance | BlackRock (United States) | US | The Need for Unsupervised Outlier M | Can an unsupervised clustering algorithm reproduce a categor | 2024 | openalex |
 | Finance | BlackRock Inc | United States | The Need for Unsupervised Outlier M | Can an unsupervised clustering algorithm reproduce a categor | 2024 | dimensions |
@@ -959,11 +984,10 @@ Per-source coverage of the 102 non-survey papers:
 | Pharma | Merck & Co., Inc., Rahway, NJ, USA (United States) | US | Artificial Intelligence Foundation  | Combinatorial prediction of therapeutic perturbations using  | 2025 | openalex |
 | Pharma | Merck & Co Inc | United States | Therapeutics Data Commons: Machine  | Data Scaling and Generalization Insights for Medicinal Chemi | 2025 | dimensions |
 | Pharma | Eli Lilly and Co | United States | Therapeutics Data Commons: Machine  | Machine Learning for Toxicity Prediction Using Chemical Stru | 2025 | dimensions |
-| Pharma | Eli Lilly and Co Ltd | United Kingdom | Therapeutics Data Commons: Machine  | Machine Learning for Toxicity Prediction Using Chemical Stru | 2025 | dimensions |
 | Pharma | AstraZeneca AB | Sweden | Therapeutics Data Commons: Machine  | Machine Learning for Toxicity Prediction Using Chemical Stru | 2025 | dimensions |
 | Pharma | Pfizer GmbH | Germany | Therapeutics Data Commons: Machine  | Machine Learning for Toxicity Prediction Using Chemical Stru | 2025 | dimensions |
+| Pharma | Eli Lilly and Co Ltd | United Kingdom | Therapeutics Data Commons: Machine  | Machine Learning for Toxicity Prediction Using Chemical Stru | 2025 | dimensions |
 | Pharma | Merck & Co Inc | United States | Therapeutics Data Commons: Machine  | Machine Learning for Toxicity Prediction Using Chemical Stru | 2025 | dimensions |
-| Pharma | F Hoffmann La Roche AG | Switzerland | Artificial Intelligence Foundation  | Combinatorial prediction of therapeutic perturbations using  | 2025 | dimensions |
 | Pharma | Merck & Co Inc | United States | Artificial Intelligence Foundation  | Combinatorial prediction of therapeutic perturbations using  | 2025 | dimensions |
 | Pharma | AstraZeneca (Sweden) | SE | Therapeutics Data Commons: Machine  | Human-in-the-loop active learning for goal-oriented molecule | 2024 | openalex |
 | Pharma | AstraZeneca (Sweden) | SE | Therapeutics Data Commons: Machine  | Using test-time augmentation to investigate explainable AI:  | 2024 | openalex |
@@ -991,7 +1015,6 @@ Per-source coverage of the 102 non-survey papers:
 | Pharma | Novartis Pharma AG | Switzerland | Artificial Intelligence Foundation  | A call for an industry-led initiative to critically assess m | 2024 | dimensions |
 | Pharma | AstraZeneca AB | Sweden | Artificial Intelligence Foundation  | A call for an industry-led initiative to critically assess m | 2024 | dimensions |
 | Pharma | Merck & Co Inc | United States | Artificial Intelligence Foundation  | A call for an industry-led initiative to critically assess m | 2024 | dimensions |
-| Pharma | F Hoffmann La Roche AG | Switzerland | Artificial Intelligence Foundation  | Combinatorial prediction of therapeutic perturbations using  | 2024 | dimensions |
 | Pharma | Merck & Co Inc | United States | Artificial Intelligence Foundation  | Combinatorial prediction of therapeutic perturbations using  | 2024 | dimensions |
 | Pharma | AstraZeneca (Sweden) | SE | Therapeutics Data Commons: Machine  | Machine learning for small molecule drug discovery in academ | 2023 | openalex |
 | Pharma | Novartis (Switzerland) | CH | Therapeutics Data Commons: Machine  | Machine learning for small molecule drug discovery in academ | 2023 | openalex |
@@ -1024,10 +1047,10 @@ Per-source coverage of the 102 non-survey papers:
 | Microsoft Research Asia (China) | Big Tech | 7 |
 | AstraZeneca (Sweden) | Pharma | 7 |
 | IBM Research - Zurich | Big Tech | 7 |
+| Huawei Technologies (China) | Big Tech | 6 |
 | Amazon (United States) | Big Tech | 6 |
 | IBM Research - Thomas J. Watson Research Center | Big Tech | 6 |
 | Adobe Systems (United States) | Big Tech | 5 |
-| Huawei Technologies (China) | Big Tech | 5 |
 | Alibaba Group (China) | Big Tech | 5 |
 | AstraZeneca AB | Pharma | 5 |
 | Merck & Co Inc | Pharma | 5 |
@@ -1063,6 +1086,7 @@ Per-source coverage of the 102 non-survey papers:
 | Los Alamos National Laboratory | National Lab | 2 |
 | AstraZeneca (United Kingdom) | Pharma | 2 |
 | Sandia National Laboratories | National Lab | 2 |
+| PricewaterhouseCoopers (Canada) | Consulting | 2 |
 | Fraunhofer Institute for Translational Medicine and Pharmacology | Research Institute | 2 |
 | Roche (Switzerland) | Pharma | 2 |
 | Amazon (United Kingdom) | Big Tech | 2 |
@@ -1073,7 +1097,6 @@ Per-source coverage of the 102 non-survey papers:
 | Nvidia Corp | Big Tech | 2 |
 | BlackRock Inc | Finance | 2 |
 | Fraunhofer Society | Research Institute | 2 |
-| F Hoffmann La Roche AG | Pharma | 2 |
 | Mayo Clinic in Florida | Healthcare | 1 |
 | Amazon (Germany) | Big Tech | 1 |
 | Jet Propulsion Laboratory | Space Agency | 1 |
@@ -1081,6 +1104,7 @@ Per-source coverage of the 102 non-survey papers:
 | Deutsches Zentrum für Luft- und Raumfahrt e. V. (DLR) | Space Agency | 1 |
 | Intel (United Kingdom) | Big Tech | 1 |
 | Microsoft (United States) | Big Tech | 1 |
+| Huawei Technologies (United Kingdom) | Big Tech | 1 |
 | Deloitte (United States) | Consulting | 1 |
 | Microsoft (Norway) | Big Tech | 1 |
 | Huawei Technologies (United States) | Big Tech | 1 |
@@ -1119,8 +1143,8 @@ Per-source coverage of the 102 non-survey papers:
 | Capital One NA | Finance | 1 |
 | Cisco Systems Inc | Telecom | 1 |
 | Eli Lilly and Co | Pharma | 1 |
-| Eli Lilly and Co Ltd | Pharma | 1 |
 | Pfizer GmbH | Pharma | 1 |
+| Eli Lilly and Co Ltd | Pharma | 1 |
 | RAND Corporation | Defense/Research | 1 |
 | Amazon.com Inc | Big Tech | 1 |
 | IBM Research - India | Big Tech | 1 |
@@ -1159,9 +1183,9 @@ Per-source coverage of the 102 non-survey papers:
 
 **Papers with citations:** 30/102
 
-**Indexed but 0 citations (69):** Can Multimodal LLMs Perform Time Series , Charts Are Not Images: On the Challenges, CoAct: Co-Active LLM Preference Learning, Defenses Against Prompt Attacks Learn Su, Mitigating Hallucinations in Large Langu, "Someone Hid It": Query-Agnostic Black-B, Topology Matters: Measuring Memory Leaka, TrustGen: A Platform of Dynamic Benchmar, A Personalized Conversational Benchmark:, AD-AGENT: A Multi-agent Framework for En, DyFlow: Dynamic Workflow Framework for A, Edit Away and My Face Will Not Stay: Per, Few-Shot Graph Out-of-Distribution Detec, JailDAM: Jailbreak Detection with Adapti, LLM-Empowered Patient-Provider Communica, Learning from the Storm: A Multivariate , MetaOOD: Automatic Selection of OOD Dete, NLP-ADBench: NLP Anomaly Detection Bench, Navigating Between Explainability and Ex, Retrieval-Reasoning Large Language Model, ... and 49 more
+**Indexed but 0 citations (70):** Can Multimodal LLMs Perform Time Series , Charts Are Not Images: On the Challenges, CoAct: Co-Active LLM Preference Learning, Defenses Against Prompt Attacks Learn Su, Mitigating Hallucinations in Large Langu, "Someone Hid It": Query-Agnostic Black-B, Topology Matters: Measuring Memory Leaka, TrustGen: A Platform of Dynamic Benchmar, A Personalized Conversational Benchmark:, AD-AGENT: A Multi-agent Framework for En, DyFlow: Dynamic Workflow Framework for A, Edit Away and My Face Will Not Stay: Per, Few-Shot Graph Out-of-Distribution Detec, JailDAM: Jailbreak Detection with Adapti, LLM-Empowered Patient-Provider Communica, Learning from the Storm: A Multivariate , MetaOOD: Automatic Selection of OOD Dete, NLP-ADBench: NLP Anomaly Detection Bench, Navigating Between Explainability and Ex, Retrieval-Reasoning Large Language Model, ... and 50 more
 
-**Not found (3):** AutoDavis: Automatic and Dynamic Evaluat, Automatic Unsupervised Outlier Model Sel, Revisiting Time Series Outlier Detection
+**Not found (2):** AutoDavis: Automatic and Dynamic Evaluat, Revisiting Time Series Outlier Detection
 
 *OpenAlex coverage improves over time. Re-run in 3-6 months to capture newly indexed papers; Dimensions has better CS coverage and complements OpenAlex on per-paper citation graphs.*
 
