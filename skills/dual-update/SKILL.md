@@ -11,8 +11,8 @@ When the user adds or updates content that exists in both the website and the CV
 
 | Content type | Website file(s) | CV file(s) | Notes |
 |---|---|---|---|
-| **Publication** (peer-reviewed) | `data/publications.json` | `cv/cv-full.tex` (Publications section) | Website JSON uses structured fields; CV uses `\item` in `benumerate`. Match venue, year, authors, title format. Also check `data/lab-members.json` for co-authors. |
-| **Preprint / under submission** | `data/publications.json` (section `"preprint"`) | `cv/cv-full.tex` (Preprints section) | Add to both. Website preprints render on `publications.html` via the JSON `section: "preprint"` entries. |
+| **Publication** (peer-reviewed) | `data/publications.json`, `files/yue-zhao.bib` | `cv/cv-full.tex` (Publications section) | Website JSON uses structured fields; CV uses `\item` in `benumerate`. Match venue, year, authors, and title format. Also sync the public BibTeX `files/yue-zhao.bib` (linked from `publications.html`, fetched by `bib-viewer.html`): use the accepted venue's BibTeX type and venue field, for example `@inproceedings` with `booktitle` for conference or workshop papers and `@article` with `journal` for journal papers. Also check `data/lab-members.json` for co-authors. |
+| **Preprint / under submission** | `data/publications.json` (section `"preprint"`), `files/yue-zhao.bib` | `cv/cv-full.tex` (Preprints section) | Add to all three. Website preprints render on `publications.html` via the JSON `section: "preprint"` entries. In `files/yue-zhao.bib` a preprint is an `@article` with `journal={arXiv preprint arXiv:...}`; on acceptance, switch that entry to the accepted venue's BibTeX type and venue field, year, and final venue text. |
 | **Award / Grant** | `index.html` (Awards section) | `cv/cv-full.tex` (Awards section) | Both use chronological order, newest first. |
 | **Service role** (reviewer, AC, editor, organizer) | `services.html` | `cv/cv-full.tex` (Services section) | Match the sub-category (organizing, editorial, AC/reviewer, journal reviewer). |
 | **Teaching course** | `teaching.html` | `cv/cv-full.tex` (Teaching section) | Include semester, course number, title, enrollment if known. |
@@ -98,6 +98,7 @@ AWARD_NAME & TYPE & DATE \\
 
 ## Important Reminders
 
+- **Three publication surfaces, not two**: every publication add, move, or remove must touch `data/publications.json`, `cv/cv-full.tex`, AND `files/yue-zhao.bib`. The BibTeX file is a public copy-paste surface linked from `publications.html`; `scripts/ci_check_site.py` only checks that each JSON title has some BibTeX match, so it does not catch a stale venue or a leftover removed entry. `files/yue-zhao.bib` is hand-maintained, not generated.
 - The CV is a **superset** of the website for publications — it includes older papers and preprints that may not be on the website.
 - When adding a new peer-reviewed paper, add to **both** unless the user says otherwise.
 - When adding a preprint, add to **both** `data/publications.json` (with `section: "preprint"`) and `cv/cv-full.tex`.

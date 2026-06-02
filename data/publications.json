@@ -1330,17 +1330,6 @@
         "abstract": "Vision-Language Models (VLMs) are rapidly replacing unimodal encoders in modern retrieval and recommendation systems. While their capabilities are well-documented, their robustness against adversarial manipulation in competitive ranking scenarios remains largely unexplored. In this paper, we uncover a critical vulnerability in VLM-based product search: multimodal ranking attacks. We present Multimodal Generative Engine Optimization (MGEO), a novel adversarial framework that enables a malicious actor to unfairly promote a target product by jointly optimizing imperceptible image perturbations and fluent textual suffixes. Unlike existing attacks that treat modalities in isolation, MGEO employs an alternating gradient-based optimization strategy to exploit the deep cross-modal coupling within the VLM. Extensive experiments on real-world datasets using state-of-the-art models demonstrate that our coordinated attack significantly outperforms text-only and image-only baselines. These findings reveal that multimodal synergy, typically a strength of VLMs, can be weaponized to compromise the integrity of search rankings without triggering conventional content filters."
     },
     {
-        "id": "preprint-sovereign-os",
-        "section": "preprint",
-        "title": "Sovereign-OS: A Charter-Governed Operating System for Autonomous AI Agents with Verifiable Fiscal Discipline",
-        "paper_url": "https://arxiv.org/abs/2603.14011",
-        "authors": "Aojie Yuan, Haiyue Zhang, Ziyi Wang, Yue Zhao",
-        "venue": "arXiv preprint",
-        "year": 2026,
-        "links": [],
-        "abstract": "As AI agents evolve from text generators into autonomous economic actors that accept jobs, manage budgets, and delegate to sub-agents, the absence of runtime governance becomes a critical gap. Existing frameworks orchestrate agent behavior but impose no fiscal constraints, require no earned permissions, and offer no tamper-evident audit trail. We introduce Sovereign-OS, a governance-first operating system that places every agent action under constitutional control. A declarative Charter (YAML) defines mission scope, fiscal boundaries, and success criteria. A CEO (Strategist) decomposes goals into dependency-aware task DAGs; a CFO (Treasury) gates each expenditure against budget caps, daily burn limits, and profitability floors via an auction-based bidding engine; Workers operate under earned-autonomy permissions governed by a dynamic TrustScore; and an Auditor (ReviewEngine) verifies outputs against Charter KPIs, sealing each report with a SHA-256 proof hash. Across our evaluation suite, Sovereign-OS blocks 100% of fiscal violations (30 scenarios), achieves 94% correct permission gating (200 trust-escalation missions), and maintains zero integrity failure over 1,200+ audit reports. The system further integrates Stripe for real-world payment processing, closing the loop from task planning to revenue collection. Our live demonstration walks through three scenarios: loading distinct Charters to observe divergent agent behavior, triggering CFO fiscal denials under budget and profitability constraints, and escalating a new worker's TrustScore from restricted to fully authorized with on-the-spot cryptographic audit verification."
-    },
-    {
         "id": "preprint-autonomy-tax",
         "section": "preprint",
         "title": "The Autonomy Tax: Defense Training Breaks LLM Agents",
@@ -1473,14 +1462,20 @@
         "abstract": "Out-of-distribution (OOD) robustness is a critical challenge for modern machine learning systems, particularly as they increasingly operate in multimodal settings involving inputs like video, audio, and sensor data. Currently, many OOD detection methods have been proposed, each with different designs targeting various distribution shifts. A single OOD detector may not prevail across all the scenarios; therefore, how can we automatically select an ideal OOD detection model for different distribution shifts? Due to the inherent unsupervised nature of the OOD detection task, it is difficult to predict model performance and find a universally Best model. Also, systematically comparing models on the new unseen data is costly or even impractical. To address this challenge, we introduce M3OOD, a meta-learning-based framework for OOD detector selection in multimodal settings. Meta learning offers a solution by learning from historical model behaviors, enabling rapid adaptation to new data distribution shifts with minimal supervision. Our approach combines multimodal embeddings with handcrafted meta-features that capture distributional and cross-modal characteristics to represent datasets. By leveraging historical performance across diverse multimodal benchmarks, M3OOD can recommend suitable detectors for a new data distribution shift. Experimental evaluation demonstrates that M3OOD consistently outperforms 10 competitive baselines across 12 test scenarios with minimal computational overhead."
     },
     {
-        "id": "preprint-stealthrank",
-        "section": "preprint",
+        "id": "workshop-stealthrank",
+        "section": "workshop",
         "title": "StealthRank: LLM Ranking Manipulation via Stealthy Prompt Optimization",
         "paper_url": "https://arxiv.org/abs/2504.05804",
         "authors": "Yiming Tang, Yi Fan, Chenxiao Yu, Tiankai Yang, Yue Zhao, Xiyang Hu",
-        "venue": "arXiv preprint",
-        "year": 2025,
-        "links": [],
+        "venue": "ICML Workshop on Trustworthy AI for Good (AI4GOOD), 2026",
+        "year": 2026,
+        "sort_date": "2026-07-10",
+        "links": [
+            {
+                "type": "github",
+                "url": "https://github.com/Tangyiming205069/controllable-seo"
+            }
+        ],
         "abstract": "The integration of large language models (LLMs) into information retrieval systems introduces new attack surfaces, particularly for adversarial ranking manipulations. We present $\\textbf{StealthRank}$, a novel adversarial attack method that manipulates LLM-driven ranking systems while maintaining textual fluency and stealth. Unlike existing methods that often introduce detectable anomalies, StealthRank employs an energy-based optimization framework combined with Langevin dynamics to generate StealthRank Prompts (SRPs)-adversarial text sequences embedded within item or document descriptions that subtly yet effectively influence LLM ranking mechanisms. We evaluate StealthRank across multiple LLMs, demonstrating its ability to covertly boost the ranking of target items while avoiding explicit manipulation traces. Our results show that StealthRank consistently outperforms state-of-the-art adversarial ranking baselines in both effectiveness and stealth, highlighting critical vulnerabilities in LLM-driven ranking systems. Our code is publicly available at $\\href{https://github.com/Tangyiming205069/controllable-seo}{here}$."
     },
     {
