@@ -8,7 +8,7 @@
     "docs_url": "https://pyod.readthedocs.io",
     "paper_url": "https://arxiv.org/abs/2412.12154",
     "demo_url": "",
-    "stars": 9865,
+    "stars": 9866,
     "tags": [
       "Anomaly Detection",
       "Outlier Detection",
@@ -119,7 +119,7 @@
     "docs_url": "",
     "paper_url": "",
     "demo_url": "",
-    "stars": 9300,
+    "stars": 9302,
     "tags": [
       "Awesome List",
       "Anomaly Detection",
@@ -138,7 +138,7 @@
     "docs_url": "",
     "paper_url": "",
     "demo_url": "",
-    "stars": 1575,
+    "stars": 1576,
     "tags": [
       "Writing",
       "Research Workflow",
@@ -174,7 +174,7 @@
     "docs_url": "https://docs.pygod.org",
     "paper_url": "http://jmlr.org/papers/v25/23-0963.html",
     "demo_url": "",
-    "stars": 1496,
+    "stars": 1497,
     "tags": [
       "Graph Anomaly Detection",
       "PyTorch Geometric",
@@ -192,7 +192,7 @@
     "docs_url": "http://tods-doc.github.io",
     "paper_url": "https://arxiv.org/abs/2009.09822",
     "demo_url": "",
-    "stars": 1661,
+    "stars": 1662,
     "tags": [
       "Time Series",
       "Anomaly Detection",
@@ -210,7 +210,7 @@
     "docs_url": "https://tdcommons.ai",
     "paper_url": "https://proceedings.neurips.cc/paper/2021/hash/6a8d3b0f5987e0f6d3d2f5f65f02e3cc-Abstract.html",
     "demo_url": "",
-    "stars": 1253,
+    "stars": 1254,
     "tags": [
       "Therapeutics",
       "Benchmark",
@@ -265,7 +265,7 @@
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/agent-audit.html",
     "paper_url": "https://arxiv.org/abs/2603.22853",
     "demo_url": "https://pypi.org/project/agent-audit/",
-    "stars": 175,
+    "stars": 177,
     "tags": [
       "AI Agent Security",
       "Security Audit",
@@ -341,7 +341,7 @@
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/agent-style.html",
     "paper_url": "",
     "demo_url": "https://pypi.org/project/agent-style/",
-    "stars": 480,
+    "stars": 482,
     "tags": [
       "AI Agents",
       "Agent Configuration",
