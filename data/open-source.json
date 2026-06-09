@@ -8,7 +8,7 @@
     "docs_url": "https://pyod.readthedocs.io",
     "paper_url": "https://arxiv.org/abs/2412.12154",
     "demo_url": "",
-    "stars": 9869,
+    "stars": 9870,
     "tags": [
       "Anomaly Detection",
       "Outlier Detection",
@@ -119,7 +119,7 @@
     "docs_url": "",
     "paper_url": "",
     "demo_url": "",
-    "stars": 9309,
+    "stars": 9306,
     "tags": [
       "Awesome List",
       "Anomaly Detection",
@@ -138,7 +138,7 @@
     "docs_url": "",
     "paper_url": "",
     "demo_url": "",
-    "stars": 1577,
+    "stars": 1578,
     "tags": [
       "Writing",
       "Research Workflow",
@@ -265,7 +265,7 @@
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/agent-audit.html",
     "paper_url": "https://arxiv.org/abs/2603.22853",
     "demo_url": "https://pypi.org/project/agent-audit/",
-    "stars": 181,
+    "stars": 183,
     "tags": [
       "AI Agent Security",
       "Security Audit",
@@ -284,7 +284,7 @@
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/aegis.html",
     "paper_url": "https://arxiv.org/abs/2603.12621",
     "demo_url": "https://github.com/Justin0504/Aegis/blob/main/docs/images/readme_demo1.gif",
-    "stars": 358,
+    "stars": 357,
     "tags": [
       "AI Agent Security",
       "Policy Enforcement",
@@ -341,7 +341,7 @@
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/agent-style.html",
     "paper_url": "",
     "demo_url": "https://pypi.org/project/agent-style/",
-    "stars": 491,
+    "stars": 492,
     "tags": [
       "AI Agents",
       "Agent Configuration",
