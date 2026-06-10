@@ -275,8 +275,15 @@
                                 ? '<p><i class="fas fa-award" style="font-size:18px; color:#990000"></i> ' + escapeHtml(member.awards.join(', ')) + '</p>'
                                 : '';
 
-                            const coAdvised = member.co_advised_by
-                                ? '<p class="member-status">co-advised by <a href="' + escapeHtml(member.co_advised_by.url) + '">' + escapeHtml(member.co_advised_by.name) + '</a></p>'
+                            const coAdvisors = Array.isArray(member.co_advised_by)
+                                ? member.co_advised_by
+                                : (member.co_advised_by ? [member.co_advised_by] : []);
+                            const coAdvised = coAdvisors.length > 0
+                                ? '<p class="member-status">co-advised by ' + coAdvisors.map(function(advisor) {
+                                    return advisor.url
+                                        ? '<a href="' + escapeHtml(advisor.url) + '">' + escapeHtml(advisor.name) + '</a>'
+                                        : escapeHtml(advisor.name);
+                                }).join(' and ') + '</p>'
                                 : '';
 
                             const statusLine = member.email

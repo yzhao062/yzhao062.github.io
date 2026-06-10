@@ -5,7 +5,7 @@
     "image": "images/others/JiateLi.webp",
     "alt": "Jiate Li",
     "year_info": "1st year, with Fortis since Aug 2025",
-    "research": "AI Security / Trustworthy AI / LLM Retrieval",
+    "research": "GNN Robustness / Certified Defenses / LLM Retrieval Security",
     "email": "jiateli@usc.edu"
   },
   {
@@ -14,7 +14,7 @@
     "image": "images/others/lili.jpg",
     "alt": "Li Li",
     "year_info": "2nd year, with Fortis since Aug 2024",
-    "research": "Multimodal Foundation Models / Trustworthy AI / AI Safety",
+    "research": "Multimodal Foundation Models / LLM Security / Agent Safety",
     "awards": [
       "Amazon ML Fellowship",
       "Capital One Fellowship"
@@ -28,7 +28,7 @@
     "image": "images/others/qin.webp",
     "alt": "Yuehan Qin",
     "year_info": "4th year, with Fortis since Jan 2024",
-    "research": "OOD Detection / AutoML / Robust ML",
+    "research": "OOD Detection / Automated Model Selection / Reliable LLMs & Agents",
     "status_label": "Ph.D. Candidate",
     "email": "yuehanqi@usc.edu"
   },
@@ -38,7 +38,7 @@
     "image": "images/others/xhy.webp",
     "alt": "Haoyan Xu",
     "year_info": "4th year, with Fortis since Jan 2024",
-    "research": "GNN / Graph OOD Detection / Foundational Model Security",
+    "research": "Graph OOD Detection / Graph Foundation Models / Multimodal Robustness",
     "awards": [
       "Capital One Fellowship"
     ],
@@ -55,7 +55,7 @@
     "image": "images/others/tiankai.webp",
     "alt": "Tiankai Yang",
     "year_info": "2nd year, with Fortis since Sep 2023",
-    "research": "Anomaly Detection / LLM & Agent Safety / Synthetic Generation",
+    "research": "LLM Safety Alignment / Agent Safety / Reliable LLM Inference",
     "email": "tiankaiy@usc.edu"
   },
   {
@@ -76,5 +76,24 @@
     "year_info": "Incoming Fall 2026, joining Fortis in Fall 2026",
     "research": "Agent Systems / Trustworthy AI / AI for Science & Society",
     "status_label": "Incoming Ph.D. Student"
+  },
+  {
+    "name": "Wei Yang",
+    "profile_url": "https://weiyang930.github.io/",
+    "image": "images/others/wei.webp",
+    "alt": "Wei Yang",
+    "year_info": "3rd year, joining Fortis in Fall 2026",
+    "research": "Agentic LLMs / Multi-Agent Systems / Multi-Agent RL",
+    "email": "wyang930@usc.edu",
+    "co_advised_by": [
+      {
+        "name": "Jesse Thomason",
+        "url": "https://jessethomason.com/"
+      },
+      {
+        "name": "Xuezhe Ma",
+        "url": "https://xuezhemax.github.io/"
+      }
+    ]
   }
 ]

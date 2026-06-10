@@ -41,7 +41,7 @@ Member sections are data-driven. Update JSON files instead of editing `lab.html`
 }
 ```
 
-`awards` and `co_advised_by` are optional.
+`awards` and `co_advised_by` are optional. `co_advised_by` accepts either a single `{ "name", "url" }` object or an array of them when a student has more than one co-advisor.
 
 #### Current Master/Undergrad (`data/lab-members.json`)
 
