@@ -333,7 +333,7 @@ When the session start check (item 4) detects older versions, list the affected 
 - When editing a skill, modify `SKILL.md` and its `references/` or `scripts/` directly. Do not create agent-specific forks of the same content.
 - If a new skill is added, create both the `skills/<skill-name>/SKILL.md` structure and a matching `.claude/commands/<skill-name>.md` pointer so Claude Code's slash-command surface stays in sync; Codex reaches the same skill through the lookup order without needing a pointer.
 
-<!-- rule-pack:agent-style:begin version=v0.3.5 sha256=3c28c2886f0ffdb1310f3676f87893fbf15aa0810eef5317e628492ec5d6100b -->
+<!-- rule-pack:agent-style:begin version=v0.3.5 sha256=45bd5e852d4ff62ce8949ff437849c80e24106c0c55631739eb059b6e9e60c1d -->
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 
 # The Elements of Agent Style — Rules
@@ -432,11 +432,13 @@ Do not use "leverage" where "use" fits. Do not use "utilize" where "use" fits. D
 
 ### Claims and Calibration
 
-#### RULE-07: Use Affirmative Form for Affirmative Claims ("Trivial" Instead of "Not Important")
+#### RULE-07: Put Statements in Positive Form (Affirmative Words; No "X, Not Y" Antithesis)
 
 ##### Directive
 
 Replace "not important" with "trivial"; "did not remember" with "forgot"; "did not pay attention to" with "ignored"; "is not often" with "rarely"; "is not large" with "small"; "does not succeed" with "fails". Prefer one affirmative word over two negating words. When the sentence genuinely negates something (the proposition is true only in the negative), a single "not" is fine and necessary. The rule targets two-word negations that have a one-word affirmative equivalent. The operational test: can I replace "not X" with a single positive word that names the state directly? If yes, do so.
+
+The same principle applies at the clause level. Do not stage a claim as a contrast against a negated foil for emphasis: "X, not Y", "It is not X, it is Y", "Not just X, but Y", "This is not about X; it is about Y". State the claim directly. Keep the negation only when the rejected alternative is specific and ruling it out informs the reader ("The bottleneck is disk I/O, not CPU"). Drop the foil when it is vague, self-evident, or a strawman ("not a hope", "not the last", "not just a tool"), where the "not Y" tail is cadence, not content.
 
 ##### BAD → GOOD
 
