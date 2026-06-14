@@ -1,11 +1,99 @@
 # News & Media Coverage Audit — Yue Zhao / FORTIS Lab
 
-*Last 3 runs (full change-log in `## Changes from Previous Audit` and in git history):*
+*Last 5 runs (full change-log in `## Changes from Previous Audit` and in git history):*
+*2026-06-14 (Codex independent broad parallel search): 9 lanes total: 5 structured lanes plus 4 broad follow-up lanes after the user asked to search less narrowly. Net new Tier 0/1 direct coverage verified: 0. Added 46 exact-URL candidate, drop, duplicate, and negative records to `news-search-candidates.jsonl`; strongest new items are low-tier or academic-downstream signals, not editorial ledger promotions. Main action items: Phase B review of new ADBench/Aegis/TDC academic-downstream rows, PyOD ecosystem rows, three China patent candidates, and a SitePoint recheck because the live page did not verify the prior `agent-audit` direct-coverage claim. Details in "## 2026-06-14 Codex Independent Broad Search".*
+*2026-06-13 (Claude /workflows two-phase refresh): 84 Phase-A candidates to 67 Phase-B keeps; net new editorial ~0 (the sweep re-surfaced already-tracked ecosystem items: Grokipedia is Ledger 4 #70; Ericsson patent, DataCamp/Udemy courses, and the Manning/O'Reilly book already in Ledger 3). Genuinely new: Auditable Agents (arXiv:2604.05485) has 4 third-party downstream citations within weeks (bibliometric; flag for /citation-audit). Stanford HAI 2026 AI Index checked (Yue): does not name TrustLLM (negative). Details in "## 2026-06-13 Refresh".*
 *2026-05-28 (Claude independent 8-lane rerun): net +0 counted ledger rows (Ledger 1/2/3/4/5 all +0); 4 marginal Phase-B keeps folded into existing rows, plus Negative Results and Topic Validation additions.*
 *2026-05-28 (Codex /news-search + /citation-audit sweep): net +4 Ledger 3 (0 Ledger 1/2/4/5); citation-affiliation hook refreshed to 39 Tier 0 + 209 Tier 1 rows.*
 *2026-05-20 (Codex /news-search rerun): net +4 Ledger 3 (0 Ledger 1/2/4/5).*
-*All 8 core dimensions plus D9/D10 follow-up checks complete across the current inventory (107 papers + 19 tools; citation-audit excludes 5 survey papers, leaving 102 non-survey papers).*
+*All 8 core dimensions plus D9/D10 follow-up checks complete across the current inventory. Codex 2026-06-14 local parse: 112 publications + 19 tools; the 2026-05-28 citation-audit integration keeps its own non-survey subset basis.*
 *Citation verification applied: every item names or cites the work, person, lab, or co-author.*
+
+---
+
+## Consolidated Read: Claude 2026-06-13 + Codex 2026-06-14
+
+Two independent broad searches (Claude `/workflows` two-phase, then Codex 9-lane parallel) reached the same headline: **net-new Tier 0/1 direct editorial coverage = 0.** Editorial and press coverage of the FORTIS works is saturated; both passes mostly re-surfaced already-tracked rows. Two methods converging raises confidence that the ledgers are comprehensive as of mid-June 2026.
+
+**Where the new signal actually is** (all bibliometric, so route to `/citation-audit`, not the editorial ledgers):
+- Auditable Agents (arXiv:2604.05485): 4 third-party citations within weeks (Claude deep-dive): 2606.04104, 2606.10457 (SF Express, an industry author), 2606.04990, 2605.29253.
+- ADBench: 3 new citing arXiv rows (2606.12483, 2604.20255, 2602.03293); Aegis: 1 (2604.26274); TDC / TxGemma-adjacent: 1 (2508.10899) (Codex).
+
+**New low-tier candidates for Phase B** (T3/T5; cluster-dedupe before any ledger change): three China patents, CN112989338B (COPOD), CN117216660B (TODS), CN117648656A (ADBench); PyOD ecosystem rows (Analytics Vidhya, TSB-AD, Databricks industry-solution repo, CSDN, Spanish Wikipedia); agent-security ecosystem (Aegis in Awesome-Agent-Harness, ReasonBreak using DoxBench, SafeSwitch / asqi TrustLLM). Full per-URL verdicts are in `news-search-candidates.jsonl` (147 records).
+
+**One action that touches existing counted data:** Ledger 2 row #22 (SitePoint "OpenClaw Security Audit Guide") is flagged UNVERIFIED. Codex's live check found no agent-audit / Yue Zhao / FORTIS mention, no Wayback snapshot exists, and the page returns 403 to automated fetch. Confirm in a logged-in browser; if the mention is absent, demote the row and Ledger 2 drops from 73 to 72.
+
+**Negatives recorded this cycle** (so future rounds skip them): ENISA AI cybersecurity framework and Stanford HAI 2026 AI Index (both checked, no TrustLLM), the White House 2026 AI policy framework PDF, the OpenAI GPT-5 system card PDF (no FORTIS hits), and the name collisions trustllm.eu and TraceAegis (arXiv:2606.11671).
+
+---
+
+## 2026-06-14 Codex Independent Broad Search
+
+Codex ran a fresh search independent of the 2026-06-13 Claude refresh. The pass used the project-local `skills/news-search` workflow, parsed the current local inventory as 112 publications and 19 tools, and used exact-URL dedupe against `news-coverage-audit.md` plus `news-search-candidates.jsonl`.
+
+Search coverage was deliberately broad: policy/PDF/foundation-model reports; media, security, and agent-risk press; ecosystem and tool adoption; smart-paper downstream usage; multilingual sources, patents, HN, Qiita, CSDN, GitHub README evidence, careers, procurement, and academic-downstream search. The first 5 structured lanes were followed by 4 less constrained lanes after the user asked for a bolder pass.
+
+**Net new Tier 0/1 direct coverage verified: 0.** The run added **46** exact-URL scratch records to `news-search-candidates.jsonl`: candidates, drops, duplicate-existing family rows, topic-validation rows, and verified negatives. No official government, foundation-model-company, major policy, or major media source was found that newly names a FORTIS work beyond the already-counted ledger rows.
+
+### New Phase B Candidates
+
+- **Academic downstream, not editorial coverage:** new ADBench rows at arXiv:2606.12483, arXiv:2604.20255, and arXiv:2602.03293; an Aegis downstream benchmark row at arXiv:2604.26274; and a TDC / TxGemma-adjacent row at arXiv:2508.10899. These should route to citation-audit or academic-evidence review, not direct news-ledger promotion.
+- **PyOD ecosystem and tutorial evidence:** Analytics Vidhya PyOD tutorial, nonconform arXiv and GitHub rows, TSB-AD, Databricks industry-solution repo, GitHub resource-list rows, CSDN PyOD tutorial URLs, Spanish Wikipedia pages, and low-signal Qiita / HN rows. These are useful completeness signals but should be cluster-deduped before any Ledger 3 change.
+- **Agent-security ecosystem evidence:** Agent Banana Hugging Face Papers, Aegis in Awesome-Agent-Harness, ReasonBreak using DoxBench, SafeSwitch / asqi TrustLLM mentions, plus topic-validation rows on MCP over-privilege and task-scoped agent authorization.
+- **Patent candidates needing Phase B:** CN112989338B (COPOD), CN117216660B (TODS), and CN117648656A (ADBench). Two patent rows surfaced in this pass were exact family duplicates of already-counted Actimize and Dun & Bradstreet patent evidence.
+
+### Verified Negatives and Drops
+
+- White House 2026 "National Policy Framework for Artificial Intelligence: Legislative Recommendations" PDF: checked as D8 government/policy evidence and found no FORTIS term hits.
+- OpenAI GPT-5 system card PDF: checked as foundation-model-company evidence and found no FORTIS term hits.
+- arXiv:2606.11671 "Runtime Skill Audit": the only Aegis hit was TraceAegis, a different work, so it is a name collision.
+- trustllm.eu is a TrustLLM name collision and is not Yue/FORTIS TrustLLM benchmark coverage.
+- Reddit search returned 403 in this pass; blocked Reddit queries are not absence evidence.
+
+### Audit Recheck
+
+- SitePoint "OpenClaw Security Audit Guide 2026" needs manual reconciliation. The current live page did not show a direct FORTIS `agent-audit`, USC, Yue Zhao, or FORTIS Lab mention during the 2026-06-14 pass, while the existing ledger classification treats the page as direct coverage. Check an archived snapshot before retaining that row as counted direct evidence.
+
+---
+
+## 2026-06-13 Refresh: New This Round (Claude /workflows Two-Phase Run)
+
+Two-phase `/workflows` run (Phase A: 10 dimension agents in waves of 3 produced 84 candidates; Phase B: 12 verification batches plus 3 dedicated Auditable Agents agents in waves of 6 produced 67 keeps; per-URL verdicts merged into `news-search-candidates.jsonl`).
+
+**Net new editorial coverage: about 0 counted ledger rows**, consistent with the two 2026-05-28 runs. The full re-sweep mostly re-surfaced already-tracked items. Phase B flagged several as new only because the in-prompt dedup brief did not enumerate the full Ledger 3 ecosystem list; a cross-check against the audit confirms they are already present (see "Already Tracked" below). The one genuinely new signal is the Auditable Agents downstream citations.
+
+### Auditable Agents (arXiv:2604.05485): Early Downstream Citations
+
+The dedicated deep-dive found **4 genuine third-party citations** of the paper within weeks of posting (full text plus bibliography verified; independent groups, no FORTIS author overlap). No press, blog, or community coverage yet (Hugging Face Papers returns 404). These are bibliometric, so they belong to `/citation-audit` rather than an editorial ledger; recorded here as a visibility signal:
+- arXiv:2606.04104: reproduces all five auditability dimensions as the conceptual basis (strongest).
+- arXiv:2606.10457: SF Express authors; credit it as "formaliz[ing] agent-auditability".
+- arXiv:2606.04990: cites "Nian et al., 2026" / "Auditable agents" in the audit/trust-functions section.
+- arXiv:2605.29253: names the paper by title; cites arXiv:2604.05485 in the intro and Section 2.2.
+- Excluded: arXiv:2604.17299 (Cat-DPO) is a same-group self-citation.
+
+### Already Tracked (Re-Confirmed This Round, Not Added)
+
+The sweep re-verified these; all are already in the ledgers, so no count change:
+- **Grokipedia (xAI)** entry for Yue Zhao: already Ledger 4 #70.
+- **Ericsson patent WO2023166515A1** (PyOD citation in the Background): already tracked.
+- **DataCamp / Udemy anomaly-detection courses** and the **Manning / O'Reilly "Outlier Detection in Python"** book (PyOD / ECOD / COPOD): already in Ledger 3.
+- **~45 PyOD / PyGOD / combo tutorials** (Medium, Towards Data Science, Zhihu, Qiita, Velog, ClassCat, and others): covered by existing equivalent Ledger 3 rows; per-URL verdicts in `news-search-candidates.jsonl`. One worth a spot-check is the Sep 2025 Towards Data Science "Boosting Your Anomaly Detection With LLMs" piece, which cites the **PyOD 2** paper (Chen et al., arXiv:2412.12154) by name.
+
+### Held: Needs Manual Verification (Not Yet Counted)
+
+- **alphaXiv VisualTimeAnomaly** (arXiv:2502.17812) and **aimodels.fyi JailDAM** (arXiv:2504.03770): both confirmed FORTIS works (Yue Zhao co-author), but the aggregator pages returned a deterministic 403, so the on-page mention is unverifiable. T5 if confirmed.
+- **CSDN PyOD tutorials** (HTTP 521 Cloudflare) and **Course Hero Deakin SIT719** (403): T3 tutorials, page bodies unreachable, not promoted from snippet alone.
+
+### Negative / Dropped (Recorded so Future Rounds Skip)
+
+- **ENISA, "Multilayer Framework for Good Cybersecurity Practices for AI"** PDF: fetched and checked, does **not** name TrustLLM (the snippet was a false positive). Verified-negative.
+- **Stanford HAI 2026 AI Index (Responsible AI chapter)**: read in full and checked (Yue, 2026-06-13), does **not** name TrustLLM. Verified-negative; the earlier search-snippet match was a generic description of TrustLLM, not the report citing it.
+- **Auditable Agents name collisions** (generic "auditable agents" / "AI agent audit" phrasing with no citation of arXiv:2604.05485): IBM Think, squirro.com, Medium (IndextDataLab and aiteacher), Hacker News item 47178697, arXiv:2605.06812 and arXiv:2604.25085 (distinct papers), GitHub Justin0504/Aegis (cites the Aegis paper arXiv:2603.12621, not Auditable Agents), GitHub HeadyZhang/agent-audit (unrelated same-name repo).
+- **First-party** (correctly excluded): the NSF PAR record of the PI's own grant output (TOD), the TrustGen / TrustEval own repo, and the Auditable Agents arXiv record and USC author page.
+
+### Citation-Audit Hook
+
+`citation-affiliation-audit.md` last refreshed 2026-05-28 (16 days, still fresh under the 30-day gate); the integrated "## Citation Affiliation Evidence" section below remains current, so no re-integration this round.
 
 ---
 
@@ -72,7 +160,7 @@ Independent third-party coverage by outlets not affiliated with you, your lab, o
 | 19 | ICDM paper | CCC Blog | Research community | ICDM 2025 BlueSky Track Second Prize CCC Award | Dec 2025 | D3 | [Link](https://cccblog.org/2025/12/19/announcing-blue-sky-track-winners-at-icdm-2025/) |
 | 20 | IET paper | AI Accelerator Institute | Industry blog | "Solving accountability in multi-agent AI systems" | 2026 | D3 | [Link](https://www.aiacceleratorinstitute.com/when-multi-agent-ai-systems-fail-who-takes-the-blame/) |
 | 21 | Aegis | AI:PRODUCTIVITY | Tech news | "Aegis: Open-Source Firewall That Intercepts AI Agent Tool Calls" | Mar 2026 | D3 | [Link](https://aiproductivity.ai/news/aegis-open-source-firewall-ai-agent-tool-calls/) |
-| 22 | agent-audit | SitePoint | Developer publication | "OpenClaw Security Audit Guide 2026" — links to agent-audit USC project page | 2026 | D4 | [Link](https://www.sitepoint.com/openclaw-security-audit-detecting-malicious-ai-agent-plugins/) |
+| 22 | agent-audit | SitePoint | Developer publication | "OpenClaw Security Audit Guide 2026" — links to agent-audit USC project page. **[UNVERIFIED 2026-06-14: Codex live check found no agent-audit / USC / Yue Zhao / FORTIS mention; no Wayback snapshot exists; WebFetch returns 403. Confirm in a logged-in browser. If the mention is absent, demote this row (Ledger 2 count 73 to 72).]** | 2026 | D4 | [Link](https://www.sitepoint.com/openclaw-security-audit-detecting-malicious-ai-agent-plugins/) |
 | 23 | StealthRank | LLMoGuy.com | AI blog | "StealthRank: Manipulating AI Search Results Through Stealthy Content Tweaks" | 2026 | D5 | [Link](https://www.llmoguy.com/stealthrank-manipulating-ai-search-results-through-stealthy-content-tweaks) |
 | 24 | GLIP-OOD | Quantum Zeitgeist | Tech blog | "Graph AI Enables Zero-Shot OOD Detection: A New Frontier" | 2025 | D5 | [Link](https://quantumzeitgeist.com/graph-ai-enables-zero-shot-out-of-distribution-detection-a-new-frontier-in-graph-based-anomaly-detection/) |
 | 25 | Computing Resources | DEV Community | Dev blog (external author) | Blog post; referenced in CSPaper Forum re: CVPR 2026 compute disclosure | 2025 | D5 | [Link](https://dev.to/paperium/the-role-of-computing-resources-in-publishing-foundation-model-research-1bfe) |
@@ -270,7 +358,7 @@ External parties building on, integrating, or teaching your tools -- not coverag
 
 *Note: Nature Scientific Reports x3 ADBench scientific-uptake cluster (s41598-025-88050-z, s41598-024-72982-z, s41598-025-28976-6) demoted back to candidate pool in Codex Round 2 because the rows rested on WebSearch-snippet confirmation only; full-text fetch was Nature-IDP gated. Per the "snippet alone is not verified evidence" rule, awaiting direct article fetch before re-promotion.*
 
-**Count: 169 ecosystem adoption items (154 main-ledger rows through May 13, +7 May 19 append-only verified rows, +4 May 20 append-only verified rows, +4 May 28 append-only verified rows).**
+**Count: 169 ecosystem adoption items (154 main-ledger rows through May 13, +7 May 19 append-only verified rows, +4 May 20 append-only verified rows, +4 May 28 append-only verified rows).** (2026-06-13 sweep added 0: all candidates re-surfaced already-tracked rows; see the "## 2026-06-13 Refresh" section.)
 
 ---
 
