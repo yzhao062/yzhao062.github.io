@@ -9,7 +9,7 @@
 # !.idea/codeStyles/
 # !.idea/inspectionProfiles/
 .agent-config/
-.claude/settings.local.json
+/.claude/
 
 # Secrets
 .env
