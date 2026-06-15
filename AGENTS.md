@@ -228,6 +228,7 @@ If anything is off, replace `all clear` with a semicolon-separated list of concr
 - Avoid heavy dash use. Do not use em dashes (`—`) or en dashes (`–`) as casual sentence punctuation. Prefer commas, semicolons, colons, or parentheses instead. En dashes in numeric ranges (e.g., `1–3`, `2020–2025`), paired names, or citations are fine. Normal hyphenation in compound words and technical terms (e.g., `command-line`, `co-PI`, `zero-shot`) is fine and should not be avoided.
 - Break extremely long or complex sentences into shorter, more readable ones. If a sentence has multiple clauses or nested qualifications, split it.
 - Vary sentence length and structure. Prefer not to start several consecutive sentences with the same word or phrase. Avoid overusing transition words like "Additionally" or "Furthermore." Not every paragraph needs a tidy summary sentence at the end. Mix short, direct sentences with longer ones to keep the writing natural.
+- Do not stage claims as "X, not Y" antithesis for emphasis (also "not just X, but Y"; "it is not X, it is Y"). State the claim directly. Keep the negation only when the rejected alternative is specific and the contrast informs the reader (e.g., "the bottleneck is disk I/O, not CPU").
 - When showing the user text whose purpose is to be copied into an external destination (an email reply, a chat message, a spreadsheet or table cell, a document), present that text in a fenced code block so it copies cleanly with line breaks and formatting intact. This applies to copy-paste-destined drafts, not to ordinary explanatory answers.
 
 ## Git Safety
@@ -333,7 +334,7 @@ When the session start check (item 4) detects older versions, list the affected 
 - When editing a skill, modify `SKILL.md` and its `references/` or `scripts/` directly. Do not create agent-specific forks of the same content.
 - If a new skill is added, create both the `skills/<skill-name>/SKILL.md` structure and a matching `.claude/commands/<skill-name>.md` pointer so Claude Code's slash-command surface stays in sync; Codex reaches the same skill through the lookup order without needing a pointer.
 
-<!-- rule-pack:agent-style:begin version=v0.3.5 sha256=45bd5e852d4ff62ce8949ff437849c80e24106c0c55631739eb059b6e9e60c1d -->
+<!-- rule-pack:agent-style:begin version=v0.3.6 sha256=45bd5e852d4ff62ce8949ff437849c80e24106c0c55631739eb059b6e9e60c1d -->
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 
 # The Elements of Agent Style — Rules
