@@ -109,4 +109,4 @@ Always run step 3 before step 5. No exceptions. `--yes` skips the interactive pr
 - Env vars: see `.env.example` for LINKEDIN_* keys
 - Shared draft patterns: `skills/post-to-x/references/draft-patterns.md`
 - Shared hashtag sets: `skills/post-to-x/references/hashtag-sets.md`
-- First live post: TBD (set once first LinkedIn post goes out)
+- First live post: https://www.linkedin.com/feed/update/urn:li:share:7472734205077053440/ (posted 2026-06-16; "Safe Models, Unsafe Agents" talk announcement, slide image + 6-paper list)
