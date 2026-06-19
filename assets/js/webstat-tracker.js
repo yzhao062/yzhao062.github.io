@@ -1,5 +1,14 @@
 // Shared Web-Stat loader to avoid duplicating inline tracker code across pages.
 (function () {
+    // Skip analytics on local and CI builds. Lighthouse CI audits against
+    // localhost, where the tracker endpoint returns 403/CORS errors and sets a
+    // third-party cookie, which fails the best-practices budget. Real production
+    // hostnames keep the tracker.
+    var host = window.location.hostname;
+    if (host === "localhost" || host === "127.0.0.1" || host === "[::1]" || host === "") {
+        return;
+    }
+
     var accountId = 1866123;
     var styleId = 5;
     var scriptUrl = "https://app.ardalio.com/wts7.js";
