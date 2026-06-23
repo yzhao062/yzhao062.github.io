@@ -35,7 +35,7 @@
       "Recovery",
       "Python SDK"
     ],
-    "last_updated_at": "2026-06-22T00:00:00Z"
+    "last_updated_at": "2026-06-23T03:39:49Z"
   },
   {
     "name": "AD-AGENT",
@@ -138,7 +138,7 @@
     "docs_url": "",
     "paper_url": "",
     "demo_url": "",
-    "stars": 9324,
+    "stars": 9325,
     "tags": [
       "Awesome List",
       "Anomaly Detection",
@@ -193,7 +193,7 @@
     "docs_url": "https://docs.pygod.org",
     "paper_url": "http://jmlr.org/papers/v25/23-0963.html",
     "demo_url": "",
-    "stars": 1496,
+    "stars": 1497,
     "tags": [
       "Graph Anomaly Detection",
       "PyTorch Geometric",
@@ -311,7 +311,7 @@
       "Audit Trail",
       "Human-in-the-Loop"
     ],
-    "last_updated_at": "2026-06-22T10:48:29Z"
+    "last_updated_at": "2026-06-22T19:51:22Z"
   },
   {
     "name": "combo",
@@ -360,7 +360,7 @@
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/agent-style.html",
     "paper_url": "",
     "demo_url": "https://pypi.org/project/agent-style/",
-    "stars": 522,
+    "stars": 523,
     "tags": [
       "AI Agents",
       "Agent Configuration",
