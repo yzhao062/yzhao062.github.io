@@ -19,6 +19,25 @@
     "last_updated_at": "2026-06-17T02:43:09Z"
   },
   {
+    "name": "auditable",
+    "category": "Agent Auditing",
+    "role": "Primary",
+    "description": "An open-source system of record for AI-agent decisions: it captures what each decision relied on, replays it against live state and rolls back the committed action when it no longer holds, and ranks the steps of a finished run by structural blast share, on one typed graph across an agent's plan, run, and review.",
+    "repo_url": "https://github.com/yzhao062/auditable",
+    "docs_url": "https://auditable-ai.readthedocs.io/",
+    "paper_url": "https://arxiv.org/abs/2606.22741",
+    "demo_url": "https://pypi.org/project/auditable/",
+    "stars": 0,
+    "tags": [
+      "AI Agent Auditing",
+      "Decision Replay",
+      "Runtime Governance",
+      "Recovery",
+      "Python SDK"
+    ],
+    "last_updated_at": "2026-06-22T00:00:00Z"
+  },
+  {
     "name": "AD-AGENT",
     "category": "Platform",
     "role": "Primary",

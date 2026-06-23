@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="author" content="Yue Zhao">
   <meta name="description" content="Yue Zhao, USC assistant professor: methods, benchmarks, and open-source tools for AI risk audit and control across data, foundation models, and agents.">
-  <meta name="keywords" content="Yue Zhao, USC, Agent Systems, AI Agent Auditing, AI Behavior Verification, Agentic AI, AI Risk Audit and Control, AI Risk, AI Risk Audit, AI Risk Control, AI Risk Management, AI Auditing, AI Defense, Adversarial Robustness, Anomaly Detection, Out-of-Distribution Detection, Trustworthiness Benchmarks, Runtime Guardrails, Foundation Models, AI Safety, AI Security, Outlier Detection, AI for Science and Society, Climate AI, Healthcare AI, Computational Social Systems">
+  <meta name="keywords" content="Yue Zhao, USC, Agent Systems, AI Agent Auditing, auditable, Agent Decision Auditing, AI Behavior Verification, Agentic AI, AI Risk Audit and Control, AI Risk, AI Risk Audit, AI Risk Control, AI Risk Management, AI Auditing, AI Defense, Adversarial Robustness, Anomaly Detection, Out-of-Distribution Detection, Trustworthiness Benchmarks, Runtime Guardrails, Foundation Models, AI Safety, AI Security, Outlier Detection, AI for Science and Society, Climate AI, Healthcare AI, Computational Social Systems">
 
   <title>Yue Zhao | AI Risk Audit and Control</title>
   <link rel="canonical" href="https://viterbi-web.usc.edu/~yzhao010/">
@@ -109,7 +109,7 @@
                         ">
                           <strong style="color:#990000;">Current Focus.</strong>
                           <span style="font-weight:600;">
-                            Founding <a href="https://fortislabs.ai" target="_blank" rel="noopener">FORTIS Labs <i class="fas fa-arrow-up-right-from-square" style="font-size:0.7em; margin-left:0.2rem; opacity:0.85;" aria-hidden="true"></i></a> and building <strong>auditable</strong>, an open-source system of record for AI-agent decisions
+                            Founding <a href="https://fortislabs.ai" target="_blank" rel="noopener">FORTIS Labs <i class="fas fa-arrow-up-right-from-square" style="font-size:0.7em; margin-left:0.2rem; opacity:0.85;" aria-hidden="true"></i></a> and building <a href="auditable.html"><strong>auditable</strong></a>, an open-source system of record for AI-agent decisions
                           </span>
                           that draws on the lab's research on AI risk audit and control across the deployment stack.
                           Also serving as Chief Scientific Advisor to <a href="https://www.figwork.ai/" target="_blank" rel="noopener">Figwork <i class="fas fa-arrow-up-right-from-square" style="font-size:0.7em; margin-left:0.2rem; opacity:0.85;" aria-hidden="true"></i></a>, an AI platform for early-career talent.
@@ -157,6 +157,12 @@
                           </div>
                           <div class="row g-3 fos-grid">
                             <div class="col-md-6 col-lg-4">
+                              <a href="auditable.html" style="font-weight:600;">auditable</a>
+                              <div style="color:#555; font-size:0.88rem; line-height:1.4;">
+                                System of record for AI-agent decisions: capture what each decision relied on, replay it against live state, and roll back when it no longer holds.
+                              </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
                               <a href="agent-style.html" style="font-weight:600;">agent-style</a>
                               <div style="color:#555; font-size:0.88rem; line-height:1.4;">
                                 21 writing rules for AI agents, loaded at generation time.
@@ -169,21 +175,15 @@
                               </div>
                             </div>
                             <div class="col-md-6 col-lg-4">
-                              <a href="agent-audit.html" style="font-weight:600;">agent-audit</a>
-                              <div style="color:#555; font-size:0.88rem; line-height:1.4;">
-                                OWASP Agentic Top 10 checks, taint analysis, and MCP auditing.
-                              </div>
-                            </div>
-                            <div class="col-md-6 col-lg-4">
-                              <a href="aegis.html" style="font-weight:600;">Aegis</a>
-                              <div style="color:#555; font-size:0.88rem; line-height:1.4;">
-                                Pre-execution policy firewall for AI agents with audit trails.
-                              </div>
-                            </div>
-                            <div class="col-md-6 col-lg-4">
                               <a href="pyod.html" style="font-weight:600;">PyOD 3</a>
                               <div style="color:#555; font-size:0.88rem; line-height:1.4;">
                                 Agentic anomaly detection: 60+ detectors, 42M+ downloads.
+                              </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                              <a href="https://github.com/pygod-team/pygod" style="font-weight:600;">PyGOD</a>
+                              <div style="color:#555; font-size:0.88rem; line-height:1.4;">
+                                Graph outlier detection with unified APIs over PyTorch Geometric.
                               </div>
                             </div>
                             <div class="col-md-6 col-lg-4">
@@ -203,15 +203,24 @@
                         ">
                           <strong style="color:#990000;">Featured Paper</strong>
                           <br>
-                          <a href="auditable-agents.html" style="font-weight:600;">Auditable Agents</a>
-                          <span style="color:#7a2a2a;">(ACL 2026 KnowFM Workshop)</span>:
-                          a position paper defining five dimensions of auditability for LLM agent systems
-                          and three mechanism classes for making agent behavior reconstructable, checkable,
-                          and attributable. This work informs <strong>auditable</strong>, the open-source thesis at <a href="https://fortislabs.ai" target="_blank" rel="noopener">fortislabs.ai</a>.
-                          <br>
-                          <a href="https://arxiv.org/abs/2604.05485" style="color:#990000;">[arXiv]</a>
-                          <a href="https://arxiv.org/pdf/2604.05485" style="color:#990000;">[PDF]</a>
-                          <a href="auditable-agents.html" style="color:#990000;">[Project Page]</a>
+                          <a href="https://arxiv.org/abs/2606.22741" style="font-weight:600;">GRADE: Graph Representation of LLM Agent Dependency and Execution</a>
+                          <span style="color:#7a2a2a;">(arXiv 2026)</span>:
+                          models any agent run as one typed graph with two layers, execution (what ran, in what order)
+                          and dependency (what each step relied on), then uses it to predict which runs fail and to
+                          localize the faulting step in multi-agent runs. GRADE is the technical foundation of
+                          <a href="auditable.html" style="font-weight:600;">auditable</a>, the open-source thesis at <a href="https://fortislabs.ai" target="_blank" rel="noopener">fortislabs.ai</a>.
+                          <a href="https://arxiv.org/abs/2606.22741" style="color:#990000;">[arXiv]</a>
+                          <a href="https://arxiv.org/pdf/2606.22741" style="color:#990000;">[PDF]</a>
+                          <a href="https://github.com/yzhao062/grade" style="color:#990000;">[Code]</a>
+                          <a href="auditable.html" style="color:#990000;">[Tool: auditable]</a>
+                          <div style="margin-top:10px; padding-top:10px; border-top:1px solid #ead5d5;">
+                            <strong style="color:#990000;">Framework:</strong>
+                            <a href="auditable-agents.html" style="font-weight:600;">Auditable Agents</a>
+                            <span style="color:#7a2a2a;">(ACL 2026 KnowFM)</span>:
+                            defines five dimensions of auditability and three mechanism classes (detect, enforce, recover) for LLM agent systems.
+                            <a href="https://arxiv.org/abs/2604.05485" style="color:#990000;">[arXiv]</a>
+                            <a href="auditable-agents.html" style="color:#990000;">[Project Page]</a>
+                          </div>
                         </div>
 
                         <ol>
@@ -291,6 +300,9 @@
 
                         <hr>
                         <h2 id="news">&#9992; News and Travel</h2>
+
+                        <p><strong>[Jun 2026]</strong> We released <a href="https://github.com/yzhao062/auditable"><b>auditable</b></a>, an open-source system of record for AI-agent decisions: it captures what each decision relied on, replays it against live state, and rolls back the committed action when it no longer holds, on one typed graph across an agent's plan, run, and review. <a href="https://github.com/yzhao062/auditable">[GitHub]</a></p>
+                        <p><strong>[Jun 2026]</strong> New preprint: <b>GRADE: Graph Representation of LLM Agent Dependency and Execution</b>. GRADE models any agent run as one graph with two layers, execution (what ran in what order) and dependency (what each step relied on), and uses it to predict run failure and localize the faulting step in multi-agent runs. <a href="https://arxiv.org/abs/2606.22741">[arXiv]</a> <a href="https://github.com/yzhao062/grade">[GitHub]</a></p>
 
                         <p><strong>[Jun 2026]</strong> Our open-source projects have been accepted into <a href="https://openai.com/form/codex-for-oss/">OpenAI's Codex for Open Source</a> program. <span style="white-space: nowrap;">Thank you, <img src="images/sponsors/openai.png" alt="OpenAI logo" width="22" height="22" loading="lazy" decoding="async" style="vertical-align: -4px; margin-left: 4px; border-radius: 2px;"></span></p>
                         <p><strong>[May 2026]</strong> A collaborative paper Yue co-authored, <b>CoAct: Co-Active LLM Preference Learning with Human-AI Synergy</b>, has been selected for an <span style="color:#990000"><b>Oral</b></span> presentation at <i>ACL 2026</i>. Congratulations to the lead team. <a href="https://arxiv.org/abs/2604.17501">[arXiv]</a></p>

@@ -1151,6 +1151,22 @@
         "abstract": "PyOD is an open-source Python toolbox for performing scalable outlier detection on multivariate data. Uniquely, it provides access to a wide range of outlier detection algorithms, including established outlier ensembles and more recent neural network-based approaches, under a single, well-documented API designed for use by both practitioners and researchers."
     },
     {
+        "id": "preprint-grade",
+        "section": "preprint",
+        "title": "GRADE: Graph Representation of LLM Agent Dependency and Execution",
+        "paper_url": "https://arxiv.org/abs/2606.22741",
+        "authors": "Yue Zhao",
+        "venue": "arXiv preprint",
+        "year": 2026,
+        "links": [
+            {
+                "type": "github",
+                "url": "https://github.com/yzhao062/grade"
+            }
+        ],
+        "abstract": "Can one graph represent every kind of LLM agent's run? A trace records what each step did, never what it relied on, the state it read, and the results it reused. GRADE recovers that missing layer: it models any run as one graph over its step nodes with two edge layers, execution edges (what ran in what order) read from the trace for free, and dependency edges (what each step relied on) rarely logged, so each is graded by how it is known, observed, declared, or inferred. One representation, and each layer earns its place. Across six corpora of LLM agents spanning tool use, coding, and the web, the dependency layer can predict failure where run size is weak and, under leave-one-corpus-out transfer, stays above chance on every held-out class while run size fails. Meanwhile, the execution layer localizes the faulting step in a failed multi-agent run. This work also provides a more in-depth analysis of why generic graph neural networks may misread the dependency layer, unlike our feature-based alternative. The same graph representation opens further uses, carrying from failure diagnosis in a single run to efficiency and robustness optimization at scale."
+    },
+    {
         "id": "preprint-specalign",
         "section": "preprint",
         "title": "SpecAlign: Efficient Specification-Grounded Alignment of Large Language Models via Synthetic Data",

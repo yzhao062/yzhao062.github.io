@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Yue Zhao">
+  <meta name="description" content="auditable is an open-source system of record for AI-agent decisions: capture the dependency state a decision relied on, replay it against live state, and recover by reversing actions that no longer hold, on one typed two-layer graph.">
+  <meta name="keywords" content="auditable, AI Agent Auditing, Agent Decision Audit, Decision Replay, Post-Commit Rollback, Recovery, Dependency Graph, Execution Graph, GRADE, Runtime Governance, AI Risk Audit and Control, AI Safety, Agentic AI, LLM Agents, Python, PyPI, GitHub">
+  <title>auditable | System of Record for AI-Agent Decisions</title>
+  <link rel="canonical" href="https://viterbi-web.usc.edu/~yzhao010/auditable.html">
+  <link rel="icon" type="image/x-icon" href="images/logo2.ico">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="auditable | System of Record for AI-Agent Decisions">
+  <meta property="og:description" content="Open-source system of record for AI-agent decisions: capture what a decision relied on, replay it against live state, and reverse committed actions that no longer hold, on one typed two-layer graph.">
+  <meta property="og:url" content="https://viterbi-web.usc.edu/~yzhao010/auditable.html">
+  <meta property="og:image" content="https://viterbi-web.usc.edu/~yzhao010/images/logo.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="auditable | System of Record for AI-Agent Decisions">
+  <meta name="twitter:description" content="Open-source system of record for AI-agent decisions: capture what a decision relied on, replay it against live state, and reverse committed actions that no longer hold.">
+  <meta name="twitter:image" content="https://viterbi-web.usc.edu/~yzhao010/images/logo.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareSourceCode",
+    "name": "auditable",
+    "description": "Open-source system of record for AI-agent decisions: capture the dependency state a decision relied on, replay it against live state, and reverse a committed action when it no longer holds, on one typed two-layer graph.",
+    "url": "https://viterbi-web.usc.edu/~yzhao010/auditable.html",
+    "codeRepository": "https://github.com/yzhao062/auditable",
+    "downloadUrl": "https://pypi.org/project/auditable/",
+    "programmingLanguage": "Python",
+    "license": "https://www.apache.org/licenses/LICENSE-2.0",
+    "author": {
+      "@type": "Person",
+      "name": "Yue Zhao"
+    }
+  }
+  </script>
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preload" as="image" href="images/rsz_300.jpg">
+  <link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap.min.css" onerror="this.onerror=null;this.href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css';">
+  <script src="assets/vendor/bootstrap/bootstrap.bundle.min.js" defer onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js';"></script>
+  <link rel="preload" href="assets/vendor/fontawesome/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.onerror=null;this.rel='stylesheet';this.href='https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css';">
+  <noscript><link rel="stylesheet" href="assets/vendor/fontawesome/css/all.min.css"></noscript>
+  <link rel="stylesheet" href="css/common.css">
+  <script src="assets/js/layout-shell.js" defer></script>
+</head>
+<body>
+  <div id="navbar"></div>
+  <script src="assets/js/webstat-tracker.js" defer></script>
+  <noscript><img src="https://app.ardalio.com/7/5/1866123.png" alt=""></noscript>
+
+  <div class="container">
+    <div class="row">
+      <div id="sidebar" class="col-md-3 col-12 content-spacing"></div>
+      <div class="col-md-9 col-12 content-spacing">
+        <h1 style="color:#990000;">auditable</h1>
+        <p style="font-size:1.05rem; color:#7a2a2a; font-weight:600; margin-bottom:14px;">
+          Audit any agent decision across its past, present, and future, on one typed graph.
+        </p>
+        <p>
+          <strong>auditable</strong> is an open-source system of record for AI-agent decisions. Your logs show what an
+          agent did; auditable shows what each decision relied on, replays that decision against the state that is live
+          now, and rolls back the committed action when it no longer holds. Every agent run becomes one typed
+          graph with two layers, execution (what ran, in what order) and dependency (what each step relied on), read at
+          three points in the agent's life: before deploy, while running, and after a run.
+        </p>
+        <p>
+          This project is the open-source thesis of our <strong>Agent Layer</strong> work on agent risk audit and
+          runtime control. The core is framework-agnostic and dependency-free, and is built on the two-layer graph
+          model introduced in our <a href="https://arxiv.org/abs/2606.22741">GRADE</a> paper.
+        </p>
+
+        <p>
+          <a href="https://github.com/yzhao062/auditable"><i class="fab fa-github" aria-hidden="true"></i> GitHub Repository</a>
+          |
+          <a href="https://github.com/yzhao062/auditable/stargazers"><i class="fas fa-star" aria-hidden="true"></i> Star on GitHub</a>
+          |
+          <a href="https://pypi.org/project/auditable/"><i class="fas fa-cube" aria-hidden="true"></i> PyPI Package</a>
+          |
+          <a href="https://auditable-ai.readthedocs.io/"><i class="fas fa-book" aria-hidden="true"></i> Documentation</a>
+          |
+          <a href="https://arxiv.org/abs/2606.22741"><i class="fas fa-file-alt" aria-hidden="true"></i> GRADE (arXiv)</a>
+          |
+          <a href="opensource.html"><i class="fas fa-wrench" aria-hidden="true"></i> Back to Open Source</a>
+        </p>
+
+        <p style="background:#fff7f2; border-left:4px solid #F26178; padding:10px 14px; margin:10px 0 14px 0;">
+          If this project is useful in your workflow, please
+          <a href="https://github.com/yzhao062/auditable/stargazers"><strong>star the GitHub repository</strong></a>
+          to help more practitioners discover it.
+        </p>
+
+        <hr>
+        <h2 style="color:#990000;">Why this project</h2>
+        <p>
+          Agents act on dependency state that quietly drifts. A budget read minutes ago can fall below an amount already
+          committed; a price pinned at plan time can move before the action lands. Most tools log what happened, but they
+          cannot re-decide under the state that is live now, so a stale decision stands until a human notices. auditable
+          closes that recovery gap on one graph: it captures the decision, replays it against live state, and reverses the
+          committed action when it no longer holds.
+        </p>
+
+        <h2 style="color:#990000;">The three pillars</h2>
+        <p>
+          The same detection-and-report pass runs over one typed decision graph at three points in an agent's life. The
+          graph kernel stays constant; only the pillar changes.
+        </p>
+        <ul>
+          <li><strong>PRE</strong> (before deploy, <code>analyze_plan</code>): read-only structural lints on a declared plan, naming the control-flow chokepoint the plan rests on.</li>
+          <li><strong>LIVE</strong> (while running, <code>audit</code> + <code>replay</code> + <code>ActionGate</code>): capture a decision, re-decide under live state, and route a fix (allow, block, review, or roll back) through a rail.</li>
+          <li><strong>POST</strong> (after a run, <code>analyze_run</code>): rank a finished run by structural blast share and name the keystone step to review first.</li>
+        </ul>
+
+        <h2 style="color:#990000;">The flagship moment</h2>
+        <p>
+          One payment, walked through the whole lifecycle. An agent approves a $2,083.20 vendor payment against a budget
+          snapshot that covered it. Six days later the live budget has dropped below the amount. <code>replay</code>
+          re-decides on the live state, and the gate reverses the committed payment. This is recovery, not a log line.
+        </p>
+        <p style="color:#7a2a2a;">
+          <em>Note:</em> the shipped <code>ReferenceLedger</code> is an in-process reference rail for demos and tests;
+          production use needs a real compensation rail behind the same gate interface.
+        </p>
+
+        <h2 style="color:#990000;">Proven on public agent benchmarks</h2>
+        <p>
+          The graph is not just structure. GRADE
+          (<a href="https://arxiv.org/abs/2606.22741">arXiv:2606.22741</a>) evaluates six public agent corpora for
+          run-failure prediction. On SWE-Gym, adding the dependency layer lifts within-corpus ROC-AUC from a
+          0.663 run-size baseline to 0.805. Separately, the execution layer localizes the faulting step at Top-3 0.614
+          on the Who&amp;When benchmark.
+        </p>
+
+        <h2 style="color:#990000;">Quick start</h2>
+        <p>Install from PyPI:</p>
+        <pre style="background:#f8f8f8; border:1px solid #ddd; border-radius:8px; padding:12px;"><code>pip install auditable</code></pre>
+        <p>
+          The core is dependency-free and torch-free. Structural-graph analysis (<code>analyze_plan</code> for PRE,
+          <code>analyze_run</code> for POST) needs the optional graph extra:
+        </p>
+        <pre style="background:#f8f8f8; border:1px solid #ddd; border-radius:8px; padding:12px;"><code>pip install "auditable[graph]"</code></pre>
+
+        <h2 style="color:#990000;">Built on GRADE</h2>
+        <p>
+          auditable productizes the typed two-layer graph model introduced in
+          <a href="https://arxiv.org/abs/2606.22741">GRADE: Graph Representation of LLM Agent Dependency and Execution</a>.
+          If you use auditable in your work, please cite GRADE:
+        </p>
+        <pre style="background:#f8f8f8; border:1px solid #ddd; border-radius:8px; padding:12px;"><code>@article{zhao2026grade,
+  title   = {GRADE: Graph Representation of LLM Agent Dependency and Execution},
+  author  = {Zhao, Yue},
+  journal = {arXiv preprint arXiv:2606.22741},
+  year    = {2026}
+}</code></pre>
+      </div>
+    </div>
+  </div>
+
+  <div id="myFooter"></div>
+</body>
+</html>
