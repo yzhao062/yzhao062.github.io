@@ -15,6 +15,16 @@
   },
   {
     "group": "current",
+    "name": "Zelong Xu",
+    "profile_url": "https://zelongxueric.github.io/",
+    "image": "images/others/zelongxu.webp",
+    "alt": "Zelong Xu",
+    "research": "Preference Optimization / LLM Safety Alignment",
+    "status_text": "Undergraduate Researcher (UW–Madison)",
+    "email": "zxu684@wisc.edu",
+  },
+  {
+    "group": "current",
     "name": "Xiaoqin Feng",
     "profile_url": "https://xqfeng-josie.github.io/",
     "image": "images/others/xiaoqin_feng.webp",
