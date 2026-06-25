@@ -27,7 +27,7 @@
     "docs_url": "https://auditable-ai.readthedocs.io/",
     "paper_url": "https://arxiv.org/abs/2606.22741",
     "demo_url": "https://pypi.org/project/auditable/",
-    "stars": 6,
+    "stars": 10,
     "tags": [
       "AI Agent Auditing",
       "Decision Replay",
@@ -36,6 +36,25 @@
       "Python SDK"
     ],
     "last_updated_at": "2026-06-24T04:52:13Z"
+  },
+  {
+    "name": "awesome-auditable-ai",
+    "category": "Resource Hub",
+    "role": "Primary",
+    "description": "A curated list of papers, tools, datasets, benchmarks, and standards for building, evaluating, and auditing reliable AI agents, organized around a reader-first reliability map.",
+    "repo_url": "https://github.com/yzhao062/awesome-auditable-ai",
+    "docs_url": "",
+    "paper_url": "",
+    "demo_url": "",
+    "stars": 6,
+    "tags": [
+      "AI Agent Auditing",
+      "Agent Reliability",
+      "Awesome List",
+      "Resources",
+      "Benchmarks"
+    ],
+    "last_updated_at": "2026-06-24T00:00:00Z"
   },
   {
     "name": "AD-AGENT",
