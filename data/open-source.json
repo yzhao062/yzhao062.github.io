@@ -46,7 +46,7 @@
     "docs_url": "",
     "paper_url": "",
     "demo_url": "",
-    "stars": 6,
+    "stars": 7,
     "tags": [
       "AI Agent Auditing",
       "Agent Reliability",
@@ -157,7 +157,7 @@
     "docs_url": "",
     "paper_url": "",
     "demo_url": "",
-    "stars": 9327,
+    "stars": 9326,
     "tags": [
       "Awesome List",
       "Anomaly Detection",
@@ -230,7 +230,7 @@
     "docs_url": "http://tods-doc.github.io",
     "paper_url": "https://arxiv.org/abs/2009.09822",
     "demo_url": "",
-    "stars": 1660,
+    "stars": 1659,
     "tags": [
       "Time Series",
       "Anomaly Detection",
@@ -248,7 +248,7 @@
     "docs_url": "https://tdcommons.ai",
     "paper_url": "https://proceedings.neurips.cc/paper/2021/hash/6a8d3b0f5987e0f6d3d2f5f65f02e3cc-Abstract.html",
     "demo_url": "",
-    "stars": 1258,
+    "stars": 1259,
     "tags": [
       "Therapeutics",
       "Benchmark",
@@ -303,7 +303,7 @@
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/agent-audit.html",
     "paper_url": "https://arxiv.org/abs/2603.22853",
     "demo_url": "https://pypi.org/project/agent-audit/",
-    "stars": 188,
+    "stars": 189,
     "tags": [
       "AI Agent Security",
       "Security Audit",
@@ -359,7 +359,7 @@
     "docs_url": "https://anywhere-agents.readthedocs.io",
     "paper_url": "",
     "demo_url": "",
-    "stars": 185,
+    "stars": 186,
     "tags": [
       "Claude Code",
       "Codex",
@@ -379,7 +379,7 @@
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/agent-style.html",
     "paper_url": "",
     "demo_url": "https://pypi.org/project/agent-style/",
-    "stars": 527,
+    "stars": 528,
     "tags": [
       "AI Agents",
       "Agent Configuration",
