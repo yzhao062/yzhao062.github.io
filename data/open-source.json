@@ -8,7 +8,7 @@
     "docs_url": "https://pyod.readthedocs.io",
     "paper_url": "https://arxiv.org/abs/2412.12154",
     "demo_url": "",
-    "stars": 9890,
+    "stars": 9889,
     "tags": [
       "Anomaly Detection",
       "Outlier Detection",
@@ -303,7 +303,7 @@
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/agent-audit.html",
     "paper_url": "https://arxiv.org/abs/2603.22853",
     "demo_url": "https://pypi.org/project/agent-audit/",
-    "stars": 189,
+    "stars": 191,
     "tags": [
       "AI Agent Security",
       "Security Audit",
@@ -330,7 +330,7 @@
       "Audit Trail",
       "Human-in-the-Loop"
     ],
-    "last_updated_at": "2026-06-29T04:20:33Z"
+    "last_updated_at": "2026-06-29T08:05:26Z"
   },
   {
     "name": "combo",
@@ -341,7 +341,7 @@
     "docs_url": "https://pycombo.readthedocs.io",
     "paper_url": "https://aaai.org/papers/13648-combining-machine-learning-models-using-combo-library/",
     "demo_url": "",
-    "stars": 661,
+    "stars": 662,
     "tags": [
       "Ensemble Learning",
       "Model Combination",
@@ -379,7 +379,7 @@
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/agent-style.html",
     "paper_url": "",
     "demo_url": "https://pypi.org/project/agent-style/",
-    "stars": 534,
+    "stars": 536,
     "tags": [
       "AI Agents",
       "Agent Configuration",
