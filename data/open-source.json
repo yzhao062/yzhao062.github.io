@@ -8,7 +8,7 @@
     "docs_url": "https://pyod.readthedocs.io",
     "paper_url": "https://arxiv.org/abs/2412.12154",
     "demo_url": "",
-    "stars": 9888,
+    "stars": 9890,
     "tags": [
       "Anomaly Detection",
       "Outlier Detection",
@@ -27,7 +27,7 @@
     "docs_url": "https://auditable-ai.readthedocs.io/",
     "paper_url": "https://arxiv.org/abs/2606.22741",
     "demo_url": "https://pypi.org/project/auditable/",
-    "stars": 10,
+    "stars": 11,
     "tags": [
       "AI Agent Auditing",
       "Decision Replay",
@@ -139,7 +139,7 @@
     "docs_url": "",
     "paper_url": "https://proceedings.neurips.cc/paper_files/paper/2022/hash/da0ddd47c18ae3dd2888ff2ea4b6ccf7-Abstract-Datasets_and_Benchmarks.html",
     "demo_url": "",
-    "stars": 1016,
+    "stars": 1015,
     "tags": [
       "Anomaly Detection",
       "Benchmark",
@@ -176,7 +176,7 @@
     "docs_url": "",
     "paper_url": "",
     "demo_url": "",
-    "stars": 1591,
+    "stars": 1594,
     "tags": [
       "Writing",
       "Research Workflow",
@@ -230,7 +230,7 @@
     "docs_url": "http://tods-doc.github.io",
     "paper_url": "https://arxiv.org/abs/2009.09822",
     "demo_url": "",
-    "stars": 1659,
+    "stars": 1660,
     "tags": [
       "Time Series",
       "Anomaly Detection",
@@ -285,7 +285,7 @@
     "docs_url": "",
     "paper_url": "",
     "demo_url": "",
-    "stars": 117,
+    "stars": 118,
     "tags": [
       "Agent Tools",
       "Skill Library",
@@ -322,7 +322,7 @@
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/aegis.html",
     "paper_url": "https://arxiv.org/abs/2603.12621",
     "demo_url": "https://github.com/Justin0504/Aegis/blob/main/docs/images/readme_demo1.gif",
-    "stars": 358,
+    "stars": 360,
     "tags": [
       "AI Agent Security",
       "Policy Enforcement",
@@ -368,7 +368,7 @@
       "Configuration",
       "MCP"
     ],
-    "last_updated_at": "2026-06-15T02:22:43Z"
+    "last_updated_at": "2026-06-28T04:47:48Z"
   },
   {
     "name": "agent-style",
@@ -379,7 +379,7 @@
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/agent-style.html",
     "paper_url": "",
     "demo_url": "https://pypi.org/project/agent-style/",
-    "stars": 528,
+    "stars": 534,
     "tags": [
       "AI Agents",
       "Agent Configuration",
