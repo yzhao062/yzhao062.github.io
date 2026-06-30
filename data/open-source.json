@@ -35,7 +35,7 @@
       "Recovery",
       "Python SDK"
     ],
-    "last_updated_at": "2026-06-25T07:23:35Z"
+    "last_updated_at": "2026-06-30T18:44:11Z"
   },
   {
     "name": "awesome-auditable-ai",
@@ -46,7 +46,7 @@
     "docs_url": "",
     "paper_url": "",
     "demo_url": "",
-    "stars": 7,
+    "stars": 8,
     "tags": [
       "AI Agent Auditing",
       "Agent Reliability",
@@ -54,7 +54,7 @@
       "Resources",
       "Benchmarks"
     ],
-    "last_updated_at": "2026-06-25T06:17:56Z"
+    "last_updated_at": "2026-06-30T18:44:50Z"
   },
   {
     "name": "AD-AGENT",
@@ -157,7 +157,7 @@
     "docs_url": "",
     "paper_url": "",
     "demo_url": "",
-    "stars": 9326,
+    "stars": 9330,
     "tags": [
       "Awesome List",
       "Anomaly Detection",
@@ -303,7 +303,7 @@
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/agent-audit.html",
     "paper_url": "https://arxiv.org/abs/2603.22853",
     "demo_url": "https://pypi.org/project/agent-audit/",
-    "stars": 191,
+    "stars": 192,
     "tags": [
       "AI Agent Security",
       "Security Audit",
@@ -330,7 +330,7 @@
       "Audit Trail",
       "Human-in-the-Loop"
     ],
-    "last_updated_at": "2026-06-29T08:05:26Z"
+    "last_updated_at": "2026-06-29T18:11:05Z"
   },
   {
     "name": "combo",
@@ -368,7 +368,7 @@
       "Configuration",
       "MCP"
     ],
-    "last_updated_at": "2026-06-28T04:47:48Z"
+    "last_updated_at": "2026-06-30T00:26:33Z"
   },
   {
     "name": "agent-style",
