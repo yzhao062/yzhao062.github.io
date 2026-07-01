@@ -8,7 +8,7 @@
     "docs_url": "https://pyod.readthedocs.io",
     "paper_url": "https://arxiv.org/abs/2412.12154",
     "demo_url": "",
-    "stars": 9889,
+    "stars": 9893,
     "tags": [
       "Anomaly Detection",
       "Outlier Detection",
@@ -27,7 +27,7 @@
     "docs_url": "https://auditable-ai.readthedocs.io/",
     "paper_url": "https://arxiv.org/abs/2606.22741",
     "demo_url": "https://pypi.org/project/auditable/",
-    "stars": 11,
+    "stars": 12,
     "tags": [
       "AI Agent Auditing",
       "Decision Replay",
@@ -379,7 +379,7 @@
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/agent-style.html",
     "paper_url": "",
     "demo_url": "https://pypi.org/project/agent-style/",
-    "stars": 536,
+    "stars": 538,
     "tags": [
       "AI Agents",
       "Agent Configuration",
