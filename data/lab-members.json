@@ -318,9 +318,9 @@
     "group": "current",
     "name": "Ziyan Yang",
     "profile_url": "https://www.linkedin.com/in/ziyan-yang-925226320/",
-    "image": "images/others/ZiyanYang.webp",
+    "image": "images/others/ZiyanYang.jpg",
     "alt": "Ziyan Yang",
-    "year_info": "M.S. Student, Joined FORTIS Lab in 2025",
+    "status_text": "M.S. Student, Joined FORTIS Lab in 2025",
     "research": "LLM/Agentic AI/Computer Vision/Multimodal Learning",
     "email": "ziyan.yang@usc.edu"
   }
