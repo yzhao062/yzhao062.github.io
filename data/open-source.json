@@ -8,7 +8,7 @@
     "docs_url": "https://pyod.readthedocs.io",
     "paper_url": "https://arxiv.org/abs/2412.12154",
     "demo_url": "",
-    "stars": 9906,
+    "stars": 9911,
     "tags": [
       "Anomaly Detection",
       "Outlier Detection",
@@ -27,7 +27,7 @@
     "docs_url": "https://auditable-ai.readthedocs.io/",
     "paper_url": "https://arxiv.org/abs/2606.22741",
     "demo_url": "https://pypi.org/project/auditable/",
-    "stars": 13,
+    "stars": 14,
     "tags": [
       "AI Agent Auditing",
       "Decision Replay",
@@ -83,7 +83,7 @@
     "docs_url": "https://trustllmbenchmark.github.io/TrustLLM-Website/",
     "paper_url": "https://openreview.net/forum?id=bWUU0LwwMp",
     "demo_url": "",
-    "stars": 629,
+    "stars": 628,
     "tags": [
       "Trustworthy AI",
       "LLM Evaluation",
@@ -157,7 +157,7 @@
     "docs_url": "",
     "paper_url": "",
     "demo_url": "",
-    "stars": 9338,
+    "stars": 9341,
     "tags": [
       "Awesome List",
       "Anomaly Detection",
@@ -176,7 +176,7 @@
     "docs_url": "",
     "paper_url": "",
     "demo_url": "",
-    "stars": 1597,
+    "stars": 1602,
     "tags": [
       "Writing",
       "Research Workflow",
@@ -212,7 +212,7 @@
     "docs_url": "https://docs.pygod.org",
     "paper_url": "http://jmlr.org/papers/v25/23-0963.html",
     "demo_url": "",
-    "stars": 1498,
+    "stars": 1497,
     "tags": [
       "Graph Anomaly Detection",
       "PyTorch Geometric",
@@ -230,7 +230,7 @@
     "docs_url": "http://tods-doc.github.io",
     "paper_url": "https://arxiv.org/abs/2009.09822",
     "demo_url": "",
-    "stars": 1661,
+    "stars": 1662,
     "tags": [
       "Time Series",
       "Anomaly Detection",
@@ -248,7 +248,7 @@
     "docs_url": "https://tdcommons.ai",
     "paper_url": "https://proceedings.neurips.cc/paper/2021/hash/6a8d3b0f5987e0f6d3d2f5f65f02e3cc-Abstract.html",
     "demo_url": "",
-    "stars": 1262,
+    "stars": 1263,
     "tags": [
       "Therapeutics",
       "Benchmark",
@@ -330,7 +330,7 @@
       "Audit Trail",
       "Human-in-the-Loop"
     ],
-    "last_updated_at": "2026-07-07T10:22:18Z"
+    "last_updated_at": "2026-07-10T04:37:08Z"
   },
   {
     "name": "combo",
@@ -341,7 +341,7 @@
     "docs_url": "https://pycombo.readthedocs.io",
     "paper_url": "https://aaai.org/papers/13648-combining-machine-learning-models-using-combo-library/",
     "demo_url": "",
-    "stars": 663,
+    "stars": 662,
     "tags": [
       "Ensemble Learning",
       "Model Combination",
@@ -379,7 +379,7 @@
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/agent-style.html",
     "paper_url": "",
     "demo_url": "https://pypi.org/project/agent-style/",
-    "stars": 546,
+    "stars": 550,
     "tags": [
       "AI Agents",
       "Agent Configuration",
