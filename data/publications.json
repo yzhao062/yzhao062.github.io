@@ -1552,6 +1552,18 @@
         "abstract": "The integration of large language models (LLMs) into information retrieval systems introduces new attack surfaces, particularly for adversarial ranking manipulations. We present $\\textbf{StealthRank}$, a novel adversarial attack method that manipulates LLM-driven ranking systems while maintaining textual fluency and stealth. Unlike existing methods that often introduce detectable anomalies, StealthRank employs an energy-based optimization framework combined with Langevin dynamics to generate StealthRank Prompts (SRPs)-adversarial text sequences embedded within item or document descriptions that subtly yet effectively influence LLM ranking mechanisms. We evaluate StealthRank across multiple LLMs, demonstrating its ability to covertly boost the ranking of target items while avoiding explicit manipulation traces. Our results show that StealthRank consistently outperforms state-of-the-art adversarial ranking baselines in both effectiveness and stealth, highlighting critical vulnerabilities in LLM-driven ranking systems. Our code is publicly available at $\\href{https://github.com/Tangyiming205069/controllable-seo}{here}$."
     },
     {
+        "id": "conference-flexrouter",
+        "section": "conference",
+        "title": "FlexRouter: Learning Complementary Model Sets for Flexible LLM Routing",
+        "paper_url": "https://research.adobe.com/publication/flexrouter-learning-complementary-model-sets-for-flexible-llm-routing/",
+        "authors": "Wang Wei, Hongzheng Yang, Tiankai Yang, Samyadeep Basu, Hongjie Chen, Yue Zhao, Franck Dernoncourt, Ryan A. Rossi, Hoda Eldardiry",
+        "venue": "COLM, 2026",
+        "year": 2026,
+        "sort_date": "2026-10-06",
+        "links": [],
+        "abstract": ""
+    },
+    {
         "id": "preprint-tagfn",
         "section": "preprint",
         "title": "TAGFN: A Text-Attributed Graph Dataset for Fake News Detection in the Age of LLMs",

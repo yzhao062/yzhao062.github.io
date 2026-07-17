@@ -37,3 +37,6 @@ cv/*.snm
 cv/*.vrb
 cv/*.pdf
 agent-config.local.yaml
+
+# Local inbox for documents being processed (offer letters, scans). Never commit: this repo is public.
+/todo/

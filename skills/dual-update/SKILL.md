@@ -15,6 +15,7 @@ When the user adds or updates content that exists in both the website and the CV
 | **Preprint / under submission** | `data/publications.json` (section `"preprint"`), `files/yue-zhao.bib` | `cv/cv-full.tex` (Preprints section) | Add to all three. Website preprints render on `publications.html` via the JSON `section: "preprint"` entries. In `files/yue-zhao.bib` a preprint is an `@article` with `journal={arXiv preprint arXiv:...}`; on acceptance, switch that entry to the accepted venue's BibTeX type and venue field, year, and final venue text. |
 | **Award / Grant** | `index.html` (Awards section) | `cv/cv-full.tex` (Awards section) | Both use chronological order, newest first. |
 | **Service role** (reviewer, AC, editor, organizer) | `services.html` | `cv/cv-full.tex` (Services section) | Match the sub-category (organizing, editorial, AC/reviewer, journal reviewer). |
+| **Institutional leadership appointment** (institute/center director, associate director, or similar named USC role) | `services.html` (Institutional Leadership); optionally `files/bio.txt` as a current-profile surface | `cv/cv-full.tex` (Services → Institutional Leadership) | Use the exact title from the offer letter, and a finite term (`2026-2027` in HTML, `2026--2027` in LaTeX). Never write `Present` and never infer months the letter does not state. The dated CV and services records stay accurate after the term. If `files/bio.txt` says the appointee currently serves in the role, revise or remove that clause after the term. Keep it out of Professional Experience, which holds employment and external advisory roles. Link the institute's home page, not its leadership page, which may not list the appointee yet. |
 | **Teaching course** | `teaching.html` | `cv/cv-full.tex` (Teaching section) | Include semester, course number, title, enrollment if known. |
 | **PhD student** | `data/lab-current-phd.json` | `cv/cv-full.tex` (PhD Students section) | JSON has structured fields; CV uses inline LaTeX. |
 | **Open-source project** | `data/open-source.json` | `cv/open-source.tex` (**auto-generated**) | Edit JSON only, then run `python scripts/generate_cv_open_source.py`. Do NOT edit `cv/open-source.tex` directly. |
@@ -110,11 +111,12 @@ AWARD_NAME & TYPE & DATE \\
 
 Some dual-update events also warrant a news item in the News section of `index.html` (top of the list, newest first). Add a news item — in addition to the dual update — when any of the following happens:
 
-- A paper is **newly accepted** to a venue (including moves from preprint → conference/workshop/journal). Mention the title, venue, and lead author when Yue-led credit framing supports that; otherwise credit the lead team or use neutral co-author framing.
+- A paper is **newly accepted** to a venue, including a move from preprint → conference, workshop, or journal, **when Yue-led credit framing applies**. This framing applies when Yue is last or co-last author, or a Yue-advised student is first author. Mention the title, venue, and lead author. When only neutral framing applies (Yue is a middle author and no Yue-advised student is first author), **skip the news item by default**: do the three-surface publication update and stop. A Yue-advised co-author in a middle slot does not by itself earn a news item. Add one anyway only if Yue asks, or if the result is unusually notable (best paper, oral, or spotlight; see the next trigger). (Confirmed by Yue 2026-07-17 on the COLM 2026 FlexRouter update.)
 - A paper wins a **best paper / spotlight / oral** award.
 - A new **grant or award** is received (PI or co-PI).
 - A **PhD student passes their qualifying exam** or other major milestone.
 - A new **open-source release** that is significant enough to flag publicly.
+- A named **institutional leadership appointment** (institute or center director, associate director, or similar) is accepted. Name the institute, the term, and the people the role reports to or works with when the offer letter states them.
 
 Match the tone and length of nearby items. For paper acceptance, a one-sentence congratulations with the venue in italics and an arXiv link is enough. Do not invent a homepage URL for a co-author you cannot verify; just write the name in plain text.
 
