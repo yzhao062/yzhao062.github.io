@@ -8,7 +8,7 @@
     "docs_url": "https://pyod.readthedocs.io",
     "paper_url": "https://arxiv.org/abs/2412.12154",
     "demo_url": "",
-    "stars": 9914,
+    "stars": 9918,
     "tags": [
       "Anomaly Detection",
       "Outlier Detection",
@@ -27,7 +27,7 @@
     "docs_url": "https://auditable-ai.readthedocs.io/",
     "paper_url": "https://arxiv.org/abs/2606.22741",
     "demo_url": "https://pypi.org/project/auditable/",
-    "stars": 14,
+    "stars": 15,
     "tags": [
       "AI Agent Auditing",
       "Decision Replay",
@@ -46,7 +46,7 @@
     "docs_url": "",
     "paper_url": "",
     "demo_url": "",
-    "stars": 11,
+    "stars": 13,
     "tags": [
       "AI Agent Auditing",
       "Agent Reliability",
@@ -157,7 +157,7 @@
     "docs_url": "",
     "paper_url": "",
     "demo_url": "",
-    "stars": 9343,
+    "stars": 9346,
     "tags": [
       "Awesome List",
       "Anomaly Detection",
@@ -230,7 +230,7 @@
     "docs_url": "http://tods-doc.github.io",
     "paper_url": "https://arxiv.org/abs/2009.09822",
     "demo_url": "",
-    "stars": 1662,
+    "stars": 1663,
     "tags": [
       "Time Series",
       "Anomaly Detection",
@@ -303,7 +303,7 @@
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/agent-audit.html",
     "paper_url": "https://arxiv.org/abs/2603.22853",
     "demo_url": "https://pypi.org/project/agent-audit/",
-    "stars": 197,
+    "stars": 198,
     "tags": [
       "AI Agent Security",
       "Security Audit",
@@ -322,7 +322,7 @@
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/aegis.html",
     "paper_url": "https://arxiv.org/abs/2603.12621",
     "demo_url": "https://github.com/Justin0504/Aegis/blob/main/docs/images/readme_demo1.gif",
-    "stars": 365,
+    "stars": 367,
     "tags": [
       "AI Agent Security",
       "Policy Enforcement",
@@ -330,7 +330,7 @@
       "Audit Trail",
       "Human-in-the-Loop"
     ],
-    "last_updated_at": "2026-07-15T00:07:08Z"
+    "last_updated_at": "2026-07-16T12:09:43Z"
   },
   {
     "name": "combo",
@@ -359,7 +359,7 @@
     "docs_url": "https://anywhere-agents.readthedocs.io",
     "paper_url": "",
     "demo_url": "",
-    "stars": 192,
+    "stars": 193,
     "tags": [
       "Claude Code",
       "Codex",
@@ -379,7 +379,7 @@
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/agent-style.html",
     "paper_url": "",
     "demo_url": "https://pypi.org/project/agent-style/",
-    "stars": 562,
+    "stars": 569,
     "tags": [
       "AI Agents",
       "Agent Configuration",
