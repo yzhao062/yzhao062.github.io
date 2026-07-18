@@ -10,7 +10,7 @@ Under the hood, ADEngine orchestrates 60+ detectors, now covering time series, g
 Still a one-liner when you want control:
 from pyod.models.X import X; X().fit(data)
 
-38M+ downloads, ~10k GitHub stars. Used across fraud, security, medical, and ML robustness.
+50M+ downloads, ~10k GitHub stars. Used across fraud, security, medical, and ML robustness.
 
 Install: pip install pyod
 Docs: https://pyod.readthedocs.io

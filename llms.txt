@@ -39,7 +39,7 @@ These files are directly accessible and contain machine-readable data:
 
 ## Flagship Open-Source Projects
 
-- [PyOD](https://github.com/yzhao062/pyod): Python library for outlier and anomaly detection; the canonical library in the field (9,800+ stars, 42M+ downloads)
+- [PyOD](https://github.com/yzhao062/pyod): Python library for outlier and anomaly detection; the canonical library in the field (9,800+ stars, 50M+ downloads)
 - [auditable](https://github.com/yzhao062/auditable): open-source system of record for AI-agent decisions; captures, replays, and rolls back each decision across the agent lifecycle
 - [GRADE](https://github.com/yzhao062/grade): typed two-layer graph of agent execution and dependency; the research method auditable is built on
 - [awesome-auditable-ai](https://github.com/yzhao062/awesome-auditable-ai): curated list of papers, tools, datasets, and standards for reliable, auditable AI agents
