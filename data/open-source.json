@@ -27,7 +27,7 @@
     "docs_url": "https://auditable-ai.readthedocs.io/",
     "paper_url": "https://arxiv.org/abs/2606.22741",
     "demo_url": "https://pypi.org/project/auditable/",
-    "stars": 15,
+    "stars": 16,
     "tags": [
       "AI Agent Auditing",
       "Decision Replay",
@@ -46,7 +46,7 @@
     "docs_url": "",
     "paper_url": "",
     "demo_url": "",
-    "stars": 13,
+    "stars": 14,
     "tags": [
       "AI Agent Auditing",
       "Agent Reliability",
@@ -157,7 +157,7 @@
     "docs_url": "",
     "paper_url": "",
     "demo_url": "",
-    "stars": 9346,
+    "stars": 9348,
     "tags": [
       "Awesome List",
       "Anomaly Detection",
@@ -322,7 +322,7 @@
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/aegis.html",
     "paper_url": "https://arxiv.org/abs/2603.12621",
     "demo_url": "https://github.com/Justin0504/Aegis/blob/main/docs/images/readme_demo1.gif",
-    "stars": 367,
+    "stars": 368,
     "tags": [
       "AI Agent Security",
       "Policy Enforcement",
@@ -330,7 +330,7 @@
       "Audit Trail",
       "Human-in-the-Loop"
     ],
-    "last_updated_at": "2026-07-16T12:09:43Z"
+    "last_updated_at": "2026-07-18T04:20:33Z"
   },
   {
     "name": "combo",
@@ -379,7 +379,7 @@
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/agent-style.html",
     "paper_url": "",
     "demo_url": "https://pypi.org/project/agent-style/",
-    "stars": 569,
+    "stars": 574,
     "tags": [
       "AI Agents",
       "Agent Configuration",
