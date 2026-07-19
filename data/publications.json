@@ -1,5 +1,22 @@
 [
     {
+        "id": "workshop-seva",
+        "section": "workshop",
+        "title": "SEVA: Self-Evolving Verification Agent with Process Reward for Fact Attribution",
+        "paper_url": "https://arxiv.org/abs/2606.29713",
+        "authors": "Aojie Yuan, Yi Nian, Haiyue Zhang, Zijian Su, Yue Zhao.",
+        "venue": "ICML 2026 Workshops (AI4GOOD and FAGEN)",
+        "year": 2026,
+        "sort_date": "2026-07-11",
+        "links": [
+            {
+                "type": "github",
+                "url": "https://github.com/Justin0504/Verifiable_agent"
+            }
+        ],
+        "abstract": "Hallucination is the reliability bottleneck for LLM-based agents, and fact attribution verifiers are the last line of defense, yet today's verifiers emit only opaque binary labels, leaving agents unable to self-correct and operators unable to audit. We present SEVA, a structured verification agent that emits evidence alignments, step-by-step reasoning chains, calibrated confidence, and a six-category error diagnosis with actionable fixes. Training such an agent with RL is non-trivial: standard binary reward on multi-component output triggers advantage collapse, within-group reward variance vanishes and the GRPO gradient disappears. We resolve this with a process reward that decomposes verification quality into five independent components weighted 70/30 toward process signals, restoring the gradient and inducing an implicit curriculum: the agent first masters verification behavior (alignment 0.917 to 0.997, format 72% to 100%), then outcomes (F1 64.9 to 69.0). Structured output further enables a Verify, Reflect, Probe, Refine self-evolution loop, which over four rounds on a 7B model surfaces an unexpected structural finding: each round produces a benchmark-specialist, not a generalist (+15 pp on HaluEval, -10 to -14 pp on TruthfulQA in the same model, persistent at 4x data). On ClearFacts, SEVA-3B matches GPT-4o-mini (69.0 vs. 69.8 F1) while producing substantially richer, auditable output, confirming a principle that should generalize: for any RL task with multi-component generation, reward granularity must match output granularity."
+    },
+    {
         "id": "conference-a-survey-on-llm-based-conversational-user-simulation",
         "section": "conference",
         "title": "A Survey on LLM-based Conversational User Simulation",
@@ -1149,6 +1166,48 @@
             }
         ],
         "abstract": "PyOD is an open-source Python toolbox for performing scalable outlier detection on multivariate data. Uniquely, it provides access to a wide range of outlier detection algorithms, including established outlier ensembles and more recent neural network-based approaches, under a single, well-documented API designed for use by both practitioners and researchers."
+    },
+    {
+        "id": "preprint-memoharness",
+        "section": "preprint",
+        "title": "MemoHarness: Agent Harnesses That Learn from Experience",
+        "paper_url": "https://arxiv.org/abs/2607.14159",
+        "authors": "Yue Huang, Wenjie Wang, Han Bao, Yuchen Ma, Xiaonan Luo, Yi Nian, Haomin Zhuang, Zheyuan Liu, Yue Zhao, Xiangliang Zhang",
+        "venue": "arXiv preprint",
+        "year": 2026,
+        "links": [],
+        "abstract": "An agent harness is the external control layer that turns a base LLM into an executable agent by managing context, tools, orchestration, memory, decoding, and output handling. While harness design strongly affects agent behavior, most automatic improvement methods optimize narrower artifacts such as prompts, pipelines, or workflows, and deployed agents usually reuse a single global harness for all cases. We introduce MemoHarness, an adaptive harness optimization framework that learns from its own executions. MemoHarness decomposes the harness into six editable control dimensions, stores per-case diagnoses and distilled global patterns in a dual-layer experience bank, and adapts the learned harness to each test case using retrieved experience without test-time labels, feedback, or additional search. In our evaluation across shell-agent, code-generation, and analytical-reasoning benchmarks, MemoHarness improves over the fixed harnesses we compare against and shows selective transfer to unseen suites and base models. Its additional context can also remain cost-competitive when much of the retrieved experience is cacheable. These results provide evidence that execution experience is a practical substrate for building agent harnesses that are more adaptive than a single static configuration, while leaving broader claims about statistical robustness and component attribution to future work."
+    },
+    {
+        "id": "preprint-skillcenter",
+        "section": "preprint",
+        "title": "SkillCenter: A Large-Scale Source-Grounded Skill Library for Autonomous AI Agents",
+        "paper_url": "https://arxiv.org/abs/2607.07676",
+        "authors": "Tianming Sha, Yue Zhao, Lichao Sun, Yushun Dong",
+        "venue": "arXiv preprint",
+        "year": 2026,
+        "links": [
+            {
+                "type": "github",
+                "url": "https://github.com/LabRAI/SkillCenter"
+            },
+            {
+                "type": "project",
+                "url": "https://huggingface.co/datasets/Tommysha/skillcenter-bundles"
+            }
+        ],
+        "abstract": "Autonomous AI agents can execute complex tasks with limited human review, yet they often lack the grounded operational knowledge to make their outputs not just executable but correct, secure, and maintainable. We introduce SkillCenter, to our knowledge the largest open skill library for agents by total count: 216,938 structured skills across 24 domain bundles. A SkillGate-filtered pipeline contributes 114,565 source-grounded skills from peer-reviewed journals, ArXiv, and over 24,000 technical sources, integrated with 102,373 community skills from GitHub and the ClawHub marketplace. We present the end-to-end framework that builds the pipeline subset: multi-source acquisition, an LLM-based quality gate (SkillGate), template-driven generation, iterative source-grounding, and quality-controlled publishing. Source grounding is a traceability guarantee: each retained claim maps to an exact quotation in its source. All skills ship as offline-searchable SQLite FTS5 bundles."
+    },
+    {
+        "id": "preprint-agent-safety-action-alignment",
+        "section": "preprint",
+        "title": "Agent Safety Is Action Alignment",
+        "paper_url": "https://arxiv.org/abs/2606.28739",
+        "authors": "Shawn Li, Yue Zhao",
+        "venue": "arXiv preprint",
+        "year": 2026,
+        "links": [],
+        "abstract": "Large language models increasingly act as agents: they call tools, move money, delete records, and send messages on a user's behalf. To keep them safe, practitioners imported the chatbot-era recipe (train the model to refuse unsafe inputs) into the agentic setting, and treat the resulting capability loss as a manageable \"alignment tax.\" We argue this is a category error. Refusal is a primitive for content safety, where the harm is in the model's output and is therefore a learnable function of it. Agentic harm is different in kind: it lies not in any output but in the relation between the authority an action exercises and the authority the user granted, which is absent from the text the model sees. Importing content-safety methods into this regime does not trade capability for safety; it pays capability and buys negative security. We support this with three lines of evidence spanning the autonomy spectrum: defense-trained models learn surface patterns rather than intent; the same training collapses multi-step agents before any threat appears while leaving them exploitable; and even undefended frontier models exceed granted authority under ordinary use. We conclude that action safety cannot be installed in weights. It must be expressed as least privilege, enforced outside the model at the action boundary, and evaluated as action alignment (a relational, deployment-conditioned property) rather than a refusal score."
     },
     {
         "id": "preprint-grade",
