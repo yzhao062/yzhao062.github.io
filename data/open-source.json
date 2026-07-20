@@ -8,7 +8,7 @@
     "docs_url": "https://pyod.readthedocs.io",
     "paper_url": "https://arxiv.org/abs/2412.12154",
     "demo_url": "",
-    "stars": 9919,
+    "stars": 9920,
     "tags": [
       "Anomaly Detection",
       "Outlier Detection",
@@ -16,7 +16,7 @@
       "Machine Learning",
       "PyTorch"
     ],
-    "last_updated_at": "2026-06-17T02:43:09Z"
+    "last_updated_at": "2026-07-20T04:15:07Z"
   },
   {
     "name": "auditable",
@@ -157,7 +157,7 @@
     "docs_url": "",
     "paper_url": "",
     "demo_url": "",
-    "stars": 9348,
+    "stars": 9349,
     "tags": [
       "Awesome List",
       "Anomaly Detection",
@@ -359,7 +359,7 @@
     "docs_url": "https://anywhere-agents.readthedocs.io",
     "paper_url": "",
     "demo_url": "",
-    "stars": 193,
+    "stars": 194,
     "tags": [
       "Claude Code",
       "Codex",
@@ -379,7 +379,7 @@
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/agent-style.html",
     "paper_url": "",
     "demo_url": "https://pypi.org/project/agent-style/",
-    "stars": 575,
+    "stars": 576,
     "tags": [
       "AI Agents",
       "Agent Configuration",
