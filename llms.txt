@@ -1,14 +1,25 @@
-# Yue Zhao: AI Risk Audit and Control across the Deployment Stack
+# Yue Zhao: Auditable AI Systems across the Deployment Stack
 
-> Yue Zhao is an Assistant Professor of Computer Science at the University of Southern California (USC), where he leads the FORTIS Lab. AI systems are deployed faster than their risks can be measured or controlled. His lab builds methods, benchmarks, and open-source tools for AI risk audit and control across the deployment stack: anomaly and out-of-distribution detection in data, trust and robustness evaluation of foundation models, and audit and control of agent systems across their lifecycle. The current frontier is turning that agent work from research into deployable open-source infrastructure, auditing agents from before deployment to after a run.
+> Yue Zhao is an Assistant Professor of Computer Science at the University of Southern California (USC), where he leads the FORTIS Lab. AI systems are deployed faster than their risks can be measured or controlled. His lab builds the methods, benchmarks, and open-source infrastructure that make AI systems auditable across the deployment stack: anomaly and out-of-distribution detection in data, trust and robustness evaluation of foundation models, and auditability and control of agent systems across their lifecycle. His research develops methods to detect, diagnose, and control departures from expected behavior, from anomalous data and foundation-model failures to consequential agent actions. The current frontier is agent auditability: deployable open-source infrastructure that audits agents from before deployment to after a run.
+
+## Terminology
+
+How this site uses its recurring terms:
+
+- **Auditable AI systems**: the descriptive umbrella for the research program (building AI systems whose behavior can be detected, attributed, and controlled). A description, not a claim of term ownership.
+- **Agent auditability**: the research property the lab currently studies and measures: whether an agent's actions can be reconstructed, checked against policy, and attributed after the fact.
+- **Auditable Agents**: the position paper proposing the framework (five auditability dimensions; three mechanism classes: detect, enforce, recover).
+- **auditable** (lowercase): the lab's open-source SDK, a system of record for agent decisions (capture, replay, roll back).
+- **Auditable AI**: the startup Yue Zhao is founding (auditable.run); distinct from the research program above.
+- **AI auditing**: the established adjacent activity and field (assurance, compliance, algorithm audits); used descriptively when referring to that work.
 
 ## Research Areas
 
-The same risk audit and control agenda spans three layers of the AI stack:
+The same detect-diagnose-control agenda spans three layers of the AI stack, ordered from current frontier to methodological foundation:
 
-- **Agent Layer: Risk Audit and Control across the Lifecycle**: the lab's open-source agent-auditing family includes auditable (a system of record that captures, replays, and rolls back agent decisions), the GRADE method (a typed two-layer graph of agent execution and dependency), and awesome-auditable-ai as the curated knowledge base. Research spans auditability frameworks for reconstruction, checking, and attribution of agent behavior; runtime control surfaces that intercept tool calls before they fire; and agent-specific failure modes (over-privilege, cross-user contamination, multi-agent memory leakage, the autonomy tax of defense training). Three time-scales anchor the work: pre-deployment audit, runtime tool-call mediation, and post-run attribution.
+- **Agent Layer: Auditability and Control across the Lifecycle**: the lab's open-source agent-auditing family includes auditable (a system of record that captures, replays, and rolls back agent decisions), the GRADE method (a typed two-layer graph of agent execution and dependency), and awesome-auditable-ai as the curated knowledge base. Research spans auditability frameworks for reconstruction, checking, and attribution of agent behavior; runtime control surfaces that intercept tool calls before they fire; and agent-specific failure modes (over-privilege, cross-user contamination, multi-agent memory leakage, the autonomy tax of defense training). Three time-scales anchor the work: pre-deployment audit, runtime tool-call mediation, and post-run attribution. FORTIS is the lab's benchmark for over-privilege in agent skills; a general agent-auditability benchmark is in development.
 - **Foundation-Model Layer: Trust and Robustness**: jailbreak detection for vision-language models, causal analysis of hallucination, query-agnostic attacks on retrieval-augmented generation, LLM-as-anomaly-detector benchmarks. Community efforts like TrustLLM are tracked as collaborative consortium contributions, separate from lab-led work.
-- **Data Layer: Anomaly and Out-of-Distribution Detection**: PyOD ecosystem (current major release: PyOD 3), ADBench, NLP-ADBench, automatic OOD detector selection, modality-specific OOD methods for graphs, multimodal data, and video, few-shot cross-domain OOD detection.
+- **Data Layer: Anomaly and Out-of-Distribution Detection**: the methodological foundation of the program. PyOD ecosystem (current major release: PyOD 3), ADBench, NLP-ADBench, automatic OOD detector selection, modality-specific OOD methods for graphs, multimodal data, and video, few-shot cross-domain OOD detection.
 
 ## Applications
 
