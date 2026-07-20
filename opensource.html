@@ -319,9 +319,19 @@
                             <td class="impact-source"><a href="https://openai.com/careers/technical-intelligence-analyst-san-francisco/">OpenAI</a> &middot; <a href="news-snapshots/openai-careers-technical-intelligence-analyst-2026-05-07.md">snapshot</a></td>
                           </tr>
                           <tr>
+                            <td><span class="impact-type type-gov">UK Gov</span></td>
+                            <td>UK Government Algorithmic Transparency Record (London Borough of Sutton, "Access Assure" technology-enabled care) links PyOD KNN documentation in its Model Specification (section 4.2.6); a production deployment record</td>
+                            <td class="impact-source"><a href="https://www.gov.uk/algorithmic-transparency-records/london-borough-of-sutton-access-assure-technology-enabled-care">GOV.UK</a></td>
+                          </tr>
+                          <tr>
                             <td><span class="impact-type type-gov">Space Agency</span></td>
                             <td>Selected by ESA for OPS-SAT spacecraft telemetry benchmark (all 30 algorithms)</td>
                             <td class="impact-source"><a href="https://www.nature.com/articles/s41597-025-05035-3">Nature Sci. Data</a></td>
+                          </tr>
+                          <tr>
+                            <td><span class="impact-type type-gov">Saudi Gov</span></td>
+                            <td>Saudi Data &amp; AI Authority (SDAIA) Deepfakes Guidelines names PyOD (p.10) among recommended tools for detecting suspicious activity patterns</td>
+                            <td class="impact-source"><a href="https://sdaia.gov.sa/en/SDAIA/eParticipation/consulting/SDAIADeepfakesGuidelinesEn.pdf">SDAIA PDF</a></td>
                           </tr>
                           <tr>
                             <td><span class="impact-type type-gov">U.S. DoD</span></td>
@@ -380,8 +390,13 @@
                           </tr>
                           <tr>
                             <td><span class="impact-type type-patent">Patents</span></td>
-                            <td>12 patents cite PyOD/COPOD/ECOD/LSCP/SUOD (WIPO x2, EU x2, US x4, China x3, Slovakia x1); recent additions include Actimize US20230267468A1 (fraud / anomalous-transaction ML) and Slovak utility model SK2042023U1 (full PyOD detector suite)</td>
-                            <td class="impact-source"><a href="https://patents.google.com/patent/WO2023166515A1/en">Ericsson</a> &middot; <a href="https://patents.google.com/patent/US20230267468A1">Actimize</a> &middot; <a href="https://patents.google.com/patent/SK2042023U1/en">SK</a></td>
+                            <td>15 patents cite PyOD/COPOD/ECOD/LSCP/SUOD/TODS (WIPO x2, EU x2, US x4, China x6, Slovakia x1); recent additions include Tencent CN112989338B (COPOD), DBAPPSecurity CN117216660B (TODS), and Chongqing University CN117648656A (ADBench)</td>
+                            <td class="impact-source"><a href="https://patents.google.com/patent/WO2023166515A1/en">Ericsson</a> &middot; <a href="https://patents.google.com/patent/US20230267468A1">Actimize</a> &middot; <a href="https://patents.google.com/patent/CN112989338B/en">Tencent</a></td>
+                          </tr>
+                          <tr>
+                            <td><span class="impact-type type-journal">Journal</span></td>
+                            <td>Two 2026 Nature Scientific Reports papers implement anomaly detection via PyOD in their Methods (eight PyOD detectors in one; COPOD/ECOD/IForest in the other), each citing the PyOD JMLR paper</td>
+                            <td class="impact-source"><a href="https://www.nature.com/articles/s41598-026-45091-2">s41598-026-45091-2</a></td>
                           </tr>
                           <tr>
                             <td><span class="impact-type type-education">Encyclopedia</span></td>
@@ -424,6 +439,11 @@
                             <td>Genentech (Roche) Data Detective uses ADBench in <code>adbench_validator_method_factory.py</code>, <code>adbench_multimodal</code>, and <code>adbench_ood_inference</code> validator factories for drug-discovery data validation</td>
                             <td class="impact-source"><a href="https://github.com/Genentech/data-detective">Genentech/data-detective</a></td>
                           </tr>
+                          <tr>
+                            <td><span class="impact-type type-journal">Journal</span></td>
+                            <td>Nature Communications study links the ADBench repository in its Data availability section for the benchmark anomaly datasets used</td>
+                            <td class="impact-source"><a href="https://www.nature.com/articles/s41467-025-56173-6">Nature Comms</a></td>
+                          </tr>
                         </tbody>
                       </table>
                     </div>
@@ -452,8 +472,8 @@
                           </tr>
                           <tr>
                             <td><span class="impact-type type-policy">Policy</span></td>
-                            <td>Official benchmark in all 3 editions of the FLI AI Safety Index (2024, 2025 x2)</td>
-                            <td class="impact-source"><a href="https://futureoflife.org/ai-safety-index-winter-2025/">FLI Report</a> · <a href="https://futureoflife.org/wp-content/uploads/2025/11/Indicator-TrustLLM_Benchmark.pdf">Indicator Sheet</a></td>
+                            <td>Official benchmark in all 4 editions of the FLI AI Safety Index (2024, 2025 x2, Summer 2026)</td>
+                            <td class="impact-source"><a href="https://futureoflife.org/ai-safety-index-winter-2025/">FLI Report</a> · <a href="https://futureoflife.org/wp-content/uploads/2026/07/AI-Safety-Index-Summer-2026-Digital.pdf">Summer 2026</a></td>
                           </tr>
                           <tr>
                             <td><span class="impact-type type-gov">National Lab</span></td>
@@ -464,6 +484,21 @@
                             <td><span class="impact-type type-gov">International</span></td>
                             <td>Cited in International AI Safety Report 2026 (citation #881; led by Yoshua Bengio, 100+ experts, 30+ countries)</td>
                             <td class="impact-source"><a href="https://internationalaisafetyreport.org/publication/international-ai-safety-report-2026">Report</a></td>
+                          </tr>
+                          <tr>
+                            <td><span class="impact-type type-gov">U.S. DOE</span></td>
+                            <td>Oak Ridge National Laboratory technical report ORNL/TM-2025/3935, "Scalable Workflow for Evaluating Trustworthiness of Large Language Models," discusses and cites TrustLLM</td>
+                            <td class="impact-source"><a href="https://www.osti.gov/servlets/purl/3002371">OSTI</a></td>
+                          </tr>
+                          <tr>
+                            <td><span class="impact-type type-policy">G7 / OECD</span></td>
+                            <td>Salesforce G7 Hiroshima AI Process Transparency Report (OECD-hosted) cites TrustLLM (p.4) among its trust-and-safety evaluation metrics</td>
+                            <td class="impact-source"><a href="https://api.oecdai.org/transparency-reports/40/view-pdf">OECD</a></td>
+                          </tr>
+                          <tr>
+                            <td><span class="impact-type type-enterprise">Industry Lab</span></td>
+                            <td>NTT Technical Review names TrustLLM as an LLM-safety benchmark and links the benchmark repository (reference [4])</td>
+                            <td class="impact-source"><a href="https://ntt-review.jp/archive/ntttechnical.php?contents=ntr202511fa6.pdf&mode=show_pdf">NTT</a></td>
                           </tr>
                           <tr>
                             <td><span class="impact-type type-media">Media</span></td>
