@@ -8,7 +8,7 @@
     "docs_url": "https://pyod.readthedocs.io",
     "paper_url": "https://arxiv.org/abs/2412.12154",
     "demo_url": "",
-    "stars": 9930,
+    "stars": 9934,
     "tags": [
       "Anomaly Detection",
       "Outlier Detection",
@@ -16,7 +16,7 @@
       "Machine Learning",
       "PyTorch"
     ],
-    "last_updated_at": "2026-07-20T04:15:07Z"
+    "last_updated_at": "2026-07-24T12:04:16Z"
   },
   {
     "name": "auditable",
@@ -27,7 +27,7 @@
     "docs_url": "https://auditable-ai.readthedocs.io/",
     "paper_url": "https://arxiv.org/abs/2606.22741",
     "demo_url": "https://pypi.org/project/auditable/",
-    "stars": 16,
+    "stars": 17,
     "tags": [
       "Agent Auditability",
       "Decision Replay",
@@ -157,7 +157,7 @@
     "docs_url": "",
     "paper_url": "",
     "demo_url": "",
-    "stars": 9353,
+    "stars": 9354,
     "tags": [
       "Awesome List",
       "Anomaly Detection",
@@ -330,7 +330,7 @@
       "Audit Trail",
       "Human-in-the-Loop"
     ],
-    "last_updated_at": "2026-07-20T21:51:40Z"
+    "last_updated_at": "2026-07-26T13:47:04Z"
   },
   {
     "name": "combo",
@@ -359,7 +359,7 @@
     "docs_url": "https://anywhere-agents.readthedocs.io",
     "paper_url": "",
     "demo_url": "",
-    "stars": 199,
+    "stars": 200,
     "tags": [
       "Claude Code",
       "Codex",
@@ -379,7 +379,7 @@
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/agent-style.html",
     "paper_url": "",
     "demo_url": "https://pypi.org/project/agent-style/",
-    "stars": 584,
+    "stars": 590,
     "tags": [
       "AI Agents",
       "Agent Configuration",
