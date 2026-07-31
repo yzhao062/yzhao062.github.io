@@ -1,6 +1,7 @@
 # News & Media Coverage Audit — Yue Zhao / FORTIS Lab
 
 *Last 5 runs (full change-log in `## Changes from Previous Audit` and in git history):*
+*2026-07-31 (cross-vendor: 6 Codex lanes via /prun + 6 Claude lanes via /workflows): 406 raw records to **366 unique candidates**. Net new **+6 Tier 0** (Japan MoD ATLA naming PyOD in its recommended-tooling table, BIS/Bundesbank using PyOD and implementing DCSO, Japan FSA on TrustLLM, Japan METI and NEDO on TDC, a NIST webinar deck) and **+11 Tier 1** (6 DOE national-lab reports with substantive use, 5 verified third-party academic citations of Aegis / Auditable Agents / agent-audit), plus Cloud Security Alliance, Foresight Institute, ACM SIGSPATIAL, Amazon Science, Grokipedia, and USC Viterbi. **11 of 19 worker high-tier claims were corrected on coordinator re-fetch**: coauthor-institution listings demoted (Microsoft Research x3, IBM Research), host mistaken for author (Parliament of Australia, Brazil TCU, one Sandia-reported OSTI record), CVE-2026-15529 collapsed from 3 claims to registry mirrors of the already-counted T0-e, and 2 of 7 Semantic Scholar citation edges refuted as name collisions. Implicit Execution Tracing and the FORTIS benchmark both have **zero** confirmed external citers. The OpenAI Tier 0(b) row survives only via its committed snapshot; the live URL now 404s and the successor posting dropped the PyOD bullet. 78 verified-negatives added. Details in "## 2026-07-31 Pass".*
 *2026-07-19 (Claude coordinator + 10 Codex lanes via /prun): 269 candidate records to 258 unique URLs. Broke a three-round drought: net new **+5 Tier 0** (UK gov.uk production record, Saudi SDAIA, US DOE/ORNL, G7/OECD Salesforce, NIST NVD CVE) and **+5 Tier 1** (FLI Summer 2026, NTT Technical Review, 3 Nature-family papers), all direct-fetch verified. +6 Tier 2 including first editorial coverage of the auditing line (The Agent Times, WIDTH) and same-week pickup of the four newest papers. Resolved Ledger 2 #22 (SitePoint) as REMOVED, net -1. A mid-round gap (Implicit Execution Tracing never searched) was closed by a tenth lane, which also verified 7 third-party citations of Auditable Agents, 4 of them new. Details in "## 2026-07-19 Pass".*
 *2026-06-14 (Codex independent broad parallel search): 9 lanes total: 5 structured lanes plus 4 broad follow-up lanes after the user asked to search less narrowly. Net new Tier 0/1 direct coverage verified: 0. Added 46 exact-URL candidate, drop, duplicate, and negative records to `news-search-candidates.jsonl`; strongest new items are low-tier or academic-downstream signals, not editorial ledger promotions. Main action items: Phase B review of new ADBench/Aegis/TDC academic-downstream rows, PyOD ecosystem rows, three China patent candidates, and a SitePoint recheck because the live page did not verify the prior `agent-audit` direct-coverage claim. Details in "## 2026-06-14 Codex Independent Broad Search".*
 *2026-06-13 (Claude /workflows two-phase refresh): 84 Phase-A candidates to 67 Phase-B keeps; net new editorial ~0 (the sweep re-surfaced already-tracked ecosystem items: Grokipedia is Ledger 4 #70; Ericsson patent, DataCamp/Udemy courses, and the Manning/O'Reilly book already in Ledger 3). Genuinely new: Auditable Agents (arXiv:2604.05485) has 4 third-party downstream citations within weeks (bibliometric; flag for /citation-audit). Stanford HAI 2026 AI Index checked (Yue): does not name TrustLLM (negative). Details in "## 2026-06-13 Refresh".*
@@ -9,6 +10,195 @@
 *2026-05-20 (Codex /news-search rerun): net +4 Ledger 3 (0 Ledger 1/2/4/5).*
 *All 8 core dimensions plus D9/D10 follow-up checks complete across the current inventory. Codex 2026-06-14 local parse: 112 publications + 19 tools; the 2026-05-28 citation-audit integration keeps its own non-survey subset basis.*
 *Citation verification applied: every item names or cites the work, person, lab, or co-author.*
+
+---
+
+## 2026-07-31 Pass (Cross-Vendor: 6 Codex lanes via `/prun` + 6 Claude lanes via `/workflows`)
+
+**Method.** Full audit run on both engines at once, with complementary dimension assignments. Six Codex
+lanes took the fetch-heavy work (D8 U.S. government PDFs, D8 international and standards and analyst
+PDFs, D2 plus D3 security and enterprise outlets, D7 education and code ecosystem and non-English, D5
+smart-keyword search over all 42 papers from 2026, D5 over the 77 older papers plus all 21 tools). Six
+Claude lanes took discovery (D1 person and lab, D3 mainstream press, D4 topic proximity, D6 citation
+and downstream, D2 careers pages, and a dedicated lane for the newest works and the post-repositioning
+vocabulary). 406 raw records merged to **366 unique candidates** in `news-search-candidates.jsonl`.
+
+**Cross-vendor overlap was only 3 of 366, and that is a design artifact, not a disagreement.** Because
+the two engines were given complementary rather than identical dimensions, disjointness was expected;
+coverage roughly doubled but the "found by both vendors" confidence signal is unavailable. A future
+round that wants that signal must give both engines the same task and pay for the duplication.
+
+**Verification discipline is the story of this round.** Nineteen high-tier claims arrived from the
+worker lanes. The coordinator re-fetched every one of them, and **11 needed correction**. Two dedicated
+adversarial Codex verification lanes were then dispatched for the claims the coordinator had not
+personally checked. The corrections fall into four repeating patterns, all worth carrying forward:
+
+1. **Coauthor-institution publication listings promoted to Tier 0 or Tier 1.** Microsoft Research pages
+   for TrustGen, TrustLLM, and ADMoE, plus IBM Research for TrustLLM. All are bare publication records
+   on the site of an institution that employs a coauthor. Phase B step 1 already says to demote these
+   to Ledger 3; the worker contract for this round omitted that rule, which is a coordinator error, not
+   a worker error. **Fix for future fan-outs: the pre-tier filter must be copied into the worker contract verbatim.**
+2. **Host mistaken for author.** A Parliament of Australia URL is a University of Sydney submission that
+   parliament merely hosts. A Brazil TCU URL is a student's final course paper at the TCU's own school,
+   not a TCU audit product. An OSTI record reported by Sandia has authors at George Mason University.
+   Institutional domains are not institutional authorship.
+3. **Same item counted several times.** CVE-2026-15529 arrived as three separate Tier 0 claims (NIST NVD,
+   ENISA EUVD, CVE.org). NVD was already counted on 2026-07-19 as row T0-e. The other two are registry
+   mirrors of the identical text and belong in `mirrors[]`, not in the count. The Brazil TCU monograph
+   and the Brazil National Treasury journal article are the same study by the same author, published twice.
+4. **Same-domain name collisions in the citation graph.** Two of seven Semantic Scholar citation edges
+   were false. Both are recorded as new entries in `references/disambiguation-registry.md`.
+
+### Tier 0: Confirmed New (Ledger 1)
+
+| Work | Source | Evidence |
+|---|---|---|
+| PyOD | **Japan Ministry of Defense (ATLA)** | AI Guideline v01 (English, June 2025) lists PyOD as **entry 14 in its recommended-tooling table**, mapped to guideline sections B-5 (Ensuring Reliability and Validity) and B-6 (Ensuring Safety), linking both `github.com/yzhao062/pyod` and the docs. p27: "In B-6, for ensuring safety, the Python library PyOD (Python Outlier Detection), which provides a wide range of algorithms for detecting outliers, is useful for designing ...". Coordinator-verified with `pdf_term_scan.py`, 8 matches. **The second national defense ministry to name PyOD as recommended tooling, after U.S. DoD CDAO.** |
+| PyOD, DCSO, LSCP | **Bank for International Settlements / Irving Fisher Committee** | IFC Bulletin 57, "Unsupervised outlier detection in official statistics", by Nhan-Tam Nguyen and colleagues at the **Deutsche Bundesbank** and DFKI, presented at the IFC / Bank of Italy workshop on machine learning in central banking. p10 selects PyOD as modelling tooling alongside scikit-learn; p24 carries a DCSO algorithm flowchart "adapted from Zhao et al. (2018)"; p45 cites PyOD (JMLR) and LSCP. Coordinator-verified, 6 matches. Annotate as central-bank research practice published by an international body, not as official policy guidance. |
+
+### Tier 0: Counted, With the Right Annotation
+
+Adversarial verification lane V1 confirmed each of these names the work. All are counted. What follows
+are the annotations that keep the claim proportionate, not reasons to exclude.
+
+Two standards were corrected during this round, because the first pass applied them wrongly:
+
+- **A personal-views disclaimer does not weaken an institutional research series.** "The views expressed
+  are those of the authors" is standard boilerplate across Federal Reserve, ECB, BIS, IMF, and FSA
+  working-paper and discussion-paper series. Discounting it would discount essentially the whole
+  central-banking and financial-regulation research literature. The operative test is whether the
+  document appears in the institution's own official series, written by its staff or affiliates and
+  published on its domain. That is institutional uptake, distinct from policy endorsement.
+- **Do not demand USC attribution for pre-USC work.** Therapeutics Data Commons dates from the PI's
+  CMU period; he joined USC in August 2023. Treating "USC is not named" as a defect in a TDC-era
+  document is anachronistic. The only live qualification on TDC rows is coauthorship dilution, since
+  TDC is Harvard-led with many coauthors, and that is handled by annotation.
+
+| Work | Source | Annotation |
+|---|---|---|
+| TrustLLM | **Japan Financial Services Agency**, FSA Institute Discussion Paper DP2024-3 | Substantive body use: the paper invokes the TrustLLM framework for the eight dimensions of LLM trustworthiness, with the full citation as footnote 21 and a second entry in the references. Published in the FSA Institute Discussion Paper Series. Discussion paper, not FSA policy. |
+| Therapeutics Data Commons | **Japan METI**, GENIAC selection results | TDC supplied the drug-discovery benchmark task used to evaluate a funded model. Real platform adoption by a national ministry's programme. Coauthorship dilution applies: TDC is Harvard-led and the PI is one of many coauthors. |
+| Therapeutics Data Commons | **Japan NEDO**, joint release with SyntheticGestalt | States that TDC "is standardly used" as the performance benchmark in AI drug discovery. NEDO is a co-issuer, not merely a host. Same coauthorship annotation. |
+| PyOD | **NIST**, "Science ex Machina" (Isotope Metrology Webinar Series) | Counted, and the weakest item in this table. An 18-page deck by a named NIST scientist whose sole mention is the bullet "e.g., VAE, Deep NN, pyOD" under a Machine Learning heading. A NIST scientist listing PyOD among go-to tools is a genuine signal; it is a mention rather than a documented use, and the row says so. |
+
+### Tier 1: DOE National Laboratories, Verified and Split by Use
+
+Verification lane V2 downloaded all 12 OSTI PDFs (269 pages, pypdf) and classified each by whether the
+work is used in the body or only listed in the references. This split matters because bibliography-only
+entries are bibliometric evidence that `/citation-audit` already measures; counting them here would
+double-book the same fact.
+
+**Substantive use, counted as coverage (6):**
+
+| Lab | Work | Evidence |
+|---|---|---|
+| Sandia National Laboratories | PyOD | "our anomaly detection was implemented based on PyOD [36], an open-source Python toolbox for performing scalable outlier identification" (APT detection via provenance analysis, 2025) |
+| Brookhaven National Laboratory | COPOD | COPOD offered as one of three anomaly-detection algorithms in an exascale workflow data-reduction system (2025) |
+| Idaho National Laboratory | TrustLLM | "probably the most comprehensive benchmark of trustworthiness in LLMs available to date ... evaluating 16 mainstream LLMs using 30 datasets" (nuclear power plant human-AI interaction, 2025) |
+| Oak Ridge National Laboratory | LSCP | LSCP among six outlier-detection methods used to verify cyber-attack detection accuracy (HVDC attack-defense control, 2021) |
+| Lawrence Livermore National Laboratory | TrustLLM | FY24 LDRD Annual Report describes the TrustLLM framework and Kailkhura's participation (2025) |
+| Brookhaven National Laboratory | TDC | "We utilized the oracles from Therapeutics Data Commons [31]" (molecular design uncertainty, 2024). TDC caveat applies. |
+
+**Bibliography-only, routed to citation evidence rather than the coverage ledger (5):** DESI/LBNL
+(ADBench), Oak Ridge (PyOD, grouped marker), Los Alamos (PyOD, IAEA declarations report), Sandia-reported
+OSTI record whose authors are at George Mason University (LSCP), and the LLNL multi-lab SafeAI report
+(TrustLLM), which is in any case already tracked. **Refuted (1):** an Oak Ridge inverter-control report
+whose reference list points at the PyOD benchmarks URL while the body never names PyOD.
+
+### Tier 1: Third-Party Academic Citations of the Agent-Auditing Line
+
+The Claude lanes pivoted from keyword search to the Semantic Scholar citation graph and then fetched each
+citing paper. The coordinator re-downloaded all seven and extracted the text with PyMuPDF. **Five hold,
+two are refuted.**
+
+| Citing work | Cites | Evidence |
+|---|---|---|
+| arXiv:2607.25364 (Accentrust, Georgia Tech, UIUC; submitted 2026-07-28) | Auditable Agents **and** agent-audit | Body discussion, not a bare reference: "Auditable Agents frames recoverability, policy checkability, responsibility attribution, and evidence integrity as system properties [24]; Agent Audit analyzes code and deployment artifacts before execution [25]." Strongest citation of the round and inside the post-cutoff window. |
+| arXiv:2607.07405, "Reason Less, Verify More" | Aegis | Credits Aegis as prior art that establishes the mechanism: "our contribution is therefore not the enforcement mechanism, which pre-execution systems such as AEGIS [12] and AgentSpec [9] already establish". |
+| arXiv:2607.01641 | agent-audit | Reference [39], full title and arXiv ID. |
+| arXiv:2604.15367 | agent-audit | Reference [50], full title and arXiv ID. |
+| arXiv:2509.24380, Agentic Services Computing survey | agent-audit | Reference [147] plus three body mentions. Revised version, so the ID predates the cited work. |
+
+**Refuted:** arXiv:2606.04990 was reported as a survey citing Auditable Agents; the 28-page PDF contains
+zero occurrences of Auditable Agents, 2604.05485, Yue Zhao, or agent-audit, and the Aegis it cites is
+Kong et al., arXiv:2509.14295, "Automated error generation and attribution for multi-agent systems".
+arXiv:2606.00765 (FALAT) was reported as the sole external citer of Implicit Execution Tracing; it
+actually cites "implicit execution traces [Li et al., 2025b]", a different 2025 work. **After
+verification, Implicit Execution Tracing has zero confirmed external citers and the FORTIS over-privilege
+benchmark has zero external citers (all Semantic Scholar citers are lab-internal).**
+
+### Tier 1 and Tier 2: Other Confirmed New Items
+
+- **Cloud Security Alliance Labs**, CISO Daily Briefing 2026-04-03, prints the exact title of *No Attacker
+  Needed: Unintentional Cross-User Contamination in Shared-State LLM Agents*. Coordinator-verified. Names
+  no author and no institution, so the row records title-only attribution.
+- **Foresight Institute** grantee page names Yue Zhao, USC, and the FORTIS Lab by full expansion, with the
+  project title "Audit-to-Patch Pipelines for Secure LLM Agent Systems". The only third-party page found
+  that names the lab itself rather than only the person.
+- **ACM SIGSPATIAL** official award-recipients roster (2025 Best Short Paper, TyphoFormer) and **Amazon
+  Science** research-award recipient page, both by-name with affiliation.
+- **Grokipedia (xAI)** carries a full biographical entry naming PyOD, PyGOD, TDC, TrustLLM, FORTIS Lab,
+  and USC. A new encyclopedia surface distinct from the already-tracked Wikipedia entry.
+- **USC Viterbi News** July 2026 conference roundups print the Auditable Agents paper title with the full
+  author line, and a second item covers the ICML 2026 paper.
+- **TechTarget** "anomaly detection" definition names PyOD ("PyOD, an open source anomaly detection
+  library written in Python"). Demoted from the claimed Tier 1 to **Tier 2**: this is a glossary entry
+  rather than a press feature, and it names neither the PI nor USC.
+
+### The Flagship Tier 0(b) Row Nearly Became Uncitable
+
+The OpenAI "Technical Intelligence Analyst" posting that names PyOD (Ledger 1 #8g) **now returns HTTP 404**.
+It is absent from OpenAI's live job feed, **no Wayback snapshot exists** (CDX returns an empty array), and
+the successor posting ("Quantitative Intelligence Analyst", published 2026-07-14, same team) has dropped
+the PyOD bullet entirely in favour of generic "data mining, statistical modeling, and supervised learning".
+
+The row survives **only** because of the committed local sidecar. `pdf_term_scan.py` against
+`news-snapshots/openai-careers-technical-intelligence-analyst-2026-05-07.pdf` still returns the exact
+quote on p2. This is precisely the failure the Tier 0(b) snapshot-or-hold rule was written to prevent, and
+it validates that rule. Two consequences: the row must be annotated with the 404 date and the successor's
+removal of the mention, and the audit should treat any future Tier 0(b) claim as unsafe until its sidecar
+is committed. Note also that the workflow's adversarial verifier marked this row REFUTED because it
+checked only the live URL; that is a verifier-design gap, since a repo-committed snapshot is valid evidence.
+
+### D2 Careers Sweep: A Strong Negative
+
+The careers lane scanned roughly 95 job boards, including OpenAI's 749 live postings through its own Ashby
+API and Anthropic's 400 through Greenhouse, plus Google, Amazon, Microsoft, and Apple first-party search
+endpoints and about 50 enterprise, security, and fintech boards. **Zero** live postings anywhere name PyOD,
+ADBench, PyGOD, TrustLLM, TDC, SUOD, AD-AGENT, agent-audit, Aegis, or FORTIS. This is a well-bounded
+negative and should suppress re-running the same sweep for at least a quarter.
+
+### Notable Negative and Collision Findings
+
+- **Mainstream tech and business press remain a clean zero for the agent-auditing line.** MIT Technology
+  Review, IEEE Spectrum, Forbes, Synced, MarkTechPost, Unite.AI, and the AI-newsletter tier (Import AI,
+  The Sequence, Last Week in AI, Gary Marcus, AI Snake Oil, Simon Willison) name none of the works. The
+  PyOD footprint in that tier is real but confined to practitioner tutorials and mostly predates 2026.
+- **Unite.AI "Why Do AI Agents Favor Unnecessarily Powerful Tools?"** looks in search snippets like coverage
+  of the FORTIS over-privilege benchmark. It is actually about ToolPrivBench (arXiv:2606.20023) from the
+  Chinese Academy of Sciences, CUHK, and Peking University. A pure topic collision that snippet-reading
+  would have scored as a false positive.
+- **VentureBeat could not be read** (403 through the fetcher, 429 through curl) and its security desk
+  publishes heavily on agent auditing. It is the single highest-value unchecked target for the next round.
+- **The USC Institute on Ethics and Trust in Computing has not published the Associate Co-Director
+  appointment anywhere on its own site**, so that July 2026 item remains self-sourced only.
+- 78 verified-negative records were added to the candidates file this round, the largest single-round
+  addition of cumulative "do not re-check" evidence so far.
+
+### Propagated to Site
+
+Per the Downstream Handoff rule in `skills/news-search/SKILL.md`:
+
+- **PyOD impact card** in `opensource.html`: Japan MoD ATLA, BIS / Bundesbank, and the DOE
+  substantive-use cluster.
+- **Agent Auditability Line card**: the five confirmed third-party academic citations.
+- **TDC card**: the METI and NEDO rows, worded as platform adoption rather than personal attribution.
+- **`files/bio.txt`**: the government-adoption sentence rewritten as an aggregate that names only the
+  U.S. institution, covering defense ministries, central banks, financial regulators, and national AI
+  authorities across Europe, Asia, and the Middle East.
+
+Held back from the site: the NIST slide-deck mention, which is real but too thin to carry a public row;
+the Brazil course paper, which is Ledger 3; and the CVE registry mirrors, which are adverse coverage.
 
 ---
 
@@ -340,6 +530,10 @@ Items where government bodies, policy organizations, or foundation model compani
 | 1 | TrustLLM | **U.S. Senate HSGAC** | Footnote 119, p.25: *"the trustworthiness of large language models is still being analyzed"* in "Hedge Fund Use of Artificial Intelligence" | Jun 2024 |
 | 2 | TrustLLM | **U.S. Department of Defense (CDAO)** | Listed in the official "Generative AI Responsible AI Toolkit" (v1.0). Published by the Chief Digital and AI Office, Responsible AI Division. | Dec 2024 |
 | 2b | PyOD | **U.S. Department of Defense (CDAO)** | Same official toolkit lists Python Outlier Detection (PyOD) as a dedicated **Production / High-maturity** OOD-detection tool entry (TOC p.3, full entry p.49); the recommendation column places PyOD inside reliability / governability / equitability assurance use; Stage 3 Assessment §3.1.10 links PyOD as the answer to the in-use monitoring question. URLs: `pyod.readthedocs.io` and `github.com/yzhao062/pyod` (the GitHub path itself names the author). | Dec 2024 |
+| 2c | PyOD | **Japan Ministry of Defense (ATLA)** | AI Guideline v01 (English, Jun 2025) lists PyOD as **entry 14 in the recommended-tooling table**, mapped to sections B-5 (Ensuring Reliability and Validity) and B-6 (Ensuring Safety), linking `github.com/yzhao062/pyod` and the docs. p27: *"In B-6, for ensuring safety, the Python library PyOD (Python Outlier Detection), which provides a wide range of algorithms for detecting outliers, is useful for designing ..."*. Verified 2026-07-31 via `pdf_term_scan.py`, 8 matches. **Second national defense ministry to name PyOD as recommended tooling.** | Jun 2025 |
+| 2d | PyOD, DCSO, LSCP | **BIS / Irving Fisher Committee** (Deutsche Bundesbank authors) | IFC Bulletin 57, "Unsupervised outlier detection in official statistics", presented at the IFC / Bank of Italy workshop on machine learning in central banking. p10 selects PyOD as modelling tooling; p24 carries a DCSO flowchart *"adapted from Zhao et al. (2018)"*; p45 cites PyOD (JMLR) and LSCP. Verified 2026-07-31, 6 matches. Central-bank research practice published by an international body. | 2021 |
+| 2e | TrustLLM | **Japan Financial Services Agency** | FSA Institute Discussion Paper DP2024-3 invokes the TrustLLM framework for the eight dimensions of LLM trustworthiness; full citation as footnote 21 plus a references entry. Discussion-paper series, not FSA policy. | 2024 |
+| 2f | Therapeutics Data Commons | **Japan METI / NEDO** | METI's GENIAC results page reports a funded model evaluated on TDC-supplied drug-discovery benchmark tasks; the NEDO joint release states TDC *"is standardly used"* as the AI drug-discovery benchmark. Platform adoption by a national ministry programme. TDC is Harvard-led with many coauthors; the PI is one of them, and the work predates his USC appointment. | 2025-2026 |
 | 3 | TrustLLM | **NIST AI 100-2e2025** | Named in Section 3.6 "Benchmarks for AML Vulnerabilities" as a benchmark for six dimensions of trust in LLMs. NIST Special Publication on Adversarial Machine Learning. | Mar 2025 |
 | 4 | TrustLLM | **Future of Life Institute** | Official benchmark in AI Safety Index (Inaugural Edition). | Dec 2024 |
 | 5 | TrustLLM | **Future of Life Institute** | Official benchmark in AI Safety Index (Summer 2025). Pages 5, 9, 11, 17, 34, 36, 37. | Jul 2025 |
