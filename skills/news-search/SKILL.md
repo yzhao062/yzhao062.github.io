@@ -98,6 +98,43 @@ Once a quarter, run a registry-disabled pass (open dragnet only) to surface new 
 
 ---
 
+## Standing Lane: Auditable AI and Agent Auditability (Mandatory Every Round)
+
+This lane runs in **every** run mode, including Quick check and Targeted, and it runs in addition to whatever dimensions that mode selects. It never replaces a dimension. If a run is so narrow that only one lane fits, this is the lane. A round that finds nothing here must say so explicitly in the output rather than omit the lane, so the absence stays visible across rounds.
+
+**Why it is mandatory.** The agent-auditability line is the lab's current research frontier and the axis the public positioning rests on, so coverage there moves fastest and matters most to catch early. It is also the material the dimension sweep is worst at finding. The artifacts are new, several live under co-author GitHub accounts rather than `yzhao062`, and much of the relevant writing names a concept such as "agent auditability" rather than a tool name that a keyword sweep would match.
+
+### Artifacts to Search Every Round
+
+| Work | Identifier |
+|---|---|
+| Auditable Agents (position paper: five auditability dimensions, three mechanism classes) | arXiv:2604.05485 |
+| Aegis (pre-execution firewall for tool calls) | arXiv:2603.12621, `github.com/Justin0504/Aegis` |
+| agent-audit (static security and over-privilege scanner) | arXiv:2603.22853, `github.com/HeadyZhang/agent-audit` |
+| Implicit Execution Tracing (post-hoc attribution after logs are stripped) | arXiv:2603.17445 |
+| GRADE (typed two-layer execution and dependency graph) | arXiv:2606.22741, `github.com/yzhao062/grade` |
+| FORTIS (over-privilege benchmark for agent skills) | arXiv:2605.09163 |
+| `auditable` (open-source system of record for agent decisions) | `github.com/yzhao062/auditable`, `pypi.org/project/auditable` |
+| awesome-auditable-ai (curated knowledge base) | `github.com/yzhao062/awesome-auditable-ai` |
+| Auditability Card (machine-checkable disclosure artifact) | named inside Auditable Agents |
+
+Keep this table current. When a new work ships on this line, add it here in the same commit that adds it to `data/publications.json` or `data/open-source.json`.
+
+### Concept Vocabulary to Search Every Round
+
+Coverage on this line often names the idea rather than the artifact, so search the vocabulary alongside the tool names: "auditable AI systems", "agent auditability", "accountability layer" for AI agents, "system of record" for agent decisions, decision replay against live state, rollback and compensation for agent actions, tamper-evident agent audit trails, pre-execution mediation, and post-run attribution in multi-agent systems.
+
+Apply the citation verification rule without softening it. Most vocabulary matches will be other people writing about the same idea, which is topic-validation. This lane earns its place by catching the minority that name the work.
+
+### Standing Watch Items
+
+- **Baseline and prior-art citations.** Other agent-firewall or agent-auditing projects that use Aegis or Auditable Agents as a comparison baseline. Praetor (arXiv:2604.26274) is the precedent and is already tracked; it reports 12.8% attack success for Aegis against 2.2% for its own method. Search recent agent-security preprints for the same pattern, since a baseline citation is durable evidence that the work is the reference point in its subfield.
+- **Standards and regulation.** The Agent Auditability Standard (`aas-1.org`), EU AI Act Article 12 logging and traceability, NIST work on agent security, OWASP agentic releases, and any ISO/IEC JTC1 SC42 agent-audit item. These are the surfaces where a term turns into a requirement.
+- **Name collisions specific to this line.** `Auditable AI` is already in descriptive use by FICO, Fraunhofer HHI, IBM, Rezolve AI, Numbers Protocol, and an unrelated company at `auditableai.com`. `AuditBench` is Anthropic's alignment-auditing benchmark and is a separate project. `FORTIS` is the lab name, the benchmark name, and also a bank, a utility, and a hospital chain. Check these before counting any match and record new collisions in `references/disambiguation-registry.md`.
+- **Company surface.** `auditable.run` is the PI's own company site, so it is first-party and never counts as coverage. External writing *about* the company does count.
+
+---
+
 ## Dimension 1: Person & Lab
 
 Find coverage that names the PI or lab, regardless of which paper or tool.
@@ -292,6 +329,20 @@ Non-FM-co careers pages (Wells Fargo, Capital One, JPMC, Pfizer, Goldman, etc.) 
 
 When running a targeted search (not full audit), append new findings to the existing file. Do not overwrite previous results. Mark the date of each search pass.
 
+### Downstream Handoff: Propagate Confirmed Findings to the Public Site
+
+`news-coverage-audit.md` is an internal evidence ledger. It is not what anyone outside the project reads. Every round must therefore end with an explicit decision about which confirmed findings belong on the public site, because a Tier 0 discovery that never reaches `opensource.html` produces no external value.
+
+Run this step after the audit file is written, never before, so that only verified rows propagate.
+
+1. **Select.** From this round's newly confirmed rows, take the ones that change the public impact story: Tier 0 government, international-body, standards, or foundation-model-company citations; Tier 1 items from national labs and major research institutions; and any third-party use of a lab artifact as a baseline or as adopted tooling. Skip Tier 3 through Tier 5 unless a card's headline count is now stale.
+2. **Map to the impact cards.** `opensource.html` carries one `impact-card` per project family (PyOD, Agent Auditability Line, ADBench, TrustLLM, Recent Institutional Visibility, TDC, DoxBench). Add each finding as a row in the matching card, using the existing `Type | Evidence | Source` column shape and the established `impact-type` badge classes. Create a new card only when a project family has enough confirmed evidence to stand on its own.
+3. **Refresh the derived numbers.** Several surfaces quote counts that this round may have changed: the External-adoption blurb at the top of `opensource.html`, the patent count, the edition counts, download and star figures, and the parallel claims in `files/bio.txt`, `index.html`, `llms.txt`, and both CV files. A finding that raises a count must raise it everywhere or the site contradicts itself.
+4. **Keep the wording calibrated to the evidence.** Carry the audit's caveats onto the site rather than dropping them. Attribution that names only a tool and not the PI stays described that way. A co-authored project stays described as co-authored. Adverse coverage, such as a CVE advisory, is evidence of reach and does not belong in a card that reads as endorsement.
+5. **Record what was propagated.** Add a short "Propagated to site" note to the round's section in `news-coverage-audit.md` listing which rows reached which cards, so a later reader can tell the difference between a finding that was never surfaced and one that was deliberately held back.
+
+The reverse direction also holds: when a public claim on the site cannot be traced to a row in the audit, treat that as a defect in the site, not as evidence the audit is incomplete.
+
 ---
 
 ## Run Modes
@@ -306,6 +357,8 @@ When running a targeted search (not full audit), append new findings to the exis
 | **PDF deep search** | Before tenure materials or when a specific gov report is suspected | Dim 8 only, with candidate PDF list |
 | **Affiliation audit** | Before tenure / promotion, after major citation milestones | Invoke the standalone `/citation-audit` skill (was D9 here before; split out as its own skill at `skills/citation-audit/SKILL.md`) |
 | **External deep research** | After automated audit, as a complement pass | Dim 10 (external LLM deep research) |
+
+**Every mode above also runs the Standing Lane** (Auditable AI and agent auditability), on top of the dimensions listed for that mode. The Dimensions column says what varies by mode; the Standing Lane does not vary. See "Standing Lane: Auditable AI and Agent Auditability" above for the artifact table, the concept vocabulary, and the watch items.
 
 ---
 

@@ -6,6 +6,51 @@ Replace `{YEAR}` with the current year and `{YEAR-1}` with the previous year. Qu
 
 ---
 
+## § Standing Lane: Auditable AI and Agent Auditability (run every round, every mode)
+
+Mandatory in all run modes, additive to the dimensions that mode selects. See "Standing Lane" in `SKILL.md` for the rationale, the full artifact table, and the watch items. Run the artifact queries first, then the vocabulary queries, then the watch queries.
+
+**Artifacts by name and identifier:**
+
+```
+"Auditable Agents" USC OR "Yue Zhao" OR arXiv 2604.05485
+arXiv 2604.05485 OR "auditable agents" cited OR baseline OR framework {YEAR}
+AEGIS "pre-execution firewall" OR "tool call" agent USC OR arXiv 2603.12621
+"agent-audit" OWASP OR scanner OR "over-privilege" HeadyZhang OR arXiv 2603.22853
+"implicit execution tracing" OR arXiv 2603.17445 multi-agent attribution
+GRADE "agent execution" OR "dependency graph" arXiv 2606.22741 OR yzhao062/grade
+FORTIS benchmark "over-privilege" agent skills arXiv 2605.09163
+"auditable" SDK "system of record" agent decisions yzhao062 OR pypi
+"awesome-auditable-ai" OR "auditable AI" curated list github
+"Auditability Card" agent disclosure
+```
+
+**Concept vocabulary (expect mostly topic-validation; keep the citation rule strict):**
+
+```
+"auditable AI systems" research USC {YEAR}
+"agent auditability" framework OR benchmark OR dimensions {YEAR}
+"accountability layer" "AI agents" {YEAR}
+"system of record" "agent decisions" replay rollback
+agent "decision replay" OR "compensating rollback" live state
+"tamper-evident" audit trail AI agent tool call
+"pre-execution" mediation OR interception agent tool call firewall
+"post-run attribution" OR "post-hoc attribution" multi-agent responsibility
+```
+
+**Watch items (baselines, standards, collisions, company):**
+
+```
+Aegis OR "Auditable Agents" baseline comparison attack success agent firewall arXiv {YEAR}
+"aas-1.org" OR "Agent Auditability Standard"
+"EU AI Act" Article 12 logging traceability agent audit record
+NIST agent security OR agentic AI publication {YEAR}
+"Auditable AI" -site:auditable.run company OR product OR framework {YEAR}
+AuditBench Anthropic alignment auditing benchmark
+```
+
+Collision guard for this lane: `Auditable AI` is used descriptively by FICO, Fraunhofer HHI, IBM, Rezolve AI, Numbers Protocol, and `auditableai.com`; `AuditBench` is Anthropic's; `FORTIS` also matches a bank, a utility, and a hospital chain. `auditable.run` is first-party and never counts as coverage.
+
 ## § Dimension 1: Person & Lab
 
 ```

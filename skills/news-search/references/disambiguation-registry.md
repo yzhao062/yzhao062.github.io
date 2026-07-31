@@ -26,6 +26,27 @@ This file complements `search-strategy.md` ("Common false positives" table) by c
 - **CloudMatos "Aegis" / "Aegis Gateway"** (`cloudmatos.ai`): the vendor's own Istio+OPA-for-agents runtime policy/observability gateway (full blog series plus a dedicated product page at `cloudmatos.ai/solution/aegis-gateway/`). The product and blog pages were fetchable on 2026-05-28 and confirm a CloudMatos commercial product, not a FORTIS AEGIS hit; some automated fetchers receive a catch-all 404 shell for non-JS clients. Verified 2026-05-28.
 - **Authensor "Aegis" scanner** (`authensor.com`, npm `@authensor/aegis`): commercial prompt-injection / memory-poisoning detector. Verified 2026-05-28.
 - **Beam AI "AEGIS framework"** (`beam.ai`): a generic threat-modeling framework paired with MAESTRO, not the FORTIS paper. Verified 2026-05-28.
+- **Aegis (Kong et al., arXiv:2509.14295)**, "Automated error generation and attribution for multi-agent systems", by Fanqi Kong, Ruijie Zhang, Huaxiao Yin, Guibin Zhang, Xiaofei Zhang, Ziang Chen, Zhaowei Zhang, Xiaoyuan Zhang, Song-Chun Zhu, Xue Feng. **The most dangerous Aegis collision recorded so far**, because unlike the commercial products above it is an arXiv paper working on multi-agent failure attribution, which is adjacent to the FORTIS agenda. Discovered 2026-07-31 when a Semantic Scholar edge reported arXiv:2606.04990 as citing FORTIS work; coordinator PDF extraction found zero occurrences of "Auditable Agents", "2604.05485", "Yue Zhao", or "agent-audit", and the cited Aegis is Kong et al. Require arXiv:2603.12621 or the pre-execution-firewall framing before counting any Aegis match in an academic citation graph.
+
+### "Implicit execution traces" (as a generic phrase)
+
+**Real match**: the FORTIS paper *Implicit Execution Tracing* (arXiv:2603.17445), on recovering which agent produced a harmful output after logs are stripped.
+
+**Required disambiguator**: arXiv:2603.17445, or a FORTIS author name.
+
+**Known collisions** (do NOT count):
+
+- **"implicit execution traces [Li et al., 2025b]"**, cited in FALAT (arXiv:2606.00765, Concordia SPEAR Lab and DePaul). A different 2025 work that happens to share the descriptive phrase. Discovered 2026-07-31: FALAT had been reported as the sole external citer of Implicit Execution Tracing, but its PDF contains zero occurrences of "2603.17445", "USC", "FORTIS", or the FORTIS author names. After this correction, Implicit Execution Tracing has **zero** confirmed external citers.
+
+### ToolPrivBench vs the FORTIS over-privilege benchmark
+
+**Real match**: FORTIS, the lab's benchmark for over-privilege in agent skills (arXiv:2605.09163).
+
+**Known collision** (do NOT count): **Unite.AI, "Why Do AI Agents Favor Unnecessarily Powerful Tools?"** reads in search snippets like coverage of the FORTIS over-privilege benchmark. It actually covers **ToolPrivBench** (arXiv:2606.20023) from the Chinese Academy of Sciences, CUHK, and Peking University. Verified 2026-07-31. A pure topic collision that snippet-reading scores as a false positive.
+
+### FORTIS (the name itself)
+
+`FORTIS` is simultaneously the lab name, the over-privilege benchmark name, and an unrelated bank, utility, and hospital chain. Require USC or agent-skill context.
 
 ### TrustLLM
 
@@ -162,6 +183,10 @@ Leads that repeatedly surface like positives but are confirmed not to name FORTI
 | OpenAI Careers, Data Science Manager, Integrity JD | 2026-05-28 D2-careers | Live OpenAI page fetchable on 2026-05-28. Lists "anomaly detection" as a generic data-science technique and does NOT name PyOD or any FORTIS tool. Distinct from #8g (Technical Intelligence Analyst, which names PyOD verbatim). |
 | Anthropic ML/Research Engineer, Safeguards JD | 2026-05-28 D2-careers | Names only generic "anomaly detection systems" and "classifiers"; no PyOD or FORTIS tool. Peer of the existing Anthropic Threat-Intelligence and Detection-and-Response JD negatives. |
 | Agent-governance vendor/consulting blogs (EY, Microsoft Agent Governance Toolkit, Databricks Unity AI Gateway, Acceldata, Beam AI, Sysdig, Kai Waehner/Confluent, GovTech, Ariel Softwares, Indext Data Lab, Waxell, LoginRadius) | 2026-05-28 D4/D5 | Agent-auditing/governance topic coverage; none names a FORTIS work on direct fetch. Beam AI "AEGIS framework" is a generic threat-modeling framework, not FORTIS Aegis. |
+| Foundation-model-company careers boards, full-text sweep (~95 boards: OpenAI 749 postings via Ashby API, Anthropic 400 via Greenhouse, xAI, Cohere, Cursor, Scale, Together, Thinking Machines, Sierra, Harvey, Cognition, ElevenLabs, Deepgram, Modal, Decagon, Abridge, Notion, Runway, Character, plus amazon.jobs, Google, Microsoft, Apple first-party search, ~50 enterprise/security/fintech boards, 5 Workday tenants) | 2026-07-31 D2-careers | Zero live postings anywhere name PyOD, ADBench, PyGOD, TrustLLM, TDC, SUOD, AD-AGENT, agent-audit, Aegis, or FORTIS. A well-bounded negative; suppress the same sweep for at least a quarter. |
+| OWASP Agentic Skills Top 10, Snyk ToxicSkills, obot.ai, PipeLab, Help Net Security 25-tool roundup, AI Defense Matrix catalog (246 products), Zylos Research, Anomity, Digital Thought Disruption rollback piece (2026-07-25) | 2026-07-31 D4 | Agent-auditing and rollback topic coverage; direct fetch confirms none names Aegis, agent-audit, Auditable Agents, GRADE, Implicit Execution Tracing, or FORTIS. |
+| Mainstream tech and AI-newsletter tier for the agent-auditing line (MIT Technology Review, IEEE Spectrum, Forbes, Synced, MarkTechPost, Unite.AI, Import AI, The Sequence, Last Week in AI, Gary Marcus, AI Snake Oil, Simon Willison) | 2026-07-31 D3 | Clean zero. The agent-auditing line has no penetration into general tech journalism as of this date; the PyOD footprint in that tier is confined to practitioner tutorials and mostly predates 2026. |
+| `aiproductivity.ai` (phantom search result) | 2026-07-31 D4 | Surfaced in search results but 404s on two fetches and is absent from the site's own news index. A clean illustration that a search result can reference a page that does not exist. |
 
 ## How to Use This File
 
