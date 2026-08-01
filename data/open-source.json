@@ -8,7 +8,7 @@
     "docs_url": "https://pyod.readthedocs.io",
     "paper_url": "https://arxiv.org/abs/2412.12154",
     "demo_url": "",
-    "stars": 9943,
+    "stars": 9945,
     "tags": [
       "Anomaly Detection",
       "Outlier Detection",
@@ -16,7 +16,7 @@
       "Machine Learning",
       "PyTorch"
     ],
-    "last_updated_at": "2026-08-01T01:35:28Z"
+    "last_updated_at": "2026-08-01T02:41:45Z"
   },
   {
     "name": "auditable",
@@ -330,7 +330,7 @@
       "Audit Trail",
       "Human-in-the-Loop"
     ],
-    "last_updated_at": "2026-08-01T01:49:07Z"
+    "last_updated_at": "2026-08-01T09:48:50Z"
   },
   {
     "name": "combo",
@@ -379,7 +379,7 @@
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/agent-style.html",
     "paper_url": "",
     "demo_url": "https://pypi.org/project/agent-style/",
-    "stars": 599,
+    "stars": 600,
     "tags": [
       "AI Agents",
       "Agent Configuration",
