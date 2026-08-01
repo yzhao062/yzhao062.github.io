@@ -124,6 +124,30 @@ Match the tone and length of nearby items. For paper acceptance, a one-sentence 
 
 If the user already has a relevant news item drafted or asks you to skip the news, do not add one.
 
+### Rolling Three-Month News Window (Do This Every Time a News Item Is Added)
+
+The News section in `index.html` keeps **only the current month and the two before it** visible. Everything older lives inside the collapsed `<details class="smart-details">` block whose summary reads "Show more news". Whenever you add a news item, fold anything that has fallen outside the window in the same edit, so the window maintains itself instead of drifting. (Confirmed by Yue 2026-08-01, when the visible list had grown to five months.)
+
+Worked example: adding an item in August 2026 leaves August, July, and June visible, and pushes May and everything older into the collapsed block.
+
+**How to fold, and what not to do.** The visible items sit directly above the `<details>` opener and the collapsed ones directly below its `<summary>`. To fold, **move the `<details>` and `<summary>` lines upward** so the now-outdated paragraphs fall inside the block. Do not cut and re-paste the paragraph text, and do not rewrite any wording. A correct fold produces a diff of two added lines and two removed lines, touching no news prose. If the diff is larger than that, something was rewritten and should be redone.
+
+Newly folded items land immediately after the `<summary>`, which puts them ahead of the items already collapsed and preserves reverse-chronological order throughout.
+
+**Verify after folding.** Count the news paragraphs before and after; the total must be unchanged, because folding hides items and never deletes them. Confirm the visible set covers exactly the intended three months, and confirm the `<details>` and `<p>` tags are still balanced inside the News section. A quick check:
+
+```python
+import re, collections, pathlib
+t = pathlib.Path("index.html").read_text()
+news = t.split('<h2 id="news">')[1].split('<h2 id="awards">')[0]
+head, tail = news.split("Show more news")
+print("visible:", dict(collections.Counter(re.findall(r"\[([A-Za-z]{3}) \d{4}\]", head))))
+print("folded :", dict(collections.Counter(re.findall(r"\[([A-Za-z]{3}) \d{4}\]", tail))))
+print("details balanced:", news.count("<details") == news.count("</details>"))
+```
+
+The window is about display only. Never delete a news item to satisfy it, and never reorder items to make the boundary land more neatly.
+
 ## CV Paper Count Check
 
 **After every publication change**, verify that the `benumerate` start numbers in `cv/cv-full.tex` are correct. The CV uses three `benumerate` sections with reverse numbering:
