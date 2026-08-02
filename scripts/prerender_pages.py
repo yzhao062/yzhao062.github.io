@@ -8,6 +8,7 @@ import json
 import math
 import os
 import re
+import subprocess
 import tempfile
 import textwrap
 from collections.abc import Iterable, Mapping
@@ -485,6 +486,66 @@ def bio_regions(bio_path: Path) -> dict[str, str]:
     return {"bio": "\n".join(rendered)}
 
 
+SITEMAP_PATH = ROOT / "sitemap.xml"
+SITE_BASE = "https://viterbi-web.usc.edu/~yzhao010/"
+
+
+def _git_last_modified(relative_path: str) -> str | None:
+    """Return the last commit date for a file as YYYY-MM-DD, or None."""
+    try:
+        result = subprocess.run(
+            ["git", "-C", str(ROOT), "log", "-1", "--format=%cs", "--", relative_path],
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+    except OSError:
+        return None
+    value = result.stdout.strip()
+    return value if re.fullmatch(r"\d{4}-\d{2}-\d{2}", value) else None
+
+
+def refresh_sitemap() -> bool:
+    """Set each sitemap ``lastmod`` to the real git date of the page it points at.
+
+    A sitemap that reports a stale ``lastmod`` tells crawlers a page has not
+    changed, so a rewritten page can go unrecrawled indefinitely. Dates come from
+    git rather than the filesystem because a fresh checkout resets mtimes.
+
+    Entries whose date cannot be determined, which is what happens in a shallow
+    clone, keep their existing value rather than being cleared.
+    """
+    original = SITEMAP_PATH.read_text(encoding="utf-8")
+    updated = original
+    unresolved: list[str] = []
+
+    for loc, lastmod in re.findall(
+        r"<loc>([^<]+)</loc>\s*<lastmod>([^<]+)</lastmod>", original
+    ):
+        if not loc.startswith(SITE_BASE):
+            continue
+        relative = loc[len(SITE_BASE):] or "index.html"
+        if not (ROOT / relative).exists():
+            unresolved.append(relative)
+            continue
+        actual = _git_last_modified(relative)
+        if actual is None:
+            unresolved.append(relative)
+            continue
+        if actual != lastmod:
+            updated = updated.replace(
+                f"<loc>{loc}</loc>\n    <lastmod>{lastmod}</lastmod>",
+                f"<loc>{loc}</loc>\n    <lastmod>{actual}</lastmod>",
+            )
+
+    if unresolved:
+        print(f"  sitemap: kept existing dates for {len(unresolved)} entries")
+    if updated != original:
+        _atomic_write(SITEMAP_PATH, updated)
+        return True
+    return False
+
+
 def _atomic_write(page: Path, rendered: str) -> None:
     """Replace ``page`` with ``rendered`` atomically.
 
@@ -531,6 +592,9 @@ def main() -> None:
             _atomic_write(page, rendered)
         state = "Updated" if changed else "Unchanged"
         print(f"{state} {page.relative_to(ROOT)} ({len(pages[page])} regions)")
+
+    sitemap_changed = refresh_sitemap()
+    print(f"{'Updated' if sitemap_changed else 'Unchanged'} sitemap.xml")
 
     visible_publications = sum(
         item.get("show_on_website") is not False for item in publications

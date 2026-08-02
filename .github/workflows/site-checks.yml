@@ -16,6 +16,10 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v5
+        with:
+          # Full history: prerender_pages.py derives sitemap lastmod values from
+          # per-file git dates, which a shallow clone cannot supply.
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v6
@@ -25,7 +29,7 @@ jobs:
       - name: Verify committed prerendered HTML matches the JSON sources
         run: |
           python scripts/prerender_pages.py
-          git diff --exit-code -- publications.html lab.html index.html
+          git diff --exit-code -- publications.html lab.html index.html sitemap.xml
 
       - name: Run static site checks
         env:
