@@ -4,19 +4,19 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="author" content="Yue Zhao">
-  <meta name="description" content="Auditable Agents, accepted to the ACM AI Leadership Summit 2026, defines five auditability dimensions for accountable LLM agent systems; an earlier version was presented non-archivally at the ACL 2026 KnowFM workshop.">
+  <meta name="description" content="Agent auditability is the system property that makes accountability possible. Auditable Agents defines five dimensions and three mechanism classes.">
   <meta name="keywords" content="Auditable Agents, Agent Systems, AI Agent Auditing, AI Behavior Verification, Agentic AI, AI Risk Audit and Control, AI Risk, AI Auditing, AI Defense, Adversarial Robustness, Agent Auditability, Agent Accountability, Runtime Guardrails, AI Safety, AI Security, LLM Agents, Execution Tracing, Policy Checking, Auditability Card, agent-audit, Aegis, Yue Zhao, USC, FORTIS Lab">
-  <title>Auditable Agents | A Framework for Accountable AI Agent Systems</title>
+  <title>Agent Auditability | Auditable Agents</title>
   <link rel="canonical" href="https://viterbi-web.usc.edu/~yzhao010/auditable-agents.html">
   <link rel="icon" type="image/x-icon" href="images/logo2.ico">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Auditable Agents | A Framework for Accountable AI Agent Systems">
-  <meta property="og:description" content="Five dimensions of auditability for LLM agent systems. Accepted to the ACM AI Leadership Summit 2026; an earlier version was presented non-archivally at ACL 2026 KnowFM.">
+  <meta property="og:title" content="Agent Auditability | Auditable Agents">
+  <meta property="og:description" content="Agent auditability is the system property that makes accountability possible. Auditable Agents defines five dimensions and three mechanism classes.">
   <meta property="og:url" content="https://viterbi-web.usc.edu/~yzhao010/auditable-agents.html">
   <meta property="og:image" content="https://viterbi-web.usc.edu/~yzhao010/images/auditable-agents-overview.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Auditable Agents | A Framework for Accountable AI Agent Systems">
-  <meta name="twitter:description" content="Five dimensions of auditability for LLM agent systems. Accepted to the ACM AI Leadership Summit 2026; an earlier version was presented non-archivally at ACL 2026 KnowFM.">
+  <meta name="twitter:title" content="Agent Auditability | Auditable Agents">
+  <meta name="twitter:description" content="Agent auditability is the system property that makes accountability possible. Auditable Agents defines five dimensions and three mechanism classes.">
   <meta name="twitter:image" content="https://viterbi-web.usc.edu/~yzhao010/images/auditable-agents-overview.png">
   <script type="application/ld+json">
   {
@@ -41,6 +41,62 @@
     "releasedEvent": {"@type": "PublicationEvent", "name": "ACM AI Leadership Summit 2026"}
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "DefinedTerm",
+    "@id": "https://viterbi-web.usc.edu/~yzhao010/auditable-agents.html#agent-auditability",
+    "name": "Agent Auditability",
+    "description": "The enabling system property through which an agent system produces, preserves, and exposes enough trustworthy evidence to make accountability possible.",
+    "url": "https://viterbi-web.usc.edu/~yzhao010/auditable-agents.html#agent-auditability",
+    "subjectOf": {
+      "@type": "ScholarlyArticle",
+      "name": "Auditable Agents",
+      "url": "https://arxiv.org/abs/2604.05485"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "@id": "https://viterbi-web.usc.edu/~yzhao010/auditable-agents.html#agent-auditability-faq",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is agent auditability?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Agent auditability is the enabling system property through which an agent system produces, preserves, and exposes enough trustworthy evidence to make accountability possible."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does agent auditability differ from AI auditing?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Agent auditability is an enabling property of an agent system. AI auditing is the process that uses available evidence to reconstruct behavior, check policy, and assign responsibility."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why is auditability necessary for accountability?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Accountability requires an auditor to determine compliance and assign responsibility. Those determinations depend on trustworthy evidence across all five dimensions of agent auditability."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the five dimensions of agent auditability?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The five dimensions are action recoverability, lifecycle coverage, policy checkability, responsibility attribution, and evidence integrity. Together they support a defensible audit verdict."
+        }
+      }
+    ]
+  }
+  </script>
   <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="preload" as="image" href="images/rsz_300.jpg">
@@ -60,8 +116,12 @@
     <div class="row">
       <div id="sidebar" class="col-md-3 col-12 content-spacing"></div>
       <div class="col-md-9 col-12 content-spacing">
-        <h1 style="color:#990000;">Auditable Agents</h1>
-        <p style="font-size:1.1rem; font-weight:700; color:#7a2a2a; margin-top:-4px;">A framework for accountable AI agent systems.</p>
+        <h1 id="agent-auditability" style="color:#990000;">Agent Auditability</h1>
+        <p style="font-size:1.1rem; font-weight:700; color:#7a2a2a; margin-top:-4px;"><strong>Auditable Agents</strong>: A Framework for Accountable AI Agent Systems</p>
+        <p>
+          <strong>Agent auditability</strong> is the enabling system property through which an agent system
+          produces, preserves, and exposes enough trustworthy evidence to make accountability possible.
+        </p>
         <p style="font-size:0.95rem; color:#7a2a2a; margin-top:-6px;"><i class="fas fa-award" aria-hidden="true"></i> Accepted to the <b>ACM AI Leadership Summit 2026</b>, Atlanta, as a condensed 4-page version. An earlier version was presented non-archivally at the <b>ACL 2026 KnowFM Workshop</b>.</p>
 
         <p>
@@ -105,6 +165,28 @@
           these dimensions at successive temporal points. No single class suffices.
         </p>
 
+        <h2 style="color:#990000;">The Five Dimensions of Agent Auditability</h2>
+        <p>
+          The framework treats these five conditions as jointly necessary for a defensible
+          post-deployment audit verdict.
+        </p>
+        <dl>
+          <dt id="action-recoverability">Action Recoverability</dt>
+          <dd>The record captures policy-relevant actions and enough fields to reconstruct what happened.</dd>
+
+          <dt id="lifecycle-coverage">Lifecycle Coverage</dt>
+          <dd>The record covers the execution phases and context, including retries, fallbacks, approvals, and delegation handoffs.</dd>
+
+          <dt id="policy-checkability">Policy Checkability</dt>
+          <dd>The record contains the fields needed to mechanically determine whether stated structural policies were followed.</dd>
+
+          <dt id="responsibility-attribution">Responsibility Attribution</dt>
+          <dd>The record supports recovery of the responsible component or responsibility chain behind each action.</dd>
+
+          <dt id="evidence-integrity">Evidence Integrity</dt>
+          <dd>The record has verifiable protections against silent modification, allowing auditors to determine whether the evidence can be trusted.</dd>
+        </dl>
+
         <p>
           The framework did not emerge in isolation. It grew out of building tools that address
           specific auditability gaps, and from studying failure modes that make auditability
@@ -116,7 +198,7 @@
         <div style="border-left:4px solid #2c5f8a; background:#f4f8fc; padding:14px 18px; margin:14px 0; border-radius:0 6px 6px 0;">
           <p style="margin:0 0 4px 0;">
             <strong style="color:#2c5f8a; font-size:1.05rem;">Detect</strong>
-            <span style="color:#888; font-size:0.9rem;"> &mdash; Pre-deployment</span>
+            <span style="color:#888; font-size:0.9rem;"> &middot; Pre-deployment</span>
             <span style="float:right; font-size:1.15rem; font-weight:700; color:#2c5f8a;">617 findings</span>
           </p>
           <p style="margin:4px 0;">
@@ -135,7 +217,7 @@
         <div style="border-left:4px solid #c67b30; background:#fef9f3; padding:14px 18px; margin:14px 0; border-radius:0 6px 6px 0;">
           <p style="margin:0 0 4px 0;">
             <strong style="color:#c67b30; font-size:1.05rem;">Enforce</strong>
-            <span style="color:#888; font-size:0.9rem;"> &mdash; Runtime</span>
+            <span style="color:#888; font-size:0.9rem;"> &middot; Runtime</span>
             <span style="float:right; font-size:1.15rem; font-weight:700; color:#c67b30;">8.3 ms overhead</span>
           </p>
           <p style="margin:4px 0;">
@@ -160,7 +242,7 @@
         <div style="border-left:4px solid #3a7d44; background:#f4faf5; padding:14px 18px; margin:14px 0; border-radius:0 6px 6px 0;">
           <p style="margin:0 0 4px 0;">
             <strong style="color:#3a7d44; font-size:1.05rem;">Recover</strong>
-            <span style="color:#888; font-size:0.9rem;"> &mdash; Post-hoc</span>
+            <span style="color:#888; font-size:0.9rem;"> &middot; Post-hoc</span>
             <span style="float:right; font-size:1.15rem; font-weight:700; color:#3a7d44;">~0.95 accuracy</span>
           </p>
           <p style="margin:4px 0;">
@@ -176,7 +258,7 @@
         <div style="border-left:4px solid #990000; background:#fff7f7; padding:14px 18px; margin:14px 0; border-radius:0 6px 6px 0;">
           <p style="margin:0 0 4px 0;">
             <strong style="color:#990000; font-size:1.05rem;">Why auditability is needed</strong>
-            <span style="color:#888; font-size:0.9rem;"> &mdash; Failure modes</span>
+            <span style="color:#888; font-size:0.9rem;"> &middot; Failure modes</span>
           </p>
           <p style="margin:4px 0;">
             <a href="https://arxiv.org/abs/2604.01350"><strong>Cross-user contamination</strong></a>:
@@ -191,6 +273,31 @@
             does not impose a capability tax.
           </p>
         </div>
+
+        <h2 id="agent-auditability-faq" style="color:#990000;">Agent Auditability FAQ</h2>
+        <h3>What Is Agent Auditability?</h3>
+        <p>
+          Agent auditability is the enabling system property through which an agent system produces,
+          preserves, and exposes enough trustworthy evidence to make accountability possible.
+        </p>
+
+        <h3>How Does Agent Auditability Differ From AI Auditing?</h3>
+        <p>
+          Agent auditability is an enabling property of an agent system. AI auditing is the process that
+          uses available evidence to reconstruct behavior, check policy, and assign responsibility.
+        </p>
+
+        <h3>Why Is Auditability Necessary for Accountability?</h3>
+        <p>
+          Accountability requires an auditor to determine compliance and assign responsibility. Those
+          determinations depend on trustworthy evidence across all five dimensions of agent auditability.
+        </p>
+
+        <h3>What Are the Five Dimensions of Agent Auditability?</h3>
+        <p>
+          The five dimensions are action recoverability, lifecycle coverage, policy checkability,
+          responsibility attribution, and evidence integrity. Together they support a defensible audit verdict.
+        </p>
 
         <h2 style="color:#990000;">The Auditability Card</h2>
         <p>

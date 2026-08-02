@@ -22,6 +22,11 @@ jobs:
         with:
           python-version: "3.11"
 
+      - name: Verify committed prerendered HTML matches the JSON sources
+        run: |
+          python scripts/prerender_pages.py
+          git diff --exit-code -- publications.html lab.html
+
       - name: Run static site checks
         env:
           CHECK_PUBLIC_URLS: "1"
