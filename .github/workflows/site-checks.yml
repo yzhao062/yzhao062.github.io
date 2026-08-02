@@ -25,7 +25,7 @@ jobs:
       - name: Verify committed prerendered HTML matches the JSON sources
         run: |
           python scripts/prerender_pages.py
-          git diff --exit-code -- publications.html lab.html
+          git diff --exit-code -- publications.html lab.html index.html
 
       - name: Run static site checks
         env:

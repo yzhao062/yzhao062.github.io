@@ -22,6 +22,8 @@ LAB_MEMBERS_PATH = ROOT / "data" / "lab-members.json"
 LAB_CURRENT_PHD_PATH = ROOT / "data" / "lab-current-phd.json"
 PUBLICATIONS_PAGE = ROOT / "publications.html"
 LAB_PAGE = ROOT / "lab.html"
+INDEX_PAGE = ROOT / "index.html"
+BIO_PATH = ROOT / "files" / "bio.txt"
 
 PUBLICATION_FIELDS = ("title", "authors", "venue", "year", "paper_url")
 VENUE_DATE_RULES = (
@@ -454,6 +456,35 @@ def render_page(page: Path, regions: Mapping[str, str]) -> tuple[str, bool]:
     return rendered, rendered != source
 
 
+def bio_regions(bio_path: Path) -> dict[str, str]:
+    """Render files/bio.txt into the homepage biography block.
+
+    bio.txt stays the single source of truth. It is also linked from the sidebar
+    as a plain-text "Short Bio" that a conference organizer can copy, so it is a
+    deliverable in its own right and is not folded into the HTML. Generating the
+    homepage copy from it keeps the two from drifting apart.
+    """
+    paragraphs = [
+        line.strip()
+        for line in bio_path.read_text(encoding="utf-8").splitlines()
+        if line.strip()
+    ]
+    if not paragraphs:
+        raise ValueError(f"{bio_path.relative_to(ROOT)}: no paragraphs found")
+
+    indent = " " * 24
+    rendered = []
+    for position, paragraph in enumerate(paragraphs):
+        escaped = html.escape(paragraph, quote=False)
+        if position == 0:
+            rendered.append(
+                f'{indent}<p><strong style="color:#990000">Biography</strong>. {escaped}</p>'
+            )
+        else:
+            rendered.append(f"{indent}<p>{escaped}</p>")
+    return {"bio": "\n".join(rendered)}
+
+
 def _atomic_write(page: Path, rendered: str) -> None:
     """Replace ``page`` with ``rendered`` atomically.
 
@@ -489,6 +520,7 @@ def main() -> None:
     pages = {
         PUBLICATIONS_PAGE: publication_regions(publications, date.today().year),
         LAB_PAGE: lab_regions(lab_current_phd, lab_members),
+        INDEX_PAGE: bio_regions(BIO_PATH),
     }
     rendered_pages = {
         page: render_page(page, regions) for page, regions in pages.items()
