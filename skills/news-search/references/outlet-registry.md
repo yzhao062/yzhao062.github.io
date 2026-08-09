@@ -34,7 +34,7 @@ If a result appears in these outlets, it is Tier 1 coverage.
 | Dark Reading | darkreading.com | Enterprise cybersecurity |
 | The Hacker News | thehackernews.com | Security news |
 | SecurityWeek | securityweek.com | Cybersecurity |
-| SC Magazine | scmagazine.com | Security professionals |
+| SC Media | scworld.com | Security professionals. Renamed and moved from `scmagazine.com`; query the new domain. Corrected 2026-08-09. |
 | Bleeping Computer | bleepingcomputer.com | Security, tech support |
 | Krebs on Security | krebsonsecurity.com | Investigative security |
 | The Record | therecord.media | Cybersecurity journalism |

@@ -114,6 +114,7 @@ This lane runs in **every** run mode, including Quick check and Targeted, and it
 | Implicit Execution Tracing (post-hoc attribution after logs are stripped) | arXiv:2603.17445 |
 | GRADE (typed two-layer execution and dependency graph) | arXiv:2606.22741, `github.com/yzhao062/grade` |
 | FORTIS (over-privilege benchmark for agent skills) | arXiv:2605.09163 |
+| WeClawArena (auditable sandbox and benchmark for cross-user agent collaboration and security) | arXiv:2608.03499 |
 | `auditable` (open-source system of record for agent decisions) | `github.com/yzhao062/auditable`, `pypi.org/project/auditable` |
 | awesome-auditable-ai (curated knowledge base) | `github.com/yzhao062/awesome-auditable-ai` |
 | Auditability Card (machine-checkable disclosure artifact) | named inside Auditable Agents |

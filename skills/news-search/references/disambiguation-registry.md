@@ -27,6 +27,11 @@ This file complements `search-strategy.md` ("Common false positives" table) by c
 - **Authensor "Aegis" scanner** (`authensor.com`, npm `@authensor/aegis`): commercial prompt-injection / memory-poisoning detector. Verified 2026-05-28.
 - **Beam AI "AEGIS framework"** (`beam.ai`): a generic threat-modeling framework paired with MAESTRO, not the FORTIS paper. Verified 2026-05-28.
 - **Aegis (Kong et al., arXiv:2509.14295)**, "Automated error generation and attribution for multi-agent systems", by Fanqi Kong, Ruijie Zhang, Huaxiao Yin, Guibin Zhang, Xiaofei Zhang, Ziang Chen, Zhaowei Zhang, Xiaoyuan Zhang, Song-Chun Zhu, Xue Feng. **The most dangerous Aegis collision recorded so far**, because unlike the commercial products above it is an arXiv paper working on multi-agent failure attribution, which is adjacent to the FORTIS agenda. Discovered 2026-07-31 when a Semantic Scholar edge reported arXiv:2606.04990 as citing FORTIS work; coordinator PDF extraction found zero occurrences of "Auditable Agents", "2604.05485", "Yue Zhao", or "agent-audit", and the cited Aegis is Kong et al. Require arXiv:2603.12621 or the pre-execution-firewall framing before counting any Aegis match in an academic citation graph.
+- **Aegis Authenticator** (`beemdevelopment/Aegis`) — an open-source Android 2FA app. Confirmed twice on 2026-08-09 in Help Net Security, once as a dedicated feature (2025-07-07) and once as the only Aegis in a 40-tool open-source security roundup (2025-12-11). Both predate arXiv:2603.12621.
+- **NVIDIA AEGIS content-safety dataset, full form** — Ghosh, Varshney, Galinkin, Parisien, "AEGIS: Online adaptive AI content safety moderation with ensemble of LLM experts". All 11 Aegis matches in Mistral's Shieldstral technical report (arXiv:2607.25857) resolve to this line. Confirmed 2026-08-09.
+- **Fictionalized "Aegis" company names in security write-ups** — a Salesforce agent-hacking article states outright that "company names have been replaced with fictional names," then runs a case study on "Aegis". Confirmed 2026-08-09.
+
+**Volume note (2026-08-09)**: confirmed Aegis collisions now outnumber confirmed Aegis citations. Treat any bare "Aegis" hit as a collision until a disambiguator is found, rather than the reverse.
 
 ### "Implicit execution traces" (as a generic phrase)
 
@@ -56,7 +61,7 @@ This file complements `search-strategy.md` ("Common false positives" table) by c
 
 **Known collisions** (do NOT count):
 
-- **`trustllm.eu`** — EU Horizon multilingual LLM project. Different team, different paper, different institution mix.
+- **`trustllm.eu`** — EU Horizon Europe project "Democratize Trustworthy and Efficient Large Language Model Technology for Europe", grant 101135671, an EuroHPC JU funded consortium. Different team, different paper, different institution mix. **Also hosted at `eurohpc-ju.europa.eu`**, and this is the most instructive collision in the registry: the EDPB's official *AI Privacy Risks & Mitigations: Large Language Models* PDF returns three TrustLLM term hits, which a snippet reader scores as a Tier 0 EU citation. All three are the EU project. Extended 2026-08-09.
 - Other "trust LLM" projects spelled with a space — usually generic policy terminology, not the benchmark.
 
 ### TDC (Therapeutics Data Commons)
@@ -71,6 +76,7 @@ This file complements `search-strategy.md` ("Common false positives" table) by c
 - **TDC Group Limited** — Caribbean telecom.
 - **Travere Therapeutics (ticker TVTX)** — biopharma, not TDC.
 - **J&J "Therapeutics Discovery (TD)"** — internal Johnson & Johnson R&D org. Surfaced repeatedly in Built In Boston listings (e.g. "Principal Data Scientist - R&D DSDH - Therapeutics Discovery (TD)"). Verified by full-page fetch on 2026-05-07.
+- **`tdcommons.ORG`** — the Technical Disclosure Commons, a Google-backed defensive-publication and prior-art site. Note the `.org` against TDC's `.ai`; a one-character difference separates a patent-defense archive from the therapeutics benchmark. Added 2026-08-09.
 
 ### BOND (PyGOD benchmark)
 
@@ -133,7 +139,58 @@ This file complements `search-strategy.md` ("Common false positives" table) by c
 **Known collisions** (do NOT count):
 
 - **pyodbc** — Python ODBC driver. Frequent false positive in Apache Airflow / Apache Arrow / Apache Ignite-3 / aws/aws-sdk-pandas docs (2026-05-07 round).
-- **Pyodide** — CPython on WebAssembly. Surfaced in The New Stack / VentureBeat searches.
+- **Pyodide** — CPython on WebAssembly. Surfaced in The New Stack / VentureBeat searches. Also the entire content of CISA bulletin SB26-194's apparent PyOD hits (Open WebUI advisory CVE-2026-59214, "runs client-side Python with Pyodide"), and of an OWASP Securing Agentic Applications Guide hit (2026-08-09).
+- **PYOD (TechCrunch, 2015)** — a consumer product covered by TechCrunch in 2015. It is the single result any `site:techcrunch.com` PyOD query returns, so a TechCrunch PyOD hit is this product until proven otherwise. Added 2026-08-09.
+
+**Scanner fix (validated 2026-08-09)**: set `FALSE_POSITIVE_CTX['PyOD'] = ['Pyodide', 'pyodide', 'pyodbc']`. The word-boundary rule alone misses these because "PyOD" is four characters and mixed case, so it takes the case-insensitive substring path.
+
+### combo
+
+**Real match**: Zhao et al., `yzhao062/combo`, a toolbox for machine learning model combination.
+
+**Required disambiguator**: the `yzhao062/combo` repo URL or the phrase "toolbox for machine learning model combination". Added 2026-08-09.
+
+**Known collisions** (do NOT count):
+
+- **COMBO: Compositional world models for embodied multi-agent cooperation** (Zhang et al.), cited in the LBNL ESnet Data and AI Workshop Report p128.
+- The ordinary English word "combo" in any tooling discussion.
+
+### TODS
+
+**Real match**: `datamllab/tods`, the time-series outlier-detection toolbox.
+
+**Required disambiguator**: "time series outlier detection" or the `datamllab/tods` repo URL. Added 2026-08-09.
+
+**Known collisions** (do NOT count):
+
+- **ACM Transactions on Database Systems (TODS)** — a routine bibliography token in any data-management paper. Confirmed 2026-08-09 in "Exploring the Landscape of Distributed Graph Sketching", where the sole match is the journal name in a reference line.
+
+### auditable (the SDK)
+
+**Real match**: `yzhao062/auditable`, the lab's system of record for agent decisions.
+
+**Required disambiguator**: the repo URL, the phrase "system of record", or a FORTIS author name. Added 2026-08-09.
+
+**Known collisions** (do NOT count):
+
+- **The ordinary English adjective.** This is now the highest-volume false positive in the government-PDF lane. Confirmed 2026-08-09 in GAO-21-519SP, PNNL GridCoPilot (three matches, all describing SQL statements and pipelines), the LBNL ESnet workshop report, the OWASP GenAI LLM Top 10 2026 ("enforced in a deterministic and auditable manner"), and an authorization playbook where all nine matches were the adjective.
+- **"Auditability" as a security product category.** Drata and IBM both market it. A vendor page using the word is descriptive-usage collision, not coverage.
+
+### Agent-auditing standards and certifications
+
+Added 2026-08-09. None of these is FORTIS work, and all rank on "agent audit standard" queries.
+
+| Name | What it actually is | Why it collides |
+|---|---|---|
+| AAS-1 "Agent Auditability Standard" | An independent standards draft | Uses the lab's exact research vocabulary in its title |
+| AOS, OWASP Agent Observability Standard | OWASP observability spec | Observability is a superset framing that does not imply evidentiary auditability. Do not score an AOS hit as coverage. |
+| AAIA, ISACA "Advanced in AI Audit" | A professional certification | One letter from AAS-1. ISACA also ships AAISM and AAIR, so `AAI*` is a growing collision family. |
+| "Agent Audit Trail" | A generic logging-format draft | Title-level collision with the `agent-audit` tool. Re-scan each `-NN` revision. |
+| "accountability layer for AI agents" | A third distinct claimant on the phrase | Joins the already-registered `aegis-protocol` blockchain "onchain accountability layer". |
+
+### Agent Anomaly Detection (Google Cloud product)
+
+Added 2026-08-09. Google Cloud now ships a Gemini Enterprise feature literally named **Agent Anomaly Detection** (statistical models plus an LLM-as-judge, flagging unusual agent behavior in real time). The phrase "agent anomaly detection" can no longer be treated as PyOD-adjacent in search; it returns this product.
 
 ## Person-Name Collisions: "Yue Zhao"
 
@@ -153,6 +210,14 @@ This file complements `search-strategy.md` ("Common false positives" table) by c
 | W. Zhao | WildChat dataset (1M ChatGPT logs) | NIST AI 800-4 ref [91], 2026-05-07 D8 |
 | D. Zhao | Swiss Cheese Model AI safety paper | NIST AI 800-4, 2026-05-07 D8 |
 | Yue Zhao (Carnegie Mellon HCII / different Yue Zhao) | HCI researcher, distinct from FORTIS PI | Multiple D1 sweeps |
+| Yue Zhao (University of Arkansas) | Associate professor of electrical engineering, NCREPT / UA Power Group, power electronics. Tell: co-listed with Alan Mantooth, Jingxian Wu, Juan Carlos Balda, Xiangbo Meng | 2026-08-09; two award and ranking pages that read as USC-adjacent |
+| Yue Zhao (astrophysics) | Astrophysics author in the NASA NTRS corpus | 2026-08-09 NTRS API sweep |
+| Yue Zhao (product leader, Barcelona) | Venture partner at LifeX Ventures, formerly CPTO at Fuzzy Pet Health, PM at Meta and Thumbtack | 2026-08-09; a Forbes interview that ranks on "Yue Zhao" |
+| 赵越 (Xidian University) | Electromagnetic spectrum monitoring, emitter localization, UAV trajectory optimization | 2026-08-09 Chinese-language university sweep |
+| 赵越 (Peking University HSBC Business School) | Data-driven and robust optimization, supply chain and logistics | 2026-08-09 Chinese-language university sweep |
+| **Summer Yue** (Meta, director of safety and alignment) | Not a Zhao at all, but the "Yue" token reads as a hit in security coverage. Sighted twice in one round | 2026-08-09; Krebs on Security and a Fortune piece |
+
+**Standing caveat on `gov.uk` corpus sweeps**: the public search API returns roughly 203 hits for "Yue Zhao", and every inspected result is a person-name collision (employment tribunal decisions, residential property tribunal decisions, product safety recalls, migrant health guides). The API also indexes HTML bodies but not PDF attachment text, so a clean HTML sweep does not clear the PDFs.
 
 When in doubt, mark `tier_guess: dropped_name_collision` and record the disambiguation evidence in `notes`.
 

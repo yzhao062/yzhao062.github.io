@@ -27,6 +27,8 @@ Highest priority for Tier 0 evidence. PDFs hosted at these domains are routinely
 | nsf.gov | NSF announcements, dear colleague letters, program solicitations, awards (path /awardsearch). |
 | energy.gov | Department of Energy publications front-end. |
 | osti.gov | DOE / national lab technical reports. |
+| cisa.gov | Weekly Vulnerability Summary bulletins carry `vendor--product` rows; SB26-201 names `yzhao062--pyod`. **Method note:** the site search endpoint is a JavaScript shell and returns nothing to a fetcher, but bulletin pages at `/news-events/bulletins/sbYY-NNN` are server-rendered and fetch cleanly with browser headers. Bulletin text is compiled from NVD, so treat hits as mirrors of an NVD record rather than as independent citations. Added 2026-08-09. |
+| regulations.gov | Federal dockets and public comments; also `downloads.regulations.gov` and `api.regulations.gov` for attachment text. NIST-2025-0035 (CAISI RFI) swept 2026-08-09. Added 2026-08-09. |
 
 ## EU and International Government (`eu-gov`, `intl-gov`)
 
@@ -130,6 +132,31 @@ System cards and safety reports cite benchmarks like TrustLLM directly. Tier 0 i
 | mistral.ai | Mistral model documentation. |
 | x.ai | xAI Grok system cards. |
 | cohere.com | Cohere model cards. |
+| microsoft.com | Named in the SKILL.md D8 list but absent from this table until 2026-08-09. Added 2026-08-09. |
+| docs.aws.amazon.com | Amazon / AWS model documentation; also named in D8 but previously unseeded. Added 2026-08-09. |
+| developers.google.com | Google Health AI Developer Foundations; hosts the TxGemma pages that name TDC. Added 2026-08-09. |
+| storage.googleapis.com | CDN host for DeepMind model cards and Frontier Safety Framework reports (the TxGemma report lives here). The registry previously listed only `deepmind.google`. Added 2026-08-09. |
+| arxiv.org | Several foundation-model technical reports publish here rather than on the company domain (Amazon Nova, Mistral Shieldstral). Added 2026-08-09. |
+
+## Web Archive (`web-archive`)
+
+Wayback is a discovery route, not only a fallback. Careers pages and press pages are pulled when roles close or sites reorganize, and a canonical first-party URL captured by the Internet Archive is first-party evidence. The 2026-08-09 flagship Tier 0 row (OpenAI "Quantitative Threat Forecasting Analyst" naming PyOD 2.0) exists only because of two Wayback captures.
+
+| Domain | Notes |
+|---|---|
+| web.archive.org | Snapshot host. Fetch a capture at `/web/<timestamp>/<url>`. Added 2026-08-09. |
+| web.archive.org/cdx/search/cdx | CDX index API. **Query this before concluding that no archive exists.** The 2026-05-07 note on the OpenAI #8g row claimed OpenAI's bot policy makes its careers pages unarchivable from any client; CDX shows two clean HTTP 200 captures of a sibling careers URL from July and August 2025. Added 2026-08-09. |
+
+## Consulting and Analyst Firms (`analyst`)
+
+A confirmed-hit class with no registry entry until 2026-08-09. Analyst and consulting reports are the surface where a governance framework gets named for enterprise buyers, so a hit here carries different weight than a press mention. Beware the registered Forrester AEGIS collision.
+
+| Domain | Notes |
+|---|---|
+| deloitte.com | Deloitte Germany AIxAML is an existing confirmed hit, already recorded under ecosystem evidence. Added 2026-08-09. |
+| forrester.com | Publishes its own "AEGIS" enterprise-guardrails framework. Any AEGIS hit here needs the arXiv:2603.12621 disambiguator. Added 2026-08-09. |
+| gartner.com | Agent-governance and enterprise-coding-agent reports. No FORTIS naming found as of 2026-08-09. Added 2026-08-09. |
+| idc.com | Not yet swept. Added 2026-08-09. |
 
 ## Adding New Entries
 

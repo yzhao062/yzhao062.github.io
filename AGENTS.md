@@ -623,7 +623,7 @@ In formal technical prose (research papers, grant proposals, API specifications,
 - GOOD (paper): `The model does not converge when the learning rate is too high.` (The "it is worth noting that" phrase is itself filler and should also be cut per RULE-04.)
 <!-- rule-pack:agent-style:end -->
 
-<!-- rule-pack:profile:begin version=main sha256=3a37a0758eb381272889c23e56745d5d2b3796a36b0f048cceae8f896e64b3f3 -->
+<!-- rule-pack:profile:begin version=main sha256=05ecad1efcff816d31dbe82a6d6bbab6cf5cd42e55a513568d11418fa724e0f0 -->
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 
 <!--
@@ -653,7 +653,7 @@ override these defaults when they conflict.
 
 ## Public projects
 
-- [PyOD](https://github.com/yzhao062/pyod): Python anomaly detection library. Around 9.8k GitHub stars, 38M+ total downloads, ~12k research citations.
+- [PyOD](https://github.com/yzhao062/pyod): Python anomaly detection library. Around 10k GitHub stars, 55M+ total downloads, ~12k research citations.
 - [PyGOD](https://github.com/pygod-team/pygod): graph outlier detection library, sister project to PyOD.
 - [anywhere-agents](https://github.com/yzhao062/anywhere-agents): public AI agent configuration with pack architecture.
 - [agent-style](https://github.com/yzhao062/agent-style): writing rule pack covering AI-tell vocabulary, formatting, and field-observed LLM patterns.
