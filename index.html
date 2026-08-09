@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="author" content="Yue Zhao">
-  <meta name="description" content="Yue Zhao, USC assistant professor: building auditable AI systems, with methods, benchmarks, and open-source infrastructure for risk detection, attribution, and control across data, foundation models, and agents.">
+  <meta name="description" content="Yue Zhao, USC assistant professor building auditable AI systems: detecting and controlling departures at the agent action, model behavior, and input distribution levels.">
   <meta name="keywords" content="Yue Zhao, USC, Auditable AI Systems, Agent Auditability, Agent Systems, AI Agent Auditing, auditable, Agent Decision Auditing, AI Behavior Verification, Agentic AI, AI Risk Audit and Control, AI Risk, AI Risk Audit, AI Risk Control, AI Risk Management, AI Auditing, AI Defense, Adversarial Robustness, Anomaly Detection, Out-of-Distribution Detection, Trustworthiness Benchmarks, Runtime Guardrails, Foundation Models, AI Safety, AI Security, Outlier Detection, AI for Science and Society, Climate AI, Healthcare AI, Computational Social Systems">
 
   <title>Yue Zhao | Auditable AI Systems</title>
@@ -12,12 +12,12 @@
   <link rel="icon" type="image/x-icon" href="images/logo2.ico">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Yue Zhao | Auditable AI Systems">
-  <meta property="og:description" content="USC assistant professor building auditable AI systems: methods, benchmarks, and open-source infrastructure for risk detection, attribution, and control across data, foundation models, and agents.">
+  <meta property="og:description" content="USC assistant professor building auditable AI systems: methods, benchmarks, and open-source infrastructure across agent action, model behavior, and input distribution.">
   <meta property="og:url" content="https://viterbi-web.usc.edu/~yzhao010/">
   <meta property="og:image" content="https://viterbi-web.usc.edu/~yzhao010/images/logo.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Yue Zhao | Auditable AI Systems">
-  <meta name="twitter:description" content="USC assistant professor building auditable AI systems: methods, benchmarks, and open-source infrastructure for risk detection, attribution, and control across data, foundation models, and agents.">
+  <meta name="twitter:description" content="USC assistant professor building auditable AI systems: methods, benchmarks, and open-source infrastructure across agent action, model behavior, and input distribution.">
   <meta name="twitter:image" content="https://viterbi-web.usc.edu/~yzhao010/images/logo.png">
   <script type="application/ld+json">
   {
@@ -102,20 +102,6 @@
             <div class="col-md-9 col-12 content-spacing">
                 <div class="col">
                     <h1 class="visually-hidden">Yue Zhao - Auditable AI Systems</h1>
-                        <p style="font-size:1.02rem; line-height:1.6; margin:4px 0 14px 0;">
-                          <strong>Yue Zhao</strong> is an Assistant Professor of Computer Science at the
-                          <strong>University of Southern California</strong>, where he leads the
-                          <a href="lab.html">FORTIS Lab</a> and serves as Associate Co-Director of the
-                          <a href="https://sites.usc.edu/ietc/" target="_blank" rel="noopener">USC Institute on Ethics and Trust in Computing</a>
-                          for 2026-2027. He builds the methods, benchmarks, and open-source infrastructure that make AI systems
-                          auditable, from anomaly detection in data to the auditability of agent systems across their lifecycle.
-                          He created <a href="pyod.html">PyOD</a>, the canonical Python anomaly-detection library, which has passed
-                          50 million downloads and is listed as a production-stage, high-maturity out-of-distribution detection
-                          tool in the U.S. Department of Defense CDAO Generative AI Responsible AI Toolkit. Reach him at
-                          <a href="mailto:yue.z@usc.edu">yue.z@usc.edu</a>, or the lab at
-                          <a href="mailto:fortis@usc.edu">fortis@usc.edu</a>.
-                        </p>
-
                         <div style="
                           background-color:#f8f8f8;
                           border-left:4px solid #990000;
@@ -181,8 +167,8 @@
                             <span style="color:#7a2a2a; font-size:0.85rem;">from data anomalies to agent decisions</span>
                           </div>
                           <p style="margin:0 0 12px 0; color:#555; font-size:0.9rem;">
-                            <strong style="color:#7a2a2a;">Foundation, distribution level.</strong> <a href="pyod.html" style="font-weight:600;">PyOD</a>, the canonical open-source anomaly-detection library: 50M+ downloads, named by OpenAI, used in Amazon and European Space Agency anomaly-detection work, deployed in a UK Government care service, and listed by the U.S. DoD CDAO.<br>
-                            <strong style="color:#7a2a2a;">Frontier, action level.</strong> The open-source family below carries the same audit agenda to AI agents, built to cite and reinforce one another: a research method, the tool built on it, and a curated knowledge base.
+                            <strong style="color:#7a2a2a;">Foundation, input distribution level.</strong> <a href="pyod.html" style="font-weight:600;">PyOD</a>, the canonical open-source anomaly-detection library: 50M+ downloads, named by OpenAI, used in Amazon and European Space Agency anomaly-detection work, deployed in a UK Government care service, and listed by the U.S. DoD CDAO.<br>
+                            <strong style="color:#7a2a2a;">Frontier, agent action level.</strong> The open-source family below carries the same audit agenda to AI agents, built to cite and reinforce one another: a research method, the tool built on it, and a curated knowledge base.
                           </p>
                           <div class="row g-3">
                             <div class="col-12 col-md-4">
@@ -243,9 +229,9 @@
                         <ol>
                           <li>
                             <details class="smart-details">
-                              <summary><strong>Action: Auditability and Control of Agent Systems</strong></summary>
+                              <summary><strong>Agent Action: Auditability and Control of Agent Systems</strong></summary>
                               <p style="margin-top:8px;">
-                                At the action level, deployed systems act through tools, APIs, and shared state, so what a
+                                At the agent action level, deployed systems act through tools, APIs, and shared state, so what a
                                 system does becomes the primary failure surface. I work on auditability frameworks (reconstruction, checking, and
                                 attribution of agent behavior after deployment), runtime control surfaces that intercept tool
                                 calls before they fire, agent-specific failure modes (over-privilege, cross-user contamination,
@@ -262,9 +248,9 @@
                           </li>
                           <li>
                             <details class="smart-details">
-                              <summary><strong>Behavior: Trust and Robustness of Foundation Models</strong></summary>
+                              <summary><strong>Model Behavior: Trust and Robustness of Foundation Models</strong></summary>
                               <p style="margin-top:8px;">
-                                Between distribution and action, foundation models add their own failure surface: behavior under attack,
+                                Between input distribution and agent action, foundation models add their own failure surface: behavior under attack,
                                 hallucination of fact and reasoning, and adversarial robustness of retrieval. Failures on any of
                                 these surfaces can propagate downstream when the model's output is passed to an agent or a
                                 user-facing system. My lab's
@@ -281,9 +267,9 @@
                           </li>
                           <li>
                             <details class="smart-details">
-                              <summary><strong>Distribution: Anomaly and Out-of-Distribution Detection</strong></summary>
+                              <summary><strong>Input Distribution: Anomaly and Out-of-Distribution Detection</strong></summary>
                               <p style="margin-top:8px;">
-                                At the distribution level, the question is whether an input departed from the conditions
+                                At the input distribution level, the question is whether an input departed from the conditions
                                 represented during development and evaluation. That boundary is hard to estimate when
                                 labels or representative examples are sparse. This is the lab's methodological and
                                 open-source base: the <a href="pyod.html">PyOD</a> ecosystem and ADBench, benchmark
@@ -291,7 +277,7 @@
                                 graphs, multimodal data, and video, and few-shot cross-domain OOD detection. PyOD is the
                                 flagship open-source artifact and is now in its third major release. When an incident
                                 involves distribution shift, these methods supply the evidence for whether unfamiliar input
-                                conditions contributed to it; an action-only incident is established from action-level
+                                conditions contributed to it; an action-only incident is established from evidence at the agent action level
                                 evidence instead. Current research emphasis sits at model behavior and agent action.
                               </p>
                               <p style="font-family:'Poppins','Segoe UI',sans-serif; font-size:0.93rem; color:#7a2a2a;">
@@ -302,15 +288,15 @@
                         </ol>
 
                         <!-- PRERENDER:bio START -->
-                                                <p><strong style="color:#990000">Biography</strong>. Dr. Yue Zhao is an Assistant Professor of Computer Science at the University of Southern California, where he leads the FORTIS Lab. He serves as Associate Co-Director of the USC Institute on Ethics and Trust in Computing for 2026-2027. His lab builds the methods, benchmarks, and open-source infrastructure that make AI systems auditable at three levels: agent action (auditability and control of agent systems across their lifecycle), model behavior (trust and robustness evaluation of foundation models), and input distribution (anomaly and out-of-distribution detection in data). His research develops methods to detect, diagnose, and control departures from expected behavior, from anomalous data and foundation-model failures to consequential agent actions. The program extends a decade of research on anomaly and outlier detection at scale, and its current frontier is agent auditability: deployable open-source infrastructure that audits AI agents from before deployment to after a run. He also advises early-stage AI startups and is founding Auditable AI, a startup building the auditable layer for AI agents on his lab's open-source stack.</p>
-                                                <p>Dr. Zhao has authored over 80 peer-reviewed papers in top-tier venues and is internationally recognized for his open-source contributions, including PyOD, ADBench, TrustLLM, agent-audit, and Aegis, which collectively exceed 50 million downloads and 24,000 GitHub stars. PyOD is the subject of five published books, is named by OpenAI, and is used by Apache Beam, Amazon, Walmart, Databricks, and the European Space Agency. It is recommended in the U.S. Department of Defense CDAO Generative AI Responsible AI Toolkit and named in the official guidance of defense ministries, central banks, financial regulators, and national AI authorities across Europe, Asia, and the Middle East. TrustLLM is cited in a U.S. Senate committee report, a NIST special publication on adversarial machine learning, the U.S. Department of Defense CDAO Generative AI Responsible AI Toolkit, and the International AI Safety Report 2026, and serves as an official benchmark in all four editions of the Future of Life Institute AI Safety Index.</p>
-                                                <p>He has received numerous honors, including the NVIDIA Academic Grant Program Award, the Foresight Institute AI for Safety &amp; Science Nodes Grant, the Capital One Research Award, multiple Amazon Research Awards, AAAI New Faculty Highlights, Google Cloud Research Innovators, the Norton Labs Fellowship, the Meta AI4AI Research Award, the Carnegie Mellon University Presidential Fellowship, the 2025 SIGSPATIAL Best Short Paper Award, and the Second Prize CCC Award at the IEEE ICDM 2025 BlueSky Track.</p>
-                                                <p>He serves as an Associate or Action Editor for Transactions on Machine Learning Research, ACM Transactions on AI for Science, IEEE Transactions on Neural Networks and Learning Systems, and the Journal of Data-Centric Machine Learning Research, and as an Area Chair for major conferences including ICLR, ICML, and NeurIPS. Beyond academic service, he founded and runs 博士栈 (CSPhD.org), a non-profit community for CS / AI / EE / Stats PhDs that has grown to several thousand members since 2022.</p>
+                                                <p><strong style="color:#990000">Biography</strong>. Dr. Yue Zhao is an Assistant Professor of Computer Science at the University of Southern California, where he leads the FORTIS Lab. He serves as Associate Co-Director of the USC Institute on Ethics and Trust in Computing for 2026-2027. His lab builds methods, benchmarks, and open-source infrastructure that make AI systems auditable. This work detects and controls departures from expected behavior at three levels: agent action, model behavior, and input distribution. The program extends a decade of research on anomaly and outlier detection at scale. Its current frontier is agent auditability: open-source infrastructure that audits AI agents from before deployment to after a run. He also advises early-stage AI startups and is founding Auditable AI, a startup building the auditable layer for AI agents on an open-source stack developed by his lab.</p>
+                                                <p>Dr. Zhao has authored over 80 peer-reviewed papers. His open-source projects, including PyOD, ADBench, TrustLLM, agent-audit, and Aegis, together exceed 50 million downloads and 24,000 GitHub stars. PyOD is the subject of five published books, is named by OpenAI, and is used by Apache Beam, Amazon, Walmart, Databricks, and the European Space Agency. It is also named in the official guidance of defense ministries, central banks, financial regulators, and national AI authorities across Europe, Asia, and the Middle East. TrustLLM is cited in a U.S. Senate committee report, a NIST special publication on adversarial machine learning, and the International AI Safety Report 2026. It serves as an official benchmark in all four editions of the Future of Life Institute AI Safety Index. Both PyOD and TrustLLM are recommended in the U.S. Department of Defense CDAO Generative AI Responsible AI Toolkit.</p>
+                                                <p>His work has received support from NSF, NVIDIA, Amazon, Capital One, Meta, and the Foresight Institute. Recognitions include AAAI New Faculty Highlights, a Best Short Paper Award at ACM SIGSPATIAL, and a Second Prize CCC Award at the IEEE ICDM BlueSky Track. He serves as an Associate or Action Editor for Transactions on Machine Learning Research, ACM Transactions on AI for Science, IEEE Transactions on Neural Networks and Learning Systems, and the Journal of Data-Centric Machine Learning Research. He is also an Area Chair for ICLR, ICML, and NeurIPS. Outside academic service, he founded 博士栈 (CSPhD.org) in 2022. This non-profit community for CS / AI / EE / Stats PhDs now has several thousand members.</p>
                         <!-- PRERENDER:bio END -->
 
 <p style="font-size:0.95rem; color:#666; margin-top:18px;">
                           <strong style="color:#990000;">Lab openings &amp; PhD applications:</strong>
-                          see <a href="lab.html">FORTIS Lab</a>.
+                          new research funding has improved the outlook for Fall 2027, and I expect to
+                          recruit again; see <a href="lab.html">FORTIS Lab</a> for the current status.
                           For research collaborations, advising, and speaking requests, see
                           <a href="collaboration.html">collaboration</a> or write to
                           <a href="mailto:yue.z@usc.edu">yue.z@usc.edu</a>.
@@ -318,6 +304,8 @@
 
                         <hr>
                         <h2 id="news">&#9992; News and Travel</h2>
+
+                        <p><strong>[Aug 2026]</strong> We received <span style="color:#990000">Meta sponsored research funding</span> for work on LLM reasoning and recommendation. <span style="white-space: nowrap;">Thank you, <img src="images/sponsors/meta.svg" alt="Meta logo" width="79" height="16" loading="lazy" decoding="async" style="vertical-align: -3px; margin-left: 4px; border-radius: 2px;"></span></p>
 
                         <p><strong>[Aug 2026]</strong> Our position paper <a href="auditable-agents.html"><b>Auditable Agents</b></a> has been accepted to the inaugural <i>ACM AI Leadership Summit</i>, held in Atlanta from August 30 to September 2. It argues that no agent system can be accountable without auditability, a position the Summit puts in front of industry leaders and policymakers rather than a research audience alone. <a href="https://arxiv.org/abs/2604.05485">[arXiv]</a></p>
 
@@ -355,20 +343,23 @@
 
                         <hr>
 
-                        <h2 id="awards">&#127941; Awards and Grants</h2>
+                        <h2 id="awards">&#127941; Awards, Grants, and Funding</h2>
 
                             <h5>As Principal Investigator (August 2023 onwards)</h5>
                             <ul class="vert">
+                                <li><a href="https://research.facebook.com/">Meta</a>, sponsored research, 2026</li>
                                 <li><a href="https://foresight.org/grants/grants-ai-for-science-safety/">Foresight Institute AI for Safety &amp; Science Nodes</a>, 2026</li>
                                 <li><a href="https://www.nvidia.com/en-us/industries/higher-education-research/academic-grant-program/">NVIDIA Academic Grant Program</a>, 2026</li>
                                 <li><a href="https://www.amazon.science/research-awards/">Amazon Research Awards</a>, 2026</li>
                                 <li><a href="https://dornsife.usc.edu/ccls/news/">USC CCSL Seed Funding</a>, 2026</li>
                                 <li><a href="https://cccblog.org/2025/12/19/announcing-blue-sky-track-winners-at-icdm-2025/">Second Prize CCC Award, IEEE ICDM BlueSky Track</a>, 2025</li>
                                 <li><a href="https://sigspatial2025.sigspatial.org/">Best Short Paper, ACM SIGSPATIAL</a>, 2025</li>
+                                <li><a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2449280">NSF POSE Phase I</a>, 2025</li>
                                 <li><a href="https://sac.usc.edu/credif/">Capital One Research Awards</a>, 2024</li>
                                 <li><a href="https://www.amazon.science/research-awards/program-updates/10-amazon-research-awards-recipients-announced">Amazon Research Awards</a>, 2024</li>
                                 <li><a href="https://chuxuzhang.github.io/RelKD/">Best Paper, KDD Resource-Efficient Learning Workshop</a>, 2024</li>
-                                <li><a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2428039&HistoricalAwards=false">NSF Award 1</a>, <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2346158&HistoricalAwards=false">NSF Award 2</a>, 2024, <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2449280">NSF Award 3</a>, 2025</li>
+                                <li><a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2428039&HistoricalAwards=false">NSF Algorithms for Threat Detection (ATD)</a>, 2024</li>
+                                <li><a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2346158&HistoricalAwards=false">NSF POSE Phase II</a>, 2024</li>
                                 <li><a href="https://cloud.google.com/edu/researchers/innovators?hl=en">Google Cloud Research Innovators</a>, 2024</li>
                                 <li><a href="https://aaai.org/aaai-conference/aaai-24-new-faculty-highlights/">AAAI New Faculty Highlights</a>, 2024</li>
                             </ul>
@@ -382,6 +373,46 @@
                                     <li><a href="https://foundation.uc.edu/mantei-center">Mantei/Mae Academic Achievement Award</a>, 2011-2015</li>
                                 </ul>
                             </details>
+
+                            <hr>
+                            <div class="sponsors-section">
+                                <h3 class="text-center">Sponsors and Supporters</h3>
+                                <div class="sponsor-logos">
+                                    <div class="sponsor-logo">
+                                        <img src="images/sponsors/NSF-Symbol.webp" alt="National Science Foundation" class="sponsor-img" width="200" height="100" loading="lazy" decoding="async" fetchpriority="low">
+                                    </div>
+                                    <div class="sponsor-logo">
+                                        <img src="images/sponsors/nairr-pilot.svg" alt="NAIRR Pilot" class="sponsor-img" width="200" height="100" loading="lazy" decoding="async" fetchpriority="low">
+                                    </div>
+                                    <div class="sponsor-logo">
+                                        <img src="images/sponsors/access.svg" alt="NSF ACCESS" class="sponsor-img" width="200" height="100" loading="lazy" decoding="async" fetchpriority="low">
+                                    </div>
+                                    <div class="sponsor-logo">
+                                        <img src="images/sponsors/amazon.webp" alt="Amazon" class="sponsor-img" width="200" height="100" loading="lazy" decoding="async" fetchpriority="low">
+                                    </div>
+                                    <div class="sponsor-logo">
+                                        <img src="images/sponsors/nvidia-logo-vert-blk.webp" alt="NVIDIA" class="sponsor-img" width="200" height="100" loading="lazy" decoding="async" fetchpriority="low">
+                                    </div>
+                                    <div class="sponsor-logo">
+                                        <img src="images/sponsors/Capital_One.webp" alt="Capital One" class="sponsor-img" width="200" height="100" loading="lazy" decoding="async" fetchpriority="low">
+                                    </div>
+                                    <div class="sponsor-logo">
+                                        <img src="images/sponsors/Google_2015.webp" alt="Google" class="sponsor-img" width="200" height="100" loading="lazy" decoding="async" fetchpriority="low">
+                                    </div>
+                                    <div class="sponsor-logo">
+                                        <img src="images/sponsors/meta.svg" alt="Meta" class="sponsor-img" width="200" height="100" loading="lazy" decoding="async" fetchpriority="low">
+                                    </div>
+                                    <div class="sponsor-logo">
+                                        <img src="images/sponsors/anthropic.png" alt="Anthropic" class="sponsor-img" width="200" height="100" loading="lazy" decoding="async" fetchpriority="low">
+                                    </div>
+                                    <div class="sponsor-logo">
+                                        <img src="images/sponsors/openai.png" alt="OpenAI" class="sponsor-img" width="200" height="100" loading="lazy" decoding="async" fetchpriority="low">
+                                    </div>
+                                    <div class="sponsor-logo">
+                                        <img src="images/sponsors/foresight.png" alt="Foresight Institute" class="sponsor-img" width="200" height="100" loading="lazy" decoding="async" fetchpriority="low">
+                                    </div>
+                                </div>
+                            </div>
                 </div>
             </div>
         </div>

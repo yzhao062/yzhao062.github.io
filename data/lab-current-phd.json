@@ -4,7 +4,7 @@
     "profile_url": "https://JetRichardLee.github.io/",
     "image": "images/others/JiateLi.webp",
     "alt": "Jiate Li",
-    "year_info": "1st year, with Fortis since Aug 2025",
+    "year_info": "2nd year, with Fortis since Aug 2025",
     "research": "GNN Robustness / Certified Defenses / LLM Retrieval Security",
     "email": "jiateli@usc.edu"
   },
@@ -13,7 +13,7 @@
     "profile_url": "https://lili0415.github.io/",
     "image": "images/others/lili.jpg",
     "alt": "Li Li",
-    "year_info": "2nd year, with Fortis since Aug 2024",
+    "year_info": "3rd year, with Fortis since Aug 2024",
     "research": "Multimodal Foundation Models / LLM Security / Agent Safety",
     "awards": [
       "Amazon ML Fellowship",
@@ -27,7 +27,7 @@
     "profile_url": "https://yqin43.github.io/",
     "image": "images/others/qin.webp",
     "alt": "Yuehan Qin",
-    "year_info": "4th year, with Fortis since Jan 2024",
+    "year_info": "5th year, with Fortis since Jan 2024",
     "research": "OOD Detection / Automated Model Selection / Reliable LLMs & Agents",
     "status_label": "Ph.D. Candidate",
     "email": "yuehanqi@usc.edu"
@@ -37,7 +37,7 @@
     "profile_url": "https://scholar.google.com/citations?user=BDjUvE8AAAAJ&hl=en",
     "image": "images/others/xhy.webp",
     "alt": "Haoyan Xu",
-    "year_info": "4th year, with Fortis since Jan 2024",
+    "year_info": "5th year, with Fortis since Jan 2024",
     "research": "Graph OOD Detection / Graph Foundation Models / Multimodal Robustness",
     "awards": [
       "Capital One Fellowship"
@@ -54,7 +54,7 @@
     "profile_url": "https://raymondy.github.io/",
     "image": "images/others/tiankai.webp",
     "alt": "Tiankai Yang",
-    "year_info": "2nd year, with Fortis since Sep 2023",
+    "year_info": "3rd year, with Fortis since Sep 2023",
     "research": "LLM Safety Alignment / Agent Safety / Reliable LLM Inference",
     "email": "tiankaiy@usc.edu"
   },
@@ -63,9 +63,8 @@
     "profile_url": "https://aihemaotai.github.io/",
     "image": "images/others/Chenxiao.webp",
     "alt": "Chenxiao Yu",
-    "year_info": "Incoming Fall 2026, with Fortis since 2024",
+    "year_info": "1st year, with Fortis since 2024",
     "research": "Human-Centered AI / AI Safety / Interpretable and Controllable Foundation Models",
-    "status_label": "Incoming Ph.D. Student",
     "email": "cyu96374@usc.edu"
   },
   {
@@ -73,16 +72,15 @@
     "profile_url": "https://xzx34.github.io/",
     "image": "images/others/zixiang.webp",
     "alt": "Zixiang Xu",
-    "year_info": "Incoming Fall 2026, joining Fortis in Fall 2026",
-    "research": "Agent Systems / Trustworthy AI / AI for Science & Society",
-    "status_label": "Incoming Ph.D. Student"
+    "year_info": "1st year, with Fortis since Fall 2026",
+    "research": "Agent Systems / Trustworthy AI / AI for Science & Society"
   },
   {
     "name": "Wei Yang",
     "profile_url": "https://weiyang930.github.io/",
     "image": "images/others/wei.webp",
     "alt": "Wei Yang",
-    "year_info": "3rd year, joining Fortis in Fall 2026",
+    "year_info": "4th year, with Fortis since Fall 2026",
     "research": "Agentic LLMs / Multi-Agent Systems / Multi-Agent RL",
     "status_label": "Ph.D. Candidate",
     "email": "wyang930@usc.edu",

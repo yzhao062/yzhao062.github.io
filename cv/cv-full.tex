@@ -119,8 +119,8 @@ deployable open-source infrastructure that audits agents from before deployment
 to after a run.
 
 
-{\color{uscred}\textbf{1. Action: Auditability and Control of Agent Systems}}\\
-At the action level, deployed systems act through tools, APIs, and shared state,
+{\color{uscred}\textbf{1. Agent Action: Auditability and Control of Agent Systems}}\\
+At the agent action level, deployed systems act through tools, APIs, and shared state,
 so what a system does becomes the primary failure surface. This thread covers auditability
 frameworks, runtime control surfaces, agent-specific failure modes, and
 post-run attribution and recovery, spanning the full lifecycle from
@@ -143,8 +143,8 @@ pre-deployment to after a run.
 \end{tabular}
 
 
-{\color{uscred}\textbf{2. Behavior: Trust and Robustness of Foundation Models}}\\
-Between distribution and action, foundation models add their own failure surface:
+{\color{uscred}\textbf{2. Model Behavior: Trust and Robustness of Foundation Models}}\\
+Between input distribution and agent action, foundation models add their own failure surface:
 behavior under attack, hallucination, and adversarial robustness of retrieval.
 Failures on these surfaces can propagate downstream when model output is passed
 to an agent or a user-facing system. My lab
@@ -169,8 +169,8 @@ LLM-as-anomaly-detector benchmarks.
 \end{tabular}
 
 
-{\color{uscred}\textbf{3. Distribution: Anomaly and Out-of-Distribution Detection}}\\
-At the distribution level, the question is whether an input departed from the
+{\color{uscred}\textbf{3. Input Distribution: Anomaly and Out-of-Distribution Detection}}\\
+At the input distribution level, the question is whether an input departed from the
 conditions represented during development and evaluation. This is my
 methodological and open-source base, built through the PyOD ecosystem and
 ADBench, and continuing through benchmarks for NLP, automatic OOD detector
@@ -285,18 +285,19 @@ and \href{https://cs.uic.edu/profiles/philip-yu/}{Prof. Philip S. Yu} at UIC.
 \subsubsection*{As Principal Investigator (August 2023 onwards)}
 \vspace{-0.2in}
 \begin{tabularx}{\textwidth}{@{}Xr@{\hskip 0.2in}r@{}}
+\href{https://research.facebook.com/}{Meta} & \textit{Sponsored Research} & \hfill Aug. 2026 \\
 \href{https://foresight.org/grants/grants-ai-for-science-safety/}{Foresight Institute AI for Safety \& Science Nodes} & \textit{Gift} & \hfill Apr. 2026 \\
 \href{https://www.nvidia.com/en-us/industries/higher-education-research/academic-grant-program/}{NVIDIA Academic Grant Program} & \textit{Gift} & \hfill Mar. 2026 \\
 \href{https://www.amazon.science/research-awards/call-for-proposals/ai-for-information-security-call-for-proposals-fall-2025}{Amazon Research Awards, Fall 2025} & \textit{Gift} & \hfill Mar. 2026 \\
 \href{https://dornsife.usc.edu/ccls/news/}{USC CCSL Seed Funding} & \textit{Small Grant} & \hfill Jan. 2026 \\
 \href{https://cccblog.org/2025/12/19/announcing-blue-sky-track-winners-at-icdm-2025/}{Second Prize CCC Award @ IEEE ICDM, BlueSky Track} & \textit{Recognition} & \hfill Nov. 2025 \\
 \href{https://sigspatial2025.sigspatial.org/}{Best Short Paper Award @ ACM SIGSPATIAL} & \textit{Recognition} & \hfill Nov. 2025 \\
-\href{https://www.nsf.gov/awardsearch/showAward?AWD_ID=2449280}{NSF POSE I} & \textit{Funding} & \hfill Aug. 2025 \\
+\href{https://www.nsf.gov/awardsearch/showAward?AWD_ID=2449280}{NSF POSE Phase I} & \textit{Funding} & \hfill Aug. 2025 \\
 \href{https://viterbischool.usc.edu/news/2024/04/usc-and-capital-one-establish-new-center-for-responsible-ai-in-finance/}{Capital One Research Awards} & \textit{Grant} & \hfill Oct. 2024 \\
 \href{https://www.amazon.science/research-awards/recipients/yue-zhao}{Amazon Research Awards, Spring 2024} & \textit{Gift} & \hfill Aug. 2024 \\
 \href{https://chuxuzhang.github.io/RelKD/}{Best Paper Award @ KDD Resource-Efficient Learning Workshop} & \textit{Recognition} & \hfill Aug. 2024 \\
 \href{https://www.nsf.gov/awardsearch/showAward?AWD_ID=2428039\&HistoricalAwards=false}{NSF ATD} & \textit{Funding} & \hfill Aug. 2024 \\
-\href{https://www.nsf.gov/awardsearch/showAward?AWD_ID=2346158\&HistoricalAwards=false}{NSF POSE II} & \textit{Funding} & \hfill Jun. 2024 \\
+\href{https://www.nsf.gov/awardsearch/showAward?AWD_ID=2346158\&HistoricalAwards=false}{NSF POSE Phase II} & \textit{Funding} & \hfill Jun. 2024 \\
 \href{https://cloud.google.com/edu/researchers/innovators?hl=en}{Google Cloud Research Innovators} & \textit{Recognition} & \hfill Mar. 2024 \\
 \href{https://aaai.org/aaai-conference/aaai-24-new-faculty-highlights/}{AAAI New Faculty Highlights} & \textit{Recognition} & \hfill Feb. 2024 \\
 \end{tabularx}
@@ -1087,8 +1088,8 @@ Software Engineer (Intern \& Contract)                  \hfill Mar. 2012 - Dec. 
     \item Jiate Li (USC, CS Ph.D., 2025 Fall-)
     \item Wei Yang (USC, CS Ph.D. Candidate, 2026 Fall-), co-advised by Jesse Thomason and Xuezhe Ma
     \item Yi Nian (USC, CS Ph.D., incoming)
-    \item Chenxiao Yu (USC, CS Ph.D., incoming)
-    \item Zixiang Xu (USC, CS Ph.D., incoming)
+    \item Chenxiao Yu (USC, CS Ph.D., 2026 Fall-)
+    \item Zixiang Xu (USC, CS Ph.D., 2026 Fall-)
 \end{itemize}
 
 \section{\sc Student Committee}
@@ -1098,6 +1099,9 @@ Software Engineer (Intern \& Contract)                  \hfill Mar. 2012 - Dec. 
 \textbf{Term} & \textbf{Student} & \textbf{Committee} \\
 \midrule
 Fall 2026 & Chen Chu (USC, CS Ph.D.) & Qualification \\
+\multicolumn{1}{@{}l}{ } & Yuqing Yang (USC, CS Ph.D.) & Qualification \\
+\multicolumn{1}{@{}l}{ } & Zeyu Shangguan (USC, CS Ph.D.) & Qualification \\
+\multicolumn{1}{@{}l}{ } & Chufan Shi (USC, CS Ph.D.) & Qualification \\
 \addlinespace[0.15em]
 Summer 2026 & Defu Cao (USC, CS Ph.D.) & Defense \\
 \addlinespace[0.15em]
