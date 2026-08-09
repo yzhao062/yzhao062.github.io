@@ -8,7 +8,7 @@
     "docs_url": "https://pyod.readthedocs.io",
     "paper_url": "https://arxiv.org/abs/2412.12154",
     "demo_url": "",
-    "stars": 9953,
+    "stars": 9954,
     "tags": [
       "Anomaly Detection",
       "Outlier Detection",
@@ -368,7 +368,7 @@
       "Configuration",
       "MCP"
     ],
-    "last_updated_at": "2026-08-08T05:00:37Z"
+    "last_updated_at": "2026-08-09T00:54:21Z"
   },
   {
     "name": "agent-style",
@@ -379,7 +379,7 @@
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/agent-style.html",
     "paper_url": "",
     "demo_url": "https://pypi.org/project/agent-style/",
-    "stars": 613,
+    "stars": 614,
     "tags": [
       "AI Agents",
       "Agent Configuration",
