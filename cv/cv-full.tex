@@ -104,22 +104,24 @@
 
 \section{\sc Research Summary}
 
-AI systems are deployed faster than their risks can be measured or controlled.
-My lab builds the methods, benchmarks, and open-source infrastructure that
-\textbf{make AI systems auditable} across the deployment stack:
-\textit{anomaly and out-of-distribution detection in data},
-\textit{trust and robustness evaluation of foundation models}, and
-\textit{auditability and control of agent systems across their lifecycle}.
-One agenda runs through the work: detect, diagnose, and control departures from
-expected behavior, from anomalous data and foundation-model failures to
-consequential agent actions. The current frontier is \textbf{agent
-auditability}: deployable open-source infrastructure that audits agents from
-before deployment to after a run.
+When something goes wrong, someone has to be able to say what happened and who is
+answerable. AI systems that act on their own can make that hard: the damage shows
+up, the path to it often does not. My lab builds three things: tools that catch
+unsafe permissions before an agent ships, a checkpoint that inspects tool calls
+before they run, and records good enough to piece together afterward who did what.
+This work spans \textbf{auditable AI systems} at three levels: \textit{agent
+action} (auditability and control of agent systems across their lifecycle),
+\textit{model behavior} (trust and robustness evaluation of foundation models),
+and \textit{input distribution} (anomaly and out-of-distribution detection in
+data). One question runs through it: did this depart from what was expected, and
+can anyone still tell? The current frontier is \textbf{agent auditability}:
+deployable open-source infrastructure that audits agents from before deployment
+to after a run.
 
 
-{\color{uscred}\textbf{1. Agent Layer: Auditability and Control}}\\
-At the agent layer, deployed systems act through tools, APIs, and shared state,
-making behavior the primary failure surface. This thread covers auditability
+{\color{uscred}\textbf{1. Action: Auditability and Control of Agent Systems}}\\
+At the action level, deployed systems act through tools, APIs, and shared state,
+so what a system does becomes the primary failure surface. This thread covers auditability
 frameworks, runtime control surfaces, agent-specific failure modes, and
 post-run attribution and recovery, spanning the full lifecycle from
 pre-deployment to after a run.
@@ -141,9 +143,11 @@ pre-deployment to after a run.
 \end{tabular}
 
 
-{\color{uscred}\textbf{2. Foundation-Model Layer: Trust and Robustness}}\\
-Foundation models add a new failure surface between data and agents: behavior
-under attack, hallucination, and adversarial robustness of retrieval. My lab
+{\color{uscred}\textbf{2. Behavior: Trust and Robustness of Foundation Models}}\\
+Between distribution and action, foundation models add their own failure surface:
+behavior under attack, hallucination, and adversarial robustness of retrieval.
+Failures on these surfaces can propagate downstream when model output is passed
+to an agent or a user-facing system. My lab
 measures these surfaces through jailbreak detection for vision-language models,
 causal analysis of hallucination, retrieval-augmented generation attacks, and
 LLM-as-anomaly-detector benchmarks.
@@ -165,12 +169,14 @@ LLM-as-anomaly-detector benchmarks.
 \end{tabular}
 
 
-{\color{uscred}\textbf{3. Data Layer: Anomaly and Out-of-Distribution Detection}}\\
-All audit grounds in distinguishing in-distribution from out-of-distribution
-behavior. This is my methodological root, started with the PyOD ecosystem and
+{\color{uscred}\textbf{3. Distribution: Anomaly and Out-of-Distribution Detection}}\\
+At the distribution level, the question is whether an input departed from the
+conditions represented during development and evaluation. This is my
+methodological and open-source base, built through the PyOD ecosystem and
 ADBench, and continuing through benchmarks for NLP, automatic OOD detector
 selection, and modality-specific OOD methods for graphs, multimodal data, and
-video.
+video. When an incident involves distribution shift, these methods supply
+evidence about whether unfamiliar input conditions contributed to it.
 
 \vspace{-0.15in}
 \begin{tabular}{@{}p{0.475\textwidth}p{0.475\textwidth}}

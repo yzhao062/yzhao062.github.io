@@ -144,18 +144,29 @@
                         <hr>
                         <p><strong style="color:#990000;">Research Summary</strong></p>
                         <div style="background:#fff7f7; border-left:4px solid #990000; padding:12px 16px; margin:8px 0 12px 0;">
+                          <p style="margin:0 0 10px 0;">
+                            <strong>Auditable AI Systems.</strong> When something goes wrong, someone has to
+                            be able to say what happened and who is answerable. AI systems that act on their
+                            own can make that hard: the damage shows up, the path to it often does not. My lab
+                            builds three things: tools that catch unsafe permissions before an agent ships, a
+                            checkpoint that inspects tool calls before they run, and records good enough to
+                            piece together afterward who did what.
+                          </p>
                           <p style="margin:0;">
-                            AI systems are deployed faster than their risks can be measured or controlled. My lab
-                            builds the methods, benchmarks, and open-source infrastructure that
-                            <strong>make AI systems auditable</strong> across the deployment stack:
-                            <em>anomaly and out-of-distribution detection in data</em>,
-                            <em>trust and robustness evaluation of foundation models</em>, and
-                            <em>auditability and control of agent systems across their lifecycle</em>.
-                            One agenda runs through the work: detect, diagnose, and control departures from
-                            expected behavior, from anomalous data and foundation-model failures to
-                            consequential agent actions. The current frontier is
-                            <strong>agent auditability</strong>: deployable open-source infrastructure that
-                            audits agents from before deployment to after a run.
+                            One question, asked at three levels: <strong>did this depart from what was
+                            expected, and can anyone still tell?</strong> At the <em>action</em> level,
+                            whether a call can be stopped before it runs, whether the system stayed inside its
+                            job and its permissions, and what evidence is left afterward. At the
+                            <em>behavior</em> level, whether the model still does what it is supposed to, both
+                            in ordinary conditions and under attack. At the <em>distribution</em> level,
+                            whether the input is the kind of thing the system was built and tested for. A
+                            departure can
+                            start at any level and can travel: an unfamiliar input can surface as a model
+                            failure, and a model failure can surface as an action nobody authorized. Neither
+                            step is guaranteed, and an action can go wrong with no model failure behind it.
+                            The order above runs the other way, from the consequence a person feels back
+                            toward where it may have started. Evidence has to survive the levels an incident
+                            touches, or the trail stops short of the origin.
                           </p>
                         </div>
 
@@ -170,8 +181,8 @@
                             <span style="color:#7a2a2a; font-size:0.85rem;">from data anomalies to agent decisions</span>
                           </div>
                           <p style="margin:0 0 12px 0; color:#555; font-size:0.9rem;">
-                            <strong style="color:#7a2a2a;">Foundation, data layer.</strong> <a href="pyod.html" style="font-weight:600;">PyOD</a>, the canonical open-source anomaly-detection library: 50M+ downloads, named by OpenAI, used in Amazon and European Space Agency anomaly-detection work, deployed in a UK Government care service, and listed by the U.S. DoD CDAO.<br>
-                            <strong style="color:#7a2a2a;">Frontier, agent layer.</strong> The open-source family below carries the same audit agenda to AI agents, built to cite and reinforce one another: a research method, the tool built on it, and a curated knowledge base.
+                            <strong style="color:#7a2a2a;">Foundation, distribution level.</strong> <a href="pyod.html" style="font-weight:600;">PyOD</a>, the canonical open-source anomaly-detection library: 50M+ downloads, named by OpenAI, used in Amazon and European Space Agency anomaly-detection work, deployed in a UK Government care service, and listed by the U.S. DoD CDAO.<br>
+                            <strong style="color:#7a2a2a;">Frontier, action level.</strong> The open-source family below carries the same audit agenda to AI agents, built to cite and reinforce one another: a research method, the tool built on it, and a curated knowledge base.
                           </p>
                           <div class="row g-3">
                             <div class="col-12 col-md-4">
@@ -232,10 +243,10 @@
                         <ol>
                           <li>
                             <details class="smart-details">
-                              <summary><strong>Agent Layer: Auditability and Control</strong></summary>
+                              <summary><strong>Action: Auditability and Control of Agent Systems</strong></summary>
                               <p style="margin-top:8px;">
-                                At the agent layer, deployed systems act through tools, APIs, and shared state, making behavior
-                                the primary failure surface. I work on auditability frameworks (reconstruction, checking, and
+                                At the action level, deployed systems act through tools, APIs, and shared state, so what a
+                                system does becomes the primary failure surface. I work on auditability frameworks (reconstruction, checking, and
                                 attribution of agent behavior after deployment), runtime control surfaces that intercept tool
                                 calls before they fire, agent-specific failure modes (over-privilege, cross-user contamination,
                                 the autonomy tax of defense training), and category-adaptive training-time defenses. These span
@@ -251,11 +262,12 @@
                           </li>
                           <li>
                             <details class="smart-details">
-                              <summary><strong>Foundation-Model Layer: Trust and Robustness</strong></summary>
+                              <summary><strong>Behavior: Trust and Robustness of Foundation Models</strong></summary>
                               <p style="margin-top:8px;">
-                                Between data and agents, foundation models add a new failure surface: behavior under attack,
-                                hallucination of fact and reasoning, and adversarial robustness of retrieval, all of which
-                                propagate downstream once the model is used by an agent or a user-facing system. My lab's
+                                Between distribution and action, foundation models add their own failure surface: behavior under attack,
+                                hallucination of fact and reasoning, and adversarial robustness of retrieval. Failures on any of
+                                these surfaces can propagate downstream when the model's output is passed to an agent or a
+                                user-facing system. My lab's
                                 targeted work measures these surfaces through jailbreak detection for vision-language models,
                                 causal analysis of hallucination, query-agnostic attacks on retrieval-augmented generation, and
                                 LLM-as-anomaly-detector benchmarks. Community efforts like
@@ -269,15 +281,18 @@
                           </li>
                           <li>
                             <details class="smart-details">
-                              <summary><strong>Data Layer: Anomaly and Out-of-Distribution Detection</strong></summary>
+                              <summary><strong>Distribution: Anomaly and Out-of-Distribution Detection</strong></summary>
                               <p style="margin-top:8px;">
-                                All audit eventually grounds in distinguishing in-distribution behavior from out-of-distribution
-                                behavior. This is my methodological root, started during my PhD with the
-                                <a href="pyod.html">PyOD</a> ecosystem and ADBench, and continuing as a PI through benchmark
+                                At the distribution level, the question is whether an input departed from the conditions
+                                represented during development and evaluation. That boundary is hard to estimate when
+                                labels or representative examples are sparse. This is the lab's methodological and
+                                open-source base: the <a href="pyod.html">PyOD</a> ecosystem and ADBench, benchmark
                                 infrastructure for NLP, automatic OOD detector selection, modality-specific OOD methods for
-                                graphs, multimodal data, and video, and few-shot cross-domain OOD detection. PyOD remains the
-                                flagship open-source artifact, now in its third major release. These methods provide the
-                                measurement backbone that gets re-used at higher layers of the stack.
+                                graphs, multimodal data, and video, and few-shot cross-domain OOD detection. PyOD is the
+                                flagship open-source artifact and is now in its third major release. When an incident
+                                involves distribution shift, these methods supply the evidence for whether unfamiliar input
+                                conditions contributed to it; an action-only incident is established from action-level
+                                evidence instead. Current research emphasis sits at model behavior and agent action.
                               </p>
                               <p style="font-family:'Poppins','Segoe UI',sans-serif; font-size:0.93rem; color:#7a2a2a;">
                                 <strong>Keywords:</strong> Anomaly Detection, Outlier Detection, Out-of-Distribution Detection, PyOD Ecosystem, Benchmark Design, Multimodal OOD, Graph OOD, Few-Shot OOD, OOD Detector Selection
@@ -287,7 +302,7 @@
                         </ol>
 
                         <!-- PRERENDER:bio START -->
-                                                <p><strong style="color:#990000">Biography</strong>. Dr. Yue Zhao is an Assistant Professor of Computer Science at the University of Southern California, where he leads the FORTIS Lab. He serves as Associate Co-Director of the USC Institute on Ethics and Trust in Computing for 2026-2027. His lab builds the methods, benchmarks, and open-source infrastructure that make AI systems auditable across the deployment stack: anomaly and out-of-distribution detection in data, trust and robustness evaluation of foundation models, and auditability and control of agent systems across their lifecycle. His research develops methods to detect, diagnose, and control departures from expected behavior, from anomalous data and foundation-model failures to consequential agent actions. The program extends a decade of research on anomaly and outlier detection at scale, and its current frontier is agent auditability: deployable open-source infrastructure that audits AI agents from before deployment to after a run. He also advises early-stage AI startups and is founding Auditable AI, a startup building the auditable layer for AI agents on his lab's open-source stack.</p>
+                                                <p><strong style="color:#990000">Biography</strong>. Dr. Yue Zhao is an Assistant Professor of Computer Science at the University of Southern California, where he leads the FORTIS Lab. He serves as Associate Co-Director of the USC Institute on Ethics and Trust in Computing for 2026-2027. His lab builds the methods, benchmarks, and open-source infrastructure that make AI systems auditable at three levels: agent action (auditability and control of agent systems across their lifecycle), model behavior (trust and robustness evaluation of foundation models), and input distribution (anomaly and out-of-distribution detection in data). His research develops methods to detect, diagnose, and control departures from expected behavior, from anomalous data and foundation-model failures to consequential agent actions. The program extends a decade of research on anomaly and outlier detection at scale, and its current frontier is agent auditability: deployable open-source infrastructure that audits AI agents from before deployment to after a run. He also advises early-stage AI startups and is founding Auditable AI, a startup building the auditable layer for AI agents on his lab's open-source stack.</p>
                                                 <p>Dr. Zhao has authored over 80 peer-reviewed papers in top-tier venues and is internationally recognized for his open-source contributions, including PyOD, ADBench, TrustLLM, agent-audit, and Aegis, which collectively exceed 50 million downloads and 24,000 GitHub stars. PyOD is the subject of five published books, is named by OpenAI, and is used by Apache Beam, Amazon, Walmart, Databricks, and the European Space Agency. It is recommended in the U.S. Department of Defense CDAO Generative AI Responsible AI Toolkit and named in the official guidance of defense ministries, central banks, financial regulators, and national AI authorities across Europe, Asia, and the Middle East. TrustLLM is cited in a U.S. Senate committee report, a NIST special publication on adversarial machine learning, the U.S. Department of Defense CDAO Generative AI Responsible AI Toolkit, and the International AI Safety Report 2026, and serves as an official benchmark in all four editions of the Future of Life Institute AI Safety Index.</p>
                                                 <p>He has received numerous honors, including the NVIDIA Academic Grant Program Award, the Foresight Institute AI for Safety &amp; Science Nodes Grant, the Capital One Research Award, multiple Amazon Research Awards, AAAI New Faculty Highlights, Google Cloud Research Innovators, the Norton Labs Fellowship, the Meta AI4AI Research Award, the Carnegie Mellon University Presidential Fellowship, the 2025 SIGSPATIAL Best Short Paper Award, and the Second Prize CCC Award at the IEEE ICDM 2025 BlueSky Track.</p>
                                                 <p>He serves as an Associate or Action Editor for Transactions on Machine Learning Research, ACM Transactions on AI for Science, IEEE Transactions on Neural Networks and Learning Systems, and the Journal of Data-Centric Machine Learning Research, and as an Area Chair for major conferences including ICLR, ICML, and NeurIPS. Beyond academic service, he founded and runs 博士栈 (CSPhD.org), a non-profit community for CS / AI / EE / Stats PhDs that has grown to several thousand members since 2022.</p>
