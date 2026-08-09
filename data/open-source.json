@@ -8,7 +8,7 @@
     "docs_url": "https://pyod.readthedocs.io",
     "paper_url": "https://arxiv.org/abs/2412.12154",
     "demo_url": "",
-    "stars": 9954,
+    "stars": 9956,
     "tags": [
       "Anomaly Detection",
       "Outlier Detection",
@@ -359,7 +359,7 @@
     "docs_url": "https://anywhere-agents.readthedocs.io",
     "paper_url": "",
     "demo_url": "",
-    "stars": 203,
+    "stars": 204,
     "tags": [
       "Claude Code",
       "Codex",
