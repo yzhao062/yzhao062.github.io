@@ -1,4 +1,4 @@
-﻿# macOS metadata
+# macOS metadata
 .DS_Store
 
 # JetBrains / IntelliJ / PyCharm
@@ -39,4 +39,7 @@ cv/*.pdf
 agent-config.local.yaml
 
 # Local inbox for documents being processed (offer letters, scans). Never commit: this repo is public.
-/todo/
+# Drop box for files handed to agents; keep the folder and its README
+# (must be todo/*, not todo/ -- git cannot re-include a file under an excluded directory)
+todo/*
+!todo/README.md
