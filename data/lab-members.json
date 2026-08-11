@@ -324,5 +324,15 @@
     "status_text": "M.S. Student",
     "research": "LLM / Agentic AI / Computer Vision / Multimodal Learning",
     "email": "ziyan.yang@usc.edu"
+  },
+  {
+    "group": "current",
+    "name": "Aojie (Justin) Yuan",
+    "profile_url": "https://aojieyuan.com",
+    "image": "images/others/aojie_yuan.webp",
+    "alt": "Aojie Yuan",
+    "status_text": "Master Student",
+    "research": "Agent Safety / LLM Reasoning / World Models / Neuroscience",
+    "email": "aojieyua@usc.edu"
   }
 ]
