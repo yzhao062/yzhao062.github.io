@@ -339,6 +339,11 @@
                             <td class="impact-source"><a href="https://www.nature.com/articles/s41597-025-05035-3">Nature Sci. Data</a></td>
                           </tr>
                           <tr>
+                            <td><span class="impact-type type-gov">Space Agency</span></td>
+                            <td>A second ESA document, authored by ESA/ESOC staff, assesses anomaly-detection algorithms against operational requirements and treats PyOD as the reference library a compliant system would extend: candidate algorithms "would need additional mechanisms or modifications of external libraries (i.e., PyOD) to provide a list of affected channels" (p.31); COPOD is evaluated alongside it</td>
+                            <td class="impact-source"><a href="https://arxiv.org/abs/2406.17826">ESA/ESOC report</a></td>
+                          </tr>
+                          <tr>
                             <td><span class="impact-type type-gov">Saudi Gov</span></td>
                             <td>Saudi Data &amp; AI Authority (SDAIA) Deepfakes Guidelines names PyOD (p.10) among recommended tools for detecting suspicious activity patterns</td>
                             <td class="impact-source"><a href="https://sdaia.gov.sa/en/SDAIA/eParticipation/consulting/SDAIADeepfakesGuidelinesEn.pdf">SDAIA PDF</a></td>
@@ -352,6 +357,16 @@
                             <td><span class="impact-type type-gov">Japan MoD</span></td>
                             <td>Japan Ministry of Defense ATLA AI Guideline v01 lists PyOD as entry 14 in its recommended-tooling table, mapped to sections B-5 (Reliability and Validity) and B-6 (Ensuring Safety), linking the repository and docs; the second national defense ministry to name PyOD as recommended tooling</td>
                             <td class="impact-source"><a href="https://www.mod.go.jp/atla/soubiseisaku/ai_guideline/ai_guideline_ver.01_eng_202506.pdf">ATLA PDF</a></td>
+                          </tr>
+                          <tr>
+                            <td><span class="impact-type type-gov">India Gov</span></td>
+                            <td>Government of India, Department of Telecommunications, Telecommunication Engineering Centre: the draft Standard on AI Robustness lists PyOD in its recommended-tooling table under Anomaly Detection (p.66), "PyOD &ndash; Outlier detection algorithms"; the third national government to name PyOD as recommended tooling</td>
+                            <td class="impact-source"><a href="https://www.tec.gov.in/pdf/consultations/Combined%20Standard%20on%20AI%20Robustness%20dated%2006052025-57070.pdf">TEC PDF</a></td>
+                          </tr>
+                          <tr>
+                            <td><span class="impact-type type-gov">Brazil Congress</span></td>
+                            <td>Brazil's Chamber of Deputies publishes procurement-overpricing research in its official proceedings that runs PyOD, then ensembles HBOS, ECOD, COPOD, GMM, PCA and IForest through SUOD, reporting the full accuracy, precision and recall table and engaging ADBench's comparative claim; a coauthor directs postgraduate coordination at the Chamber's Cefor</td>
+                            <td class="impact-source"><a href="https://www2.camara.leg.br/a-camara/programas-institucionais/cursos/pos-graduacao/eventos/jornadas-de-pesquisa-e-extensao/final_AnaisdaXIIIJornadadePesquisaeExtensodaCmaradosDeputadosParlamentoeInovao.pdf">C&acirc;mara dos Deputados PDF</a></td>
                           </tr>
                           <tr>
                             <td><span class="impact-type type-gov">Central Bank</span></td>
@@ -420,8 +435,8 @@
                           </tr>
                           <tr>
                             <td><span class="impact-type type-patent">Patents</span></td>
-                            <td>15 patents cite PyOD/COPOD/ECOD/LSCP/SUOD/TODS (WIPO x2, EU x2, US x4, China x6, Slovakia x1); recent additions include Tencent CN112989338B (COPOD), DBAPPSecurity CN117216660B (TODS), and Chongqing University CN117648656A (ADBench)</td>
-                            <td class="impact-source"><a href="https://patents.google.com/patent/WO2023166515A1/en">Ericsson</a> &middot; <a href="https://patents.google.com/patent/US20230267468A1">Actimize</a> &middot; <a href="https://patents.google.com/patent/CN112989338B/en">Tencent</a></td>
+                            <td>49 patents cite PyOD/COPOD/ECOD/LSCP/SUOD/TODS/XGBOD/ADBench (China x29, US x11, WIPO x3, Korea x2, EU x2, Slovakia x1, Japan x1). Many go beyond citation to implementation: China Mobile adopts the PyOD toolkit and selects twelve of its algorithms, Baidu trains COPOD models on five feature classes for anomalous-access detection, and Atlas Space Operations implements COPOD's empirical-copula scoring. Other assignees include Visa International, Tencent, Ping An Medical, CETC 54, Harbin Institute of Technology, and Ericsson</td>
+                            <td class="impact-source"><a href="https://patents.google.com/patent/US12242939B2/en">Visa</a> &middot; <a href="https://patents.google.com/patent/CN115209452B/en">China Mobile</a> &middot; <a href="https://patents.google.com/patent/CN115603955B/en">Baidu</a> &middot; <a href="https://patents.google.com/patent/US12184394B2/en">Atlas Space</a></td>
                           </tr>
                           <tr>
                             <td><span class="impact-type type-journal">Journal</span></td>
@@ -463,6 +478,11 @@
                             <td><span class="impact-type type-journal">Benchmark Baseline</span></td>
                             <td>Praetor (arXiv:2604.26274) deploys <a href="aegis.html">Aegis</a> as a quantitative baseline behavioral firewall, reporting 12.8% attack success for Aegis versus 2.2% for their method, and cites the Aegis paper by title and arXiv ID</td>
                             <td class="impact-source"><a href="https://arxiv.org/abs/2604.26274">arXiv</a></td>
+                          </tr>
+                          <tr>
+                            <td><span class="impact-type type-journal">Vendor Comparison</span></td>
+                            <td>An independent containment paper places <a href="aegis.html">Aegis</a> beside two vendor products rather than beside academic prior art, comparing it against NVIDIA OpenShell and Microsoft's Agent Governance Toolkit in its capability analysis: "AEGIS provides a pre-execution firewall with content scanning and tamper-evident audit trails"</td>
+                            <td class="impact-source"><a href="https://arxiv.org/abs/2604.23425">arXiv</a></td>
                           </tr>
                           <tr>
                             <td><span class="impact-type type-media">Media</span></td>
@@ -642,6 +662,11 @@
                             <td><span class="impact-type type-journal">Journal</span></td>
                             <td>Published in Nature Chemical Biology (2022)</td>
                             <td class="impact-source"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9529840/">Nature Chem. Bio.</a></td>
+                          </tr>
+                          <tr>
+                            <td><span class="impact-type type-fmco">AI Lab</span></td>
+                            <td>Google Research trained Tx-LLM on TDC and says so in the official release post: "We leveraged data from the Therapeutic Data Commons (TDC), a public collection of drug discovery datasets for training ML models, and processed 66 tasks most relevant to drug discovery into instruction-answer formats suitable for LLMs." Google DeepMind's later TxGemma models draw their prediction tasks from TDC as well. TDC is a co-authored project; Yue Zhao is not its lead author</td>
+                            <td class="impact-source"><a href="https://research.google/blog/tx-llm-supporting-therapeutic-development-with-large-language-models/">Google Research</a> &middot; <a href="https://deepmind.google/models/gemma/txgemma/">TxGemma</a></td>
                           </tr>
                           <tr>
                             <td><span class="impact-type type-media">University</span></td>
