@@ -55,15 +55,51 @@ PROJECT_ROOT = SCRIPT_DIR.parent
 # ── OpenAlex provider ────────────────────────────────────────────────────
 
 
+class OpenAlexBudgetExhausted(RuntimeError):
+    """OpenAlex refused the request because the daily credit budget is spent.
+
+    OpenAlex moved to a metered model: the free tier is 1000 credits (US$0.10)
+    per day, reset at midnight UTC, and every request costs one credit. Once the
+    budget is gone every subsequent call returns HTTP 429 with a `Retry-After`
+    measured in hours. Retrying inside a run cannot recover, so this is raised
+    to abort the pass instead of letting empty results look like zero citations.
+    """
+
+    def __init__(self, retry_after: int):
+        self.retry_after = retry_after
+        hours = retry_after / 3600.0
+        super().__init__(
+            f"OpenAlex daily credit budget exhausted; resets in {hours:.1f}h "
+            f"(Retry-After: {retry_after}s)"
+        )
+
+
+def _openalex_polite(url: str) -> str:
+    """Add the polite-pool `mailto` parameter, which OpenAlex rate-limits less."""
+    if "mailto=" in url:
+        return url
+    sep = "&" if "?" in url else "?"
+    return f"{url}{sep}mailto={urllib.parse.quote(EMAIL)}"
+
+
 def _openalex_get(url: str):
+    url = _openalex_polite(url)
     for attempt in range(5):
         try:
             req = urllib.request.Request(url)
-            req.add_header("User-Agent", f"mailto:{EMAIL}")
+            req.add_header("User-Agent", f"citation-audit/1.0 (mailto:{EMAIL})")
             with urllib.request.urlopen(req, timeout=30) as resp:
                 return json.loads(resp.read().decode())
         except urllib.error.HTTPError as e:
             if e.code == 429:
+                # A long Retry-After means the daily budget is gone, not that we
+                # are briefly over the burst rate. Sleeping cannot help.
+                try:
+                    retry_after = int(e.headers.get("Retry-After", "0"))
+                except (TypeError, ValueError):
+                    retry_after = 0
+                if retry_after > 120:
+                    raise OpenAlexBudgetExhausted(retry_after) from None
                 wait = 3 * (attempt + 1)
                 print(f"    Rate limited, waiting {wait}s...")
                 time.sleep(wait)
@@ -199,37 +235,84 @@ def _get_openalex_citing(work_id: str, max_pages: int = 50):
     return results
 
 
+# Not under data/: ci_check_site.py requires every JSON there to be a top-level
+# array of site data, and this is a derived local cache rather than site content.
+OPENALEX_ID_CACHE = PROJECT_ROOT / ".cache" / "openalex-id-cache.json"
+
+
+def _load_id_cache() -> dict:
+    try:
+        return json.loads(OPENALEX_ID_CACHE.read_text(encoding="utf-8"))
+    except Exception:
+        return {}
+
+
+def _save_id_cache(cache: dict) -> None:
+    try:
+        OPENALEX_ID_CACHE.parent.mkdir(parents=True, exist_ok=True)
+        OPENALEX_ID_CACHE.write_text(json.dumps(cache, indent=1, sort_keys=True), encoding="utf-8")
+    except Exception as e:  # a cache failure must never abort the audit
+        print(f"    (could not write OpenAlex id cache: {e})")
+
+
 def fetch_openalex_entries(papers: list[dict], *, verbose: bool = True, log=print) -> dict:
-    """Return audit entries discovered through OpenAlex."""
+    """Return audit entries discovered through OpenAlex.
+
+    Phase 1 resolutions are cached in `data/.openalex-id-cache.json`. The free
+    OpenAlex tier allows 1000 requests per day, and resolving 116 papers can
+    spend most of that before a single citing-paper query runs, so re-runs read
+    identifiers from the cache and spend the budget on Phase 2 instead.
+    """
     found_works: dict[str, str] = {}
     not_found: list[str] = []
     zero_cite: list[str] = []
+    budget_error: str | None = None
+
+    cache = _load_id_cache()
+    cache_hits = 0
 
     if verbose:
         log("=" * 60)
         log("PHASE 1: Finding OpenAlex IDs")
         log("=" * 60)
 
-    for i, p in enumerate(papers):
-        title = p["title"]
-        venue = p.get("venue", "")
-        short = f"{title[:50]}... ({venue})"
+    try:
+        for i, p in enumerate(papers):
+            title = p["title"]
+            venue = p.get("venue", "")
+            short = f"{title[:50]}... ({venue})"
+            key = (p.get("paper_url") or title).strip()
+            if verbose:
+                log(f"  [{i+1}/{len(papers)}] {short}")
+            if key in cache:
+                oa_id, cite_count = cache[key]["id"], cache[key]["cited_by"]
+                cache_hits += 1
+            else:
+                oa_id, _, cite_count = _find_openalex_id(title, paper_url=p.get("paper_url"))
+                cache[key] = {"id": oa_id, "cited_by": cite_count}
+                time.sleep(0.12)
+            if oa_id and cite_count > 0:
+                found_works[oa_id] = short_label(title, venue)
+                if verbose:
+                    log(f"    -> {oa_id} (cited_by={cite_count})")
+            elif oa_id:
+                zero_cite.append(short)
+                if verbose:
+                    log(f"    -> {oa_id} (0 citations, skipping)")
+            else:
+                not_found.append(short)
+                if verbose:
+                    log("    -> NOT FOUND")
+    except OpenAlexBudgetExhausted as e:
+        budget_error = str(e)
         if verbose:
-            log(f"  [{i+1}/{len(papers)}] {short}")
-        oa_id, _, cite_count = _find_openalex_id(title, paper_url=p.get("paper_url"))
-        if oa_id and cite_count > 0:
-            found_works[oa_id] = short_label(title, venue)
-            if verbose:
-                log(f"    -> {oa_id} (cited_by={cite_count})")
-        elif oa_id:
-            zero_cite.append(short)
-            if verbose:
-                log(f"    -> {oa_id} (0 citations, skipping)")
-        else:
-            not_found.append(short)
-            if verbose:
-                log("    -> NOT FOUND")
-        time.sleep(0.12)
+            log(f"\n  !! {e}")
+            log("  !! Phase 1 stopped early. Resolved identifiers are cached for the next run.")
+    finally:
+        _save_id_cache(cache)
+
+    if verbose and cache_hits:
+        log(f"\n  ({cache_hits} identifiers served from cache, {len(papers) - cache_hits} looked up)")
 
     if verbose:
         log(f"\nFound {len(found_works)} papers with citations")
@@ -239,11 +322,26 @@ def fetch_openalex_entries(papers: list[dict], *, verbose: bool = True, log=prin
 
     entries: list[dict] = []
     citing_ids: set[str] = set()
+    works_queried = 0
+    works_unqueried: list[str] = []
 
     for idx, (oa_id, short_name) in enumerate(found_works.items()):
+        if budget_error:
+            works_unqueried.append(short_name)
+            continue
         if verbose:
             log(f"  [{idx+1}/{len(found_works)}] {short_name}")
-        citing = _get_openalex_citing(oa_id)
+        try:
+            citing = _get_openalex_citing(oa_id)
+        except OpenAlexBudgetExhausted as e:
+            budget_error = str(e)
+            works_unqueried.append(short_name)
+            if verbose:
+                log(f"    !! {e}")
+                log("    !! Aborting the OpenAlex pass. Remaining works are reported as")
+                log("       NOT QUERIED rather than as zero citations.")
+            continue
+        works_queried += 1
         if verbose:
             log(f"    -> {len(citing)} citing papers")
         for c in citing:
@@ -268,12 +366,19 @@ def fetch_openalex_entries(papers: list[dict], *, verbose: bool = True, log=prin
                     log(f"    ** T0 [{category}] {inst['name'][:40]}")
         time.sleep(0.5)
 
+    if verbose and budget_error:
+        log(f"\n  !! OpenAlex pass INCOMPLETE: {works_queried} of {len(found_works)} works queried.")
+        log(f"  !! {len(works_unqueried)} works were never queried and are NOT zero-citation results.")
+
     return {
         "entries": dedup_entries(entries),
         "found_count": len(found_works),
         "zero_cite": zero_cite,
         "not_found": not_found,
         "unique_citing": len(citing_ids),
+        "budget_error": budget_error,
+        "works_queried": works_queried,
+        "works_unqueried": works_unqueried,
     }
 
 
@@ -310,6 +415,21 @@ def _write_markdown(merged: dict, total_papers: int, out_path: Path) -> None:
                 f"{ps['unique_citing']} unique citing papers analyzed.\n"
             )
         f.write("\n")
+
+        # An API failure must never be readable as a zero-citation finding.
+        incomplete = [(s, per_source[s]) for s in src_names if per_source[s].get("budget_error")]
+        if incomplete:
+            f.write("> [!WARNING]\n")
+            f.write("> **This run is incomplete.** One or more sources stopped early, so the numbers\n")
+            f.write("> above are a floor, and an absent citation here is not evidence of no citation.\n")
+            for src, ps in incomplete:
+                queried = ps.get("works_queried", 0)
+                unqueried = len(ps.get("works_unqueried") or [])
+                f.write(
+                    f">\n> - **{source_display_label(src)}**: {ps['budget_error']} "
+                    f"{queried} works queried, {unqueried} never queried.\n"
+                )
+            f.write("\n")
 
         for tier_label, tier_entries in (
             ("Tier 0: Government, Space Agencies, National Labs, Defense, Foundation Model Cos", t0),
@@ -396,6 +516,9 @@ def _merge_results(results: list[tuple[str, dict]]) -> dict:
             "zero_cite": list(r.get("zero_cite", [])),
             "not_found": list(r.get("not_found", [])),
             "unique_citing": r.get("unique_citing", 0),
+            "budget_error": r.get("budget_error"),
+            "works_queried": r.get("works_queried", 0),
+            "works_unqueried": list(r.get("works_unqueried", [])),
         }
     return {
         "entries": dedup_entries(all_entries),
@@ -465,12 +588,23 @@ def main(argv: Iterable[str] | None = None) -> int:
     print(f"\n{'=' * 60}")
     print(f"DONE -> {out_path}")
     print(f"Sources: {' + '.join(merged['per_source'].keys())}")
+    incomplete = False
     for src, ps in merged["per_source"].items():
         print(f"  {src}: {ps['found_count']}/{len(papers)} papers with citations, "
               f"{ps['unique_citing']} unique citing papers")
+        if ps.get("budget_error"):
+            incomplete = True
+            print(f"    !! INCOMPLETE: {ps['budget_error']}")
+            print(f"    !! {ps.get('works_queried', 0)} works queried, "
+                  f"{len(ps.get('works_unqueried') or [])} never queried "
+                  f"(these are unknown, not zero).")
     print(f"Tier 0: {t0} entries")
     print(f"Tier 1: {t1} entries")
     print("=" * 60)
+    if incomplete:
+        print("Exit 3: at least one source stopped early. Re-run after the budget resets;\n"
+              "        cached identifiers mean the next run spends its budget on citing papers.")
+        return 3
     return 0
 
 

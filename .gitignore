@@ -19,6 +19,9 @@
 __pycache__/
 *.pyc
 
+# Local API caches (derived; regenerated on demand)
+.cache/
+
 # LaTeX build output
 out/
 
