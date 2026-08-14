@@ -346,7 +346,7 @@ When the session start check (item 4) detects older versions, list the affected 
 - When editing a skill, modify `SKILL.md` and its `references/` or `scripts/` directly. Do not create agent-specific forks of the same content.
 - If a new skill is added, create both the `skills/<skill-name>/SKILL.md` structure and a matching `.claude/commands/<skill-name>.md` pointer so Claude Code's slash-command surface stays in sync; Codex reaches the same skill through the lookup order without needing a pointer.
 
-<!-- rule-pack:agent-style:begin version=v0.3.6 sha256=45bd5e852d4ff62ce8949ff437849c80e24106c0c55631739eb059b6e9e60c1d -->
+<!-- rule-pack:agent-style:begin version=v0.4.1 sha256=45bd5e852d4ff62ce8949ff437849c80e24106c0c55631739eb059b6e9e60c1d -->
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 
 # The Elements of Agent Style — Rules
