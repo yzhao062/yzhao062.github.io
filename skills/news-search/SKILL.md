@@ -338,7 +338,22 @@ Run this step after the audit file is written, never before, so that only verifi
 
 1. **Select.** From this round's newly confirmed rows, take the ones that change the public impact story: Tier 0 government, international-body, standards, or foundation-model-company citations; Tier 1 items from national labs and major research institutions; and any third-party use of a lab artifact as a baseline or as adopted tooling. Skip Tier 3 through Tier 5 unless a card's headline count is now stale.
 2. **Map to the impact cards.** `opensource.html` carries one `impact-card` per project family (PyOD, Agent Auditability Line, ADBench, TrustLLM, Recent Institutional Visibility, TDC, DoxBench). Add each finding as a row in the matching card, using the existing `Type | Evidence | Source` column shape and the established `impact-type` badge classes. Create a new card only when a project family has enough confirmed evidence to stand on its own.
-3. **Refresh the derived numbers.** Several surfaces quote counts that this round may have changed: the External-adoption blurb at the top of `opensource.html`, the patent count, the edition counts, download and star figures, and the parallel claims in `files/bio.txt`, `index.html`, `llms.txt`, and both CV files. A finding that raises a count must raise it everywhere or the site contradicts itself.
+3. **Refresh the derived numbers on every surface, then prove it.** This step has been skipped or half-done in more than one round, so it is now a table and a gate rather than a reminder. The patent count once read 12 in the audit and 15 on the site at the same time. The bio's geography list stayed at "Europe, Asia, and the Middle East" for a full round after Brazil was already counted in Ledger 1.
+
+   `news-coverage-audit.md` is the source of truth. Every surface below quotes it, so a finding that changes a figure changes all of them in the same commit.
+
+   | Surface | What it carries | Check before closing the round |
+   |---|---|---|
+   | `opensource.html` | Impact cards per project family, the External-adoption blurb, the patent row, book and course counts | Does a new Tier 0 or Tier 1 row belong in a card? Do the quoted counts still match the audit? |
+   | `files/bio.txt` | The adoption sentence: institution classes, geography, patent count, foundation-model-company naming | Does the geography list cover every country now in Ledger 1? Is a newly named institution class present? |
+   | `index.html` | The PyOD one-line summary, plus a `PRERENDER:bio` block generated from `files/bio.txt` | Edit `files/bio.txt`, then run `python scripts/prerender_pages.py` to regenerate the block. Never hand-edit inside the markers. |
+   | `llms.txt` | The Institutional Adoption section, which is what a model reads when asked about the lab | Does it name the new Tier 0? This surface is easy to forget because no human reads it. |
+   | `cv/cv-full.tex`, `cv/cv-1page.tex` | Award source links and grant rows | Do the linked pages still name the PI? Dead or non-naming award links are defects, see below. |
+   | `citation-affiliation-audit.md` | The bibliometric half | Freshness-gated hook, see the citation-audit integration section. |
+
+   **The gate.** `scripts/ci_check_site.py` carries `check_impact_claims_agree`, which reads each figure from `news-coverage-audit.md` and fails the build when a surface disagrees. When this round introduces a figure that will appear on more than one surface, add it to that function's `CLAIMS` table in the same commit. A number quoted by only one surface needs no row. A number quoted by two surfaces does, because that is where drift starts.
+
+   **Check the award links while you are here.** A link that returns HTTP 200 is not evidence: fetch each award URL on the public surfaces and confirm the page actually names the PI. The 2026-08-13 round found two dead NortonLifeLock links redirecting to a generic corporate blog, and a Capital One Research Award cited to a USC Viterbi news page that returns 200 and contains no occurrence of "Zhao".
 4. **Keep the wording calibrated to the evidence.** Carry the audit's caveats onto the site rather than dropping them. Attribution that names only a tool and not the PI stays described that way. A co-authored project stays described as co-authored. Adverse coverage, such as a CVE advisory, is evidence of reach and does not belong in a card that reads as endorsement.
 5. **Record what was propagated.** Add a short "Propagated to site" note to the round's section in `news-coverage-audit.md` listing which rows reached which cards, so a later reader can tell the difference between a finding that was never surfaced and one that was deliberately held back.
 

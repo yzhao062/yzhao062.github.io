@@ -481,6 +481,63 @@ def check_bib_viewer_compat(errors: list[str], warnings: list[str]) -> None:
             warnings.append(f"bib-viewer.html missing logic marker: {needle}")
 
 
+def check_impact_claims_agree(errors: list[str], warnings: list[str]) -> None:
+    """Keep the impact numbers identical across every surface that quotes them.
+
+    A news-search round writes new evidence into `news-coverage-audit.md`, and the
+    same facts are then quoted on several public surfaces. Those copies drift: the
+    patent count read 12 in the audit and 15 on the site at the same time, and the
+    bio's geography list stayed at "Europe, Asia, and the Middle East" for a round
+    after Brazil was already counted. Prose instructions did not prevent either, so
+    the invariant is enforced here instead.
+
+    Add a row to CLAIMS whenever a new figure starts appearing on more than one
+    surface. `news-coverage-audit.md` is the source of truth for every one of them.
+    """
+    audit_path = ROOT / "news-coverage-audit.md"
+    if not audit_path.exists():
+        warnings.append("news-coverage-audit.md missing; impact-claim agreement not checked")
+        return
+    audit = audit_path.read_text(encoding="utf-8", errors="replace")
+
+    # (label, regex over the audit that yields the authoritative number,
+    #  {surface path: regex whose first group must equal that number})
+    CLAIMS = [
+        (
+            "patent count",
+            r"- \*\*(\d+) patents\*\*",
+            {
+                "opensource.html": r"(\d+) patents cite PyOD",
+                "files/bio.txt": r"cited in (\d+) patents",
+                "llms.txt": r"\*\*Patents\*\*: (\d+) patents cite",
+            },
+        ),
+    ]
+
+    for label, audit_re, surfaces in CLAIMS:
+        m = re.search(audit_re, audit)
+        if not m:
+            warnings.append(f"{label}: no authoritative figure found in news-coverage-audit.md")
+            continue
+        truth = m.group(1)
+        for rel, surface_re in surfaces.items():
+            path = ROOT / rel
+            if not path.exists():
+                errors.append(f"{label}: {rel} is missing")
+                continue
+            sm = re.search(surface_re, path.read_text(encoding="utf-8", errors="replace"))
+            if not sm:
+                errors.append(
+                    f"{label}: {rel} no longer states the figure "
+                    f"(pattern {surface_re!r} did not match). The audit says {truth}."
+                )
+            elif sm.group(1) != truth:
+                errors.append(
+                    f"{label}: {rel} says {sm.group(1)} but news-coverage-audit.md says {truth}. "
+                    "The audit is the source of truth; update the surface."
+                )
+
+
 def main() -> None:
     errors: list[str] = []
     warnings: list[str] = []
@@ -492,6 +549,7 @@ def main() -> None:
     check_bib_viewer_compat(errors, warnings)
     check_bib_coverage(errors, warnings)
     check_utf8_bom(errors)
+    check_impact_claims_agree(errors, warnings)
     check_public_urls(errors, warnings)
 
     if errors:
