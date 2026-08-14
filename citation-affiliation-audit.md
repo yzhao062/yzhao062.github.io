@@ -1,22 +1,23 @@
 # Citation Affiliation Audit
 
-*Generated: 2026-08-09 via OpenAlex + Dimensions*
+*Generated: 2026-08-13 via OpenAlex + Dimensions*
 
 **What this is:** Papers that cite your work, where at least one author is affiliated with a notable institution.
 This means "researchers AT [institution] cited your tool" -- not "[institution] officially endorses your tool."
 
 Per-source coverage of the 116 non-survey papers:
-- **OpenAlex**: 45 papers with citations; 0 unique citing papers analyzed.
-- **Dimensions**: 35 papers with citations; 1341 unique citing papers analyzed.
+- **OpenAlex**: 46 papers with citations; 0 unique citing papers analyzed.
+- **Dimensions**: 37 papers with citations; 1368 unique citing papers analyzed.
 
 ## Tier 0: Government, Space Agencies, National Labs, Defense, Foundation Model Cos
 
-**19 entries**
+**20 entries**
 
 | Category | Institution | Country | Your Work Cited | Citing Paper | Year | Source |
 |----------|-----------|---------|----------------|-------------|------|--------|
 | Central Bank | Deutsche Bundesbank | Germany | The Need for Unsupervised Outlier M | RECol: Reconstruction Error Columns for Outlier Detection | 2023 | dimensions |
 | Defense/Research | RAND Corporation | United States | COPOD: Copula-Based Outlier Detecti | A robust unsupervised method for outlier set detection | 2025 | dimensions |
+| Foundation Model Co | Meta Platforms Inc | United States | Edit Away and My Face Will Not Stay | PrivateEdit: A Privacy-Preserving Pipeline for Face-Centric  | 2026 | dimensions |
 | Foundation Model Co | Meta Platforms Inc | United States | COPOD: Copula-Based Outlier Detecti | Detecting Tiny Performance Regressions at Hyperscale | 2025 | dimensions |
 | Foundation Model Co | Meta Platforms Inc | United States | COPOD: Copula-Based Outlier Detecti | TSB-AutoAD: Towards Automated Solutions for Time-Series Anom | 2025 | dimensions |
 | Foundation Model Co | Meta Platforms Inc | United States | The Need for Unsupervised Outlier M | EasyAD: A Demonstration of Automated Solutions for Time-Seri | 2025 | dimensions |
@@ -37,12 +38,14 @@ Per-source coverage of the 116 non-survey papers:
 
 ## Tier 1: Big Tech, Finance, Pharma, Healthcare, Industrial
 
-**60 entries**
+**62 entries**
 
 | Category | Institution | Country | Your Work Cited | Citing Paper | Year | Source |
 |----------|-----------|---------|----------------|-------------|------|--------|
 | Big Tech | Google LLC | United States | Can Multimodal LLMs Perform Time Se | Convergence of LLM Integration and Edge Intelligence in Dece | 2026 | dimensions |
+| Big Tech | Tencent Technology Shenzhen Co Ltd | China | COPOD: Copula-Based Outlier Detecti | Label Annotation for Tabular Anomaly Detection with Large La | 2026 | dimensions |
 | Big Tech | Huawei Ireland Research Centre, Dublin, Ireland | Ireland | COPOD: Copula-Based Outlier Detecti | Real or Not? A Practitioner’s Perspective on Unsupervised Mu | 2026 | dimensions |
+| Big Tech | IBM Research, First Floor, Trinity Business School, Dublin, Dublin, Ireland | Ireland | Artificial Intelligence Foundation  | Impact of molecular multimodality on neural network models f | 2026 | dimensions |
 | Big Tech | Adobe Inc | United States | DPU: Dynamic Prototype Updating for | Few-Shot Graph Out-of-Distribution Detection with LLMs | 2025 | dimensions |
 | Big Tech | Tencent Technology Shenzhen Co Ltd | China | Contrastive Attributed Network Anom | How to use Graph Data in the Wild to Help Graph Anomaly Dete | 2025 | dimensions |
 | Big Tech | Huawei Technologies Co Ltd | China | TODS: An Automated Time Series Outl | TAB: Unified Benchmarking of Time Series Anomaly Detection M | 2025 | dimensions |
@@ -106,15 +109,15 @@ Per-source coverage of the 116 non-survey papers:
 
 | Institution | Category | Work-Citations |
 |-----------|----------|---------------|
+| Meta Platforms Inc | Foundation Model Co | 6 |
 | Merck & Co Inc | Pharma | 5 |
-| Meta Platforms Inc | Foundation Model Co | 5 |
 | AstraZeneca AB | Pharma | 4 |
 | Amazon Web Services Inc | Big Tech | 3 |
+| Tencent Technology Shenzhen Co Ltd | Big Tech | 3 |
 | Huawei Technologies Co Ltd | Big Tech | 3 |
 | Microsoft Research Asia (China) | Big Tech | 3 |
 | Google LLC | Big Tech | 2 |
 | Adobe Inc | Big Tech | 2 |
-| Tencent Technology Shenzhen Co Ltd | Big Tech | 2 |
 | Sanofi SA | Pharma | 2 |
 | IBM Research GmbH | Big Tech | 2 |
 | Brookhaven National Laboratory | National Lab | 2 |
@@ -150,6 +153,7 @@ Per-source coverage of the 116 non-survey papers:
 | QQ Music BU Tencent Music Entertainment (TME), Shenzhen, China | Big Tech | 1 |
 | Baidu Inc | Big Tech | 1 |
 | Deutsche Bundesbank | Central Bank | 1 |
+| IBM Research, First Floor, Trinity Business School, Dublin, Dublin, Ireland | Big Tech | 1 |
 | Fraunhofer Institute for Algorithms and Scientific Computing | Research Institute | 1 |
 | Novartis Pharma AG | Pharma | 1 |
 | Pacific Northwest National Laboratory | National Lab | 1 |
@@ -165,19 +169,19 @@ Per-source coverage of the 116 non-survey papers:
 
 ### OpenAlex
 
-**Papers with citations:** 45/116
+**Papers with citations:** 46/116
 
-**Indexed but 0 citations (30):** SEVA: Self-Evolving Verification Agent w, CoAct: Co-Active LLM Preference Learning, Defenses Against Prompt Attacks Learn Su, Doxing via the Lens: Revealing Location-, "Someone Hid It": Query-Agnostic Black-B, Topology Matters: Measuring Memory Leaka, DyFlow: Dynamic Workflow Framework for A, JailDAM: Jailbreak Detection with Adapti, LLM-Empowered Patient-Provider Communica, MetaOOD: Automatic Selection of OOD Dete, Secure On-Device Video OOD Detection Wit, TRUSTEVAL: A Dynamic Evaluation Toolkit , AutoDavis: Automatic and Dynamic Evaluat, DSV: An Alignment Validation Loss for Se, Don’t Let It Hallucinate: Premise Verifi, LEGO-Learn: Label-Efficient Graph Open-S, WeClawArena: An Auditable Sandbox and Be, JigShape: Evaluating Visual-Geometric Re, MemoHarness: Agent Harnesses That Learn , SkillCenter: A Large-Scale Source-Ground, ... and 10 more
+**Indexed but 0 citations (29):** SEVA: Self-Evolving Verification Agent w, CoAct: Co-Active LLM Preference Learning, Defenses Against Prompt Attacks Learn Su, Doxing via the Lens: Revealing Location-, "Someone Hid It": Query-Agnostic Black-B, Topology Matters: Measuring Memory Leaka, DyFlow: Dynamic Workflow Framework for A, JailDAM: Jailbreak Detection with Adapti, LLM-Empowered Patient-Provider Communica, MetaOOD: Automatic Selection of OOD Dete, Secure On-Device Video OOD Detection Wit, TRUSTEVAL: A Dynamic Evaluation Toolkit , AutoDavis: Automatic and Dynamic Evaluat, DSV: An Alignment Validation Loss for Se, Don’t Let It Hallucinate: Premise Verifi, LEGO-Learn: Label-Efficient Graph Open-S, WeClawArena: An Auditable Sandbox and Be, JigShape: Evaluating Visual-Geometric Re, MemoHarness: Agent Harnesses That Learn , SkillCenter: A Large-Scale Source-Ground, ... and 9 more
 
-**Not found (41):** Can Multimodal LLMs Perform Time Series , Charts Are Not Images: On the Challenges, DecAlign: Hierarchical Cross-Modal Align, Mitigating Hallucinations in Large Langu, TrustGen: A Platform of Dynamic Benchmar, A Personalized Conversational Benchmark:, AD-AGENT: A Multi-agent Framework for En, Learning from the Storm: A Multivariate , Navigating Between Explainability and Ex, Hyperparameter Optimization for Unsuperv, Do Not Train It: A Linear Neural Archite, Automatic Unsupervised Outlier Model Sel, A Data Denoising Approach to Optimize Fu, Agent Safety Is Action Alignment... (arX, DOG-DPO: Dynamic Optimization in Geometr, Memory Retrieval for Changing Preference, Can Subgraph Explanations Be Weaponized , CHI-Bench: Can AI Agents Automate End-to, Auditable Agents... (ACM AI Leadership S, Agent Audit: A Security Analysis System , ... and 21 more
+**Not found (41):** Can Multimodal LLMs Perform Time Series , Charts Are Not Images: On the Challenges, DecAlign: Hierarchical Cross-Modal Align, Mitigating Hallucinations in Large Langu, TrustGen: A Platform of Dynamic Benchmar, A Personalized Conversational Benchmark:, AD-AGENT: A Multi-agent Framework for En, Learning from the Storm: A Multivariate , Navigating Between Explainability and Ex, Hyperparameter Optimization for Unsuperv, Do Not Train It: A Linear Neural Archite, A Data Denoising Approach to Optimize Fu, Agent Safety Is Action Alignment... (arX, DOG-DPO: Dynamic Optimization in Geometr, Memory Retrieval for Changing Preference, Can Subgraph Explanations Be Weaponized , CHI-Bench: Can AI Agents Automate End-to, Auditable Agents... (ACM AI Leadership S, Agent Audit: A Security Analysis System , Agent Banana: High-Fidelity Image Editin, ... and 21 more
 
 ### Dimensions
 
-**Papers with citations:** 35/116
+**Papers with citations:** 37/116
 
-**Indexed but 0 citations (78):** SEVA: Self-Evolving Verification Agent w, Charts Are Not Images: On the Challenges, CoAct: Co-Active LLM Preference Learning, Defenses Against Prompt Attacks Learn Su, Mitigating Hallucinations in Large Langu, "Someone Hid It": Query-Agnostic Black-B, Topology Matters: Measuring Memory Leaka, TrustGen: A Platform of Dynamic Benchmar, A Personalized Conversational Benchmark:, AD-AGENT: A Multi-agent Framework for En, DyFlow: Dynamic Workflow Framework for A, Few-Shot Graph Out-of-Distribution Detec, JailDAM: Jailbreak Detection with Adapti, LLM-Empowered Patient-Provider Communica, Learning from the Storm: A Multivariate , MetaOOD: Automatic Selection of OOD Dete, NLP-ADBench: NLP Anomaly Detection Bench, Retrieval-Reasoning Large Language Model, Secure On-Device Video OOD Detection Wit, TRUSTEVAL: A Dynamic Evaluation Toolkit , ... and 58 more
+**Indexed but 0 citations (77):** SEVA: Self-Evolving Verification Agent w, Charts Are Not Images: On the Challenges, CoAct: Co-Active LLM Preference Learning, Defenses Against Prompt Attacks Learn Su, Mitigating Hallucinations in Large Langu, "Someone Hid It": Query-Agnostic Black-B, Topology Matters: Measuring Memory Leaka, TrustGen: A Platform of Dynamic Benchmar, A Personalized Conversational Benchmark:, AD-AGENT: A Multi-agent Framework for En, Few-Shot Graph Out-of-Distribution Detec, JailDAM: Jailbreak Detection with Adapti, LLM-Empowered Patient-Provider Communica, Learning from the Storm: A Multivariate , MetaOOD: Automatic Selection of OOD Dete, NLP-ADBench: NLP Anomaly Detection Bench, Retrieval-Reasoning Large Language Model, Secure On-Device Video OOD Detection Wit, TRUSTEVAL: A Dynamic Evaluation Toolkit , Treble Counterfactual VLMs: A Causal App, ... and 57 more
 
-**Not found (3):** AutoDavis: Automatic and Dynamic Evaluat, Revisiting Time Series Outlier Detection, FlexRouter: Learning Complementary Model
+**Not found (2):** Revisiting Time Series Outlier Detection, FlexRouter: Learning Complementary Model
 
 *OpenAlex coverage improves over time. Re-run in 3-6 months to capture newly indexed papers; Dimensions has better CS coverage and complements OpenAlex on per-paper citation graphs.*
 
