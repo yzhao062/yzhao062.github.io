@@ -46,7 +46,7 @@
     "docs_url": "",
     "paper_url": "",
     "demo_url": "",
-    "stars": 59,
+    "stars": 83,
     "tags": [
       "Agent Auditability",
       "Agent Reliability",
@@ -54,7 +54,7 @@
       "Resources",
       "Benchmarks"
     ],
-    "last_updated_at": "2026-08-11T15:43:11Z"
+    "last_updated_at": "2026-08-13T04:48:36Z"
   },
   {
     "name": "AD-AGENT",
@@ -176,7 +176,7 @@
     "docs_url": "",
     "paper_url": "",
     "demo_url": "",
-    "stars": 1609,
+    "stars": 1610,
     "tags": [
       "Writing",
       "Research Workflow",
@@ -194,7 +194,7 @@
     "docs_url": "https://suod.readthedocs.io",
     "paper_url": "https://proceedings.mlsys.org/paper_files/paper/2021/hash/da9d70f7f98f0f660f24f6f3d9e7b0f1-Abstract.html",
     "demo_url": "",
-    "stars": 394,
+    "stars": 393,
     "tags": [
       "Anomaly Detection",
       "Acceleration",
@@ -303,7 +303,7 @@
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/agent-audit.html",
     "paper_url": "https://arxiv.org/abs/2603.22853",
     "demo_url": "https://pypi.org/project/agent-audit/",
-    "stars": 211,
+    "stars": 213,
     "tags": [
       "AI Agent Security",
       "Security Audit",
@@ -330,7 +330,7 @@
       "Audit Trail",
       "Human-in-the-Loop"
     ],
-    "last_updated_at": "2026-08-11T22:09:21Z"
+    "last_updated_at": "2026-08-14T05:17:33Z"
   },
   {
     "name": "combo",
@@ -341,7 +341,7 @@
     "docs_url": "https://pycombo.readthedocs.io",
     "paper_url": "https://aaai.org/papers/13648-combining-machine-learning-models-using-combo-library/",
     "demo_url": "",
-    "stars": 662,
+    "stars": 661,
     "tags": [
       "Ensemble Learning",
       "Model Combination",
@@ -359,7 +359,7 @@
     "docs_url": "https://anywhere-agents.readthedocs.io",
     "paper_url": "",
     "demo_url": "",
-    "stars": 215,
+    "stars": 217,
     "tags": [
       "Claude Code",
       "Codex",
@@ -368,7 +368,7 @@
       "Configuration",
       "MCP"
     ],
-    "last_updated_at": "2026-08-10T19:14:09Z"
+    "last_updated_at": "2026-08-14T01:14:11Z"
   },
   {
     "name": "agent-style",
@@ -379,7 +379,7 @@
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/agent-style.html",
     "paper_url": "",
     "demo_url": "https://pypi.org/project/agent-style/",
-    "stars": 618,
+    "stars": 625,
     "tags": [
       "AI Agents",
       "Agent Configuration",
@@ -388,6 +388,6 @@
       "Claude Code",
       "Codex"
     ],
-    "last_updated_at": "2026-08-12T07:40:58Z"
+    "last_updated_at": "2026-08-14T03:43:53Z"
   }
 ]
