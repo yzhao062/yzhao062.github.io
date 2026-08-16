@@ -782,7 +782,7 @@
           var starText = stars !== null ? (" | " + stars + "+ stars") : "";
           var repoUrl = String(project.repo_url || "");
           var ghMatch = repoUrl.match(/^https?:\/\/github\.com\/([^\/]+)\/([^\/#?]+)\/?$/i);
-          var starUrl = ghMatch ? ("https://github.com/" + ghMatch[1] + "/" + ghMatch[2] + "/stargazers") : "";
+          var starUrl = ghMatch ? ("https://github.com/" + ghMatch[1] + "/" + ghMatch[2]) : "";
           var role = String(project.role || "Contributor");
           var roleLower = role.toLowerCase();
           var roleClass = "role-contributor";
