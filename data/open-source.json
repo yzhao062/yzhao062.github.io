@@ -8,7 +8,7 @@
     "docs_url": "https://pyod.readthedocs.io",
     "paper_url": "https://arxiv.org/abs/2412.12154",
     "demo_url": "",
-    "stars": 9959,
+    "stars": 9960,
     "tags": [
       "Anomaly Detection",
       "Outlier Detection",
@@ -16,7 +16,7 @@
       "Machine Learning",
       "PyTorch"
     ],
-    "last_updated_at": "2026-08-02T12:42:17Z"
+    "last_updated_at": "2026-08-17T04:36:26Z"
   },
   {
     "name": "auditable",
@@ -27,7 +27,7 @@
     "docs_url": "https://auditable-ai.readthedocs.io/",
     "paper_url": "https://arxiv.org/abs/2606.22741",
     "demo_url": "https://pypi.org/project/auditable/",
-    "stars": 20,
+    "stars": 21,
     "tags": [
       "Agent Auditability",
       "Decision Replay",
@@ -46,7 +46,7 @@
     "docs_url": "",
     "paper_url": "",
     "demo_url": "",
-    "stars": 83,
+    "stars": 95,
     "tags": [
       "Agent Auditability",
       "Agent Reliability",
@@ -54,7 +54,7 @@
       "Resources",
       "Benchmarks"
     ],
-    "last_updated_at": "2026-08-13T04:48:36Z"
+    "last_updated_at": "2026-08-17T08:06:14Z"
   },
   {
     "name": "AD-AGENT",
@@ -176,7 +176,7 @@
     "docs_url": "",
     "paper_url": "",
     "demo_url": "",
-    "stars": 1610,
+    "stars": 1609,
     "tags": [
       "Writing",
       "Research Workflow",
@@ -212,7 +212,7 @@
     "docs_url": "https://docs.pygod.org",
     "paper_url": "http://jmlr.org/papers/v25/23-0963.html",
     "demo_url": "",
-    "stars": 1497,
+    "stars": 1498,
     "tags": [
       "Graph Anomaly Detection",
       "PyTorch Geometric",
@@ -230,7 +230,7 @@
     "docs_url": "http://tods-doc.github.io",
     "paper_url": "https://arxiv.org/abs/2009.09822",
     "demo_url": "",
-    "stars": 1663,
+    "stars": 1666,
     "tags": [
       "Time Series",
       "Anomaly Detection",
@@ -248,7 +248,7 @@
     "docs_url": "https://tdcommons.ai",
     "paper_url": "https://proceedings.neurips.cc/paper/2021/hash/6a8d3b0f5987e0f6d3d2f5f65f02e3cc-Abstract.html",
     "demo_url": "",
-    "stars": 1272,
+    "stars": 1273,
     "tags": [
       "Therapeutics",
       "Benchmark",
@@ -303,7 +303,7 @@
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/agent-audit.html",
     "paper_url": "https://arxiv.org/abs/2603.22853",
     "demo_url": "https://pypi.org/project/agent-audit/",
-    "stars": 213,
+    "stars": 218,
     "tags": [
       "AI Agent Security",
       "Security Audit",
@@ -322,7 +322,7 @@
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/aegis.html",
     "paper_url": "https://arxiv.org/abs/2603.12621",
     "demo_url": "https://github.com/Justin0504/Aegis/blob/main/docs/images/readme_demo1.gif",
-    "stars": 343,
+    "stars": 330,
     "tags": [
       "AI Agent Security",
       "Policy Enforcement",
@@ -330,7 +330,7 @@
       "Audit Trail",
       "Human-in-the-Loop"
     ],
-    "last_updated_at": "2026-08-14T05:17:33Z"
+    "last_updated_at": "2026-08-15T09:24:12Z"
   },
   {
     "name": "combo",
@@ -359,7 +359,7 @@
     "docs_url": "https://anywhere-agents.readthedocs.io",
     "paper_url": "",
     "demo_url": "",
-    "stars": 217,
+    "stars": 219,
     "tags": [
       "Claude Code",
       "Codex",
@@ -368,7 +368,7 @@
       "Configuration",
       "MCP"
     ],
-    "last_updated_at": "2026-08-14T01:14:11Z"
+    "last_updated_at": "2026-08-16T07:10:20Z"
   },
   {
     "name": "agent-style",
@@ -379,7 +379,7 @@
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/agent-style.html",
     "paper_url": "",
     "demo_url": "https://pypi.org/project/agent-style/",
-    "stars": 625,
+    "stars": 630,
     "tags": [
       "AI Agents",
       "Agent Configuration",
@@ -388,6 +388,6 @@
       "Claude Code",
       "Codex"
     ],
-    "last_updated_at": "2026-08-14T03:43:53Z"
+    "last_updated_at": "2026-08-16T16:52:52Z"
   }
 ]
