@@ -46,3 +46,6 @@ agent-config.local.yaml
 # (must be todo/*, not todo/ -- git cannot re-include a file under an excluded directory)
 todo/*
 !todo/README.md
+/AGENTS.md
+/CLAUDE.md
+/agents/codex.md
