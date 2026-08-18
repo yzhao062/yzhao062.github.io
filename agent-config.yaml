@@ -1,4 +1,4 @@
-rule_packs:
+packs:
 - name: acad-skills
   source:
     url: https://github.com/yzhao062/agent-pack
