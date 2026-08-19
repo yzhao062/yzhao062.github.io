@@ -8,7 +8,7 @@
     "docs_url": "https://pyod.readthedocs.io",
     "paper_url": "https://arxiv.org/abs/2412.12154",
     "demo_url": "",
-    "stars": 9960,
+    "stars": 9972,
     "tags": [
       "Anomaly Detection",
       "Outlier Detection",
@@ -16,7 +16,7 @@
       "Machine Learning",
       "PyTorch"
     ],
-    "last_updated_at": "2026-08-17T04:36:26Z"
+    "last_updated_at": "2026-08-19T03:12:27Z"
   },
   {
     "name": "auditable",
@@ -46,7 +46,7 @@
     "docs_url": "",
     "paper_url": "",
     "demo_url": "",
-    "stars": 95,
+    "stars": 98,
     "tags": [
       "Agent Auditability",
       "Agent Reliability",
@@ -54,7 +54,7 @@
       "Resources",
       "Benchmarks"
     ],
-    "last_updated_at": "2026-08-17T08:06:14Z"
+    "last_updated_at": "2026-08-17T19:38:55Z"
   },
   {
     "name": "AD-AGENT",
@@ -65,7 +65,7 @@
     "docs_url": "https://usc-fortis.github.io/AD-AGENT/",
     "paper_url": "https://arxiv.org/abs/2505.12594",
     "demo_url": "",
-    "stars": 101,
+    "stars": 102,
     "tags": [
       "LLM Agents",
       "Anomaly Detection",
@@ -101,7 +101,7 @@
     "docs_url": "https://trusteval-docs.readthedocs.io",
     "paper_url": "https://arxiv.org/abs/2502.14296",
     "demo_url": "",
-    "stars": 133,
+    "stars": 134,
     "tags": [
       "Trustworthy AI",
       "LLM Evaluation",
@@ -176,7 +176,7 @@
     "docs_url": "",
     "paper_url": "",
     "demo_url": "",
-    "stars": 1609,
+    "stars": 1611,
     "tags": [
       "Writing",
       "Research Workflow",
@@ -248,7 +248,7 @@
     "docs_url": "https://tdcommons.ai",
     "paper_url": "https://proceedings.neurips.cc/paper/2021/hash/6a8d3b0f5987e0f6d3d2f5f65f02e3cc-Abstract.html",
     "demo_url": "",
-    "stars": 1273,
+    "stars": 1274,
     "tags": [
       "Therapeutics",
       "Benchmark",
@@ -303,7 +303,7 @@
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/agent-audit.html",
     "paper_url": "https://arxiv.org/abs/2603.22853",
     "demo_url": "https://pypi.org/project/agent-audit/",
-    "stars": 218,
+    "stars": 219,
     "tags": [
       "AI Agent Security",
       "Security Audit",
@@ -322,7 +322,7 @@
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/aegis.html",
     "paper_url": "https://arxiv.org/abs/2603.12621",
     "demo_url": "https://github.com/Justin0504/Aegis/blob/main/docs/images/readme_demo1.gif",
-    "stars": 330,
+    "stars": 331,
     "tags": [
       "AI Agent Security",
       "Policy Enforcement",
@@ -359,7 +359,7 @@
     "docs_url": "https://anywhere-agents.readthedocs.io",
     "paper_url": "",
     "demo_url": "",
-    "stars": 219,
+    "stars": 220,
     "tags": [
       "Claude Code",
       "Codex",
@@ -368,7 +368,7 @@
       "Configuration",
       "MCP"
     ],
-    "last_updated_at": "2026-08-16T07:10:20Z"
+    "last_updated_at": "2026-08-19T01:47:59Z"
   },
   {
     "name": "agent-style",
@@ -379,7 +379,7 @@
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/agent-style.html",
     "paper_url": "",
     "demo_url": "https://pypi.org/project/agent-style/",
-    "stars": 630,
+    "stars": 634,
     "tags": [
       "AI Agents",
       "Agent Configuration",
