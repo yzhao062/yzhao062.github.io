@@ -1508,9 +1508,9 @@
   {
     "id": "preprint-implicit-execution-tracing",
     "section": "preprint",
-    "title": "When Only the Final Text Survives: Implicit Execution Tracing for Multi-Agent Attribution",
+    "title": "When Only the Final Text Survives: Implicit Execution Tracing for Multi-Agent Auditing",
     "paper_url": "https://arxiv.org/abs/2603.17445",
-    "authors": "Yi Nian, Haosen Cao, Shenzhe Zhu, Henry Peng Zou, Qingqing Luan, Yue Zhao",
+    "authors": "Yi Nian, Haosen Cao, Shenzhe Zhu, Henry Peng Zou, Qingqing Luan, Yudi Zhang, Yue Zhao",
     "venue": "arXiv preprint",
     "year": 2026,
     "links": [],
