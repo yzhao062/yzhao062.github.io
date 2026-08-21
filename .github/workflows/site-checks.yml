@@ -26,10 +26,27 @@ jobs:
         with:
           python-version: "3.11"
 
+      - name: Regenerate prerendered pages
+        run: python scripts/prerender_pages.py
+
       - name: Verify committed prerendered HTML matches the JSON sources
+        run: git diff --exit-code -- publications.html lab.html index.html
+
+      # sitemap.xml is excluded from the check above on purpose. refresh_sitemap
+      # sets each lastmod from that page's git committer date, so the date a page
+      # edit implies does not exist until the edit is committed. The commit that
+      # rewrites lab.html can never carry the matching sitemap entry, which turned
+      # d1901f9 red and forced the follow-up df33088 before it. Report the pending
+      # bump instead of failing; the next local prerender run picks it up.
+      - name: Report pending sitemap lastmod updates
+        if: always()
         run: |
-          python scripts/prerender_pages.py
-          git diff --exit-code -- publications.html lab.html index.html sitemap.xml
+          if git diff --quiet -- sitemap.xml; then
+            echo "sitemap.xml is current."
+          else
+            echo "::notice::sitemap.xml has pending lastmod updates; they land on the next commit that runs prerender_pages.py."
+            git diff -- sitemap.xml
+          fi
 
       - name: Run static site checks
         env:
