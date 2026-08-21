@@ -340,7 +340,9 @@
     "research": "Agent Safety / LLM Reasoning / World Models / Neuroscience",
     "email": "aojieyua@usc.edu",
     "publications": [
-      "WeClawArena: An Auditable Sandbox and Benchmark for Cross-User Agents Collaboration and Security, EMNLP Findings 2026"
+      "WeClawArena: An Auditable Sandbox and Benchmark for Cross-User Agents Collaboration and Security, EMNLP Findings 2026",
+      "Auditable Agents, ACM AI Leadership Summit 2026",
+      "SEVA: Self-Evolving Verification Agent with Process Reward for Fact Attribution, ICML AI4GOOD/FAGEN Workshops 2026"
     ]
   }
 ]
