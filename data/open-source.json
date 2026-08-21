@@ -8,7 +8,7 @@
     "docs_url": "https://pyod.readthedocs.io",
     "paper_url": "https://arxiv.org/abs/2412.12154",
     "demo_url": "",
-    "stars": 9973,
+    "stars": 9971,
     "tags": [
       "Anomaly Detection",
       "Outlier Detection",
@@ -212,7 +212,7 @@
     "docs_url": "https://docs.pygod.org",
     "paper_url": "http://jmlr.org/papers/v25/23-0963.html",
     "demo_url": "",
-    "stars": 1498,
+    "stars": 1496,
     "tags": [
       "Graph Anomaly Detection",
       "PyTorch Geometric",
@@ -303,7 +303,7 @@
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/agent-audit.html",
     "paper_url": "https://arxiv.org/abs/2603.22853",
     "demo_url": "https://pypi.org/project/agent-audit/",
-    "stars": 222,
+    "stars": 223,
     "tags": [
       "AI Agent Security",
       "Security Audit",
@@ -330,7 +330,7 @@
       "Audit Trail",
       "Human-in-the-Loop"
     ],
-    "last_updated_at": "2026-08-15T09:24:12Z"
+    "last_updated_at": "2026-08-21T00:30:30Z"
   },
   {
     "name": "combo",
@@ -379,7 +379,7 @@
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/agent-style.html",
     "paper_url": "",
     "demo_url": "https://pypi.org/project/agent-style/",
-    "stars": 637,
+    "stars": 638,
     "tags": [
       "AI Agents",
       "Agent Configuration",
