@@ -21,7 +21,10 @@
     "alt": "Zelong Xu",
     "research": "Preference Optimization / LLM Safety Alignment",
     "status_text": "Undergraduate Researcher (UW–Madison)",
-    "email": "zxu684@wisc.edu"
+    "email": "zxu684@wisc.edu",
+    "publications": [
+      "DOG-DPO: Dynamic Optimization in Geometry for Safety Alignment, EMNLP Findings 2026"
+    ]
   },
   {
     "group": "current",
@@ -84,6 +87,7 @@
       "USC Provost Research Fellowship"
     ],
     "publications": [
+      "FinanceLLM: A Survey of Large Language Models in Finance, EMNLP Findings 2026",
       "Navigating Between Explainability and Extractability in Machine Learning as a Service, IEEE ICDM BlueSky Track, 2025, Second Prize CCC Award."
     ]
   },
@@ -147,6 +151,7 @@
     "status_text": "Master Student",
     "email": "haiyuez@usc.edu",
     "publications": [
+      "WeClawArena: An Auditable Sandbox and Benchmark for Cross-User Agents Collaboration and Security, EMNLP Findings 2026",
       "Auditable Agents, ACM AI Leadership Summit 2026",
       "SEVA: Self-Evolving Verification Agent with Process Reward for Fact Attribution, ICML AI4GOOD/FAGEN Workshops 2026"
     ]
@@ -333,6 +338,9 @@
     "alt": "Aojie Yuan",
     "status_text": "Master Student",
     "research": "Agent Safety / LLM Reasoning / World Models / Neuroscience",
-    "email": "aojieyua@usc.edu"
+    "email": "aojieyua@usc.edu",
+    "publications": [
+      "WeClawArena: An Auditable Sandbox and Benchmark for Cross-User Agents Collaboration and Security, EMNLP Findings 2026"
+    ]
   }
 ]

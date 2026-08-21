@@ -26,7 +26,8 @@ LAB_PAGE = ROOT / "lab.html"
 INDEX_PAGE = ROOT / "index.html"
 BIO_PATH = ROOT / "files" / "bio.txt"
 
-PUBLICATION_FIELDS = ("title", "authors", "venue", "year", "paper_url")
+PUBLICATION_FIELDS = ("title", "authors", "venue", "year")
+# paper_url is optional: a paper can be accepted before any public link exists.
 VENUE_DATE_RULES = (
     (re.compile(r"neurips|mti-llm|responsiblefm", re.IGNORECASE), 12, 1),
     (
@@ -170,7 +171,7 @@ def render_publication(item: Mapping[str, Any]) -> str:
 
     publication_id = escaped(item.get("id") or item["title"])
     title = escaped(item["title"])
-    paper_url = escaped(item["paper_url"])
+    paper_url = escaped(str(item.get("paper_url") or ""))
     authors = format_authors(str(item["authors"]))
     venue = format_venue_and_year(str(item["venue"]), publication_year(item))
 
@@ -181,6 +182,8 @@ def render_publication(item: Mapping[str, Any]) -> str:
             (
                 f'    <strong><a itemprop="url" href="{paper_url}">'
                 f'<span itemprop="name">{title}</span></a></strong>.<br>'
+                if paper_url
+                else f'    <strong><span itemprop="name">{title}</span></strong>.<br>'
             ),
             f'    <span itemprop="author">{authors}</span><br>',
             f'    <span itemprop="isPartOf">{venue}</span>',
