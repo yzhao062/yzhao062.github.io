@@ -104,7 +104,7 @@
         <!-- ── THE auditable STACK ── -->
         <h2 style="color:#990000;">The <code>auditable</code> Stack</h2>
         <p style="color:#555; font-size:0.95rem; margin-bottom:14px;">
-          Three open artifacts form the agent action arm of the ecosystem: the GRADE method, the
+          Three open artifacts form the auditing-of-action arm of the ecosystem: the GRADE method, the
           production-grade <code>auditable</code> tool, and the <code>awesome-auditable-ai</code> knowledge
           base. FORTIS appears below as the pre-deployment benchmark in the lifecycle view.
         </p>
@@ -219,51 +219,53 @@
 
         <hr>
 
-        <!-- ── THREE-LEVEL RESEARCH FRAMING ── -->
-        <h2 style="color:#990000;">The Three Levels of Auditable AI Systems</h2>
+        <!-- ── THREE-POINT RESEARCH FRAMING ── -->
+        <h2 style="color:#990000;">The Three Points of AI Assurance</h2>
         <p style="color:#555; font-size:0.95rem; margin-bottom:12px;">
-          One question runs through the lab, asked at three levels: did this depart from what was expected,
-          and can anyone still tell? A departure can start at any level and can travel: an unfamiliar input
-          can surface as a model failure, and a model failure can surface as an action nobody authorized.
-          Neither step is guaranteed, and an action can go wrong with no model failure behind it. The list
-          below runs the other way, from the consequence a person feels back toward where it may have
-          started. Evidence has to survive the levels an incident touches, or the trail stops short of the
+          One question runs through the lab, asked at three points: did this depart from what was expected,
+          and can anyone still tell? The list below runs in the order failures travel. An input the system
+          was never built for can surface as a model failure, and a model failure can surface as an action
+          nobody authorized. Neither step is guaranteed, and an action can go wrong with no model failure
+          behind it. Evidence has to survive the points an incident touches, or the trail stops short of the
           origin.
         </p>
 
         <ol style="font-size:0.95rem; line-height:1.7; color:#333;">
           <li style="margin-bottom:12px;">
-            <strong style="color:#990000;">Agent Action: Auditability and Control of Agent Systems</strong><br>
+            <strong style="color:#990000;">Detection in Data: Anomaly, Outlier, and Out-of-Distribution Detection</strong><br>
             <span style="color:#555;">
-              Auditability frameworks, runtime control surfaces, and agent-specific failure modes (over-privilege,
-              cross-user contamination). The current frontier is turning this research into deployable
-              open-source infrastructure that audits agents from before deployment to after a run. See the
-              PRE / LIVE / POST grid above.
-            </span>
-          </li>
-          <li style="margin-bottom:12px;">
-            <strong style="color:#990000;">Model Behavior: Trust and Robustness of Foundation Models</strong><br>
-            <span style="color:#555;">
-              Behavior under attack, hallucination of fact and reasoning, and adversarial robustness of
-              retrieval. Failures on any of these surfaces can propagate downstream when the model's output
-              is passed to an agent or a user-facing system. Work covers jailbreak detection for
-              vision-language models, causal analysis
-              of hallucination, query-agnostic attacks on RAG, and LLM-as-anomaly-detector benchmarks.
-            </span>
-          </li>
-          <li style="margin-bottom:12px;">
-            <strong style="color:#990000;">Input Distribution: Anomaly and Out-of-Distribution Detection</strong><br>
-            <span style="color:#555;">
-              At the input distribution level, the question is whether an input departed from the conditions
-              represented during development and evaluation. That boundary is hard to estimate when labels or
+              The question here is whether an input departed from the conditions represented during
+              development and evaluation. Anomaly detection and outlier detection ask which records depart
+              from the rest when nothing labels them; out-of-distribution detection asks whether the input
+              belongs to the training distribution at all. That boundary is hard to estimate when labels or
               representative examples are sparse. This is the program's methodological and open-source base,
               built through the <a href="pyod.html"><strong>PyOD</strong></a> ecosystem. PyOD is the canonical
               open-source anomaly-detection library: 55M+ downloads, named by OpenAI, used in Amazon and
               European Space Agency anomaly-detection work, and listed by the U.S. DoD CDAO. It is now in its
               third major release. When an incident involves distribution shift, these methods supply the
-              evidence for whether unfamiliar input conditions contributed to it; an action-only incident is
-              established from evidence at the agent action level instead. Current research emphasis sits at model behavior
-              and agent action.
+              evidence for whether unfamiliar input conditions contributed to it.
+            </span>
+          </li>
+          <li style="margin-bottom:12px;">
+            <strong style="color:#990000;">Verification of Output: LLM Evaluation, Hallucination, Jailbreaks, and Guardrails</strong><br>
+            <span style="color:#555;">
+              Behavior under attack, hallucination of fact and reasoning, and adversarial robustness of
+              retrieval. LLM evaluation is routine when a reference answer exists and is the whole problem
+              when none does. Failures on any of these surfaces can propagate downstream when the model's
+              output is passed to an agent or a user-facing system. Work covers LLM jailbreak detection for
+              vision-language models, causal analysis of hallucination, query-agnostic attacks on RAG, and
+              LLM-as-anomaly-detector benchmarks.
+            </span>
+          </li>
+          <li style="margin-bottom:12px;">
+            <strong style="color:#990000;">Auditing of Action: AI Agent Security, Audit Trails, and MCP Security</strong><br>
+            <span style="color:#555;">
+              Auditability frameworks, tool-call security and MCP security surfaces, and agent-specific
+              failure modes such as over-privilege, which OWASP names Excessive Agency, and cross-user
+              contamination. An action-only incident is established from evidence at this point rather than
+              from the two above it. The current frontier is turning this research into deployable
+              open-source infrastructure that audits agents from before deployment to after a run. See the
+              PRE / LIVE / POST grid above.
             </span>
           </li>
         </ol>
