@@ -78,7 +78,12 @@
     "year": 2026,
     "sort_date": "2026-07-02",
     "sort_priority": 2,
-    "links": [],
+    "links": [
+      {
+        "type": "github",
+        "url": "https://github.com/rux001/CoAct"
+      }
+    ],
     "badges": [
       {
         "text": "Oral Presentation",
@@ -184,7 +189,12 @@
     "year": 2026,
     "sort_date": "2026-07-02",
     "sort_priority": 1,
-    "links": [],
+    "links": [
+      {
+        "type": "github",
+        "url": "https://github.com/llll121/mama-eval"
+      }
+    ],
     "abstract": "Graph topology is a fundamental determinant of memory leakage in multi-agent LLM systems, yet its effects remain poorly quantified. We introduce MAMA (Multi-Agent Memory Attack), a framework that measures how network structure shapes leakage. MAMA operates on synthetic documents containing labeled Personally Identifiable Information (PII) entities, from which we generate sanitized task instructions. We execute a two-phase protocol: Engram (seeding private information into a target agent's memory) and Resonance (multi-round interaction where an attacker attempts extraction). Over 10 rounds, we measure leakage as exact-match recovery of ground-truth PII from attacker outputs. We evaluate six canonical topologies (complete, ring, chain, tree, star, star-ring) across $n\\in\\{4,5,6\\}$, attacker-target placements, and base models. Results are consistent: denser connectivity, shorter attacker-target distance, and higher target centrality increase leakage; most leakage occurs in early rounds and then plateaus; model choice shifts absolute rates but preserves topology ordering; spatiotemporal/location attributes leak more readily than identity credentials or regulated identifiers. We distill practical guidance for system design: favor sparse or hierarchical connectivity, maximize attacker-target separation, and restrict hub/shortcut pathways via topology-aware access control."
   },
   {
@@ -212,7 +222,7 @@
     "section": "workshop",
     "title": "A Personalized Conversational Benchmark: Towards Simulating Personalized Conversations",
     "paper_url": "https://arxiv.org/abs/2505.14106",
-    "authors": "Shawn Li, Peilin Cai, Ryan A. Rossi, Franck Dernoncourt, Branislav Kveton, Junda Wu, Tong Yu, Lixin Song, Tiankai Yang, Yuehan Qin, Nesreen K. Ahmed, Samyadeep Basu, Subhojyoti Mukherjee, Ruiyi Zhang, Yuxiao Zhou, Zichao Wang, Yue Huang, Yu Wang, Xiangliang Zhang, Philip S. Yu, Xiyang Hu, Yue Zhao.",
+    "authors": "Li Li, Peilin Cai, Ryan A. Rossi, Franck Dernoncourt, Branislav Kveton, Junda Wu, Tong Yu, Lixin Song, Tiankai Yang, Yuehan Qin, Nesreen K. Ahmed, Samyadeep Basu, Subhojyoti Mukherjee, Ruiyi Zhang, Yuxiao Zhou, Zichao Wang, Yue Huang, Yu Wang, Xiangliang Zhang, Philip S. Yu, Xiyang Hu, Yue Zhao.",
     "venue": "NeurIPS Workshop on Multi-Turn Interactions in Large Language Models (MTI-LLM), 2025",
     "year": 2025,
     "links": [
@@ -1175,7 +1185,12 @@
     "authors": "Prince Zizhuang Wang, Aojie Yuan, Haiyue Zhang, Xiyang Hu, Yue Zhao, and Shuli Jiang",
     "venue": "EMNLP Findings, 2026",
     "year": 2026,
-    "links": [],
+    "links": [
+      {
+        "type": "github",
+        "url": "https://github.com/kingofspace0wzz/WeClawArena"
+      }
+    ],
     "abstract": "Recent advances in persistent personal-agent frameworks are making human-centered agent networks realistic deployment targets: each user can be served by an AI agent that acts on the user's behalf, maintains state, and communicates with other agents through social and task relations. In these networks, everyday tool use becomes multi-party owned-agent collaboration over personal workspaces, where files, records, tools, and policies are not directly visible across owners. Existing agent benchmarks study tool use and collaboration, but they do not provide an end-to-end sandbox for verifiable cross-user agent collaboration with realistic user digital workspaces or test how harmful actions can travel through the human-centered agent network. We introduce WeClawArena, an auditable benchmark and runtime sandbox for multi-party owned-agent collaboration over personal workspaces. WeClawArena targets collaborative tool-use tasks in which personal workspaces serve as both operational tools and personal constraints. The benchmark contains 124 base tasks across six cross-user task domains and expands them into 620 scenario variants, with one benign control and four attack-vector variants per base task. The sandbox records peer messages, tool calls, resource operations, governed decisions, and final workspace states. WeClawArena reports utility and attack success rate separately and audits attack success from bounded runtime evidence, supporting diagnosis of task breakdown, privacy leakage, poisoned evidence, and invalid authority paths.",
     "sort_date": "2026-10-24"
   },
@@ -1220,7 +1235,12 @@
     "authors": "Yue Huang, Wenjie Wang, Han Bao, Yuchen Ma, Xiaonan Luo, Yi Nian, Haomin Zhuang, Zheyuan Liu, Yue Zhao, Xiangliang Zhang",
     "venue": "arXiv preprint",
     "year": 2026,
-    "links": [],
+    "links": [
+      {
+        "type": "github",
+        "url": "https://github.com/HowieHwong/MemoHarness"
+      }
+    ],
     "abstract": "An agent harness is the external control layer that turns a base LLM into an executable agent by managing context, tools, orchestration, memory, decoding, and output handling. While harness design strongly affects agent behavior, most automatic improvement methods optimize narrower artifacts such as prompts, pipelines, or workflows, and deployed agents usually reuse a single global harness for all cases. We introduce MemoHarness, an adaptive harness optimization framework that learns from its own executions. MemoHarness decomposes the harness into six editable control dimensions, stores per-case diagnoses and distilled global patterns in a dual-layer experience bank, and adapts the learned harness to each test case using retrieved experience without test-time labels, feedback, or additional search. In our evaluation across shell-agent, code-generation, and analytical-reasoning benchmarks, MemoHarness improves over the fixed harnesses we compare against and shows selective transfer to unseen suites and base models. Its additional context can also remain cost-competitive when much of the retrieved experience is cacheable. These results provide evidence that execution experience is a practical substrate for building agent harnesses that are more adaptive than a single static configuration, while leaving broader claims about statistical robustness and component attribution to future work."
   },
   {
@@ -1278,7 +1298,12 @@
     "authors": "Wenjie Wang, Yue Huang, Zhengqing Yuan, Han Bao, Shiyi Du, Yuchen Ma, Yue Zhao, Yanfang Ye, Xiangliang Zhang",
     "venue": "EMNLP, 2026",
     "year": 2026,
-    "links": [],
+    "links": [
+      {
+        "type": "github",
+        "url": "https://github.com/Jackwwj619/SpecAlign"
+      }
+    ],
     "abstract": "As large language models (LLMs) are increasingly deployed in real-world applications, alignment is no longer governed by a single universal notion of safety or helpfulness, but instead by provider- or application-specific model specifications. These specifications are typically long, structured, and frequently updated, yet existing alignment pipelines lack a systematic mechanism to operationalize them as training signals. In this paper, we propose specification-grounded alignment, a new alignment paradigm that treats provider-authored model specifications as the primary alignment target rather than abstract principles or static benchmarks. To instantiate this paradigm, we introduce SpecAlign, a framework that synthesizes alignment data directly from specification documents. SpecAlign combines structured rule annotation, controllable specification instantiation, and multi-agent adversarial data synthesis to generate fine-grained, boundary-aware preference pairs that capture both compliant behaviors and meaningful specification violations. Experiments across multiple model specifications and backbone models demonstrate that training with SpecAlign consistently improves rule compliance while preserving general capabilities and avoiding over-conservative behavior. These results suggest that grounding alignment in explicit model specifications enables rapid, precise, and scalable adaptation of LLM behavior to evolving policy requirements.",
     "sort_date": "2026-10-24"
   },
@@ -1303,7 +1328,12 @@
     "authors": "Yingzi Ma, Zhengyue Zhao, Xiaogeng Liu, Minhui Xue, Yue Zhao, Chaowei Xiao",
     "venue": "arXiv preprint",
     "year": 2026,
-    "links": [],
+    "links": [
+      {
+        "type": "github",
+        "url": "https://github.com/SaFo-Lab/MaskForge"
+      }
+    ],
     "abstract": "Diffusion large language models (dLLMs) generate text by iteratively denoising partially masked sequences under bidirectional context, exposing a safety surface distinct from autoregressive LLMs. Because mask tokens are native inputs and tokens are committed by confidence rather than position, harmful content can be induced through infilling and outside the monitored prefix. Existing jailbreaks either miss this native infill capability or rely on low-diversity mask-bearing templates applied uniformly across goals, with little structural adaptation or accumulated attack experience. We propose MaskForge, a fully black-box adaptive attack that casts dLLM red-teaming as optimized search over a growing library of structural patterns. MaskForge abstracts successful attempts into reusable schemas, selects goal-compatible patterns with a UCB bandit, and invokes a scorer-guided fallback when the current library fails. Successful attempts are distilled back into the pattern library, enabling experience to accumulate across goals. Across five public dLLMs and three benchmarks, MaskForge achieves an average attack success rate of 79.3%, a 17.6% relative improvement over the strongest competing dLLM baseline. The matured pattern library further transfers to AdvBench without any updates, achieving a 88.2% attack success rate and a 67% relative improvement over the strongest competing baseline."
   },
   {
@@ -1325,7 +1355,12 @@
     "authors": "Ojas Nimase, Jiate Li, Yue Zhao, Yushun Dong",
     "venue": "arXiv preprint",
     "year": 2026,
-    "links": [],
+    "links": [
+      {
+        "type": "github",
+        "url": "https://github.com/LabRAI/XSTEAL/"
+      }
+    ],
     "abstract": "Graph Machine Learning as a Service (GMLaaS) platforms increasingly implement explainability interfaces to meet regulatory transparency requirements. However, this transparency creates exploitable vulnerabilities for model extraction attacks. We present the first model extraction attack specifically designed for graph classification under strict black-box constraints where the attacker observes only discrete class labels and binary explanation masks (no probability scores, gradients, or confidence values). Our method (1) uses model explanation outputs to guide Monte Carlo edge sensitivity estimation toward decision boundaries, with Hoeffding concentration guarantees on estimation accuracy and (2) exploits explanation subgraphs to efficiently narrow the boundary search space. Extensive experiments on benchmark graph datasets across multiple domains demonstrate our method's superiority over comparable baselines. These findings demonstrate that such explainability interfaces create exploitable attack surfaces, informing both defensive mechanisms and policy frameworks for explainable AI mandates."
   },
   {
@@ -1336,7 +1371,12 @@
     "authors": "Ojas Nimase, Zhe Chen, Gengpei Qi, Yue Zhao, Xiyang Hu",
     "venue": "arXiv preprint",
     "year": 2026,
-    "links": [],
+    "links": [
+      {
+        "type": "github",
+        "url": "https://github.com/glad-lab/geobench"
+      }
+    ],
     "abstract": "Large language models (LLMs) increasingly rank products, documents, and recommendations for user queries, which makes manipulating these rankings a growing concern for fairness and information integrity. Research on generative engine optimization (GEO) has produced many manipulation methods, but each is evaluated on its own dataset with its own metrics, so their relative strength and detectability stay unclear. We present GEO-Bench, a benchmark that evaluates GEO ranking-manipulation attacks under one protocol. It unifies black-box prompt-based attacks (TAP, Zero-Shot), white-box gradient-based attacks (STS, RAF, StealthRank), and ten white-hat C-SEO strategies. We score every method on five datasets against a fixed open-weight ranker (Llama-3.1-8B-Instruct), using metrics for both effectiveness (NRG, Success@{\\alpha}, Promote@{\\alpha}) and stealth (keyword violation rate, perplexity ratio). Our evaluation shows that effectiveness and stealth trade off across adversarial attacks, that black-box content rewriting matches or exceeds gradient-based attacks on rank promotion while producing more fluent text and can evade both keyword- and perplexity-based detection on some domains, and that the access model does not predict attack strength. By standardizing datasets, attack implementations, and metrics, GEO-Bench enables the first direct comparison across these attack paradigms and supports the development of detection methods."
   },
   {
@@ -1367,7 +1407,12 @@
     "authors": "Shawn Li, Chenxiao Yu, Han Wang, Wei Yang, Ryan Rossi, Franck Dernoncourt, Xiyang Hu, Philip Yu, Chaowei Xiao, Huan Zhang, Yue Zhao",
     "venue": "arXiv preprint",
     "year": 2026,
-    "links": [],
+    "links": [
+      {
+        "type": "github",
+        "url": "https://github.com/lili0415/FORTIS-Benchmark"
+      }
+    ],
     "abstract": "Large language model agents increasingly operate through an intermediate skill layer that mediates between user intent and concrete task execution. This layer is widely treated as an organizational abstraction, but we argue it is also a privilege boundary that current models routinely exceed. We present FORTIS, a benchmark that evaluates over-privilege in agent skills across two stages: whether a model selects the minimally sufficient skill from a large overlapping library, and whether it executes that skill without expanding into broader tools or actions than the skill permits. Across ten frontier models and three domains, we find that over-privileged behavior is the norm rather than the exception. Models consistently reach for higher-privilege skills and tools than the task requires, failing at both stages at rates that remain high even for the strongest available models. Failure is especially severe under the ordinary conditions of real user interaction: incomplete specification, convenience framing, and proximity to skill boundaries. None of these requires adversarial construction. The results indicate that the skill layer, far from containing agent behavior, is itself a primary source of privilege escalation in current systems."
   },
   {
@@ -1378,7 +1423,12 @@
     "authors": "Yicheng Gao, Xiaolin Zhou, Yahan Li, Yue Zhao, Ruishan Liu",
     "venue": "arXiv preprint",
     "year": 2026,
-    "links": [],
+    "links": [
+      {
+        "type": "github",
+        "url": "https://github.com/EndlessCG/medexagent"
+      }
+    ],
     "abstract": "Real-world clinical diagnosis is a complex process in which the doctor is required to obtain information from both interaction with the patient and conducting medical exams. Additionally, the doctor needs to adapt to different patient personas, as well as noisy and incomplete information that can happen at any time during the process. However, existing benchmarks for medical LLMs and methods for automatic diagnosis largely simplify this process by reducing it to single-turn question answering, noise-free conversations, or sequential exam making, etc., ignoring the interactive and uncertain nature of clinical diagnosis. In this paper, we aim to address this gap by formalizing clinical diagnosis as a Partially Observable Markov Decision Process (POMDP) with three action types: questioning the patient, ordering medical exams as tool calls, and issuing a diagnosis. We also introduce a systematic noise model comprising seven patient noise types and three exam noise types. Using our proposed environment, we train an effective diagnosis agent, MedExAgent, through a two-stage pipeline that first performs supervised finetuning on synthetic conversations structured after the Calgary-Cambridge model for clinical interviews, and then applies DAPO to optimize a composite reward capturing diagnostic accuracy, tool call quality, and exam cost including financial cost and patient discomfort. Through extensive experiments and ablation studies, we demonstrate that MedExAgent achieves diagnostic performance comparable to larger models while maintaining cost-efficient examination strategies."
   },
   {
@@ -1389,7 +1439,12 @@
     "authors": "Shawn Li, You Qin, Jiate Li, Charith Peris, Lisa Bauer, Roger Zimmermann, Yue Zhao",
     "venue": "arXiv preprint",
     "year": 2026,
-    "links": [],
+    "links": [
+      {
+        "type": "github",
+        "url": "https://github.com/lili0415/UFCOD"
+      }
+    ],
     "abstract": "Out-of-distribution (OOD) detection identifies test samples that fall outside a model's training distribution, a capability critical for safe deployment in high-stakes applications. Standard OOD detectors are trained on a specific in-distribution (ID) dataset and detect deviations from that single domain. In contrast, we study few-shot cross-domain OOD detection: given a single pre-trained model, can we perform OOD detection on arbitrary new ID-OOD task pairs using only a handful of ID samples at inference time, with no additional training? We propose UFCOD, a unified framework that achieves this goal through information-geometric analysis of diffusion trajectories. Our key insight is that diffusion noise predictions are score functions (gradients of log-density), and we extract two energy features: Path Energy (integrated score magnitude) and Dynamics Energy (score smoothness), that form a discrete Sobolev norm capturing how samples interact with the learned diffusion process. The central contribution is a train-once, deploy-anywhere paradigm: a diffusion model trained on a single dataset (e.g., CelebA) serves as a universal feature extractor for OOD detection across semantically unrelated domains (e.g., CIFAR-10, SVHN, Textures). At deployment, each new task requires only ~100 unlabeled ID samples for inference: no retraining, no fine-tuning, no task-specific adaptation. Using 100 ID samples per task, UFCOD achieves 93.7% average AUROC across 12 cross-domain benchmarks, competitive with methods trained on 50k--163k samples, demonstrating ~500× improvement in sample efficiency."
   },
   {
@@ -1398,7 +1453,7 @@
     "emoji": "🐱",
     "title": "Cat-DPO: Category-Adaptive Safety Alignment",
     "paper_url": "https://arxiv.org/abs/2604.17299",
-    "authors": "Tiankai Yang, Yi Nian, Xinyuan Li, Ruiyao Xu, Kaize Ding, Yue Zhao",
+    "authors": "Tiankai Yang, Yi Nian, Xinyuan Li, Ruiyao Xu, Henry Peng Zou, Kaize Ding, Xiyang Hu, Yan Liu, Yue Zhao",
     "venue": "arXiv preprint",
     "year": 2026,
     "links": [],
@@ -1409,7 +1464,7 @@
     "section": "conference",
     "title": "Auditable Agents",
     "paper_url": "https://arxiv.org/abs/2604.05485",
-    "authors": "Yi Nian, Aojie Yuan, Haiyue Zhang, Jiate Li, Shawn Li, Xiyang Hu, Hua Wei, Xiongye Xiao, Chaowei Xiao, and Yue Zhao",
+    "authors": "Yi Nian, Aojie Yuan, Haiyue Zhang, Jiate Li, Li Li, Xiyang Hu, Hua Wei, Xiongye Xiao, Chaowei Xiao, and Yue Zhao",
     "venue": "ACM AI Leadership Summit, 2026 (condensed 4-page version); earlier version at ACL 2026 KnowFM Workshop",
     "year": 2026,
     "sort_date": "2026-08-30",
@@ -1436,7 +1491,12 @@
     "authors": "Aojie Yuan, Zhiyuan Su, Yue Zhao",
     "venue": "arXiv preprint",
     "year": 2026,
-    "links": [],
+    "links": [
+      {
+        "type": "github",
+        "url": "https://github.com/Justin0504/Aegis"
+      }
+    ],
     "abstract": "AI agents increasingly act through external tools: they query databases, execute shell commands, read and write files, and send network requests. Yet in most current agent stacks, model-generated tool calls are handed to the execution layer with no framework-agnostic control point in between. Post-execution observability can record these actions, but it cannot stop them before side effects occur. We present AEGIS, a pre-execution firewall and audit layer for AI agents. AEGIS interposes on the tool-execution path and applies a three-stage pipeline: (i) deep string extraction from tool arguments, (ii) content-first risk scanning, and (iii) composable policy validation. High-risk calls can be held for human approval, and all decisions are recorded in a tamper-evident audit trail based on Ed25519 signatures and SHA-256 hash chaining. In the current implementation, AEGIS supports 14 agent frameworks across Python, JavaScript, and Go with lightweight integration. On a curated suite of 48 attackinstances, AEGIS blocks all attacks in the suite before execution; on 500 benign tool calls, it yields a 1.2% false positive rate; and across 1,000 consecutive interceptions, it adds 8.3 ms median latency. The live demo will show end-to-end interception of benign, malicious, and human-escalated tool calls, allowing attendees to observe real-time blocking, approval workflows, and audit-trail generation. These results suggest that pre-execution mediation for AI agents can be practical, low-overhead, and directly deployable."
   },
   {
@@ -1460,10 +1520,19 @@
     "section": "preprint",
     "title": "Agent Banana: High-Fidelity Image Editing with Agentic Thinking and Tooling",
     "paper_url": "https://arxiv.org/abs/2602.09084",
-    "authors": "Ruijie Ye, Jiayi Zhang, Zhuoxin Liu, Zihao Zhu, Siyuan Yang, Shawn Li, Tianfu Fu, Franck Dernoncourt, Yue Zhao, Jiacheng Zhu, Ryan Rossi, Wenhao Chai, Zhengzhong Tu",
+    "authors": "Ruijie Ye, Jiayi Zhang, Zhuoxin Liu, Zihao Zhu, Siyuan Yang, Li Li, Tianfu Fu, Franck Dernoncourt, Yue Zhao, Jiacheng Zhu, Ryan Rossi, Wenhao Chai, Zhengzhong Tu",
     "venue": "arXiv preprint",
     "year": 2026,
-    "links": [],
+    "links": [
+      {
+        "type": "github",
+        "url": "https://github.com/taco-group/agent-banana"
+      },
+      {
+        "type": "project",
+        "url": "https://agent-banana.github.io/"
+      }
+    ],
     "abstract": "We study instruction-based image editing under professional workflows and identify three persistent challenges: (i) editors often over-edit, modifying content beyond the user's intent; (ii) existing models are largely single-turn, while multi-turn edits can alter object faithfulness; and (iii) evaluation at around 1K resolution is misaligned with real workflows that often operate on ultra high-definition images (e.g., 4K). We propose Agent Banana, a hierarchical agentic planner-executor framework for high-fidelity, object-aware, deliberative editing. Agent Banana introduces two key mechanisms: (1) Context Folding, which compresses long interaction histories into structured memory for stable long-horizon control; and (2) Image Layer Decomposition, which performs localized layer-based edits to preserve non-target regions while enabling native-resolution outputs. To support rigorous evaluation, we build HDD-Bench, a high-definition, dialogue-based benchmark featuring verifiable stepwise targets and native 4K images (11.8M pixels) for diagnosing long-horizon failures. On HDD-Bench, Agent Banana achieves the best multi-turn consistency and background fidelity (e.g., IC 0.871, SSIM-OM 0.84, LPIPS-OM 0.12) while remaining competitive on instruction following, and also attains strong performance on standard single-turn editing benchmarks. We hope this work advances reliable, professional-grade agentic image editing and its integration into real workflows."
   },
   {
@@ -1475,7 +1544,12 @@
     "venue": "KDD D&B Track, 2026",
     "year": 2026,
     "sort_date": "2026-08-09",
-    "links": [],
+    "links": [
+      {
+        "type": "github",
+        "url": "https://github.com/charlieqi02/RAG-Knowledge-Extraction-Attack-and-Defense-Benchmark"
+      }
+    ],
     "badges": [
       {
         "text": "Oral Presentation",
@@ -1498,14 +1572,19 @@
   {
     "id": "conference-mgeo-knowfm",
     "section": "workshop",
-    "title": "Multimodal Generative Engine Optimization: Exploiting Cross-Modal Knowledge Grounding in VLM-Based Ranking",
+    "title": "Multimodal Generative Engine Optimization: Rank Manipulation for Vision-Language Model Rankers",
     "paper_url": "https://arxiv.org/abs/2601.12263",
     "authors": "Yixuan Du, Chenxiao Yu, Haoyan Xu, Ziyi Wang, Yue Zhao, Xiyang Hu",
     "venue": "ACL Workshop on Towards Knowledgeable Foundation Models (KnowFM), 2026",
     "year": 2026,
     "sort_date": "2026-07-02",
     "sort_priority": 0,
-    "links": [],
+    "links": [
+      {
+        "type": "github",
+        "url": "https://github.com/glad-lab/MGEO"
+      }
+    ],
     "abstract": "Vision-Language Models (VLMs) are rapidly replacing unimodal encoders in modern retrieval and recommendation systems. While their capabilities are well-documented, their robustness against adversarial manipulation in competitive ranking scenarios remains largely unexplored. In this paper, we uncover a critical vulnerability in VLM-based product search: multimodal ranking attacks. We present Multimodal Generative Engine Optimization (MGEO), a novel adversarial framework that enables a malicious actor to unfairly promote a target product by jointly optimizing imperceptible image perturbations and fluent textual suffixes. Unlike existing attacks that treat modalities in isolation, MGEO employs an alternating gradient-based optimization strategy to exploit the deep cross-modal coupling within the VLM. Extensive experiments on real-world datasets using state-of-the-art models demonstrate that our coordinated attack significantly outperforms text-only and image-only baselines. These findings reveal that multimodal synergy, typically a strength of VLMs, can be weaponized to compromise the integrity of search rankings without triggering conventional content filters."
   },
   {
@@ -1528,7 +1607,12 @@
     "authors": "Chenxiao Yu, Bowen Yi, Farzan Karimi-Malekabadi, Suhaib Abdurahman, Jinyi Ye, Shrikanth Narayanan, Yue Zhao, Morteza Dehghani",
     "venue": "arXiv preprint",
     "year": 2026,
-    "links": [],
+    "links": [
+      {
+        "type": "github",
+        "url": "https://github.com/AiHeMaotai/MFT_LLMs"
+      }
+    ],
     "abstract": "Large language models (LLMs) often produce human-like moral judgments, but it is unclear whether this reflects an internal conceptual structure or superficial ``moral mimicry.'' Using Moral Foundations Theory (MFT) as an analytic framework, we study how moral foundations are encoded, organized, and expressed within two instruction-tuned LLMs: Llama-3.1-8B-Instruct and Qwen2.5-7B-Instruct. We employ a multi-level approach combining (i) layer-wise analysis of MFT concept representations and their alignment with human moral perceptions, (ii) pretrained sparse autoencoders (SAEs) over the residual stream to identify sparse features that support moral concepts, and (iii) causal steering interventions using dense MFT vectors and sparse SAE features. We find that both models represent and distinguish moral foundations in a structured, layer-dependent way that aligns with human judgments. At a finer scale, SAE features show clear semantic links to specific foundations, suggesting partially disentangled mechanisms within shared representations. Finally, steering along either dense vectors or sparse features produces predictable shifts in foundation-relevant behavior, demonstrating a causal connection between internal representations and moral outputs. Together, our results provide mechanistic evidence that moral concepts in LLMs are distributed, layered, and partly disentangled, suggesting that pluralistic moral structure can emerge as a latent pattern from the statistical regularities of language alone."
   },
   {
@@ -1613,7 +1697,7 @@
     "section": "preprint",
     "title": "LLM-Powered Text-Attributed Graph Anomaly Detection via Retrieval-Augmented Reasoning",
     "paper_url": "https://arxiv.org/abs/2511.17584",
-    "authors": "Haoyan Xu, Ruizhi Qian, Zhengtao Yao, Ziyi Liu, Shawn Li, Yuqi Li, Yanshu Li, Wenqing Zheng, Daniele Rosa, Daniel Barcklow, Senthil Kumar, Jieyu Zhao, Yue Zhao",
+    "authors": "Haoyan Xu, Ruizhi Qian, Zhengtao Yao, Ziyi Liu, Li Li, Yuqi Li, Yanshu Li, Wenqing Zheng, Daniele Rosa, Daniel Barcklow, Senthil Kumar, Jieyu Zhao, Yue Zhao",
     "venue": "arXiv preprint",
     "year": 2025,
     "links": [],
@@ -1635,7 +1719,7 @@
     "section": "preprint",
     "title": "M3OOD: Automatic Selection of Multimodal OOD Detectors",
     "paper_url": "https://arxiv.org/abs/2508.11936",
-    "authors": "Yuehan Qin, Shawn Li, Defu Cao, Tiankai Yang, Jiate Li, Yue Zhao",
+    "authors": "Yuehan Qin, Li Li, Defu Cao, Tiankai Yang, Jiate Li, Yue Zhao",
     "venue": "arXiv preprint",
     "year": 2025,
     "links": [],
