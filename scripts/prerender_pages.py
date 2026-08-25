@@ -477,15 +477,14 @@ def bio_regions(bio_path: Path) -> dict[str, str]:
         raise ValueError(f"{bio_path.relative_to(ROOT)}: no paragraphs found")
 
     indent = " " * 24
-    rendered = []
-    for position, paragraph in enumerate(paragraphs):
+    rendered = [
+        f'{indent}<details class="smart-details" style="margin:16px 0 14px 0;">',
+        f'{indent}  <summary><strong style="color:#990000">Biography</strong></summary>',
+    ]
+    for paragraph in paragraphs:
         escaped = html.escape(paragraph, quote=False)
-        if position == 0:
-            rendered.append(
-                f'{indent}<p><strong style="color:#990000">Biography</strong>. {escaped}</p>'
-            )
-        else:
-            rendered.append(f"{indent}<p>{escaped}</p>")
+        rendered.append(f"{indent}  <p>{escaped}</p>")
+    rendered.append(f"{indent}</details>")
     return {"bio": "\n".join(rendered)}
 
 
