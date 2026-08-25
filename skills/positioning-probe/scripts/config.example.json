@@ -1,0 +1,17 @@
+{
+  "subject": "A. Researcher",
+  "description": "an assistant professor of computer science at Example University who leads the Example Lab.",
+  "population": "university professors, tenure-track or tenured",
+  "evidence_criterion": "their research group publishes on the topic at venues such as NeurIPS, ICML, ICLR, KDD, ACL, or IEEE and ACM journals",
+  "control_term": "REPLACE: a term the subject owns beyond argument, such as a flagship library",
+  "terms": [
+    "candidate term one",
+    "candidate term two",
+    "an adjacent term another community already owns"
+  ],
+  "gateway_models": [],
+  "bedrock_models": [
+    "amazon.nova-pro-v1:0"
+  ],
+  "bedrock_region": "us-east-1"
+}
