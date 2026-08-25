@@ -132,7 +132,7 @@
                         ">
                           <strong style="color:#990000;">Current Focus.</strong>
                           <span style="font-weight:600;">
-                            Founding <a href="https://auditable.run" target="_blank" rel="noopener">Auditable AI <i class="fas fa-arrow-up-right-from-square" style="font-size:0.7em; margin-left:0.2rem; opacity:0.85;" aria-hidden="true"></i></a>, the auditable layer for AI agents, anchored by our own stack from <a href="https://arxiv.org/abs/2606.22741" target="_blank" rel="noopener">method</a> and <a href="https://arxiv.org/abs/2605.09163" target="_blank" rel="noopener">benchmark</a> to <a href="auditable.html">open-source tool</a>.
+                            Founding <a href="https://auditable.run" target="_blank" rel="noopener">Auditable AI <i class="fas fa-arrow-up-right-from-square" style="font-size:0.7em; margin-left:0.2rem; opacity:0.85;" aria-hidden="true"></i></a>, the auditable layer for AI agents, anchored by our own stack: a <a href="https://arxiv.org/abs/2606.22741" target="_blank" rel="noopener">method</a>, a <a href="https://arxiv.org/abs/2605.09163" target="_blank" rel="noopener">pre-deployment benchmark</a>, a <a href="https://arxiv.org/abs/2608.22808" target="_blank" rel="noopener">lifecycle benchmark</a>, and an <a href="auditable.html">open-source tool</a>.
                           </span>
                           Also serving as Chief Scientific Advisor to <a href="https://www.figwork.ai/" target="_blank" rel="noopener">Figwork <i class="fas fa-arrow-up-right-from-square" style="font-size:0.7em; margin-left:0.2rem; opacity:0.85;" aria-hidden="true"></i></a>, an AI platform for early-career talent.
                         </div>
@@ -196,24 +196,31 @@
                           <p style="margin:0 0 12px 0; color:#555; font-size:0.9rem;">
                             <strong style="color:#7a2a2a;">Foundation, detection in data.</strong> <a href="pyod.html" style="font-weight:600;">PyOD</a> is the canonical open-source anomaly-detection library, with 55M+ downloads. OpenAI names it, and Amazon and the European Space Agency use it in anomaly-detection work. It is also deployed in a UK Government care service and listed by the U.S. DoD CDAO. <a href="https://arxiv.org/abs/2605.03410" target="_blank" rel="noopener">UFCOD</a> carries the line into few-shot cross-domain OOD detection with no additional training.<br>
                             <strong style="color:#7a2a2a;">Verification of output.</strong> <a href="https://openreview.net/forum?id=bWUU0LwwMp" target="_blank" rel="noopener">TrustLLM</a> is the multi-institution trustworthiness benchmark for large language models. <a href="https://arxiv.org/abs/2606.29713" target="_blank" rel="noopener">SEVA</a> is a verification agent that returns evidence alignments, calibrated confidence, and a six-category error diagnosis in place of an opaque binary label.<br>
-                            <strong style="color:#7a2a2a;">Frontier, auditing of action.</strong> The open-source family below carries the same audit agenda to AI agents. Its research method, the tool built on it, and a curated knowledge base cite and reinforce one another. Two arguments sit underneath it. <a href="https://arxiv.org/abs/2606.28739" target="_blank" rel="noopener">Agent Safety Is Action Alignment</a> locates agentic harm in the relation between the authority an action exercises and the authority the user granted. <a href="https://arxiv.org/abs/2603.17445" target="_blank" rel="noopener">IET</a> embeds agent-specific keyed signals at generation time, letting an auditor holding the key registry recover segment-level attribution from the final text alone.
+                            <strong style="color:#7a2a2a;">Frontier, auditing of action.</strong> The open-source family below carries the same audit agenda to AI agents. Its research method, the tool built on it, the two benchmarks that measure it, and a curated knowledge base cite and reinforce one another. Two arguments sit underneath it. <a href="https://arxiv.org/abs/2606.28739" target="_blank" rel="noopener">Agent Safety Is Action Alignment</a> locates agentic harm in the relation between the authority an action exercises and the authority the user granted. <a href="https://arxiv.org/abs/2603.17445" target="_blank" rel="noopener">IET</a> embeds agent-specific keyed signals at generation time, letting an auditor holding the key registry recover segment-level attribution from the final text alone. <a href="https://arxiv.org/abs/2608.22808" target="_blank" rel="noopener">CatchBench</a> asks one question across the lifecycle: it scores 72 entrants on whether a failure is catchable before a run, during it, and after it.
                           </p>
                           <div class="row g-3">
-                            <div class="col-12 col-md-4">
+                            <div class="col-12 col-sm-6 col-md-3">
                               <div style="color:#7a2a2a; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:2px;">Tool</div>
                               <a href="auditable.html" style="font-weight:600;">auditable</a>
                               <div style="color:#555; font-size:0.88rem; line-height:1.4;">
                                 The open-source SDK: capture each agent decision, replay it against live state, and roll back when it no longer holds.
                               </div>
                             </div>
-                            <div class="col-12 col-md-4">
+                            <div class="col-12 col-sm-6 col-md-3">
                               <div style="color:#7a2a2a; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:2px;">Method</div>
                               <a href="https://arxiv.org/abs/2606.22741" style="font-weight:600;">GRADE</a>
                               <div style="color:#555; font-size:0.88rem; line-height:1.4;">
                                 The research engine the tool is built on: a typed two-layer graph of agent execution and dependency. <a href="https://github.com/yzhao062/grade">code</a>.
                               </div>
                             </div>
-                            <div class="col-12 col-md-4">
+                            <div class="col-12 col-sm-6 col-md-3">
+                              <div style="color:#7a2a2a; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:2px;">Benchmark</div>
+                              <a href="https://arxiv.org/abs/2608.22808" style="font-weight:600;">CatchBench</a>
+                              <div style="color:#555; font-size:0.88rem; line-height:1.4;">
+                                What the stack is measured against: can a failure be caught before a run, during it, or only after? <a href="https://github.com/yzhao062/catchbench">code</a>.
+                              </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-3">
                               <div style="color:#7a2a2a; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:2px;">Resource</div>
                               <a href="https://github.com/yzhao062/awesome-auditable-ai" style="font-weight:600;">awesome-auditable-ai</a>
                               <div style="color:#555; font-size:0.88rem; line-height:1.4;">
@@ -340,6 +347,10 @@
 
                         <hr>
                         <h2 id="news">&#9992; News and Travel</h2>
+
+                        <p><strong>[Aug 2026]</strong> New preprint and benchmark: <a href="https://arxiv.org/abs/2608.22808"><b>CatchBench: When Can an Agent Failure Be Caught?</b></a> An audit is usually limited by the record rather than by the method. CatchBench therefore puts one auditor's question to three information states: the configuration declared before a run, a growing prefix of its trace, and the finished trace. It scores 72 entrants over 1187 declared configurations and 1162 recorded runs. Most of the arena does not order, and the 71 contrasts that fail to separate are published unresolved rather than ranked. <a href="https://arxiv.org/abs/2608.22808">[arXiv]</a> <a href="https://github.com/yzhao062/catchbench">[GitHub]</a></p>
+
+                        <p><strong>[Aug 2026]</strong> <i>USC Viterbi News</i> covered the lab's agent-auditing work in <a href="https://viterbischool.usc.edu/news/2026/08/giving-ai-agents-the-keys-usc-engineers-develop-tools-to-audit-and-monitor-ai-agents/" target="_blank" rel="noopener"><b>Giving AI Agents the Keys? USC Engineers Develop Tools to Audit and Monitor AI Agents</b></a>. The piece follows the three points at which an agent can be checked. <a href="agent-audit.html">agent-audit</a> inspects agent code before deployment, <a href="aegis.html">AEGIS</a> intercepts tool calls at runtime, and <a href="auditable.html">auditable</a> with <a href="https://arxiv.org/abs/2606.22741">GRADE</a> reconstructs a run after the fact.</p>
 
                         <p><strong>[Aug 2026]</strong> Six papers accepted to <i>EMNLP 2026</i>. <a href="https://lili0415.github.io/">Shawn Li</a> leads our main-conference paper <a href="https://arxiv.org/abs/2603.19423"><b>The Autonomy Tax: Defense Training Breaks LLM Agents</b></a>, and Yi Nian leads our Findings paper <a href="https://arxiv.org/abs/2606.07678"><b>DOG-DPO</b></a>. In Findings, <a href="https://ojasnimase.com/">Ojas Nimase</a> is first author on <a href="https://openreview.net/forum?id=VBjIqgKJ7O"><b>FinanceLLM</b></a>, and <a href="https://aojieyuan.com">Aojie Yuan</a> and <a href="https://headyzhang.github.io">Haiyue Zhang</a> co-author <a href="https://arxiv.org/abs/2608.03499"><b>WeClawArena</b></a>. Full list on the <a href="publications.html">publications page</a>.</p>
 

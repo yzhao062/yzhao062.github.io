@@ -1217,6 +1217,23 @@
     "sort_date": "2026-10-24"
   },
   {
+    "id": "preprint-catchbench",
+    "section": "preprint",
+    "title": "CatchBench: When Can an Agent Failure Be Caught?",
+    "paper_url": "https://arxiv.org/abs/2608.22808",
+    "authors": "Yue Zhao",
+    "venue": "arXiv preprint",
+    "year": 2026,
+    "sort_date": "2026-08-24",
+    "links": [
+      {
+        "type": "github",
+        "url": "https://github.com/yzhao062/catchbench"
+      }
+    ],
+    "abstract": "When can an agent failure be caught? An audit is usually limited by the record rather than by the method. CatchBench puts one auditor's question to three information states: the declared configuration before a run (PRE), a growing prefix of its trace (LIVE), and the finished trace (POST). Seven task contracts carry their own labels and metrics rather than one leaderboard; four are evidential and three are Gold-derived mechanism diagnostics. The release scores 72 entrants, from rule scanners and structural models to eleven LLM judges across nine model families, over 1187 declared configurations and 1162 recorded runs. Most of the arena does not order: 47 of 118 pre-declared contrasts separate, and the rest are published unresolved rather than ranked. Every ordering regenerates from released predictions with no model call."
+  },
+  {
     "id": "preprint-jigshape",
     "section": "preprint",
     "title": "JigShape: Evaluating Visual-Geometric Reasoning in VLMs through Jigsaw Puzzles",

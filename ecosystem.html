@@ -4,26 +4,26 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="author" content="Yue Zhao">
-  <meta name="description" content="The Auditable AI Ecosystem: a research-to-product stack covering a method (GRADE), a benchmark (FORTIS, over-privilege), an open-source tool (auditable), and a curated knowledge base (awesome-auditable-ai), auditing AI agents across the full lifecycle from before deployment to after a run.">
+  <meta name="description" content="The Auditable AI Ecosystem: a research-to-product stack covering a method (GRADE), two benchmarks (FORTIS for over-privilege, CatchBench for lifecycle catchability), an open-source tool (auditable), and a curated knowledge base (awesome-auditable-ai), auditing AI agents across the full lifecycle from before deployment to after a run.">
   <meta name="keywords" content="The Auditable AI Ecosystem, Auditable AI Systems, Agent Auditability, auditable, GRADE, awesome-auditable-ai, Auditable AI, AI Agent Auditing, PRE LIVE POST, Yue Zhao, USC, FORTIS Lab, Agent Lifecycle, AI Risk Audit and Control">
   <title>The Auditable AI Ecosystem | Yue Zhao</title>
   <link rel="canonical" href="https://viterbi-web.usc.edu/~yzhao010/ecosystem.html">
   <link rel="icon" type="image/x-icon" href="images/logo2.ico">
   <meta property="og:type" content="website">
   <meta property="og:title" content="The Auditable AI Ecosystem | Yue Zhao">
-  <meta property="og:description" content="A research-to-product stack for auditing AI agents across their full lifecycle: from method and benchmark to open-source tool, underpinning Auditable AI.">
+  <meta property="og:description" content="A research-to-product stack for auditing AI agents across their full lifecycle: a method, two benchmarks, an open-source tool, and a knowledge base behind Auditable AI.">
   <meta property="og:url" content="https://viterbi-web.usc.edu/~yzhao010/ecosystem.html">
   <meta property="og:image" content="https://viterbi-web.usc.edu/~yzhao010/images/logo.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="The Auditable AI Ecosystem | Yue Zhao">
-  <meta name="twitter:description" content="A research-to-product stack for auditing AI agents across their full lifecycle: from method and benchmark to open-source tool, underpinning Auditable AI.">
+  <meta name="twitter:description" content="A research-to-product stack for auditing AI agents across their full lifecycle: a method, two benchmarks, an open-source tool, and a knowledge base behind Auditable AI.">
   <meta name="twitter:image" content="https://viterbi-web.usc.edu/~yzhao010/images/logo.png">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
     "name": "The Auditable AI Ecosystem",
-    "description": "A research-to-product stack covering a method, a benchmark, an open-source tool, and a curated knowledge base for auditing AI agents across their full lifecycle.",
+    "description": "A research-to-product stack covering a method, two benchmarks, an open-source tool, and a curated knowledge base for auditing AI agents across their full lifecycle.",
     "url": "https://viterbi-web.usc.edu/~yzhao010/ecosystem.html",
     "author": {
       "@type": "Person",
@@ -52,6 +52,22 @@
         "@type": "ScholarlyArticle",
         "name": "FORTIS: Benchmarking Over-Privilege in Agent Skills",
         "url": "https://arxiv.org/abs/2605.09163"
+      },
+      {
+        "@type": "Dataset",
+        "name": "CatchBench: When Can an Agent Failure Be Caught?",
+        "description": "A benchmark scoring whether an agent failure can be caught from the configuration declared before a run, a growing prefix of its trace, or the finished trace.",
+        "url": "https://github.com/yzhao062/catchbench",
+        "citation": {
+          "@type": "ScholarlyArticle",
+          "name": "CatchBench: When Can an Agent Failure Be Caught?",
+          "url": "https://arxiv.org/abs/2608.22808"
+        },
+        "usageInfo": "https://github.com/yzhao062/catchbench/blob/main/THIRD_PARTY_LICENSES.md",
+        "creator": {
+          "@type": "Person",
+          "name": "Yue Zhao"
+        }
       },
       {
         "@type": "CreativeWork",
@@ -93,9 +109,10 @@
           From data anomalies to agent decisions: one research-to-product stack.
         </p>
         <p>
-          This ecosystem covers auditing AI across its full lifecycle: a research method, an over-privilege benchmark (FORTIS), an
-          open-source tool, and a curated knowledge base, each built to cite and reinforce the others. It
-          underpins <a href="https://auditable.run" target="_blank" rel="noopener"><strong>Auditable AI</strong></a>,
+          This ecosystem covers auditing AI across its full lifecycle: a research method, two benchmarks, an
+          open-source tool, and a curated knowledge base that cite and reinforce one another. FORTIS tests
+          over-privilege before deployment; CatchBench scores whether a failure is catchable at each stage of
+          a run. The stack supports <a href="https://auditable.run" target="_blank" rel="noopener"><strong>Auditable AI</strong></a>,
           the company building the auditable layer for AI agents.
         </p>
 
@@ -104,13 +121,14 @@
         <!-- ── THE auditable STACK ── -->
         <h2 style="color:#990000;">The <code>auditable</code> Stack</h2>
         <p style="color:#555; font-size:0.95rem; margin-bottom:14px;">
-          Three open artifacts form the auditing-of-action arm of the ecosystem: the GRADE method, the
-          production-grade <code>auditable</code> tool, and the <code>awesome-auditable-ai</code> knowledge
-          base. FORTIS appears below as the pre-deployment benchmark in the lifecycle view.
+          Four open artifacts form the auditing-of-action arm of the ecosystem: the GRADE method, the
+          production-grade <code>auditable</code> tool, the CatchBench benchmark, and the
+          <code>awesome-auditable-ai</code> knowledge base. FORTIS appears below as the pre-deployment
+          over-privilege benchmark in the lifecycle view.
         </p>
 
         <div class="row g-3" style="margin-bottom:20px;">
-          <div class="col-12 col-md-4">
+          <div class="col-12 col-sm-6 col-md-3">
             <div style="border:1px solid #e8d0d0; border-radius:8px; padding:14px 16px; height:100%; background:#fff7f7;">
               <div style="color:#7a2a2a; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:6px;">Tool</div>
               <div style="font-size:1.05rem; font-weight:700; margin-bottom:6px;">
@@ -131,7 +149,7 @@
             </div>
           </div>
 
-          <div class="col-12 col-md-4">
+          <div class="col-12 col-sm-6 col-md-3">
             <div style="border:1px solid #e8d0d0; border-radius:8px; padding:14px 16px; height:100%; background:#fff7f7;">
               <div style="color:#7a2a2a; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:6px;">Method</div>
               <div style="font-size:1.05rem; font-weight:700; margin-bottom:6px;">
@@ -149,7 +167,25 @@
             </div>
           </div>
 
-          <div class="col-12 col-md-4">
+          <div class="col-12 col-sm-6 col-md-3">
+            <div style="border:1px solid #e8d0d0; border-radius:8px; padding:14px 16px; height:100%; background:#fff7f7;">
+              <div style="color:#7a2a2a; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:6px;">Benchmark</div>
+              <div style="font-size:1.05rem; font-weight:700; margin-bottom:6px;">
+                <a href="https://arxiv.org/abs/2608.22808" target="_blank" rel="noopener">CatchBench</a>
+              </div>
+              <div style="color:#555; font-size:0.88rem; line-height:1.5;">
+                What the stack is measured against: can a failure be caught before a run, during it, or only
+                after? It scores 72 entrants over 1187 declared configurations and 1162 recorded runs, and
+                publishes the contrasts that fail to separate rather than ranking them.
+              </div>
+              <div style="margin-top:10px; font-size:0.82rem;">
+                <a href="https://arxiv.org/abs/2608.22808" target="_blank" rel="noopener"><i class="fas fa-file-lines" aria-hidden="true"></i> arXiv</a>
+                &nbsp;|&nbsp;
+                <a href="https://github.com/yzhao062/catchbench" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i> Code</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-3">
             <div style="border:1px solid #e8d0d0; border-radius:8px; padding:14px 16px; height:100%; background:#fff7f7;">
               <div style="color:#7a2a2a; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:6px;">Resource</div>
               <div style="font-size:1.05rem; font-weight:700; margin-bottom:6px;">
@@ -176,6 +212,9 @@
           is the framework that organizes what agent auditability requires: five dimensions and three mechanism
           classes (detect, enforce, recover). The research below instantiates them at each point in an agent's
           life.
+          <a href="https://arxiv.org/abs/2608.22808" target="_blank" rel="noopener" style="font-weight:600;">CatchBench</a>
+          then scores all three states under one task-method interface, which turns when a failure can be
+          caught into a measurement.
         </p>
 
         <div style="

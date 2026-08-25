@@ -1,5 +1,24 @@
 [
   {
+    "name": "CatchBench",
+    "category": "Benchmark",
+    "role": "Primary",
+    "description": "A benchmark for auditing agent failures across the full lifecycle. It scores one auditor's question against three information states: the declared configuration before a run, a growing prefix of the trace, and the finished trace. The release covers 72 entrants and 1187 declared configurations. Contrasts that do not separate are published unresolved rather than ranked.",
+    "repo_url": "https://github.com/yzhao062/catchbench",
+    "docs_url": "",
+    "paper_url": "https://arxiv.org/abs/2608.22808",
+    "demo_url": "",
+    "stars": 4,
+    "tags": [
+      "Benchmark",
+      "Agent Auditing",
+      "AI Safety",
+      "LLM Agents",
+      "Reproducible Research"
+    ],
+    "last_updated_at": "2026-08-23"
+  },
+  {
     "name": "PyOD",
     "category": "Library",
     "role": "Primary",
