@@ -170,35 +170,55 @@
                             <strong style="color:#990000;">The Auditable AI Ecosystem</strong>
                             <span style="color:#7a2a2a; font-size:0.85rem;">from data anomalies to agent decisions</span>
                           </div>
-                          <p style="margin:0 0 12px 0; color:#555; font-size:0.9rem;">
-                            <strong style="color:#7a2a2a;">Foundation, detection in data.</strong> <a href="pyod.html" style="font-weight:600;">PyOD</a> is the canonical open-source anomaly-detection library, with 55M+ downloads. OpenAI names it, and Amazon and the European Space Agency use it in anomaly-detection work. It is also deployed in a UK Government care service and listed by the U.S. DoD CDAO. <a href="https://arxiv.org/abs/2605.03410" target="_blank" rel="noopener">UFCOD</a> carries the line into few-shot cross-domain OOD detection with no additional training.<br>
-                            <strong style="color:#7a2a2a;">Verification of output.</strong> <a href="https://openreview.net/forum?id=bWUU0LwwMp" target="_blank" rel="noopener">TrustLLM</a> is the multi-institution trustworthiness benchmark for large language models. <a href="https://arxiv.org/abs/2606.29713" target="_blank" rel="noopener">SEVA</a> is a verification agent that returns evidence alignments, calibrated confidence, and a six-category error diagnosis in place of an opaque binary label.<br>
-                            <strong style="color:#7a2a2a;">Frontier, auditing of action.</strong> The open-source family below carries the same audit agenda to AI agents. Its research method, the tool built on it, the two benchmarks that measure it, and a curated knowledge base cite and reinforce one another. Two arguments sit underneath it. <a href="https://arxiv.org/abs/2606.28739" target="_blank" rel="noopener">Agent Safety Is Action Alignment</a> locates agentic harm in the relation between the authority an action exercises and the authority the user granted. <a href="https://arxiv.org/abs/2603.17445" target="_blank" rel="noopener">IET</a> embeds agent-specific keyed signals at generation time, letting an auditor holding the key registry recover segment-level attribution from the final text alone. <a href="https://arxiv.org/abs/2608.22808" target="_blank" rel="noopener">CatchBench</a> asks one question across the lifecycle: it scores 72 entrants on whether a failure is catchable before a run, during it, and after it.
-                          </p>
+                          <div class="row g-3" style="margin:2px 0 12px 0;">
+                            <div class="col-12 col-md-4">
+                              <div style="color:#7a2a2a; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:3px;"><i class="fas fa-magnifying-glass-chart" style="width:1.05em; margin-right:0.35em; opacity:0.9;" aria-hidden="true"></i>Detection in Data</div>
+                              <div style="color:#555; font-size:0.88rem; line-height:1.45;">
+                                <a href="pyod.html" style="font-weight:600;">PyOD</a> is the canonical anomaly-detection library, 55M+ downloads.
+                                Named by OpenAI; used by Amazon, the European Space Agency, and the U.S. DoD CDAO.
+                                <a href="https://arxiv.org/abs/2605.03410" target="_blank" rel="noopener">UFCOD</a> extends the line to few-shot cross-domain OOD.
+                              </div>
+                            </div>
+                            <div class="col-12 col-md-4">
+                              <div style="color:#7a2a2a; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:3px;"><i class="fas fa-circle-check" style="width:1.05em; margin-right:0.35em; opacity:0.9;" aria-hidden="true"></i>Verification of Output</div>
+                              <div style="color:#555; font-size:0.88rem; line-height:1.45;">
+                                <a href="https://openreview.net/forum?id=bWUU0LwwMp" target="_blank" rel="noopener">TrustLLM</a> is the multi-institution trustworthiness benchmark for large language models.
+                                <a href="https://arxiv.org/abs/2606.29713" target="_blank" rel="noopener">SEVA</a> returns evidence alignments and calibrated confidence in place of an opaque binary label.
+                              </div>
+                            </div>
+                            <div class="col-12 col-md-4">
+                              <div style="color:#7a2a2a; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:3px;"><i class="fas fa-shield-halved" style="width:1.05em; margin-right:0.35em; opacity:0.9;" aria-hidden="true"></i>Auditing of Action</div>
+                              <div style="color:#555; font-size:0.88rem; line-height:1.45;">
+                                Two arguments sit under the stack below.
+                                <a href="https://arxiv.org/abs/2606.28739" target="_blank" rel="noopener">Agent Safety Is Action Alignment</a> locates harm in the gap between authority exercised and authority granted.
+                                <a href="https://arxiv.org/abs/2603.17445" target="_blank" rel="noopener">IET</a> recovers segment-level attribution from the final text alone.
+                              </div>
+                            </div>
+                          </div>
                           <div class="row g-3">
                             <div class="col-12 col-sm-6 col-md-3">
-                              <div style="color:#7a2a2a; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:2px;">Tool</div>
+                              <div style="color:#7a2a2a; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:2px;"><i class="fas fa-wrench" style="width:1.05em; margin-right:0.35em; opacity:0.9;" aria-hidden="true"></i>Tool</div>
                               <a href="auditable.html" style="font-weight:600;">auditable</a>
                               <div style="color:#555; font-size:0.88rem; line-height:1.4;">
                                 The open-source SDK: capture each agent decision, replay it against live state, and roll back when it no longer holds.
                               </div>
                             </div>
                             <div class="col-12 col-sm-6 col-md-3">
-                              <div style="color:#7a2a2a; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:2px;">Method</div>
+                              <div style="color:#7a2a2a; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:2px;"><i class="fas fa-diagram-project" style="width:1.05em; margin-right:0.35em; opacity:0.9;" aria-hidden="true"></i>Method</div>
                               <a href="https://arxiv.org/abs/2606.22741" style="font-weight:600;">GRADE</a>
                               <div style="color:#555; font-size:0.88rem; line-height:1.4;">
                                 The research engine the tool is built on: a typed two-layer graph of agent execution and dependency. <a href="https://github.com/yzhao062/grade">code</a>.
                               </div>
                             </div>
                             <div class="col-12 col-sm-6 col-md-3">
-                              <div style="color:#7a2a2a; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:2px;">Benchmark</div>
+                              <div style="color:#7a2a2a; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:2px;"><i class="fas fa-chart-line" style="width:1.05em; margin-right:0.35em; opacity:0.9;" aria-hidden="true"></i>Benchmark</div>
                               <a href="https://arxiv.org/abs/2608.22808" style="font-weight:600;">CatchBench</a>
                               <div style="color:#555; font-size:0.88rem; line-height:1.4;">
                                 What the stack is measured against: can a failure be caught before a run, during it, or only after? <a href="https://github.com/yzhao062/catchbench">code</a>.
                               </div>
                             </div>
                             <div class="col-12 col-sm-6 col-md-3">
-                              <div style="color:#7a2a2a; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:2px;">Resource</div>
+                              <div style="color:#7a2a2a; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:2px;"><i class="fas fa-book" style="width:1.05em; margin-right:0.35em; opacity:0.9;" aria-hidden="true"></i>Resource</div>
                               <a href="https://github.com/yzhao062/awesome-auditable-ai" style="font-weight:600;">awesome-auditable-ai</a>
                               <div style="color:#555; font-size:0.88rem; line-height:1.4;">
                                 A curated map of papers, tools, datasets, and standards for reliable, auditable AI agents.
@@ -213,14 +233,14 @@
                             </p>
                             <div class="row g-3">
                               <div class="col-12 col-md-4">
-                                <div style="color:#7a2a2a; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:4px;">Pre &middot; before deploy</div>
+                                <div style="color:#7a2a2a; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:4px;"><i class="fas fa-clipboard-check" style="width:1.05em; margin-right:0.35em; opacity:0.9;" aria-hidden="true"></i>Pre &middot; before deploy</div>
                                 <div style="color:#555; font-size:0.88rem; line-height:1.5;">
                                   <a href="https://arxiv.org/abs/2605.09163" style="font-weight:600;">FORTIS</a>: a benchmark for over-privilege in agent skills.<br>
                                   <a href="agent-audit.html" style="font-weight:600;">agent-audit</a>: a static scan of agent code for security and over-privilege.
                                 </div>
                               </div>
                               <div class="col-12 col-md-4">
-                                <div style="color:#7a2a2a; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:4px;">Live &middot; while running</div>
+                                <div style="color:#7a2a2a; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:4px;"><i class="fas fa-bolt" style="width:1.05em; margin-right:0.35em; opacity:0.9;" aria-hidden="true"></i>Live &middot; while running</div>
                                 <div style="color:#555; font-size:0.88rem; line-height:1.5;">
                                   <a href="https://arxiv.org/abs/2604.01350" style="font-weight:600;">Cross-User Contamination</a>: one user's data leaking into another's in shared-state agents.<br>
                                   <a href="https://arxiv.org/abs/2512.04668" style="font-weight:600;">Topology Matters</a>: measuring memory leakage in multi-agent LLMs.<br>
@@ -228,7 +248,7 @@
                                 </div>
                               </div>
                               <div class="col-12 col-md-4">
-                                <div style="color:#7a2a2a; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:4px;">Post &middot; after a run</div>
+                                <div style="color:#7a2a2a; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:4px;"><i class="fas fa-clock-rotate-left" style="width:1.05em; margin-right:0.35em; opacity:0.9;" aria-hidden="true"></i>Post &middot; after a run</div>
                                 <div style="color:#555; font-size:0.88rem; line-height:1.5;">
                                   <a href="https://arxiv.org/abs/2603.17445" style="font-weight:600;">Implicit Execution Tracing</a>: recovering which agent caused a harmful result after the logs are gone.<br>
                                   <a href="https://arxiv.org/abs/2606.22741" style="font-weight:600;">GRADE</a>: localizing the faulting step in a completed multi-agent run.
