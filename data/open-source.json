@@ -8,7 +8,7 @@
     "docs_url": "",
     "paper_url": "https://arxiv.org/abs/2608.22808",
     "demo_url": "",
-    "stars": 4,
+    "stars": 7,
     "tags": [
       "Benchmark",
       "Agent Auditing",
@@ -16,7 +16,7 @@
       "LLM Agents",
       "Reproducible Research"
     ],
-    "last_updated_at": "2026-08-23T18:03:35Z"
+    "last_updated_at": "2026-08-25T23:31:40Z"
   },
   {
     "name": "PyOD",
@@ -27,7 +27,7 @@
     "docs_url": "https://pyod.readthedocs.io",
     "paper_url": "https://arxiv.org/abs/2412.12154",
     "demo_url": "",
-    "stars": 9977,
+    "stars": 9978,
     "tags": [
       "Anomaly Detection",
       "Outlier Detection",
@@ -46,7 +46,7 @@
     "docs_url": "https://auditable-ai.readthedocs.io/",
     "paper_url": "https://arxiv.org/abs/2606.22741",
     "demo_url": "https://pypi.org/project/auditable/",
-    "stars": 22,
+    "stars": 23,
     "tags": [
       "Agent Auditability",
       "Decision Replay",
@@ -65,7 +65,7 @@
     "docs_url": "",
     "paper_url": "",
     "demo_url": "",
-    "stars": 108,
+    "stars": 113,
     "tags": [
       "Agent Auditability",
       "Agent Reliability",
@@ -176,7 +176,7 @@
     "docs_url": "",
     "paper_url": "",
     "demo_url": "",
-    "stars": 9368,
+    "stars": 9370,
     "tags": [
       "Awesome List",
       "Anomaly Detection",
@@ -322,7 +322,7 @@
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/agent-audit.html",
     "paper_url": "https://arxiv.org/abs/2603.22853",
     "demo_url": "https://pypi.org/project/agent-audit/",
-    "stars": 223,
+    "stars": 224,
     "tags": [
       "AI Agent Security",
       "Security Audit",
@@ -387,7 +387,7 @@
       "Configuration",
       "MCP"
     ],
-    "last_updated_at": "2026-08-24T03:37:47Z"
+    "last_updated_at": "2026-08-26T07:34:43Z"
   },
   {
     "name": "agent-style",
@@ -398,7 +398,7 @@
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/agent-style.html",
     "paper_url": "",
     "demo_url": "https://pypi.org/project/agent-style/",
-    "stars": 647,
+    "stars": 650,
     "tags": [
       "AI Agents",
       "Agent Configuration",
