@@ -4,26 +4,26 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="author" content="Yue Zhao">
-  <meta name="description" content="The Auditable AI Ecosystem: a research-to-product stack covering a method (GRADE), two benchmarks (FORTIS for over-privilege, CatchBench for lifecycle catchability), an open-source tool (auditable), and a curated knowledge base (awesome-auditable-ai), auditing AI agents across the full lifecycle from before deployment to after a run.">
-  <meta name="keywords" content="The Auditable AI Ecosystem, Auditable AI Systems, Agent Auditability, auditable, GRADE, awesome-auditable-ai, Auditable AI, AI Agent Auditing, PRE LIVE POST, Yue Zhao, USC, FORTIS Lab, Agent Lifecycle, AI Risk Audit and Control">
+  <meta name="description" content="The Auditable AI Ecosystem: eleven open artifacts for auditing AI agents across the full lifecycle, from static scanning and over-privilege benchmarking before deployment, through tool-call gating at runtime, to decision capture, replay, and attribution after a run.">
+  <meta name="keywords" content="The Auditable AI Ecosystem, Auditable AI Systems, Agent Auditability, auditable, GRADE, awesome-auditable-ai, Auditable AI, AI Agent Auditing, PRE LIVE POST, Yue Zhao, USC, FORTIS Lab, Agent Lifecycle, AI Risk Audit and Control, open-source ecosystem, open-source sustainability, research software">
   <title>The Auditable AI Ecosystem | Yue Zhao</title>
   <link rel="canonical" href="https://viterbi-web.usc.edu/~yzhao010/ecosystem.html">
   <link rel="icon" type="image/x-icon" href="images/logo2.ico">
   <meta property="og:type" content="website">
   <meta property="og:title" content="The Auditable AI Ecosystem | Yue Zhao">
-  <meta property="og:description" content="A research-to-product stack for auditing AI agents across their full lifecycle: a method, two benchmarks, an open-source tool, and a knowledge base behind Auditable AI.">
+  <meta property="og:description" content="Eleven open artifacts for auditing AI agents across the full lifecycle: pre-deployment scanning and benchmarking, runtime tool-call gating, and post-run capture, replay, and attribution.">
   <meta property="og:url" content="https://viterbi-web.usc.edu/~yzhao010/ecosystem.html">
   <meta property="og:image" content="https://viterbi-web.usc.edu/~yzhao010/images/logo.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="The Auditable AI Ecosystem | Yue Zhao">
-  <meta name="twitter:description" content="A research-to-product stack for auditing AI agents across their full lifecycle: a method, two benchmarks, an open-source tool, and a knowledge base behind Auditable AI.">
+  <meta name="twitter:description" content="Eleven open artifacts for auditing AI agents across the full lifecycle: pre-deployment scanning and benchmarking, runtime tool-call gating, and post-run capture, replay, and attribution.">
   <meta name="twitter:image" content="https://viterbi-web.usc.edu/~yzhao010/images/logo.png">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
     "name": "The Auditable AI Ecosystem",
-    "description": "A research-to-product stack covering a method, two benchmarks, an open-source tool, and a curated knowledge base for auditing AI agents across their full lifecycle.",
+    "description": "Eleven open artifacts for auditing AI agents across the full lifecycle: pre-deployment scanning and benchmarking, runtime tool-call gating, and post-run capture, replay, and attribution.",
     "url": "https://viterbi-web.usc.edu/~yzhao010/ecosystem.html",
     "author": {
       "@type": "Person",
@@ -74,6 +74,43 @@
         "name": "awesome-auditable-ai",
         "description": "A curated map of papers, tools, datasets, and standards for reliable, auditable AI agents.",
         "url": "https://github.com/yzhao062/awesome-auditable-ai"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "agent-audit",
+        "description": "A static scan of agent code for security and over-privilege issues, run before deployment.",
+        "url": "https://viterbi-web.usc.edu/~yzhao010/agent-audit.html",
+        "codeRepository": "https://github.com/HeadyZhang/agent-audit",
+        "programmingLanguage": "Python"
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Aegis",
+        "description": "A pre-execution firewall that gates each tool call while an agent is running.",
+        "url": "https://viterbi-web.usc.edu/~yzhao010/aegis.html",
+        "codeRepository": "https://github.com/Justin0504/Aegis",
+        "programmingLanguage": "TypeScript"
+      },
+      {
+        "@type": "ScholarlyArticle",
+        "name": "Auditable Agents",
+        "description": "The framework organizing what agent auditability requires: five dimensions and three mechanism classes, namely detect, enforce, and recover.",
+        "url": "https://arxiv.org/abs/2604.05485"
+      },
+      {
+        "@type": "ScholarlyArticle",
+        "name": "No Attacker Needed: Unintentional Cross-User Contamination in Shared-State LLM Agents",
+        "url": "https://arxiv.org/abs/2604.01350"
+      },
+      {
+        "@type": "ScholarlyArticle",
+        "name": "Topology Matters: Measuring Memory Leakage in Multi-Agent LLMs",
+        "url": "https://arxiv.org/abs/2512.04668"
+      },
+      {
+        "@type": "ScholarlyArticle",
+        "name": "When Only the Final Text Survives: Implicit Execution Tracing for Multi-Agent Auditing",
+        "url": "https://arxiv.org/abs/2603.17445"
       }
     ],
     "about": [
@@ -106,77 +143,210 @@
         <!-- ── HERO ── -->
         <h1 style="color:#990000;">The Auditable AI Ecosystem</h1>
         <p style="font-size:1.05rem; color:#7a2a2a; font-weight:600; margin-bottom:14px;">
-          From data anomalies to agent decisions: one research-to-product stack.
+          Open-source infrastructure for auditing AI agents, from before deployment to after a run.
         </p>
         <p>
-          This ecosystem covers auditing AI across its full lifecycle: a research method, two benchmarks, an
-          open-source tool, and a curated knowledge base that cite and reinforce one another. FORTIS tests
-          over-privilege before deployment; CatchBench scores whether a failure is catchable at each stage of
-          a run. The stack supports <a href="https://auditable.run" target="_blank" rel="noopener"><strong>Auditable AI</strong></a>,
+          Eleven open artifacts, each answering one question an auditor asks at one point in an agent's life.
+          Every one is public and citable, and the tools install from PyPI. The stack supports
+          <a href="https://auditable.run" target="_blank" rel="noopener"><strong>Auditable AI</strong></a>,
           the company building the auditable layer for AI agents.
         </p>
+        <p style="font-size:0.95rem; color:#555;">
+          This page covers the auditing-of-action arm of the lab's work and says where each piece applies.
+          The research argument behind it is on the <a href="index.html">home page</a>. For the
+          detection-in-data arm, see <a href="pyod.html">PyOD</a>. For the sourced adoption record across
+          every project, see <a href="opensource.html">open source</a>.
+        </p>
 
-        <hr>
+        <!-- ── START HERE ── -->
+        <h2 style="color:#990000; border-bottom:2px solid #990000; padding-bottom:6px; margin:30px 0 16px 0;">Start Here</h2>
+        <div style="background:#fff7f7; border-left:4px solid #990000; padding:14px 18px; margin:0 0 8px 0;">
+          <div style="font-family:'SFMono-Regular',Consolas,'Liberation Mono',monospace; font-size:1.1rem; font-weight:700; color:#990000; margin-bottom:8px;">pip install auditable</div>
+          <p style="margin:0 0 10px 0; color:#555; font-size:0.95rem; line-height:1.6;">
+            The fastest way in. <code>auditable</code> is the production entry point, and it sits at the
+            post-run end of the lifecycle below. If you would rather read first, the
+            <a href="https://arxiv.org/abs/2604.05485" target="_blank" rel="noopener">Auditable Agents</a>
+            framework paper is the shortest path to why the pieces are split this way.
+          </p>
+          <div style="font-size:0.88rem;">
+            <a href="auditable.html"><i class="fas fa-file-lines" aria-hidden="true"></i> Tool page</a>
+            &nbsp;|&nbsp;
+            <a href="https://auditable-ai.readthedocs.io/" target="_blank" rel="noopener"><i class="fas fa-book" aria-hidden="true"></i> Docs</a>
+            &nbsp;|&nbsp;
+            <a href="https://github.com/yzhao062/auditable" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a>
+            &nbsp;|&nbsp;
+            <a href="https://pypi.org/project/auditable/" target="_blank" rel="noopener"><i class="fas fa-cube" aria-hidden="true"></i> PyPI</a>
+          </div>
+        </div>
 
-        <!-- ── THE auditable STACK ── -->
-        <h2 style="color:#990000;">The <code>auditable</code> Stack</h2>
+        <!-- ── LIFECYCLE: EACH ARTIFACT APPEARS EXACTLY ONCE ── -->
+        <h2 style="color:#990000; border-bottom:2px solid #990000; padding-bottom:6px; margin:30px 0 16px 0;">Where Each Piece Applies</h2>
         <p style="color:#555; font-size:0.95rem; margin-bottom:14px;">
-          Four open artifacts form the auditing-of-action arm of the ecosystem: the GRADE method, the
-          production-grade <code>auditable</code> tool, the CatchBench benchmark, and the
-          <code>awesome-auditable-ai</code> knowledge base. FORTIS appears below as the pre-deployment
-          over-privilege benchmark in the lifecycle view.
+          An agent can be checked at three moments, and the evidence available differs at each. Before a run
+          you have the declared configuration and the code. During a run you have the call about to fire.
+          After a run you have whatever the trace preserved. Each artifact below sits at the moment where its
+          evidence exists, and appears once.
+        </p>
+
+        <div class="row g-3" style="margin-bottom:22px;">
+
+          <div class="col-12 col-md-4">
+            <div style="border:1px solid #e8d0d0; border-radius:8px; padding:14px 16px; height:100%; background:#fff7f7;">
+              <div style="color:#7a2a2a; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:10px;"><i class="fas fa-clipboard-check" style="width:1.05em; margin-right:0.35em; opacity:0.9;" aria-hidden="true"></i>Pre &middot; Before Deployment</div>
+
+              <div style="margin-bottom:14px;">
+                <div style="font-size:1rem; font-weight:700; margin-bottom:3px;">
+                  <a href="agent-audit.html">agent-audit</a>
+                  <span style="font-size:0.66rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; color:#fff; background:#990000; padding:1px 5px; border-radius:3px; vertical-align:middle; margin-left:4px;">Tool</span>
+                </div>
+                <div style="color:#555; font-size:0.86rem; line-height:1.5;">
+                  <em>Does this agent ask for more than it needs?</em>
+                  A static scan of agent code for security and over-privilege issues, run before anything ships.
+                </div>
+              </div>
+
+              <div>
+                <div style="font-size:1rem; font-weight:700; margin-bottom:3px;">
+                  <a href="https://arxiv.org/abs/2605.09163" target="_blank" rel="noopener">FORTIS</a>
+                  <span style="font-size:0.66rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; color:#fff; background:#7a2a2a; padding:1px 5px; border-radius:3px; vertical-align:middle; margin-left:4px;">Benchmark</span>
+                </div>
+                <div style="color:#555; font-size:0.86rem; line-height:1.5;">
+                  <em>Does the agent stay inside the skill it was given?</em>
+                  A benchmark for over-privilege in agent skills: whether a model selects the minimally
+                  sufficient skill and runs it without expanding into broader tools or actions.
+                </div>
+                <div style="margin-top:6px; font-size:0.8rem;">
+                  <a href="https://arxiv.org/abs/2605.09163" target="_blank" rel="noopener"><i class="fas fa-file-lines" aria-hidden="true"></i> arXiv</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-4">
+            <div style="border:1px solid #e8d0d0; border-radius:8px; padding:14px 16px; height:100%; background:#fff7f7;">
+              <div style="color:#7a2a2a; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:10px;"><i class="fas fa-shield-halved" style="width:1.05em; margin-right:0.35em; opacity:0.9;" aria-hidden="true"></i>Live &middot; While Running</div>
+
+              <div style="margin-bottom:14px;">
+                <div style="font-size:1rem; font-weight:700; margin-bottom:3px;">
+                  <a href="aegis.html">Aegis</a>
+                  <span style="font-size:0.66rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; color:#fff; background:#990000; padding:1px 5px; border-radius:3px; vertical-align:middle; margin-left:4px;">Tool</span>
+                </div>
+                <div style="color:#555; font-size:0.86rem; line-height:1.5;">
+                  <em>Can this call be stopped before it fires?</em>
+                  A pre-execution firewall that gates each tool call while the agent is running.
+                </div>
+              </div>
+
+              <div style="margin-bottom:14px;">
+                <div style="font-size:1rem; font-weight:700; margin-bottom:3px;">
+                  <a href="https://arxiv.org/abs/2604.01350" target="_blank" rel="noopener">Cross-User Contamination</a>
+                  <span style="font-size:0.66rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; color:#555; background:#e8d0d0; padding:1px 5px; border-radius:3px; vertical-align:middle; margin-left:4px;">Paper</span>
+                </div>
+                <div style="color:#555; font-size:0.86rem; line-height:1.5;">
+                  <em>Is one user's data reaching another?</em>
+                  Measures leakage across users in agents that share state.
+                </div>
+              </div>
+
+              <div>
+                <div style="font-size:1rem; font-weight:700; margin-bottom:3px;">
+                  <a href="https://arxiv.org/abs/2512.04668" target="_blank" rel="noopener">Topology Matters</a>
+                  <span style="font-size:0.66rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; color:#555; background:#e8d0d0; padding:1px 5px; border-radius:3px; vertical-align:middle; margin-left:4px;">Paper</span>
+                </div>
+                <div style="color:#555; font-size:0.86rem; line-height:1.5;">
+                  <em>How much memory leaks between agents?</em>
+                  Memory leakage in multi-agent LLM systems, measured against the topology that connects them.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-4">
+            <div style="border:1px solid #e8d0d0; border-radius:8px; padding:14px 16px; height:100%; background:#fff7f7;">
+              <div style="color:#7a2a2a; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:10px;"><i class="fas fa-magnifying-glass-chart" style="width:1.05em; margin-right:0.35em; opacity:0.9;" aria-hidden="true"></i>Post &middot; After a Run</div>
+
+              <div style="margin-bottom:14px;">
+                <div style="font-size:1rem; font-weight:700; margin-bottom:3px;">
+                  <a href="auditable.html"><code>auditable</code></a>
+                  <span style="font-size:0.66rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; color:#fff; background:#990000; padding:1px 5px; border-radius:3px; vertical-align:middle; margin-left:4px;">Tool</span>
+                </div>
+                <div style="color:#555; font-size:0.86rem; line-height:1.5;">
+                  <em>What did this decision rely on, and can it be undone?</em>
+                  A framework-agnostic system of record that captures each decision's dependencies, replays them
+                  against live state, and rolls back the committed action when they no longer hold.
+                </div>
+              </div>
+
+              <div style="margin-bottom:14px;">
+                <div style="font-size:1rem; font-weight:700; margin-bottom:3px;">
+                  <a href="https://arxiv.org/abs/2606.22741" target="_blank" rel="noopener">GRADE</a>
+                  <span style="font-size:0.66rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; color:#555; background:#e8d0d0; padding:1px 5px; border-radius:3px; vertical-align:middle; margin-left:4px;">Method</span>
+                </div>
+                <div style="color:#555; font-size:0.86rem; line-height:1.5;">
+                  <em>Which step went wrong?</em>
+                  The research engine <code>auditable</code> is built on: a typed two-layer graph of agent
+                  execution and dependency that predicts run failure and localizes the faulting step in a
+                  failed multi-agent run.
+                </div>
+                <div style="margin-top:6px; font-size:0.8rem;">
+                  <a href="https://arxiv.org/abs/2606.22741" target="_blank" rel="noopener"><i class="fas fa-file-lines" aria-hidden="true"></i> arXiv</a>
+                  &nbsp;|&nbsp;
+                  <a href="https://github.com/yzhao062/grade" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i> Code</a>
+                </div>
+              </div>
+
+              <div>
+                <div style="font-size:1rem; font-weight:700; margin-bottom:3px;">
+                  <a href="https://arxiv.org/abs/2603.17445" target="_blank" rel="noopener">Implicit Execution Tracing</a>
+                  <span style="font-size:0.66rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; color:#555; background:#e8d0d0; padding:1px 5px; border-radius:3px; vertical-align:middle; margin-left:4px;">Method</span>
+                </div>
+                <div style="color:#555; font-size:0.86rem; line-height:1.5;">
+                  <em>Who caused this, when the logs are gone?</em>
+                  Recovers segment-level attribution in a multi-agent run from the final text alone.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── SPANS ALL THREE ── -->
+        <h2 style="color:#990000; border-bottom:2px solid #990000; padding-bottom:6px; margin:30px 0 16px 0;">Across the Whole Lifecycle</h2>
+        <p style="color:#555; font-size:0.95rem; margin-bottom:14px;">
+          Three artifacts do not sit at one moment. One says what auditability requires, one measures whether
+          the requirement was met, and one maps the surrounding literature.
         </p>
 
         <div class="row g-3" style="margin-bottom:20px;">
-          <div class="col-12 col-sm-6 col-md-3">
+          <div class="col-12 col-md-4">
             <div style="border:1px solid #e8d0d0; border-radius:8px; padding:14px 16px; height:100%; background:#fff7f7;">
-              <div style="color:#7a2a2a; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:6px;">Tool</div>
+              <div style="color:#7a2a2a; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:6px;">Framework</div>
               <div style="font-size:1.05rem; font-weight:700; margin-bottom:6px;">
-                <a href="auditable.html"><code>auditable</code></a>
+                <a href="https://arxiv.org/abs/2604.05485" target="_blank" rel="noopener">Auditable Agents</a>
               </div>
               <div style="color:#555; font-size:0.88rem; line-height:1.5;">
-                <code>auditable</code> is an open-source system of record for AI-agent decisions: it captures what
-                each decision relied on, replays it against live state, and rolls back the committed action when it
-                no longer holds. Framework-agnostic, dependency-free core; <code>pip install auditable</code>.
+                <em>What does auditability actually require?</em>
+                Five dimensions and three mechanism classes: detect, enforce, recover. The grid above is that
+                framework instantiated.
               </div>
               <div style="margin-top:10px; font-size:0.82rem;">
-                <a href="https://github.com/yzhao062/auditable" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a>
+                <a href="auditable-agents.html"><i class="fas fa-file-lines" aria-hidden="true"></i> Summary</a>
                 &nbsp;|&nbsp;
-                <a href="https://pypi.org/project/auditable/" target="_blank" rel="noopener"><i class="fas fa-cube" aria-hidden="true"></i> PyPI</a>
-                &nbsp;|&nbsp;
-                <a href="https://auditable-ai.readthedocs.io/" target="_blank" rel="noopener"><i class="fas fa-book" aria-hidden="true"></i> Docs</a>
+                <a href="https://arxiv.org/abs/2604.05485" target="_blank" rel="noopener"><i class="fas fa-scroll" aria-hidden="true"></i> arXiv</a>
               </div>
             </div>
           </div>
 
-          <div class="col-12 col-sm-6 col-md-3">
-            <div style="border:1px solid #e8d0d0; border-radius:8px; padding:14px 16px; height:100%; background:#fff7f7;">
-              <div style="color:#7a2a2a; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:6px;">Method</div>
-              <div style="font-size:1.05rem; font-weight:700; margin-bottom:6px;">
-                <a href="https://arxiv.org/abs/2606.22741" target="_blank" rel="noopener">GRADE</a>
-              </div>
-              <div style="color:#555; font-size:0.88rem; line-height:1.5;">
-                The research engine the tool is built on: a typed two-layer graph of agent execution and
-                dependency, used to detect run failure and localize the faulting step in multi-agent runs.
-              </div>
-              <div style="margin-top:10px; font-size:0.82rem;">
-                <a href="https://arxiv.org/abs/2606.22741" target="_blank" rel="noopener"><i class="fas fa-file-alt" aria-hidden="true"></i> arXiv</a>
-                &nbsp;|&nbsp;
-                <a href="https://github.com/yzhao062/grade" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i> Code</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-12 col-sm-6 col-md-3">
+          <div class="col-12 col-md-4">
             <div style="border:1px solid #e8d0d0; border-radius:8px; padding:14px 16px; height:100%; background:#fff7f7;">
               <div style="color:#7a2a2a; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:6px;">Benchmark</div>
               <div style="font-size:1.05rem; font-weight:700; margin-bottom:6px;">
                 <a href="https://arxiv.org/abs/2608.22808" target="_blank" rel="noopener">CatchBench</a>
               </div>
               <div style="color:#555; font-size:0.88rem; line-height:1.5;">
-                What the stack is measured against: can a failure be caught before a run, during it, or only
-                after? It scores 72 entrants over 1187 declared configurations and 1162 recorded runs, and
-                publishes the contrasts that fail to separate rather than ranking them.
+                <em>Was the failure catchable at all?</em>
+                Puts one auditor's question to all three information states under a single interface. It scores
+                72 entrants over 1187 declared configurations and 1162 recorded runs, and publishes the 71
+                contrasts that fail to separate rather than ranking them.
               </div>
               <div style="margin-top:10px; font-size:0.82rem;">
                 <a href="https://arxiv.org/abs/2608.22808" target="_blank" rel="noopener"><i class="fas fa-file-lines" aria-hidden="true"></i> arXiv</a>
@@ -185,16 +355,17 @@
               </div>
             </div>
           </div>
-          <div class="col-12 col-sm-6 col-md-3">
+
+          <div class="col-12 col-md-4">
             <div style="border:1px solid #e8d0d0; border-radius:8px; padding:14px 16px; height:100%; background:#fff7f7;">
-              <div style="color:#7a2a2a; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:6px;">Resource</div>
+              <div style="color:#7a2a2a; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:6px;">Reference</div>
               <div style="font-size:1.05rem; font-weight:700; margin-bottom:6px;">
                 <a href="https://github.com/yzhao062/awesome-auditable-ai" target="_blank" rel="noopener">awesome-auditable-ai</a>
               </div>
               <div style="color:#555; font-size:0.88rem; line-height:1.5;">
-                A curated map of papers, tools, datasets, and standards for reliable, auditable AI agents.
-                The Knowledge cell of the Auditable Matrix: 0 hallucinations across 69 arXiv entries,
-                citation-verified.
+                <em>Who else is working on this?</em>
+                A curated map of papers, tools, datasets, and standards for reliable, auditable AI agents,
+                with published checks for paper-title and destination consistency.
               </div>
               <div style="margin-top:10px; font-size:0.82rem;">
                 <a href="https://github.com/yzhao062/awesome-auditable-ai" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a>
@@ -203,130 +374,21 @@
           </div>
         </div>
 
-        <hr>
-
-        <!-- ── PRE / LIVE / POST GRID ── -->
-        <h2 style="color:#990000;">Auditing Across the Agent Lifecycle</h2>
-        <p style="color:#555; font-size:0.95rem; margin-bottom:6px;">
-          <a href="https://arxiv.org/abs/2604.05485" target="_blank" rel="noopener" style="font-weight:600;">Auditable Agents</a>
-          is the framework that organizes what agent auditability requires: five dimensions and three mechanism
-          classes (detect, enforce, recover). The research below instantiates them at each point in an agent's
-          life.
-          <a href="https://arxiv.org/abs/2608.22808" target="_blank" rel="noopener" style="font-weight:600;">CatchBench</a>
-          then scores all three states under one task-method interface, which turns when a failure can be
-          caught into a measurement.
-        </p>
-
-        <div style="
-          background-color:#fff7f7;
-          border-left:4px solid #990000;
-          padding:14px 18px;
-          margin:14px 0 20px 0;
-        ">
-          <div class="row g-3">
-            <div class="col-12 col-md-4">
-              <div style="color:#7a2a2a; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:6px;">PRE &middot; Before Deploy</div>
-              <div style="color:#555; font-size:0.88rem; line-height:1.6;">
-                <a href="https://arxiv.org/abs/2605.09163" target="_blank" rel="noopener" style="font-weight:600;">FORTIS</a>:
-                a benchmark for over-privilege in agent skills.<br>
-                <a href="agent-audit.html" style="font-weight:600;">agent-audit</a>:
-                a static scan of agent code for security and over-privilege issues.
-              </div>
-            </div>
-            <div class="col-12 col-md-4">
-              <div style="color:#7a2a2a; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:6px;">LIVE &middot; While Running</div>
-              <div style="color:#555; font-size:0.88rem; line-height:1.6;">
-                <a href="https://arxiv.org/abs/2604.01350" target="_blank" rel="noopener" style="font-weight:600;">Cross-User Contamination</a>:
-                one user's data leaking into another's in shared-state agents.<br>
-                <a href="https://arxiv.org/abs/2512.04668" target="_blank" rel="noopener" style="font-weight:600;">Topology Matters</a>:
-                measuring memory leakage in multi-agent LLMs.<br>
-                <a href="aegis.html" style="font-weight:600;">Aegis</a>:
-                a pre-execution firewall that gates each tool call.
-              </div>
-            </div>
-            <div class="col-12 col-md-4">
-              <div style="color:#7a2a2a; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:6px;">POST &middot; After a Run</div>
-              <div style="color:#555; font-size:0.88rem; line-height:1.6;">
-                <a href="https://arxiv.org/abs/2603.17445" target="_blank" rel="noopener" style="font-weight:600;">Implicit Execution Tracing</a>:
-                recovering which agent caused a harmful result after the logs are gone.<br>
-                <a href="https://arxiv.org/abs/2606.22741" target="_blank" rel="noopener" style="font-weight:600;">GRADE</a>:
-                localizing the faulting step in a completed multi-agent run.
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <hr>
-
-        <!-- ── THREE-POINT RESEARCH FRAMING ── -->
-        <h2 style="color:#990000;">The Three Points of Auditable AI Systems</h2>
-        <p style="color:#555; font-size:0.95rem; margin-bottom:12px;">
-          One question runs through the lab, asked at three points: did this depart from what was expected,
-          and can anyone still tell? The list below runs in the order failures travel. An input the system
-          was never built for can surface as a model failure, and a model failure can surface as an action
-          nobody authorized. Neither step is guaranteed, and an action can go wrong with no model failure
-          behind it. Evidence has to survive the points an incident touches, or the trail stops short of the
-          origin.
-        </p>
-
-        <ol style="font-size:0.95rem; line-height:1.7; color:#333;">
-          <li style="margin-bottom:12px;">
-            <strong style="color:#990000;">Detection in Data: Anomaly, Outlier, and Out-of-Distribution Detection</strong><br>
-            <span style="color:#555;">
-              The question here is whether an input departed from the conditions represented during
-              development and evaluation. Anomaly detection and outlier detection ask which records depart
-              from the rest when nothing labels them; out-of-distribution detection asks whether the input
-              belongs to the training distribution at all. That boundary is hard to estimate when labels or
-              representative examples are sparse. This is the program's methodological and open-source base,
-              built through the <a href="pyod.html"><strong>PyOD</strong></a> ecosystem. PyOD is the canonical
-              open-source anomaly-detection library: 55M+ downloads, named by OpenAI, used in Amazon and
-              European Space Agency anomaly-detection work, and listed by the U.S. DoD CDAO. It is now in its
-              third major release. When an incident involves distribution shift, these methods supply the
-              evidence for whether unfamiliar input conditions contributed to it.
-            </span>
-          </li>
-          <li style="margin-bottom:12px;">
-            <strong style="color:#990000;">Verification of Output: LLM Evaluation, Hallucination, Jailbreaks, and Guardrails</strong><br>
-            <span style="color:#555;">
-              Behavior under attack, hallucination of fact and reasoning, and adversarial robustness of
-              retrieval. LLM evaluation is routine when a reference answer exists and is the whole problem
-              when none does. Failures on any of these surfaces can propagate downstream when the model's
-              output is passed to an agent or a user-facing system. Work covers LLM jailbreak detection for
-              vision-language models, causal analysis of hallucination, query-agnostic attacks on RAG, and
-              LLM-as-anomaly-detector benchmarks.
-            </span>
-          </li>
-          <li style="margin-bottom:12px;">
-            <strong style="color:#990000;">Auditing of Action: AI Agent Security, Audit Trails, and MCP Security</strong><br>
-            <span style="color:#555;">
-              Auditability frameworks, tool-call security and MCP security surfaces, and agent-specific
-              failure modes such as over-privilege, which OWASP names Excessive Agency, and cross-user
-              contamination. An action-only incident is established from evidence at this point rather than
-              from the two above it. The current frontier is turning this research into deployable
-              open-source infrastructure that audits agents from before deployment to after a run. See the
-              PRE / LIVE / POST grid above.
-            </span>
-          </li>
-        </ol>
-
-        <hr>
-
         <!-- ── CLOSING CTA ── -->
-        <h2 style="color:#990000;">Get Involved</h2>
+        <h2 style="color:#990000; border-bottom:2px solid #990000; padding-bottom:6px; margin:30px 0 16px 0;">Build on It</h2>
         <p>
-          The ecosystem is open: every artifact is public, citable, and built to be extended. If you are
-          building on any part of this stack, the best starting points are the
-          <a href="auditable.html"><code>auditable</code> tool page</a> for the SDK,
-          <a href="https://arxiv.org/abs/2606.22741" target="_blank" rel="noopener">GRADE (arXiv:2606.22741)</a>
-          for the research method, and
-          <a href="https://github.com/yzhao062/awesome-auditable-ai" target="_blank" rel="noopener">awesome-auditable-ai</a>
-          for a map of the broader literature.
+          Every artifact here is public, citable, and built to be extended. If you are adding a detector, a
+          policy, or a new lifecycle stage, open an issue on the repository it belongs to. If you are
+          benchmarking against this work, <a href="https://github.com/yzhao062/catchbench" target="_blank" rel="noopener">CatchBench</a>
+          is the entrant interface, and it takes submissions that fail to separate as readily as ones that win.
         </p>
         <p>
           For the company building on top of this stack, visit
           <a href="https://auditable.run" target="_blank" rel="noopener"><strong>Auditable AI (auditable.run)</strong></a>.
-          All open-source work lives under
+          Most of this stack lives under
           <a href="https://github.com/yzhao062" target="_blank" rel="noopener">github.com/yzhao062</a>.
+          <a href="agent-audit.html">agent-audit</a> and <a href="aegis.html">Aegis</a> are maintained in
+          their authors' own repositories, linked from their pages above.
         </p>
 
       </div>

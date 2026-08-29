@@ -479,7 +479,7 @@ def bio_regions(bio_path: Path) -> dict[str, str]:
     indent = " " * 24
     rendered = [
         f'{indent}<details class="smart-details" style="margin:16px 0 14px 0;">',
-        f'{indent}  <summary><strong style="color:#990000">Biography</strong></summary>',
+        f'{indent}  <summary><h3 style="display:inline; color:#990000; font-size:1rem; font-weight:700; line-height:inherit; margin:0;">Biography</h3></summary>',
     ]
     for paragraph in paragraphs:
         escaped = html.escape(paragraph, quote=False)
