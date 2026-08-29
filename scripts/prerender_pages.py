@@ -204,7 +204,7 @@ def render_preprint_groups(items: Iterable[dict[str, Any]]) -> str:
     blocks: list[str] = []
     for year in sorted(groups, reverse=True):
         entries = textwrap.indent(render_publication_items(groups[year]), "    ")
-        blocks.extend((f"<h5>{year}</h5>", '<ul class="vert">', entries, "</ul>"))
+        blocks.extend((f'<h3 style="font-size:1.25rem;">{year}</h3>', '<ul class="vert">', entries, "</ul>"))
     return "\n".join(blocks)
 
 

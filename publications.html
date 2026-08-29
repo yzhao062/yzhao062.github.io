@@ -128,10 +128,10 @@
                         trails.
                     </p>
                     <hr>
-                    <h4 id="preprints--working-papers">Preprints &amp; Working Papers</h4>
+                    <h2 class="h4" id="preprints--working-papers">Preprints &amp; Working Papers</h2>
                     <div id="preprint-papers-container">
                         <!-- PRERENDER:publications-preprint-recent START -->
-                        <h5>2026</h5>
+                        <h3 style="font-size:1.25rem;">2026</h3>
                         <ul class="vert">
                             <li class="prerendered-publication" data-publication-id="preprint-catchbench" itemscope itemtype="https://schema.org/ScholarlyArticle">
                                 <strong><a itemprop="url" href="https://arxiv.org/abs/2608.22808"><span itemprop="name">CatchBench: When Can an Agent Failure Be Caught?</span></a></strong>.<br>
@@ -250,7 +250,7 @@
                         <summary style="cursor: pointer;">Show older preprints</summary>
                         <div id="preprint-papers-older-container">
                             <!-- PRERENDER:publications-preprint-older START -->
-                            <h5>2025</h5>
+                            <h3 style="font-size:1.25rem;">2025</h3>
                             <ul class="vert">
                                 <li class="prerendered-publication" data-publication-id="preprint-tagfn" itemscope itemtype="https://schema.org/ScholarlyArticle">
                                     <strong><a itemprop="url" href="https://arxiv.org/abs/2511.21624"><span itemprop="name">TAGFN: A Text-Attributed Graph Dataset for Fake News Detection in the Age of LLMs</span></a></strong>.<br>
@@ -308,7 +308,7 @@
                                     <span itemprop="isPartOf">arXiv preprint (<time itemprop="datePublished" datetime="2025">2025</time>)</span>
                                 </li>
                             </ul>
-                            <h5>2024</h5>
+                            <h3 style="font-size:1.25rem;">2024</h3>
                             <ul class="vert">
                                 <li class="prerendered-publication" data-publication-id="preprint-llm-political-simulation" itemscope itemtype="https://schema.org/ScholarlyArticle">
                                     <strong><a itemprop="url" href="https://arxiv.org/abs/2412.15291"><span itemprop="name">A Large-Scale Simulation on Large Language Models for Decision-Making in Political Science</span></a></strong>.<br>
@@ -330,7 +330,7 @@
                         </div>
                     </details>
                     <hr>
-                    <h4 id="conference-papers">Conference and Workshop Papers</h4>
+                    <h2 class="h4" id="conference-papers">Conference and Workshop Papers</h2>
                     <ul class="vert" id="conference-papers-list">
                         <!-- PRERENDER:publications-conference-recent START -->
                         <li class="prerendered-publication" data-publication-id="conference-weclawarena-auditable-sandbox-for-cross-user-agent-security" itemscope itemtype="https://schema.org/ScholarlyArticle">
@@ -743,7 +743,7 @@
                         </ul>
                     </details>
 
-                    <h4 id="journal-papers">Journal Papers</h4>
+                    <h2 class="h4" id="journal-papers">Journal Papers</h2>
                     <ul class="vert" id="journal-papers-list">
                         <!-- PRERENDER:publications-journal-recent START -->
                         <li class="prerendered-publication" data-publication-id="journal-don-t-let-it-hallucinate-premise-verification-via-retrieval-augmented-logical-reasoning" itemscope itemtype="https://schema.org/ScholarlyArticle">
@@ -1072,7 +1072,7 @@
                                 var years = Object.keys(groups).sort(function(a, b) { return b - a; });
                                 var html = '';
                                 years.forEach(function(year) {
-                                    html += '<h5>' + year + '</h5>';
+                                    html += '<h3 style="font-size:1.25rem;">' + year + '</h3>';
                                     html += '<ul class="vert">';
                                     html += groups[year].map(renderPreprintItem).join('\n');
                                     html += '</ul>';
