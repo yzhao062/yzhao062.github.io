@@ -4,20 +4,20 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="author" content="Yue Zhao">
-  <meta name="description" content="Yue Zhao, USC computer science assistant professor, builds Auditable AI Systems through anomaly detection, LLM evaluation and guardrails, and AI agent auditing and security.">
-  <meta name="keywords" content="Yue Zhao, USC, AI Assurance, Auditable AI Systems, Agent Auditability, LLM Evaluation, LLM Hallucination, LLM Jailbreak Detection, LLM Guardrails, AI Agent Security, Tool-Call Security, MCP Security, Least Privilege, Over-Privilege, Audit Trails, Agent Systems, AI Agent Auditing, auditable, Agent Decision Auditing, AI Behavior Verification, Agentic AI, AI Risk Audit and Control, AI Risk, AI Risk Audit, AI Risk Control, AI Risk Management, AI Auditing, AI Defense, Adversarial Robustness, Anomaly Detection, Out-of-Distribution Detection, Trustworthiness Benchmarks, Runtime Guardrails, Foundation Models, AI Safety, AI Security, Outlier Detection, AI for Science and Society, Climate AI, Healthcare AI, Computational Social Systems, open-source ecosystem, NSF POSE, open-source sustainability, research software">
+  <meta name="description" content="Yue Zhao, USC computer science assistant professor, builds Auditable AI Systems through anomaly detection, LLM evaluation and guardrails, AI agent auditing and security, and agent efficiency.">
+  <meta name="keywords" content="Yue Zhao, USC, AI Assurance, Auditable AI Systems, Agent Auditability, LLM Evaluation, LLM Hallucination, LLM Jailbreak Detection, LLM Guardrails, AI Agent Security, Tool-Call Security, MCP Security, Least Privilege, Over-Privilege, Audit Trails, Agent Systems, AI Agent Auditing, auditable, Agent Decision Auditing, AI Behavior Verification, Agentic AI, AI Risk Audit and Control, AI Risk, AI Risk Audit, AI Risk Control, AI Risk Management, AI Auditing, AI Defense, Adversarial Robustness, Anomaly Detection, Out-of-Distribution Detection, Trustworthiness Benchmarks, Runtime Guardrails, Foundation Models, AI Safety, AI Security, Outlier Detection, AI for Science and Society, Climate AI, Healthcare AI, Computational Social Systems, Agent Efficiency, LLM Routing, Inference Cost, open-source ecosystem, NSF POSE, open-source sustainability, research software">
 
   <title>Yue Zhao, USC | Auditable AI Systems: Anomaly Detection, LLMs, Agent Security</title>
   <link rel="canonical" href="https://viterbi-web.usc.edu/~yzhao010/">
   <link rel="icon" type="image/x-icon" href="images/logo2.ico">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Yue Zhao, USC | Auditable AI Systems: Anomaly Detection, LLMs, Agent Security">
-  <meta property="og:description" content="Yue Zhao, USC computer science assistant professor, builds Auditable AI Systems through anomaly detection, LLM evaluation and guardrails, and AI agent auditing and security.">
+  <meta property="og:description" content="Yue Zhao, USC computer science assistant professor, builds Auditable AI Systems through anomaly detection, LLM evaluation and guardrails, AI agent auditing and security, and agent efficiency.">
   <meta property="og:url" content="https://viterbi-web.usc.edu/~yzhao010/">
   <meta property="og:image" content="https://viterbi-web.usc.edu/~yzhao010/images/logo.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Yue Zhao, USC | Auditable AI Systems: Anomaly Detection, LLMs, Agent Security">
-  <meta name="twitter:description" content="Yue Zhao, USC computer science assistant professor, builds Auditable AI Systems through anomaly detection, LLM evaluation and guardrails, and AI agent auditing and security.">
+  <meta name="twitter:description" content="Yue Zhao, USC computer science assistant professor, builds Auditable AI Systems through anomaly detection, LLM evaluation and guardrails, AI agent auditing and security, and agent efficiency.">
   <meta name="twitter:image" content="https://viterbi-web.usc.edu/~yzhao010/images/logo.png">
   <script type="application/ld+json">
   {
@@ -75,7 +75,10 @@
         "AI for Science and Society",
         "Climate AI",
         "Healthcare AI",
-        "Computational Social Systems"
+        "Computational Social Systems",
+        "Agent Efficiency",
+        "LLM Routing",
+        "Inference Cost"
       ]
     }
   }
@@ -88,7 +91,7 @@
     "name": "Yue Zhao",
     "alternateName": "Yue Zhao, USC | Auditable AI Systems",
     "url": "https://viterbi-web.usc.edu/~yzhao010/",
-    "about": "Auditable AI Systems: detecting anomalies in data, verifying outputs, and auditing actions when ground truth is unavailable."
+    "about": "Auditable AI Systems: detecting anomalies in data, verifying outputs, auditing actions, and optimizing effort when ground truth is unavailable."
   }
   </script>
   <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
@@ -106,6 +109,98 @@
   <!-- Use self-hosted fonts declared in css/common.css -->
   <link rel="stylesheet" href="css/common.css">
   <script src="assets/js/layout-shell.js" defer></script>
+  <style>
+    /* ---- Ecosystem card: three layers, one spine ---------------------------- */
+    .eco-layer + .eco-layer { margin-top: 18px; }
+    .eco-layer-body { min-width: 0; }
+    .eco-layer-label {
+      color: #990000; font-size: 0.7rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.08em;
+      display: flex; align-items: center; gap: 9px; margin-bottom: 9px;
+    }
+    /* below the spine breakpoint the label is an eyebrow with a rule running off it */
+    .eco-layer-label::after {
+      content: ""; flex: 1 1 auto; height: 1px; background: #e2bcbc;
+    }
+    @media (min-width: 992px) {
+      .eco-layer { display: flex; align-items: stretch; gap: 14px; }
+      .eco-layer-label {
+        flex: 0 0 82px; display: block; align-self: stretch; margin-bottom: 0;
+        border-right: 2px solid #e2bcbc; padding-right: 10px; padding-top: 2px;
+      }
+      .eco-layer-label::after { display: none; }
+      .eco-layer-body { flex: 1 1 auto; }
+    }
+
+    .eco-kind {
+      color: #7a2a2a; font-size: 0.75rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 3px;
+    }
+    .eco-kind i { width: 1.05em; margin-right: 0.35em; opacity: 0.9; }
+    .eco-items { color: #555; font-size: 0.88rem; line-height: 1.5; }
+    .eco-items a { font-weight: 600; }
+
+    /* ---- Stack layer: each artifact is an object in its own well ------------- */
+    .eco-wells { display: grid; gap: 16px; grid-template-columns: 1fr; }
+    @media (min-width: 576px) { .eco-wells { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    @media (min-width: 768px) { .eco-wells { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+    @media (min-width: 992px) { .eco-wells { grid-template-columns: repeat(5, minmax(0, 1fr)); } }
+    .eco-well {
+      background: #fff; border: 1px solid #eccfcf; border-radius: 4px;
+      padding: 9px 11px; height: 100%;
+    }
+    .eco-well .eco-name { font-size: 0.98rem; font-weight: 700; margin: 1px 0 2px; }
+    @media (max-width: 575.98px) {
+      /* one-up on a phone: shrink the box so it does not read as an empty panel */
+      .eco-well { padding: 7px 10px; }
+      .eco-well .eco-name { font-size: 0.94rem; margin: 0 0 1px; }
+    }
+
+    /* ---- Lifecycle layer: a rail that turns vertical when the stages stack --- */
+    .lc-track { position: relative; }
+    .lc-rail {
+      position: absolute; background: linear-gradient(to bottom, #e8c8c8, #990000);
+      left: 7px; top: 24px; bottom: 6px; width: 2px; border-radius: 1px;
+    }
+    .lc-rail::after {
+      content: ""; position: absolute; left: -3px; bottom: -7px;
+      border-top: 8px solid #990000;
+      border-left: 4px solid transparent; border-right: 4px solid transparent;
+    }
+    .lc-stage { padding-left: 24px; }
+    .lc-head {
+      display: flex; align-items: center; gap: 7px; margin-bottom: 4px;
+      margin-left: -24px;
+    }
+    @media (min-width: 992px) {
+      /* zero the row gutter: it lifts .lc-track's box above the dots the rail must pass through */
+      .lc-track > .row { --bs-gutter-y: 0; }
+      .lc-rail {
+        left: 8px; right: 15px; top: 8px; bottom: auto;
+        width: auto; height: 2px;
+        background: linear-gradient(to right, #e8c8c8, #990000);
+      }
+      .lc-rail::after {
+        left: auto; bottom: auto; right: -7px; top: -3px;
+        border-top: 4px solid transparent; border-bottom: 4px solid transparent;
+        border-left: 8px solid #990000; border-right: 0;
+      }
+      .lc-stage { padding-left: 0; }
+      .lc-head { align-items: flex-start; margin-left: 0; margin-bottom: 5px; }
+      .lc-dot { margin-top: 1px; }
+      /* the rail runs behind the labels, so give them the card ground to sit on */
+      .lc-label { position: relative; z-index: 1; background: #fff7f7; padding-right: 7px; }
+    }
+    .lc-dot {
+      width: 16px; height: 16px; border-radius: 50%; flex: none;
+      background: #fff7f7; border: 3px solid #990000;
+      position: relative; z-index: 1;
+    }
+    .lc-label {
+      color: #7a2a2a; font-size: 0.75rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.05em;
+    }
+  </style>
 </head>
 
 
@@ -127,34 +222,22 @@
                     <h1 class="visually-hidden">Yue Zhao, USC - Auditable AI Systems</h1>
                         <h2 id="research" style="color:#990000; border-bottom:2px solid #990000; padding-bottom:6px; margin:30px 0 16px 0;">&#128300; Research</h2>
                         <div style="background:#fff7f7; border-left:4px solid #990000; padding:12px 16px; margin:8px 0 12px 0;">
-                          <p style="margin:0 0 4px 0;">
-                            <strong>Auditable AI Systems.</strong> Detecting anomalies in data, verifying outputs, and
-                            auditing actions when ground truth is unavailable.
+                          <p style="margin:0 0 9px 0;">
+                            <strong>Auditable AI Systems.</strong> When no ground truth settles the answer, you can
+                            still ask four questions of the record a system leaves behind.
                           </p>
-                          <p style="margin:0 0 10px 0;">
-                            <strong>The approach.</strong> Build each point so that what happened can be
-                            reconstructed and checked after the fact. This is the lab's contribution to the
-                            broader field of AI Assurance.
-                          </p>
-                          <p style="margin:0 0 10px 0;">
-                            Auditability begins with an absence: whatever would settle the answer was never
-                            written down. No label says which records are anomalous. No reference answer
-                            settles whether a generated claim is right. No line in an agent's trace records
-                            what a step relied on, or what it was permitted to do. My lab studies that absence
-                            at three points in a system: the data going in, the output coming out, and the
-                            action taken. The order is the one failures travel. An input the system was never built
-                            for can surface as a model failure, and a model failure can surface as an action
-                            nobody authorized. Neither step is guaranteed, and an action can go wrong with no
-                            model failure behind it.
-                          </p>
+                          <div style="margin:0 0 10px 0; padding-left:12px; border-left:2px solid #e8d0d0;">
+                            <div style="color:#444; font-size:0.95rem; line-height:1.75;"><strong style="color:#990000;">Data</strong> &middot; does the input resemble anything the system was built for?</div>
+                            <div style="color:#444; font-size:0.95rem; line-height:1.75;"><strong style="color:#990000;">Output</strong> &middot; does it hold up against evidence?</div>
+                            <div style="color:#444; font-size:0.95rem; line-height:1.75;"><strong style="color:#990000;">Action</strong> &middot; was it allowed?</div>
+                            <div style="color:#444; font-size:0.95rem; line-height:1.75;"><strong style="color:#990000;">Effort</strong> &middot; was the work necessary?</div>
+                          </div>
                           <p style="margin:0;">
-                            Critical societal and scientific applications are where an unchecked system does
-                            the most damage, and where the correct answer is least likely to arrive in time.
-                            Wildfire evacuation is one case we work on: an agentic system recommends routes as
-                            conditions change. No labeled examples cover the situation, and the outcome that
-                            would settle a route choice arrives only after people have acted on it. The
-                            question underneath is what evidence
-                            is enough to rely on an AI system when ground truth is absent.
+                            Three of them ask whether something went wrong. The fourth asks whether it was needed.
+                            That fourth question is the one industry brings us: the companies that reach out want
+                            agents that cost less and finish faster. Building the record that answers all four is
+                            the lab's contribution to AI Assurance. The question underneath is what evidence is
+                            enough to rely on a system when ground truth is absent.
                           </p>
                         </div>
 
@@ -167,90 +250,109 @@
                         ">
                           <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
                             <h3 style="color:#990000; font-size:1rem; font-weight:700; line-height:inherit; margin:0;">The Auditable AI Ecosystem</h3>
-                            <span style="color:#7a2a2a; font-size:0.85rem;">from data anomalies to agent decisions</span>
+                            <span style="color:#7a2a2a; font-size:0.85rem;">from data anomalies to efficient agent decisions</span>
                           </div>
-                          <div class="row g-3" style="margin:2px 0 12px 0;">
-                            <div class="col-12 col-md-4">
-                              <div style="color:#7a2a2a; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:3px;"><i class="fas fa-magnifying-glass-chart" style="width:1.05em; margin-right:0.35em; opacity:0.9;" aria-hidden="true"></i>Detection in Data</div>
-                              <div style="color:#555; font-size:0.88rem; line-height:1.45;">
-                                <a href="pyod.html" style="font-weight:600;">PyOD</a> is the canonical anomaly-detection library, 55M+ downloads.
-                                Named by OpenAI; used by Amazon, the European Space Agency, and the U.S. DoD CDAO.
-                                <a href="https://arxiv.org/abs/2605.03410" target="_blank" rel="noopener">UFCOD</a> extends the line to few-shot cross-domain OOD.
-                              </div>
-                            </div>
-                            <div class="col-12 col-md-4">
-                              <div style="color:#7a2a2a; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:3px;"><i class="fas fa-circle-check" style="width:1.05em; margin-right:0.35em; opacity:0.9;" aria-hidden="true"></i>Verification of Output</div>
-                              <div style="color:#555; font-size:0.88rem; line-height:1.45;">
-                                <a href="https://openreview.net/forum?id=bWUU0LwwMp" target="_blank" rel="noopener">TrustLLM</a> is the multi-institution trustworthiness benchmark for large language models.
-                                <a href="https://arxiv.org/abs/2606.29713" target="_blank" rel="noopener">SEVA</a> returns evidence alignments and calibrated confidence in place of an opaque binary label.
-                              </div>
-                            </div>
-                            <div class="col-12 col-md-4">
-                              <div style="color:#7a2a2a; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:3px;"><i class="fas fa-shield-halved" style="width:1.05em; margin-right:0.35em; opacity:0.9;" aria-hidden="true"></i>Auditing of Action</div>
-                              <div style="color:#555; font-size:0.88rem; line-height:1.45;">
-                                Two arguments sit under the stack below.
-                                <a href="https://arxiv.org/abs/2606.28739" target="_blank" rel="noopener">Agent Safety Is Action Alignment</a> locates harm in the gap between authority exercised and authority granted.
-                                <a href="https://arxiv.org/abs/2603.17445" target="_blank" rel="noopener">IET</a> recovers segment-level attribution from the final text alone.
-                              </div>
-                            </div>
-                          </div>
-                          <div class="row g-3">
-                            <div class="col-12 col-sm-6 col-md-3">
-                              <div style="color:#7a2a2a; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:2px;"><i class="fas fa-wrench" style="width:1.05em; margin-right:0.35em; opacity:0.9;" aria-hidden="true"></i>Tool</div>
-                              <a href="auditable.html" style="font-weight:600;">auditable</a>
-                              <div style="color:#555; font-size:0.88rem; line-height:1.4;">
-                                The open-source SDK: capture each agent decision, replay it against live state, and roll back when it no longer holds.
-                              </div>
-                            </div>
-                            <div class="col-12 col-sm-6 col-md-3">
-                              <div style="color:#7a2a2a; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:2px;"><i class="fas fa-diagram-project" style="width:1.05em; margin-right:0.35em; opacity:0.9;" aria-hidden="true"></i>Method</div>
-                              <a href="https://arxiv.org/abs/2606.22741" style="font-weight:600;">GRADE</a>
-                              <div style="color:#555; font-size:0.88rem; line-height:1.4;">
-                                The research engine the tool is built on: a typed two-layer graph of agent execution and dependency. <a href="https://github.com/yzhao062/grade">code</a>.
-                              </div>
-                            </div>
-                            <div class="col-12 col-sm-6 col-md-3">
-                              <div style="color:#7a2a2a; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:2px;"><i class="fas fa-chart-line" style="width:1.05em; margin-right:0.35em; opacity:0.9;" aria-hidden="true"></i>Benchmark</div>
-                              <a href="https://arxiv.org/abs/2608.22808" style="font-weight:600;">CatchBench</a>
-                              <div style="color:#555; font-size:0.88rem; line-height:1.4;">
-                                What the stack is measured against: can a failure be caught before a run, during it, or only after? <a href="https://github.com/yzhao062/catchbench">code</a>.
-                              </div>
-                            </div>
-                            <div class="col-12 col-sm-6 col-md-3">
-                              <div style="color:#7a2a2a; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:2px;"><i class="fas fa-book" style="width:1.05em; margin-right:0.35em; opacity:0.9;" aria-hidden="true"></i>Resource</div>
-                              <a href="https://github.com/yzhao062/awesome-auditable-ai" style="font-weight:600;">awesome-auditable-ai</a>
-                              <div style="color:#555; font-size:0.88rem; line-height:1.4;">
-                                A curated map of papers, tools, datasets, and standards for reliable, auditable AI agents.
-                              </div>
-                            </div>
-                          </div>
-
-                          <div style="margin-top:14px; padding-top:12px; border-top:1px solid #ead5d5;">
-                            <strong style="color:#990000;">Auditing Across the Agent Lifecycle</strong>
-                            <p style="margin:4px 0 10px 0; color:#555; font-size:0.88rem; line-height:1.5;">
-                              <a href="auditable-agents.html" style="font-weight:600;">Auditable Agents</a> is our framework for what agent auditability requires: five dimensions and three mechanism classes (detect, enforce, recover). The research below instantiates them across an agent's life. <a href="https://arxiv.org/abs/2604.05485">arXiv</a>.
-                            </p>
-                            <div class="row g-3">
-                              <div class="col-12 col-md-4">
-                                <div style="color:#7a2a2a; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:4px;"><i class="fas fa-clipboard-check" style="width:1.05em; margin-right:0.35em; opacity:0.9;" aria-hidden="true"></i>Pre &middot; before deploy</div>
-                                <div style="color:#555; font-size:0.88rem; line-height:1.5;">
-                                  <a href="https://arxiv.org/abs/2605.09163" style="font-weight:600;">FORTIS</a>: a benchmark for over-privilege in agent skills.<br>
-                                  <a href="agent-audit.html" style="font-weight:600;">agent-audit</a>: a static scan of agent code for security and over-privilege.
+                          <div class="eco-layer">
+                            <div class="eco-layer-label">Questions</div>
+                            <div class="eco-layer-body">
+                              <div class="row g-3">
+                              <div class="col-12 col-sm-6 col-lg-3">
+                                <div class="eco-kind"><i class="fas fa-magnifying-glass-chart" aria-hidden="true"></i>Detection in Data</div>
+                                <div class="eco-items">
+                                  <a href="pyod.html">PyOD</a>: the anomaly-detection library, 55M+ downloads. Named by OpenAI; used by Amazon, the European Space Agency, and the U.S. DoD CDAO.<br>
+                                  <a href="https://arxiv.org/abs/2605.03410" target="_blank" rel="noopener">UFCOD</a>: few-shot cross-domain OOD.
                                 </div>
                               </div>
-                              <div class="col-12 col-md-4">
-                                <div style="color:#7a2a2a; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:4px;"><i class="fas fa-bolt" style="width:1.05em; margin-right:0.35em; opacity:0.9;" aria-hidden="true"></i>Live &middot; while running</div>
-                                <div style="color:#555; font-size:0.88rem; line-height:1.5;">
-                                  <a href="https://arxiv.org/abs/2604.01350" style="font-weight:600;">Cross-User Contamination</a>: one user's data leaking into another's in shared-state agents.<br>
-                                  <a href="https://arxiv.org/abs/2512.04668" style="font-weight:600;">Topology Matters</a>: measuring memory leakage in multi-agent LLMs.<br>
-                                  <a href="aegis.html" style="font-weight:600;">Aegis</a>: a pre-execution firewall that gates each tool call.
+                              <div class="col-12 col-sm-6 col-lg-3">
+                                <div class="eco-kind"><i class="fas fa-circle-check" aria-hidden="true"></i>Verification of Output</div>
+                                <div class="eco-items">
+                                  <a href="https://openreview.net/forum?id=bWUU0LwwMp" target="_blank" rel="noopener">TrustLLM</a>: the multi-institution trustworthiness benchmark.<br>
+                                  <a href="https://arxiv.org/abs/2606.29713" target="_blank" rel="noopener">SEVA</a>: evidence alignments and calibrated confidence in place of a binary label.
                                 </div>
                               </div>
-                              <div class="col-12 col-md-4">
-                                <div style="color:#7a2a2a; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:4px;"><i class="fas fa-clock-rotate-left" style="width:1.05em; margin-right:0.35em; opacity:0.9;" aria-hidden="true"></i>Post &middot; after a run</div>
-                                <div style="color:#555; font-size:0.88rem; line-height:1.5;">
-                                  <a href="https://arxiv.org/abs/2603.17445" style="font-weight:600;">Implicit Execution Tracing</a>: recovering which agent caused a harmful result after the logs are gone.<br>
-                                  <a href="https://arxiv.org/abs/2606.22741" style="font-weight:600;">GRADE</a>: localizing the faulting step in a completed multi-agent run.
+                              <div class="col-12 col-sm-6 col-lg-3">
+                                <div class="eco-kind"><i class="fas fa-shield-halved" aria-hidden="true"></i>Auditing of Action</div>
+                                <div class="eco-items">
+                                  <a href="https://arxiv.org/abs/2606.28739" target="_blank" rel="noopener">Agent Safety Is Action Alignment</a>: harm in the gap between authority exercised and granted.<br>
+                                  <a href="https://arxiv.org/abs/2603.17445" target="_blank" rel="noopener">IET</a>: segment-level attribution from the final text alone.
+                                </div>
+                              </div>
+                              <div class="col-12 col-sm-6 col-lg-3">
+                                <div class="eco-kind"><i class="fas fa-gauge-high" aria-hidden="true"></i>Optimization of Effort</div>
+                                <div class="eco-items">
+                                  <a href="https://arxiv.org/abs/2603.19423" target="_blank" rel="noopener">The Autonomy Tax</a>: what defense training costs an agent's ability to finish its task.<br>
+                                  <a href="https://arxiv.org/abs/2510.07429" target="_blank" rel="noopener">Bandit routing</a>: model choice as an online cost-quality trade-off.
+                                </div>
+                              </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="eco-layer">
+                            <div class="eco-layer-label">Stack</div>
+                            <div class="eco-layer-body">
+                              <div class="eco-wells">
+                                <div class="eco-well">
+                                  <div class="eco-kind"><i class="fas fa-layer-group" aria-hidden="true"></i>Framework</div>
+                                  <div class="eco-name"><a href="auditable-agents.html">Auditable Agents</a></div>
+                                  <div class="eco-items">what agent auditability requires: five dimensions and three mechanism classes (detect, enforce, recover). <a href="https://arxiv.org/abs/2604.05485">arXiv</a>.</div>
+                                </div>
+                                <div class="eco-well">
+                                  <div class="eco-kind"><i class="fas fa-wrench" aria-hidden="true"></i>Tool</div>
+                                  <div class="eco-name"><a href="auditable.html">auditable</a></div>
+                                  <div class="eco-items">capture each decision, replay it against live state, roll back when it no longer holds.</div>
+                                </div>
+                                <div class="eco-well">
+                                  <div class="eco-kind"><i class="fas fa-diagram-project" aria-hidden="true"></i>Method</div>
+                                  <div class="eco-name"><a href="https://arxiv.org/abs/2606.22741">GRADE</a></div>
+                                  <div class="eco-items">the engine under auditable: a typed two-layer graph of execution and dependency. <a href="https://github.com/yzhao062/grade">code</a>.</div>
+                                </div>
+                                <div class="eco-well">
+                                  <div class="eco-kind"><i class="fas fa-chart-line" aria-hidden="true"></i>Benchmark</div>
+                                  <div class="eco-name"><a href="https://arxiv.org/abs/2608.22808">CatchBench</a></div>
+                                  <div class="eco-items">can a failure be caught before a run, during it, or only after? <a href="https://github.com/yzhao062/catchbench">code</a>.</div>
+                                </div>
+                                <div class="eco-well">
+                                  <div class="eco-kind"><i class="fas fa-book" aria-hidden="true"></i>Resource</div>
+                                  <div class="eco-name"><a href="https://github.com/yzhao062/awesome-auditable-ai">awesome-auditable-ai</a></div>
+                                  <div class="eco-items">a curated map of papers, tools, datasets, and standards.</div>
+                              </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="eco-layer">
+                            <div class="eco-layer-label">Lifecycle</div>
+                            <div class="eco-layer-body">
+                              <div class="lc-track">
+                                <div class="lc-rail" aria-hidden="true"></div>
+                                <div class="row g-3">
+                              <div class="col-12 col-lg-4">
+                                <div class="lc-stage">
+                                  <div class="lc-head"><span class="lc-dot" aria-hidden="true"></span><span class="lc-label">Pre &middot; before deploy</span></div>
+                                  <div class="eco-items">
+                                    <a href="https://arxiv.org/abs/2605.09163" target="_blank" rel="noopener">FORTIS</a>: over-privilege in agent skills.<br>
+                                  <a href="agent-audit.html">agent-audit</a>: a static security scan of agent code.
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-12 col-lg-4">
+                                <div class="lc-stage">
+                                  <div class="lc-head"><span class="lc-dot" aria-hidden="true"></span><span class="lc-label">Live &middot; while running</span></div>
+                                  <div class="eco-items">
+                                    <a href="https://arxiv.org/abs/2604.01350" target="_blank" rel="noopener">Cross-User Contamination</a>: data leaking between users in shared-state agents.<br>
+                                  <a href="https://arxiv.org/abs/2512.04668" target="_blank" rel="noopener">Topology Matters</a>: memory leakage in multi-agent LLMs.<br>
+                                  <a href="aegis.html">Aegis</a>: a firewall that gates each tool call.
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-12 col-lg-4">
+                                <div class="lc-stage">
+                                  <div class="lc-head"><span class="lc-dot" aria-hidden="true"></span><span class="lc-label">Post &middot; after a run</span></div>
+                                  <div class="eco-items">
+                                    <a href="https://arxiv.org/abs/2603.17445" target="_blank" rel="noopener">Implicit Execution Tracing</a>: which agent caused a harmful result after the logs are gone.<br>
+                                  <a href="https://arxiv.org/abs/2606.22741" target="_blank" rel="noopener">GRADE</a>: localizing the faulting step in a completed run.
+                                  </div>
+                                </div>
+                              </div>
                                 </div>
                               </div>
                             </div>
@@ -319,6 +421,33 @@
                               </p>
                             </details>
                           </li>
+                          <li>
+                            <details class="smart-details">
+                              <summary><h3 style="display:inline; font-size:1rem; font-weight:700; margin:0;">Optimization of Effort: Agent Efficiency, Routing, and the Cost of Defense</h3></summary>
+                              <p style="margin-top:8px;">
+                                The first three ask whether a system went wrong. This one asks whether the work was
+                                necessary. For an agent run, failure diagnosis and efficiency analysis read the same
+                                record. A trace logs what each step did;
+                                <a href="https://arxiv.org/abs/2606.22741" target="_blank" rel="noopener">GRADE</a>
+                                adds the dependencies and reused results it omits. The trade also runs in reverse, and
+                                <a href="https://arxiv.org/abs/2603.19423" target="_blank" rel="noopener">The Autonomy Tax</a>
+                                measures it: defense training against prompt injection takes away an agent's ability to
+                                finish multi-step tasks.
+                                <a href="https://arxiv.org/abs/2510.07429" target="_blank" rel="noopener">BaRP</a>
+                                treats model choice as an online decision under shifting prices and accuracy needs, and
+                                <a href="https://openreview.net/forum?id=0pbUfmwNTy" target="_blank" rel="noopener">DyFlow</a>
+                                constructs and adjusts agent workflows as a run proceeds. The same question runs back
+                                through the detection line, where
+                                <a href="https://proceedings.mlsys.org/paper_files/paper/2021/hash/37385144cac01dff38247ab11c119e3c-Abstract.html" target="_blank" rel="noopener">SUOD</a>
+                                and the GPU-accelerated
+                                <a href="https://www.vldb.org/pvldb/vol16/p546-zhao.pdf" target="_blank" rel="noopener">TOD</a>
+                                cut the compute cost of running many detectors at scale.
+                              </p>
+                              <p style="font-family:'Poppins','Segoe UI',sans-serif; font-size:0.93rem; color:#7a2a2a;">
+                                <strong>Keywords:</strong> Agent Efficiency, LLM Routing, Cost-Quality Trade-offs, Workflow Generation, Cost of Defense Training, Scalable Detection, Inference Cost, Dependency Analysis
+                              </p>
+                            </details>
+                          </li>
                         </ol>
 
                         <h2 id="about" style="color:#990000; border-bottom:2px solid #990000; padding-bottom:6px; margin:30px 0 16px 0;">&#128100; About</h2>
@@ -326,9 +455,9 @@
                         <!-- PRERENDER:bio START -->
                                                 <details class="smart-details" style="margin:16px 0 14px 0;">
                                                   <summary><h3 style="display:inline; color:#990000; font-size:1rem; font-weight:700; line-height:inherit; margin:0;">Biography</h3></summary>
-                                                  <p>Dr. Yue Zhao is an Assistant Professor of Computer Science at the University of Southern California, where he leads the FORTIS Lab. He serves as Associate Co-Director of the USC Institute on Ethics and Trust in Computing for 2026-2027. His lab builds Auditable AI Systems across three points: detecting anomalies in data, verifying outputs, and auditing actions when no ground truth is available to check against. At each point, the work records what happened so that it can be reconstructed and checked after the fact. This is the lab's contribution to the broader field of AI Assurance. The program spans anomaly and outlier detection at scale, LLM evaluation where no reference answer exists, and the security and auditability of AI agents that act on their own. Its current frontier is agent auditability: open-source infrastructure that audits AI agents from before deployment to after a run. He also advises early-stage AI startups and is founding Auditable AI, a startup building the auditable layer for AI agents on an open-source stack developed by his lab.</p>
+                                                  <p>Dr. Yue Zhao is an Assistant Professor of Computer Science at the University of Southern California, where he leads the FORTIS Lab. He serves as Associate Co-Director of the USC Institute on Ethics and Trust in Computing for 2026-2027. His lab builds Auditable AI Systems across four audit questions: detecting anomalies in data, verifying outputs, auditing actions, and optimizing effort when no ground truth is available to check against. For each question, the work records what happened so that it can be reconstructed and checked after the fact. Auditability serves accountability and efficiency alike: the same evidence shows what a system did wrong and what it never needed to do. This is the lab's contribution to the broader field of AI Assurance. The program spans anomaly and outlier detection at scale, LLM evaluation where no reference answer exists, and the security and auditability of AI agents that act on their own. Its current frontier is agent auditability: open-source infrastructure that audits AI agents from before deployment to after a run. He also advises early-stage AI startups and is founding Auditable AI, a startup building the auditable layer for AI agents on an open-source stack developed by his lab.</p>
                                                   <p>Dr. Zhao has authored over 80 peer-reviewed papers. His open-source projects, including PyOD, ADBench, TrustLLM, agent-audit, and Aegis, together exceed 60 million downloads and 29,000 GitHub stars. As of August 2026, 5,560 public repositories and 159 packages depend on PyOD. PyOD is named by OpenAI, used by Apache Beam, Amazon, Walmart, Databricks, and the European Space Agency, and cited in 49 patents and five books. Official guidance names it across Europe, Asia, the Middle East, and Latin America, from defense ministries and central banks to national AI authorities. Brazilian federal and congressional procurement audits run it. TrustLLM is cited in a U.S. Senate committee report, a NIST special publication on adversarial machine learning, and the International AI Safety Report 2026. It is an official benchmark in all four editions of the Future of Life Institute AI Safety Index through Summer 2026. The U.S. Department of Defense CDAO Generative AI Responsible AI Toolkit recommends both. Therapeutics Data Commons, which he co-authored, supplied the training data for Google Research's Tx-LLM and the prediction tasks in Google DeepMind's TxGemma.</p>
-                                                  <p>His awards include the NVIDIA Academic Grant Program Award, multiple Amazon Research Awards, the Capital One Research Award, and the Foresight Institute AI for Safety &amp; Science Nodes Grant. NSF grants and a Meta sponsored research agreement fund the lab alongside them. NSF support includes both phases of Pathways to Enable Open-Source Ecosystems (POSE). AAAI selected him for New Faculty Highlights, and his papers have won a Best Short Paper Award at ACM SIGSPATIAL and a Second Prize CCC Award at the IEEE ICDM BlueSky Track. He serves as an Associate or Action Editor for Transactions on Machine Learning Research, ACM Transactions on AI for Science, IEEE Transactions on Neural Networks and Learning Systems, and the Journal of Data-Centric Machine Learning Research. At conferences he is an Area Chair for ICLR, ICML, and NeurIPS.</p>
+                                                  <p>His awards include the NVIDIA Academic Grant Program Award, multiple Amazon Research Awards, the Capital One Research Award, and the Foresight Institute AI for Safety &amp; Science Nodes Grant. NSF grants and a Meta sponsored research agreement fund the lab alongside them. Those NSF grants include both phases of Pathways to Enable Open-Source Ecosystems (POSE). AAAI selected him for New Faculty Highlights, and his papers have won a Best Short Paper Award at ACM SIGSPATIAL and a Second Prize CCC Award at the IEEE ICDM BlueSky Track. He serves as an Associate or Action Editor for Transactions on Machine Learning Research, ACM Transactions on AI for Science, IEEE Transactions on Neural Networks and Learning Systems, and the Journal of Data-Centric Machine Learning Research. At conferences he is an Area Chair for ICLR, ICML, and NeurIPS.</p>
                                                 </details>
                         <!-- PRERENDER:bio END -->
 
@@ -368,7 +497,7 @@
 
                         <p><strong>[Aug 2026]</strong> New preprint and benchmark: <a href="https://arxiv.org/abs/2608.22808"><b>CatchBench: When Can an Agent Failure Be Caught?</b></a> An audit is usually limited by the record rather than by the method. CatchBench therefore puts one auditor's question to three information states: the configuration declared before a run, a growing prefix of its trace, and the finished trace. It scores 72 entrants over 1187 declared configurations and 1162 recorded runs. Most of the arena does not order, and the 71 contrasts that fail to separate are published unresolved rather than ranked. <a href="https://arxiv.org/abs/2608.22808">[arXiv]</a> <a href="https://github.com/yzhao062/catchbench">[GitHub]</a></p>
 
-                        <p><strong>[Aug 2026]</strong> <i>USC Viterbi News</i> covered the lab's agent-auditing work in <a href="https://viterbischool.usc.edu/news/2026/08/giving-ai-agents-the-keys-usc-engineers-develop-tools-to-audit-and-monitor-ai-agents/" target="_blank" rel="noopener"><b>Giving AI Agents the Keys? USC Engineers Develop Tools to Audit and Monitor AI Agents</b></a>. The piece follows the three points at which an agent can be checked. <a href="agent-audit.html">agent-audit</a> inspects agent code before deployment, <a href="aegis.html">AEGIS</a> intercepts tool calls at runtime, and <a href="auditable.html">auditable</a> with <a href="https://arxiv.org/abs/2606.22741">GRADE</a> reconstructs a run after the fact.</p>
+                        <p><strong>[Aug 2026]</strong> <i>USC Viterbi News</i> covered the lab's agent-auditing work in <a href="https://viterbischool.usc.edu/news/2026/08/giving-ai-agents-the-keys-usc-engineers-develop-tools-to-audit-and-monitor-ai-agents/" target="_blank" rel="noopener"><b>Giving AI Agents the Keys? USC Engineers Develop Tools to Audit and Monitor AI Agents</b></a>. The piece follows the three moments at which an agent can be checked. <a href="agent-audit.html">agent-audit</a> inspects agent code before deployment, <a href="aegis.html">AEGIS</a> intercepts tool calls at runtime, and <a href="auditable.html">auditable</a> with <a href="https://arxiv.org/abs/2606.22741">GRADE</a> reconstructs a run after the fact.</p>
 
                         <p><strong>[Aug 2026]</strong> Six papers accepted to <i>EMNLP 2026</i>. <a href="https://lili0415.github.io/">Shawn Li</a> leads our main-conference paper <a href="https://arxiv.org/abs/2603.19423"><b>The Autonomy Tax: Defense Training Breaks LLM Agents</b></a>, and Yi Nian leads our Findings paper <a href="https://arxiv.org/abs/2606.07678"><b>DOG-DPO</b></a>. In Findings, <a href="https://ojasnimase.com/">Ojas Nimase</a> is first author on <a href="https://openreview.net/forum?id=VBjIqgKJ7O"><b>FinanceLLM</b></a>, and <a href="https://aojieyuan.com">Aojie Yuan</a> and <a href="https://headyzhang.github.io">Haiyue Zhang</a> co-author <a href="https://arxiv.org/abs/2608.03499"><b>WeClawArena</b></a>. Full list on the <a href="publications.html">publications page</a>.</p>
 

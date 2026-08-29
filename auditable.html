@@ -63,7 +63,7 @@
           agent did; auditable shows what each decision relied on, replays that decision against the state that is live
           now, and rolls back the committed action when it no longer holds. Every agent run becomes one typed
           graph with two layers, execution (what ran, in what order) and dependency (what each step relied on), read at
-          three points in the agent's life: before deploy, while running, and after a run.
+          three moments in the agent's life: before deploy, while running, and after a run.
         </p>
         <p>
           This project is the open-source thesis of our <strong>auditing of action</strong> work on agent risk audit and
@@ -103,7 +103,7 @@
 
         <h2 style="color:#990000;">The three pillars</h2>
         <p>
-          The same detection-and-report pass runs over one typed decision graph at three points in an agent's life. The
+          The same detection-and-report pass runs over one typed decision graph at three moments in an agent's life. The
           graph kernel stays constant; only the pillar changes.
         </p>
         <ul>

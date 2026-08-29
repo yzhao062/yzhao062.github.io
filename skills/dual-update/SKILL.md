@@ -1,11 +1,21 @@
 ---
 name: dual-update
-description: Add or update content that must appear on both the website and the LaTeX CV. Use when the user mentions adding a new paper, award, grant, service role, teaching course, PhD student, open-source project, or any other content that overlaps between the website and CV.
+description: Add or update content that must appear across the website, the LaTeX CV, and the GitHub profile README. Use when the user mentions a new paper, award, grant, service role, teaching course, PhD student, open-source project, research direction, or headline metric. Use it for any other content that overlaps those surfaces.
 ---
 
-# Dual Update — Website + CV
+# Dual Update: Website, CV, and GitHub Profile
 
-When the user adds or updates content that exists in both the website and the CV, **always update both sides in the same pass**. Never update one and forget the other.
+When the user adds or updates content that exists on more than one surface, **update every affected surface in the same pass**. Never update one and forget another.
+
+There are three surfaces. The first two live in this repository. Because the third is a separate repository, it is the one most easily forgotten:
+
+| Surface | Location | Kind |
+|---|---|---|
+| Website | this repo | HTML and JSON |
+| CV | `cv/` in this repo | LaTeX, compiled to a distributed PDF |
+| GitHub profile README | `../yzhao062/README.md`, repo `yzhao062/yzhao062` | Markdown, rendered at <https://github.com/yzhao062> |
+
+Not every change touches all three. The table below maps the first two; the **GitHub Profile README** section after it says when the third is in scope.
 
 ## Content Type → File Mapping
 
@@ -19,20 +29,62 @@ When the user adds or updates content that exists in both the website and the CV
 | **Teaching course** | `teaching.html` | `cv/cv-full.tex` (Teaching section) | Include semester, course number, title, enrollment if known. |
 | **PhD student** | `data/lab-current-phd.json` | `cv/cv-full.tex` (PhD Students section) | JSON has structured fields; CV uses inline LaTeX. |
 | **Open-source project** | `data/open-source.json` | `cv/open-source.tex` (**auto-generated**) | Edit JSON only, then run `python scripts/generate_cv_open_source.py`. Do NOT edit `cv/open-source.tex` directly. |
-| **Research direction / keywords** | `index.html` (Research section) | `cv/cv-full.tex` (Research Summary section) | Keep the three-pillar structure consistent. |
+| **Research direction / keywords** | `index.html` (Research section) | `cv/cv-full.tex` (Research Summary section) | Keep the website's four audit questions and the CV's three-level agent/model/input formulation consistent in substance. Both are current. Translate rather than copy. |
 | **News item** | `index.html` (News section) | — | Website only. |
 | **Lab member** (non-PhD) | `data/lab-members.json` | — | Website only. When adding a new member, check `data/publications.json` for their published papers and populate the `publications` field. |
 | **Talks** | — | `cv/cv-full.tex` (Talks section) | CV only (not on website currently). |
 | **Student committee** | — | `cv/cv-full.tex` (Student Committee section) | CV only. |
 
+
+## GitHub Profile README
+
+The profile README renders at <https://github.com/yzhao062> and is the first thing a
+recruiter, collaborator, or investor sees. It lives in a **separate repository**,
+`yzhao062/yzhao062`, cloned at `../yzhao062` beside this one. Because it is a different
+repo, it survives every `git status` run here, which is exactly why it goes stale.
+
+### When it is in scope
+
+| Change | What to touch in `README.md` |
+|---|---|
+| **Research direction or framing** | The `## Research` section: the opening paragraph and the layer bullets. Keep it consistent with `index.html` in substance, not in wording. The README organizes by deployment layer (agent, foundation model, data); the website organizes by audit question. Both are current, so translate rather than copy. |
+| **Open-source project** added, renamed, or retired | The featured table under `## Open Source`, or the collapsed `Other Notable Projects` list for smaller ones. Source the star counts from `data/open-source.json`, never from memory. |
+| **Headline metric** (stars, downloads, citations, adopters) | The `> [!NOTE]` block, the badges at the top, the `## Open Source` lead line, and the `> [!TIP]` adopter block. The same number often appears three or four times; grep before editing. |
+| **Venture or affiliation change** | The `> [!IMPORTANT]` block and the subtitle under the name. |
+| **Policy or standards citation** (NIST, Senate, safety reports) | The `> [!NOTE]` block and the TrustLLM entry in `Other Notable Projects`. |
+
+Publications, awards, grants, service roles, teaching, PhD students, and news items do
+**not** appear in the README. Do not add sections for them.
+
+### Rules
+
+1. **Refresh before editing.** Run `git -C ../yzhao062 status --short --branch` first.
+   If the worktree is dirty, stop and ask how to preserve those changes. If it is clean,
+   run `git -C ../yzhao062 pull --ff-only`, and stop rather than merging or rebasing if
+   Git reports divergence. A bare `git pull` is wrong here: this machine has
+   `pull.rebase=false`, so a divergent history produces a merge commit, which is a commit
+   nobody approved. The repo is edited through the GitHub web UI as well, so the local
+   clone is often behind, and editing a stale copy silently reverts what was changed there.
+2. **Take every number from the repo, not from the README.** `data/open-source.json`
+   holds the star counts and is the authority; `index.html` and `files/bio.txt` hold the
+   aggregate download and star figures. A number that disagrees with the website is stale
+   in the README, not the other way round.
+3. **Round the same way the website rounds.** If the website says `55M+ downloads`, the
+   README says `55M+ downloads`, not `55 million` or `54.8M`.
+4. **The README is a separate commit and a separate push,** and both need explicit
+   approval like any other. Say plainly that two repositories are being changed.
+5. **If `../yzhao062` is missing,** clone it with
+   `git clone https://github.com/yzhao062/yzhao062.git ../yzhao062` rather than editing
+   through the web UI, so the change goes through the same review as everything else.
+
 ## Workflow
 
 1. **Ask what changed** if the user hasn't specified clearly. Get: content type, the specific details (title, venue, year, authors, etc.).
-2. **Read both target files** before editing. Understand existing format and ordering.
+2. **Read every target file** before editing, including `../yzhao062/README.md` when the change is in scope for it. Understand existing format and ordering.
 3. **Verify external facts with a web search** before writing them. Use the agent's available web-search/browser tool for any fact you cannot read out of the repo: real conference dates (for `sort_date`), conference location, official venue acronym/abbreviation, arXiv ID, GitHub URL, project page, co-author homepage. Do not invent dates or URLs. If a search cannot confirm a fact, leave it out (omit the link, omit the `sort_date`) and state in the response that it was omitted because it was unverified.
-4. **Make both edits** in the same response. For the website side, match the existing HTML/JSON structure. For the CV side, match the existing LaTeX formatting.
+4. **Make every edit** in the same response. For the website side, match the existing HTML/JSON structure. For the CV side, match the existing LaTeX formatting. For the profile README, match the existing Markdown and keep the badge and alert blocks intact.
 5. **For open-source changes**: edit `data/open-source.json`, then run the generation script. Do not hand-edit `cv/open-source.tex`.
-6. **Verify consistency**: after editing, briefly confirm both sides have the same content.
+6. **Verify consistency**: after editing, briefly confirm every touched surface agrees. For numbers, grep each figure across all three so no copy is left behind.
 
 ### Recommended searches for publication updates
 
