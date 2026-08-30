@@ -29,7 +29,7 @@ Not every change touches all three. The table below maps the first two; the **Gi
 | **Teaching course** | `teaching.html` | `cv/cv-full.tex` (Teaching section) | Include semester, course number, title, enrollment if known. |
 | **PhD student** | `data/lab-current-phd.json` | `cv/cv-full.tex` (PhD Students section) | JSON has structured fields; CV uses inline LaTeX. |
 | **Open-source project** | `data/open-source.json` | `cv/open-source.tex` (**auto-generated**) | Edit JSON only, then run `python scripts/generate_cv_open_source.py`. Do NOT edit `cv/open-source.tex` directly. |
-| **Research direction / keywords** | `index.html` (Research section) | `cv/cv-full.tex` (Research Summary section) | Keep the website's four audit questions and the CV's three-level agent/model/input formulation consistent in substance. Both are current. Translate rather than copy. |
+| **Research direction / keywords** | `index.html` (Research section), `files/bio.txt` | `cv/cv-full.tex` (Research Summary section) | Keep the same four audit questions across these sources and `../yzhao062/README.md`. Translate the wording to fit each surface without changing the count or scope. |
 | **News item** | `index.html` (News section) | — | Website only. |
 | **Lab member** (non-PhD) | `data/lab-members.json` | — | Website only. When adding a new member, check `data/publications.json` for their published papers and populate the `publications` field. |
 | **Talks** | — | `cv/cv-full.tex` (Talks section) | CV only (not on website currently). |
@@ -46,10 +46,11 @@ repo, it survives every `git status` run here, which is exactly why it goes stal
 ### The README follows the website
 
 **The website is the source of truth and the README is downstream of it.** The README's
-numbers do not refresh themselves. Only the shields.io badges are live; every figure in
-prose is hardcoded and goes stale silently. So on any change to the facts below, open both
-files and copy the site's version across. Do not restate a figure from memory, and do not
-treat a README number that disagrees with the site as the newer one.
+GitHub and Pepy badges update from their source services. The Google Scholar
+badge and every figure in prose are hardcoded, so they go stale silently. On any change to
+the facts below, open both files and copy the site's version across. Do not restate a
+figure from memory, and do not treat a README number that disagrees with the site as the
+newer one.
 
 Work the table field by field rather than reading the README and deciding what looks
 out of date. Reading it is how the headline blocks get missed, because they are the parts
@@ -64,14 +65,52 @@ that read fluently while being wrong.
 | PyOD adopters | `files/bio.txt` | The bio distinguishes **named by** OpenAI from **used by** the others. Preserve that split. Collapsing it into one verb claims endorsements nobody gave. |
 | Per-project star counts | `data/open-source.json` | Prefer a shields.io badge, which stays current on its own. |
 | Research taxonomy and its count | the four collapsible headings in `index.html` | Use the site's names verbatim. Presentation order may differ, and here it is deliberately inverted so the agent work leads. |
-| Venture and advisory roles | `index.html` About, the Current Focus card | Includes how each is described, not only that it exists. |
+| Venture and advisory roles | `index.html` About, the Current Focus card | Copy the site's description of each role, and give it the same weight the site gives it. |
 | Paper count, appointments, policy citations | `files/bio.txt` | |
 | Open-source table rows | `data/open-source.json` | |
 
 A figure that appears in the README with **no counterpart anywhere on the site** is neither
 confirmed nor refuted by this repository. The Google Scholar citation count is the current
-example. Leave it alone and tell the user it is unverifiable from here; never refresh it by
-guessing and never delete it just because the site is silent.
+example. Ask the user for the current value rather than guessing, and say plainly that the
+repository cannot check it. Never refresh it by inference, and never delete it just because
+the site is silent.
+
+The Scholar badge stays **static on purpose**, and the question of making it live has been
+settled once. Google Scholar publishes no API. It answers an automated request with a `200`
+carrying a bot-block page rather than the profile, verified from a residential address in
+August 2026. A datacenter address, such as a GitHub Actions runner, fares worse. Such a
+scraping workflow therefore fails, and it fails in the worst available way, by continuing
+to serve the last number it captured. That looks live while being stale, so nobody thinks
+to check it. Semantic Scholar does publish an API, but it rate-limits anonymous callers and
+counts differently. A badge built on it has to be labelled Semantic Scholar and will show a
+different number. Refresh the badge and the prose together when the user supplies a figure.
+
+### Match the Site's Facts and Emphasis
+
+Two surfaces can agree on every fact and still disagree, because a topic given one sentence
+on the site can occupy a callout box at the top of the README. Prominence is a claim about
+importance, so a mismatch in prominence is a mismatch in substance.
+
+After the facts line up, compare weight. For each topic, ask how much room and how high a
+position the site gives it, then give it comparable room and position in the README:
+
+| Site treatment | README treatment |
+|---|---|
+| The site hero or opening About summary | The single top-level `> [!NOTE]` summary |
+| A heading with its own section | A `##` section |
+| One card among peers, or one clause in the bio | One sentence inside the existing `> [!NOTE]` block; never a standalone alert |
+| A line in a table or list | A row or bullet |
+| Absent | Absent |
+
+Use a standalone `> [!IMPORTANT]` only when the same topic appears in the site hero or
+another top-of-page lead. Otherwise follow the table above, and move any contact action to
+`## Contact`. This has already gone wrong once. The venture held its own `> [!IMPORTANT]`
+block while the site had reduced it to one sentence in one of three equal cards. As a
+result, the README read as a company page with a professor attached.
+
+Emphasis drifts silently, because nothing about a stale callout looks wrong when you read
+it. Check emphasis on every pass, including passes where the underlying facts stay the
+same.
 
 Publications, awards, grants, service roles, teaching, PhD students, and news items do
 **not** appear in the README. Do not add sections for them.
@@ -99,7 +138,7 @@ Publications, awards, grants, service roles, teaching, PhD students, and news it
    thing differently is the signal to reconcile them against `files/bio.txt`.
 3. **Match the value, not the typography.** `29,000` in the bio and `29k+` in the README
    are the same claim, and each suits its own surface. What must never differ is the
-   number itself or its precision: do not turn `over 80` into `83`, or `55M+` into
+   number itself or its precision. Do not turn `over 80` into `83`, or `55M+` into
    `54.8M`, and do not carry the aggregate figure into a sentence about one project.
 4. **The README is a separate commit and a separate push,** and both need explicit
    approval like any other. Say plainly that two repositories are being changed.
@@ -112,7 +151,7 @@ Publications, awards, grants, service roles, teaching, PhD students, and news it
 1. **Ask what changed** if the user hasn't specified clearly. Get: content type, the specific details (title, venue, year, authors, etc.).
 2. **Read every target file** before editing, including `../yzhao062/README.md` when the change is in scope for it. Understand existing format and ordering.
 3. **Verify external facts with a web search** before writing them. Use the agent's available web-search/browser tool for any fact you cannot read out of the repo: real conference dates (for `sort_date`), conference location, official venue acronym/abbreviation, arXiv ID, GitHub URL, project page, co-author homepage. Do not invent dates or URLs. If a search cannot confirm a fact, leave it out (omit the link, omit the `sort_date`) and state in the response that it was omitted because it was unverified.
-4. **Make every edit** in the same response. For the website side, match the existing HTML/JSON structure. For the CV side, match the existing LaTeX formatting. For the profile README, match the existing Markdown and keep the badge and alert blocks intact.
+4. **Make every edit** in the same response. For the website side, match the existing HTML/JSON structure. For the CV side, match the existing LaTeX formatting. For the profile README, match the existing Markdown. Preserve badge syntax while updating hardcoded values. Keep an alert block only while it satisfies the emphasis mapping above; otherwise merge, move, or remove it.
 5. **For open-source changes**: edit `data/open-source.json`, then run the generation script. Do not hand-edit `cv/open-source.tex`.
 6. **Verify consistency**: after editing, briefly confirm every touched surface agrees. For numbers, grep each figure across all three so no copy is left behind.
 
