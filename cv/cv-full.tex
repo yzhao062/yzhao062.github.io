@@ -98,7 +98,7 @@
 \hfill Department of Computer Science\\
 {\href{https://scholar.google.com/citations?user=zoGDYsoAAAAJ}{\faGoogle~\texttt{Google Scholar}}}  
 \hfill University of Southern California\\
-{\color{uscred}\faStar~24{,}000+ GitHub Stars \hfill
+{\color{uscred}\faStar~29{,}000+ GitHub Stars \hfill
 \href{https://gitstar-ranking.com/yzhao062}{Top $\sim$700 Worldwide}}
 \vspace{-0.1in}
 
@@ -109,19 +109,22 @@ answerable. AI systems that act on their own can make that hard: the damage show
 up, the path to it often does not. My lab builds three things: tools that catch
 unsafe permissions before an agent ships, a checkpoint that inspects tool calls
 before they run, and records good enough to piece together afterward who did what.
-This work spans \textbf{auditable AI systems} at three levels: \textit{agent
-action} (auditability and control of agent systems across their lifecycle),
-\textit{model behavior} (trust and robustness evaluation of foundation models),
-and \textit{input distribution} (anomaly and out-of-distribution detection in
-data). One question runs through it: did this depart from what was expected, and
-can anyone still tell? The current frontier is \textbf{agent auditability}:
+This work spans \textbf{auditable AI systems} across four audit questions:
+\textit{auditing of action} (auditability and control of agent systems across
+their lifecycle), \textit{optimization of effort} (agent efficiency, routing, and
+the cost of defense), \textit{verification of output} (trust and robustness
+evaluation of foundation models), and \textit{detection in data} (anomaly and
+out-of-distribution detection). Auditing of action, verification of output, and
+detection in data ask whether something departed from what was expected and
+whether anyone can still tell. Optimization of effort asks whether the work was
+necessary at all. The current frontier is \textbf{agent auditability}:
 deployable open-source infrastructure that audits agents from before deployment
 to after a run.
 
 
-{\color{uscred}\textbf{1. Agent Action: Auditability and Control of Agent Systems}}\\
-At the agent action level, deployed systems act through tools, APIs, and shared state,
-so what a system does becomes the primary failure surface. This thread covers auditability
+{\color{uscred}\textbf{1. Auditing of Action: Auditability and Control of Agent Systems}}\\
+When a system acts through tools, APIs, and shared state, what it does becomes the
+primary failure surface. This thread covers auditability
 frameworks, runtime control surfaces, agent-specific failure modes, and
 post-run attribution and recovery, spanning the full lifecycle from
 pre-deployment to after a run.
@@ -143,8 +146,30 @@ pre-deployment to after a run.
 \end{tabular}
 
 
-{\color{uscred}\textbf{2. Model Behavior: Trust and Robustness of Foundation Models}}\\
-Between input distribution and agent action, foundation models add their own failure surface:
+{\color{uscred}\textbf{2. Optimization of Effort: Agent Efficiency, Routing, and the Cost of Defense}}\\
+The record that makes a system accountable also shows what its effort bought. This thread
+asks whether the work was necessary: what defense training costs an agent's ability to
+finish a task, how model choice becomes an online cost-quality decision, and how
+large-scale detection cuts its compute cost. It is the dimension industry asks about most.
+
+\vspace{-0.15in}
+\begin{tabular}{@{}p{0.475\textwidth}p{0.475\textwidth}}
+\begin{list1}
+\item Agent Efficiency
+\item LLM Routing
+\item Cost-Quality Trade-offs
+\end{list1}
+&
+\begin{list1}
+\item Workflow Generation
+\item Cost of Defense Training
+\item Scalable Detection
+\end{list1}
+\end{tabular}
+
+
+{\color{uscred}\textbf{3. Verification of Output: Trust and Robustness of Foundation Models}}\\
+Between the input and the action, foundation models add their own failure surface:
 behavior under attack, hallucination, and adversarial robustness of retrieval.
 Failures on these surfaces can propagate downstream when model output is passed
 to an agent or a user-facing system. My lab
@@ -169,8 +194,8 @@ LLM-as-anomaly-detector benchmarks.
 \end{tabular}
 
 
-{\color{uscred}\textbf{3. Input Distribution: Anomaly and Out-of-Distribution Detection}}\\
-At the input distribution level, the question is whether an input departed from the
+{\color{uscred}\textbf{4. Detection in Data: Anomaly and Out-of-Distribution Detection}}\\
+Here the question is whether an input departed from the
 conditions represented during development and evaluation. This is my
 methodological and open-source base, built through the PyOD ecosystem and
 ADBench, and continuing through benchmarks for NLP, automatic OOD detector
@@ -204,8 +229,9 @@ and the \href{https://www.ai.mil/Portals/137/Documents/Resources\%20Page/2024-12
 \href{https://www.nature.com/articles/s41597-025-05035-3}{selected by the European Space Agency}
 for spacecraft anomaly detection and is the subject of
 \href{https://www.manning.com/books/outlier-detection-in-python}{five published books}.
-\href{https://github.com/HowieHwong/TrustLLM}{TrustLLM} serves as an official benchmark in all three editions of the
-\href{https://futureoflife.org/ai-safety-index-winter-2025/}{Future of Life Institute AI Safety Index}.
+\href{https://github.com/HowieHwong/TrustLLM}{TrustLLM} serves as an official benchmark in all four editions of the
+\href{https://futureoflife.org/ai-safety-index-winter-2025/}{Future of Life Institute AI Safety Index}
+through \href{https://futureoflife.org/wp-content/uploads/2026/07/AI-Safety-Index-Summer-2026-Digital.pdf}{Summer 2026}.
 }
 
 \section{\sc Professional Experience}
