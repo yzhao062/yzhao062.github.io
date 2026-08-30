@@ -43,15 +43,35 @@ recruiter, collaborator, or investor sees. It lives in a **separate repository**
 `yzhao062/yzhao062`, cloned at `../yzhao062` beside this one. Because it is a different
 repo, it survives every `git status` run here, which is exactly why it goes stale.
 
-### When it is in scope
+### The README follows the website
 
-| Change | What to touch in `README.md` |
-|---|---|
-| **Research direction or framing** | The `## Research` section: the opening paragraph and the layer bullets. Keep it consistent with `index.html` in substance, not in wording. The README organizes by deployment layer (agent, foundation model, data); the website organizes by audit question. Both are current, so translate rather than copy. |
-| **Open-source project** added, renamed, or retired | The featured table under `## Open Source`, or the collapsed `Other Notable Projects` list for smaller ones. Source the star counts from `data/open-source.json`, never from memory. |
-| **Headline metric** (stars, downloads, citations, adopters) | The `> [!NOTE]` block, the badges at the top, the `## Open Source` lead line, and the `> [!TIP]` adopter block. The same number often appears three or four times; grep before editing. |
-| **Venture or affiliation change** | The `> [!IMPORTANT]` block and the subtitle under the name. |
-| **Policy or standards citation** (NIST, Senate, safety reports) | The `> [!NOTE]` block and the TrustLLM entry in `Other Notable Projects`. |
+**The website is the source of truth and the README is downstream of it.** The README's
+numbers do not refresh themselves. Only the shields.io badges are live; every figure in
+prose is hardcoded and goes stale silently. So on any change to the facts below, open both
+files and copy the site's version across. Do not restate a figure from memory, and do not
+treat a README number that disagrees with the site as the newer one.
+
+Work the table field by field rather than reading the README and deciding what looks
+out of date. Reading it is how the headline blocks get missed, because they are the parts
+that read fluently while being wrong.
+
+| README element | Authoritative source | Notes |
+|---|---|---|
+| Subtitle under the name | `index.html` Research box | Must name the same pillars the site names, in the same count. |
+| `> [!NOTE]` summary block | `files/bio.txt` | The single densest cluster of stale numbers. Check every figure in it against the bio, one at a time. |
+| Aggregate stars and downloads | `files/bio.txt`, the sentence beginning "His open-source projects, including" | It gives the figure, the scope, and the example project list. Copy all three; a different example list makes the same total look like a different claim. |
+| PyOD's own download figure | `data/open-source.json` | **Not the same number as the aggregate.** The site says PyOD alone has 55M+ downloads and all projects together exceed 60 million. Mixing them misstates both. |
+| PyOD adopters | `files/bio.txt` | The bio distinguishes **named by** OpenAI from **used by** the others. Preserve that split. Collapsing it into one verb claims endorsements nobody gave. |
+| Per-project star counts | `data/open-source.json` | Prefer a shields.io badge, which stays current on its own. |
+| Research taxonomy and its count | the four collapsible headings in `index.html` | Use the site's names verbatim. Presentation order may differ, and here it is deliberately inverted so the agent work leads. |
+| Venture and advisory roles | `index.html` About, the Current Focus card | Includes how each is described, not only that it exists. |
+| Paper count, appointments, policy citations | `files/bio.txt` | |
+| Open-source table rows | `data/open-source.json` | |
+
+A figure that appears in the README with **no counterpart anywhere on the site** is neither
+confirmed nor refuted by this repository. The Google Scholar citation count is the current
+example. Leave it alone and tell the user it is unverifiable from here; never refresh it by
+guessing and never delete it just because the site is silent.
 
 Publications, awards, grants, service roles, teaching, PhD students, and news items do
 **not** appear in the README. Do not add sections for them.
@@ -65,12 +85,22 @@ Publications, awards, grants, service roles, teaching, PhD students, and news it
    `pull.rebase=false`, so a divergent history produces a merge commit, which is a commit
    nobody approved. The repo is edited through the GitHub web UI as well, so the local
    clone is often behind, and editing a stale copy silently reverts what was changed there.
-2. **Take every number from the repo, not from the README.** `data/open-source.json`
-   holds the star counts and is the authority; `index.html` and `files/bio.txt` hold the
-   aggregate download and star figures. A number that disagrees with the website is stale
-   in the README, not the other way round.
-3. **Round the same way the website rounds.** If the website says `55M+ downloads`, the
-   README says `55M+ downloads`, not `55 million` or `54.8M`.
+2. **Diff the facts before you finish, do not eyeball them.** Pull every figure and every
+   named list out of both files and compare them as sets, so a divergence is reported
+   rather than noticed. The cheap version:
+
+   ```bash
+   grep -ohE "[0-9][0-9,.]*[KkMm]?\+? (million )?(GitHub stars|downloads|peer-reviewed papers)" \
+     files/bio.txt ../yzhao062/README.md | sort -u
+   grep -ohE "named by[^.]*\.|used by[^.]*\." files/bio.txt ../yzhao062/README.md | sort -u
+   ```
+
+   Each command should print one line per distinct claim. Two lines that say the same
+   thing differently is the signal to reconcile them against `files/bio.txt`.
+3. **Match the value, not the typography.** `29,000` in the bio and `29k+` in the README
+   are the same claim, and each suits its own surface. What must never differ is the
+   number itself or its precision: do not turn `over 80` into `83`, or `55M+` into
+   `54.8M`, and do not carry the aggregate figure into a sentence about one project.
 4. **The README is a separate commit and a separate push,** and both need explicit
    approval like any other. Say plainly that two repositories are being changed.
 5. **If `../yzhao062` is missing,** clone it with
