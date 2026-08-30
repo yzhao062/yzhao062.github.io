@@ -65,7 +65,7 @@
     "docs_url": "",
     "paper_url": "",
     "demo_url": "",
-    "stars": 117,
+    "stars": 118,
     "tags": [
       "Agent Auditability",
       "Agent Reliability",
@@ -378,7 +378,7 @@
     "docs_url": "https://anywhere-agents.readthedocs.io",
     "paper_url": "",
     "demo_url": "",
-    "stars": 239,
+    "stars": 240,
     "tags": [
       "Claude Code",
       "Codex",
@@ -387,7 +387,7 @@
       "Configuration",
       "MCP"
     ],
-    "last_updated_at": "2026-08-28T21:41:13Z"
+    "last_updated_at": "2026-08-29T01:52:32Z"
   },
   {
     "name": "agent-style",
@@ -398,7 +398,7 @@
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/agent-style.html",
     "paper_url": "",
     "demo_url": "https://pypi.org/project/agent-style/",
-    "stars": 655,
+    "stars": 657,
     "tags": [
       "AI Agents",
       "Agent Configuration",
