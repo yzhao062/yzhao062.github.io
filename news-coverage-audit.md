@@ -146,13 +146,30 @@ prefix, so a legitimately published directory such as `docs/scratch/` is still c
 
 ### Held or Awaiting Re-Fetch
 
-154 UNVERIFIABLE records are re-fetch targets rather than absent evidence. Three items have now been
-blocked for three consecutive rounds and still need a browser capture: the DoD CDAO toolkit PDF
-(re-verified this round through a browser PDF path, but `ai.mil` still 403s a scripted fetch), MITRE
-LILAC v1, and the four Google Patents links on `opensource.html`. These three are a fetch problem, not
-a ledger problem. CDAO is Ledger 1 rows 2 and 2b and MITRE LILAC is row 8e, all counted on evidence
-already verified; what is blocked is the scripted re-check, so a later round can confirm the pages have
-not changed.
+154 UNVERIFIABLE records are re-fetch targets rather than absent evidence.
+
+**Two of the three long-blocked items are now cleared, through the Wayback Machine.** `ai.mil` and
+`mitre.org` both refuse a scripted fetch and a browser user agent alike, and `WebFetch` gets the same
+403, but each PDF has a live archived snapshot. Fetching those settled both rows against the document
+rather than against a memory of it:
+
+- **DoD CDAO Toolkit** (105 pages, snapshot 2025-10-06). PyOD appears in the Stage 3 Assessment at
+  p14 as the answer to the in-use monitoring question, and at p49 as a full entry under
+  Out-of-Distribution Detection Tools: *"Python library for detecting outlier objects in multivariate
+  data. Includes more than 40 detection algorithms."* TrustLLM appears at p19 among the fairness tools
+  and at p69 as *"Comprehensive framework for assessing the trustworthiness of LLMs across six
+  dimensions."* Rows 2 and 2b are confirmed as written.
+- **MITRE LILAC v1** (38 pages, snapshot 2025-10-18). Row 8e claims a body citation, and the string
+  `TrustLLM` occurs only once, on p18, inside the reference list. The claim survives anyway because
+  the report cites in author-year form: p17 reads *"There also exist test cases and metrics for
+  evaluating LLMs according to dimensions of trustworthiness (Huang et al. 2024)"*, and that reference
+  entry is the TrustLLM paper. Searching for the work's name alone would have produced a false
+  correction here, which is the mirror image of the NICT miss above.
+
+The **four Google Patents links** on `opensource.html` are still unreachable, and the reason matters.
+`patents.google.com` returns 503 to every automated request from this host, a rate limit rather than a
+missing page, so a human visitor most likely sees the patents fine. Their 49-patent figure does not
+rest on them in any case; it was verified in the 2026-08-13 round from named assignees.
 
 One item is genuinely uncounted. The Brazil TCU study is a real Tier 0 candidate whose PDF now 404s
 with an empty CDX record, and it is held because a Tier 0 claim may not rest on a search extract.
@@ -191,6 +208,39 @@ compare the extracted character count against the page count before recording on
 characters has not been read. And presentation decks are the format where this bites hardest, because a
 slide is as likely to be a picture of words as words. This is the second image-shaped miss this round,
 after the four Google Patents links that still need a browser capture.
+
+### Phase B Follow-Up: the Remediation Candidates Were Verified
+
+The six remediation lanes left 258 candidates that had never been through fetch-and-verify. Five Codex
+units took 180 of them, the whole T0 through T5 range, and returned **NEW 87, MIRROR 18,
+ALREADY-COUNTED 4, TOPIC-ONLY 43, UNVERIFIABLE 25, DROP 3**. Per-unit results are kept at
+`skills/news-search/scratch/2026-08-30/phase-b-verification/`.
+
+**These 87 are verified but not yet placed as ledger rows, so every published count is unchanged.**
+Ledger 1 stays at 37 and the total at 582. Placing them is the next round's first task, and it is
+mostly Ledger 3 and Ledger 7 work: only one candidate reaches Tier 0.
+
+What the verification changed:
+
+- **One Tier 0.** The OECD.AI Catalogue of Tools and Metrics for Trustworthy AI carries a record for
+  `anomaly-detection-resources`, published 2023-12-11, whose `githubLink` field is
+  `https://github.com/yzhao062/anomaly-detection-resources`. An intergovernmental catalogue listing,
+  on the precedent of row 16 (India TEC) and row 2c (Japan MoD), both of which count a body naming the
+  tool in an official resource. The work is a curated reading list rather than a library, which is
+  weaker than the other Tier 0 rows and should be annotated as such when the row is written.
+- **A pharma-adoption surface the audit had never seen.** 21 records show industry running TDC in their
+  methods: Schrodinger DeepAutoQSAR, Janssen / Johnson & Johnson, Bayer, Recursion (Nature
+  Communications), AstraZeneca R&D, Genentech Safety Assessment, Ersilia, China's National Institutes
+  for Food and Drug Control, and Ildong Pharmaceutical. Spot-checked against the primary source: Bayer's
+  paper reads *"made accessible for benchmarking via Therapeutics Data Commons (TDC). To access the
+  data 'PyTDC' (v0.4.1) is used with the group 'Caco2_Wang'"*. This is the surface the completeness
+  critic predicted would be invisible, because the TDC paper of record carries no arXiv identifier.
+- **Security venues opened for the first time.** Three USENIX Security 2025 papers, one NDSS 2026 paper,
+  and a Security BSides Las Vegas 2025 talk. One USENIX paper states *"We used PyOD [78] to implement a
+  base KNN with neighbors of 5 and leaf size of 30."*
+- **A lead that did not survive.** The GOV.UK London Borough of Sutton record was reported as a
+  remediation lane's strongest find. Phase B resolved it MIRROR: it is already Ledger 1 row 9. That is
+  the whole reason candidates may not be counted before verification.
 
 ### Method Defects in This Round, and the Fix
 

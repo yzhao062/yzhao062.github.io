@@ -107,6 +107,35 @@ a fresh URL is not a fresh finding, and neither is a fresh row.
 DOI, the arXiv identifier, the PDF title-page string, or a hash of the fetched bytes. Report the
 document count as the headline and the URL count only as supporting detail.
 
+## Failure 6: The Worker Is Never Told Where to Write
+
+**What happened.** A five-unit wave on 2026-08-30 came back with three `FALLBACK` results. Every one of
+those three workers had finished its analysis. One announced `Counts: 21 NEW, 5 MIRROR, 1 UNVERIFIABLE`,
+another `NEW 7, MIRROR 1, TOPIC-ONLY 37`, and the third `All 73 candidates now have evidence-backed
+verdicts and the counts reconcile to 73. Writing is blocked only by the omitted result path.` The work
+was done and could not be delivered.
+
+**The cause.** `dispatch-task.sh` takes `--result-file`, records it at `<state-dir>/result-file`, and uses
+it for its own salvage. It does **not** put that path into the prompt. A worker sees the prompt text and
+nothing else. The prompt template said "write to the result path given to you", naming a path the worker
+had never been given. Two of the three guessed the same conventional location, `out/news-search-phase-b-
+verification.md`, so the second guess overwrote the first; the third refused to guess and was reaped.
+
+**Why it looked like a capacity problem.** The one genuine infrastructure failure in the same wave
+(`ERROR: Selected model is at capacity`) produced an identical `FALLBACK` header, so all four looked alike
+until the salvaged tails were read. Only the tail distinguishes a worker that could not start from one
+that finished and had nowhere to put the answer.
+
+**The rules.**
+
+- Put the **absolute result path as a literal string** in the prompt body, and say that it appears there
+  and nowhere else. Never write "the path given to you".
+- Tell the worker not to write anywhere else, naming the repository explicitly. Two units that guess
+  alike will silently overwrite each other, which makes a guessed path inside the repo worse than no
+  file at all.
+- Before re-dispatching a `FALLBACK`, read its salvaged tail. A finished-but-undeliverable unit is
+  recovered by copying the file it did write; only a genuinely failed one needs the tokens spent again.
+
 ## Checklist for the Next Round
 
 1. Write unit lists with `newline='\n'`, and strip `\r` at the point of use anyway.
@@ -126,6 +155,10 @@ document count as the headline and the URL count only as supporting detail.
 8. Give the wait a finite wall clock. `dispatch-task` disables its hard timeout by default, so a
    worker that never finishes but keeps writing output resets the idle check forever. Setting the
    timeout is what makes item 5's `FALLBACK` check load-bearing: before it, no lane could time out.
+9. State the absolute result path literally in every prompt. `dispatch-task` does not pass it to the
+   worker, so a prompt that refers to "the result path given to you" names nothing.
+10. Read a `FALLBACK` tail before re-dispatching it. Three of five units in one wave had finished their
+    analysis and only lacked somewhere to put it.
 
 `scripts/dispatch_lanes.sh` implements the mechanical parts of items 1, 3, 4, 5 and 8. Its
 `result_complete` helper is the item 5 check, and it gates the skip-if-done branch and the launch
