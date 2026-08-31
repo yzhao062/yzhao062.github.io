@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import html
 import json
 import os
 import re
@@ -363,9 +364,22 @@ def check_local_refs(errors: list[str]) -> None:
     # - `out/`: gitignored LaTeX / local-build output (CV PDF intermediates, agent
     #   scratch directories). Not present in CI but may exist in dev clones.
     skip_top_level = {"news-snapshots", "out"}
+    # `skills/news-search/scratch/` is the gitignored working directory where a news-search
+    # worker parks pages it downloaded in order to scan them. Those captures reference the
+    # origin site's own assets, which are absent here by design, so scanning them reports
+    # failures against pages that were never part of this site. Matched as an exact prefix
+    # rather than as any path component named `scratch`, so a real published directory such
+    # as `docs/scratch/` is still checked.
+    skip_prefixes = {("skills", "news-search", "scratch")}
+
+    def _skip(rel_parts: tuple[str, ...]) -> bool:
+        if rel_parts and rel_parts[0] in skip_top_level:
+            return True
+        return any(rel_parts[: len(p)] == p for p in skip_prefixes)
+
     html_files = sorted(
         h for h in ROOT.rglob("*.html")
-        if not (set(h.relative_to(ROOT).parts) & skip_top_level)
+        if not _skip(h.relative_to(ROOT).parts)
     )
     for html in html_files:
         rel_html = html.relative_to(ROOT).as_posix()
@@ -537,6 +551,69 @@ def check_impact_claims_agree(errors: list[str], warnings: list[str]) -> None:
                     "The audit is the source of truth; update the surface."
                 )
 
+def check_bio_prerender_agrees(errors: list[str], warnings: list[str]) -> None:
+    """The prerendered biography on index.html must match files/bio.txt paragraph for paragraph.
+
+    Two surfaces carry the same three paragraphs and both are updated by hand. Nothing checked that
+    they agreed, so a propagation miss shipped silently: on 2026-08-30 an edit landed in bio.txt
+    alone and every gate still passed. Compare on text, after stripping tags and resolving entities,
+    so markup and escaping differences do not register as drift.
+    """
+    bio_path = ROOT / "files" / "bio.txt"
+    index_path = ROOT / "index.html"
+    if not bio_path.exists() or not index_path.exists():
+        warnings.append("bio prerender agreement not checked; a source file is missing")
+        return
+
+    index = index_path.read_text(encoding="utf-8", errors="replace")
+    block = re.search(r"PRERENDER:bio START(.*?)PRERENDER:bio END", index, re.S)
+    if not block:
+        errors.append("index.html no longer carries the PRERENDER:bio markers; bio agreement unchecked")
+        return
+
+    def flatten(text: str) -> str:
+        return re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", "", text))).strip()
+
+    bodies = re.findall(r"<p>(.*?)</p>", block.group(1), re.S)
+
+    # Stripping tags and comparing the remaining text treats every element as if it were
+    # semantically neutral, which is false in both directions: <span hidden>x</span> contributes
+    # text the browser never shows, and <del>x</del> reads as deleted while comparing equal to
+    # unmodified prose. Either would let the rendered biography diverge from bio.txt while this
+    # check passed. The biography is plain prose in both surfaces, so the sound rule is to admit no
+    # inline markup at all. If a link or emphasis is ever wanted here, allowlist that tag
+    # deliberately and decide what its text contributes, rather than reinstating "all tags are
+    # invisible". HTML comments carry no rendered text and stay permitted.
+    for i, body in enumerate(bodies, start=1):
+        stray = re.findall(r"<(?!!--)[^>]+>", body)
+        if stray:
+            errors.append(
+                f"bio paragraph {i} in the index.html prerender contains inline markup "
+                f"{stray[:3]}, which files/bio.txt cannot express. Keep the prerendered "
+                "biography as plain text, or allowlist the tag in check_bio_prerender_agrees."
+            )
+    if errors:
+        return
+
+    rendered = [flatten(b) for b in bodies]
+    source = [flatten(line) for line in bio_path.read_text(encoding="utf-8").splitlines() if line.strip()]
+
+    if len(rendered) != len(source):
+        errors.append(
+            f"bio prerender has {len(rendered)} paragraphs but files/bio.txt has {len(source)}; "
+            "update index.html to match bio.txt"
+        )
+        return
+
+    for i, (want, got) in enumerate(zip(source, rendered), start=1):
+        if want != got:
+            at = next((j for j, (a, b) in enumerate(zip(want, got)) if a != b), min(len(want), len(got)))
+            errors.append(
+                f"bio paragraph {i} differs between files/bio.txt and the index.html prerender "
+                f"at character {at}: bio.txt has {want[at:at + 60]!r}, index.html has {got[at:at + 60]!r}. "
+                "bio.txt is the source; update the prerender."
+            )
+
 
 def main() -> None:
     errors: list[str] = []
@@ -550,6 +627,7 @@ def main() -> None:
     check_bib_coverage(errors, warnings)
     check_utf8_bom(errors)
     check_impact_claims_agree(errors, warnings)
+    check_bio_prerender_agrees(errors, warnings)
     check_public_urls(errors, warnings)
 
     if errors:

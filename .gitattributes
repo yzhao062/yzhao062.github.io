@@ -1,6 +1,10 @@
 * text=auto
 
 # Keep line endings stable across Windows/Linux.
+# Shell scripts must be LF even on Windows checkouts: bash reads a CRLF script as if every
+# line ended in a stray \r, which produces errors far from the real cause. The 2026-08-30
+# news-search round lost twelve worker lanes to a CRLF that reached a shell loop this way.
+*.sh text eol=lf
 *.html text eol=lf
 *.css text eol=lf
 *.js text eol=lf

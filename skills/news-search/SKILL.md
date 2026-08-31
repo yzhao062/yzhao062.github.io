@@ -25,7 +25,11 @@ Read these files before starting:
 
 ## Execution Model
 
-If parallel workers and web search are available, run dimensions in parallel; otherwise process dimensions sequentially. Batch queries conservatively to stay within tool rate limits. Read these reference files before starting:
+If parallel workers and web search are available, run dimensions in parallel; otherwise process dimensions sequentially. Batch queries conservatively to stay within tool rate limits.
+
+**Before building any launcher, read `references/fan-out-reliability.md` and use `scripts/dispatch_lanes.sh`.** A full round dispatches thirty to forty lanes. The 2026-08-30 round lost lanes four separate times, and the dispatcher reported success on every one. A CRLF in a unit list silently no-opped twelve lanes at exit 0. Editing a launcher mid-flight killed three supervising shells. `setsid` is absent from Git Bash, so a fire-and-forget rewrite launched nothing while printing success. Truncated stdout from a killed shell was then read as a complete record of what it had dispatched. The one rule that covers all four: an exit code is not evidence that work happened, a result file is. Reconcile every dispatched unit against a complete result before reporting a wave finished or integrating anything from it. Complete means present, non-empty, and not the `FALLBACK` header `dispatch-task` writes over a reaped worker. Non-empty alone reports a timed-out lane as a success.
+
+Read these reference files before starting:
 
 1. `references/search-queries.md`: query bank (not exhaustive; see triage rules below)
 2. `references/outlet-registry.md`: outlet classification and `site:` domain lists
@@ -35,6 +39,8 @@ If parallel workers and web search are available, run dimensions in parallel; ot
 6. `references/domain-registry.md`: seed domains by source class and `outlet_class` values for Phase A
 7. `references/disambiguation-registry.md`: cumulative tool-name and person-name collision rules + verified-negative leads from prior rounds (consult before counting any borderline match)
 8. `scripts/pdf_term_scan.py`: PyMuPDF-based FORTIS-term scanner with built-in false-positive filters; canonical Phase B PDF-deep-search tool. Run as `python skills/news-search/scripts/pdf_term_scan.py <pdf_path>`.
+9. `references/fan-out-reliability.md`: the four ways a lane fan-out has silently lost work, and the checklist that prevents each. Required reading before building a launcher.
+10. `scripts/dispatch_lanes.sh`: hardened Codex lane dispatcher implementing that checklist. It strips CR from unit ids, verifies each launch by polling for `STATE-DIR`, uses `nohup` rather than the absent `setsid`, and exits non-zero when any dispatched unit has no result. Run as `bash skills/news-search/scripts/dispatch_lanes.sh --prompts <dir> --results <dir> --cap 4 <unit> ...`, and re-check a detached wave later with `--reconcile-only`.
 
 Run the two-phase pipeline described below. Phase A gathers candidates into `news-search-candidates.jsonl` and does not edit `news-coverage-audit.md`. Phase B verifies each candidate, classifies the survivors, records dropped candidates in the candidate file, and writes only kept rows to `news-coverage-audit.md` using the tier structure in the Output section. If `news-coverage-audit.md` does not yet exist, Phase B creates it with the full tier structure and negative-results table as a fresh audit.
 

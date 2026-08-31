@@ -15,6 +15,208 @@
 
 ---
 
+## 2026-08-30 Pass (Phase A: 33 Codex lanes via `/prun`; Phase B: 22 Codex units; cross-vendor adversarial verification: 28 Claude agents via `/workflows`)
+
+**Method, and what changed.** The round started as a two-vendor fan-out, then the Claude quota
+tightened and all 16 Claude discovery lanes were re-cast as Codex lanes with their briefs carried over
+verbatim. When quota returned, Claude was spent on the one job Codex cannot do for itself: an
+independent adversarial re-fetch of every high-tier claim the Codex lanes had produced. That decision
+is the most useful thing in this pass.
+
+Fourteen lanes were added mid-round on evidence rather than plan. Two BIS hits in the first wave
+prompted one dedicated central-bank and official-statistics lane. Seven more went deep on the
+agent-auditability line at the user's direction. Six closed gaps that three completeness critics
+measured against the round's own corpus.
+
+**Scale.** 2,081 raw records to 1,785 unique URLs, 1,044 absent from the prior 1,934-URL index.
+1,130 Phase B verdict rows over 1,018 unique URLs. 122 URLs were surfaced independently by two lanes.
+
+| Verdict | Count |
+|---|---|
+| NEW | 549 |
+| MIRROR | 208 |
+| UNVERIFIABLE | 154 |
+| TOPIC-ONLY | 127 |
+| DROP | 50 |
+| ALREADY-COUNTED | 42 |
+
+### Tier 0: Confirmed New (Ledger 1, +4 documents)
+
+Rows 18, 19, 20 and 20b: the BIS/IFC Bank of Thailand paper stating a production-deployment goal for
+ECOD on central-bank credit data; the International AI Safety Report **2025** edition citing TrustLLM,
+which is a different document from the 2026 edition already counted; a NICT Japan cybersecurity deck
+describing TrustLLM's six trustworthiness dimensions; and a second NICT deck whose AI Security
+Evaluation Platform builds two of its three selectable test sets on TrustLLM. Japan NICT and the Bank
+of Thailand are both new to this ledger.
+
+Row 20b was found by the round-5 reviewer, in a document this round had already recorded as a verified
+negative. See "A Text Scan Cannot Read a Slide" below.
+
+### The Adversarial Pass Overturned 11 of 17 High-Tier Claims
+
+Every claim the Codex lanes rated Tier 0, Tier 1 or Tier 2 was handed to an independent Claude agent
+instructed to disprove it, with a second agent attacking anything that survived on the separate axis
+of authorship and novelty. Six survived. The eleven that fell divide into three classes, and the third
+is the one to keep in view.
+
+- **First-party or misattributed.** A "National Academies deck naming TDC" is Marinka Zitnik's own
+  slides. She is senior author of the TDC papers, every slide footer reads `zitniklab.hms.harvard.edu`,
+  and "Zhao" appears zero times across 37 pages. NASEM hosted the file on its CDN as invited-speaker
+  material. This is the same shape as the earlier SUOD case: material internal to the cited work's own
+  author team logged as third-party evidence.
+- **Already counted, or host mistaken for author.** IFC Bulletin 64 was proposed as a Tier 0 citation
+  of the Diffusion Models survey. It fails on five independent grounds: the survey is already carried
+  as a single aggregate Ledger 3 row covering 1,846 citations; the BIS chapter is a verbatim reprint of
+  arXiv:2401.06263 from January 2024, so the citation edge predates the reprint and sits inside that
+  1,846; the authors are at the Bundesbank and the University of St Gallen, with two explicit
+  disclaimers that the views are not the BIS's; the same institution and bulletin series already holds
+  a stronger row at 2d; and the audit's own tier machinery computes over a non-survey subset.
+- **Dead or fabricated URLs.** Three of the seventeen did not resolve. The Notre Dame Lucy Institute
+  report returned a genuine origin 404, `gyznsw.cn` returned a 555-byte nginx 404, and a MarkTechPost
+  ADMET-AI URL was a fabricated slug on a real outlet with no redirect from an older path.
+
+**Three of seventeen top-tier URLs did not exist.** Only an independent second-vendor fetch found that.
+Single-vendor high-tier output should not be promoted without one.
+
+### The Agent-Auditability Line
+
+Seven dedicated lanes ran on this line, and it is now the best-mapped area of the audit.
+
+**The work was cited in an OWASP standard's drafting history, then removed.** The official OWASP AISVS
+repository was cloned and scanned across its current tree, its merged history, and 721 fetched
+pull-request heads. Merged PR #899 cited Auditable Agents by title and arXiv identifier, with research
+notes describing its five dimensions and three mechanism classes. AEGIS was cited by arXiv identifier
+in merged PR #815 as a pre-execution firewall and audit layer, and a later revision linked the repository.
+PR #1018 removed both during consolidation. Neither appears in the released specification, which is why
+an earlier scan of the published document came back clean. Recorded as historical Tier 0 candidates,
+not as claims about the current release.
+
+**Citation absence is now measured in bounded samples rather than asserted.** Three lanes converge from different
+directions. The full NIST-2025-0035 agent-security docket was enumerated at 535 records with 467
+primary PDFs downloaded and scanned: zero citations. Fifty-five named vendors across observability,
+AI security, agent authorization and GRC: zero citations, with Drata, Fiddler, Cerbos, WorkOS, Descope
+and Inngest all converging on the same technical pattern without naming the research. Eight languages
+of national-standards and research-institute material, including TC260, IPA, TTA, BSI and Fraunhofer:
+zero citations. Across these sampled corpora, related auditability patterns appear without citations to the FORTIS work. This audit does not establish whether those materials derived from it.
+
+**Citation indices are unreliable in both directions.** A listing-level sweep enumerated 8,150 August
+2026 arXiv submissions and scanned 326 selected PDFs, finding three new citations that no index
+carried. Semantic Scholar's 54 checked citer PDFs all confirmed their asserted edges. OpenAlex reported
+zero citers for nearly every seed and supplied one corrupt edge, `W4394653315`, which resolves to an
+unrelated temporal-logic paper containing neither the title nor the identifier. Both indices report
+zero forward citations for Implicit Execution Tracing while DEMM demonstrably cites it. **No absence
+claim on this line is safe without opening the PDF.**
+
+**A standing negative was falsified.** The note that the FORTIS over-privilege benchmark has zero
+confirmed external citers is false. arXiv:2608.18351 runs both FORTIS tasks as external evaluations and
+reports them in its results tables.
+
+**Shipped reuse, as distinct from mentions.** RedStamp merged a live AEGIS adapter that builds a pinned
+commit in CI and calls the check endpoint; HELM AI Kernel merged AEGIS evidence-integrity proof tests
+and an overhead benchmark; SINT Protocol merged two conformance documents calibrated against an
+`agent-audit` issue; Repath merged GRADE's observed/declared/inferred edge taxonomy; Agent Action
+Receipts targets the Auditable Agents IS Level 3 definition and uses the Auditability Card as a buyer
+checklist. A separate Rust project renamed itself to Kintsugi to resolve the AEGIS name collision while
+keeping the academic citation.
+
+**Negatives on this line, scoped to what was searched.** The sampled citation indices and corpora
+returned no downstream citations to WeClawArena. Two independent lanes found no third-party coverage of
+`auditable.run` across Crunchbase, LinkedIn, Business Wire, TechCrunch and the general queries used in
+this pass. Neither result establishes universal absence, and this pass separately shows that citation
+indices miss real edges.
+
+### Site Defects Found and Fixed
+
+A dedicated lane re-fetched every award and evidence link on the public surfaces, and the coordinator
+re-checked twelve of them directly. Most of the lane's flags were wrong: linking an award name to the
+award programme's own page is normal practice, and demanding that every such page name the recipient
+would be a misreading. Four defects were real and are fixed in this commit: a DNS failure at
+`manteimaeawards.com`, a 404 at the University of Cincinnati Engineer of the Month page, a 404 at the
+`Wesleyluo9/DoxBench` repository link, and an unsupported SLAC claim whose cited OSTI page never
+mentions PyOD and whose two "Zhao" hits are both **Zhao, Rui**, a different person. The SLAC link now
+points to the paper's DOI, and the claim itself was corrected downward: OSTI's own record confirms the
+`SLAC National Accelerator Laboratory` research org, but the paper uses PyOD for the one-class SVM it
+compares against rather than as its method, so `opensource.html` now says baseline. Both arXiv versions
+print that citation as an unresolved `[?]`, and `iopscience.org` serves a bot interstitial to every
+fetch, so this row rests on use rather than on a resolved citation.
+
+`scripts/ci_check_site.py` was also scanning agent scratch directories, so a page a worker downloaded
+in order to grep it broke the site gate. Fixed by skipping the exact `skills/news-search/scratch/`
+prefix, so a legitimately published directory such as `docs/scratch/` is still checked.
+
+### Held or Awaiting Re-Fetch
+
+154 UNVERIFIABLE records are re-fetch targets rather than absent evidence. Three items have now been
+blocked for three consecutive rounds and still need a browser capture: the DoD CDAO toolkit PDF
+(re-verified this round through a browser PDF path, but `ai.mil` still 403s a scripted fetch), MITRE
+LILAC v1, and the four Google Patents links on `opensource.html`. These three are a fetch problem, not
+a ledger problem. CDAO is Ledger 1 rows 2 and 2b and MITRE LILAC is row 8e, all counted on evidence
+already verified; what is blocked is the scripted re-check, so a later round can confirm the pages have
+not changed.
+
+One item is genuinely uncounted. The Brazil TCU study is a real Tier 0 candidate whose PDF now 404s
+with an empty CDX record, and it is held because a Tier 0 claim may not rest on a search extract.
+
+Six remediation lanes closed gaps that three completeness critics measured against this round's own
+corpus. All six finished; none of their candidates has been through Phase B, so nothing below is
+counted, and the next round should verify them first.
+
+| Lane | Output | Strongest leads |
+|---|---|---|
+| Biomedical via Europe PMC | 28 candidates, 3 verified negatives | 21 records document substantive TDC training, dataset use, or benchmark execution, including Google TxGemma, Schrodinger DeepAutoQSAR, Bayer Caco-2 modelling, Janssen / Johnson & Johnson graph transformers, and Recursion MolE. The TDC paper of record (PMID 36131149) drew no attention anywhere else this round because it carries no arXiv identifier, which is how an entire pharma-adoption surface stayed invisible. |
+| Compliance and regulators | 5 candidates, 14 verified negatives | A London Borough of Sutton algorithmic transparency record on GOV.UK links the PyOD KNN documentation inside a production health and social-care anomaly-detection system, with Access Group named as developer. The OECD.AI trustworthy-AI catalogue links `yzhao062/anomaly-detection-resources`. |
+| Security conferences and organizations | 6 candidates, 23 verified negatives | Three USENIX Security 2025 papers and one NDSS 2026 paper cite the work, one of them stating that PyOD implemented its KNN baseline. Conference proceedings had never been opened by any lane. |
+| Supply chain and non-Python ports | 32 candidates, 38 verified negatives | No Tier 0 or Tier 1. Every URL fetched and its HTTP result recorded. |
+| Under-served works | 37 candidates, 6 verified negatives | Covers every work the attention cross-tab named, including the Employee Turnover paper, CONAD, ADMoE, and the PyOD 2 paper. |
+| Regional indexes | 29 candidates, 3 verified negatives | 21 scholarly or thesis records and 8 book records. 24 access failures recorded rather than treated as absence. |
+
+The recurring lesson across three of these lanes: a work without an arXiv identifier is invisible to an
+identifier-keyed sweep, however heavily it is cited. 41 of the 124 works in `data/publications.json`
+have no arXiv URL, and they sit at the bottom of the attention distribution.
+
+### A Text Scan Cannot Read a Slide
+
+Row 20 originally closed with a verified negative: that the second NICT deck
+(`nict_cyber2026/program_takeshi-takahashi.pdf`) covers an AI security evaluation platform but names no
+FORTIS work. That was wrong. Slide 20 is the platform's own interface, and its "Select test sets" panel
+offers `Prompt Injection (Purple Llama)`, `AdvGLUE (TrustLLM)`, and `Jailbreak (TrustLLM)`.
+
+That slide is an image. `pypdf` and `pdftotext` both return the string `20` for the page, its page
+number and nothing else, so `pdf_term_scan.py` and every other text-keyed check this audit runs are
+structurally blind to it. No judgement call went the wrong way here. The evidence was never in front of
+the tool that produced the negative, and reaching it took rendering the embedded image and looking.
+
+Two rules follow. A negative drawn from a text scan is only as strong as the text the scan could see, so
+compare the extracted character count against the page count before recording one: a page yielding two
+characters has not been read. And presentation decks are the format where this bites hardest, because a
+slide is as likely to be a picture of words as words. This is the second image-shaped miss this round,
+after the four Google Patents links that still need a browser capture.
+
+### Method Defects in This Round, and the Fix
+
+The lane fan-out lost work four times while reporting success each time. A CRLF in a unit list silently
+no-opped twelve lanes at exit 0. Editing a launcher while it ran killed three supervising shells.
+`setsid` is absent from Git Bash, so a fire-and-forget rewrite launched nothing while printing success.
+Truncated stdout from a killed shell was then read as a complete record of what it had dispatched.
+Separately, nine Tier 0 verdict rows were reported as nine findings when they were four documents.
+
+All five are written up in `skills/news-search/references/fan-out-reliability.md`, and
+`skills/news-search/scripts/dispatch_lanes.sh` implements the guards. The rule that covers them: an
+exit code is not evidence that work happened, a result file is, and a tier count must be grouped by
+document rather than by URL.
+
+### Propagated to Site
+
+Ledger 1 rows 18, 19, 20 and 20b reached `opensource.html` (Recent Institutional Visibility card),
+`files/bio.txt` and its `index.html` prerender, and `llms.txt`. The four link defects above were fixed
+on `cv/cv-full.tex` and `opensource.html`. Nothing below Tier 1 was propagated this round.
+
+`scripts/ci_check_site.py` now checks that `files/bio.txt` and the `index.html` prerender agree
+paragraph for paragraph. They hold the same three paragraphs, both are maintained by hand, and nothing
+verified them: an edit this round landed in one and not the other while every gate still passed.
+
+---
+
 ## 2026-08-13 Pass (Phase A: 17 Claude lanes via `/workflows` + 10 Codex lanes via `/prun`; Phase B: 12 Codex verification units)
 
 **Method, and the one thing that changed.** Every Phase A lane ran as a first-ever audit. No lane was
@@ -938,10 +1140,21 @@ Items where government bodies, policy organizations, or foundation model compani
 | 11 | TrustLLM | **US DOE / ORNL**, technical report ORNL/TM-2025/3935 (OSTI 3002371) | "Scalable Workflow for Evaluating Trustworthiness of Large Language Models". 11 literal TrustLLM occurrences across pp. 5, 8, 9, 15, 20, including substantive workflow discussion. *(Verified 2026-07-19 as T0-c; row written 2026-08-09.)* | 2025 |
 | 12 | TrustLLM | **G7 Hiroshima AI Process / OECD**, Salesforce Transparency Report | TrustLLM confirmed on p4 of the eight-page PDF; re-downloaded and rescanned 2026-08-09. OECD hosts the report but explicitly leaves responsibility with Salesforce. *(Verified 2026-07-19 as T0-d; row written 2026-08-09.)* | 2025 |
 | 13 | PyOD | **NIST NVD**, CVE-2026-15529 | Names `yzhao062--pyod`, links the canonical repo, and as of the 2026-07-20 modification reads "up to 3.6.1", fixed in 3.6.2. **Adverse coverage** (a security advisory, not an endorsement). Mirrors at ENISA EUVD, CVE.org, VulDB, and CISA SB26-201 are not counted separately. See "Security finding" below. *(Verified 2026-07-19 as T0-e; row written 2026-08-09.)* | Jul 2026 |
-| 14 | COPOD | **arxiv.org** | PDF p31: "Some examples of partially fulfilled requirements are for algorithms that R1) do not provide dedicated thresholding mechanisms, R2) technically allow for the online detection but with a large computational overhead, R4) handle anomalies in training data but cannot learn from them, R5) would need additional mechanisms or modifications of external libraries (i.e., PyOD70) to provide a list [source](https://arxiv.org/abs/2406.17826) | 2026 |
+| 14 | COPOD | **European Space Agency (ESA/ESOC)**, ESA-ADB benchmark | "European Space Agency Benchmark for Anomaly Detection in Satellite Telemetry" (ESA-ADB), 87 pages, coauthored by ESOC staff at `esa.int` (Peter Collins, Gabriele De Canio) with Christoph Haskamp and Daniel Lakey. COPOD is reference 60 and is scored against the benchmark's nine requirements: p27 notes it needs no standardisation "by definition"; p31 states that it "does not fulfil R9 after adapting it to online detection". **Assessed and not adopted:** the requirements table on p32 records COPOD as `Included in ESA-ADB: NO`, so this row is evidence of evaluation by an ESA benchmark rather than of adoption. PyOD is separately cited as reference 70 (JMLR). Distinct from row 8, which is the OPS-SAT benchmark in *Scientific Data* by a different author set. Verified 2026-08-30 by downloading the 87-page PDF and scanning it. [source](https://arxiv.org/abs/2406.17826) | 2024 |
 | 15 | TDC | **research.google** | "We leveraged data from the Therapeutic Data Commons (TDC), a public collection of drug discovery datasets for training ML models, and processed 66 tasks most relevant to drug discovery into instruction-answer formats suitable for LLMs." [source](https://research.google/blog/tx-llm-supporting-therapeutic-development-with-large-language-models/) | 2026 |
 | 16 | PyOD | **tec.gov.in** | "Anomaly Detection • PyOD – Outlier detection algorithms." [source](https://www.tec.gov.in/pdf/consultations/Combined%20Standard%20on%20AI%20Robustness%20dated%2006052025-57070.pdf) | 2026 |
 | 17 | ADBench | **www2.camara.leg.br** | "Zhao, Nasrullah e Li (2019) apresentaram uma biblioteca de código livre e aberto (open-source) escrita na linguagem Python para a detecção de anomalias, denominada Python Outlier Detection (PyOD), que implementa mais de quarenta diferentes algoritmos." The methods then state: "Nesse sentido, foi utilizada a biblioteca Scalable Unsupervised Outlier Detection (SUOD), também escrita em linguagem Pyt [source](https://www2.camara.leg.br/a-camara/programas-institucionais/cursos/pos-graduacao/eventos/jornadas-de-pesquisa-e-extensao/final_AnaisdaXIIIJornadadePesquisaeExtensodaCmaradosDeputadosParlamentoeInovao.pdf) | 2026 |
+| 18 | ECOD | **BIS / Irving Fisher Committee** (Bank of Thailand authors) | IFC Bulletin 66, "A scalable, explainable machine learning approach for granular-level credit dataset's quality assurance". p15, Further Work: *"Our eventual goal is to deploy ECOD for the full RDT Credit data in our production environment, implemented on-premises under Apache platform (Spark or Hadoop)."* The paper evaluates ECOD on granular regulatory credit data and reports detection recall and top-3 explained-feature coverage. **A stated production-deployment goal inside a central bank's regulatory data pipeline, which is stronger than a citation.** The same page also states that the full pipeline needs further scalability research and experimentation, so this is an intent rather than a scheduled deployment. Verified 2026-08-30 by PDF download plus `pdf_term_scan.py`; the claim survived an independent adversarial re-fetch. Canonical URL `bis.org/2026-07/ifcb66_08.pdf`, which is the path the bulletin landing page points to. The paper was prepared for the 12th biennial IFC Conference of 22-23 August 2024 and published in Bulletin 66; the `/2026-07/` URL segment is not the publication date. | Feb 2026 |
+| 19 | TrustLLM | **International AI Safety Report 2025** | Reference 1035, PDF p281, full author list: *"Y. Huang, L. Sun, ... Y. Zhao, 'Position: TrustLLM: Trustworthiness in Large Language Models'"*. **Distinct document from the 2026 edition already counted at row 8b**, verified by comparing both files rather than by URL. Chaired by Yoshua Bengio with 30+ country backing. Verified 2026-08-30; survived adversarial re-fetch. Hosted at both `internationalaisafetyreport.org` and `assets.publishing.service.gov.uk`. | 2025 |
+| 20 | TrustLLM | **NICT** (Japan, National Institute of Information and Communications Technology) | Cybersecurity research deck, PDF p22: *"TrustLLM Team 2024 ・LLMにおける信頼性に関する包括的な研究チーム ・真実性、安全性、公平性、堅牢性、プライバシー、機械倫理の6つの側面でLLMの信頼性を評価する。"* The six trustworthiness dimensions are described in full. **First appearance of a FORTIS work in a NICT document, and a new national research institute for this ledger.** Verified 2026-08-30 by PDF scan; survived adversarial re-fetch. | Mar 2026 |
+| 20b | TrustLLM | **NICT** (Japan, National Institute of Information and Communications Technology) | AI Security Evaluation Platform, slide 20 of the NICT Cyber Security Symposium 2026 deck `program_takeshi-takahashi.pdf`. The platform's "Select test sets" panel offers three options, and TrustLLM supplies two of them: **`AdvGLUE (TrustLLM)`** and **`Jailbreak (TrustLLM)`**, beside `Prompt Injection (Purple Llama)`. **Operational use with attribution inside a national research institute's evaluation tooling, which is stronger than a citation.** A second NICT document, distinct from row 20, so the institute is now represented twice. Verified 2026-08-30 by rendering the slide: the page carries no extractable text, so every text-based scan this audit runs returns nothing for it. Found by the round-5 reviewer after this row had been recorded as a verified negative. | 2026 |
+
+**Source URLs (rows 18-20b):**
+
+- Row 18: [BIS IFC Bulletin 66, ifcb66_08](https://www.bis.org/2026-07/ifcb66_08.pdf)
+- Row 19: [International AI Safety Report 2025](https://internationalaisafetyreport.org/sites/default/files/2025-10/international_ai_safety_report_2025_english.pdf), [report landing page](https://internationalaisafetyreport.org/publication/international-ai-safety-report-2025)
+- Row 20: [NICT cybersecurity deck](https://www2.nict.go.jp/idi/common/pdf/2025-s-cyber.pdf)
+- Row 20b: [NICT Cyber Security Symposium 2026, Takahashi deck](https://www2.nict.go.jp/csri/nict_cyber2026/common/files/program_takeshi-takahashi.pdf)
 
 **Source URLs:** [Senate PDF](https://www.hsgac.senate.gov/wp-content/uploads/2024.06.11-Hedge-Fund-Use-of-AI-Report.pdf) · [CDAO Toolkit](https://www.ai.mil/Portals/137/Documents/Resources%20Page/2024-12GenAI-Responsible-AI-Toolkit.pdf) · [NIST PDF](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-2e2025.pdf) · [FLI Inaugural](https://futureoflife.org/ai-policy/ai-experts-major-ai-companies-have-significant-safety-gaps/) · [FLI Summer](https://futureoflife.org/ai-safety-index-summer-2025/) · [FLI Winter](https://futureoflife.org/ai-safety-index-winter-2025/) · [FLI Indicator Sheet](https://futureoflife.org/wp-content/uploads/2025/11/Indicator-TrustLLM_Benchmark.pdf) · [ESA OPS-SAT](https://www.nature.com/articles/s41597-025-05035-3) · [Intl AI Safety Report](https://internationalaisafetyreport.org/publication/international-ai-safety-report-2026) · [Privacy Intl](https://www.privacyinternational.org/report/5736/nowhere-hide-privacy-risks-and-policy-implications-ai-geolocation) · [LLNL SafeAI PDF](https://data-science.llnl.gov/sites/data_science/files/2024-12/SafeAIforDOE%20Digital.pdf) · [MITRE LILAC PDF](https://www.mitre.org/sites/default/files/2024-10/PR-24-2767-Emerging-Risks-Mitigations-Public-Chatbots-LILAC-v1.pdf) · [TxGemma report](https://storage.googleapis.com/research-media/txgemma/txgemma-report.pdf) · [Google TxGemma docs](https://developers.google.com/health-ai-developer-foundations/txgemma) · [OpenAI Careers](https://openai.com/careers/technical-intelligence-analyst-san-francisco/) · [snapshot](news-snapshots/openai-careers-technical-intelligence-analyst-2026-05-07.md) · [OpenAI Careers #8h Wayback](http://web.archive.org/web/20250810151707/https://openai.com/careers/quantitative-threat-forecasting-analyst/) · [#8h snapshot](news-snapshots/openai-careers-quantitative-threat-forecasting-analyst-2025-08-10.md) · [Brazil Tesouro Nacional](https://publicacoes.tesouro.gov.br/index.php/cadernos/article/view/158)
 
@@ -950,7 +1163,18 @@ Items where government bodies, policy organizations, or foundation model compani
 **D8 candidates resolved:**
 - ~~**OWASP GenAI Solutions Landscape Q2 2026**~~ — manually checked Apr 10; no universities or academic tools listed. Cleared.
 
-**Count: 28 government/policy/foundation-model citations (TrustLLM x13, PyOD x12, TDC x2, DoxBench x1)**
+**Count: 37 government/policy/foundation-model citations (TrustLLM x17, PyOD x13, TDC x3, DoxBench x1, COPOD x1, ADBench x1, ECOD x1)**
+
+*Recounted 2026-08-30 from the table itself, at 36, then 37 once row 20b was added. The line read 28 against a 33-row table, and its breakdown
+named neither COPOD nor ADBench. Rows 14 through 17 were appended without a matching count update, which
+is the same drift the 2026-08-09 note below describes; the rule that closed it binds the count line as
+well as the rows. Row 14's source column was corrected in the same edit. It read `arxiv.org`, which is
+where the file sits rather than who wrote it: the ESA Anomaly Detection Benchmark paper is coauthored by
+European Space Operations Centre staff at `esa.int` and names ESOC throughout. Ledger 1 admits row 8 on
+the same basis, ESA authorship in a journal rather than an ESA-published document, so institutional
+authorship is the rule this ledger already runs on. Rows 8 and 14 are separate documents, checked rather
+than assumed: row 8 is the OPS-SAT benchmark in Scientific Data (Ruszczak, Kotowski, Evans, Nalepa), row
+14 is the 87-page ESA-ADB paper (Kotowski, Haskamp, and nine others).*
 
 *Reconciled 2026-08-09, and the reconciliation is the point. The count line read 15 while the table held 19
 rows, because two prior passes recorded Tier 0 promotions in their own pass sections without writing ledger
@@ -1489,7 +1713,6 @@ quantitative record of *how many*.
 | A8 | [arXiv:2605.29253](https://arxiv.org/abs/2605.29253), "OpenClawBench: Benchmarking Process-side Anomalies in Real-world Agent Execution Trajectories" | Auditable Agents | p4, in a related-work subsection on trajectory-aware evaluation and process anomaly auditing: *"Auditable Agents argues that agent systems should be auditable from execution records, not only final answers [12]."* Full reference on p10. | 2026-08-09 |
 | A9 | [arXiv:2606.30970](https://arxiv.org/abs/2606.30970), "Behavioral Governance for Autonomous AI Agents: The AgentBound Framework" (Kaul, Lan, Gupta) | Auditable Agents | p11 body: *"From a mediation cost perspective, Auditable Agents develops structured evidence-design tenets to systematically optimize performance trade-offs associated with pre-execution runtime inspection [8]."* Cites the **overhead result**, which no other citer does. Full reference on p14. | 2026-08-09 |
 | A10 | [arXiv:2607.20729](https://arxiv.org/abs/2607.20729), "Operational Identity: A Finite Audit of Declared and Implemented Rules of Sameness" (Denise M. Case, solo, 45 pages) | Auditable Agents | p38 body: *"Work on auditable agents treats auditability as the system property that makes accountability possible (Nian et al. 2026). These approaches expose the provenance an audit needs. The operational identity partition supplies a complementary..."*. Full reference on p45. **Places the work in a records-and-provenance lineage rather than an agent-security one**, cited alongside W3C PROV, PROV-AGENT, and Ojewale et al. on audit trails. | 2026-08-09 |
-
 | A11 | [arXiv:2605.04093](https://arxiv.org/abs/2605.04093), "Decision Evidence Maturity Model for Agentic AI: A Property-Level Method Specification" (Oleg Solozobov, solo, 41 pages) | Auditable Agents, Implicit Execution Tracing, Aegis, Sovereign-OS | **The strongest external citation the line has received, and it cites four FORTIS works.** §2.4 is titled *"Auditable Agents and the Three-Layer Reading"*. The paper states *"The broad auditability-framework coordinate is **owned by** Auditable Agents (Nian et al., 2026a)"* and *"The paper **cedes broad-framework priority to Auditable Agents**"*, then builds its own contribution on the framework's own partition: *"On the Auditable Agents detect/enforce/recover mechanism partition, DEMM positions an explicit assess coordinate alongside the verify and present coordinates"*. 14 "Auditable Agents" occurrences and 19 "Nian" occurrences. **Implicit Execution Tracing is cited in the body twice** (pp5, 24) as "IET final-text signals" inside an evidence-source taxonomy, and **Aegis appears five times as "AEGIS-NTC tool firewall"**. Sovereign-OS is in the reference list. | 2026-08-09 |
 | A12 | [arxiv.org](https://arxiv.org/abs/2604.23425) | AEGIS | "AEGIS [11] provides a pre-execution firewall with content scanning and tamper-evident audit trails." | 2026-08-13 |
 | A13 | [arxiv.org](https://arxiv.org/abs/2606.15242) | AEGIS | "AEGIS (Yuan et al., 2026) and ClawGuard (Zhao et al., 2026) interpose before tool execution and block risky calls at invocation time." | 2026-08-13 |
@@ -1652,7 +1875,7 @@ the audit did not record for PyOD before 2026-08-09.
 
 | Ledger | Count |
 |--------|-------|
-| Government/Policy citations (Ledger 1) | **29**, recounted 2026-08-09 directly from the table, which now carries every verified promotion as a row. Composition: 19 rows standing before 2026-07-31, +5 for the 2026-07-19 Tier 0 promotions (rows 9-13), +1 for the 2026-07-31 NIST webinar deck (row 3b), +1 for FLI Summer 2026 moved here from Ledger 2 (row 7b), +3 net new this round (2g Brazil Tesouro Nacional, 2h Indonesian Kemenkeu, 8h OpenAI PyOD 2.0). Row 2f merges the METI and NEDO promotions, so promotions number 30 against 29 rows. The figure published before this reconciliation was 20. **Updated 2026-08-13: 29 + 4 = 33.** |
+| Government/Policy citations (Ledger 1) | **37** as of 2026-08-30. History: **29**, recounted 2026-08-09 directly from the table, which now carries every verified promotion as a row. Composition: 19 rows standing before 2026-07-31, +5 for the 2026-07-19 Tier 0 promotions (rows 9-13), +1 for the 2026-07-31 NIST webinar deck (row 3b), +1 for FLI Summer 2026 moved here from Ledger 2 (row 7b), +3 net new this round (2g Brazil Tesouro Nacional, 2h Indonesian Kemenkeu, 8h OpenAI PyOD 2.0). Row 2f merges the METI and NEDO promotions, so promotions number 30 against 29 rows. The figure published before this reconciliation was 20. **Updated 2026-08-13: 29 + 4 = 33. Updated 2026-08-30: 33 + 4 = 37** (rows 18 ECOD/BIS, 19 International AI Safety Report 2025, 20 and 20b NICT). The in-table count line read 28 until 2026-08-30 because it never took the 2026-08-13 increment; it is now computed from the table and agrees with this row. |
 | Government technical reports (Ledger 1b) | **8**, new table. Six DOE substantive-use rows verified 2026-07-31 that had no ledger row, plus SLAC and Sandia/HPOD from this round. Six bibliography-only DOE records are excluded by the table's own rule and routed to `/citation-audit`. **Updated 2026-08-13: 8 + 5 = 13.** |
 | External third-party media (Ledger 2) | **80 counted** across 81 rows (#22 SitePoint is present but marked REMOVED). +1 for a 2026-07-31 promotion (#36an), +7 for 2026-07-19 promotions (#36ao through #36au). The figure published before this reconciliation was 83, which was never reproducible from the table; four of the eleven items it counted belong in Ledger 1 and Ledger 7 rather than here. **Updated 2026-08-13: 80 + 13 = 93.** |
 | Ecosystem adoption (Ledger 3) | **170** (154 main-ledger rows through May 13, +7 May 19, +4 May 20, +4 May 28, +1 written 2026-08-09: #66dw TechTarget). The table shows 97 rows because the 2026-06-02 pass folded Tier-5 aggregator, non-English tutorial, and SecTools.tw rows into prose buckets with counts preserved. **Updated 2026-08-13: 170 + 164 = 334.** |
@@ -1660,7 +1883,7 @@ the audit did not record for PyOD before 2026-08-09.
 | Awards/recognitions (Ledger 5) | **21** (19 main-ledger rows, +1 May 19 ACM SIGSPATIAL award-index row, +1 written 2026-08-09: Foresight Institute grantee page) **Updated 2026-08-13: 21 + 1 = 22.** |
 | Agent-auditing academic citations (Ledger 6) | **11**, new table. Five verified 2026-07-31 that had lived only inside that pass section, plus six confirmed 2026-08-09 by direct PDF scan of the Auditable Agents citation graph. One of the six (A11, DEMM) cites four FORTIS works and is absent from the Semantic Scholar graph entirely. Every row also appears in `/citation-audit`; count once. **Updated 2026-08-13: 11 + 9 = 20.** |
 | Scientific uptake (Ledger 7) | **15**, new table. Peer-reviewed articles with substantive in-body use: 12 admitted from the 30 verified on 2026-08-09, plus the three Nature-family papers verified 2026-07-19 that the audit had filed as Ledger 2. Reference-list-only citations are excluded and routed to `/citation-audit`. **Updated 2026-08-13: 15 + 27 = 42.** |
-| **Total verified items** | **578.** Sum of the eight ledgers above, recounted 2026-08-13. This replaces 353, which was accurate as of 2026-08-09. The 2026-08-13 round added 225 rows: Ledger 1 +4, Ledger 1b +5, Ledger 2 +13, Ledger 3 +164, Ledger 4 +2, Ledger 5 +1, Ledger 6 +9, Ledger 7 +27. |
+| **Total verified items** | **582.** Sum of the eight ledgers above. Recounted 2026-08-13 at 578; 2026-08-30 added 4 Ledger 1 rows and changed no other ledger. This replaces 353, which was accurate as of 2026-08-09. The 2026-08-13 round added 225 rows: Ledger 1 +4, Ledger 1b +5, Ledger 2 +13, Ledger 3 +164, Ledger 4 +2, Ledger 5 +1, Ledger 6 +9, Ledger 7 +27. |
 
 **The reconciliation is now closed.** Every promotion recorded in the 2026-07-19, 2026-07-31, and
 2026-08-09 pass sections has a ledger row. Two ledgers were created for classes that had no home
