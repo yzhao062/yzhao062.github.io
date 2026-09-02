@@ -65,7 +65,7 @@
     "docs_url": "",
     "paper_url": "",
     "demo_url": "",
-    "stars": 125,
+    "stars": 127,
     "tags": [
       "Agent Auditability",
       "Agent Reliability",
@@ -398,7 +398,7 @@
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/agent-style.html",
     "paper_url": "",
     "demo_url": "https://pypi.org/project/agent-style/",
-    "stars": 666,
+    "stars": 667,
     "tags": [
       "AI Agents",
       "Agent Configuration",
