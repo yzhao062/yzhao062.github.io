@@ -58,11 +58,11 @@
         }
 
         #sidebar {
-            min-height: 360px;
+            min-height: 535px;
         }
 
         .lab-page #sidebar {
-            min-height: 520px;
+            min-height: 695px;
         }
 
         .heading {
@@ -96,6 +96,16 @@
             aspect-ratio: 1 / 1;
             margin: 0 auto;
             display: block;
+        }
+
+        /* CS@50 department anniversary mark. The chair's 2026-09-04 email asks
+           faculty to display it "over the next year"; no end date was given. */
+        .dept-anniversary {
+            display: block;
+            width: 150px;
+            max-width: 100%;
+            height: auto;
+            margin: 14px 0;
         }
 
 
@@ -283,11 +293,11 @@
             }
 
             #sidebar {
-                min-height: 260px;
+                min-height: 435px;
             }
 
             .lab-page #sidebar {
-                min-height: 420px;
+                min-height: 595px;
             }
 
             .heading {
