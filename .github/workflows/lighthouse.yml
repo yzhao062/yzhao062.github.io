@@ -5,6 +5,10 @@ on:
   push:
     branches:
       - main
+    # meta-finder pushes citation counts here every couple of days. No page
+    # reads that file, so a performance audit on it measures nothing.
+    paths-ignore:
+      - 'data/citations.json'
   workflow_dispatch:
 
 jobs:

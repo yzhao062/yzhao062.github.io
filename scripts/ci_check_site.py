@@ -78,15 +78,21 @@ def check_required_files(errors: list[str]) -> None:
             errors.append(f"Missing required file: {rel}")
 
 
-def check_json_files(errors: list[str]) -> None:
+def check_json_files(errors: list[str], warnings: list[str]) -> None:
     data_dir = ROOT / "data"
-    object_json = {"s2-metrics.json"}
+    object_json = {"citations.json"}
 
     # Parse each file once; store results for per-file field checks below.
     parsed: dict[str, list | dict | None] = {}
     for path in sorted(data_dir.glob("*.json")):
+        before = len(errors)
         obj = load_json(path, errors)
         if obj is None:
+            # load_json returns None both for a parse failure and for a file
+            # holding a literal null. Only the first case reported an error, so
+            # a data file that parsed to null would otherwise pass silently.
+            if len(errors) == before:
+                errors.append(f"Top-level JSON null in {path.as_posix()}")
             parsed[path.name] = None
             continue
         if path.name in object_json:
@@ -120,6 +126,37 @@ def check_json_files(errors: list[str]) -> None:
                 ids.add(pid)
             if not title:
                 errors.append(f"publications.json item #{idx} missing non-empty title")
+
+    # --- citations.json field checks ---
+    # The file is pushed by meta-finder's update-citations workflow and joins to
+    # publications.json on id. A stale id means the two repos have drifted. That
+    # clears only after meta-finder's weekly profile-sync picks up the new
+    # publication list and a later update-citations run republishes, so it warns
+    # rather than fails.
+    citations = parsed.get("citations.json")
+    if isinstance(citations, dict):
+        papers = citations.get("papers")
+        if not isinstance(papers, list) or not papers:
+            errors.append("citations.json missing a non-empty papers array")
+        else:
+            unknown: list[str] = []
+            for idx, item in enumerate(papers):
+                if not isinstance(item, dict):
+                    errors.append(f"citations.json paper #{idx} is not an object")
+                    continue
+                raw_id = item.get("id")
+                cid = raw_id.strip() if isinstance(raw_id, str) else ""
+                if not cid:
+                    errors.append(f"citations.json paper #{idx} missing non-empty id")
+                elif isinstance(publications, list) and cid not in ids:
+                    unknown.append(cid)
+            if unknown:
+                warnings.append(
+                    f"citations.json has {len(unknown)} id(s) absent from "
+                    f"publications.json (e.g. {', '.join(unknown[:3])}); "
+                    "check meta-finder profile-sync and update-citations "
+                    "if this persists"
+                )
 
     # --- open-source.json field checks ---
     os_items = parsed.get("open-source.json")
@@ -620,7 +657,7 @@ def main() -> None:
     warnings: list[str] = []
 
     check_required_files(errors)
-    check_json_files(errors)
+    check_json_files(errors, warnings)
     check_page_smoke(errors, warnings)
     check_local_refs(errors)
     check_bib_viewer_compat(errors, warnings)

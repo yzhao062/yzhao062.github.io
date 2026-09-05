@@ -1,0 +1,1124 @@
+{
+  "generated_at": "2026-09-05T05:28:34Z",
+  "source": "meta-finder citation-tracker, Semantic Scholar Graph API",
+  "paper_count": 124,
+  "total_citations": 8602,
+  "papers": [
+    {
+      "id": "workshop-seva",
+      "title": "SEVA: Self-Evolving Verification Agent with Process Reward for Fact Attribution",
+      "year": 2026,
+      "venue": "ICML 2026 Workshops (AI4GOOD and FAGEN)",
+      "section": "workshop",
+      "citation_count": 1,
+      "influential_citations": 0
+    },
+    {
+      "id": "conference-a-survey-on-llm-based-conversational-user-simulation",
+      "title": "A Survey on LLM-based Conversational User Simulation",
+      "year": 2026,
+      "venue": "EACL, 2026",
+      "section": "conference",
+      "citation_count": 17,
+      "influential_citations": 0
+    },
+    {
+      "id": "conference-can-multimodal-llms-perform-time-series-anomaly-detection",
+      "title": "Can Multimodal LLMs Perform Time Series Anomaly Detection?",
+      "year": 2026,
+      "venue": "WWW, 2026",
+      "section": "conference",
+      "citation_count": 23,
+      "influential_citations": 5
+    },
+    {
+      "id": "conference-charts-are-not-images-on-the-challenges-of-scientific-chart-editing",
+      "title": "Charts Are Not Images: On the Challenges of Scientific Chart Editing",
+      "year": 2026,
+      "venue": "ICLR, 2026",
+      "section": "conference",
+      "citation_count": 7,
+      "influential_citations": 0
+    },
+    {
+      "id": "conference-coact-co-active-preference-learning-with-human-ai-synergy",
+      "title": "CoAct: Co-Active LLM Preference Learning with Human-AI Synergy",
+      "year": 2026,
+      "venue": "ACL, 2026",
+      "section": "conference",
+      "citation_count": 2,
+      "influential_citations": 0
+    },
+    {
+      "id": "conference-decalign-hierarchical-cross-modal-alignment-for-decoupled-multimodal-representation-learning",
+      "title": "DecAlign: Hierarchical Cross-Modal Alignment for Decoupled Multimodal Representation Learning",
+      "year": 2026,
+      "venue": "ICLR, 2026",
+      "section": "conference",
+      "citation_count": 33,
+      "influential_citations": 0
+    },
+    {
+      "id": "conference-defenses-against-prompt-attacks-learn-surface-heuristics",
+      "title": "Defenses Against Prompt Attacks Learn Surface Heuristics",
+      "year": 2026,
+      "venue": "ACL, 2026",
+      "section": "conference",
+      "citation_count": 9,
+      "influential_citations": 0
+    },
+    {
+      "id": "conference-doxing-via-the-lens-revealing-location-related-privacy-leakage-on-multi-modal-large-reasoning-models",
+      "title": "Doxing via the Lens: Revealing Location-related Privacy Leakage on Multi-modal Large Reasoning Models",
+      "year": 2026,
+      "venue": "ICLR, 2026",
+      "section": "conference",
+      "citation_count": 13,
+      "influential_citations": 2
+    },
+    {
+      "id": "conference-mitigating-hallucinations-in-large-language-models-via-causal-reasoning",
+      "title": "Mitigating Hallucinations in Large Language Models via Causal Reasoning",
+      "year": 2026,
+      "venue": "AAAI, 2026",
+      "section": "conference",
+      "citation_count": 15,
+      "influential_citations": 2
+    },
+    {
+      "id": "conference-someone-hid-it-query-agnostic-black-box-attacks-on-llm-based-retrieval",
+      "title": "\"Someone Hid It\": Query-Agnostic Black-Box Attacks on LLM-Based Retrieval",
+      "year": 2026,
+      "venue": "ICML, 2026",
+      "section": "conference",
+      "citation_count": 4,
+      "influential_citations": 0
+    },
+    {
+      "id": "conference-topology-matters-measuring-memory-leakage-in-multi-agent-llms",
+      "title": "Topology Matters: Measuring Memory Leakage in Multi-Agent LLMs",
+      "year": 2026,
+      "venue": "ACL (Findings), 2026",
+      "section": "conference",
+      "citation_count": 9,
+      "influential_citations": 4
+    },
+    {
+      "id": "conference-trustgen-a-platform-of-dynamic-benchmarking-on-the-trustworthiness-of-generative-foundation-models",
+      "title": "TrustGen: A Platform of Dynamic Benchmarking on the Trustworthiness of Generative Foundation Models",
+      "year": 2026,
+      "venue": "ICLR, 2026",
+      "section": "conference",
+      "citation_count": 53,
+      "influential_citations": 1
+    },
+    {
+      "id": "conference-a-personalized-conversational-benchmark-towards-simulating-personalized-conversations",
+      "title": "A Personalized Conversational Benchmark: Towards Simulating Personalized Conversations",
+      "year": 2025,
+      "venue": "NeurIPS Workshop on Multi-Turn Interactions in Large Language Models (MTI-LLM), 2025",
+      "section": "workshop",
+      "citation_count": 21,
+      "influential_citations": 0
+    },
+    {
+      "id": "conference-a-survey-on-model-extraction-attacks-and-defenses-for-large-language-models",
+      "title": "A Survey on Model Extraction Attacks and Defenses for Large Language Models",
+      "year": 2025,
+      "venue": "KDD (Lecture-Style Tutorial Track), 2025",
+      "section": "workshop",
+      "citation_count": 32,
+      "influential_citations": 1
+    },
+    {
+      "id": "conference-ad-agent-a-multi-agent-framework-for-end-to-end-anomaly-detection",
+      "title": "AD-AGENT: A Multi-agent Framework for End-to-end Anomaly Detection",
+      "year": 2025,
+      "venue": "Findings of IJCNLP-AACL, 2025",
+      "section": "conference",
+      "citation_count": 11,
+      "influential_citations": 2
+    },
+    {
+      "id": "conference-ad-llm-benchmarking-large-language-models-for-anomaly-detection",
+      "title": "AD-LLM: Benchmarking Large Language Models for Anomaly Detection",
+      "year": 2025,
+      "venue": "ACL (Findings), 2025",
+      "section": "conference",
+      "citation_count": 43,
+      "influential_citations": 3
+    },
+    {
+      "id": "conference-dpu-dynamic-prototype-updating-for-multimodal-out-of-distribution-detection",
+      "title": "DPU: Dynamic Prototype Updating for Multimodal Out-of-Distribution Detection",
+      "year": 2025,
+      "venue": "CVPR, 2025",
+      "section": "conference",
+      "citation_count": 34,
+      "influential_citations": 4
+    },
+    {
+      "id": "conference-drugagent-automating-ai-aided-drug-discovery-programming-through-llm-multi-agent-collaboration",
+      "title": "DrugAgent: Automating AI-aided Drug Discovery Programming through LLM Multi-Agent Collaboration",
+      "year": 2025,
+      "venue": "AAAI Workshop on Foundation Models for Biological Discoveries (FMs4Bio), 2025",
+      "section": "workshop",
+      "citation_count": 47,
+      "influential_citations": 3
+    },
+    {
+      "id": "conference-dyflow-dynamic-workflow-framework-for-agentic-reasoning",
+      "title": "DyFlow: Dynamic Workflow Framework for Agentic Reasoning",
+      "year": 2025,
+      "venue": "NeurIPS, 2025",
+      "section": "conference",
+      "citation_count": 20,
+      "influential_citations": 2
+    },
+    {
+      "id": "conference-edit-away-and-my-face-will-not-stay-personal-biometric-defense-against-malicious-generative-editing",
+      "title": "Edit Away and My Face Will Not Stay: Personal Biometric Defense against Malicious Generative Editing",
+      "year": 2025,
+      "venue": "CVPR, 2025",
+      "section": "conference",
+      "citation_count": 20,
+      "influential_citations": 3
+    },
+    {
+      "id": "conference-few-shot-graph-out-of-distribution-detection-with-llms",
+      "title": "Few-Shot Graph Out-of-Distribution Detection with LLMs",
+      "year": 2025,
+      "venue": "ECML PKDD, 2025",
+      "section": "conference",
+      "citation_count": 13,
+      "influential_citations": 0
+    },
+    {
+      "id": "conference-from-selection-to-generation-a-survey-of-llm-based-active-learning",
+      "title": "From Selection to Generation: A Survey of LLM-based Active Learning",
+      "year": 2025,
+      "venue": "ACL, 2025",
+      "section": "conference",
+      "citation_count": 29,
+      "influential_citations": 0
+    },
+    {
+      "id": "conference-jaildam-jailbreak-detection-with-adaptive-memory-for-vision-language-model",
+      "title": "JailDAM: Jailbreak Detection with Adaptive Memory for Vision-Language Model",
+      "year": 2025,
+      "venue": "COLM, 2025",
+      "section": "conference",
+      "citation_count": 9,
+      "influential_citations": 1
+    },
+    {
+      "id": "conference-llm-empowered-patient-provider-communication-a-data-centric-survey-from-a-clinical-perspective",
+      "title": "LLM-Empowered Patient-Provider Communication: A Data-Centric Survey From a Clinical Perspective",
+      "year": 2025,
+      "venue": "Findings of IJCNLP-AACL, 2025",
+      "section": "conference",
+      "citation_count": 2,
+      "influential_citations": 0
+    },
+    {
+      "id": "conference-learning-from-the-storm-a-multivariate-machine-learning-approach-to-predicting-hurricane-induced-economic-losses",
+      "title": "Learning from the Storm: A Multivariate Machine Learning Approach to Predicting Hurricane-Induced Economic Losses",
+      "year": 2025,
+      "venue": "ACM SIGSPATIAL SpatialConnect Workshop, 2025",
+      "section": "workshop",
+      "citation_count": 6,
+      "influential_citations": 0
+    },
+    {
+      "id": "conference-metaood-automatic-selection-of-ood-detection-models",
+      "title": "MetaOOD: Automatic Selection of OOD Detection Models",
+      "year": 2025,
+      "venue": "ICLR, 2025",
+      "section": "conference",
+      "citation_count": 19,
+      "influential_citations": 1
+    },
+    {
+      "id": "conference-nlp-adbench-nlp-anomaly-detection-benchmark",
+      "title": "NLP-ADBench: NLP Anomaly Detection Benchmark",
+      "year": 2025,
+      "venue": "EMNLP Findings, 2025",
+      "section": "conference",
+      "citation_count": 19,
+      "influential_citations": 4
+    },
+    {
+      "id": "conference-navigating-between-explainability-and-extractability-in-machine-learning-as-a-service",
+      "title": "Navigating Between Explainability and Extractability in Machine Learning as a Service",
+      "year": 2025,
+      "venue": "IEEE ICDM BlueSky Track, 2025",
+      "section": "conference",
+      "citation_count": 2,
+      "influential_citations": 0
+    },
+    {
+      "id": "conference-pyod-2-a-python-library-for-outlier-detection-with-llm-powered-model-selection",
+      "title": "PyOD 2: A Python Library for Outlier Detection with LLM-powered Model Selection",
+      "year": 2025,
+      "venue": "The Web Conference (Demo Track), 2025",
+      "section": "workshop",
+      "citation_count": 28,
+      "influential_citations": 0
+    },
+    {
+      "id": "conference-retrieval-reasoning-large-language-model-based-synthetic-clinical-trial-generation",
+      "title": "Retrieval-Reasoning Large Language Model-based Synthetic Clinical Trial Generation",
+      "year": 2025,
+      "venue": "ACM BCB, 2025",
+      "section": "conference",
+      "citation_count": 7,
+      "influential_citations": 0
+    },
+    {
+      "id": "conference-secure-on-device-video-ood-detection-without-backpropagation",
+      "title": "Secure On-Device Video OOD Detection Without Backpropagation",
+      "year": 2025,
+      "venue": "ICCV, 2025",
+      "section": "conference",
+      "citation_count": 25,
+      "influential_citations": 1
+    },
+    {
+      "id": "conference-socialmaze-a-benchmark-for-evaluating-social-reasoning-in-large-language-models",
+      "title": "SocialMaze: A Benchmark for Evaluating Social Reasoning in Large Language Models",
+      "year": 2025,
+      "venue": "NeurIPS Workshop on Socially Responsible and Trustworthy Foundation Models (ResponsibleFM), 2025",
+      "section": "workshop",
+      "citation_count": 0,
+      "influential_citations": 0
+    },
+    {
+      "id": "conference-trusteval-a-dynamic-evaluation-toolkit-on-trustworthiness-of-generative-foundation-models",
+      "title": "TRUSTEVAL: A Dynamic Evaluation Toolkit on Trustworthiness of Generative Foundation Models",
+      "year": 2025,
+      "venue": "NAACL (Demo Track), 2025",
+      "section": "workshop",
+      "citation_count": 8,
+      "influential_citations": 0
+    },
+    {
+      "id": "conference-treble-counterfactual-vlms-a-causal-approach-to-hallucination",
+      "title": "Treble Counterfactual VLMs: A Causal Approach to Hallucination",
+      "year": 2025,
+      "venue": "EMNLP Findings, 2025",
+      "section": "conference",
+      "citation_count": 34,
+      "influential_citations": 0
+    },
+    {
+      "id": "conference-typhoformer-language-augmented-transformer-for-accurate-typhoon-track-forecasting",
+      "title": "TyphoFormer: Language-Augmented Transformer for Accurate Typhoon Track Forecasting",
+      "year": 2025,
+      "venue": "ACM SIGSPATIAL, 2025",
+      "section": "conference",
+      "citation_count": 6,
+      "influential_citations": 0
+    },
+    {
+      "id": "conference-autodavis-kdd",
+      "title": "AutoDavis: Automatic and Dynamic Evaluation Protocol of Large Vision-Language Models on Visual Question-Answering",
+      "year": 2026,
+      "venue": "KDD D&B Track, 2026",
+      "section": "conference",
+      "citation_count": 0,
+      "influential_citations": 0
+    },
+    {
+      "id": "conference-fast-unsupervised-deep-outlier-model-selection-with-hypernetworks",
+      "title": "Fast Unsupervised Deep Outlier Model Selection with Hypernetworks",
+      "year": 2024,
+      "venue": "KDD, 2024",
+      "section": "conference",
+      "citation_count": 12,
+      "influential_citations": 0
+    },
+    {
+      "id": "conference-hyperparameter-optimization-for-unsupervised-outlier-detection",
+      "title": "Hyperparameter Optimization for Unsupervised Outlier Detection",
+      "year": 2024,
+      "venue": "AutoML, 2024",
+      "section": "conference",
+      "citation_count": 5,
+      "influential_citations": 0
+    },
+    {
+      "id": "conference-multiood-scaling-out-of-distribution-detection-for-multiple-modalities",
+      "title": "MultiOOD: Scaling Out-of-Distribution Detection for Multiple Modalities",
+      "year": 2024,
+      "venue": "NeurIPS, 2024",
+      "section": "conference",
+      "citation_count": 41,
+      "influential_citations": 4
+    },
+    {
+      "id": "conference-towards-reproducible-automated-and-scalable-anomaly-detection",
+      "title": "Towards Reproducible, Automated, and Scalable Anomaly Detection",
+      "year": 2024,
+      "venue": "AAAI New Faculty Highlights, 2024",
+      "section": "conference",
+      "citation_count": 4,
+      "influential_citations": 0
+    },
+    {
+      "id": "conference-trustllm-trustworthiness-in-large-language-models",
+      "title": "TrustLLM: Trustworthiness in Large Language Models",
+      "year": 2024,
+      "venue": "ICML, 2024",
+      "section": "conference",
+      "citation_count": 366,
+      "influential_citations": 32
+    },
+    {
+      "id": "conference-adgym-design-choices-for-deep-anomaly-detection",
+      "title": "ADGym: Design Choices for Deep Anomaly Detection",
+      "year": 2023,
+      "venue": "NeurIPS, 2023",
+      "section": "conference",
+      "citation_count": 31,
+      "influential_citations": 0
+    },
+    {
+      "id": "conference-admoe-anomaly-detection-with-mixture-of-experts-from-noisy-labels",
+      "title": "ADMoE: Anomaly Detection with Mixture-of-Experts from Noisy Labels",
+      "year": 2023,
+      "venue": "AAAI, 2023",
+      "section": "conference",
+      "citation_count": 43,
+      "influential_citations": 2
+    },
+    {
+      "id": "conference-dsv-an-alignment-validation-loss-for-self-supervised-outlier-model-selection",
+      "title": "DSV: An Alignment Validation Loss for Self-supervised Outlier Model Selection",
+      "year": 2023,
+      "venue": "ECML/PKDD, 2023",
+      "section": "conference",
+      "citation_count": 10,
+      "influential_citations": 0
+    },
+    {
+      "id": "conference-do-not-train-it-a-linear-neural-architecture-search-of-graph-neural-networks",
+      "title": "Do Not Train It: A Linear Neural Architecture Search of Graph Neural Networks",
+      "year": 2023,
+      "venue": "ICML, 2023",
+      "section": "conference",
+      "citation_count": 17,
+      "influential_citations": 0
+    },
+    {
+      "id": "conference-tod-gpu-accelerated-outlier-detection-via-tensor-operations",
+      "title": "TOD: GPU-accelerated Outlier Detection via Tensor Operations",
+      "year": 2023,
+      "venue": "VLDB, 2023",
+      "section": "conference",
+      "citation_count": 10,
+      "influential_citations": 0
+    },
+    {
+      "id": "conference-adbench-anomaly-detection-benchmark",
+      "title": "ADBench: Anomaly Detection Benchmark",
+      "year": 2022,
+      "venue": "NeurIPS, 2022",
+      "section": "conference",
+      "citation_count": 498,
+      "influential_citations": 75
+    },
+    {
+      "id": "conference-bond-benchmarking-unsupervised-outlier-node-detection-on-static-attributed-graphs",
+      "title": "BOND: Benchmarking Unsupervised Outlier Node Detection on Static Attributed Graphs",
+      "year": 2022,
+      "venue": "NeurIPS, 2022",
+      "section": "conference",
+      "citation_count": 161,
+      "influential_citations": 17
+    },
+    {
+      "id": "conference-contrastive-attributed-network-ad",
+      "title": "Contrastive Attributed Network Anomaly Detection with Data Augmentation",
+      "year": 2022,
+      "venue": "PAKDD, 2022",
+      "section": "conference",
+      "citation_count": 147,
+      "influential_citations": 13
+    },
+    {
+      "id": "conference-elect-toward-unsupervised-outlier-model-selection",
+      "title": "ELECT: Toward Unsupervised Outlier Model Selection",
+      "year": 2022,
+      "venue": "ICDM, 2022",
+      "section": "conference",
+      "citation_count": 31,
+      "influential_citations": 2
+    },
+    {
+      "id": "conference-automatic-unsupervised-outlier-model-selection",
+      "title": "Automatic Unsupervised Outlier Model Selection",
+      "year": 2021,
+      "venue": "NeurIPS, 2021",
+      "section": "conference",
+      "citation_count": 100,
+      "influential_citations": 21
+    },
+    {
+      "id": "conference-revisiting-time-series-outlier-detection-definitions-and-benchmarks",
+      "title": "Revisiting Time Series Outlier Detection: Definitions and Benchmarks",
+      "year": 2021,
+      "venue": "NeurIPS, 2021",
+      "section": "conference",
+      "citation_count": 263,
+      "influential_citations": 30
+    },
+    {
+      "id": "conference-suod-accelerating-large-scale-unsupervised-heterogeneous-outlier-detection",
+      "title": "SUOD: Accelerating Large-scale Unsupervised Heterogeneous Outlier Detection",
+      "year": 2021,
+      "venue": "MLSys, 2021",
+      "section": "conference",
+      "citation_count": 80,
+      "influential_citations": 6
+    },
+    {
+      "id": "workshop-tods",
+      "title": "TODS: An Automated Time Series Outlier Detection System",
+      "year": 2021,
+      "venue": "AAAI (Demo), 2021",
+      "section": "workshop",
+      "citation_count": 83,
+      "influential_citations": 1
+    },
+    {
+      "id": "conference-therapeutics-data-commons-machine-learning-datasets-and-tasks-for-drug-discovery-and-development",
+      "title": "Therapeutics Data Commons: Machine Learning Datasets and Tasks for Drug Discovery and Development",
+      "year": 2021,
+      "venue": "NeurIPS, 2021",
+      "section": "conference",
+      "citation_count": 508,
+      "influential_citations": 62
+    },
+    {
+      "id": "conference-data-denoising-scrna",
+      "title": "A Data Denoising Approach to Optimize Functional Clustering of Single Cell RNA-sequencing Data",
+      "year": 2020,
+      "venue": "IEEE BIBM, 2020",
+      "section": "conference",
+      "citation_count": 2,
+      "influential_citations": 0
+    },
+    {
+      "id": "conference-autoaudit",
+      "title": "AutoAudit: Mining Accounting and Time-Evolving Graphs",
+      "year": 2020,
+      "venue": "IEEE BigData, 2020",
+      "section": "conference",
+      "citation_count": 39,
+      "influential_citations": 4
+    },
+    {
+      "id": "conference-copod",
+      "title": "COPOD: Copula-Based Outlier Detection",
+      "year": 2020,
+      "venue": "IEEE ICDM, 2020",
+      "section": "conference",
+      "citation_count": 459,
+      "influential_citations": 43
+    },
+    {
+      "id": "workshop-combo",
+      "title": "Combining Machine Learning Models using combo Library",
+      "year": 2020,
+      "venue": "AAAI (Demo), 2020",
+      "section": "workshop",
+      "citation_count": 11,
+      "influential_citations": 0
+    },
+    {
+      "id": "conference-dsr",
+      "title": "DSR: An Accurate Single Image Super Resolution Approach for Various Degradations",
+      "year": 2020,
+      "venue": "IEEE ICME, 2020",
+      "section": "conference",
+      "citation_count": 6,
+      "influential_citations": 0
+    },
+    {
+      "id": "workshop-suod-aaai2020",
+      "title": "SUOD: Toward Scalable Unsupervised Outlier Detection",
+      "year": 2020,
+      "venue": "AAAI Workshop, 2020",
+      "section": "workshop",
+      "citation_count": 8,
+      "influential_citations": 1
+    },
+    {
+      "id": "workshop-sync-icdmw",
+      "title": "SynC: A Copula based Framework for Generating Synthetic Data from Aggregated Sources",
+      "year": 2020,
+      "venue": "IEEE ICDMW, 2020",
+      "section": "workshop",
+      "citation_count": 39,
+      "influential_citations": 3
+    },
+    {
+      "id": "workshop-sync-aaai",
+      "title": "SynC: A Unified Framework for Generating Synthetic Population with Gaussian Copula",
+      "year": 2020,
+      "venue": "AAAI Workshop, 2020",
+      "section": "workshop",
+      "citation_count": 9,
+      "influential_citations": 0
+    },
+    {
+      "id": "conference-lscp",
+      "title": "LSCP: Locally Selective Combination in Parallel Outlier Ensembles",
+      "year": 2019,
+      "venue": "SDM, 2019",
+      "section": "conference",
+      "citation_count": 159,
+      "influential_citations": 15
+    },
+    {
+      "id": "conference-music-artist-crnn",
+      "title": "Music Artist Classification with Convolutional Recurrent Neural Networks",
+      "year": 2019,
+      "venue": "IJCNN, 2019",
+      "section": "conference",
+      "citation_count": 53,
+      "influential_citations": 7
+    },
+    {
+      "id": "workshop-dcso",
+      "title": "DCSO: Dynamic Combination of Detector Scores for Outlier Ensembles",
+      "year": 2018,
+      "venue": "KDD Workshop, 2018",
+      "section": "workshop",
+      "citation_count": 25,
+      "influential_citations": 2
+    },
+    {
+      "id": "conference-employee-turnover",
+      "title": "Employee Turnover Prediction with Machine Learning: A Reliable Approach",
+      "year": 2018,
+      "venue": "IntelliSys, 2018",
+      "section": "conference",
+      "citation_count": 149,
+      "influential_citations": 5
+    },
+    {
+      "id": "conference-xgbod",
+      "title": "XGBOD: Improving Supervised Outlier Detection with Unsupervised Representation Learning",
+      "year": 2018,
+      "venue": "IJCNN, 2018",
+      "section": "conference",
+      "citation_count": 152,
+      "influential_citations": 18
+    },
+    {
+      "id": "conference-touch-auth-smartwatch",
+      "title": "An Empirical Study of Touch-based Authentication Methods on Smartwatches",
+      "year": 2017,
+      "venue": "ISWC, 2017",
+      "section": "conference",
+      "citation_count": 11,
+      "influential_citations": 1
+    },
+    {
+      "id": "journal-don-t-let-it-hallucinate-premise-verification-via-retrieval-augmented-logical-reasoning",
+      "title": "Don’t Let It Hallucinate: Premise Verification via Retrieval-Augmented Logical Reasoning",
+      "year": 2026,
+      "venue": "Transactions on Machine Learning Research (TMLR), 2026",
+      "section": "journal",
+      "citation_count": 14,
+      "influential_citations": 0
+    },
+    {
+      "id": "journal-lego-learn-label-efficient-graph-open-set-learning",
+      "title": "LEGO-Learn: Label-Efficient Graph Open-Set Learning",
+      "year": 2025,
+      "venue": "Transactions on Machine Learning Research (TMLR), 2025",
+      "section": "journal",
+      "citation_count": 12,
+      "influential_citations": 0
+    },
+    {
+      "id": "journal-nng-mix-improving-semi-supervised-anomaly-detection-with-pseudo-anomaly-generation",
+      "title": "NNG-Mix: Improving Semi-supervised Anomaly Detection with Pseudo-anomaly Generation",
+      "year": 2024,
+      "venue": "IEEE Transactions on Neural Networks and Learning Systems, 2024",
+      "section": "journal",
+      "citation_count": 31,
+      "influential_citations": 1
+    },
+    {
+      "id": "journal-diffusion-models-a-comprehensive-survey-of-methods-and-applications",
+      "title": "Diffusion Models: A Comprehensive Survey of Methods and Applications",
+      "year": 2023,
+      "venue": "ACM Computing Surveys, 2023",
+      "section": "journal",
+      "citation_count": 2412,
+      "influential_citations": 75
+    },
+    {
+      "id": "journal-the-need-for-unsupervised-outlier-model-selection-a-review-and-evaluation-of-internal-evaluation-strategies",
+      "title": "The Need for Unsupervised Outlier Model Selection: A Review and Evaluation of Internal Evaluation Strategies",
+      "year": 2023,
+      "venue": "ACM SIGKDD Explorations Newsletter, 2023",
+      "section": "journal",
+      "citation_count": 51,
+      "influential_citations": 2
+    },
+    {
+      "id": "journal-artificial-intelligence-foundation-for-therapeutic-science",
+      "title": "Artificial Intelligence Foundation for Therapeutic Science",
+      "year": 2022,
+      "venue": "Nature Chemical Biology, 2022",
+      "section": "journal",
+      "citation_count": 209,
+      "influential_citations": 10
+    },
+    {
+      "id": "journal-ecod-unsupervised-outlier-detection-using-empirical-cumulative-distribution-functions",
+      "title": "ECOD: Unsupervised Outlier Detection Using Empirical Cumulative Distribution Functions",
+      "year": 2022,
+      "venue": "TKDE, 2022",
+      "section": "journal",
+      "citation_count": 535,
+      "influential_citations": 47
+    },
+    {
+      "id": "journal-pyod-a-python-toolbox-for-scalable-outlier-detection",
+      "title": "PyOD: A Python Toolbox for Scalable Outlier Detection",
+      "year": 2019,
+      "venue": "JMLR, 2019.",
+      "section": "journal",
+      "citation_count": 930,
+      "influential_citations": 67
+    },
+    {
+      "id": "conference-weclawarena-auditable-sandbox-for-cross-user-agent-security",
+      "title": "WeClawArena: An Auditable Sandbox and Benchmark for Cross-User Agents Collaboration and Security in Human-Centered Agent Networks",
+      "year": 2026,
+      "venue": "EMNLP Findings, 2026",
+      "section": "conference",
+      "citation_count": 0,
+      "influential_citations": 0
+    },
+    {
+      "id": "conference-reasoning-of-llms-in-complex-social-environments",
+      "title": "Modeling, Evaluating, and Enhancing Reasoning of Large Language Models in Complex Social Environments",
+      "year": 2026,
+      "venue": "EMNLP Findings, 2026",
+      "section": "conference",
+      "citation_count": 0,
+      "influential_citations": 0
+    },
+    {
+      "id": "conference-financellm-survey-of-llms-in-finance",
+      "title": "FinanceLLM: A Survey of Large Language Models in Finance",
+      "year": 2026,
+      "venue": "EMNLP Findings, 2026",
+      "section": "conference",
+      "citation_count": 0,
+      "influential_citations": 0
+    },
+    {
+      "id": "preprint-catchbench",
+      "title": "CatchBench: When Can an Agent Failure Be Caught?",
+      "year": 2026,
+      "venue": "arXiv preprint",
+      "section": "preprint",
+      "citation_count": 0,
+      "influential_citations": 0
+    },
+    {
+      "id": "preprint-jigshape",
+      "title": "JigShape: Evaluating Visual-Geometric Reasoning in VLMs through Jigsaw Puzzles",
+      "year": 2026,
+      "venue": "arXiv preprint",
+      "section": "preprint",
+      "citation_count": 0,
+      "influential_citations": 0
+    },
+    {
+      "id": "preprint-memoharness",
+      "title": "MemoHarness: Agent Harnesses That Learn from Experience",
+      "year": 2026,
+      "venue": "arXiv preprint",
+      "section": "preprint",
+      "citation_count": 4,
+      "influential_citations": 0
+    },
+    {
+      "id": "preprint-skillcenter",
+      "title": "SkillCenter: A Large-Scale Source-Grounded Skill Library for Autonomous AI Agents",
+      "year": 2026,
+      "venue": "arXiv preprint",
+      "section": "preprint",
+      "citation_count": 1,
+      "influential_citations": 0
+    },
+    {
+      "id": "preprint-agent-safety-action-alignment",
+      "title": "Agent Safety Is Action Alignment",
+      "year": 2026,
+      "venue": "arXiv preprint",
+      "section": "preprint",
+      "citation_count": 1,
+      "influential_citations": 0
+    },
+    {
+      "id": "preprint-grade",
+      "title": "GRADE: Graph Representation of LLM Agent Dependency and Execution",
+      "year": 2026,
+      "venue": "arXiv preprint",
+      "section": "preprint",
+      "citation_count": 4,
+      "influential_citations": 0
+    },
+    {
+      "id": "conference-specalign-specification-grounded-alignment-via-synthetic-data",
+      "title": "SpecAlign: Efficient Specification-Grounded Alignment of Large Language Models via Synthetic Data",
+      "year": 2026,
+      "venue": "EMNLP, 2026",
+      "section": "conference",
+      "citation_count": 1,
+      "influential_citations": 0
+    },
+    {
+      "id": "conference-dog-dpo-dynamic-optimization-in-geometry-for-safety-alignment",
+      "title": "DOG-DPO: Dynamic Optimization in Geometry for Safety Alignment",
+      "year": 2026,
+      "venue": "EMNLP Findings, 2026",
+      "section": "conference",
+      "citation_count": 0,
+      "influential_citations": 0
+    },
+    {
+      "id": "preprint-maskforge",
+      "title": "MaskForge: Structure-Aware Adaptive Attacks for Jailbreaking Diffusion Large Language Models",
+      "year": 2026,
+      "venue": "arXiv preprint",
+      "section": "preprint",
+      "citation_count": 0,
+      "influential_citations": 0
+    },
+    {
+      "id": "preprint-memory-changing-preferences",
+      "title": "Memory Retrieval for Changing Preferences",
+      "year": 2026,
+      "venue": "arXiv preprint",
+      "section": "preprint",
+      "citation_count": 1,
+      "influential_citations": 0
+    },
+    {
+      "id": "preprint-subgraph-extraction",
+      "title": "Can Subgraph Explanations Be Weaponized to Steal Graph Neural Networks?",
+      "year": 2026,
+      "venue": "arXiv preprint",
+      "section": "preprint",
+      "citation_count": 0,
+      "influential_citations": 0
+    },
+    {
+      "id": "preprint-geo-bench",
+      "title": "GEO-Bench: Benchmarking Ranking Manipulation in Generative Engine Optimization",
+      "year": 2026,
+      "venue": "arXiv preprint",
+      "section": "preprint",
+      "citation_count": 5,
+      "influential_citations": 0
+    },
+    {
+      "id": "preprint-chi-bench",
+      "title": "CHI-Bench: Can AI Agents Automate End-to-End, Long-Horizon, Policy-Rich Healthcare Workflows?",
+      "year": 2026,
+      "venue": "arXiv preprint",
+      "section": "preprint",
+      "citation_count": 6,
+      "influential_citations": 0
+    },
+    {
+      "id": "preprint-fortis-overprivilege",
+      "title": "FORTIS: Benchmarking Over-Privilege in Agent Skills",
+      "year": 2026,
+      "venue": "arXiv preprint",
+      "section": "preprint",
+      "citation_count": 9,
+      "influential_citations": 0
+    },
+    {
+      "id": "preprint-medexagent",
+      "title": "MedExAgent: Training LLM Agents to Ask, Examine, and Diagnose in Noisy Clinical Environments",
+      "year": 2026,
+      "venue": "arXiv preprint",
+      "section": "preprint",
+      "citation_count": 1,
+      "influential_citations": 0
+    },
+    {
+      "id": "preprint-ufcod",
+      "title": "Geometry over Density: Few-Shot Cross-Domain OOD Detection",
+      "year": 2026,
+      "venue": "arXiv preprint",
+      "section": "preprint",
+      "citation_count": 1,
+      "influential_citations": 0
+    },
+    {
+      "id": "preprint-cat-dpo",
+      "title": "Cat-DPO: Category-Adaptive Safety Alignment",
+      "year": 2026,
+      "venue": "arXiv preprint",
+      "section": "preprint",
+      "citation_count": 2,
+      "influential_citations": 0
+    },
+    {
+      "id": "conference-auditable-agents-knowfm",
+      "title": "Auditable Agents",
+      "year": 2026,
+      "venue": "ACM AI Leadership Summit, 2026 (condensed 4-page version); earlier version at ACL 2026 KnowFM Workshop",
+      "section": "conference",
+      "citation_count": 13,
+      "influential_citations": 0
+    },
+    {
+      "id": "preprint-cross-user-contamination",
+      "title": "No Attacker Needed: Unintentional Cross-User Contamination in Shared-State LLM Agents",
+      "year": 2026,
+      "venue": "arXiv preprint",
+      "section": "preprint",
+      "citation_count": 4,
+      "influential_citations": 0
+    },
+    {
+      "id": "preprint-aegis",
+      "title": "AEGIS: No Tool Call Left Unchecked -- A Pre-Execution Firewall and Audit Layer for AI Agents",
+      "year": 2026,
+      "venue": "arXiv preprint",
+      "section": "preprint",
+      "citation_count": 6,
+      "influential_citations": 2
+    },
+    {
+      "id": "preprint-agent-audit",
+      "title": "Agent Audit: A Security Analysis System for LLM Agent Applications",
+      "year": 2026,
+      "venue": "arXiv preprint",
+      "section": "preprint",
+      "citation_count": 8,
+      "influential_citations": 0
+    },
+    {
+      "id": "preprint-agent-banana",
+      "title": "Agent Banana: High-Fidelity Image Editing with Agentic Thinking and Tooling",
+      "year": 2026,
+      "venue": "arXiv preprint",
+      "section": "preprint",
+      "citation_count": 19,
+      "influential_citations": 0
+    },
+    {
+      "id": "conference-benchmarking-rag-extraction",
+      "title": "Benchmarking Knowledge-Extraction Attack and Defense on Retrieval-Augmented Generation",
+      "year": 2026,
+      "venue": "KDD D&B Track, 2026",
+      "section": "conference",
+      "citation_count": 2,
+      "influential_citations": 0
+    },
+    {
+      "id": "preprint-fairness-or-fluency",
+      "title": "Fairness or Fluency? An Investigation into Language Bias of Pairwise LLM-as-a-Judge",
+      "year": 2026,
+      "venue": "arXiv preprint",
+      "section": "preprint",
+      "citation_count": 6,
+      "influential_citations": 0
+    },
+    {
+      "id": "conference-mgeo-knowfm",
+      "title": "Multimodal Generative Engine Optimization: Rank Manipulation for Vision-Language Model Rankers",
+      "year": 2026,
+      "venue": "ACL Workshop on Towards Knowledgeable Foundation Models (KnowFM), 2026",
+      "section": "workshop",
+      "citation_count": 5,
+      "influential_citations": 0
+    },
+    {
+      "id": "conference-the-autonomy-tax-defense-training-breaks-llm-agents",
+      "title": "The Autonomy Tax: Defense Training Breaks LLM Agents",
+      "year": 2026,
+      "venue": "EMNLP, 2026",
+      "section": "conference",
+      "citation_count": 8,
+      "influential_citations": 0
+    },
+    {
+      "id": "preprint-tracing-moral-foundations",
+      "title": "Tracing Moral Foundations in Large Language Models",
+      "year": 2026,
+      "venue": "arXiv preprint",
+      "section": "preprint",
+      "citation_count": 4,
+      "influential_citations": 0
+    },
+    {
+      "id": "preprint-implicit-execution-tracing",
+      "title": "When Only the Final Text Survives: Implicit Execution Tracing for Multi-Agent Auditing",
+      "year": 2026,
+      "venue": "arXiv preprint",
+      "section": "preprint",
+      "citation_count": 0,
+      "influential_citations": 0
+    },
+    {
+      "id": "preprint-survey-mea-distributed",
+      "title": "A Survey of Model Extraction Attacks and Defenses in Distributed Computing Environments",
+      "year": 2025,
+      "venue": "arXiv preprint",
+      "section": "preprint",
+      "citation_count": 10,
+      "influential_citations": 0
+    },
+    {
+      "id": "preprint-mea-graph-foundation",
+      "title": "A Systematic Study of Model Extraction Attacks on Graph Foundation Models",
+      "year": 2025,
+      "venue": "arXiv preprint",
+      "section": "preprint",
+      "citation_count": 2,
+      "influential_citations": 0
+    },
+    {
+      "id": "preprint-mole-pair",
+      "title": "Can Molecular Foundation Models Know What They Don't Know? A Simple Remedy with Preference Optimization",
+      "year": 2025,
+      "venue": "arXiv preprint",
+      "section": "preprint",
+      "citation_count": 3,
+      "influential_citations": 0
+    },
+    {
+      "id": "preprint-climatellm",
+      "title": "ClimateLLM: Efficient Weather Forecasting via Frequency-Aware Large Language Models",
+      "year": 2025,
+      "venue": "arXiv preprint",
+      "section": "preprint",
+      "citation_count": 12,
+      "influential_citations": 1
+    },
+    {
+      "id": "preprint-glip-ood",
+      "title": "GLIP-OOD: Zero-Shot Graph OOD Detection with Graph Foundation Model",
+      "year": 2025,
+      "venue": "arXiv preprint",
+      "section": "preprint",
+      "citation_count": 2,
+      "influential_citations": 0
+    },
+    {
+      "id": "preprint-goe-llm",
+      "title": "Graph Synthetic Out-of-Distribution Exposure with Large Language Models",
+      "year": 2025,
+      "venue": "arXiv preprint",
+      "section": "preprint",
+      "citation_count": 6,
+      "influential_citations": 1
+    },
+    {
+      "id": "preprint-tag-ad",
+      "title": "LLM-Powered Text-Attributed Graph Anomaly Detection via Retrieval-Augmented Reasoning",
+      "year": 2025,
+      "venue": "arXiv preprint",
+      "section": "preprint",
+      "citation_count": 2,
+      "influential_citations": 0
+    },
+    {
+      "id": "preprint-learning-route-llms-bandit",
+      "title": "Learning to Route LLMs from Bandit Feedback: One Policy, Many Trade-offs",
+      "year": 2025,
+      "venue": "arXiv preprint",
+      "section": "preprint",
+      "citation_count": 12,
+      "influential_citations": 2
+    },
+    {
+      "id": "preprint-m3ood",
+      "title": "M3OOD: Automatic Selection of Multimodal OOD Detectors",
+      "year": 2025,
+      "venue": "arXiv preprint",
+      "section": "preprint",
+      "citation_count": 4,
+      "influential_citations": 0
+    },
+    {
+      "id": "workshop-stealthrank",
+      "title": "StealthRank: LLM Ranking Manipulation via Stealthy Prompt Optimization",
+      "year": 2026,
+      "venue": "ICML Workshop on Trustworthy AI for Good (AI4GOOD), 2026",
+      "section": "workshop",
+      "citation_count": 19,
+      "influential_citations": 3
+    },
+    {
+      "id": "conference-flexrouter",
+      "title": "FlexRouter: Learning Complementary Model Sets for Flexible LLM Routing",
+      "year": 2026,
+      "venue": "COLM, 2026",
+      "section": "conference",
+      "citation_count": 0,
+      "influential_citations": 0
+    },
+    {
+      "id": "preprint-tagfn",
+      "title": "TAGFN: A Text-Attributed Graph Dataset for Fake News Detection in the Age of LLMs",
+      "year": 2025,
+      "venue": "arXiv preprint",
+      "section": "preprint",
+      "citation_count": 1,
+      "influential_citations": 0
+    },
+    {
+      "id": "preprint-computing-resources-fm",
+      "title": "The Role of Computing Resources in Publishing Foundation Model Research",
+      "year": 2025,
+      "venue": "arXiv preprint",
+      "section": "preprint",
+      "citation_count": 3,
+      "influential_citations": 0
+    },
+    {
+      "id": "preprint-llm-political-simulation",
+      "title": "A Large-Scale Simulation on Large Language Models for Decision-Making in Political Science",
+      "year": 2024,
+      "venue": "arXiv preprint",
+      "section": "preprint",
+      "citation_count": 9,
+      "influential_citations": 0
+    },
+    {
+      "id": "preprint-personalized-mllm-survey",
+      "title": "Personalized Multimodal Large Language Models: A Survey",
+      "year": 2024,
+      "venue": "arXiv preprint",
+      "section": "preprint",
+      "citation_count": 20,
+      "influential_citations": 0
+    },
+    {
+      "id": "preprint-political-llm",
+      "title": "Political-LLM: Large Language Models in Political Science",
+      "year": 2024,
+      "venue": "arXiv preprint",
+      "section": "preprint",
+      "citation_count": 39,
+      "influential_citations": 0
+    }
+  ]
+}

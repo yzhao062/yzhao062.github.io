@@ -69,7 +69,7 @@ Record now reads *Multimodal Generative Engine Optimization: Rank Manipulation f
 ### Two stale copies of the old MGEO title remain, by choice
 
 - `cv/cv-full.tex` line 683. Hand-authored LaTeX; only its open-source section is generated. Left for the owner, since reconciling website against CV is a manual decision.
-- `data/s2-metrics.json`. A generated cache carrying `generated_at` and `source`; it self-heals on the next `fetch_s2_metrics.py` run.
+- `data/s2-metrics.json`. A generated cache carrying `generated_at` and `source`; it self-heals on the next `fetch_s2_metrics.py` run. (Superseded since this audit: both the cache and the script were removed, and `data/citations.json` now arrives from meta-finder's `update-citations` workflow.)
 
 
 ## Unverifiable, not errors

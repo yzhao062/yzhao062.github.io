@@ -93,7 +93,8 @@ The rest of this document is for the repo maintainer (Yue Zhao).
 │   ├── publications.json           Publication list (website)
 │   ├── open-source.json            Open-source projects (website + CV)
 │   ├── lab-current-phd.json        Current PhD students
-│   └── lab-members.json            Other lab members (current + past)
+│   ├── lab-members.json            Other lab members (current + past)
+│   └── citations.json              Per-paper citation counts (pushed by meta-finder)
 ├── cv/                             LaTeX CV sources
 │   ├── cv-full.tex                 Full academic CV
 │   ├── cv-1page.tex                1-page condensed CV
@@ -144,6 +145,44 @@ python scripts/fetch_paper_metadata.py
 ```
 
 This fetches abstracts from arXiv (for papers with arXiv URLs) and Semantic Scholar (fallback), with title validation to prevent wrong-paper matches.
+
+#### Citation counts (pushed in from meta-finder)
+
+`data/citations.json` is written by the private `meta-finder` repo, which owns
+citation data for both repos. Its `update-citations` workflow refreshes
+Semantic Scholar per-paper counts every two days, then runs
+`citation-tracker/sync_site_citations.py` to push the counts here through the
+GitHub Contents API. Nothing in this repo fetches Semantic Scholar or runs on a
+schedule to keep the file current. (The citation-affiliation audit scripts under
+`scripts/` are separate: they query OpenAlex and Dimensions for who cites the
+work, not how often.)
+
+```
+Semantic Scholar API
+  → meta-finder: citation-tracker/update_citations.py --s2-only
+  → meta-finder: citation-tracker/per_paper_citations.json
+  → meta-finder: citation-tracker/sync_site_citations.py   (Contents API push)
+  → data/citations.json                                    (this repo)
+```
+
+The push direction runs this way because `meta-finder` is private and this repo
+is public, so the credential stays on the private side. It is a fine-grained PAT
+with Contents write on this repo only, held as the `SITE_REPO_TOKEN` secret in
+meta-finder. Without that secret the sync step reports a skip and exits 0, so
+the workflow stays green before setup and after the token expires it fails
+loudly rather than going quiet.
+
+Records join to `data/publications.json` on `id`, and `scripts/ci_check_site.py`
+warns when an id here is missing from the publication list. The push is skipped
+when the site already holds exactly what would be written, so the file's git
+history tracks real changes: new citations, but also a title correction or a
+reordered record. `generated_at` is when the file was last published, not when
+the counts were last checked.
+
+The reverse direction already exists: meta-finder's `profile-sync` workflow
+pulls `publications.json` and `open-source.json` from here every Sunday. A
+publication added here therefore reaches the citation data after that weekly
+sync, not immediately.
 
 #### Other shared content (manual, skill-assisted)
 
