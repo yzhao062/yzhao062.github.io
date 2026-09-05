@@ -136,7 +136,7 @@ Publications, awards, grants, service roles, teaching, PhD students, and news it
 
    Each command should print one line per distinct claim. Two lines that say the same
    thing differently is the signal to reconcile them against `files/bio.txt`.
-3. **Match the value, not the typography.** `29,000` in the bio and `29k+` in the README
+3. **Match the value, not the typography.** `30,000` in the bio and `30k+` in the README
    are the same claim, and each suits its own surface. What must never differ is the
    number itself or its precision. Do not turn `over 80` into `83`, or `55M+` into
    `54.8M`, and do not carry the aggregate figure into a sentence about one project.
