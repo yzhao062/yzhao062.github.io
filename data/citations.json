@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-09-05T05:28:34Z",
+  "generated_at": "2026-09-05T06:29:51Z",
   "source": "meta-finder citation-tracker, Semantic Scholar Graph API",
   "paper_count": 124,
-  "total_citations": 8602,
+  "total_citations": 8603,
   "papers": [
     {
       "id": "workshop-seva",
@@ -478,7 +478,7 @@
       "year": 2021,
       "venue": "MLSys, 2021",
       "section": "conference",
-      "citation_count": 80,
+      "citation_count": 81,
       "influential_citations": 6
     },
     {
