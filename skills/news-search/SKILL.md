@@ -121,6 +121,7 @@ This lane runs in **every** run mode, including Quick check and Targeted, and it
 | GRADE (typed two-layer execution and dependency graph) | arXiv:2606.22741, `github.com/yzhao062/grade` |
 | FORTIS (over-privilege benchmark for agent skills) | arXiv:2605.09163 |
 | WeClawArena (auditable sandbox and benchmark for cross-user agent collaboration and security) | arXiv:2608.03499 |
+| CatchBench (benchmark for when an agent failure can be caught: declared config, trace prefix, finished trace) | arXiv:2608.22808, `github.com/yzhao062/catchbench` |
 | `auditable` (open-source system of record for agent decisions) | `github.com/yzhao062/auditable`, `pypi.org/project/auditable` |
 | awesome-auditable-ai (curated knowledge base) | `github.com/yzhao062/awesome-auditable-ai` |
 | Auditability Card (machine-checkable disclosure artifact) | named inside Auditable Agents |
