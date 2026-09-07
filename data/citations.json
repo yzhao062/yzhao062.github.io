@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-09-05T06:29:51Z",
+  "generated_at": "2026-09-07T15:05:10Z",
   "source": "meta-finder citation-tracker, Semantic Scholar Graph API",
   "paper_count": 124,
-  "total_citations": 8603,
+  "total_citations": 8624,
   "papers": [
     {
       "id": "workshop-seva",
@@ -109,7 +109,7 @@
       "year": 2026,
       "venue": "ICLR, 2026",
       "section": "conference",
-      "citation_count": 53,
+      "citation_count": 55,
       "influential_citations": 1
     },
     {
@@ -172,8 +172,8 @@
       "year": 2025,
       "venue": "NeurIPS, 2025",
       "section": "conference",
-      "citation_count": 20,
-      "influential_citations": 2
+      "citation_count": 21,
+      "influential_citations": 3
     },
     {
       "id": "conference-edit-away-and-my-face-will-not-stay-personal-biometric-defense-against-malicious-generative-editing",
@@ -370,7 +370,7 @@
       "year": 2024,
       "venue": "ICML, 2024",
       "section": "conference",
-      "citation_count": 366,
+      "citation_count": 367,
       "influential_citations": 32
     },
     {
@@ -442,7 +442,7 @@
       "year": 2022,
       "venue": "PAKDD, 2022",
       "section": "conference",
-      "citation_count": 147,
+      "citation_count": 148,
       "influential_citations": 13
     },
     {
@@ -460,7 +460,7 @@
       "year": 2021,
       "venue": "NeurIPS, 2021",
       "section": "conference",
-      "citation_count": 100,
+      "citation_count": 101,
       "influential_citations": 21
     },
     {
@@ -469,8 +469,8 @@
       "year": 2021,
       "venue": "NeurIPS, 2021",
       "section": "conference",
-      "citation_count": 263,
-      "influential_citations": 30
+      "citation_count": 265,
+      "influential_citations": 31
     },
     {
       "id": "conference-suod-accelerating-large-scale-unsupervised-heterogeneous-outlier-detection",
@@ -523,7 +523,7 @@
       "year": 2020,
       "venue": "IEEE ICDM, 2020",
       "section": "conference",
-      "citation_count": 459,
+      "citation_count": 461,
       "influential_citations": 43
     },
     {
@@ -613,7 +613,7 @@
       "year": 2018,
       "venue": "IJCNN, 2018",
       "section": "conference",
-      "citation_count": 152,
+      "citation_count": 153,
       "influential_citations": 18
     },
     {
@@ -658,8 +658,8 @@
       "year": 2023,
       "venue": "ACM Computing Surveys, 2023",
       "section": "journal",
-      "citation_count": 2412,
-      "influential_citations": 75
+      "citation_count": 2415,
+      "influential_citations": 76
     },
     {
       "id": "journal-the-need-for-unsupervised-outlier-model-selection-a-review-and-evaluation-of-internal-evaluation-strategies",
@@ -685,7 +685,7 @@
       "year": 2022,
       "venue": "TKDE, 2022",
       "section": "journal",
-      "citation_count": 535,
+      "citation_count": 538,
       "influential_citations": 47
     },
     {
@@ -694,7 +694,7 @@
       "year": 2019,
       "venue": "JMLR, 2019.",
       "section": "journal",
-      "citation_count": 930,
+      "citation_count": 932,
       "influential_citations": 67
     },
     {
@@ -748,7 +748,7 @@
       "year": 2026,
       "venue": "arXiv preprint",
       "section": "preprint",
-      "citation_count": 4,
+      "citation_count": 5,
       "influential_citations": 0
     },
     {
@@ -1108,7 +1108,7 @@
       "year": 2024,
       "venue": "arXiv preprint",
       "section": "preprint",
-      "citation_count": 20,
+      "citation_count": 21,
       "influential_citations": 0
     },
     {
