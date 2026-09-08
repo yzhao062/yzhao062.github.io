@@ -44,6 +44,7 @@ def load_json(path: Path, errors: list[str]):
 
 def check_required_files(errors: list[str]) -> None:
     required = [
+        "fortis-benchmark.html",
         "index.html",
         "lab.html",
         "publications.html",
@@ -335,6 +336,7 @@ def check_public_urls(errors: list[str], warnings: list[str]) -> None:
 
 def check_page_smoke(errors: list[str], warnings: list[str]) -> None:
     pages = [
+        ROOT / "fortis-benchmark.html",
         ROOT / "index.html",
         ROOT / "lab.html",
         ROOT / "publications.html",

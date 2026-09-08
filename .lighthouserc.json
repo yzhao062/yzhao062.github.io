@@ -5,7 +5,8 @@
       "url": [
         "http://localhost:8080/index.html",
         "http://localhost:8080/lab.html",
-        "http://localhost:8080/publications.html"
+        "http://localhost:8080/publications.html",
+        "http://localhost:8080/fortis-benchmark.html"
       ]
     },
     "assert": {

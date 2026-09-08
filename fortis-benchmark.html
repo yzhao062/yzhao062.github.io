@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="FORTIS evaluates least-privilege skill and tool selection in LLM agents. Read the benchmark scope, paper, public data, code, and citation.">
+  <title>FORTIS: Benchmarking Over-Privilege in Agent Skills</title>
+  <link rel="canonical" href="https://viterbi-web.usc.edu/~yzhao010/fortis-benchmark.html">
+  <link rel="icon" type="image/x-icon" href="images/logo2.ico">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="FORTIS: Benchmarking Over-Privilege in Agent Skills">
+  <meta property="og:description" content="A benchmark for least-privilege skill and tool selection in LLM agents, with paper, data, code, and citation.">
+  <meta property="og:url" content="https://viterbi-web.usc.edu/~yzhao010/fortis-benchmark.html">
+  <meta name="twitter:card" content="summary">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "url": "https://viterbi-web.usc.edu/~yzhao010/fortis-benchmark.html",
+    "name": "FORTIS: Benchmarking Over-Privilege in Agent Skills",
+    "dateModified": "2026-09-08",
+    "mainEntity": {
+      "@type": "ScholarlyArticle",
+      "@id": "https://doi.org/10.48550/arXiv.2605.09163",
+      "name": "FORTIS: Benchmarking Over-Privilege in Agent Skills",
+      "url": "https://arxiv.org/abs/2605.09163v3",
+      "version": "3",
+      "datePublished": "2026-05-09",
+      "description": "A benchmark evaluating minimum-privilege skill selection and skill-grounded tool selection in three constructed domains. Selected tools are not executed against live backends.",
+      "author": [
+        {"@type": "Person", "name": "Shawn Li"},
+        {"@type": "Person", "name": "Chenxiao Yu"},
+        {"@type": "Person", "name": "Han Wang"},
+        {"@type": "Person", "name": "Wei Yang"},
+        {"@type": "Person", "name": "Ryan Rossi"},
+        {"@type": "Person", "name": "Franck Dernoncourt"},
+        {"@type": "Person", "name": "Xiyang Hu"},
+        {"@type": "Person", "name": "Philip Yu"},
+        {"@type": "Person", "name": "Chaowei Xiao"},
+        {"@type": "Person", "name": "Huan Zhang"},
+        {"@type": "Person", "name": "Yue Zhao"}
+      ]
+    }
+  }
+  </script>
+  <link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/vendor/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="css/common.css">
+  <script src="assets/vendor/bootstrap/bootstrap.bundle.min.js" defer></script>
+  <script src="assets/js/layout-shell.js" defer></script>
+  <style>
+    .fortis-paper h1 { color: #990000; font-size: clamp(1.7rem, 3vw, 2.35rem); }
+    .fortis-paper h2 { color: #990000; font-size: 1.35rem; margin-top: 1.8rem; }
+    .fortis-paper .scope-note { background: #fff7f2; border-left: 4px solid #990000; padding: 1rem; }
+    .fortis-paper pre { background: #f8f8f8; border: 1px solid #ddd; padding: 1rem; white-space: pre-wrap; overflow-wrap: anywhere; }
+  </style>
+</head>
+<body>
+  <div id="navbar"></div>
+  <script src="assets/js/webstat-tracker.js" defer></script>
+  <noscript><img src="https://app.ardalio.com/7/5/1866123.png" alt=""></noscript>
+  <div class="container">
+    <div class="row">
+      <div id="sidebar" class="col-md-3 col-12 content-spacing"></div>
+      <main id="main-content" class="col-md-9 col-12 content-spacing fortis-paper">
+        <p><a href="publications.html">Publications</a> / Agent evaluation</p>
+        <h1>FORTIS: Benchmarking Over-Privilege in Agent Skills</h1>
+        <p>Shawn Li, Chenxiao Yu, Han Wang, Wei Yang, Ryan Rossi, Franck Dernoncourt,
+          Xiyang Hu, Philip Yu, Chaowei Xiao, Huan Zhang, and Yue Zhao</p>
+        <p>arXiv preprint, 2026. First author: Shawn Li. This page describes the
+          FORTIS benchmark; <a href="lab.html">FORTIS Lab</a> is the research group.</p>
+        <p><a href="https://arxiv.org/abs/2605.09163v3">Paper (v3)</a> &middot;
+          <a href="https://arxiv.org/html/2605.09163v3">Full text</a> &middot;
+          <a href="https://github.com/lili0415/FORTIS-Benchmark">Code and data</a> &middot;
+          <a href="#citation">Citation</a></p>
+
+        <p><strong>Does an LLM agent choose more authority than a task needs?</strong>
+          FORTIS evaluates least-privilege behavior when an agent can choose among
+          overlapping skills and tools. It separates choosing a broader skill from
+          selecting tools that exceed an assigned skill's permissions.</p>
+        <p class="scope-note"><strong>What is measured:</strong> skill and tool
+          selection in constructed scenarios. The benchmark does not execute the
+          selected tools against live backends. Its scores describe model choices
+          under these conditions and do not certify a deployed agent's safety.
+          See the paper's <a href="https://arxiv.org/html/2605.09163v3#A8">limitations</a>.</p>
+
+        <h2>How can you evaluate least-privilege choices?</h2>
+        <p><strong>Task 1, skill selection:</strong> given a request and overlapping
+          skill descriptions, select the least-privileged skill sufficient for that
+          request. <strong>Task 2, skill-grounded tool selection:</strong> given an
+          assigned skill, its documentation and a tool inventory, select a sufficient
+          tool set within the skill's boundary. These tasks isolate two decision
+          stages that can fail separately.
+          <a href="https://arxiv.org/html/2605.09163v3#S3.SS1">Task definitions</a>.</p>
+
+        <h2>Can ordinary requests lead to permission overreach?</h2>
+        <p>The evaluation includes incomplete requests, convenient broader options,
+          and requests near a skill's documented limits. These settings probe
+          overreach without requiring malicious instructions. For example, a request
+          about two mail folders can tempt a model to select a mailbox-wide search
+          when separate searches within those folders would suffice.
+          <a href="https://arxiv.org/html/2605.09163v3#A6">Failure examples</a>.</p>
+
+        <h2>What data and code can you use?</h2>
+        <p>The <a href="https://arxiv.org/html/2605.09163v3#S3.SS2">v3 benchmark</a>
+          covers email, e-commerce and filesystem scenarios: 600 skill-selection
+          queries and 1,543 tool-selection queries. The skill hierarchies are
+          synthetically constructed; results require further validation on natural
+          user traces and other domains.</p>
+        <ul>
+          <li><a href="https://github.com/lili0415/FORTIS-Benchmark/tree/main/tasks">Queries and evaluation code</a> for the two tasks.</li>
+          <li><a href="https://github.com/lili0415/FORTIS-Benchmark/tree/main/shared">Skill documents, tool definitions and prompts</a> for inspecting the privilege boundaries.</li>
+          <li><a href="https://github.com/lili0415/FORTIS-Benchmark/tree/main/runners">Evaluation runners</a> and the
+            <a href="https://github.com/lili0415/FORTIS-Benchmark#running-evaluations">repository instructions</a> for model evaluation.</li>
+        </ul>
+        <p>Start by inspecting the query labels and skill definitions for one domain.
+          Then consult the runners for your evaluation setup. This page links the
+          released materials; it does not report a new reproduction of the paper's results.</p>
+
+        <h2 id="citation">Cite the paper</h2>
+        <p>Shawn Li et al. (2026). <em>FORTIS: Benchmarking Over-Privilege in Agent Skills.</em>
+          <a href="https://doi.org/10.48550/arXiv.2605.09163">doi:10.48550/arXiv.2605.09163</a>.</p>
+        <pre><code>@misc{li2026fortis,
+  title={{FORTIS}: Benchmarking Over-Privilege in Agent Skills},
+  author={Li, Shawn and Yu, Chenxiao and Wang, Han and Yang, Wei and
+          Rossi, Ryan and Dernoncourt, Franck and Hu, Xiyang and Yu, Philip and
+          Xiao, Chaowei and Zhang, Huan and Zhao, Yue},
+  year={2026},
+  eprint={2605.09163},
+  archivePrefix={arXiv},
+  primaryClass={cs.AI}
+}</code></pre>
+        <p class="small">Page updated September 8, 2026. Paper scope checked against
+          arXiv v3 (June 14, 2026); artifact links checked against repository revision
+          <a href="https://github.com/lili0415/FORTIS-Benchmark/tree/68945b89e5a809153a232f96d6c7260569202ffe">68945b8</a>.
+          The links above follow the current repository; the pinned revision records the version inspected.</p>
+      </main>
+    </div>
+  </div>
+  <div id="myFooter"></div>
+</body>
+</html>
