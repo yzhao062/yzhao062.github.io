@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-09-07T15:05:10Z",
+  "generated_at": "2026-09-09T13:47:55Z",
   "source": "meta-finder citation-tracker, Semantic Scholar Graph API",
   "paper_count": 124,
-  "total_citations": 8624,
+  "total_citations": 8635,
   "papers": [
     {
       "id": "workshop-seva",
@@ -181,7 +181,7 @@
       "year": 2025,
       "venue": "CVPR, 2025",
       "section": "conference",
-      "citation_count": 20,
+      "citation_count": 21,
       "influential_citations": 3
     },
     {
@@ -523,7 +523,7 @@
       "year": 2020,
       "venue": "IEEE ICDM, 2020",
       "section": "conference",
-      "citation_count": 461,
+      "citation_count": 462,
       "influential_citations": 43
     },
     {
@@ -658,7 +658,7 @@
       "year": 2023,
       "venue": "ACM Computing Surveys, 2023",
       "section": "journal",
-      "citation_count": 2415,
+      "citation_count": 2422,
       "influential_citations": 76
     },
     {
@@ -829,7 +829,7 @@
       "year": 2026,
       "venue": "arXiv preprint",
       "section": "preprint",
-      "citation_count": 5,
+      "citation_count": 6,
       "influential_citations": 0
     },
     {
@@ -1045,7 +1045,7 @@
       "year": 2025,
       "venue": "arXiv preprint",
       "section": "preprint",
-      "citation_count": 12,
+      "citation_count": 13,
       "influential_citations": 2
     },
     {
