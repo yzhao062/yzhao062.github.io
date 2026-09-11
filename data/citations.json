@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-09-09T13:47:55Z",
+  "generated_at": "2026-09-11T13:27:47Z",
   "source": "meta-finder citation-tracker, Semantic Scholar Graph API",
   "paper_count": 124,
-  "total_citations": 8635,
+  "total_citations": 8672,
   "papers": [
     {
       "id": "workshop-seva",
@@ -19,7 +19,7 @@
       "year": 2026,
       "venue": "EACL, 2026",
       "section": "conference",
-      "citation_count": 17,
+      "citation_count": 18,
       "influential_citations": 0
     },
     {
@@ -37,7 +37,7 @@
       "year": 2026,
       "venue": "ICLR, 2026",
       "section": "conference",
-      "citation_count": 7,
+      "citation_count": 8,
       "influential_citations": 0
     },
     {
@@ -82,7 +82,7 @@
       "year": 2026,
       "venue": "AAAI, 2026",
       "section": "conference",
-      "citation_count": 15,
+      "citation_count": 16,
       "influential_citations": 2
     },
     {
@@ -118,7 +118,7 @@
       "year": 2025,
       "venue": "NeurIPS Workshop on Multi-Turn Interactions in Large Language Models (MTI-LLM), 2025",
       "section": "workshop",
-      "citation_count": 21,
+      "citation_count": 23,
       "influential_citations": 0
     },
     {
@@ -154,7 +154,7 @@
       "year": 2025,
       "venue": "CVPR, 2025",
       "section": "conference",
-      "citation_count": 34,
+      "citation_count": 35,
       "influential_citations": 4
     },
     {
@@ -163,7 +163,7 @@
       "year": 2025,
       "venue": "AAAI Workshop on Foundation Models for Biological Discoveries (FMs4Bio), 2025",
       "section": "workshop",
-      "citation_count": 47,
+      "citation_count": 48,
       "influential_citations": 3
     },
     {
@@ -244,7 +244,7 @@
       "year": 2025,
       "venue": "EMNLP Findings, 2025",
       "section": "conference",
-      "citation_count": 19,
+      "citation_count": 20,
       "influential_citations": 4
     },
     {
@@ -262,7 +262,7 @@
       "year": 2025,
       "venue": "The Web Conference (Demo Track), 2025",
       "section": "workshop",
-      "citation_count": 28,
+      "citation_count": 29,
       "influential_citations": 0
     },
     {
@@ -280,7 +280,7 @@
       "year": 2025,
       "venue": "ICCV, 2025",
       "section": "conference",
-      "citation_count": 25,
+      "citation_count": 26,
       "influential_citations": 1
     },
     {
@@ -424,7 +424,7 @@
       "year": 2022,
       "venue": "NeurIPS, 2022",
       "section": "conference",
-      "citation_count": 498,
+      "citation_count": 499,
       "influential_citations": 75
     },
     {
@@ -469,7 +469,7 @@
       "year": 2021,
       "venue": "NeurIPS, 2021",
       "section": "conference",
-      "citation_count": 265,
+      "citation_count": 266,
       "influential_citations": 31
     },
     {
@@ -496,8 +496,8 @@
       "year": 2021,
       "venue": "NeurIPS, 2021",
       "section": "conference",
-      "citation_count": 508,
-      "influential_citations": 62
+      "citation_count": 514,
+      "influential_citations": 64
     },
     {
       "id": "conference-data-denoising-scrna",
@@ -640,7 +640,7 @@
       "year": 2025,
       "venue": "Transactions on Machine Learning Research (TMLR), 2025",
       "section": "journal",
-      "citation_count": 12,
+      "citation_count": 13,
       "influential_citations": 0
     },
     {
@@ -658,8 +658,8 @@
       "year": 2023,
       "venue": "ACM Computing Surveys, 2023",
       "section": "journal",
-      "citation_count": 2422,
-      "influential_citations": 76
+      "citation_count": 2423,
+      "influential_citations": 75
     },
     {
       "id": "journal-the-need-for-unsupervised-outlier-model-selection-a-review-and-evaluation-of-internal-evaluation-strategies",
@@ -676,8 +676,8 @@
       "year": 2022,
       "venue": "Nature Chemical Biology, 2022",
       "section": "journal",
-      "citation_count": 209,
-      "influential_citations": 10
+      "citation_count": 212,
+      "influential_citations": 11
     },
     {
       "id": "journal-ecod-unsupervised-outlier-detection-using-empirical-cumulative-distribution-functions",
@@ -685,8 +685,8 @@
       "year": 2022,
       "venue": "TKDE, 2022",
       "section": "journal",
-      "citation_count": 538,
-      "influential_citations": 47
+      "citation_count": 542,
+      "influential_citations": 48
     },
     {
       "id": "journal-pyod-a-python-toolbox-for-scalable-outlier-detection",
@@ -694,7 +694,7 @@
       "year": 2019,
       "venue": "JMLR, 2019.",
       "section": "journal",
-      "citation_count": 932,
+      "citation_count": 935,
       "influential_citations": 67
     },
     {
@@ -703,7 +703,7 @@
       "year": 2026,
       "venue": "EMNLP Findings, 2026",
       "section": "conference",
-      "citation_count": 0,
+      "citation_count": 1,
       "influential_citations": 0
     },
     {
@@ -748,7 +748,7 @@
       "year": 2026,
       "venue": "arXiv preprint",
       "section": "preprint",
-      "citation_count": 5,
+      "citation_count": 6,
       "influential_citations": 0
     },
     {
@@ -784,7 +784,7 @@
       "year": 2026,
       "venue": "EMNLP, 2026",
       "section": "conference",
-      "citation_count": 1,
+      "citation_count": 3,
       "influential_citations": 0
     },
     {
@@ -883,7 +883,7 @@
       "year": 2026,
       "venue": "ACM AI Leadership Summit, 2026 (condensed 4-page version); earlier version at ACL 2026 KnowFM Workshop",
       "section": "conference",
-      "citation_count": 13,
+      "citation_count": 14,
       "influential_citations": 0
     },
     {
@@ -892,7 +892,7 @@
       "year": 2026,
       "venue": "arXiv preprint",
       "section": "preprint",
-      "citation_count": 4,
+      "citation_count": 5,
       "influential_citations": 0
     },
     {
@@ -919,7 +919,7 @@
       "year": 2026,
       "venue": "arXiv preprint",
       "section": "preprint",
-      "citation_count": 19,
+      "citation_count": 20,
       "influential_citations": 0
     },
     {
