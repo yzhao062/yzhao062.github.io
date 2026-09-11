@@ -16,7 +16,7 @@
       "LLM Agents",
       "Reproducible Research"
     ],
-    "last_updated_at": "2026-09-09T01:16:27Z"
+    "last_updated_at": "2026-09-11T07:28:28Z"
   },
   {
     "name": "PyOD",
@@ -27,7 +27,7 @@
     "docs_url": "https://pyod.readthedocs.io",
     "paper_url": "https://arxiv.org/abs/2412.12154",
     "demo_url": "",
-    "stars": 9993,
+    "stars": 9999,
     "tags": [
       "Anomaly Detection",
       "Outlier Detection",
@@ -65,7 +65,7 @@
     "docs_url": "",
     "paper_url": "",
     "demo_url": "",
-    "stars": 138,
+    "stars": 142,
     "tags": [
       "Agent Auditability",
       "Agent Reliability",
@@ -102,7 +102,7 @@
     "docs_url": "https://trustllmbenchmark.github.io/TrustLLM-Website/",
     "paper_url": "https://openreview.net/forum?id=bWUU0LwwMp",
     "demo_url": "",
-    "stars": 632,
+    "stars": 633,
     "tags": [
       "Trustworthy AI",
       "LLM Evaluation",
@@ -120,7 +120,7 @@
     "docs_url": "https://trusteval-docs.readthedocs.io",
     "paper_url": "https://arxiv.org/abs/2502.14296",
     "demo_url": "",
-    "stars": 135,
+    "stars": 136,
     "tags": [
       "Trustworthy AI",
       "LLM Evaluation",
@@ -176,7 +176,7 @@
     "docs_url": "",
     "paper_url": "",
     "demo_url": "",
-    "stars": 9377,
+    "stars": 9379,
     "tags": [
       "Awesome List",
       "Anomaly Detection",
@@ -322,7 +322,7 @@
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/agent-audit.html",
     "paper_url": "https://arxiv.org/abs/2603.22853",
     "demo_url": "https://pypi.org/project/agent-audit/",
-    "stars": 227,
+    "stars": 228,
     "tags": [
       "AI Agent Security",
       "Security Audit",
@@ -387,7 +387,7 @@
       "Configuration",
       "MCP"
     ],
-    "last_updated_at": "2026-09-09T04:35:48Z"
+    "last_updated_at": "2026-09-11T07:15:27Z"
   },
   {
     "name": "agent-style",
@@ -398,7 +398,7 @@
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/agent-style.html",
     "paper_url": "",
     "demo_url": "https://pypi.org/project/agent-style/",
-    "stars": 671,
+    "stars": 675,
     "tags": [
       "AI Agents",
       "Agent Configuration",
