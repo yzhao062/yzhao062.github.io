@@ -1,112 +1,147 @@
 ---
 name: post-to-linkedin
-description: Use when announcing a release, paper, grant, talk, award, or project update on LinkedIn from this repo. Covers drafting, OAuth setup, token refresh, and posting via scripts/post_to_linkedin.py.
+description: Draft, preview, publish, and record Yue Zhao's research announcements on his personal LinkedIn feed. Use for papers, talks, grants, releases, and research-program updates; supports browser document posts and API text or image posts. Do not use for DMs or Company Page posts.
 ---
 
 # Post to LinkedIn
 
-Compose and post announcements to LinkedIn from this repo via `scripts/post_to_linkedin.py`. LinkedIn API posts are free (no per-post charge, unlike X Premium). Max commentary length is 3,000 chars.
+Create a source-checked LinkedIn post in Yue Zhao's established voice, show the
+complete preview, publish only within the user's authorization, and record the final
+public result. LinkedIn commentary is limited to 3,000 characters.
 
-The draft format, hashtag sets, and writing rules are shared with the `post-to-x` skill (same `scripts/drafts/` directory, same `references/draft-patterns.md`, same `references/hashtag-sets.md` at `skills/post-to-x/references/`).
+Read [references/yue-style.md](references/yue-style.md) before drafting a personal
+post. The shared scaffolds and hashtag vocabulary remain in
+`skills/post-to-x/references/`, but LinkedIn copy should not be a verbatim X draft.
 
-## When to use
+## Choose the delivery path
 
-- User asks to post, share, or announce something on LinkedIn
-- Cross-post: the same release/paper/grant that went to X, adapted for LinkedIn tone
-- Longer-form academic/professional framing where the 25,000-char X Premium post would feel out of place
+Use the **browser composer** when the post attaches a PDF or other LinkedIn document,
+when a real mention or visual spacing matters, or when API credentials are absent and
+the user has a logged-in session. Otherwise prefer the API path for text or image posts.
+If a computer-use or browser skill is installed, follow it for the mechanics. Whichever
+browser tooling is used, do not click `Post` until the user has approved a screenshot
+of the exact final composer in this conversation. Approval of an earlier draft does
+not carry over.
 
-Do not use for: generic networking DMs, connection requests, group posts to a Company Page feed (this skill posts to the authenticated user's personal feed only).
+Use `scripts/post_to_linkedin.py` for repeatable text or image posts when LinkedIn API
+credentials are configured. Its media path uses LinkedIn's image endpoint and does not
+support PDF document posts. Never pass a PDF to `--media`.
 
-## Prerequisites
-
-Two gates.
-
-**Gate 1: drafting / previewing**
-- `~/miniforge3/envs/py312/python.exe` has `requests` and `python-dotenv` installed (`pip install -r scripts/requirements-post.txt`).
-- Source data available: `data/open-source.json`, `data/publications.json`, or user-provided text.
-
-**Gate 2: real post**
-- `.env` at repo root contains `LINKEDIN_CLIENT_ID` + `LINKEDIN_CLIENT_SECRET`.
-- LinkedIn app has products **Share on LinkedIn** (Default Tier, gives `w_member_social`) and **Sign In with LinkedIn using OpenID Connect** (Standard Tier, gives `openid profile email`) approved. Both are self-serve; approval is typically instant.
-- `.env` also contains `LINKEDIN_ACCESS_TOKEN`, `LINKEDIN_TOKEN_EXPIRES_AT`, `LINKEDIN_USER_URN`, written by `--auth` on first run. `LINKEDIN_REFRESH_TOKEN` is written when LinkedIn returns one; on default self-serve apps it may be empty, in which case re-run `--auth` after the access token expires (60 days).
-- User has reviewed and approved the dry-run preview for this specific post.
-
-If Gate 2 fails, stop and report before posting. Drafting and previewing may continue.
-
-## One-time OAuth setup
-
-Before the first post, user must:
-
-1. Create a LinkedIn Developer app at https://developer.linkedin.com (requires a Company Page, not a personal profile; a 2-minute free Company Page creation is fine).
-2. Add Products: **Share on LinkedIn** + **Sign In with LinkedIn using OpenID Connect**. Both auto-approve.
-3. In the app's **Auth** tab, add `http://localhost:8765/callback` to Authorized redirect URLs.
-4. Copy Client ID + Client Secret into `.env` (see `.env.example`).
-5. Run:
-   ```
-   python scripts/post_to_linkedin.py --auth
-   ```
-   This opens a browser, user authorizes, tokens + user URN are written back to `.env`. Takes about 10 seconds.
-
-Access tokens last 60 days. The script auto-refreshes when a refresh token is available, but LinkedIn's default self-serve tier typically does not return a refresh token (observed 2026-04-22). In that case, re-run `--auth` when the access token expires; the re-auth flow is unchanged, takes ~10 seconds.
+This skill posts only to the authenticated user's personal feed. It does not cover
+messages, connection requests, comments, or Company Page publishing.
 
 ## Workflow
 
+1. **Verify the source.** Read the current paper, project data, event record, or
+   user-provided fact. Check venue, status, author names, URLs, and every number.
+2. **Choose one story.** Lead with the most concrete event, consequence, question, or
+   finding. Use the attached artifact for detail instead of restating all of it.
+3. **Draft and save.** Store only the post body in `scripts/drafts/<slug>.md`; the API
+   path posts that file verbatim, so it must contain nothing else. Put links,
+   attachment path and title, proposed mentions, hashtag rationale, character count,
+   and claim checks in `scripts/drafts/<slug>.notes.md`. The post record in step 6 goes
+   in the notes file under a `## Published` heading.
+4. **Preview the actual surface.** For API posts, run `--dry-run` and show the output.
+   For browser posts, prepare the full composer and show a screenshot. In both cases,
+   stop until the user approves that exact preview.
+5. **Publish once.** Use the approved API draft or the inspected browser composer. On
+   an ambiguous failure, first check whether the post already exists; do not silently
+   retry.
+6. **Record the public result.** Read the published post back from LinkedIn. Save to
+   `scripts/drafts/<slug>.notes.md` its permanent URL, observed time, exact public copy,
+   attachment, and the differences between the preview and the user's final edits.
+   Leave `scripts/drafts/<slug>.md` unchanged so it still matches the dry-run. Preserve
+   the public copy verbatim, including incidental errors, but do not turn those errors
+   into future style rules. When the sibling `../research-impact` repository is
+   available, add or update the post record under `social/YYYY-MM-DD-<slug>/` and link
+   it from `social/README.md`; commit that repository separately.
+
+## Browser composer rules
+
+- Treat a PDF poster or slide as a LinkedIn document. Upload the finished PDF, add a
+  descriptive title within the limit shown by the composer, and verify the preview.
+- Plain pasted `@Name` text is not a mention. Type `@`, continue the name slowly, and
+  select the exact person from LinkedIn's typeahead. Verify that the editor stores a
+  structured, non-editable mention object. If no exact account appears, keep a plain
+  name or omit the mention. Do not choose a similar person.
+- Hashtags can remain visually plain in the composer. Type them normally and verify
+  after publication that LinkedIn rendered them as hashtag links.
+- LinkedIn can collapse ordinary empty lines inserted through automation. Inspect a
+  screenshot. If major blocks run together, use a line containing only U+200B between
+  those blocks, then inspect again. Do not scatter invisible characters inside words,
+  links, mentions, or hashtags.
+- Keep `Post to Anyone` and comment settings visible in the final preview so the user
+  knows the distribution scope.
+- A browser tab returning to the feed is not enough evidence. Require the success
+  notice or find the new public post and capture its URL.
+
+## Draft rules
+
+- Voice, structure, links, and hashtag count follow
+  [references/yue-style.md](references/yue-style.md).
+- Preserve honest limits. Distinguish separately validated components from a complete
+  end-to-end system, and a proposed framework from a measured result.
+- Apply repository writing rules: no casual em dash or en dash, no U+202F, no banned
+  AI-tell words, and full forms where natural.
+- Stay at or below 3,000 characters including full literal URL length.
+
+## API path
+
+The Python environment needs `requests` and `python-dotenv`; install from
+`scripts/requirements-post.txt`. A real API post requires these `.env` values:
+
+- `LINKEDIN_CLIENT_ID`
+- `LINKEDIN_CLIENT_SECRET`
+- `LINKEDIN_ACCESS_TOKEN`
+- `LINKEDIN_TOKEN_EXPIRES_AT`
+- `LINKEDIN_USER_URN`
+
+`LINKEDIN_REFRESH_TOKEN` is optional. When the access token expires without a refresh
+token, run:
+
+```powershell
+python scripts/post_to_linkedin.py --auth
 ```
-1. Identify source   →  open-source.json / publications.json / user-provided
-2. Draft to file     →  scripts/drafts/<slug>.md  (same directory as X drafts)
-                        Can reuse an X draft directly, or tweak for LinkedIn tone.
-                        For LinkedIn the draft can be longer (up to 3,000 chars)
-                        and more narrative; hashtag volume can be higher (~5 to 10
-                        is normal on LinkedIn without penalty).
-3. Preview dry-run   →  python scripts/post_to_linkedin.py --dry-run --draft <path>
-4. Iterate           →  show preview, accept user edits, re-preview
-5. Post              →  python scripts/post_to_linkedin.py --yes --draft <path>
-                        Attach images with --media <path> (repeatable, up to 20).
-6. Report URL        →  return https://www.linkedin.com/feed/update/<URN>/
+
+First-time setup: create an app at <https://developer.linkedin.com>. LinkedIn requires
+a Company Page to own the app. Add the products **Share on LinkedIn** and **Sign In
+with LinkedIn using OpenID Connect**, register `http://localhost:8765/callback` as a
+redirect URL, and copy the client ID and secret into `.env` using the keys in
+`.env.example`. Access tokens normally last 60 days. Keep all credentials in `.env`.
+
+Preview:
+
+```powershell
+python scripts/post_to_linkedin.py --dry-run --draft scripts/drafts/<slug>.md
 ```
 
-Always run step 3 before step 5. No exceptions. `--yes` skips the interactive prompt; never use `--yes` without a prior successful `--dry-run` that the user approved.
+Publish the approved preview:
 
-## Hard rules
+```powershell
+python scripts/post_to_linkedin.py --yes --draft scripts/drafts/<slug>.md
+```
 
-- **Lead with the one-line value prop**, same as X posts. LinkedIn readers scan the first sentence; if it does not answer "what is different now?", they scroll past.
-- **LinkedIn tone is slightly more professional than X.** Fewer bullet lists, more connective prose. Emojis are accepted but not required.
-- **Hashtags**: 3 to 10 tags is fine on LinkedIn (higher ceiling than X). Pick from `skills/post-to-x/references/hashtag-sets.md`.
-- **Apply CLAUDE.md writing rules**:
-  - No em dashes (Unicode U+2014) or en dashes (Unicode U+2013) as casual punctuation.
-  - No banned AI-tell words.
-  - Prefer full forms (`it is`) over contractions.
-  - No Unicode `U+202F`.
-- **Verify every factual claim**. Star counts, download counts, venue names, coauthor names must match `data/open-source.json`, `data/publications.json`, or user-stated facts.
-- **Cost**: zero. LinkedIn does not charge per-post via the API.
+Attach images with repeatable `--media <path>` arguments. Run a successful dry-run for
+the exact draft and attachments before using `--yes`.
 
-## Post type differences from X
+`--draft` reads the whole file as commentary. Never point it at a notes or record file.
+The API image path currently publishes an empty alt-text field.
 
-| Aspect | X (Premium) | LinkedIn |
-|---|---|---|
-| Char limit | 25,000 | 3,000 |
-| Per-post cost | $0.20 with URL, $0.015 without | free |
-| URL length counting | t.co shortens to 23 chars | full literal length |
-| Hashtags | 3 to 5 | 3 to 10 |
-| Tone | direct, punchy, dev-adjacent | professional, narrative, network-adjacent |
-| Thread support | native reply-chain (X side only) | not used; single post is canonical on LinkedIn |
-| Image limit per post | 4 | 20 |
+The API path cannot create mentions; `@` is escaped and publishes as plain text. If a
+mention matters, use the browser composer.
 
-## Common mistakes (draft from post-to-x + observed)
+## Output record
 
-| Mistake | Fix |
-|---|---|
-| Reusing an X draft verbatim without adjusting tone | LinkedIn readers expect more context; add 1-2 sentences of positioning before the bullets |
-| Dumping too many hashtags (over 10) | LinkedIn allows more than X but the algorithm still penalizes stuffing; stay at 5 to 8 |
-| Posting without running `--dry-run` | Contract: dry-run is mandatory. Check cost, char count, media attachments |
-| Posting with expired token + no refresh_token | Re-run `--auth` to get a fresh refresh_token |
-| Posting an X draft that uses t.co-shortened URL math | LinkedIn counts URLs literally; re-check char count on the preview |
+A completed post record should contain:
 
-## Quick reference
+- permanent LinkedIn URL and publication time;
+- exact published text and resolved destinations for each link;
+- attachment path, document title, and alt text when supported;
+- verified claims and public source revisions;
+- whether mentions became profile links and hashtags became hashtag links;
+- user edits that reveal a reusable voice preference;
+- an initial analytics observation and planned follow-up window when impact is being
+  measured.
 
-- Script source: `scripts/post_to_linkedin.py`
-- Flags: `python scripts/post_to_linkedin.py --help`
-- Env vars: see `.env.example` for LINKEDIN_* keys
-- Shared draft patterns: `skills/post-to-x/references/draft-patterns.md`
-- Shared hashtag sets: `skills/post-to-x/references/hashtag-sets.md`
-- First live post: https://www.linkedin.com/feed/update/urn:li:share:7472734205077053440/ (posted 2026-06-16; "Safe Models, Unsafe Agents" talk announcement, slide image + 6-paper list)
+First API post retained for regression reference:
+<https://www.linkedin.com/feed/update/urn:li:share:7472734205077053440/>.
