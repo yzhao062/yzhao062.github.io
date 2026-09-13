@@ -1,7 +1,7 @@
 # News & Media Coverage Audit — Yue Zhao / FORTIS Lab
 
 *Last 5 runs (full change-log in `## Changes from Previous Audit` and in git history):*
-*2026-09-12 (Phase A: 32 Agy lanes via /prun, the first round with Codex out of discovery entirely; verification: 9 Claude agents via /workflows): 32 of 32 lanes complete, zero FALLBACK, 660 records over 616 unique URLs, 497 coverage candidates resolving to 454 unique URLs of which 304 were absent from the 1,929-URL index. Net new **+1 Ledger 1** (the Allen Institute for AI ships TrustLLM's JailbreakTrigger set as a task in `allenai/safety-eval` and as a Hugging Face dataset, and reports Tülu 3 scores on it at §7.2.1, the first frontier lab to carry this work as infrastructure rather than a citation), **+1 Ledger 1b** (SLAC OSTI 3005876, MetaOD's first appearance in a government document, a separate paper from the SLAC row already held), **+1 Ledger 2** (CrowdStrike threat research evaluating COPOD in a command-line malware ensemble), **+1 Ledger 3** (Databricks DAXS training 10,000 ECOD models over ~1.4B records, attributed to the linked repo because the post itself names neither ECOD nor PyOD). **Verification changed five of the thirteen claims it touched**: 4 of 9 were already-counted items reached by a new URL, including the KDD workshop copy of Ledger 6 row A2, and the Chemistry World row was refuted outright (51 configurations not 22, Yue Zhao named nowhere, critical of TDC rather than endorsing it). The round's most useful output is two site numbers, both sums presented as totals: `55M+` downloads is stale against **59,377,536** lifetime (pepy.tech) and a lane's "21.7M cumulative" was the 180-day pypistats retention window, which publishes no cumulative field; the **6,906** ecosystem dependent sum overstates by ~17% because the sibling libraries sit in each other's dependency closure and it counts pyod's own forks. **Seven standards tracks and seven specifications were fetched in full and none cites the agent-auditability line**, AAS-1 v0.1 nearest of all by arriving at the same framing independently; the UK AISI Inspect Evals Register is the one open submission window. The patent lane returned 65 distinct numbers, of which 49 were not already indexed. **A second, dedicated round then swept the auditing line** (12 Agy lanes + 13 Claude agents over three methods the lanes do not use), 12 of 12 complete, 504 records: **+6 net-new Ledger 6** plus one reverification, every one fetched with authors verified independent, covering five of the fourteen works, so **the standing note that Praetor was the only baseline precedent no longer holds**. The seventh, arXiv:2608.18351 against FORTIS, was already recorded on 2026-08-30 and is a reverification rather than a discovery, caught on review because the lane suppression list covered the ledger tables and the URL index but not the preceding pass's prose. **IET's zero is falsified** on two fetched bibliographies (Crew Scaler arXiv:2603.09002 reference [991]; DEMM arXiv:2605.04093 page 38), reversing this round's own first call of "open": a sweep that finds nothing across eight indexes does not outweigh a reference entry someone read. Plus 8 comparison finds from the lanes with **almost no overlap** with the workflow's seven, which is the round's methodological result. Two findings outrank the citation count: **seventeen surveys that draw this subfield's map carry none of the fourteen works** (and arXiv:2605.06812 carries GRADE's idea one month earlier, a priority problem rather than a visibility one), and **three of the seven confirmed citations were recovered by no service queried in this run**, two citing a repo URL that an identifier match cannot key on and one sitting on OpenReview; every sampled OpenAlex record carried empty outgoing reference metadata, which limits what a retrieval failure there can be read to mean. An earlier reading that vendors had adopted the line's vocabulary is **corrected**: a phrase-level sweep found the coinages have not leaked at all. The full name "Yue Zhao" appears in two of the seven citing documents, the Long-Horizon survey and the Audita PDF. **A third dispatch then verified every candidate both rounds had left unverified**: 16 Agy lanes over 420 candidates, 16 of 16 complete, 420 of 420 records, **319 confirmed, 63 dropped, 23 unreachable, 15 refuted**. Its headline is a measurement of Phase A rather than a new find: **110 tier downgrades, 310 unchanged, and zero upgrades**, a 26.2% one-directional error rate, with 5 of 6 Tier 0 claims failing to hold and **five candidate addresses that do not exist** (four GitHub repositories and one Hugging Face Space, all 404). All eight comparison finds hold, and four of them sat at an invented address whose real document Phase B located under a different owner. Confirmed additions: **49 of 49 patents** (39 CNIPA, 45 new rows), **+13 Ledger 6** (the auditing round's six net-new citers, the six deferred priority candidates that all verified, and PolicyFaultBench), **+6 Ledger 7**, **+11 Ledger 2** and **+57 Ledger 3**. Three standing negatives fall: CatchBench, No Attacker Needed and MemoHarness. Citing surveys move 4 to 7, so the omission share is 71% rather than 81%. Details in "## 2026-09-12 Pass".*
+*2026-09-12 (Phase A: 32 Agy lanes via /prun, the first round with Codex out of discovery entirely; verification: 9 Claude agents via /workflows): 32 of 32 lanes complete, zero FALLBACK, 660 records over 616 unique URLs, 497 coverage candidates resolving to 454 unique URLs of which 304 were absent from the 1,929-URL index. Net new **+1 Ledger 1** (the Allen Institute for AI ships TrustLLM's JailbreakTrigger set as a task in `allenai/safety-eval` and as a Hugging Face dataset, and reports Tülu 3 scores on it at §7.2.1, the first frontier lab to carry this work as infrastructure rather than a citation), **+1 Ledger 1b** (SLAC OSTI 3005876, MetaOD's first appearance in a government document, a separate paper from the SLAC row already held), **+1 Ledger 2** (CrowdStrike threat research evaluating COPOD in a command-line malware ensemble), **+1 Ledger 3** (Databricks DAXS training 10,000 ECOD models over ~1.4B records, attributed to the linked repo because the post itself names neither ECOD nor PyOD). **Verification changed five of the thirteen claims it touched**: 4 of 9 were already-counted items reached by a new URL, including the KDD workshop copy of Ledger 6 row A2, and the Chemistry World row was refuted outright (51 configurations not 22, Yue Zhao named nowhere, critical of TDC rather than endorsing it). The round's most useful output is two site numbers, both sums presented as totals: `55M+` downloads is stale against **59,377,536** lifetime (pepy.tech) and a lane's "21.7M cumulative" was the 180-day pypistats retention window, which publishes no cumulative field; the **6,906** ecosystem dependent sum overstates by ~17% because the sibling libraries sit in each other's dependency closure and it counts pyod's own forks. **Seven standards tracks and seven specifications were fetched in full and none cites the agent-auditability line**, AAS-1 v0.1 nearest of all by arriving at the same framing independently; the UK AISI Inspect Evals Register is the one open submission window. The patent lane returned 65 distinct numbers, of which 49 were not already indexed. **A second, dedicated round then swept the auditing line** (12 Agy lanes + 13 Claude agents over three methods the lanes do not use), 12 of 12 complete, 504 records: **+6 net-new Ledger 6** plus one reverification, every one fetched with authors verified independent, covering five of the fourteen works, so **the standing note that Praetor was the only baseline precedent no longer holds**. The seventh, arXiv:2608.18351 against FORTIS, was already recorded on 2026-08-30 and is a reverification rather than a discovery, caught on review because the lane suppression list covered the ledger tables and the URL index but not the preceding pass's prose. **IET's zero is falsified** on two fetched bibliographies (Crew Scaler arXiv:2603.09002 reference [991]; DEMM arXiv:2605.04093 page 38), reversing this round's own first call of "open": a sweep that finds nothing across eight indexes does not outweigh a reference entry someone read. Plus 8 comparison finds from the lanes with **almost no overlap** with the workflow's seven, which is the round's methodological result. Two findings outrank the citation count: **seventeen surveys that draw this subfield's map carry none of the fourteen works** (and arXiv:2605.06812 carries GRADE's idea one month earlier, a priority problem rather than a visibility one), and **three of the seven confirmed citations were recovered by no service queried in this run**, two citing a repo URL that an identifier match cannot key on and one sitting on OpenReview; every sampled OpenAlex record carried empty outgoing reference metadata, which limits what a retrieval failure there can be read to mean. An earlier reading that vendors had adopted the line's vocabulary is **corrected**: a phrase-level sweep found the coinages have not leaked at all. The full name "Yue Zhao" appears in two of the seven citing documents, the Long-Horizon survey and the Audita PDF. **A third dispatch then verified every candidate both rounds had left unverified**: 16 Agy lanes over 420 candidates, 16 of 16 complete, 420 of 420 records, **319 confirmed, 63 dropped, 23 unreachable, 15 refuted**. Its headline is a measurement of Phase A rather than a new find: **110 tier downgrades, 310 unchanged, and zero upgrades**, a 26.2% one-directional error rate, with 5 of 6 Tier 0 claims failing to hold and **five candidate addresses that do not exist** (four GitHub repositories and one Hugging Face Space, all 404). All eight comparison finds hold, and four of them sat at an invented address whose real document Phase B located under a different owner. Confirmed additions: **49 of 49 patents** (39 CNIPA, 45 new rows), **+13 Ledger 6** (the auditing round's six net-new citers, the six deferred priority candidates that all verified, and PolicyFaultBench), **+6 Ledger 7**, **+11 Ledger 2** and **+57 Ledger 3**. Three standing negatives fall: CatchBench, No Attacker Needed and MemoHarness. Citing surveys move 4 to 7, so the omission share is 71% rather than 81%. **A fourth round then went back at everything still blocked** with 6 lanes sliced by alternate route: 22 confirmed, 8 still blocked with every route named, 6 verified-negative, 2 dropped, and **17 of the 25 blocked or gated items converted to a decision without touching a paywall**. The route that matters is Crossref's deposited reference lists, which settled both "must not be recorded as zeros" surveys through a 403 at both publishers: MDPI 10.3390/ai7080298 cites nothing of this lab's across 112 references, and **ACM Computing Surveys 10.1145/3837083 cites TrustLLM at reference 77** across 195. Packt companion repositories settled 6 subscription-reader books. **The six repository leads a sweep found and never fetched all six verified**, which with the six deferred priority candidates makes every deferred lead in this pass verify, twelve for twelve. The Autonomy Tax zero falls, and **GRADE was never at zero: Ledger 6 row A19 and Ledger 3 row 77 already held its citations while two sweeps published it as a zero**, because nobody ran the zeros question against the ledger. Five academic zeros hold, three of them alongside real code adoption. The identity-key defect that cost this pass six instances now has a script, `skills/news-search/scripts/build_identity_index.py`. Details in "## 2026-09-12 Pass".*
 *2026-08-13 (Phase A: 17 Claude lanes via /workflows + 10 Codex lanes via /prun, every lane run as a first-ever audit with no prior-negative suppression; Phase B: 12 Codex verification units): 1238 raw records to 1030 unique candidates, 839 absent from prior files, 503 Phase B verdicts, zero unit failures. Net new **+4 Tier 0**: the India TEC draft standard on AI robustness listing PyOD in its recommended-tooling table, the Brazil Chamber of Deputies research proceedings running PyOD, SUOD, ECOD, and COPOD operationally against Senate procurement overpricing, an ESA/ESOC telemetry report engaging PyOD and COPOD in its requirements analysis, and the Google Research Tx-LLM post naming TDC as its training source. **Ledger 6 nearly doubled**, 11 to 20, four rows found only by tail triage because those papers cite AEGIS by mechanism rather than by name; one compares AEGIS against NVIDIA OpenShell and Microsoft's Agent Governance Toolkit, so the standing note that Praetor was the only baseline precedent no longer holds. Patents, package forensics, and dissertations ran as dedicated lanes for the first time and account for most of the +164 Ledger 3 growth, including 33 patents with named assignees (Visa, Tencent, Baidu, China Mobile, Ping An, CETC 54). **135 MIRROR verdicts** were URLs absent from every prior file that still pointed at already-counted items, which is why URL-level dedup is not sufficient; the International AI Safety Report and the NVD CVE record were both caught this way. A defect in the citation-audit OpenAlex path was diagnosed and fixed: daily-budget exhaustion had been recorded as zero citations. Details in "## 2026-08-13 Pass".*
 *2026-08-09 (Phase A via /workflows + /prun, then 16 Codex verification shards): the largest run to date. Phase B closed 16 of 16 shards with zero errors, 542 records over 541 unique URLs in 45 minutes and 1,028 tool uses, every promotion reached by downloading and scanning the document. Net new **+2 Tier 0** (a second OpenAI careers posting naming **PyOD 2.0** by pinned version, recovered from two Wayback captures of the canonical URL; and the Brazil National Treasury journal, whose author is a Controladoria-Geral da União official, which reverses the 2026-07-31 demotion of that row) and **+2 DOE labs** at Tier 1 (SLAC on PyOD, Sandia on **HPOD**, the first HPOD appearance in any government document). CSET Georgetown cites the model-extraction survey by name. The `journal1` shard verified 30 peer-reviewed articles and split them 12 substantive-use / 18 reference-list-only, adding Cell Press as a new venue family for PyOD. **Three prior verdicts were reversed:** the single "Refuted" DOE row (OSTI 2333852) is a body citation of a PyOD artefact and moves to bibliography-only, a Phase A verified-negative (OSTI 2550614) was a false negative, and one Scientific Reports row demoted in Codex Round 2 now has evidence. **CISA bulletin SB26-201 was reclassified down** from a worker's Tier 0 claim to a mirror of the already-counted CVE row, on CISA's own "not a direct result of CISA analysis" disclaimer. CVE-2026-15529 reconciled: NVD now reads "up to 3.6.1", the fix merged 2026-07-20, and 3.6.2 shipped. **Ledger placement closed out:** two new tables were created for promotions that previously lived only inside pass sections, **Ledger 1b** (8 DOE national-laboratory reports with substantive use) and **Ledger 6** (5 external academic citations of the agent-auditing line), plus rows for Cloud Security Alliance, TechTarget, and the Foresight Institute grantee page. The Indonesian Ministry of Finance journal was promoted to Tier 0 on author affiliation, and its use claim corrected downward: PyOD appears once in 15 pages as a benchmark citation that drove model selection, not as the implementation. **The reconciliation is now closed and the total is 353.** Every promotion in the 2026-07-19, 2026-07-31, and 2026-08-09 pass sections has a ledger row. Three tables were created for classes that had no home: **Ledger 1b** (8 DOE national-laboratory reports with substantive use), **Ledger 6** (11 external academic citations of the agent-auditing line), and **Ledger 7** (15 peer-reviewed articles running the tools in their methods). Ledger 2's published 83 was never reproducible from its 73 rows; placing the 11 orphaned 2026-07-19 promotions moved 4 of them elsewhere and left Ledger 2 at 80. **A fresh scan of the Auditable Agents citation graph found the strongest external citation to date** (arXiv:2605.04093, DEMM), which cites four of the lab's works, names a section after the paper, cedes framework priority to it, and **falsifies the standing "Implicit Execution Tracing has zero external citers" negative**. Semantic Scholar missed it entirely while carrying a false edge that survives revision. Details in "## 2026-08-09 Pass".*
 *2026-07-31 (cross-vendor: 6 Codex lanes via /prun + 6 Claude lanes via /workflows): 406 raw records to **366 unique candidates**. Net new **+6 Tier 0** (Japan MoD ATLA naming PyOD in its recommended-tooling table, BIS/Bundesbank using PyOD and implementing DCSO, Japan FSA on TrustLLM, Japan METI and NEDO on TDC, a NIST webinar deck) and **+11 Tier 1** (6 DOE national-lab reports with substantive use, 5 verified third-party academic citations of Aegis / Auditable Agents / agent-audit), plus Cloud Security Alliance, Foresight Institute, ACM SIGSPATIAL, Amazon Science, Grokipedia, and USC Viterbi. **11 of 19 worker high-tier claims were corrected on coordinator re-fetch**: coauthor-institution listings demoted (Microsoft Research x3, IBM Research), host mistaken for author (Parliament of Australia, Brazil TCU, one Sandia-reported OSTI record), CVE-2026-15529 collapsed from 3 claims to registry mirrors of the already-counted T0-e, and 2 of 7 Semantic Scholar citation edges refuted as name collisions. Implicit Execution Tracing and the FORTIS benchmark both have **zero** confirmed external citers. The OpenAI Tier 0(b) row survives only via its committed snapshot; the live URL now 404s and the successor posting dropped the PyOD bullet. 78 verified-negatives added. Details in "## 2026-07-31 Pass".*
@@ -16,7 +16,7 @@
 
 ---
 
-## 2026-09-12 Pass (general round: 32 Agy lanes via `/prun` + 9 Claude agents via `/workflows`; auditing-line round: 12 Agy lanes + 13 Claude agents; Phase B: 16 Agy lanes over 420 candidates)
+## 2026-09-12 Pass (general round: 32 Agy lanes via `/prun` + 9 Claude agents via `/workflows`; auditing-line round: 12 Agy lanes + 13 Claude agents; Phase B: 16 Agy lanes over 420 candidates; Phase C: 6 Agy lanes over everything still blocked)
 
 **Method, and what changed.** This is the first round where Codex ran no discovery lanes. The
 `news-search` dispatcher now sends lanes to Agy (Gemini 3.8 Flash High through the Antigravity CLI)
@@ -385,7 +385,10 @@ citations.
 
 This is the round's most useful structural finding, and it is not a coverage problem. Seventeen
 surveys and taxonomies that draw this subfield's map carry none of the fourteen works, each
-confirmed by fetching full text. Seven surveys do cite the line, after Phase B verified three more:
+confirmed by fetching full text. Phase C added two more by reading their Crossref-deposited
+bibliographies, so the count is **nineteen**: 10.3390/ai7080298 (MDPI *AI*, 112 references) and
+10.1145/3837083 (ACM Computing Surveys, 195 references) each omit all fourteen, and the ACM survey
+cites TrustLLM while doing so. Seven surveys do cite the line, after Phase B verified three more:
 arXiv:2510.06445 v3 (agentic security, BRAC University and QCRI), arXiv:2606.10749 (LLM-agent
 security, Nanjing University and TU Munich), and arXiv:2604.16548 (long-term memory security,
 MemTensor and Shanghai Jiao Tong). The seventeen omitting surveys stand unchanged, and none of the
@@ -495,7 +498,11 @@ was discounted in favour of the broader sweep because the sweep had covered more
 count is not evidence.
 
 Both citing works were already counted for other works, so this adds no ledger row. It removes a
-standing negative and it corrects the earlier zero, whose precise cause remains unverified.
+standing negative and it corrects the earlier zero, and Phase C established the cause: Crew Scaler's
+entry is reference **[991]**, beyond the depth cap automated reference parsers apply, and it uses the
+title variant "Attribution" rather than the "Auditing" in `data/publications.json`; DEMM is PDF-only on
+arXiv with no HTML5 metadata to extract. Two separate parser limits, and a "hard zero across eight
+indexes" reveals neither.
 
 ### Three Standing Negatives Revisited
 
@@ -507,18 +514,25 @@ standing negative and it corrects the earlier zero, whose precise cause remains 
 | No Attacker Needed has no verified citer | **Falsified**, by two independent documents. arXiv:2606.10749 cites it as printed reference [213] with a body use in Section 8, and arXiv:2604.16548 reproduces its 57-71% contamination range in prose and in a Table 3 row. A third, `txn2/mcp-data-platform` issue #1163, uses it as a literature baseline. |
 | MemoHarness has no verified citer | **Falsified.** arXiv:2608.30478 (Pera, Fudan and collaborators) cites it as prior art for the term "agent harness"; `technologyHu/research` pull request #2 is a dedicated survey report carrying a 17-row concept-to-code mapping table; `schubertsean-ui/onelive` pull request #35 adopts its D1 to D6 defect taxonomy. |
 
-Three of the four zeros this pass attributed to the verification cap are now falsified. Recording
-them as explicit reversals rather than editing the numbers in place follows the IET case above. A
-zero that a later fetch overturns is a finding about the method, and correcting it silently destroys
-the only evidence that the method produced it.
+| The Autonomy Tax has no verified citer | **Falsified.** OmniScientist (arXiv:2608.13558, NUS and Oxford) cites it in its Introduction as foundation for agent tool use, alongside ReAct, Toolformer and Reflexion. Ledger 6 row A34. |
+| GRADE has no verified citer | **Was never true, and this document already held the proof.** Ledger 6 row A19 (TraceCompiler, arXiv:2608.02680) and Ledger 3 row 77 ("Doomed from the Start", arXiv:2607.06503) were both recorded before the sweep that reported the zero. Phase C re-fetched both. |
+| WeClawArena, SkillCenter, Agent Safety Is Action Alignment, CatchBench and IET have no external academic citer | **Holds**, across arXiv full text, ACL Anthology, OpenReview, thesis repositories and Asian scholarly databases. Read it as a statement about the literature only: three of the five have real code or editorial adoption recorded in Ledger 3 this round. WeClawArena's Anthology absence has a reason rather than a verdict, since EMNLP 2026 Findings is not yet published there. |
+
+All four zeros this pass attributed to the verification cap are now falsified, and one of the four had
+never been a zero. Recording them as explicit reversals rather than editing the numbers in place
+follows the IET case above. A zero that a later fetch overturns is a finding about the method, and
+correcting it silently destroys the only evidence that the method produced it.
 
 ### Verification Cap Is the Binding Constraint
 
 The three workflow methods produced 94 candidates (26 graph-diff, 10 neighbour-cite, 58 full text).
 Nine reached adversarial verification and two of those were the same work found twice, so seven
 distinct works were checked and roughly 85 candidate slots were never examined. Four of the nine
-per-work zeros are therefore cap artifacts rather than measured absences: GRADE, The Autonomy Tax,
-No Attacker Needed and MemoHarness all returned candidates that nobody verified.
+per-work zeros were therefore cap artifacts rather than measured absences: GRADE, The Autonomy Tax,
+No Attacker Needed and MemoHarness all returned candidates that nobody verified. **All four have since
+been falsified**, No Attacker Needed and MemoHarness in Phase B and The Autonomy Tax in Phase C, and
+GRADE turned out to have had two citations recorded in this document all along. Four named cap
+artifacts, four reversals, none of them a measured absence.
 
 Six already-named candidates were run the same day rather than deferred to the next round, and
 **all six verified**: arXiv:2510.06445 v3 (to Agent Audit), 2608.23610 and 2608.12761 (to Auditable
@@ -547,10 +561,14 @@ Phase B closed three of the surfaces this list opened with. Its five code lanes 
 dataset and Space cards, PyPI and npm package pages, and dependency trackers directly, which is how
 the Ai2 TrustLLM dataset and the Splunk integration were settled.
 
-Publisher full text stayed shut. Two surveys are still 403 to every attempt and must not be recorded
-as zeros: 10.3390/ai7080298 (MDPI) and 10.1145/3837083 (ACM). Phase B added twelve O'Reilly Learning
-items behind the same kind of subscription wall, four Zhihu pages behind an anti-bot challenge, and
-one ResearchGate page behind Cloudflare.
+Publisher full text stayed shut to a direct fetch, and Phase C got both answers anyway through
+Crossref's deposited bibliographies: 10.3390/ai7080298 (MDPI) cites nothing of this lab's across 112
+references, and 10.1145/3837083 (ACM Computing Surveys) cites TrustLLM at reference 77 across 195.
+Neither is a zero, and neither needed the paywall. Of the twelve O'Reilly items, five were already
+recorded and six were verified through Packt companion repositories and previews; of the Medium and
+Zhihu blocks, four of nine yielded. What genuinely remains behind access control is small and named in
+the Phase C section: two Gartner documents, one S&P Global 451 page, one member-only Medium post, three
+Zhihu pages, and one book chapter.
 
 ### New Collision to Register
 
@@ -698,6 +716,115 @@ T0, 12 T1, 93 T2 and 4 T4. The rows added from them are the 45 patents in Ledger
 Ledger 6 rows listed in this pass, and the ecosystem rows below. The full verdict set, one JSON object
 per candidate with locator and quote, is at
 `skills/news-search/scratch/2026-09-12/phase-b-verdicts.jsonl`.
+
+### Phase C: Route-Around Verification of Everything Still Blocked
+
+Phase B left 23 candidates unreachable and this pass carried five more gated documents, two
+publisher-blocked surveys, six repository leads a sweep named but never fetched, and seven per-work
+zeros resting on method rather than on a fetch. Every one of those is blocked on a **route** rather
+than on a fact, so a third round ran 6 Agy lanes sliced by the alternate route each had to try.
+6 of 6 complete, zero FALLBACK, 38 records.
+
+| Outcome | Count |
+|---|---|
+| CONFIRMED | 22 |
+| still blocked, every route named | 8 |
+| verified-negative | 6 |
+| dropped | 2 |
+
+**Most blocks are bot detection rather than access control.** 25 blocked or gated items entered these
+lanes and **17 reached a decision**; 8 stayed blocked with every route named. Three more were settled
+locally before dispatch by the identity check described below, because they were already in this record.
+The routes that worked are worth naming because none requires a subscription:
+
+| Route | What it settled |
+|---|---|
+| **Crossref REST API** (`api.crossref.org/works/<doi>`) | Publishers deposit their **full reference lists** to Crossref for free. This settled both "must not be recorded as zeros" surveys in two requests, through a 403 at both publishers. |
+| **Packt companion repositories** on GitHub | 5 of 9 subscription-reader books. A `from pyod.models.knn import KNN` in the chapter's own notebook is stronger evidence of use than the prose would have been. |
+| **Stack Exchange API v2.3** | The Stack Overflow thread, through a Cloudflare challenge on the web page. |
+| **Browser User-Agent on Medium** | 3 of 4 Medium posts. Medium's 403 is bot detection; only one of the four is genuinely member-only. |
+| **`raw.githubusercontent.com`** | All 6 repository leads. |
+| **Google Books preview, publisher TOC, public translation mirror** | 3 books with no companion repository. |
+
+No paywall was bypassed. Where a claim sits behind one, the record says `still blocked` and names the
+routes tried: two Gartner documents, one S&P Global 451 Research product page, one member-only Medium
+post, three Zhihu pages behind an anti-bot captcha that survived four routes, and one Packt book whose
+chapter topic is confirmed while the TrustLLM citation inside it is not.
+
+**The Crossref reference-list route is the find worth carrying into the next round.** The audit's
+standing note that publisher-side full text is "the only route to 131 journal-only citing works" is
+wrong in one direction: for any work with a Crossref DOI, the deposited bibliography answers "does this
+paper cite X" without reading the paper. It does not answer *where* in the body, so it establishes a
+citation and not a Ledger 7 admission. Both blocked surveys resolved this way:
+
+- **10.3390/ai7080298** is "Agentic AI Safety: A Structured Review of Open Problems and Their
+  Regulatory Anchoring" (MDPI *AI*, 2026-08-04; Valenta, Rozinek, Horálek). **112 deposited references
+  and not one names any work of this lab's.** A verified negative, and the eighteenth survey in this
+  pass's survey census that omits the whole line.
+- **10.1145/3837083** is "A Comparative Survey of Security Risks in AI Systems: From LLMs to AI Agents
+  and Embodied Agents" (**ACM Computing Surveys**, 2026-08-22; Zhejiang University and Stony Brook).
+  195 deposited references, and **reference 77 is TrustLLM**. A new citation at the field's highest-impact
+  survey venue. Body placement is unknown behind the ACM wall, so this routes to `/citation-audit`
+  rather than to Ledger 7. It also omits all fourteen auditing-line works, making it the nineteenth.
+
+**Six leads a sweep found and never fetched: six confirmations, no bot digests, no first-party.** These
+were recorded as "thin but non-zero" and written off. Fetched, they are: `Stage-11-Agentics/etch` citing
+Implicit Execution Tracing by full title and arXiv ID, which is that work's only code-search footprint;
+`choiceoh/Deneb`, which **implements** SkillCenter's source-grounding rule in Go rather than citing it;
+`endomorphosis/ipfs_datasets_py` (22 stars) naming SkillCenter only through repository and Hugging Face
+dataset handles, so no identifier-keyed search can see it; `ydyjya/Awesome-LLM-Safety` at **1,909 stars**
+carrying Agent Safety Is Action Alignment with title, arXiv link and USC affiliation; `Tibsfox/gsd-skill-creator`
+(69 stars) encoding the same paper's argument and quoting its numbers; and `smirby/aiextinctionrisk`
+analysing it in an independent blog post.
+
+Taken with the six deferred priority candidates that all verified earlier in this pass, **every lead
+this audit deferred for lack of budget has since verified: twelve for twelve, across two batches
+triaged by different methods.** That is now a measured property of the triage rather than an anecdote,
+and it is the strongest argument this record contains against reporting a cap as if it cost nothing.
+
+**Two standing zeros fall, and one was never a zero.**
+
+- **The Autonomy Tax is cited.** OmniScientist (arXiv:2608.13558; Bobo Li, Hao Fei, Tianjie Ju, Mong Li
+  Lee, Wynne Hsu, NUS and Oxford) cites it in its Introduction as foundation for agent tool use,
+  alongside ReAct, Toolformer and Reflexion. This was the last of the four cap-artifact zeros still
+  standing; all four are now falsified.
+- **GRADE was never at zero, and this record already held the proof.** Two sweeps reported GRADE as
+  having no external citer while **Ledger 6 row A19 (TraceCompiler, arXiv:2608.02680) and Ledger 3 row
+  77 ("Doomed from the Start", arXiv:2607.06503) were already in this document**. Phase C re-confirmed
+  both by fetching them. This is the round's dedup defect running in the opposite direction from every
+  other instance: the lanes were given a suppression list so they would not re-report known coverage,
+  and nobody ran the *zeros* question against the ledger, so a work with two recorded citations was
+  published here as a zero. Check a zero against the record before reporting it, exactly as a candidate
+  is checked.
+
+**Five zeros hold, and the distinction between two kinds of zero now matters.** WeClawArena,
+SkillCenter, Agent Safety Is Action Alignment, CatchBench, and Implicit Execution Tracing have **no
+external academic citer**, confirmed across arXiv full text, ACL Anthology, OpenReview, theses
+repositories and Asian scholarly databases. Three of those five have real non-academic adoption, found
+in the same round: SkillCenter has two code adoptions, Agent Safety has three list-and-blog items, and
+IET has one repository citation. A work can be adopted in code and uncited in the literature at the
+same time, and a row that reports one number hides the other. WeClawArena's ACL Anthology check also
+came back with a reason rather than a zero: **EMNLP 2026 Findings is not yet published in the
+Anthology**, so its record cannot exist there yet.
+
+**The IET index blindness finally has a mechanism.** This pass recorded IET's falsified zero with the
+note that "whose precise cause remains unverified". Phase C names it: Crew Scaler's citation is
+reference **[991]**, past the depth cap automated parsers apply to reference lists, and it uses the
+title variant "Attribution" where this repo's own metadata says "Auditing"; DEMM is PDF-only on arXiv
+with no HTML5 metadata to extract. Two different parser limits, neither of which a "hard zero across
+eight indexes" reveals.
+
+**Two more locators were mangled rather than invented**, which is the milder form of the Phase B
+failure: the Towards Data Science COPOD URL carried a three-character suffix typo, and the Medium slug
+was truncated mid-title. Both resolved to real articles once the canonical URL was recovered. Phase B's
+five invented addresses and these two corrupted ones are the same failure at different severities, and
+both are caught the same way: resolve the locator before believing the row.
+
+**The already-counted rate on blocked items is as high as on any other class.** Of the 12 O'Reilly
+items, five were already in this record: two books by title at rows 37 and 39, one video edition of row
+37, and two Packt titles at rows 195 and 217 that were on file under Packt product URLs while the
+candidates arrived as O'Reilly reader URLs. That is 5 of 12, and it is the fifth and sixth instance of
+the same identity-key defect in one pass, which is what finally motivated the script described below.
 
 ### Method Defects in This Round, and the Fix
 
@@ -2173,6 +2300,9 @@ Independent third-party coverage by outlets not affiliated with you, your lab, o
 | 58 | MemoHarness | **youtube.com** | dedicated-coverage | A dedicated explainer video on MemoHarness as a meta-harness: "MemoHarness is a meta-harness: a Python framework that treats the harness itself as the thing to optimize. Unlike other harnesses, it learns one." [source](https://www.youtube.com/watch?v=CV9lWMIM8eI) |
 | 59 | CHI-Bench | **youtube.com** | dedicated-coverage | An AI Research Roundup episode on CHI-Bench and long-horizon healthcare workflows: "In this AI Research Roundup episode, Alex discusses the paper: 'CHI-Bench: Can AI Agents Automate End-to-End, Long-Horizon, Policy-Rich Healthcare Workflows?'" [source](https://www.youtube.com/watch?v=Zyq2tMnBaIA) |
 | 60 | Agent Safety Is Action Alignment | **youtube.com** | dedicated-coverage | An explainer episode on the category error of applying chatbot refusal training to action-taking agents: "This paper redefines agent safety by identifying the category error of using chatbot refusal training for action-taking LLM agents." [source](https://www.youtube.com/watch?v=DrDiN2UCncM) |
+| 61 | COPOD | **medium.com** | dedicated-coverage | A Towards Data Science explainer devoted to COPOD, by independent data scientist Alexandra Amidon: "Copula-Based Outlier Detection — COPOD — is a new algorithm for anomaly detection. It has been implemented in the PyOD python package." [source](https://medium.com/data-science/fast-accurate-anomaly-detection-based-on-copulas-copod-3133ce904bb1) |
+| 62 | ECOD | **medium.com** | dedicated-coverage | A dedicated ECOD chapter in Chris Kuo's Medium series, with a companion notebook. The author is already represented at Ledger 3 row 38 for the book; this post is a separate artifact: "This chapter introduces a related method, Empirical Cumulative Distribution-based Outlier Detection (ECOD). These two methods are often used together. ECOD uses Empirical Cumulative Distribution Function (ECDF) to detect outliers." [source](https://medium.com/dataman-in-ai/handbook-of-anomaly-detection-3-ecod-c1b567d05bab) |
+| 63 | Revisiting Time Series Outlier Detection | **medium.com** | prior-art | Sia Partners' data-science team builds its anomaly taxonomy and its diagram directly on the Lai, Zha, Xu, Zhao et al. NeurIPS 2021 definitions: "Examples of point (left), contextual (middle), and collective (right) outliers (Source: Lai & al. Revisiting Time Series Outlier Detection: Definitions and Benchmarks.)" [source](https://medium.com/sia-ai/anomaly-detection-in-time-series-3f36c7b4cd73) |
 
 **Count: 80 counted items across 81 rows** (row #22 SitePoint is present but marked REMOVED and is not counted).
 
@@ -2190,9 +2320,9 @@ External parties building on, integrating, or teaching your tools -- not coverag
 
 | # | Work Named | Type | Detail |
 |---|-----------|------|--------|
-| 37 | PyOD | **Book** | "Outlier Detection in Python" by Brett Kennedy (Manning/O'Reilly) -- Ch. 6, 7, 14 on PyOD |
+| 37 | PyOD | **Book** | "Outlier Detection in Python" by Brett Kennedy (Manning, ISBN 9781633436473; also on O'Reilly Learning) -- Ch. 6, 7, 14 on PyOD. A video edition of the same book ships as O'Reilly 9781633436473VE; same artifact, different medium, counted once here. |
 | 38 | PyOD | **Book** | "Handbook of Anomaly Detection" by Chris Kuo (Columbia) -- entire book on PyOD |
-| 39 | COPOD | **Book** | "Finding Ghosts in Your Data" by Kevin Feasel (Apress/O'Reilly) -- Ch. 12 on COPOD |
+| 39 | COPOD | **Book** | "Finding Ghosts in Your Data" by Kevin Feasel (Apress, ISBN 9781484288702; also on O'Reilly Learning) -- Ch. 12 on COPOD |
 | 40 | PyOD | **Podcast** | Talk Python To Me #497: Outlier Detection with Python |
 | 41 | PyOD | **Podcast** | Real Python Podcast #208: Detecting Outliers |
 | 42 | PyOD | **Enterprise** | Databricks -- built Kakapo framework integrating PyOD with MLflow/Hyperopt |
@@ -2508,6 +2638,19 @@ External parties building on, integrating, or teaching your tools -- not coverag
 | 285 | MemoHarness | **Ecosystem** | A third-party research repository added a dedicated MemoHarness survey report with a 17-row paper-concept to code-implementation mapping table: "调研 Notre Dame/USC 等机构提出的 MemoHarness（arXiv:2607.14159，2026-07 预印本）。把 agent harness（模型外围控制层：上下文/工具/编排/memory/解码/输出）作为优化对象，提出"训练时搜索 + 测试时案例适配"两阶段框架。三大设计：... - **17 行论文概念→代码实现映射表**，对照开源仓库 HowieHwong/MemoHarness" [source](https://github.com/technologyHu/research/pull/2) |
 | 286 | ADBench | **Ecosystem** | The LAMDA tabular-survey companion repository lists ADBench in its curated reading index: "- [Adbench: Anomaly detection benchmark](https://proceedings.neurips.cc/paper_files/paper/2022/hash/cf93972b116ca5268827d575f2cc226b-Abstract-Datasets_and_Benchmarks.html)" [source](https://github.com/LAMDA-Tabular/Tabular-Survey) |
 | 287 | TrustLLM | **Podcast** | GPT Reviews devoted a segment at 07:26 to the TrustLLM trustworthiness study: "The TrustLLM study evaluates the trustworthiness of LLMs across six dimensions, while Intel Corporation proposes an efficient LLM inference solution." [source](https://podcasts.apple.com/us/podcast/apples-ai-plans-%24100m-for-humanoid-robots-trustworthiness/id1687287441?i=1000641667934) |
+| 288 | PyOD | **Book** | "Data Literacy with Python" (ISBN 9781501518683), Ch. 2 "Outlier and Anomaly Detection" -- list-mention, verified at Chapter 2 ('Outlier and Anomaly Detection'), page PT71 via Google Books preview: "... PyOD • Numeric Outlier (IQR) • Z-Score • DBSCAN • Isolation Forest Perform an online search for articles that discuss deep learning and anomaly detection, as well as the products that are in the preceding bullet list. WORKING. WITH." [source](https://learning.oreilly.com/library/view/data-literacy-with/9781501518683/08_Chapter_02.xhtml) |
+| 289 | PyOD | **Book** | "Deep Learning and Scientific Computing with R/Python" (ISBN 9781804617755), Ch. 1 -- substantive, verified at Chapter 1, Chapter1/PyOD_point_anomaly/chapter1_pyod_point_anomaly.ipynb cells 0, 2, 5 via Packt companion repository notebook: "[PyOD](https://github.com/yzhao062/pyod), is an open-source Python library that provides over 40 outlier detection algorithms, covering from outlier ensembles to neural network-based methods on multivariate data under a unified API." [source](https://learning.oreilly.com/library/view/deep-learning-and/9781804617755/B18948_01.xhtml) |
+| 290 | PyOD | **Book** | "Machine Learning for Time-Series with Python" (ISBN 9781801819626), Ch. 6 "Unsupervised Methods for Time-Series" -- list-mention, verified at Chapter 6 ('Unsupervised Methods for Time-Series'), Figure 6.6 and paragraph following Fig 6.5/6.6 via public translation mirror: "Prophet 和 PyOD 的人气都在持续上升(GitHub stars)。" [source](https://learning.oreilly.com/library/view/machine-learning-for/9781801819626/Text/Chapter_6.xhtml) |
+| 291 | PyOD | **Book** | "Python Data Cleaning Cookbook" (ISBN 9781803239873), Ch. 4 -- substantive, verified at Chapter 4, 4. OutliersMultivariate/5. outliers_knn.py lines 1-3, 23 via Packt companion repository script: "# import pandas, pyod, and sklearn import pandas as pd from pyod.models.knn import KNN" [source](https://learning.oreilly.com/library/view/python-data-cleaning/9781803239873/Text/Chapter_4.xhtml) |
+| 292 | PyOD / ECOD / COPOD / SUOD | **Book** | "Time Series Analysis with Python Cookbook" 2nd ed. (ISBN 9781805124283), Ch. 13 -- substantive, verified at Chapter 13, code/Ch13/Chapter_13.ipynb cells 87, 88, 100, 109, 125, 132, 136, 146, 148 via Packt companion repository notebook: "from pyod.models.ecod import ECOD # Initialize and fit the ECOD model ecod = ECOD(contamination=0.03) ecod.fit(tx)" [source](https://learning.oreilly.com/library/view/time-series-analysis/9781805124283/Text/Chapter_13.xhtml) |
+| 293 | PyOD | **Book** | "Time Series with Python" (ISBN 9781805128182), Ch. 17 -- substantive, verified at Chapter 17, Chapter_17/chapter17_unsupervised_anomaly.py lines 658-664, 887, 919 via Packt companion repository script: "#\| label: pyod import # pip install pyod from pyod.models.iforest import IForest" [source](https://learning.oreilly.com/library/view/time-series-with/9781805128182/Text/Chapter_17.xhtml) |
+| 294 | Agent Safety Is Action Alignment | **Curated list** | A 1,909-star hand-curated LLM-safety reading list carries the paper with title, arXiv URL and USC affiliation under Security & Discussion, at subtopic/Security&Discussion.md line 523: the entry gives the date 26.06, the affiliation University of Southern California, an arXiv link to 2606.28739, and the curated keywords action alignment, least privilege, agent safety [source](https://github.com/ydyjya/Awesome-LLM-Safety) |
+| 295 | Agent Safety Is Action Alignment | **Ecosystem** | A 69-star TypeScript project encodes the paper's argument as a structured concept record, quoting its quantitative results, at .college/departments/agent-systems/concepts/security/action-authority-alignment.ts lines 4 and 20: "arXiv:2606.28739 (2026), "Agent Safety Is Action Alignment," argues that importing the chatbot-era refusal recipe — training weights to decline unsafe inputs and accepting the resulting capability loss as a manageable "alignment tax" — into the..." [source](https://github.com/Tibsfox/gsd-skill-creator) |
+| 296 | SkillCenter | **Ecosystem** | A third-party Go gateway implements SkillCenter's source-grounding rule in code rather than citing it, naming the paper and arXiv ID in its research addendum, at docs/research/rsi-research-2026h2-addendum.md lines 144-147 and gateway-go/internal/domain/skills/genesis/curriculum.go lines 55, 432-440: "SkillCenter (2607.07676).** Both ground acquired skills in sources; SkillCenter's defining rule: *"each retained claim maps to an exact quotation in its source."*" [source](https://github.com/choiceoh/Deneb) |
+| 297 | SkillCenter | **Ecosystem** | A 22-star Python project references SkillCenter through its repository and Hugging Face dataset handles rather than the paper, so an identifier-keyed search cannot see it, at docs/architecture/knowledge_graphs_inventory.md lines 80-88 and docs/architecture/USCODE_SPARSE_GRAPHRAG_PLAN.md line 97: the inventory names the Hugging Face dataset handles `Tommysha/skillcenter-bundles` and `Publicus/skillcenter-*` and the SkillCenter repository, with no paper identifier anywhere [source](https://github.com/endomorphosis/ipfs_datasets_py) |
+| 298 | Implicit Execution Tracing | **Ecosystem** | A third-party Go project cites the paper by full title and arXiv ID as related work on multi-agent provenance, the work's only code-search footprint, at RESEARCH.md lines 111 and 168: "- **When Only the Final Text Survives: Implicit Execution Tracing for Multi-Agent Attribution** — [arXiv 2603.17445](https://arxiv.org/pdf/2603.17445) — same theme, more recent." [source](https://github.com/Stage-11-Agentics/etch/blob/main/RESEARCH.md) |
+| 299 | Agent Safety Is Action Alignment | **Ecosystem** | An independent blog post analyses the paper's action-alignment argument against guardrail training, at content/blog/2026-08-18-AI-Agent-Safety.md lines 12 and 43: "Li, Shawn, and Yue Zhao. 2026. “Agent Safety Is Action Alignment.” arXiv:2606.28739. Preprint, arXiv, June 27. https://doi.org/10.48550/arXiv.2606.28739." [source](https://github.com/smirby/aiextinctionrisk) |
+| 300 | PyOD | **Forum** | A Stack Overflow question and accepted answer explain PyOD's unsupervised KNN against scikit-learn's supervised classifier, by independent contributors, at Question body and answer 71847567: "kNN as an unsupervised outlier detector (as in PyOD's KNN class) measures the distance to the k nearest neighbor(s) and predicts a point to be an outlier if that distance is "large"." [source](https://stackoverflow.com/questions/71847229/the-reason-of-different-results-of-knn-algorithm-from-pyod-sklearn-packages) |
 
 *Tier-5 aggregator paper-pages, non-English how-to tutorials, and SecTools.tw AI-generated rows bucketed 2026-06-02 (presentation only; item counts preserved and still in the Ledger 3 total of 169; full per-row detail recoverable from git):*
 
@@ -2647,6 +2790,7 @@ quantitative record of *how many*.
 | A31 | [arXiv:2604.16548](https://arxiv.org/abs/2604.16548), "A Survey on Long-Term Memory Security in LLM Agents" (MemTensor, Shanghai Jiao Tong University) | No Attacker Needed | Prior art with numbers: reproduces the 57-71% benign-contamination range and the executable-artifact sanitization failure. v1 cites it three times in prose; v2 uses it at a Figure 1 taxonomy leaf and in the Table 3 Principal-Scoped Retrieval row. Author-year, no printed number, entry on PDF p.12. | 2026-09-12 |
 | A32 | [arXiv:2608.30478](https://arxiv.org/abs/2608.30478), "Agents in the Large: Perception-Centered Architecture for Persistent Agents" (the Pera framework; Fudan and collaborators) | MemoHarness | Prior art for the term itself: "Recent work increasingly uses agent harness to refer to the non-model parts within an agent (Huang et al., 2026c; Pan et al., 2026a)." Author-year, no printed number; entry on PDF p.29. | 2026-09-12 |
 | A33 | Research Square [rs-10502893](https://www.researchsquare.com/article/rs-10502893/v1), "PolicyFaultBench: Mutation-Based Assurance of Policy Mediation and Proposal-Interface Conformance for Tool-Using AI Agents" (University of Misan, Iraq) | AEGIS | Evaluated and tabulated in the comparative taxonomy of Section 2 and Table 1, reference 20 on p.17. Surfaced by a lane as "Palumbo et al.", which is wrong; the authors are Hasan Fadhil Qasim and Sarah Abdulzahra Kadim. | 2026-09-12 |
+| A34 | [arXiv:2608.13558](https://arxiv.org/abs/2608.13558), "OmniScientist" (Bobo Li, Hao Fei, Tianjie Ju, Mong Li Lee, Wynne Hsu; NUS and Oxford) | The Autonomy Tax | Introduction, page 1, reference `bib.bib41`. Cited as foundation for agent tool use alongside ReAct, Toolformer and Reflexion. **Falsifies the last of the four cap-artifact zeros**, and the first external citer this work has. | 2026-09-13 |
 
 **Count: 11 confirmed external academic citations of the agent-auditing line. By work cited: Auditable Agents x7 (A1, A6-A11), agent-audit x4 (A1, A3, A4, A5), Aegis x2 (A2, A11), Implicit Execution Tracing x1 (A11), Sovereign-OS x1 (A11). A1 and A11 each cite more than one work, so the per-work figures sum above 11.**
 

@@ -85,12 +85,26 @@ Add `news-search-candidates.jsonl` to `.git/info/exclude` (local, untracked) bef
 
 ### Phase B: Verify and Classify
 
-**Run the ledger check before spending any fetch budget.** Measured 2026-09-12: of the nine
-candidates a round selected for verification on the strength of their apparent value, four turned out
-to be already-counted items reached by a new URL. Verification that checks a candidate against its
-source but never against the ledger cannot tell new coverage from a new URL. The check is local and
-cheap, so it runs first, over every candidate, and it reads the whole audit file rather than its
-ledger tables (see `references/fan-out-reliability.md`, Failure 7).
+**Run the ledger check before spending any fetch budget, and run it with
+`scripts/build_identity_index.py`.** Measured 2026-09-12: of the nine candidates a round selected for
+verification on the strength of their apparent value, four turned out to be already-counted items
+reached by a new URL, and a later sweep of the same round put the rate at 5 of 12 on one class.
+Verification that checks a candidate against its source but never against the ledger cannot tell new
+coverage from a new URL. The check is local and cheap, so it runs first, over every candidate.
+
+    python scripts/build_identity_index.py build --audit ../../news-coverage-audit.md \
+        --out scratch/<date>/identity-index.jsonl
+    python scripts/build_identity_index.py check --index scratch/<date>/identity-index.jsonl --stdin
+
+**Match on document identity, not on URL string.** The script extracts every identifier a recorded
+document carries: normalized URL, arXiv ID, DOI, language-stripped Google Patents number, OSTI
+accession, ISBN, YouTube video ID, and podcast episode. One round lost to the same defect five times
+in a day because the index held URL strings only; the write-up in `references/fan-out-reliability.md`
+Failure 14 names all five.
+
+A row that carries no identifier is invisible to the check, so **every ledger row needs a URL or an
+identifier**. Two book rows named their titles only, and the O'Reilly reader URLs for those same books
+read as new candidates until their ISBNs were backfilled.
 
 **`status` and `tier_guess` are independent fields.** `tier_guess` names how authoritative the outlet
 is; `status` names what was found there. A NIST publication read cover to cover that mentions nothing
@@ -103,6 +117,20 @@ seven co-author works before candidacy and found three apparent per-work zeros w
 explained by cross-citation inside the PI's own portfolio. Keep the frequent-co-author list to hand
 and check the citing paper's author block, because a co-author citing the work is not external
 coverage.
+
+**A blocked fetch is a fact about the route, not about the claim.** Measured 2026-09-12: 21 of 29
+items recorded as paywalled or blocked yielded to a free, legitimate alternate route. Before setting
+`status: paywall_or_blocked`, try the identifier-based API (`api.crossref.org/works/<doi>` returns the
+publisher's full deposited reference list, which answers "does this paper cite X" through a 403 on the
+paper), the companion code repository for a book, `api.stackexchange.com` for a forum thread, and a real
+browser User-Agent for a 403 that is bot detection rather than a paywall. Record which routes were tried.
+Never bypass access control: no credential sharing, no cookie injection, no paywall-removal mirrors. A
+`still_blocked` that names four failed routes is a usable finding; a bare "blocked" is not.
+
+**Check a zero against the record before reporting it.** The suppression index exists so lanes do not
+re-report known coverage, and it is only ever applied to candidates. One round published GRADE as having
+no external citer while this record already held two, at Ledger 6 row A19 and Ledger 3 row 77. Run the
+same lookup in the other direction on every per-work zero.
 
 **A Phase A tier is a ceiling, not an estimate.** Measured over 420 candidates on 2026-09-12: 310
 tiers held, **110 moved down, and none moved up**. A one-directional 26.2% error rate means Phase A

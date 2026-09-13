@@ -279,10 +279,66 @@ because that row names the document by OSTI accession number and carries no link
 already-counted items at a second surface: a podcast episode under an Apple Podcasts URL and a paper
 under its workshop-hosted PDF rather than its arXiv page.
 
-**The rule.** Key the suppression index by document identity, not by URL string. Store the URL and,
-alongside it, every identifier the document has: arXiv ID, DOI, patent number with the language suffix
-stripped, OSTI accession, ISBN, podcast episode number. A ledger row that names a document without a
-link is invisible to a URL-keyed check, so require either a URL or an identifier in every row.
+**The rule, and it now ships as a script.** Key the suppression index by document identity, not by
+URL string. `scripts/build_identity_index.py build` extracts every identifier a recorded document
+carries (normalized URL, arXiv ID, DOI, language-stripped patent number, OSTI accession, ISBN, YouTube
+ID, podcast episode) and `check` tests candidates against all of them. Run it before spending any fetch
+budget.
+
+Measured on the round that motivated it: the index catches the OSTI report, both podcast episodes, and
+4 of the 5 already-counted O'Reilly items. It reported 5 of 12 items in one blocked class as already
+recorded, two of which no previous check had caught, because they were on file under Packt product URLs
+while the candidates arrived as O'Reilly reader URLs.
+
+Two limits worth knowing. **A row that carries no identifier is invisible to the check**, which is why
+two book rows had their ISBNs backfilled; require a URL or an identifier in every ledger row. And a
+different *edition* of the same content reads as new: O'Reilly's video edition of an already-counted
+book carries the print ISBN plus a `VE` suffix, so it surfaces for a human to judge rather than being
+collapsed automatically. That is the right default, because a video course usually is a separate
+artifact.
+
+## Failure 15: Reporting a Zero Without Checking the Record
+
+**What happened.** Two sweep methods reported GRADE (arXiv:2606.22741) as having no external citer, and
+the round published that, twice, in a section on cap-artifact zeros. The audit document already held two
+GRADE citations at the time: Ledger 6 row A19 (TraceCompiler, arXiv:2608.02680) and Ledger 3 row 77
+("Doomed from the Start", arXiv:2607.06503). A later round re-fetched both.
+
+The cause is a one-sided check. Lanes are given a suppression list so they will not re-report known
+coverage, which means the list is applied to **candidates**. Nothing applies it to **zeros**. So a work
+whose citations are already recorded can be reported as having none, and the suppression machinery that
+would have caught it is pointed the other way.
+
+**The rule.** Before reporting any per-work zero, look the work up in the record. If the record holds a
+citation the sweep did not find, the finding is about the sweep, not about the work. This is the same
+lookup the candidates get, run in the other direction, and `scripts/build_identity_index.py` already
+builds the index it needs.
+
+## Failure 16: Treating a Block as a Fact About the Claim
+
+**What happened.** One round recorded 23 candidates as unreachable and six more as gated, and wrote two
+publisher-blocked surveys into a standing "must not be recorded as zeros" note. A round dedicated to
+routes rather than subjects then settled **21 of the 29** without touching a paywall.
+
+The routes, all free and all legitimate:
+
+| Route | Reaches |
+|---|---|
+| `api.crossref.org/works/<doi>` | The publisher's **deposited reference list**, in full, for most journals. Answers "does this paper cite X" through a 403 on the paper itself. |
+| Publisher companion code repositories (`github.com/PacktPublishing/<Title>`) | What a subscription-reader book's chapter actually does. An import line in the chapter's notebook beats the prose. |
+| `api.stackexchange.com` v2.3 | Stack Overflow content behind a Cloudflare challenge on the web page. |
+| A real browser User-Agent | Medium, and most sites whose 403 is bot detection rather than a paywall. |
+| `raw.githubusercontent.com` | Repository file content, without the rendered page. |
+| Google Books preview, publisher TOC, translation mirrors, `web.archive.org` | Books and pages with no API. |
+
+**The rule.** A block is a fact about the route, not about the claim. Before recording `paywall_or_blocked`,
+try the identifier-based API, the companion repository, and a browser User-Agent. Record which routes were
+tried, because "still blocked after four routes" is a usable finding and "blocked" is not.
+
+**What stays blocked, and that is fine.** Analyst subscriptions (Gartner, S&P Global), genuinely
+member-only posts, and one anti-bot captcha survived every route. Never bypass access control: no
+credential sharing, no cookie injection, no paywall-removal mirrors. A named `still_blocked` with its
+route list is the honest answer and the useful one.
 
 ## Checklist for the Next Round
 
@@ -322,6 +378,12 @@ link is invisible to a URL-keyed check, so require either a URL or an identifier
     first-party surfaces for the lab's own artifacts.
 18. Key the suppression index by document identity: URL plus arXiv ID, DOI, language-stripped patent
     number, OSTI accession, podcast episode. Require a URL or an identifier in every ledger row.
+19. Run the record lookup on **zeros** as well as on candidates. A work with a recorded citation
+    was published as a zero because the suppression list only ever pointed at candidates.
+20. Treat a block as a fact about the route. Try `api.crossref.org` for a deposited reference list, the
+    publisher's companion repository for a book, `api.stackexchange.com` for a forum, and a browser
+    User-Agent for a bot-detection 403, before recording `paywall_or_blocked`. Record the routes tried.
+    Measured: 21 of 29 blocked items yielded, none of them by bypassing access control.
 
 `scripts/dispatch_lanes.sh` implements the mechanical parts of items 1, 3, 4, 5 and 8. Its
 `result_complete` helper is the item 5 check, and it gates the skip-if-done branch and the launch
