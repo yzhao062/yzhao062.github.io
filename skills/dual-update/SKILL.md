@@ -61,7 +61,7 @@ that read fluently while being wrong.
 | Subtitle under the name | `index.html` Research box | Must name the same pillars the site names, in the same count. |
 | `> [!NOTE]` summary block | `files/bio.txt` | The single densest cluster of stale numbers. Check every figure in it against the bio, one at a time. |
 | Aggregate stars and downloads | `files/bio.txt`, the sentence beginning "His open-source projects, including" | It gives the figure, the scope, and the example project list. Copy all three; a different example list makes the same total look like a different claim. |
-| PyOD's own download figure | `data/open-source.json` | **Not the same number as the aggregate.** The site says PyOD alone has 55M+ downloads and all projects together exceed 60 million. Mixing them misstates both. |
+| PyOD's own download figure | `data/open-source.json` | **Not the same number as the aggregate.** The site says PyOD alone has 59M+ downloads and all projects together exceed 65 million. Mixing them misstates both. Both figures were re-derived on 2026-09-12: PyOD alone is 59,377,536 lifetime on pepy.tech, and the aggregate is 65,936,276 across pyod, combo, suod, pygod and pytod. Download counts are additive across distinct packages; dependent-repository counts are not, because one repository appears under several siblings. |
 | PyOD adopters | `files/bio.txt` | The bio distinguishes **named by** OpenAI from **used by** the others. Preserve that split. Collapsing it into one verb claims endorsements nobody gave. |
 | Per-project star counts | `data/open-source.json` | Prefer a shields.io badge, which stays current on its own. |
 | Research taxonomy and its count | the four collapsible headings in `index.html` | Use the site's names verbatim. Presentation order may differ, and here it is deliberately inverted so the agent work leads. |
@@ -138,8 +138,8 @@ Publications, awards, grants, service roles, teaching, PhD students, and news it
    thing differently is the signal to reconcile them against `files/bio.txt`.
 3. **Match the value, not the typography.** `30,000` in the bio and `30k+` in the README
    are the same claim, and each suits its own surface. What must never differ is the
-   number itself or its precision. Do not turn `over 80` into `83`, or `55M+` into
-   `54.8M`, and do not carry the aggregate figure into a sentence about one project.
+   number itself or its precision. Do not turn `over 80` into `83`, or `59M+` into
+   `59.4M`, and do not carry the aggregate figure into a sentence about one project.
 4. **The README is a separate commit and a separate push,** and both need explicit
    approval like any other. Say plainly that two repositories are being changed.
 5. **If `../yzhao062` is missing,** clone it with

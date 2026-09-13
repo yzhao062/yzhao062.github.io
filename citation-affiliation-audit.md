@@ -1,19 +1,19 @@
 # Citation Affiliation Audit
 
-*Generated: 2026-09-05 via OpenAlex + Dimensions*
+*Generated: 2026-09-12 via OpenAlex + Dimensions*
 
 **What this is:** Papers that cite your work, where at least one author is affiliated with a notable institution.
 This means "researchers AT [institution] cited your tool" -- not "[institution] officially endorses your tool."
 
 Per-source coverage of the 118 non-survey papers:
 - **OpenAlex**: 46 papers with citations; 0 unique citing papers analyzed.
-- **Dimensions**: 37 papers with citations; 1402 unique citing papers analyzed.
+- **Dimensions**: 37 papers with citations; 1415 unique citing papers analyzed.
 
 > [!WARNING]
 > **This run is incomplete.** One or more sources stopped early, so the numbers
 > above are a floor, and an absent citation here is not evidence of no citation.
 >
-> - **OpenAlex**: OpenAlex daily credit budget exhausted; resets in 16.8h (Retry-After: 60520s) 0 works queried, 46 never queried.
+> - **OpenAlex**: OpenAlex daily credit budget exhausted; resets in 18.8h (Retry-After: 67847s) 0 works queried, 46 never queried.
 
 ## Tier 0: Government, Space Agencies, National Labs, Defense, Foundation Model Cos
 
@@ -44,7 +44,7 @@ Per-source coverage of the 118 non-survey papers:
 
 ## Tier 1: Big Tech, Finance, Pharma, Healthcare, Industrial
 
-**64 entries**
+**65 entries**
 
 | Category | Institution | Country | Your Work Cited | Citing Paper | Year | Source |
 |----------|-----------|---------|----------------|-------------|------|--------|
@@ -90,6 +90,7 @@ Per-source coverage of the 118 non-survey papers:
 | Pharma | AstraZeneca UK Ltd | United Kingdom | DrugAgent: Automating AI-aided Drug | Democratising real-world drug discovery through agentic AI | 2026 | dimensions |
 | Pharma | Sanofi SA | France | Therapeutics Data Commons: Machine  | In Silico ADMET: From Current Practices to Novel Profilers | 2026 | dimensions |
 | Pharma | AstraZeneca Pharmaceuticals LP | United States | Therapeutics Data Commons: Machine  | Practical Use of Advanced AI Frameworks on Real-Life Scienti | 2026 | dimensions |
+| Pharma | AstraZeneca UK Ltd | United Kingdom | Artificial Intelligence Foundation  | Chemogenomic maps reveal a PRDX1-dependent iron–damage axis  | 2026 | dimensions |
 | Pharma | Merck & Co Inc | United States | Therapeutics Data Commons: Machine  | Data Scaling and Generalization Insights for Medicinal Chemi | 2025 | dimensions |
 | Pharma | AstraZeneca AB | Sweden | Therapeutics Data Commons: Machine  | Machine Learning for Toxicity Prediction Using Chemical Stru | 2025 | dimensions |
 | Pharma | Pfizer GmbH | Germany | Therapeutics Data Commons: Machine  | Machine Learning for Toxicity Prediction Using Chemical Stru | 2025 | dimensions |
@@ -126,6 +127,7 @@ Per-source coverage of the 118 non-survey papers:
 | Microsoft Research Asia (China) | Big Tech | 3 |
 | Google LLC | Big Tech | 2 |
 | Adobe Inc | Big Tech | 2 |
+| AstraZeneca UK Ltd | Pharma | 2 |
 | Sanofi SA | Pharma | 2 |
 | IBM Research GmbH | Big Tech | 2 |
 | Brookhaven National Laboratory | National Lab | 2 |
@@ -133,7 +135,6 @@ Per-source coverage of the 118 non-survey papers:
 | BlackRock Inc | Finance | 2 |
 | Fraunhofer Society | Research Institute | 2 |
 | F Hoffmann La Roche AG | Pharma | 2 |
-| AstraZeneca UK Ltd | Pharma | 1 |
 | National Institutes of Health | US Government | 1 |
 | IBM Research - Ireland | Big Tech | 1 |
 | Argonne National Laboratory | National Lab | 1 |

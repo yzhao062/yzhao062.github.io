@@ -258,7 +258,7 @@ def _save_id_cache(cache: dict) -> None:
 def fetch_openalex_entries(papers: list[dict], *, verbose: bool = True, log=print) -> dict:
     """Return audit entries discovered through OpenAlex.
 
-    Phase 1 resolutions are cached in `data/.openalex-id-cache.json`. The free
+    Phase 1 resolutions are cached in `.cache/openalex-id-cache.json`. The free
     OpenAlex tier allows 1000 requests per day, and resolving 116 papers can
     spend most of that before a single citing-paper query runs, so re-runs read
     identifiers from the cache and spend the budget on Phase 2 instead.
