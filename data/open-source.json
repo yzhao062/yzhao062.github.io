@@ -16,7 +16,7 @@
       "LLM Agents",
       "Reproducible Research"
     ],
-    "last_updated_at": "2026-09-11T07:28:28Z"
+    "last_updated_at": "2026-09-13T05:15:41Z"
   },
   {
     "name": "PyOD",
@@ -27,7 +27,7 @@
     "docs_url": "https://pyod.readthedocs.io",
     "paper_url": "https://arxiv.org/abs/2412.12154",
     "demo_url": "",
-    "stars": 9999,
+    "stars": 10000,
     "tags": [
       "Anomaly Detection",
       "Outlier Detection",
@@ -73,7 +73,7 @@
       "Resources",
       "Benchmarks"
     ],
-    "last_updated_at": "2026-09-08T07:31:58Z"
+    "last_updated_at": "2026-09-11T22:24:02Z"
   },
   {
     "name": "AD-AGENT",
@@ -176,7 +176,7 @@
     "docs_url": "",
     "paper_url": "",
     "demo_url": "",
-    "stars": 9379,
+    "stars": 9381,
     "tags": [
       "Awesome List",
       "Anomaly Detection",
@@ -360,7 +360,7 @@
     "docs_url": "https://pycombo.readthedocs.io",
     "paper_url": "https://aaai.org/papers/13648-combining-machine-learning-models-using-combo-library/",
     "demo_url": "",
-    "stars": 661,
+    "stars": 660,
     "tags": [
       "Ensemble Learning",
       "Model Combination",
@@ -387,7 +387,7 @@
       "Configuration",
       "MCP"
     ],
-    "last_updated_at": "2026-09-11T07:15:27Z"
+    "last_updated_at": "2026-09-13T02:19:56Z"
   },
   {
     "name": "agent-style",
@@ -398,7 +398,7 @@
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/agent-style.html",
     "paper_url": "",
     "demo_url": "https://pypi.org/project/agent-style/",
-    "stars": 675,
+    "stars": 676,
     "tags": [
       "AI Agents",
       "Agent Configuration",
