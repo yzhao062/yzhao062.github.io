@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-09-11T13:27:47Z",
+  "generated_at": "2026-09-13T13:46:22Z",
   "source": "meta-finder citation-tracker, Semantic Scholar Graph API",
   "paper_count": 124,
-  "total_citations": 8672,
+  "total_citations": 8680,
   "papers": [
     {
       "id": "workshop-seva",
@@ -127,7 +127,7 @@
       "year": 2025,
       "venue": "KDD (Lecture-Style Tutorial Track), 2025",
       "section": "workshop",
-      "citation_count": 32,
+      "citation_count": 33,
       "influential_citations": 1
     },
     {
@@ -424,7 +424,7 @@
       "year": 2022,
       "venue": "NeurIPS, 2022",
       "section": "conference",
-      "citation_count": 499,
+      "citation_count": 500,
       "influential_citations": 75
     },
     {
@@ -433,7 +433,7 @@
       "year": 2022,
       "venue": "NeurIPS, 2022",
       "section": "conference",
-      "citation_count": 161,
+      "citation_count": 162,
       "influential_citations": 17
     },
     {
@@ -442,7 +442,7 @@
       "year": 2022,
       "venue": "PAKDD, 2022",
       "section": "conference",
-      "citation_count": 148,
+      "citation_count": 149,
       "influential_citations": 13
     },
     {
@@ -497,7 +497,7 @@
       "venue": "NeurIPS, 2021",
       "section": "conference",
       "citation_count": 514,
-      "influential_citations": 64
+      "influential_citations": 65
     },
     {
       "id": "conference-data-denoising-scrna",
@@ -658,7 +658,7 @@
       "year": 2023,
       "venue": "ACM Computing Surveys, 2023",
       "section": "journal",
-      "citation_count": 2423,
+      "citation_count": 2425,
       "influential_citations": 75
     },
     {
@@ -676,7 +676,7 @@
       "year": 2022,
       "venue": "Nature Chemical Biology, 2022",
       "section": "journal",
-      "citation_count": 212,
+      "citation_count": 213,
       "influential_citations": 11
     },
     {
@@ -685,7 +685,7 @@
       "year": 2022,
       "venue": "TKDE, 2022",
       "section": "journal",
-      "citation_count": 542,
+      "citation_count": 543,
       "influential_citations": 48
     },
     {
