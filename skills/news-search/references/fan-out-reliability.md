@@ -136,6 +136,154 @@ that finished and had nowhere to put the answer.
 - Before re-dispatching a `FALLBACK`, read its salvaged tail. A finished-but-undeliverable unit is
   recovered by copying the file it did write; only a genuinely failed one needs the tokens spent again.
 
+## Failure 7: Suppressing Against the Ledger Tables but Not the Round Write-Ups
+
+**What happened.** A dedicated lane round on 2026-09-12 was given a suppression list built from the
+Ledger 6 rows and the 1,929-entry known-URL index. It reported seven confirmed new external citers.
+One of them, arXiv:2608.18351, was already recorded in the immediately preceding pass section of
+`news-coverage-audit.md`, which had already used that same paper to falsify the same standing
+negative. The round re-announced a two-week-old finding as new, and a reviewer caught it.
+
+Rebuilding the suppression set from the **entire text** of `news-coverage-audit.md` and
+`citation-affiliation-audit.md`, rather than their tables, yielded 412 URLs and 98 arXiv identifiers.
+Applied to the next round's 630 candidates it suppressed **210** that the narrow list had let through
+as new: 196 by URL and 14 by arXiv identifier.
+
+**The rule.** Build the suppression set by extracting every URL and every arXiv identifier from the
+whole audit file, not from the ledger tables. A finding recorded in a pass write-up but not yet
+promoted to a numbered ledger row is still a finding, and prose is where most of a round's evidence
+lives before it settles.
+
+**One exception, and it matters.** Suppress an arXiv identifier only when the candidate's own URL is
+that arXiv page. A citation record legitimately names the *cited* work's identifier, and most citing
+surfaces (GitHub, YouTube, CSDN, Zhihu) carry no identifier of their own. Testing identifiers found
+anywhere in a record wrongly discarded 131 genuine third-party findings in one pass, including two
+comparison benchmarks, and the fresh-candidate count moved from 58 to 175 once the test looked at the
+URL instead.
+
+## Failure 8: Reading a Reference List Through a Summarizing Fetch
+
+**What happened.** Six citation candidates were verified on 2026-09-12 by downloading each paper and
+grepping the raw bytes. A parallel summarizing fetch was run on two of them as a cross-check and got
+both wrong. On arXiv:2608.30478, a 557 KB page, it reported "MemoHarness, not found" and "no
+bibliography entry"; the entry is there. On arXiv:2608.12761 it re-rendered an author-year
+bibliography as a numbered list of 1 to 25 and reported "17" as the printed reference number. That
+number does not exist in the document. A verification that trusted it would have published a
+fabricated locator.
+
+**The rule.** Reference-list checks are grepped from raw PDF text and raw HTML, never from a
+summarizing fetch. Download, extract, search the bytes. Two false negatives in six candidates is too
+high a rate to accept, and one of the two invented a citation detail rather than merely missing one.
+
+## Failure 9: Treating a Printed Reference Number as Format-Independent
+
+**What happened.** A round recorded Audita's citation of Auditable Agents as reference [62] and
+HANSARD's as [20], and stated that every number had been established by grepping HTML. Fresh PDF
+downloads print [17] on Audita page 16 and [5] on HANSARD page 6. The [62] came from nothing in
+either format; `bib.bib76` is Audita's HTML element id, which is positional and unrelated to any
+printed number.
+
+Worse, most bibliographies in this subfield carry no printed numbers at all. Five of the six papers
+verified in the following pass use author-year style, where the correct locator is a page number plus
+an author-year label.
+
+**The rule.** Record the format alongside the locator: "PDF [17], page 16" or "HTML element id
+`bib.bib76`" or "author-year, no printed number, PDF page 57". Never present an HTML element id as a
+printed reference number, and never assume a number exists.
+
+## Failure 10: Letting a Search That Found Nothing Outrank a Document
+
+**What happened.** Two rounds disagreed about whether Implicit Execution Tracing (arXiv:2603.17445)
+had any external citer. A search lane reported the zero falsified and named two documents. A
+cross-vendor sweep reported a hard zero across eight citation indexes, 879 full texts, and
+`site:arxiv.org`. The round recorded the question as open, reasoning that the sweep had covered more
+surfaces.
+
+Fetching one of the two named documents settled it in a single request. The Crew Scaler response to
+the NIST CAISI RFI carries the bibliography entry "When only the final text survives: implicit
+execution tracing for multi-agent attribution. External Links: 2603.17445". The zero was false and
+the sweep was blind, which is exactly what the sweep's own findings predicted: two of the strongest
+citations that round confirmed cite a repository URL with no identifier for an index to match.
+
+**The rule.** A search that finds nothing is weak evidence; a fetched bibliography entry is strong
+evidence. When they conflict, fetch the document. Surface count does not convert absence of evidence
+into evidence of absence, and this subfield's citations routinely carry no identifier at all.
+
+**The corollary for fan-out caps.** The same round named six candidates it had located but could not
+verify within its cap. All six were later confirmed, with independent authors, a 6 of 6 rate. A cap
+does not merely cost time when the queue is already triaged; it defers findings the round had already
+found. Log what the cap dropped, by identifier, so the next round starts there.
+
+## Failure 11: Reading a Phase A Tier as an Estimate Rather Than a Ceiling
+
+**What happened.** A Phase B round verified all 420 candidates two Phase A rounds had left over and
+compared each final tier against the Phase A guess. 310 held, **110 moved down, and none moved up**.
+A 26.2% error rate that runs entirely in one direction is not noise, because noise misses in both
+directions.
+
+The bias is worst where it costs most. Six candidates arrived as Tier 0 and one survived. One was a
+third-party adapter registry misread as the institution whose framework it indexes, three tiers of
+difference on a real document. Four were topic-validation: pages about the subject matter naming no
+work and no person.
+
+**The rule.** Treat a Phase A tier as an upper bound on what verification will support, never as an
+estimate. Report high-tier Phase A counts as "claims" and reserve tier language for verified rows. A
+round that publishes Phase A tier counts as findings publishes a number that will fall by a quarter.
+
+## Failure 12: A Lane That Knows the Document and Invents Its Address
+
+**What happened.** Five candidate addresses in one round did not exist: four GitHub repositories and
+one Hugging Face Space, all 404. Four of the five had already been written up as findings.
+
+What makes this failure hard is that the lanes were right about everything except the address. For
+each of the four, the project, the document type, the mechanism and the comparison all checked out
+once the real document was found, under a different owner: `AgentShield-Security/AgentShield` is
+`affaan-m/agentshield`, `HandoffGraph/handoffgraph` is `arbazkhan971/handoffgraph`,
+`onelive-ai/onelive-engine` is `schubertsean-ui/onelive`, and `mcp-data/platform` issue #142 is
+`txn2/mcp-data-platform` issue #1163. An invented `AgentShield-Security` organisation is exactly what
+a plausible owner for a project called AgentShield would be named.
+
+**The one detectable signal** was that the same lane emitted both URLs. The worklist carried a
+near-duplicate pair per case: same project name, same document type, different owner. Nothing else
+about the fabricated row read as wrong.
+
+**The rule.** Before spending verification budget, group candidates by project and document type and
+flag any group whose owners disagree. A lane reporting a URL has not established that the URL
+resolves, and a repository path is the part a lane is most likely to synthesize. A weaker sibling of
+the same failure: a real repository with an invented file, such as a `setup.py` in a project that
+ships `pyproject.toml`.
+
+## Failure 13: A First-Party Filter That Matches Domains
+
+**What happened.** A worklist builder excluded first-party material with a domain regex covering
+`yzhao062`, `USC-FORTIS`, `pygod-team`, the lab site and the personal site. 47 first-party records
+passed it, and Phase B dropped every one: 14 Hugging Face Daily Papers landing pages for the lab's own
+papers, 7 alphaXiv preprint pages, 2 ACL Anthology publication records, PyPI release pages for the
+lab's own packages, Hugging Face Spaces under a co-author's account, and a fork of a lab repository
+under a third-party org. First-party material was the largest single reason a candidate was dropped,
+46 of 63 drops.
+
+**The rule.** First-party is a property of authorship, not of the host. Ask whether the page's subject
+is the lab's own work, listed or announced by the lab or a co-author, and treat every aggregator that
+mirrors preprints (Hugging Face Papers, alphaXiv, ACL Anthology, Semantic Scholar, a package index) as
+a first-party surface for the lab's own artifacts. A fork of a lab repository is first-party wherever
+it sits.
+
+## Failure 14: One Document, Four URLs
+
+**What happened.** Google Patents serves the same patent at `/en`, `/zh`, `/fr` and `/sk`. A
+1,929-entry URL index held patent links in all four (23, 9, 2 and 1), so three patents already on file
+re-entered verification because the new candidate carried a different language suffix than the indexed
+copy. The same round re-verified a government report it had recorded hours earlier in its own ledger,
+because that row names the document by OSTI accession number and carries no link, and re-surfaced two
+already-counted items at a second surface: a podcast episode under an Apple Podcasts URL and a paper
+under its workshop-hosted PDF rather than its arXiv page.
+
+**The rule.** Key the suppression index by document identity, not by URL string. Store the URL and,
+alongside it, every identifier the document has: arXiv ID, DOI, patent number with the language suffix
+stripped, OSTI accession, ISBN, podcast episode number. A ledger row that names a document without a
+link is invisible to a URL-keyed check, so require either a URL or an identifier in every row.
+
 ## Checklist for the Next Round
 
 1. Write unit lists with `newline='\n'`, and strip `\r` at the point of use anyway.
@@ -159,6 +307,21 @@ that finished and had nowhere to put the answer.
    worker, so a prompt that refers to "the result path given to you" names nothing.
 10. Read a `FALLBACK` tail before re-dispatching it. Three of five units in one wave had finished their
     analysis and only lacked somewhere to put it.
+11. Build the suppression set from the whole audit file, not its ledger tables, and key an arXiv
+    identifier against the candidate's own URL rather than against any identifier in the record.
+12. Grep raw PDF text and raw HTML for every reference-list check. Never accept a summarizing
+    fetch's account of a bibliography.
+13. Record the format with every locator, and expect author-year bibliographies with no printed
+    numbers at all.
+14. Fetch the document when a search result and a document disagree. Log by identifier whatever a
+    fan-out cap drops, because a triaged queue's deferred items verify at a high rate.
+15. Read every Phase A tier as a ceiling. Measured on 420 candidates: 110 down, 0 up.
+16. Group candidates by project and document type before verifying, and flag any group whose owners
+    disagree. That pattern is what an invented repository URL looks like from the outside.
+17. Decide first-party by authorship, not by host. Preprint aggregators and package indexes are
+    first-party surfaces for the lab's own artifacts.
+18. Key the suppression index by document identity: URL plus arXiv ID, DOI, language-stripped patent
+    number, OSTI accession, podcast episode. Require a URL or an identifier in every ledger row.
 
 `scripts/dispatch_lanes.sh` implements the mechanical parts of items 1, 3, 4, 5 and 8. Its
 `result_complete` helper is the item 5 check, and it gates the skip-if-done branch and the launch

@@ -1,7 +1,7 @@
 # News & Media Coverage Audit — Yue Zhao / FORTIS Lab
 
 *Last 5 runs (full change-log in `## Changes from Previous Audit` and in git history):*
-*2026-09-12 (Phase A: 32 Agy lanes via /prun, the first round with Codex out of discovery entirely; verification: 9 Claude agents via /workflows): 32 of 32 lanes complete, zero FALLBACK, 660 records over 616 unique URLs, 497 coverage candidates resolving to 454 unique URLs of which 304 were absent from the 1,929-URL index. Net new **+1 Ledger 1** (the Allen Institute for AI ships TrustLLM's JailbreakTrigger set as a task in `allenai/safety-eval` and as a Hugging Face dataset, and reports Tülu 3 scores on it at §7.2.1, the first frontier lab to carry this work as infrastructure rather than a citation), **+1 Ledger 1b** (SLAC OSTI 3005876, MetaOD's first appearance in a government document, a separate paper from the SLAC row already held), **+1 Ledger 2** (CrowdStrike threat research evaluating COPOD in a command-line malware ensemble), **+1 Ledger 3** (Databricks DAXS training 10,000 ECOD models over ~1.4B records, attributed to the linked repo because the post itself names neither ECOD nor PyOD). **Verification changed five of the thirteen claims it touched**: 4 of 9 were already-counted items reached by a new URL, including the KDD workshop copy of Ledger 6 row A2, and the Chemistry World row was refuted outright (51 configurations not 22, Yue Zhao named nowhere, critical of TDC rather than endorsing it). The round's most useful output is two site numbers, both sums presented as totals: `55M+` downloads is stale against **59,377,536** lifetime (pepy.tech) and a lane's "21.7M cumulative" was the 180-day pypistats retention window, which publishes no cumulative field; the **6,906** ecosystem dependent sum overstates by ~17% because the sibling libraries sit in each other's dependency closure and it counts pyod's own forks. **Seven standards tracks and seven specifications were fetched in full and none cites the agent-auditability line**, AAS-1 v0.1 nearest of all by arriving at the same framing independently; the UK AISI Inspect Evals Register is the one open submission window. 64 patent candidates unverified. **A second, dedicated round then swept the auditing line** (12 Agy lanes + 13 Claude agents over three methods the lanes do not use), 12 of 12 complete, 504 records: **+6 net-new Ledger 6** plus one reverification, every one fetched with authors verified independent, covering five of the fourteen works, so **the standing note that Praetor was the only baseline precedent no longer holds**. The seventh, arXiv:2608.18351 against FORTIS, was already recorded on 2026-08-30 and is a reverification rather than a discovery, caught on review because the lane suppression list covered the ledger tables and the URL index but not the preceding pass's prose. **IET's zero is falsified** on two fetched bibliographies (Crew Scaler arXiv:2603.09002 reference [991]; DEMM arXiv:2605.04093 page 38), reversing this round's own first call of "open": a sweep that finds nothing across eight indexes does not outweigh a reference entry someone read. Plus 8 unverified comparison finds from the lanes with **almost no overlap** with the workflow's seven, which is the round's methodological result. Two findings outrank the citation count: **seventeen surveys that draw this subfield's map carry none of the fourteen works** (and arXiv:2605.06812 carries GRADE's idea one month earlier, a priority problem rather than a visibility one), and **three of the seven confirmed citations were recovered by no service queried in this run**, two citing a repo URL that an identifier match cannot key on and one sitting on OpenReview; every sampled OpenAlex record carried empty outgoing reference metadata, which limits what a retrieval failure there can be read to mean. An earlier reading that vendors had adopted the line's vocabulary is **corrected**: a phrase-level sweep found the coinages have not leaked at all. The full name "Yue Zhao" appears in two of the seven citing documents, the Long-Horizon survey and the Audita PDF. Details in "## 2026-09-12 Pass".*
+*2026-09-12 (Phase A: 32 Agy lanes via /prun, the first round with Codex out of discovery entirely; verification: 9 Claude agents via /workflows): 32 of 32 lanes complete, zero FALLBACK, 660 records over 616 unique URLs, 497 coverage candidates resolving to 454 unique URLs of which 304 were absent from the 1,929-URL index. Net new **+1 Ledger 1** (the Allen Institute for AI ships TrustLLM's JailbreakTrigger set as a task in `allenai/safety-eval` and as a Hugging Face dataset, and reports Tülu 3 scores on it at §7.2.1, the first frontier lab to carry this work as infrastructure rather than a citation), **+1 Ledger 1b** (SLAC OSTI 3005876, MetaOD's first appearance in a government document, a separate paper from the SLAC row already held), **+1 Ledger 2** (CrowdStrike threat research evaluating COPOD in a command-line malware ensemble), **+1 Ledger 3** (Databricks DAXS training 10,000 ECOD models over ~1.4B records, attributed to the linked repo because the post itself names neither ECOD nor PyOD). **Verification changed five of the thirteen claims it touched**: 4 of 9 were already-counted items reached by a new URL, including the KDD workshop copy of Ledger 6 row A2, and the Chemistry World row was refuted outright (51 configurations not 22, Yue Zhao named nowhere, critical of TDC rather than endorsing it). The round's most useful output is two site numbers, both sums presented as totals: `55M+` downloads is stale against **59,377,536** lifetime (pepy.tech) and a lane's "21.7M cumulative" was the 180-day pypistats retention window, which publishes no cumulative field; the **6,906** ecosystem dependent sum overstates by ~17% because the sibling libraries sit in each other's dependency closure and it counts pyod's own forks. **Seven standards tracks and seven specifications were fetched in full and none cites the agent-auditability line**, AAS-1 v0.1 nearest of all by arriving at the same framing independently; the UK AISI Inspect Evals Register is the one open submission window. The patent lane returned 65 distinct numbers, of which 49 were not already indexed. **A second, dedicated round then swept the auditing line** (12 Agy lanes + 13 Claude agents over three methods the lanes do not use), 12 of 12 complete, 504 records: **+6 net-new Ledger 6** plus one reverification, every one fetched with authors verified independent, covering five of the fourteen works, so **the standing note that Praetor was the only baseline precedent no longer holds**. The seventh, arXiv:2608.18351 against FORTIS, was already recorded on 2026-08-30 and is a reverification rather than a discovery, caught on review because the lane suppression list covered the ledger tables and the URL index but not the preceding pass's prose. **IET's zero is falsified** on two fetched bibliographies (Crew Scaler arXiv:2603.09002 reference [991]; DEMM arXiv:2605.04093 page 38), reversing this round's own first call of "open": a sweep that finds nothing across eight indexes does not outweigh a reference entry someone read. Plus 8 comparison finds from the lanes with **almost no overlap** with the workflow's seven, which is the round's methodological result. Two findings outrank the citation count: **seventeen surveys that draw this subfield's map carry none of the fourteen works** (and arXiv:2605.06812 carries GRADE's idea one month earlier, a priority problem rather than a visibility one), and **three of the seven confirmed citations were recovered by no service queried in this run**, two citing a repo URL that an identifier match cannot key on and one sitting on OpenReview; every sampled OpenAlex record carried empty outgoing reference metadata, which limits what a retrieval failure there can be read to mean. An earlier reading that vendors had adopted the line's vocabulary is **corrected**: a phrase-level sweep found the coinages have not leaked at all. The full name "Yue Zhao" appears in two of the seven citing documents, the Long-Horizon survey and the Audita PDF. **A third dispatch then verified every candidate both rounds had left unverified**: 16 Agy lanes over 420 candidates, 16 of 16 complete, 420 of 420 records, **319 confirmed, 63 dropped, 23 unreachable, 15 refuted**. Its headline is a measurement of Phase A rather than a new find: **110 tier downgrades, 310 unchanged, and zero upgrades**, a 26.2% one-directional error rate, with 5 of 6 Tier 0 claims failing to hold and **five candidate addresses that do not exist** (four GitHub repositories and one Hugging Face Space, all 404). All eight comparison finds hold, and four of them sat at an invented address whose real document Phase B located under a different owner. Confirmed additions: **49 of 49 patents** (39 CNIPA, 45 new rows), **+13 Ledger 6** (the auditing round's six net-new citers, the six deferred priority candidates that all verified, and PolicyFaultBench), **+6 Ledger 7**, **+11 Ledger 2** and **+57 Ledger 3**. Three standing negatives fall: CatchBench, No Attacker Needed and MemoHarness. Citing surveys move 4 to 7, so the omission share is 71% rather than 81%. Details in "## 2026-09-12 Pass".*
 *2026-08-13 (Phase A: 17 Claude lanes via /workflows + 10 Codex lanes via /prun, every lane run as a first-ever audit with no prior-negative suppression; Phase B: 12 Codex verification units): 1238 raw records to 1030 unique candidates, 839 absent from prior files, 503 Phase B verdicts, zero unit failures. Net new **+4 Tier 0**: the India TEC draft standard on AI robustness listing PyOD in its recommended-tooling table, the Brazil Chamber of Deputies research proceedings running PyOD, SUOD, ECOD, and COPOD operationally against Senate procurement overpricing, an ESA/ESOC telemetry report engaging PyOD and COPOD in its requirements analysis, and the Google Research Tx-LLM post naming TDC as its training source. **Ledger 6 nearly doubled**, 11 to 20, four rows found only by tail triage because those papers cite AEGIS by mechanism rather than by name; one compares AEGIS against NVIDIA OpenShell and Microsoft's Agent Governance Toolkit, so the standing note that Praetor was the only baseline precedent no longer holds. Patents, package forensics, and dissertations ran as dedicated lanes for the first time and account for most of the +164 Ledger 3 growth, including 33 patents with named assignees (Visa, Tencent, Baidu, China Mobile, Ping An, CETC 54). **135 MIRROR verdicts** were URLs absent from every prior file that still pointed at already-counted items, which is why URL-level dedup is not sufficient; the International AI Safety Report and the NVD CVE record were both caught this way. A defect in the citation-audit OpenAlex path was diagnosed and fixed: daily-budget exhaustion had been recorded as zero citations. Details in "## 2026-08-13 Pass".*
 *2026-08-09 (Phase A via /workflows + /prun, then 16 Codex verification shards): the largest run to date. Phase B closed 16 of 16 shards with zero errors, 542 records over 541 unique URLs in 45 minutes and 1,028 tool uses, every promotion reached by downloading and scanning the document. Net new **+2 Tier 0** (a second OpenAI careers posting naming **PyOD 2.0** by pinned version, recovered from two Wayback captures of the canonical URL; and the Brazil National Treasury journal, whose author is a Controladoria-Geral da União official, which reverses the 2026-07-31 demotion of that row) and **+2 DOE labs** at Tier 1 (SLAC on PyOD, Sandia on **HPOD**, the first HPOD appearance in any government document). CSET Georgetown cites the model-extraction survey by name. The `journal1` shard verified 30 peer-reviewed articles and split them 12 substantive-use / 18 reference-list-only, adding Cell Press as a new venue family for PyOD. **Three prior verdicts were reversed:** the single "Refuted" DOE row (OSTI 2333852) is a body citation of a PyOD artefact and moves to bibliography-only, a Phase A verified-negative (OSTI 2550614) was a false negative, and one Scientific Reports row demoted in Codex Round 2 now has evidence. **CISA bulletin SB26-201 was reclassified down** from a worker's Tier 0 claim to a mirror of the already-counted CVE row, on CISA's own "not a direct result of CISA analysis" disclaimer. CVE-2026-15529 reconciled: NVD now reads "up to 3.6.1", the fix merged 2026-07-20, and 3.6.2 shipped. **Ledger placement closed out:** two new tables were created for promotions that previously lived only inside pass sections, **Ledger 1b** (8 DOE national-laboratory reports with substantive use) and **Ledger 6** (5 external academic citations of the agent-auditing line), plus rows for Cloud Security Alliance, TechTarget, and the Foresight Institute grantee page. The Indonesian Ministry of Finance journal was promoted to Tier 0 on author affiliation, and its use claim corrected downward: PyOD appears once in 15 pages as a benchmark citation that drove model selection, not as the implementation. **The reconciliation is now closed and the total is 353.** Every promotion in the 2026-07-19, 2026-07-31, and 2026-08-09 pass sections has a ledger row. Three tables were created for classes that had no home: **Ledger 1b** (8 DOE national-laboratory reports with substantive use), **Ledger 6** (11 external academic citations of the agent-auditing line), and **Ledger 7** (15 peer-reviewed articles running the tools in their methods). Ledger 2's published 83 was never reproducible from its 73 rows; placing the 11 orphaned 2026-07-19 promotions moved 4 of them elsewhere and left Ledger 2 at 80. **A fresh scan of the Auditable Agents citation graph found the strongest external citation to date** (arXiv:2605.04093, DEMM), which cites four of the lab's works, names a section after the paper, cedes framework priority to it, and **falsifies the standing "Implicit Execution Tracing has zero external citers" negative**. Semantic Scholar missed it entirely while carrying a false edge that survives revision. Details in "## 2026-08-09 Pass".*
 *2026-07-31 (cross-vendor: 6 Codex lanes via /prun + 6 Claude lanes via /workflows): 406 raw records to **366 unique candidates**. Net new **+6 Tier 0** (Japan MoD ATLA naming PyOD in its recommended-tooling table, BIS/Bundesbank using PyOD and implementing DCSO, Japan FSA on TrustLLM, Japan METI and NEDO on TDC, a NIST webinar deck) and **+11 Tier 1** (6 DOE national-lab reports with substantive use, 5 verified third-party academic citations of Aegis / Auditable Agents / agent-audit), plus Cloud Security Alliance, Foresight Institute, ACM SIGSPATIAL, Amazon Science, Grokipedia, and USC Viterbi. **11 of 19 worker high-tier claims were corrected on coordinator re-fetch**: coauthor-institution listings demoted (Microsoft Research x3, IBM Research), host mistaken for author (Parliament of Australia, Brazil TCU, one Sandia-reported OSTI record), CVE-2026-15529 collapsed from 3 claims to registry mirrors of the already-counted T0-e, and 2 of 7 Semantic Scholar citation edges refuted as name collisions. Implicit Execution Tracing and the FORTIS benchmark both have **zero** confirmed external citers. The OpenAI Tier 0(b) row survives only via its committed snapshot; the live URL now 404s and the successor posting dropped the PyOD bullet. 78 verified-negatives added. Details in "## 2026-07-31 Pass".*
@@ -16,7 +16,7 @@
 
 ---
 
-## 2026-09-12 Pass (general round: 32 Agy lanes via `/prun` + 9 Claude agents via `/workflows`; auditing-line round: 12 Agy lanes + 13 Claude agents)
+## 2026-09-12 Pass (general round: 32 Agy lanes via `/prun` + 9 Claude agents via `/workflows`; auditing-line round: 12 Agy lanes + 13 Claude agents; Phase B: 16 Agy lanes over 420 candidates)
 
 **Method, and what changed.** This is the first round where Codex ran no discovery lanes. The
 `news-search` dispatcher now sends lanes to Agy (Gemini 3.8 Flash High through the Antigravity CLI)
@@ -347,27 +347,51 @@ than a rival system: the baseline column in every table is the untrained Qwen3.5
 called that a component citation, the other upheld baseline-with-numbers. Settle it before the next
 round's counts are compared with this one's.
 
-### The Auditing-Line Round: 8 Comparison Finds, None Verified and None Counted
+### The Eight Comparison Finds All Hold, and Four Sat at a URL the Lane Invented
 
-From the lanes, none overlapping the seven above, none verified: PolicyFaultBench (Research Square,
-Palumbo et al.) evaluating AEGIS in a comparative matrix; Mindburn Labs
-`helm-ai-kernel/docs/AEGIS_COMPARISON.md` benchmarking across eight dimensions with in-repo Go
-benchmarks; ControlPlane `docs/related-work.md` comparing AEGIS's Ed25519-signed SHA-256 hash chain
-against its own HMAC receipts; AgentShield `docs/benchmark.md` against Agent Audit over the OWASP
-Agentic Top 10; HandoffGraph `docs/competitors.md` against GRADE's two-layer execution and
-dependency model; OneLive AI adopting MemoHarness's D1 to D6 defect taxonomy; MCP Data Platform
-issue #142 using No Attacker Needed as an empirical baseline; and the Secure Agentic Framework
-registering AEGIS as authoritative source `SRC-aegis-2603.12621` under technique SAF-T1103.
+Phase B fetched all eight. Every one of the eight documents exists and cites the work. Four of the
+eight URLs the lanes reported do not exist, and in each of those four the real document sits under a
+different owner, which Phase B found only because the same lane had also emitted the correct URL as a
+separate candidate.
 
-Several are companies benchmarking against the work inside their own repositories, which is a
-different signal from an academic citation: it means the work is the thing to beat. This class had no
-representation in the ledger before today.
+| Comparison find | URL as reported | Real document | Verdict |
+|---|---|---|---|
+| PolicyFaultBench evaluating AEGIS in a comparative matrix | `researchsquare.com/article/rs-10502893` | same | **Confirmed.** Section 2, Table 1 taxonomy, reference 20. Authors Hasan Fadhil Qasim and Sarah Abdulzahra Kadim, University of Misan, Iraq. The lane's "Palumbo et al." attribution is wrong. |
+| Mindburn Labs `helm-ai-kernel` benchmarking against AEGIS | `docs/AEGIS_COMPARISON.md` | `Mindburn-Labs/helm-ai-kernel` pull request #297 | **Confirmed.** Reports about 6.2 us allow and 5.7 us deny per call against AEGIS's published 8.3 ms. |
+| ControlPlane comparing its HMAC receipts against AEGIS's hash chain | `docs/related-work.md`, owner unnamed | `hariom-s27/controlplane/docs/related-work.md` | **Confirmed.** A dedicated AEGIS subsection, plus Auditable Agents compared across five dimensions in the same table. |
+| AgentShield against Agent Audit | `AgentShield-Security/AgentShield/docs/benchmark.md` | `affaan-m/agentshield/docs/BENCHMARK.md` | **404 as reported, confirmed at the real path.** Names only the repository URL and the handle, with no identifier and no author. |
+| HandoffGraph against GRADE | `HandoffGraph/handoffgraph/docs/competitors.md` | `arbazkhan971/handoffgraph/docs/competitor-analysis.md` | **404 as reported, confirmed at the real path.** Cites arXiv:2606.22741 and `yzhao062/grade` as the prior art establishing the OBSERVED / DECLARED / INFERRED provenance taxonomy. |
+| OneLive AI adopting MemoHarness's D1 to D6 taxonomy | `onelive-ai/onelive-engine/docs/strategy/memoharness-review.md` | `schubertsean-ui/onelive` pull request #35 | **404 as reported, confirmed at the real path.** Adopts the D1 to D6 defect taxonomy and the test-time retrieval constraints. |
+| MCP Data Platform using No Attacker Needed as a baseline | `mcp-data/platform/issues/142` | `txn2/mcp-data-platform` issue #1163 | **404 as reported, confirmed at the real path.** Cites arXiv:2604.01350 as the primary literature baseline for organic contamination in shared agent stores. |
+| Secure Agentic Framework registering AEGIS as `SRC-aegis-2603.12621` | `secure-agentic-framework/saf-mcp/techniques/SAF-T1103/README.md` | same | **Confirmed.** References item 16, line 240, under technique SAF-T1103 (Fake Tool Invocation). |
+
+**The failure mode is specific, and it is not a search failure.** In all four cases the lane had the
+project, the document type, the mechanism and the comparison right, then synthesized the organisation
+name, the file path or the issue number. An invented `AgentShield-Security` organisation is exactly
+what a plausible owner for a project called AgentShield would be named, and issue #142 is exactly the
+kind of number an issue in an active repository carries. Nothing about the fabricated rows reads as
+wrong, which is why four of them were written into this document as findings. One signal was
+available: the lane emitted both URLs, so the worklist carried a near-duplicate pair whose owners
+disagreed. Test for that before spending verification budget rather than after.
+
+**The class does now have ledger representation, and it splits two ways.** PolicyFaultBench is an
+academic preprint and takes a Ledger 6 row. The other seven are industry-side, either
+security-framework specifications or companies benchmarking against the work inside their own
+repositories, which is a different signal from a citation because it means the work is the thing to
+beat. Those are recorded here and in Ledger 3 rather than in Ledger 6, whose scope is academic
+citations.
 
 ### Seventeen Surveys Omit All Fourteen Works
 
 This is the round's most useful structural finding, and it is not a coverage problem. Seventeen
 surveys and taxonomies that draw this subfield's map carry none of the fourteen works, each
-confirmed by fetching full text. Four surveys do cite the line.
+confirmed by fetching full text. Seven surveys do cite the line, after Phase B verified three more:
+arXiv:2510.06445 v3 (agentic security, BRAC University and QCRI), arXiv:2606.10749 (LLM-agent
+security, Nanjing University and TU Munich), and arXiv:2604.16548 (long-term memory security,
+MemTensor and Shanghai Jiao Tong). The seventeen omitting surveys stand unchanged, and none of the
+three is among them. The share of mapped surveys that omit the line therefore moves from 81% (17 of
+21) to 71% (17 of 24): a smaller gap than this section first recorded, and still the dominant
+case.
 
 - **Against GRADE**, arXiv:2605.06812 "Towards Security-Auditable LLM Agents: A Unified Graph
   Representation" carries the same idea one month earlier and cites nothing from the line. EDGE
@@ -479,7 +503,14 @@ standing negative and it corrects the earlier zero, whose precise cause remains 
 |---|---|
 | FORTIS benchmark has zero confirmed external citers | **Already falsified on 2026-08-30**, by the same paper. This round reverified arXiv:2608.18351, including its reference number and both results tables. Not a new finding. |
 | IET has zero confirmed external citers | **Falsified.** Crew Scaler (arXiv:2603.09002) cites it as reference [991]; DEMM (arXiv:2605.04093) carries its DOI on page 38. Both fetched. No ledger row, since both citing works are already counted. |
-| CatchBench has zero external non-academic footprint | **Still standing, with one unverified lead.** The academic zero holds; age is the likely explanation rather than a measured one (posted 2026-08-24, swept 2026-09-12). A dedicated third-party reading-notes feature dated 2026-08-25 was surfaced but never fetched, and an unverified lead cannot falsify a verified negative. Fetch it before changing this row. |
+| CatchBench has zero external non-academic footprint | **Falsified.** The reading-notes lead was fetched: `inkeast/MessageDaily`, file `content/posts/2026-08-25-catchbench-paper-reading.md`, a dedicated third-party close reading dated one day after the paper posted, naming arXiv:2608.22808 and `yzhao062/catchbench`. The academic zero is untouched. |
+| No Attacker Needed has no verified citer | **Falsified**, by two independent documents. arXiv:2606.10749 cites it as printed reference [213] with a body use in Section 8, and arXiv:2604.16548 reproduces its 57-71% contamination range in prose and in a Table 3 row. A third, `txn2/mcp-data-platform` issue #1163, uses it as a literature baseline. |
+| MemoHarness has no verified citer | **Falsified.** arXiv:2608.30478 (Pera, Fudan and collaborators) cites it as prior art for the term "agent harness"; `technologyHu/research` pull request #2 is a dedicated survey report carrying a 17-row concept-to-code mapping table; `schubertsean-ui/onelive` pull request #35 adopts its D1 to D6 defect taxonomy. |
+
+Three of the four zeros this pass attributed to the verification cap are now falsified. Recording
+them as explicit reversals rather than editing the numbers in place follows the IET case above. A
+zero that a later fetch overturns is a finding about the method, and correcting it silently destroys
+the only evidence that the method produced it.
 
 ### Verification Cap Is the Binding Constraint
 
@@ -489,9 +520,16 @@ distinct works were checked and roughly 85 candidate slots were never examined. 
 per-work zeros are therefore cap artifacts rather than measured absences: GRADE, The Autonomy Tax,
 No Attacker Needed and MemoHarness all returned candidates that nobody verified.
 
-Six already-named candidates should go first next round: arXiv:2510.06445 v3 (to Agent Audit),
-2608.23610 and 2608.12761 (to Auditable Agents), 2606.10749 and 2604.16548 (to No Attacker Needed),
-and 2608.30478 (to MemoHarness).
+Six already-named candidates were run the same day rather than deferred to the next round, and
+**all six verified**: arXiv:2510.06445 v3 (to Agent Audit), 2608.23610 and 2608.12761 (to Auditable
+Agents), 2606.10749 and 2604.16548 (to No Attacker Needed), and 2608.30478 (to MemoHarness). Six
+named candidates, six confirmations, zero refutations.
+
+That result reframes what the cap cost. It did not defer weak leads, it deferred the six strongest,
+and it deferred them after the round had already been written up with three of their targets recorded
+as zeros. A cap applied after candidate ranking is a cap on the top of the list. The two identifiers
+the workflow derived by elimination also survived contact with the documents: arXiv:2604.16548 names
+the No Attacker Needed author string in full, and arXiv:2608.30478 names MemoHarness by title.
 
 Two identifier pairings the workflow derived by elimination were checked against
 `data/publications.json` and both hold: No Attacker Needed is arXiv:2604.01350 and MemoHarness is
@@ -502,49 +540,169 @@ arXiv:2607.14159.
 Google Scholar in any form, 403 throughout, which is the one surface indexing preprint-to-preprint
 edges that Semantic Scholar misses. Publisher-side full-text search at ACM, IEEE, Springer and
 ScienceDirect, the only route to 131 journal-only citing works that were filtered but never fetched.
-Theses and dissertations. Hugging Face model and Space cards. PyPI and npm reverse dependencies,
-which matter because SkillCenter, MemoHarness and Agent Audit all ship code. MCP server registries
-and agent-skill marketplaces. No retry of the OpenAlex list endpoints, which returned
-`Retry-After: 69687s` (about 19.4 hours) for the whole run.
+Theses and dissertations. MCP server registries and agent-skill marketplaces. No retry of the
+OpenAlex list endpoints, which returned `Retry-After: 69687s` (about 19.4 hours) for the whole run.
 
-Two publisher-blocked surveys must not be recorded as zeros: 10.3390/ai7080298 (MDPI) and
-10.1145/3837083 (ACM), both 403 to every fetch attempt.
+Phase B closed three of the surfaces this list opened with. Its five code lanes read Hugging Face
+dataset and Space cards, PyPI and npm package pages, and dependency trackers directly, which is how
+the Ai2 TrustLLM dataset and the Splunk integration were settled.
+
+Publisher full text stayed shut. Two surveys are still 403 to every attempt and must not be recorded
+as zeros: 10.3390/ai7080298 (MDPI) and 10.1145/3837083 (ACM). Phase B added twelve O'Reilly Learning
+items behind the same kind of subscription wall, four Zhihu pages behind an anti-bot challenge, and
+one ResearchGate page behind Cloudflare.
 
 ### New Collision to Register
 
 Meta's Llama 3 paper carries a "Yue Zhao" author or citation that is a different person. Add to
 `references/disambiguation-registry.md`.
 
-### Patents: 64 Candidates, Unverified
+### Patents: 65 Candidates, 49 Fetched, 49 Confirmed
 
-The patent lane returned 64 candidate rows, which is the largest single-class yield of the round and
-matches the 2026-08-13 finding that patents drive most Ledger 3 growth. Named assignees include
-Visa (2), Rapid7 (2), Tencent (2), Ben-Gurion (2), IBM, CrowdStrike (EPO), NICE Actimize, Dun &
-Bradstreet, Threatology / Booz Allen, Atlas Space Operations, Riva Health, Valeo (DPMA), Genentech
-(Roche), Ramot at Tel Aviv University, China Mobile (2), China Telecom (2), Agricultural Bank of
-China, State Grid Shandong, China FAW, and China Satellite Network. Works cited across them are
-PyOD, XGBOD, COPOD, ECOD, SUOD, TODS, and ADBench.
+The patent lane returned **65** distinct patent numbers, not the 64 first recorded here, and it is the
+largest single-class yield of the round, which matches the 2026-08-13 finding that patents drive most
+Ledger 3 growth. Sixteen never entered verification because their URLs were already in the index; thirteen of
+those are already recorded here, ten as Ledger 3 rows and three inside earlier pass sections. Phase B fetched the remaining **49** and confirmed
+**49**: zero refutations, zero unreachable pages, the highest confirmation rate of any class in the
+round. Ledger 3 rows 231 to 275 carry the 45 that were genuinely new, and the other four are
+reverifications of rows 66n, 166, 177 and 178.
 
-None has been verified. They are not counted in this pass.
+Use is mostly load-bearing rather than bibliographic. 29 of the 49 name the work inside the
+specification body as a component the invention uses, 15 benchmark against it with numbers in a
+results table, and 5 are reference-list or prior-art mentions. Two are claimed rather than merely
+described: CN113076913A claims PyOD in Claim 3, and CN118316981A claims COPOD in Claims 1 and 5.
+Works cited are PyOD (19), COPOD (7), ECOD (6), XGBOD (6), SUOD (4), PyGOD (2), CONAD (2), TODS,
+LUNAR, and ADBench.
+
+**The jurisdiction split is the finding worth carrying forward.** 39 of the 49 are CNIPA filings, 6
+are US, 2 WO, 1 DPMA and 1 Slovak. Assignees are mostly Chinese universities and provincial
+technology firms, with Rapid7, Valeo Schalter und Sensoren, Riva Health, Ramot at Tel Aviv
+University, Alibaba Cloud (filing with Tsinghua), and China Telecom Fufu the recognisable names. The
+corporate roster the earlier draft of this section listed, Visa, IBM, Tencent, NICE Actimize, Dun &
+Bradstreet and Genentech, is the set that was suppressed as already recorded, so the two lists are
+complements rather than rivals. This evidence is predominantly Chinese-language and predominantly
+implementation rather than citation, which means an English-language or DOI-keyed sweep sees almost
+none of it.
 
 ### Held, Pending Verification
 
-- **291 new coverage URLs** never reached verification. At the observed rate a meaningful share will
-  resolve to MIRROR.
-- **Three Ledger 7 candidates**: IEEE TPAMI, "Representation Learning for Tabular Data: A
-  Comprehensive Survey"; IEEE TNNLS, Text-ADBench, which would also upgrade Ledger 3 row 66i from an
-  arXiv preprint to a journal publication; and Nature *Scientific Reports*, "usfAD based effective
-  unknown attack detection focused IDS framework", citing the JMLR PyOD paper.
+- **291 new coverage URLs** never reached verification. **Cleared**: Phase B verified all 420
+  unverified candidates from both rounds, the 291 included. See the Phase B section below.
+- **Three Ledger 7 candidates**, all three now fetched. Nature *Scientific Reports*, "usfAD based
+  effective unknown attack detection focused IDS framework", sources its baselines from PyOD and takes
+  Ledger 7 row S43. IEEE TNNLS Text-ADBench is confirmed at row S44, which also upgrades Ledger 3 row
+  66i from an arXiv preprint to a journal publication. IEEE TPAMI, "Representation Learning for
+  Tabular Data: A Comprehensive Survey", cites ADBench as reference [99] in a one-sentence prior-art
+  description and **does not qualify for Ledger 7** under that table's substantive-use rule, so it is
+  routed to `/citation-audit` instead. Verifying a candidate and admitting it are separate decisions,
+  and this one was verified and not admitted.
 - **Five gated documents**, held rather than guessed: Gartner "Govern AI Using TRiSM", Gartner
   "Consult the Board: LLM Strategies", Gartner Peer Insights AI Security and Anomaly Detection,
   S&P Global 451 Research, and one Stack Overflow thread.
 - **Whether Libraries.io's repository crawl is equally degraded for other packages** was not
   established; the finding is scoped to pyod.
 
+### Phase B: All 420 Unverified Candidates Verified, and What Phase A Got Wrong
+
+Both rounds above closed with more candidates than verification budget, so a third dispatch ran over
+everything left: 16 Agy lanes through `/prun`, sliced by verification method rather than by subject
+because fetching a patent, grepping a repository file and reading a CJK article cost different amounts
+and need different instructions. 16 of 16 lanes complete, zero FALLBACK, **420 of 420 records
+returned**, every one joining back to the worklist on normalized URL. No lane silently shrank its
+denominator.
+
+| Outcome | Count | Meaning |
+|---|---|---|
+| CONFIRMED | 319 | fetched, the work is named, the quote is in the source |
+| DROPPED | 63 | first-party, machine-generated, a mirror, or not coverage |
+| UNREACHABLE | 23 | paywall, anti-bot, or Cloudflare; not counted either way |
+| REFUTED | 15 | fetched and the claim does not hold |
+
+**The tier movement is the round's sharpest method finding: 110 downgrades, 310 unchanged, and zero
+upgrades.** A 26.2% downgrade rate with no countervailing upgrades means Phase A's tier guesses are
+biased in one direction rather than noisy. A guess that was merely imprecise would miss in both
+directions; this one is optimistic, and optimistic by a quarter. Treat any Phase A tier as an upper
+bound on what verification will support.
+
+The bias concentrates at the top, where it costs most. Six candidates arrived as Tier 0 and **one
+held**: the SLAC OSTI report citing MetaOD, already recorded above in Ledger 1b. One moved to Tier 2,
+and four were topic-validation, pages about the subject matter that name no work and no person: the EU
+GPAI Code of Practice page, the OECD AI transparency-report register, the UK AISI Inspect Evals index,
+and a regulations.gov NIST docket.
+
+The Tier 2 demotion is the round's only near-miss on an institution. A lane recorded the UK AI Safety
+Institute as registering CHI-Bench, and the page is the **Inspect Harbor registry run by Meridian
+Labs**, a third-party adapter index for AISI's `inspect` framework rather than an AISI publication.
+Real coverage, wrong institution, three tiers of difference. The same lane also returned AISI's own
+Inspect Evals index, which names nothing, so both the true negative and the misattributed positive
+were in hand at once.
+
+**Five candidate addresses did not exist.** Four GitHub repositories and one Hugging Face Space, all
+404 on direct fetch: `AgentShield-Security/AgentShield`, `HandoffGraph/handoffgraph`,
+`mcp-data/platform`, `onelive-ai/onelive-engine`, and `actava/chi-bench-leaderboard`. The four in the
+auditing line are dissected in the comparison-finds section above; the pattern is that the lane knew
+the document and synthesized its address. A sixth case is a milder version of the same thing, worth
+separating rather than folding in: `edbiomedai/scmorph` exists and the cited `setup.py` does not,
+because that project ships a `pyproject.toml`. A fan-out that reports a URL has not established that
+the URL resolves, and four of the five invented addresses were written into this document as findings
+before anyone fetched them.
+
+**The worklist builder's first-party filter passed 47 first-party records, and Phase B dropped all
+47.** That filter is mine, not the lanes', and it matches domains: anything under `yzhao062`,
+`USC-FORTIS`, `pygod-team`, the lab site or the personal site. First-party material reaches
+third-party domains constantly: 14 Hugging
+Face Daily Papers landing pages for the lab's own papers, 7 alphaXiv preprint pages, 2 ACL Anthology
+publication records, PyPI release pages for `pygod` and `catchbench`, Hugging Face Spaces under a
+co-author's account, and a fork of `agent-audit` under `iflow-mcp`. First-party material is the single
+largest reason a candidate was dropped, accounting for 46 of the 63 drops. Domain matching cannot
+separate a paper's own listing on an aggregator from third-party coverage; whether the page's subject
+is the lab's work, authored by the lab, is the test that does.
+
+Two other flags behaved as the contract intends, and the difference between them matters. 41 records
+were machine-generated, mostly daily-digest bots and scraped mirrors, and 39 of those were dropped.
+29 were machine-translated reposts with no named human editor, and only 4 were dropped: the rest were
+capped at Tier 3 and kept, because a machine translation of a real article is degraded coverage rather
+than no coverage.
+
+**Two dedup defects surfaced, both mechanical and both fixable.**
+
+The first is language variants. Google Patents serves the same document at `/en`, `/zh`, `/fr` and
+`/sk`, and the URL index holds patent links in all four (23, 9, 2 and 1 respectively). Three of the
+four patents Phase B re-verified were already on file under a different language suffix than the
+candidate arrived with: CN117520980A was indexed as `/zh`, US12184394B2 and US12242939B2 as `/fr`.
+The fourth, CN111666198A, escaped for the reason in the next paragraph: Ledger 3 row 66n names it and
+carries no link at all. The refreshed index at `skills/news-search/scratch/2026-09-12/known-urls.txt` now carries a
+language-stripped key for every patent alongside the full URL, and it grew from 1,929 entries to
+2,443.
+
+The second is documents this record names without a URL. The SLAC OSTI report reached Phase B as a
+candidate and was confirmed there, hours after being written into Ledger 1b in this same pass, because
+that row names it as "SLAC OSTI 3005876" and carries no link. A URL-keyed suppression list cannot see
+a document identified by accession number. Two already-counted items re-surfaced the same way at a
+second surface, Real Python #208 as an Apple Podcasts URL and "Reason Less, Verify More" as a
+workshop-hosted PDF, which is the third and fourth instance of the defect this pass already recorded
+under "Four Claims Reported as New Were Already Counted". The suppression index needs identity keys
+beyond the URL: arXiv ID, DOI, patent number, OSTI accession, podcast episode.
+
+**One conflict is a taxonomy question rather than an error.** A Phase B lane returned the Chemistry
+World article as a confirmed Tier 1 naming Therapeutics Data Commons, and this pass recorded the same
+article as a verified negative on the grounds that Yue Zhao is named nowhere in it. Both readings of
+the document agree on every fact. They disagree on whether third-party media that names a co-authored
+work, critically, without naming the author counts as coverage. The verified negative stands for now,
+and the rule needs writing down, because this is the second missing rule in the same pass: the other
+is where "ran the cited benchmark and published its numbers" belongs.
+
+What the 319 confirmations became is a smaller number than 319. Most are Tier 3 and Tier 5 adoption
+evidence that this record has always tracked as counts rather than rows: 157 T3 and 52 T5, against 1
+T0, 12 T1, 93 T2 and 4 T4. The rows added from them are the 45 patents in Ledger 3, the Ledger 7 and
+Ledger 6 rows listed in this pass, and the ecosystem rows below. The full verdict set, one JSON object
+per candidate with locator and quote, is at
+`skills/news-search/scratch/2026-09-12/phase-b-verdicts.jsonl`.
+
 ### Method Defects in This Round, and the Fix
 
-Four instrumentation failures, every one producing a false zero, and all four were mine rather than
-the lanes'.
+Five instrumentation failures, four of them producing a false zero, and all five were mine rather
+than the lanes'.
 
 1. **Ledger comparison against the wrong file, with the wrong normalization.** The first dedup run
    reported 0 of 576 URLs already tracked. It compared scheme-carrying URLs against
@@ -565,7 +723,16 @@ the lanes'.
    launchers. `scratchpad/check_launchers.py` now excludes explicit self-markers and requires the
    script path to sit immediately after the shell binary.
 
-A fifth non-defect is worth recording. Two harness notifications reported background wrapper tasks
+5. **The URL index treats one document as four.** Google Patents serves the same patent at `/en`,
+   `/zh`, `/fr` and `/sk`, and the index holds patent links in all four. Three of the four patents
+   Phase B re-verified were already on file under a different language suffix than the candidate
+   carried. The refreshed index now stores a language-stripped key beside every patent URL. The
+   general form of the defect is wider than patents: this pass recorded four already-counted items
+   reached by a second surface, and Phase B added two more, so the index needs identity keys beyond
+   the URL (arXiv ID, DOI, patent number, OSTI accession, podcast episode) rather than one more
+   special case per platform.
+
+A sixth non-defect is worth recording. Two harness notifications reported background wrapper tasks
 killed for low memory while 8.0 GB of 31.7 GB was free and PyCharm held 3.7 GB. The lane launcher
 survived both and completed all 32 units. A hand-written second-wave script would have
 double-dispatched had it not been killed during its drain wait.
@@ -1995,6 +2162,17 @@ Independent third-party coverage by outlets not affiliated with you, your lab, o
 | 47 | PyOD | **mordorintelligence.com** | substantive | "Production-ready frameworks such as PyOD and Alibi Detect amassed a broad developer following, with PyOD surpassing 8,200 GitHub stars by December 2025." | 2026 | 2026-08-13 | [link](https://www.mordorintelligence.com/industry-reports/anomaly-detection-market) |
 | 48 | TDC | **schrodinger.com** | substantive | "Herein, we present performance metrics for Schrödingers automated ML model building engine, DeepAutoQSAR, on the ADMET subset of the Therapeutic Data Commons (TDC) — a large collection of public data for ML model building and benchmarking." | 2026 | 2026-08-13 | [link](https://www.schrodinger.com/life-science/learn/white-papers/benchmark-study-deepautoqsar-chemprop-and-deeppurpose-admet-subset-therapeutic-data/) |
 | 49 | PyOD | **secnews.gr** | substantive | “Σύμφωνα με την καταγραφή, το πρόβλημα επηρεάζει τις εκδόσεις 3.5.0–3.5.2 και μπορεί να οδηγήσει σε εκτέλεση ανεπιθύμητου κώδικα όταν μια εφαρμογή φορτώνει μη έμπιστο αρχείο μοντέλου από απομακρυσμένη πηγή.” | 2026 | 2026-08-13 | [link](https://www.secnews.gr/720870/cve-2026-15529-pyod-deserialization/) |
+| 50 | PyOD | **hysenlabs.com** | dedicated-coverage | Hysen Labs published a dedicated review of PyOD 3, covering ADEngine orchestration, the `od-expert` agent skill and the MCP server: "PyOD 3 keeps the classic fit/predict API but adds ADEngine orchestration, an od-expert skill for Claude Code and Codex, and an MCP server." [source](https://hysenlabs.com/en/projects/yzhao062-pyod) |
+| 51 | AEGIS | **airia.com** | substantive | Airia's post-mortem of an AI-gateway compromise recommends agent-level firewalls and cites AEGIS as the demonstration that the approach is feasible: "Deploy agent-level firewalls that validate tool calls independent of the transport layer — projects like AEGIS demonstrate this is feasible [22]." [source](https://airia.com/blog/ai-gateway-skeleton-key-protocol-attack/) |
+| 52 | PyOD | **classcat.com** | dedicated-coverage | ClassCat (Japanese) published a worked PyOD tutorial on k-nearest-neighbour and Mahalanobis examples: "PyOD は多変量データで中心を離れたオブジェクトを検知するための包括的でスケーラブルな Python ツールキットです。この分野は一般に外れ値検知 or 異常検知と呼称されます。PyOD は 30 以上の検知アルゴリズムを含みます。" [source](https://www.classcat.com/2021/07/02/pyod-0-8-examples-knn/) |
+| 53 | PyOD | **blog.naver.com** | substantive | Korean systems-integrator gcube named PyOD as a representative anomaly-detection model in its top-three AI technologies post: "시스템이나 사용자의 비정상 행동을 실시간 감지하는 기술로, 서비스 안정성 확보에 매우 중요한 역할을 합니다.​gcube:지큐브의 주요 관심 분야비정상 로그인 탐지시스템 트래픽 이상 감지결제 사기 징후 실시간 파악​대표 AI 모델 ... PyOD" [source](https://blog.naver.com/gcube-official/223880990882) |
+| 54 | CHI-Bench | **blog.csdn.net** | substantive | HyperAI's Chinese-language dataset roundup carried a dedicated CHI-Bench entry: "chi-bench 是由 Actava AI 于 2026 年发布的医疗智能体评测数据集。该数据集构建了一个高保真医疗业务仿真环境，集成 20 个通过 MCP（Model Context Protocol）开放接口的医疗应用系统并提供包含 1,279 份医疗运营文档的知识库" [source](https://blog.csdn.net/hyperai/article/details/161718373) |
+| 55 | CatchBench | **github.com** | dedicated-coverage | A third-party Chinese close reading of the CatchBench paper, posted one day after the preprint: "# CatchBench: When Can an Agent Failure Be Caught? 精读 ... > **论文链接**：[arXiv:2608.22808](https://arxiv.org/abs/2608.22808) > **代码仓库**：[yzhao062/catchbench](https://github.com/yzhao062/catchbench) ... 作者 Yue Zhao 为 PyOD/ADBench/BOND 等知名异常检测基准的作者" [source](https://github.com/inkeast/MessageDaily/blob/main/content/posts/2026-08-25-catchbench-paper-reading.md) |
+| 56 | Agent Audit | **github.com** | dedicated-coverage | A Chinese-language deep dive on Agent Audit as a security-analysis system, citing the paper as its primary source: "# Agent Audit：面向 LLM Agent 应用的安全分析系统 ... [Agent Audit: A Security Analysis System for LLM Agent Applications](https://arxiv.org/abs/2603.22853) — 论文原文，一手来源 ... [HeadyZhang/agent-audit (GitHub)](https://github.com/HeadyZhang/agent-audit)" [source](https://github.com/FreezeSoul/agent-engineering-by-openclaw/blob/master/articles/harness/agent-audit-llm-agent-security-analysis-system-2026.md) |
+| 57 | No Attacker Needed | **x.com** | dedicated-coverage | Japanese malware researcher Takashi Yoshikawa covered No Attacker Needed, attributing it to USC and collaborators: "・出典はUSC、ノースウェスタン大、Michigan State大、Adobe Research等によるarXiv論文（2026年4月1日公開）" [source](https://x.com/MalwareBibleJP/status/2040621237630833044) |
+| 58 | MemoHarness | **youtube.com** | dedicated-coverage | A dedicated explainer video on MemoHarness as a meta-harness: "MemoHarness is a meta-harness: a Python framework that treats the harness itself as the thing to optimize. Unlike other harnesses, it learns one." [source](https://www.youtube.com/watch?v=CV9lWMIM8eI) |
+| 59 | CHI-Bench | **youtube.com** | dedicated-coverage | An AI Research Roundup episode on CHI-Bench and long-horizon healthcare workflows: "In this AI Research Roundup episode, Alex discusses the paper: 'CHI-Bench: Can AI Agents Automate End-to-End, Long-Horizon, Policy-Rich Healthcare Workflows?'" [source](https://www.youtube.com/watch?v=Zyq2tMnBaIA) |
+| 60 | Agent Safety Is Action Alignment | **youtube.com** | dedicated-coverage | An explainer episode on the category error of applying chatbot refusal training to action-taking agents: "This paper redefines agent safety by identifying the category error of using chatbot refusal training for action-taking LLM agents." [source](https://www.youtube.com/watch?v=DrDiN2UCncM) |
 
 **Count: 80 counted items across 81 rows** (row #22 SitePoint is present but marked REMOVED and is not counted).
 
@@ -2273,6 +2451,63 @@ External parties building on, integrating, or teaching your tools -- not coverag
 | 228 | TDC | **reference-list-only** | “Optional Reading Applications of machine learning in drug discovery and development Artificial intelligence foundation for therapeutic science Therapeutics Data Commons.” [source](https://zitniklab.hms.harvard.edu/BMI702/lectures/module6/week13/) |
 | 229 | TDC | **substantive** | “TDC dataset retrieval tool — load Therapeutics Data Commons benchmark datasets locally via the PyTDC package.” [source](https://zitniklab.hms.harvard.edu/ToolUniverse/_modules/tooluniverse/tdc_dataset_tool.html) |
 | 230 | TDC | **substantive** | “Demos and hands-on exercises will use datasets and code available in Therapeutics Data Commons (TDC).” [source](https://zitniklab.hms.harvard.edu/drugml/) |
+| 231 | PyOD | **Patent** | CN111026925A (China Telecom Fufu Information Technology Co Ltd) -- **baseline-with-numbers**, specification body paragraphs [0033], [0057], FIG. 2: "FIG. 2 is a comparison of experimental results of the anomaly detection algorithm in pyod versus 16; ... The test results given by the python open source machine learning library scikit-learn and the anomaly detection library PyOD are shown in FIG. 1 and FIG. 2." [source](https://patents.google.com/patent/CN111026925A/en) |
+| 232 | PyOD | **Patent** | CN113076913A (Jiaxing Bige Intelligent Technology Co ltd (嘉兴毕格智能科技有限公司)) -- **substantive**, specification body paragraph [0028] and Claim 3: "Preferably, in step 2, the tool library is a pyod or pandas library of python. ... Claim 3: The aircraft engine fault prediction method of claim 1, wherein in step 2, the tool library is a pyod or pandas library in python." [source](https://patents.google.com/patent/CN113076913A/en) |
+| 233 | COPOD | **Patent** | CN113645098B (Anhui University) -- **baseline-with-numbers**, description paragraph [0125], Tables 1 & 2: "本实施例中选用五种方法和本发明方法进行效果对比，所选方法分别是OC-SVM、孤立森林(IF)、COPOD、LODA、UIDAD-P... / In this embodiment, five methods are selected and compared with the method of the present invention. The selected methods are OC-SVM, Isolation Forest (IF), COPOD, LODA, UIDAD-P... as shown in table 1 and table 2..." [source](https://patents.google.com/patent/CN113645098B/en) |
+| 234 | COPOD | **Patent** | CN114777947B (Chengdu Univeristy of Technology) -- **baseline-with-numbers**, description paragraphs [0146], [0152], Figure 7: "方法二：基于Copula的异常值检测法，英文：Copula-based outlier detection，英文缩写：COPOD； Method 2: Copula-based outlier detection method, English: Copula-based outlier detection, English abbreviation: COPOD; ... It can be seen from Figure 7 that the model accuracy rate of the method of the present invention is the..." [source](https://patents.google.com/patent/CN114777947B/en) |
+| 235 | SUOD | **Patent** | CN115034278A (China Mobile Communications Group Co Ltd / China Mobile Group Guangdong Co Ltd (中国移动通信集团广东有限公司)) -- **substantive**, specification body paragraphs [0088]-[0092]: "具体地，可扩展的大规模无监督离群点检测框架(Scalable Unsupervised Outlier Detection Framework，SUOD)能够在加速训练的同时不牺牲训练和预测的效果，从而解决在高维大数据上训练多个异常检测模型无法收敛的问题。在异常检测模型的训练过程中，可以对各个样本数据集在SUOD框架中拟合多个有监督与无监督异常检测算法 ... 进一步地，SUOD框架可以包括三个模块，分别是随机降维、均衡并行调度和伪监督的模型训练分析。" [source](https://patents.google.com/patent/CN115034278A/en) |
+| 236 | COPOD | **Patent** | CN115168443B (Guangdong University of Technology) -- **substantive**, description paragraphs [0152], [0184]: "The anomaly detection method adopted in the embodiment is COPOD, COPOD is an anomaly detection method based on Copula... COPOD can provide some interpretability for which dimensions are caused by anomalies... Method of KNN COF iForest COPOD AE LSTM_COPOD LOF ABOD GL2GL-Att-Co Accuracy rate of 0.68..." [source](https://patents.google.com/patent/CN115168443B/en) |
+| 237 | PyOD | **Patent** | CN115209452A (China Mobile Communications Group Co Ltd / China Mobile Group Jiangsu Co Ltd (中国移动通信集团江苏有限公司)) -- **substantive**, specification body paragraph [0113], Table 3: "2)异常检测模块：采用PYOD工具库，选取的算法包含以下12种具体异常检测算法，如表3所示：(2) Anomaly detection module: The PYOD tool library is used, and the selected algorithm includes the following 12 specific anomaly detection algorithms, as shown in Table 3:)" [source](https://patents.google.com/patent/CN115209452A/en) |
+| 238 | PyOD | **Patent** | CN115270978A (Southwest University) -- **baseline-with-numbers**, description paragraph [0121], Table 2: "...and Empirical Cumulative Outlier Detection (ECOD). Their implementations can all be found in the PyOD library. The experimental results are obtained through 10 independent experiments, as shown in Table 2 below..." [source](https://patents.google.com/patent/CN115270978A/en) |
+| 239 | COPOD | **Patent** | CN115277464A (Tsinghua University, Alibaba Cloud Computing Ltd) -- **substantive**, claims 2, 6; description paragraphs [0014], [0021], [0064], [0071], [0088], [0090]: "inputting data before change in the multidimensional time sequence into a COPOD algorithm to calculate abnormal points; ... a difference average sequence is generated based on two sliding windows, and then a COPOD algorithm is used to identify outliers in the difference average sequence..." [source](https://patents.google.com/patent/CN115277464A/en) |
+| 240 | PyOD | **Patent** | CN115391148A (Agricultural Bank of China (中国农业银行股份有限公司)) -- **substantive**, specification body paragraphs [0078], [0080], [0105]: "Wherein, the algorithm A is a difference value calculation algorithm, and the algorithm B is a pyod algorithm. ... In the embodiment of the application, the algorithm B is a pyod algorithm which comprises various anomaly detection algorithms, and the KNN algorithm is selected as the anomaly point..." [source](https://patents.google.com/patent/CN115391148A/en) |
+| 241 | PyOD | **Patent** | CN115758173A (Xihua University) -- **baseline-with-numbers**, description paragraph [0080], Figures 2, 3, 4: "图2,3,4分别展示了best-f1，recall和precision在本模型和MTAD-GAT，GDN和pyod常用方法上的表现 / Figures 2, 3, and 4 show the performance of best-f1, recall, and precision in this model and MTAD-GAT, GDN, and pyod, respectively." [source](https://patents.google.com/patent/CN115758173A/en) |
+| 242 | PyOD | **Patent** | CN115801396A (Northwestern Polytechnical University) -- **substantive**, description paragraph [0066]: "硬件和软件环境：该发明使用Python3.7作为处理数据和训练模型的编程语言，使用TensorFlow2.5框架和Pyod库中的Deep-SVDD算法来训练模型、检测恶意帧并定位攻击源。 Hardware and software environment: The invention uses Python3.7 as the programming language for processing data and training models, and uses the TensorFlow2.5 framework and the Deep-SVDD algorithm in the..." [source](https://patents.google.com/patent/CN115801396A/en) |
+| 243 | ECOD | **Patent** | CN116010485A (Hangzhou Bizhi Technology Co ltd (杭州比智科技有限公司)) -- **reference-list-only**, specification body Background paragraph [0004]: "based on the cumulative distribution, there is a representative method of ECOD. These kinds of methods are different in thinking, so that the advantages are different, some have good interpretation, some have good detection accuracy, but the defects are that no information in the time dimension is..." [source](https://patents.google.com/patent/CN116010485A/en) |
+| 244 | PyOD | **Patent** | CN116186569A (Guilin University of Electronic Technology) -- **baseline-with-numbers**, description paragraph [0111], Table 3: "For a total of 10 data sets of the artificial data set and the public data set, comparing the method (abbreviated KM in the table) with three anomaly detection algorithms LOF, COPOD, K-means# (abbreviated KM#) of which the implementation can be obtained in a PyOD library. The experimental results..." [source](https://patents.google.com/patent/CN116186569A/en) |
+| 245 | SUOD | **Patent** | CN116186619A (Yanshan University) -- **baseline-with-numbers**, description paragraphs [0001], [0050]: "为评估该方法的性能，使用SOD... SUOD(accelerating large-ScaleUnsupervised heterogeneous Outlier Detection)、IForest(Isolation Forest)和HBOS(Histogram-Based Outlier Score)算法在人工数据集和真实数据集上进行实验验证 / In order to evaluate the performance of the method, SOD... SUOD (accelerating large-Scale Unsupervised heterogeneous..." [source](https://patents.google.com/patent/CN116186619A/en) |
+| 246 | PyGOD | **Patent** | CN116467666B (Zhejiang University ZJU) -- **substantive**, description paragraphs [0091], [0095]: "The method of inserting exception nodes chooses the gen_contextual_outliers and gen_structural_outliers methods implemented in the open source python library PYGOD. ... Several different attribute map anomaly detection algorithms are selected, such as DOMINANT model, anomalyDAE model, CONAD model,..." [source](https://patents.google.com/patent/CN116467666B/en) |
+| 247 | XGBOD | **Patent** | CN116522138A (Harbin Institute of Technology Shenzhen) -- **reference-list-only**, description paragraph [0003]: "目前常用的时间序列异常检测方法包括Metis方法、XGBOD方法、Ymir方法和HoloClean方法。... XGBOD方法将数据集基于多个无监督异常检测算法的异常分数作为原始数据集的新特征，并利用这些新特征作为新的有监督模型的训练数据... Ymir方法是基于XGBOD方法改进的时序数据异常检测方法 / Currently commonly used time series anomaly detection methods include Metis method, XGBOD method, Ymir method and HoloClean method... The XGBOD..." [source](https://patents.google.com/patent/CN116522138A/en) |
+| 248 | PyOD | **Patent** | CN116600326A (China Telecom Corp Ltd (中国电信股份有限公司)) -- **substantive**, specification body paragraphs [0008], [0046], [0131]: "Abnormal detection and normalization are carried out on core network configuration data and interface XDR acquisition data based on a PyOD algorithm, a reasonable feature subset is screened ... and performing anomaly detection on parameters in the periodically obtained XDR data, the core network..." [source](https://patents.google.com/patent/CN116600326A/en) |
+| 249 | PyOD | **Patent** | CN116894271A (Institute of Medical Information CAMS) -- **reference-list-only**, description paragraph [0121]: "当使用孤立森林算法检测离群点时，孤立森林算法在许多编程语言中都有成熟的库或框架可用，如Python的scikit-learn、pyOD；Java的weka，R的isolation forest，MATLAB的isolation Forest Toolbox等。 / ...when the isolated forest algorithm is used to detect outliers, the isolated forest algorithm has a mature library or framework available in many programming..." [source](https://patents.google.com/patent/CN116894271A/en) |
+| 250 | ECOD | **Patent** | CN117131449A (YANTAI HAIYI SOFTWARE CO Ltd (烟台海颐软件股份有限公司)) -- **substantive**, specification body paragraphs [0019], [0085] and Claim 1: "generating features by adopting one or more of an isolated forest (IsolationForests, IF), an Empirical-Cumulative-distribution-based Outlier Detection (ECOD) algorithm and a Histogram detection (History-based Outlier Score, HBOS) algorithm ... Claim 1: the ECOD algorithm is specifically: firstly,..." [source](https://patents.google.com/patent/CN117131449A/en) |
+| 251 | PyOD | **Patent** | CN117194946A (Fujian Normal University) -- **substantive**, description paragraphs [0148], [0167], [0168], [0170], [0171]: "...the anomaly detector calls the pyOD library and uses default parameters. The representative anomaly detection algorithm based on the neighbor comprises the following steps: FB. Iforest, LODA, INNE and SUOD; representative anomaly detection algorithms based on probability: COPOD, ECOD......" [source](https://patents.google.com/patent/CN117194946A/en) |
+| 252 | PyOD | **Patent** | CN117457076A (Qingdao Marine Biomedical Research Institute Co Ltd) -- **substantive**, claim 8; description paragraphs [0020], [0060]: "并在使用模型进行预测之前，通过PyOD的平均KNN排除异常值。 / ...and eliminate anomalies through PyOD's average KNN before using the model for prediction value." [source](https://patents.google.com/patent/CN117457076A/en) |
+| 253 | XGBOD | **Patent** | CN117828514A (Shenzhen International Graduate School of Tsinghua University) -- **baseline-with-numbers**, description paragraphs [0049], [0059], Table 3: "Some classical methods for anomaly detection have been chosen, such as MLP (multi-layer perceptron), XGBoost and XGBOD. ... Table anomaly detection: in table 3, the performance results of table anomaly detection are shown." [source](https://patents.google.com/patent/CN117828514A/en) |
+| 254 | XGBOD | **Patent** | CN117992748A (Beijing Fengteng Technology Co ltd) -- **baseline-with-numbers**, description paragraph [0174]: "并且相比目前最先进的XGBOD算法，在精确率上实现了最高达12.5％的提升 / ...and compared with the most advanced XGBOD algorithm, the accuracy rate was improved by up to 12.5%..." [source](https://patents.google.com/patent/CN117992748A/en) |
+| 255 | XGBOD | **Patent** | CN118280602A (Guangzhou Baiyun Shan Ming Xing Pharmaceutical Co ltd (广州白云山明兴制药有限公司, Guangzhou Baiyunshan state pharma group)) -- **substantive**, specification body paragraph [0031]: "对于无监督学习的异常检测算法，如基于距离的方法，如KNN、LOF、基于密度的方法，如DBSCAN、OPTICS、基于集成的方法，如IsolationForest、XGBOD，根据数据的分布特点和异常的类型来选择合适的算法。(and ensemble-based methods, such as IsolationForest, XGBOD, appropriate algorithms are selected according to the distribution characteristics of the data and the type of anomaly.)" [source](https://patents.google.com/patent/CN118280602A/en) |
+| 256 | COPOD | **Patent** | CN118316981A (Shandong Yiran Information Technology Co ltd (山东怡然信息技术有限公司)) -- **substantive**, specification body paragraphs [0049]-[0054] and Claims 1, 5: "Claim 1: realizing fault detection by adopting a multi-level monitoring collocation COPOD (Copula-Based Outlier Detection) algorithm ... Claim 5: wherein the COPOD algorithm specifically comprises: calculating an empirical distribution function in each dimension" [source](https://patents.google.com/patent/CN118316981A/en) |
+| 257 | SUOD | **Patent** | CN118790172A (Zhongke Huaxin Dongguan Technology Co ltd (中科华芯(东莞)科技有限公司)) -- **substantive**, specification body paragraph [0056] and Claim 1: "Extracting features by using a pre-training classification model, and integrating a plurality of abnormality detection weighting methods by using SUOD integrated abnormality detection accelerators; ... Claim 1: integrating a plurality of abnormality detection weighting methods by using SUOD..." [source](https://patents.google.com/patent/CN118790172A/en) |
+| 258 | ECOD | **Patent** | CN119057963A (Yiyang Rubber Plastics Machinery Group Co Ltd) -- **substantive**, specification body paragraph [0026] and Claim 1: "Removing abnormal values in X process history and Y Quality history through an isolated forest algorithm ECOD to obtain normal data sets X Process for inliers and Y Quality of inliers; Deriving ECDF functions from data set X process real time" [source](https://patents.google.com/patent/CN119057963A/en) |
+| 259 | SUOD | **Patent** | CN119416130A (China Star Network Application Research Institute Co ltd (中国星网网络应用研究院有限公司 / China SatNet state enterprise)) -- **substantive**, specification body paragraph [0152]: "This enables TPGCL to efficiently generate an embedding for the candidate set. The presence of an anomaly group is then identified by existing SUOD and ECOD or like unsupervised anomaly detectors." [source](https://patents.google.com/patent/CN119416130A/en) |
+| 260 | PyOD | **Patent** | CN119493093A (East China Normal University) -- **substantive**, description paragraphs [0029], [0086], [0201], Figure 22: "Illustratively, outliers may be detected from a plurality of feature dimensions of the data by an anomaly detection algorithm tool library (PyOD). ... FIG. 22 is a schematic flow field diagram of radar assimilation + Nudging assimilation quality control data (PyOD) provided by an embodiment of the..." [source](https://patents.google.com/patent/CN119493093A/en) |
+| 261 | TODS | **Patent** | CN119856174A (Visa International Service Association (维萨国际服务协会)) -- **reference-list-only**, specification body paragraph [0242], Ref [24]: "[24]Kwei-Herng Lai、Daochen Zha、Guanchu Wang、Junjie Xu、Yue Zhao、Devesh Kumar、Yile Chen、Purav Zumkhawaka、Minyang Wan、Diego Martinez And the like. 2021, TODS An automatic time series outlier detection system (TODS: an automated TIME SERIES outlier detection system). At AAAI, Artificial Intelligence..." [source](https://patents.google.com/patent/CN119856174A/en) |
+| 262 | CONAD | **Patent** | CN120030390A (Dalian University of Technology) -- **baseline-with-numbers**, description paragraphs [0003], [0072], Table 2: "Xu et al, contrastive Attributed Network Anomaly Detection with Data Augmentation, propose CONAD that integrates human knowledge of anomaly types through data enhancement and SIAMESE GNN encoder with contrast loss, achieving excellent performance on real world datasets. ... CONAD in combination..." [source](https://patents.google.com/patent/CN120030390A/en) |
+| 263 | PyOD | **Patent** | CN120123867A (Chongqing University of Technology) -- **baseline-with-numbers**, description paragraph [0087]: "To ensure fairness and effectiveness of the comparison, an outlier detection algorithm encapsulated in the PyOD library of open sources is used. The outlier detection algorithm in PyOD library is widely applied in the field and has good performance." [source](https://patents.google.com/patent/CN120123867A/en) |
+| 264 | PyGOD | **Patent** | CN120612498A (SANYA UNIVERSITY) -- **substantive**, description paragraph [0137]: "In addition, in the experiments of the present invention, the present invention utilized PyGOD library injection properties and structural anomalies, and run a baseline anomaly detection model." [source](https://patents.google.com/patent/CN120612498A/en) |
+| 265 | LUNAR | **Patent** | CN120653640A (Xiangjiang Laboratory, Central South University) -- **baseline-with-numbers**, description paragraphs [0117], [0120], [0129], Tables 2, 3, 4: "The detection method of the present invention was compared with five algorithms of the existing EOCD algorithm, the DIF algorithm, the ROD algorithm, the LUNAR algorithm, and the COPOD algorithm on 15 data sets... the LUNAR algorithm is the algorithm proposed in the paper Lunar Unifying local..." [source](https://patents.google.com/patent/CN120653640A/en) |
+| 266 | ADBench | **Patent** | CN120712578A (Genentech Inc (基因泰克公司)) -- **substantive**, specification body paragraphs [0050], [0069]: "In one example, multiple out-of-box, unsupervised anomaly detection methods from the open source anomaly detection toolkit pyOD can be used to identify various different types of anomalies on the table data ... To detect outlier samples, a plurality of verifier modules 118 from ADBench are used,..." [source](https://patents.google.com/patent/CN120712578A/en) |
+| 267 | CONAD | **Patent** | CN120781037A (University of Electronic Science and Technology of China) -- **reference-list-only**, description paragraph [0093]: "Iii) Unsupervised GNN models based on graph self encoder (GAE), such as GCNAE and DOMINANT. In addition, models based on generating a countermeasure network (GAN), such as DONE and AdONE, and CONAD based on contrast learning, such as AnomalyDAE, are also considered." [source](https://patents.google.com/patent/CN120781037A/en) |
+| 268 | XGBOD | **Patent** | DE102023114355A1 (Valeo Schalter und Sensoren GmbH) -- **substantive**, references list (NPL applicant citation) and specification body paragraph [0033]: "Yue Zhao et al. beschrieben, „XGBOD: Improving Supervised Outlier Detection with Unsupervised Representation Learning“ (https://arxiv.org/abs/1912.00290 ... Random Forest; Boosted Decision Tree; Boosted Forest; Support Vector Machine (SVM); oder XGBOD wie in Yue Zhao et al. beschrieben" [source](https://patents.google.com/patent/DE102023114355A1/en) |
+| 269 | PyOD | **Patent** | SK10121Y1 (Centrum Vedecko-Technických Informácií Slovenskej Republiky) -- **substantive**, description (Section Doterajší stav techniky / Príklady uskutočnenia), Table 1: "Po spracovaní dát nasledovala analýza dát prostredníctvom modelov z knižnice PyOD (http://jmlr.org/papers/v20/19-011.html), ktorá sa používa na detekciu anomálií v multidimenzionálnych dátach. Bolo z nej vybraných 21 algoritmov patriacich do kategórie učenia bez učiteľa... / Data processing was..." [source](https://patents.google.com/patent/SK10121Y1/en) |
+| 270 | PyOD | **Patent** | US20230216870A1 (International Business Machines Corp (IBM)) -- **substantive**, specification body paragraph [0043]: "The model manager 120 can leverage different, off-the-shelf, one-class algorithms for anomaly detection (e.g., by using the PyOD Python toolkit, or sklearn). Formally, let A.fit() and A.predict() be the training method and the score calculation method of the anomaly detection algorithm A." [source](https://patents.google.com/patent/US20230216870A1/en) |
+| 271 | ECOD | **Patent** | US20240055125A1 (Riva Health Inc) -- **substantive**, specification body paragraph [0467]: "ECOD Filter—Beat filter model based on Empirical-Cumulative-Distribution-based Outlier Detection (ECOD) algorithm ... and Empirical cumulative distribution functions for outlier detection (ECOD) Filtering—Similar to Point99 filtering with a trained filter from the training dataset that is sensitive..." [source](https://patents.google.com/patent/US20240055125A1/en) |
+| 272 | PyOD | **Patent** | US20240114042A1 (Threatology Inc (continuation from Booz Allen Hamilton Inc)) -- **substantive**, specification body paragraph [0098]: "Existing algorithms can be used for such a process, e.g., PyOD and supervised or semi-supervised outlier classification. Manually or automatically labelled true positives/false positives data in the platform 100 can be used to apply and fit a model." [source](https://patents.google.com/patent/US20240114042A1/en) |
+| 273 | ECOD | **Patent** | US20240333737A1 (Rapid7 Inc) -- **substantive**, specification body paragraph [0065]: "clustering the plurality of signatures is performed using a density-based clustering algorithm ... Empirical Cumulative Distribution-based Outlier Detection (ECOD), and Copula-Based Outlier Detection (COPOD), cumulative distribution functions (CDFs), a hierarchical clustering algorithm, and/or..." [source](https://patents.google.com/patent/US20240333737A1/en) |
+| 274 | PyOD | **Patent** | WO2021105995A1 (BG Negev Technologies and Applications Ltd (Ben-Gurion University tech transfer arm)) -- **substantive**, specification body paragraph [0250]: "11 state-of-the-art unsupervised anomaly detection algorithms (listed in Table 1) were used, some of them were implemented by the PyOD python toolbox. Each algorithm calculates the anomaly score of an instruction, and if it is above the anomaly threshold, the instruction is detected as anomalous." [source](https://patents.google.com/patent/WO2021105995A1/en) |
+| 275 | COPOD | **Patent** | WO2022249179A1 (Ramot at Tel Aviv University Ltd) -- **baseline-with-numbers**, specification body paragraphs [0085], [0121]-[0124]: "one may employ non-parametric methods, such as Parzen’s kernel density estimation, or the COPOD method of Li et al. in 'Copula-based outlier detection', that may be based on an empirical copula model ... The second set of experiments, was focused on the most recent methods: COPOD, GOAD and DROCC...." [source](https://patents.google.com/patent/WO2022249179A1/en) |
+| 276 | PyOD / ECOD | **Enterprise** | Splunk ships a PyOD example container in the Splunk App for Data Science and Deep Learning, documented as a supported example rather than a blog demo: "Anomaly Detection with PyOD: Shows an Unsupervised Outlier Detection using Empirical Cumulative Distribution functions utilizing the PyOD library." [source](https://help.splunk.com/en/splunk-enterprise/apply-machine-learning/use-splunk-app-for-data-science-and-deep-learning/5.1.0/deploy-the-splunk-app-for-data-science-and-deep-learning/leverage-provided-examples-of-the-splunk-app-for-data-science-and-deep-learning) |
+| 277 | TrustLLM | **Course** | IEEE ICCST 2025 ran a hands-on tutorial built on TrustLLM (DOI 10.1109/ICCST63435.2025.11293883): "This hands-on tutorial will introduce participants to TrustLLM, a comprehensive benchmark designed to assess the trustworthiness of large language models (LLMs) across multiple dimensions, including truthfulness, safety, fairness, robustness, privacy, and machine ethics. The session will..." [source](https://doi.org/10.1109/iccst63435.2025.11293883) |
+| 278 | AEGIS | **Standards** | The Secure Agentic Framework registers AEGIS as external research source `SRC-aegis-2603.12621` under technique SAF-T1103, Fake Tool Invocation: "16. **SRC-aegis-2603.12621**: [AEGIS](https://arxiv.org/abs/2603.12621) — pre-execution mediation evaluation and limitations." [source](https://github.com/secure-agentic-framework/saf-mcp/blob/main/techniques/SAF-T1103/README.md) |
+| 279 | AEGIS / Auditable Agents | **Competitive** | ControlPlane's related-work document gives AEGIS its own subsection and compares Auditable Agents across five dimensions in the same table: "**AEGIS.** Yuan, Su, and Zhao's *AEGIS: No Tool Call Left Unchecked — A Pre-Execution Firewall and Audit Layer for AI Agents* ([arXiv:2603.12621v1](https://arxiv.org/abs/2603.12621), 2026-03-13) interposes a firewall on the tool-execution path, performs composable policy validation,..." [source](https://github.com/hariom-s27/controlplane/blob/main/docs/related-work.md) |
+| 280 | AEGIS | **Competitive** | HELM AI Kernel pull request #297 benchmarks per-call mediation overhead against AEGIS's published figure: "Implements MIN-493 — competitive response to AEGIS (arXiv 2603.12621): evidence-integrity parity confirmed with proof tests, per-call overhead benchmarked, and a source-backed comparison one-pager." [source](https://github.com/Mindburn-Labs/helm-ai-kernel/pull/297) |
+| 281 | Agent Audit | **Competitive** | AgentShield's benchmark document evaluates itself against agent-audit over the OWASP Agentic Top 10, in a feature table whose row for the work reads `HeadyZhang/agent-audit`, 227 stars, MIT, "static, 72 rules, OWASP Agentic Top 10", scanning "agent source, MCP configs". The entry names only the repository and the handle, with no paper identifier and no author name, so an identifier-keyed tracker cannot see it. [source](https://github.com/affaan-m/agentshield/blob/main/docs/BENCHMARK.md) |
+| 282 | GRADE | **Competitive** | HandoffGraph's competitor analysis credits GRADE (arXiv:2606.22741, `yzhao062/grade`) as the academic prior art establishing the OBSERVED / DECLARED / INFERRED tripartite edge-provenance taxonomy, at lines 118 and 248-250. [source](https://github.com/arbazkhan971/handoffgraph/blob/main/docs/competitor-analysis.md) |
+| 283 | MemoHarness | **Competitive** | OneLive pull request #35 adopts MemoHarness's D1 to D6 defect taxonomy and its test-time retrieval constraints: "1. The MemoHarness review (docs). Founder-requested deep review of "MemoHarness: Agent Harnesses That Learn from Experience" (Huang et al., [arXiv:2607.14159])." [source](https://github.com/schubertsean-ui/onelive/pull/35) |
+| 284 | No Attacker Needed | **Competitive** | MCP Data Platform issue #1163 uses No Attacker Needed as its primary literature baseline for organic contamination in shared agent stores: "The closest organic work ("No Attacker Needed" 2604.01350, 57-71% cross-user contamination) has no derivability or tier moderators and no persistent-store curation tier." [source](https://github.com/txn2/mcp-data-platform/issues/1163) |
+| 285 | MemoHarness | **Ecosystem** | A third-party research repository added a dedicated MemoHarness survey report with a 17-row paper-concept to code-implementation mapping table: "调研 Notre Dame/USC 等机构提出的 MemoHarness（arXiv:2607.14159，2026-07 预印本）。把 agent harness（模型外围控制层：上下文/工具/编排/memory/解码/输出）作为优化对象，提出"训练时搜索 + 测试时案例适配"两阶段框架。三大设计：... - **17 行论文概念→代码实现映射表**，对照开源仓库 HowieHwong/MemoHarness" [source](https://github.com/technologyHu/research/pull/2) |
+| 286 | ADBench | **Ecosystem** | The LAMDA tabular-survey companion repository lists ADBench in its curated reading index: "- [Adbench: Anomaly detection benchmark](https://proceedings.neurips.cc/paper_files/paper/2022/hash/cf93972b116ca5268827d575f2cc226b-Abstract-Datasets_and_Benchmarks.html)" [source](https://github.com/LAMDA-Tabular/Tabular-Survey) |
+| 287 | TrustLLM | **Podcast** | GPT Reviews devoted a segment at 07:26 to the TrustLLM trustworthiness study: "The TrustLLM study evaluates the trustworthiness of LLMs across six dimensions, while Intel Corporation proposes an efficient LLM inference solution." [source](https://podcasts.apple.com/us/podcast/apples-ai-plans-%24100m-for-humanoid-robots-trustworthiness/id1687287441?i=1000641667934) |
 
 *Tier-5 aggregator paper-pages, non-English how-to tutorials, and SecTools.tw AI-generated rows bucketed 2026-06-02 (presentation only; item counts preserved and still in the Ledger 3 total of 169; full per-row detail recoverable from git):*
 
@@ -2399,6 +2634,19 @@ quantitative record of *how many*.
 | A18 | [arxiv.org](https://arxiv.org/pdf/2607.02599) | AEGIS | "AgentSpec (Wang et al., 2026) applies per-step DSL rules, AEGIS (Yuan et al., 2026) adds runtime auditing." | 2026-08-13 |
 | A19 | [arxiv.org](https://arxiv.org/pdf/2608.02680) | GRADE | "GRADE [31] models an agent run as a graph with separate execution and dependency layers and, closest to us, grades each dependency edge by how it is known (observed, declared, inferred)." | 2026-08-13 |
 | A20 | [researchgate.net](https://www.researchgate.net/publication/403607189_Agent_Harness_for_Large_Language_Model_Agents_A_Survey/download) | AEGIS | "AEGIS[113] operationalizes this as a framework-agnostic pre-execution intercept layer, a three-stage pipeline of argument extraction, risk scoring, and policy enforcement intercepting potentially dangerous tool calls before they reach the execution environment." | 2026-08-13 |
+| A21 | [arXiv:2607.02357](https://arxiv.org/abs/2607.02357) v2, "Cloak and Detonate: Scanner Evasion and Dynamic Detection of Agent Skill Malware" (HKUST) | Agent Audit | Reference [26], and the scanner itself is the evaluation target: 80.5% strict bypass under Structural Obfuscation in Figure 4. Table III separately reports alert-count reductions of 83.3% and 99.9%, on a different denominator; the two must not be quoted as one range. Body text reads "Headyzhang [26] adds tool-boundary AST taint tracking", naming only the GitHub handle. | 2026-09-12 |
+| A22 | [arXiv:2604.10286](https://arxiv.org/abs/2604.10286), "STARS: Skill-Triggered Audit for Request-Conditioned Invocation Safety" (KAUST/PRADA, Shenzhen University, University of Georgia) | Agent Audit | Runs it as the compared baseline and reports the numbers in its own abstract: 0.380 AUPRC for Agent Audit against STARS's 0.439. The reference is listed as software, "Agent audit: static security analysis for ai agent applications", tagged "Zhang (2026)", linking only `github.com/HeadyZhang/agent-audit`. | 2026-09-12 |
+| A23 | [arXiv:2608.21341](https://arxiv.org/abs/2608.21341), "Natural-Language Workflows Are Not Software Yet" (Artic, Purdue) | CHI-Bench | Reference [36]. Figures 9 and 11 and Appendix Table VI are measured entirely inside CHI-Bench's medical domain, so the benchmark is the instrument rather than a rival system. | 2026-09-12 |
+| A24 | [arXiv:2608.22512](https://arxiv.org/abs/2608.22512), "HANSARD: A Reference Architecture for Forensic Readiness, Runtime Witnessing, and Graded Attribution" (Harokopio, DUTH, University of Western Macedonia) | Auditable Agents | Cited in three sections. The PDF prints [5] and the HTML labels the same entry [20]; record the format with the locator. | 2026-09-12 |
+| A25 | [arXiv:2608.22160](https://arxiv.org/abs/2608.22160) v2, "Audita: certified auditing and causal attribution of adverse outcomes" (Duke) | Auditable Agents | PDF prints [17] on page 16. `bib.bib76` is the HTML element id for the same entry, not a printed reference number. One of the two documents in this table that spell out "Yue Zhao". | 2026-09-12 |
+| A26 | OpenReview [HyhfhlbWGh](https://openreview.net/forum?id=HyhfhlbWGh), DOI [10.20944/preprints202607.1328.v1](https://doi.org/10.20944/preprints202607.1328.v1), "Towards Long-Horizon Agents: A Survey" (RUC, PKU, Tsinghua, SYSU, HKUST, NUS; 149 pages, 906 references) | AEGIS | Reference 783, and stronger than a reference: AEGIS names one of the survey's three boundary categories in the work's own words, "Tool-call Boundary. Acting as a pre-execution firewall, this mechanism inspects tool arguments before execution", with AEGIS the single named instantiation and present in the taxonomy figure. | 2026-09-12 |
+| A27 | [arXiv:2510.06445](https://arxiv.org/abs/2510.06445) **v3**, "A Survey on Agentic Security: Applications, Threats and Defenses" (BRAC University, Qatar Computing Research Institute) | Agent Audit | Two body sections, and the second reports an empirical finding from the paper rather than describing it: Section 2.3.2 "To audit such architectures, Zhang et al. (2026b) propose a security analysis system that detects design flaws and runtime vulnerabilities in deployed LLM agent applications", and Section 5.3 on rigid prompt adherence blocking basic social engineering while limited reasoning drives guardrail false positives. Author-year bibliography, so no printed number; entry on PDF p.57 of 60. **The citation exists only in v3** (2026-06-12); v1 and v2 contain zero occurrences. A sweep keyed on the indexed date of 2025-10-07 drops it. | 2026-09-12 |
+| A28 | [arXiv:2608.23610](https://arxiv.org/abs/2608.23610), "From Traceability to Justifiability: Accountability Structures in Agentic Software Engineering" (Rashid Azarang, independent, Mexico) | Auditable Agents | Printed [12] in both formats, reference list PDF p.17, in-text marker PDF p.4 Section 2. Positioning rather than reuse: one clause picking up auditability as the property that makes accountability possible. The reference identifies the work by title and arXiv ID with no author names. | 2026-09-12 |
+| A29 | [arXiv:2608.12761](https://arxiv.org/abs/2608.12761), "Correct Is Not Governed: Provenance Integrity in Agentic Workflows" (Jesus Salas, independent) | Auditable Agents | Load-bearing positioning: the five auditability dimensions are the agenda the author scopes his own prototype against, "Matrix operationalizes a subset of that agenda". Author-year, no printed number; entry "Nian et al. (2026)" on PDF p.19 of 21, in-text p.16 Section 8. | 2026-09-12 |
+| A30 | [arXiv:2606.10749](https://arxiv.org/abs/2606.10749) v2, "Toward Secure LLM Agents: Threat Surfaces, Attacks, Defenses, and Evaluation" (Nanjing University, TU Munich) | No Attacker Needed | Printed reference [213], list on PDF p.33, single body use on PDF p.17 Section 8 inside a 26-reference bundle whose host sentence names shared-state contamination. List-level, and the weakest of this round's six priority confirmations. Present in v1 as well. | 2026-09-12 |
+| A31 | [arXiv:2604.16548](https://arxiv.org/abs/2604.16548), "A Survey on Long-Term Memory Security in LLM Agents" (MemTensor, Shanghai Jiao Tong University) | No Attacker Needed | Prior art with numbers: reproduces the 57-71% benign-contamination range and the executable-artifact sanitization failure. v1 cites it three times in prose; v2 uses it at a Figure 1 taxonomy leaf and in the Table 3 Principal-Scoped Retrieval row. Author-year, no printed number, entry on PDF p.12. | 2026-09-12 |
+| A32 | [arXiv:2608.30478](https://arxiv.org/abs/2608.30478), "Agents in the Large: Perception-Centered Architecture for Persistent Agents" (the Pera framework; Fudan and collaborators) | MemoHarness | Prior art for the term itself: "Recent work increasingly uses agent harness to refer to the non-model parts within an agent (Huang et al., 2026c; Pan et al., 2026a)." Author-year, no printed number; entry on PDF p.29. | 2026-09-12 |
+| A33 | Research Square [rs-10502893](https://www.researchsquare.com/article/rs-10502893/v1), "PolicyFaultBench: Mutation-Based Assurance of Policy Mediation and Proposal-Interface Conformance for Tool-Using AI Agents" (University of Misan, Iraq) | AEGIS | Evaluated and tabulated in the comparative taxonomy of Section 2 and Table 1, reference 20 on p.17. Surfaced by a lane as "Palumbo et al.", which is wrong; the authors are Hasan Fadhil Qasim and Sarah Abdulzahra Kadim. | 2026-09-12 |
 
 **Count: 11 confirmed external academic citations of the agent-auditing line. By work cited: Auditable Agents x7 (A1, A6-A11), agent-audit x4 (A1, A3, A4, A5), Aegis x2 (A2, A11), Implicit Execution Tracing x1 (A11), Sovereign-OS x1 (A11). A1 and A11 each cite more than one work, so the per-work figures sum above 11.**
 
@@ -2440,6 +2688,13 @@ positive stands corrected separately, since arXiv:2606.00765 (FALAT) cites "impl
 is Kong et al., arXiv:2509.14295, not the USC paper.
 
 ---
+
+**Three rows are duplicates of three others and the table over-counts by three.** A12 and A16 are
+arXiv:2604.23425, A13 and A17 are arXiv:2606.15242, A15 and A18 are arXiv:2607.02599: in each pair
+one row carries the `/abs/` URL and the other the `/pdf/` URL for the same paper. The 33 rows are
+**30 distinct citing works**. The pairs are left in place rather than deleted, because the 2026-08-13
+pass counted them as six and removing them silently would make that pass's arithmetic unexplainable.
+Count this table by distinct identifier, not by row.
 
 ## Ledger 7: Scientific Uptake (Peer-Reviewed, Substantive In-Body Use)
 
@@ -2498,6 +2753,12 @@ under this rule; the other 18 are recorded in that pass section and routed to `/
 | S40 | nature.com | TDC | “Two notable examples include Therapeutics Data Commons157 and MoleculeNet158, which provide AI-ready datasets and benchmarks for multiple prediction tasks, including toxicity and ADR prediction, as community resources implementing various evaluation tools and leaderboards metrics.” [source](https://www.nature.com/articles/s41573-025-01164-x) |
 | S41 | nature.com | COPOD | “The backend was implemented in Django rest framework, with PyTorch Geometric, PyOD libraries, and it is available at https://github.com/win7/GEMNA_Backend.git.” [source](https://www.nature.com/articles/s41598-024-80955-5) |
 | S42 | nature.com | TDC | “The two kinase–drug binding-affinity datasets, Davis27 and KIBA28, were curated by and available in the Therapeutics Data Commons benchmark73.” [source](https://www.nature.com/articles/s42256-023-00751-0) |
+| S43 | Nature *Scientific Reports* | PyOD | Used at Section 'Anomaly detection methods', Ref 52 (id ref-CR52), experimental evaluation tables: "LOF, OCSVM, IF, VAE and AE are well-established outlier detection techniques, and their implementations are sourced from the scikit-learn and PyOD 52 machine learning library." [source](https://www.nature.com/articles/s41598-024-80021-0) |
+| S44 | IEEE *TNNLS* | ADBench | Used at IEEE TNNLS article; title, abstract, framework, evaluation benchmark: "Text-ADBench: Text Anomaly Detection Benchmark Based on LLM Embeddings" [source](https://doi.org/10.1109/tnnls.2026.3727304) |
+| S45 | ACM (MacrOData) | ADBench | Used at PDF p. 4, Section 2.3.3; p. 5, Figure 2; pp. 11-12, Appendix A; Reference [26] p. 9: "2.3.3 Remarks on ADBench. These connections allow us to draw key conclusions about ADBench. First is the revelation that ADBench likely exhibits datasets with outliers that align well with Gaussian noise." [source](https://doi.org/10.1145/3770855.3817520) |
+| S46 | Springer (wildfire prediction) | PyOD | Used at Keywords, Methodology section, Ref 35 (id ref-CR35): "Zhao, Y., Nasrullah, Z., Li, Z.: PyOD: a python toolbox for scalable outlier detection. J. Mach. Learn. Res. 20(96), 1–7 (2019)" [source](https://link.springer.com/chapter/10.1007/978-981-99-8696-5_17) |
+| S47 | Springer (journal-entry anomalies) | PyOD | Used at Methodology section, Ref 19 (id ref-CR19), Ref 32 (id ref-CR32): "Zhao, Y., Nasrullah, Z., & Li, Z. (2019). PyOD: A python toolbox for scalable outlier detection. Journal of Machine Learning Research, 20(96), 1–7." [source](https://link.springer.com/chapter/10.1007/978-3-032-08483-5_22) |
+| S48 | Tech Science *Energy Engineering* | LSCP | Used at Article title, abstract, and keywords: "To effectively improve the lean management of LVSA, the paper proposes an identification method for the UTR based on Local Selective Combination in Parallel Outlier Ensembles algorithm (LSCP)." [source](https://www.techscience.com/energy/v120n3/51046) |
 
 **Count: 15 peer-reviewed articles with substantive in-body use (PyOD x7, TDC x5, ADBench x2, LSCP x1; S4 and S5 each use two works).**
 

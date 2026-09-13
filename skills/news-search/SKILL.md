@@ -85,6 +85,43 @@ Add `news-search-candidates.jsonl` to `.git/info/exclude` (local, untracked) bef
 
 ### Phase B: Verify and Classify
 
+**Run the ledger check before spending any fetch budget.** Measured 2026-09-12: of the nine
+candidates a round selected for verification on the strength of their apparent value, four turned out
+to be already-counted items reached by a new URL. Verification that checks a candidate against its
+source but never against the ledger cannot tell new coverage from a new URL. The check is local and
+cheap, so it runs first, over every candidate, and it reads the whole audit file rather than its
+ledger tables (see `references/fan-out-reliability.md`, Failure 7).
+
+**`status` and `tier_guess` are independent fields.** `tier_guess` names how authoritative the outlet
+is; `status` names what was found there. A NIST publication read cover to cover that mentions nothing
+is `tier_guess: T0` with `status: verified-negative`. Reading only the tier caused a reader of the
+2026-09-12 round to count eleven such documents as Tier 0 coverage, overstating new Tier 0 by a
+factor of six. Report outcome from `status`, always.
+
+**Screen self-citations against the co-author list, not against the surname.** One round excluded
+seven co-author works before candidacy and found three apparent per-work zeros were entirely
+explained by cross-citation inside the PI's own portfolio. Keep the frequent-co-author list to hand
+and check the citing paper's author block, because a co-author citing the work is not external
+coverage.
+
+**A Phase A tier is a ceiling, not an estimate.** Measured over 420 candidates on 2026-09-12: 310
+tiers held, **110 moved down, and none moved up**. A one-directional 26.2% error rate means Phase A
+is optimistic rather than imprecise. The bias is worst at the top, where six Tier 0 candidates
+yielded one Tier 0 row. Report Phase A high-tier counts as claims, and use tier language only for
+verified rows.
+
+**Decide first-party by authorship, not by host.** A domain regex covering the lab's own accounts
+passed 47 first-party records in one round, every one of which Phase B dropped: the lab's own papers
+on Hugging Face Papers, alphaXiv and ACL Anthology, its own packages on PyPI, its own Spaces under a
+co-author's account, and a fork of a lab repository under a third-party org. Preprint aggregators and
+package indexes are first-party surfaces for the lab's own artifacts, and a fork is first-party
+wherever it sits.
+
+**Check the version history, not the indexed date.** A survey whose indexed publication date precedes
+every work in a line can still cite one in a later revision. arXiv:2510.06445 carries a
+`publicationDate` of 2025-10-07 and cites Agent Audit only in v3, submitted 2026-06-12. Any sweep
+filtered on the indexed date drops it silently. Cite the version that carries the reference.
+
 For each candidate in `news-search-candidates.jsonl`, fetch the page and apply five checks in order:
 
 1. **Pre-tier filter: first-party / already-tracked / disambiguation drops**. Before running the citation rule, drop the candidate if it falls into any of these patterns (each was stepped into during the 2026-05-07 round):
@@ -94,7 +131,7 @@ For each candidate in `news-search-candidates.jsonl`, fetch the page and apply f
    - Name-collision drop — the match is on a different person ("Yue Zhao" → Yuchen / Siyan / Qingyue / W. / D. Zhao) or a different project ("Aegis" → Forrester AEGIS / NVIDIA Aegis / RedHat aegis-ai; "TrustLLM" → trustllm.eu; "TDC" → TDCJ / J&J Therapeutics Discovery). Consult `references/disambiguation-registry.md`.
 2. **Direct-mention / topic-validation routing** (the citation verification rule in the Output section). If the page names the work, person, lab, co-author, institution, or direct URL per one of clauses 1 to 6, fill `direct_mention` and continue as coverage. If it does not pass direct mention but clearly covers the same topic area, set `tier: "topic-validation"` and keep it for the Topic Validation appendix, not a coverage ledger. If it is neither direct coverage nor topic validation, set `tier: "dropped"` and record the drop reason in `notes`.
 
-   **Snippet alone is not verified evidence** for Tier 0 / Tier 1 candidates. WebSearch summaries can synthesize content that does not appear in the source (the 2026-05-07 round caught this with GAO-26-108695: snippet claimed TrustLLM citation; manual PDF extraction confirmed the PDF says nothing of the sort). Tier 0 / Tier 1 promotion requires direct fetch of the source — `pdf_term_scan.py` for PDFs, real-UA HTTP for web pages. If the source is gated and cannot be re-fetched, set `tier_guess: phase_b_priority` and leave as a candidate; do not count.
+   **Neither a snippet nor a summarizing fetch is verified evidence** for Tier 0 / Tier 1 candidates, and reference-list checks are grepped from raw PDF text and raw HTML at every tier. A summarizing fetch on 2026-09-12 reported a bibliography entry absent from a 557 KB page where it exists, and on another paper re-rendered an author-year bibliography as a numbered list and returned a printed reference number that the document does not contain. Record the format with every locator, and expect author-year bibliographies carrying no printed numbers at all. WebSearch summaries can synthesize content that does not appear in the source (the 2026-05-07 round caught this with GAO-26-108695: snippet claimed TrustLLM citation; manual PDF extraction confirmed the PDF says nothing of the sort). Tier 0 / Tier 1 promotion requires direct fetch of the source — `pdf_term_scan.py` for PDFs, real-UA HTTP for web pages. If the source is gated and cannot be re-fetched, set `tier_guess: phase_b_priority` and leave as a candidate; do not count.
 3. **Disclaimer / aggregator detection** (`references/disclaimer-patterns.md`). Run the regex sweep on fetched content. Set entries in the candidate's `flags[]` field. Hard caps:
    - `ai_generated` and `aggregator` are capped at Tier 3 regardless of outlet domain.
    - `machine_translated` is capped at Tier 3 unless `editorial_translation` is also set.
