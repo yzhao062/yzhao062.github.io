@@ -65,7 +65,7 @@ that read fluently while being wrong.
 | PyOD adopters | `files/bio.txt` | The bio distinguishes **named by** OpenAI from **used by** the others. Preserve that split. Collapsing it into one verb claims endorsements nobody gave. |
 | Per-project star counts | `data/open-source.json` | Prefer a shields.io badge, which stays current on its own. |
 | Research taxonomy and its count | the four collapsible headings in `index.html` | Use the site's names verbatim. Presentation order may differ, and here it is deliberately inverted so the agent work leads. |
-| Venture and advisory roles | `index.html` About, the Current Focus card | Copy the site's description of each role, and give it the same weight the site gives it. |
+| Venture and advisory roles | `index.html` About, the Advisory Role card | Copy the site's description of each role, and give it the same weight the site gives it. |
 | Paper count, appointments, policy citations | `files/bio.txt` | |
 | Open-source table rows | `data/open-source.json` | |
 

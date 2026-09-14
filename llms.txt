@@ -11,7 +11,6 @@ How this site uses its recurring terms:
 - **Agent auditability**: the research property the lab currently studies and measures: whether an agent's actions can be reconstructed, checked against policy, and attributed after the fact.
 - **Auditable Agents**: the position paper proposing the framework (five auditability dimensions; three mechanism classes: detect, enforce, recover).
 - **auditable** (lowercase): the lab's open-source SDK, a system of record for agent decisions (capture, replay, roll back).
-- **Auditable AI**: the startup Yue Zhao is founding (auditable.run); distinct from the research program above.
 - **AI auditing**: the established adjacent activity and field (assurance, compliance, algorithm audits); used descriptively when referring to that work.
 
 ## Research Areas

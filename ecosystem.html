@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="author" content="Yue Zhao">
   <meta name="description" content="The Auditable AI Ecosystem: eleven open artifacts for auditing AI agents across the full lifecycle, from static scanning and over-privilege benchmarking before deployment, through tool-call gating at runtime, to decision capture, replay, and attribution after a run.">
-  <meta name="keywords" content="The Auditable AI Ecosystem, Auditable AI Systems, Agent Auditability, auditable, GRADE, awesome-auditable-ai, Auditable AI, AI Agent Auditing, PRE LIVE POST, Yue Zhao, USC, FORTIS Lab, Agent Lifecycle, AI Risk Audit and Control, open-source ecosystem, open-source sustainability, research software">
+  <meta name="keywords" content="The Auditable AI Ecosystem, Auditable AI Systems, Agent Auditability, auditable, GRADE, awesome-auditable-ai, AI Agent Auditing, PRE LIVE POST, Yue Zhao, USC, FORTIS Lab, Agent Lifecycle, AI Risk Audit and Control, open-source ecosystem, open-source sustainability, research software">
   <title>The Auditable AI Ecosystem | Yue Zhao</title>
   <link rel="canonical" href="https://viterbi-web.usc.edu/~yzhao010/ecosystem.html">
   <link rel="icon" type="image/x-icon" href="images/logo2.ico">
@@ -148,9 +148,10 @@
         <p>
           Eleven open artifacts, each answering one question an auditor asks at one point in an agent's life.
           The record they produce has two uses: it shows what a system did wrong, and it shows what it never
-          needed to do. Every one is public and citable, and the tools install from PyPI. The stack supports
+          needed to do. Every one is public and citable, and the tools install from PyPI.
+          <!-- [Auditable AI paused 2026-09] The stack supports
           <a href="https://auditable.run" target="_blank" rel="noopener"><strong>Auditable AI</strong></a>,
-          the company building the auditable layer for AI agents.
+          the company building the auditable layer for AI agents. -->
         </p>
         <p style="font-size:0.95rem; color:#555;">
           This page covers the auditing-of-action arm of the lab's work and says where each piece applies.
@@ -160,14 +161,24 @@
         </p>
 
         <!-- ── START HERE ── -->
-        <h2 style="color:#990000; border-bottom:2px solid #990000; padding-bottom:6px; margin:30px 0 16px 0;">Start Here</h2>
+        <h2 style="color:#990000; border-bottom:2px solid #990000; padding-bottom:6px; margin:30px 0 16px 0;">Start with Your Task</h2>
+        <ul style="color:#555; font-size:0.95rem; line-height:1.7; margin-bottom:18px;">
+          <li><strong>Review Python agent code or deployment configuration:</strong>
+            start with <a href="agent-audit.html">Agent Audit</a> for source-linked security findings.</li>
+          <li><strong>Check a proposed tool call before execution:</strong>
+            start with <a href="aegis.html">AEGIS</a> for policy checks and approval decisions on the tool path.</li>
+          <li><strong>Evaluate skill and tool selection for least privilege:</strong>
+            start with <a href="fortis-benchmark.html">FORTIS</a> for benchmark tasks, scoring, code and citation.</li>
+          <li><strong>Decide what evidence an agent system should retain:</strong>
+            start with <a href="auditable-agents.html">Auditable Agents</a> and its Auditability Card.</li>
+        </ul>
         <div style="background:#fff7f7; border-left:4px solid #990000; padding:14px 18px; margin:0 0 8px 0;">
           <div style="font-family:'SFMono-Regular',Consolas,'Liberation Mono',monospace; font-size:1.1rem; font-weight:700; color:#990000; margin-bottom:8px;">pip install auditable</div>
           <p style="margin:0 0 10px 0; color:#555; font-size:0.95rem; line-height:1.6;">
-            The fastest way in. <code>auditable</code> is the production entry point, and it sits at the
-            post-run end of the lifecycle below. If you would rather read first, the
+            For dependency records and replay, explore the <code>auditable</code> SDK and its documented
+            examples. For the research framework behind the lifecycle view, read
             <a href="https://arxiv.org/abs/2604.05485" target="_blank" rel="noopener">Auditable Agents</a>
-            framework paper is the shortest path to why the pieces are split this way.
+            before choosing an auditing mechanism.
           </p>
           <div style="font-size:0.88rem;">
             <a href="auditable.html"><i class="fas fa-file-lines" aria-hidden="true"></i> Tool page</a>
@@ -208,13 +219,14 @@
 
               <div>
                 <div style="font-size:1rem; font-weight:700; margin-bottom:3px;">
-                  <a href="https://arxiv.org/abs/2605.09163" target="_blank" rel="noopener">FORTIS</a>
+                  <a href="fortis-benchmark.html">FORTIS</a>
                   <span style="font-size:0.66rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; color:#fff; background:#7a2a2a; padding:1px 5px; border-radius:3px; vertical-align:middle; margin-left:4px;">Benchmark</span>
                 </div>
                 <div style="color:#555; font-size:0.86rem; line-height:1.5;">
                   <em>Does the agent stay inside the skill it was given?</em>
                   A benchmark for over-privilege in agent skills: whether a model selects the minimally
-                  sufficient skill and runs it without expanding into broader tools or actions.
+                  sufficient skill and selects tools within that skill's documented scope.
+                  The benchmark evaluates choices without executing tools against live backends.
                 </div>
                 <div style="margin-top:6px; font-size:0.8rem;">
                   <a href="https://arxiv.org/abs/2605.09163" target="_blank" rel="noopener"><i class="fas fa-file-lines" aria-hidden="true"></i> arXiv</a>
@@ -284,10 +296,9 @@
                   <span style="font-size:0.66rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; color:#555; background:#e8d0d0; padding:1px 5px; border-radius:3px; vertical-align:middle; margin-left:4px;">Method</span>
                 </div>
                 <div style="color:#555; font-size:0.86rem; line-height:1.5;">
-                  <em>Which step went wrong?</em>
-                  The research engine <code>auditable</code> is built on: a typed two-layer graph of agent
-                  execution and dependency that predicts run failure and localizes the faulting step in a
-                  failed multi-agent run.
+                  <em>How can agent steps and their dependencies be represented?</em>
+                  A typed two-layer graph of agent execution and dependency, with dependency edges
+                  graded by how they are known. The representation is reused by <code>auditable</code>.
                 </div>
                 <div style="margin-top:6px; font-size:0.8rem;">
                   <a href="https://arxiv.org/abs/2606.22741" target="_blank" rel="noopener"><i class="fas fa-file-lines" aria-hidden="true"></i> arXiv</a>
@@ -384,8 +395,8 @@
           is the entrant interface, and it takes submissions that fail to separate as readily as ones that win.
         </p>
         <p>
-          For the company building on top of this stack, visit
-          <a href="https://auditable.run" target="_blank" rel="noopener"><strong>Auditable AI (auditable.run)</strong></a>.
+          <!-- [Auditable AI paused 2026-09] For the company building on top of this stack, visit
+          <a href="https://auditable.run" target="_blank" rel="noopener"><strong>Auditable AI (auditable.run)</strong></a>. -->
           Most of this stack lives under
           <a href="https://github.com/yzhao062" target="_blank" rel="noopener">github.com/yzhao062</a>.
           <a href="agent-audit.html">agent-audit</a> and <a href="aegis.html">Aegis</a> are maintained in
