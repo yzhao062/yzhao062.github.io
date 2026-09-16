@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Inject crawlable publication and lab-member fallbacks into static pages."""
+"""Inject crawlable layout, publication, biography, and lab-member HTML."""
 
 from __future__ import annotations
 
@@ -580,10 +580,14 @@ def main() -> None:
     lab_members = load_json_list(LAB_MEMBERS_PATH)
     lab_current_phd = load_json_list(LAB_CURRENT_PHD_PATH)
 
+    layout = {
+        f"layout-{name}": (ROOT / "includes" / f"{name}.html").read_text(encoding="utf-8")
+        for name in ("navbar", "sidebar", "footer")
+    }
     pages = {
-        PUBLICATIONS_PAGE: publication_regions(publications, date.today().year),
-        LAB_PAGE: lab_regions(lab_current_phd, lab_members),
-        INDEX_PAGE: bio_regions(BIO_PATH),
+        PUBLICATIONS_PAGE: {**layout, **publication_regions(publications, date.today().year)},
+        LAB_PAGE: {**layout, **lab_regions(lab_current_phd, lab_members)},
+        INDEX_PAGE: {**layout, **bio_regions(BIO_PATH)},
     }
     rendered_pages = {
         page: render_page(page, regions) for page, regions in pages.items()

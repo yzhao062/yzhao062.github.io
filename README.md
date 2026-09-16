@@ -118,6 +118,8 @@ The rest of this document is for the repo maintainer (Yue Zhao).
 
 ### How Content Flows
 
+The homepage, publications page, and lab page contain generated copies of the shared navbar, sidebar, and footer. Edit `includes/*.html`, then run `python scripts/prerender_pages.py`; do not hand-edit `PRERENDER:layout-*` blocks. Their identity and navigation remain available without JavaScript. Other pages retain the shared JavaScript loader. Run `python scripts/ci_check_site.py` before committing. It also checks canonical URLs, search metadata, and shared Person references. See [Search visibility](SEARCH_VISIBILITY.md) for the Search Console and deployment routine.
+
 #### Open-source projects (fully automated)
 
 ```

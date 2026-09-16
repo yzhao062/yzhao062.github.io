@@ -10,6 +10,10 @@ import re
 import subprocess
 import time
 import sys
+import textwrap
+from html.parser import HTMLParser
+from datetime import datetime
+import xml.etree.ElementTree as ET
 from pathlib import Path
 from urllib.parse import urlsplit
 from urllib.request import Request, urlopen
@@ -402,7 +406,8 @@ def check_local_refs(errors: list[str]) -> None:
     #   by design.
     # - `out/`: gitignored LaTeX / local-build output (CV PDF intermediates, agent
     #   scratch directories). Not present in CI but may exist in dev clones.
-    skip_top_level = {"news-snapshots", "out"}
+    # .cache contains ignored third-party review captures, not website HTML.
+    skip_top_level = {"news-snapshots", "out", ".cache"}
     # `skills/news-search/scratch/` is the gitignored working directory where a news-search
     # worker parks pages it downloaded in order to scan them. Those captures reference the
     # origin site's own assets, which are absent here by design, so scanning them reports
@@ -654,6 +659,120 @@ def check_bio_prerender_agrees(errors: list[str], warnings: list[str]) -> None:
             )
 
 
+class SearchMetadataParser(HTMLParser):
+    def __init__(self) -> None:
+        super().__init__()
+        self.title = ""
+        self.meta = {}
+        self.canonicals = []
+        self.schemas = []
+        self._in_title = False
+        self._in_schema = False
+        self._schema = ""
+
+    def handle_starttag(self, tag, attrs):
+        attrs = dict(attrs)
+        if tag == "title":
+            self._in_title = True
+        if tag == "meta":
+            self.meta[attrs.get("name", attrs.get("property"))] = attrs.get("content", "")
+        if tag == "link" and attrs.get("rel") == "canonical":
+            self.canonicals.append(attrs.get("href"))
+        if tag == "script" and attrs.get("type") == "application/ld+json":
+            self._in_schema = True
+            self._schema = ""
+
+    def handle_data(self, data):
+        if self._in_title:
+            self.title += data
+        if self._in_schema:
+            self._schema += data
+
+    def handle_endtag(self, tag):
+        if tag == "title":
+            self._in_title = False
+        if tag == "script" and self._in_schema:
+            self.schemas.append(json.loads(self._schema))
+            self._in_schema = False
+
+
+def check_search_metadata(errors: list[str]) -> None:
+    """Validate public search entry points and their static identity/navigation."""
+    base = "https://viterbi-web.usc.edu/~yzhao010/"
+    core_pages = {"index.html", "lab.html", "publications.html"}
+    try:
+        sitemap = ET.parse(ROOT / "sitemap.xml")
+    except (OSError, ET.ParseError) as exc:
+        errors.append(f"Invalid sitemap.xml: {exc}")
+        return
+    locations = [n.text or "" for n in sitemap.findall(".//{http://www.sitemaps.org/schemas/sitemap/0.9}loc")]
+    if not locations or len(locations) != len(set(locations)):
+        errors.append("Sitemap must contain unique canonical URLs")
+    titles, descriptions, parsed_pages = {}, {}, {}
+    for url in locations:
+        if not url.startswith(base) or "?" in url or "#" in url:
+            errors.append(f"Sitemap URL is not a canonical USC page: {url}")
+            continue
+        relative = url[len(base):] or "index.html"
+        path = (ROOT / relative).resolve()
+        if not path.is_relative_to(ROOT) or path.suffix != ".html" or not path.is_file():
+            errors.append(f"Sitemap target is not a local HTML page: {url}")
+            continue
+        source = read_text(path, errors)
+        parser = SearchMetadataParser()
+        try:
+            parser.feed(source)
+        except (ValueError, TypeError) as exc:
+            errors.append(f"{relative}: Invalid JSON-LD: {exc}")
+            continue
+        parsed_pages[relative] = parser
+        if parser.canonicals != [url] or parser.meta.get("og:url") != url:
+            errors.append(f"{relative}: Canonical and og:url must match its USC sitemap URL")
+        for label, value, seen in (("title", parser.title.strip(), titles), ("description", parser.meta.get("description", "").strip(), descriptions)):
+            if not value or value in seen:
+                errors.append(f"{relative}: Missing or duplicate search {label}")
+            seen[value] = relative
+        directives = {d.strip().lower() for d in parser.meta.get("robots", "").split(",")}
+        if directives & {"noindex", "none", "nofollow", "nosnippet"}:
+            errors.append(f"{relative}: Sitemap page blocks indexing, links, or snippets")
+        if relative in core_pages:
+            for name in ("navbar", "sidebar", "footer"):
+                block = re.search(rf"<!-- PRERENDER:layout-{name} START -->(.*?)<!-- PRERENDER:layout-{name} END -->", source, re.S)
+                expected = (ROOT / "includes" / f"{name}.html").read_text(encoding="utf-8").strip()
+                if not block or textwrap.dedent(block.group(1)).strip() != expected:
+                    errors.append(f"{relative}: Missing or stale static {name}; run scripts/prerender_pages.py")
+    for page in core_pages - parsed_pages.keys():
+        errors.append(f"Core search entry point absent from sitemap: {page}")
+    if not core_pages <= parsed_pages.keys():
+        return
+    schema_maps = {
+        page: {s.get("@type"): s for s in parsed_pages[page].schemas if isinstance(s, dict)}
+        for page in core_pages
+    }
+    person_id = base + "#person"
+    profile = schema_maps["index.html"].get("ProfilePage", {})
+    for field in ("dateCreated", "dateModified"):
+        if field in profile:
+            value = profile[field]
+            try:
+                valid_datetime = isinstance(value, str) and "T" in value and datetime.fromisoformat(value).tzinfo is not None
+            except ValueError:
+                valid_datetime = False
+            if not valid_datetime:
+                errors.append(f"index.html: Optional ProfilePage {field} needs an actual ISO datetime with timezone; omit if unknown")
+    person = profile.get("mainEntity", {})
+    if person.get("@id") != person_id or person.get("@type") != "Person" or person.get("name") != "Yue Zhao":
+        errors.append("index.html: ProfilePage must identify Yue Zhao with the canonical Person ID")
+    if person.get("image") != base + "images/rsz_300.jpg":
+        errors.append("index.html: Person image must match the visible headshot")
+    website = schema_maps["index.html"].get("WebSite", {})
+    if website.get("publisher", {}).get("@id") != person_id:
+        errors.append("index.html: WebSite publisher must reference the profile Person")
+    for page, kind, field in (("lab.html", "ResearchOrganization", "member"), ("publications.html", "CollectionPage", "author")):
+        if schema_maps[page].get(kind, {}).get(field, {}).get("@id") != person_id:
+            errors.append(f"{page}: {kind} {field} must reference the same Person")
+
+
 def main() -> None:
     errors: list[str] = []
     warnings: list[str] = []
@@ -667,6 +786,7 @@ def main() -> None:
     check_utf8_bom(errors)
     check_impact_claims_agree(errors, warnings)
     check_bio_prerender_agrees(errors, warnings)
+    check_search_metadata(errors)
     check_public_urls(errors, warnings)
 
     if errors:

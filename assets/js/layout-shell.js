@@ -10,7 +10,7 @@
             return;
         }
 
-        var fallbackContainer = document.querySelector("div.container");
+        var fallbackContainer = document.querySelector("body > div.container");
         if (fallbackContainer) {
             fallbackContainer.id = "main-content";
             fallbackContainer.setAttribute("role", "main");
@@ -29,6 +29,11 @@
     function loadInclude(targetId, url, onLoaded) {
         var target = document.getElementById(targetId);
         if (!target) return;
+
+        if (target.getAttribute("data-prerendered") === "true") {
+            if (typeof onLoaded === "function") onLoaded(target);
+            return;
+        }
 
         fetch(url)
             .then(function (response) {
