@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-09-15T14:20:08Z",
+  "generated_at": "2026-09-17T14:14:28Z",
   "source": "meta-finder citation-tracker, Semantic Scholar Graph API",
   "paper_count": 124,
-  "total_citations": 8729,
+  "total_citations": 8750,
   "papers": [
     {
       "id": "workshop-seva",
@@ -37,8 +37,8 @@
       "year": 2026,
       "venue": "ICLR, 2026",
       "section": "conference",
-      "citation_count": 8,
-      "influential_citations": 0
+      "citation_count": 9,
+      "influential_citations": 1
     },
     {
       "id": "conference-coact-co-active-preference-learning-with-human-ai-synergy",
@@ -55,7 +55,7 @@
       "year": 2026,
       "venue": "ICLR, 2026",
       "section": "conference",
-      "citation_count": 34,
+      "citation_count": 35,
       "influential_citations": 0
     },
     {
@@ -424,7 +424,7 @@
       "year": 2022,
       "venue": "NeurIPS, 2022",
       "section": "conference",
-      "citation_count": 502,
+      "citation_count": 504,
       "influential_citations": 75
     },
     {
@@ -442,7 +442,7 @@
       "year": 2022,
       "venue": "PAKDD, 2022",
       "section": "conference",
-      "citation_count": 149,
+      "citation_count": 150,
       "influential_citations": 13
     },
     {
@@ -523,7 +523,7 @@
       "year": 2020,
       "venue": "IEEE ICDM, 2020",
       "section": "conference",
-      "citation_count": 464,
+      "citation_count": 466,
       "influential_citations": 43
     },
     {
@@ -658,7 +658,7 @@
       "year": 2023,
       "venue": "ACM Computing Surveys, 2023",
       "section": "journal",
-      "citation_count": 2437,
+      "citation_count": 2441,
       "influential_citations": 76
     },
     {
@@ -685,7 +685,7 @@
       "year": 2022,
       "venue": "TKDE, 2022",
       "section": "journal",
-      "citation_count": 543,
+      "citation_count": 546,
       "influential_citations": 48
     },
     {
@@ -694,7 +694,7 @@
       "year": 2019,
       "venue": "JMLR, 2019.",
       "section": "journal",
-      "citation_count": 935,
+      "citation_count": 936,
       "influential_citations": 67
     },
     {
@@ -703,8 +703,8 @@
       "year": 2026,
       "venue": "EMNLP Findings, 2026",
       "section": "conference",
-      "citation_count": 1,
-      "influential_citations": 0
+      "citation_count": 3,
+      "influential_citations": 1
     },
     {
       "id": "conference-reasoning-of-llms-in-complex-social-environments",
@@ -730,7 +730,7 @@
       "year": 2026,
       "venue": "arXiv preprint",
       "section": "preprint",
-      "citation_count": 0,
+      "citation_count": 1,
       "influential_citations": 0
     },
     {
@@ -838,7 +838,7 @@
       "year": 2026,
       "venue": "arXiv preprint",
       "section": "preprint",
-      "citation_count": 6,
+      "citation_count": 7,
       "influential_citations": 0
     },
     {
@@ -883,7 +883,7 @@
       "year": 2026,
       "venue": "ACM AI Leadership Summit, 2026 (condensed 4-page version); earlier version at ACL 2026 KnowFM Workshop",
       "section": "conference",
-      "citation_count": 15,
+      "citation_count": 16,
       "influential_citations": 0
     },
     {
@@ -973,7 +973,7 @@
       "year": 2026,
       "venue": "arXiv preprint",
       "section": "preprint",
-      "citation_count": 0,
+      "citation_count": 1,
       "influential_citations": 0
     },
     {
