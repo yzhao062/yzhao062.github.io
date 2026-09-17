@@ -73,7 +73,7 @@
       "Resources",
       "Benchmarks"
     ],
-    "last_updated_at": "2026-09-11T22:24:02Z"
+    "last_updated_at": "2026-09-17T00:54:50Z"
   },
   {
     "name": "AD-AGENT",
@@ -267,7 +267,7 @@
     "docs_url": "https://tdcommons.ai",
     "paper_url": "https://proceedings.neurips.cc/paper/2021/hash/6a8d3b0f5987e0f6d3d2f5f65f02e3cc-Abstract.html",
     "demo_url": "",
-    "stars": 1283,
+    "stars": 1284,
     "tags": [
       "Therapeutics",
       "Benchmark",
@@ -341,7 +341,7 @@
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/aegis.html",
     "paper_url": "https://arxiv.org/abs/2603.12621",
     "demo_url": "https://github.com/Justin0504/Aegis/blob/main/docs/images/readme_demo1.gif",
-    "stars": 358,
+    "stars": 361,
     "tags": [
       "AI Agent Security",
       "Policy Enforcement",
@@ -398,7 +398,7 @@
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/agent-style.html",
     "paper_url": "",
     "demo_url": "https://pypi.org/project/agent-style/",
-    "stars": 686,
+    "stars": 688,
     "tags": [
       "AI Agents",
       "Agent Configuration",
