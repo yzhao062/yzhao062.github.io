@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-09-17T14:14:28Z",
+  "generated_at": "2026-09-19T13:03:07Z",
   "source": "meta-finder citation-tracker, Semantic Scholar Graph API",
   "paper_count": 124,
-  "total_citations": 8750,
+  "total_citations": 8765,
   "papers": [
     {
       "id": "workshop-seva",
@@ -109,7 +109,7 @@
       "year": 2026,
       "venue": "ICLR, 2026",
       "section": "conference",
-      "citation_count": 55,
+      "citation_count": 56,
       "influential_citations": 1
     },
     {
@@ -127,7 +127,7 @@
       "year": 2025,
       "venue": "KDD (Lecture-Style Tutorial Track), 2025",
       "section": "workshop",
-      "citation_count": 34,
+      "citation_count": 35,
       "influential_citations": 1
     },
     {
@@ -163,7 +163,7 @@
       "year": 2025,
       "venue": "AAAI Workshop on Foundation Models for Biological Discoveries (FMs4Bio), 2025",
       "section": "workshop",
-      "citation_count": 48,
+      "citation_count": 49,
       "influential_citations": 3
     },
     {
@@ -199,7 +199,7 @@
       "year": 2025,
       "venue": "ACL, 2025",
       "section": "conference",
-      "citation_count": 29,
+      "citation_count": 30,
       "influential_citations": 0
     },
     {
@@ -361,7 +361,7 @@
       "year": 2024,
       "venue": "AAAI New Faculty Highlights, 2024",
       "section": "conference",
-      "citation_count": 4,
+      "citation_count": 5,
       "influential_citations": 0
     },
     {
@@ -469,7 +469,7 @@
       "year": 2021,
       "venue": "NeurIPS, 2021",
       "section": "conference",
-      "citation_count": 266,
+      "citation_count": 267,
       "influential_citations": 31
     },
     {
@@ -523,7 +523,7 @@
       "year": 2020,
       "venue": "IEEE ICDM, 2020",
       "section": "conference",
-      "citation_count": 466,
+      "citation_count": 467,
       "influential_citations": 43
     },
     {
@@ -658,7 +658,7 @@
       "year": 2023,
       "venue": "ACM Computing Surveys, 2023",
       "section": "journal",
-      "citation_count": 2441,
+      "citation_count": 2444,
       "influential_citations": 76
     },
     {
@@ -676,7 +676,7 @@
       "year": 2022,
       "venue": "Nature Chemical Biology, 2022",
       "section": "journal",
-      "citation_count": 214,
+      "citation_count": 215,
       "influential_citations": 11
     },
     {
@@ -748,7 +748,7 @@
       "year": 2026,
       "venue": "arXiv preprint",
       "section": "preprint",
-      "citation_count": 7,
+      "citation_count": 8,
       "influential_citations": 0
     },
     {
@@ -856,8 +856,8 @@
       "year": 2026,
       "venue": "arXiv preprint",
       "section": "preprint",
-      "citation_count": 1,
-      "influential_citations": 0
+      "citation_count": 2,
+      "influential_citations": 1
     },
     {
       "id": "preprint-ufcod",
@@ -982,7 +982,7 @@
       "year": 2025,
       "venue": "arXiv preprint",
       "section": "preprint",
-      "citation_count": 10,
+      "citation_count": 11,
       "influential_citations": 0
     },
     {
@@ -1117,7 +1117,7 @@
       "year": 2024,
       "venue": "arXiv preprint",
       "section": "preprint",
-      "citation_count": 39,
+      "citation_count": 40,
       "influential_citations": 0
     }
   ]
