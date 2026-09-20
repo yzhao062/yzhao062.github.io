@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="博士栈">
+  <rect width="64" height="64" rx="14" fill="#1f6feb"/>
+  <path d="M32 12 L52 23 L32 34 L12 23 Z" fill="#ffffff"/>
+  <path d="M12 31 L32 42 L52 31" fill="none" stroke="#ffffff" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M12 39 L32 50 L52 39" fill="none" stroke="#ffffff" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

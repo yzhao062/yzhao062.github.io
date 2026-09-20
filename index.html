@@ -145,7 +145,7 @@
       padding: 0 5px; color: #990000; font-weight: 600;
     }
 
-    /* ---- Ecosystem card: three layers, one spine ---------------------------- */
+    /* ---- Ecosystem card: four layers, one spine ----------------------------- */
     .eco-layer + .eco-layer { margin-top: 18px; }
     .eco-layer-body { min-width: 0; }
     .eco-layer-label {
@@ -190,6 +190,15 @@
       .eco-well { padding: 7px 10px; }
       .eco-well .eco-name { font-size: 0.94rem; margin: 0 0 1px; }
     }
+
+    /* ---- Media layer --------------------------------------------------------- */
+    .eco-media {
+      display: flex; align-items: center; gap: 12px;
+      background: #fff; border: 1px solid #eccfcf; border-radius: 4px;
+      padding: 9px 11px;
+    }
+    .eco-media img { width: 40px; height: 40px; border-radius: 4px; flex: none; }
+    .eco-media .eco-name { font-size: 0.98rem; font-weight: 700; margin-bottom: 1px; }
 
     /* ---- Lifecycle layer: a rail that turns vertical when the stages stack --- */
     .lc-track { position: relative; }
@@ -289,8 +298,8 @@
                             </ul>
                         </li>
                         <li class="nav-item d-none d-xl-flex align-items-center" aria-hidden="true"><span style="width:1px; height:18px; background:rgba(255,255,255,0.30);"></span></li>
-                        <li class="nav-item"><a class="nav-link" href="https://auditcommons.org/" target="_blank" rel="noopener" style="color: #FFFFFF;">Audit Commons <i class="fas fa-arrow-up-right-from-square" style="font-size:0.7em; margin-left:0.2rem; opacity:0.85;" aria-hidden="true"></i></a></li>
-                        <li class="nav-item"><a class="nav-link" href="https://csphd.org" target="_blank" rel="noopener" style="color: #FFFFFF;">博士栈 CSPhD.org <i class="fas fa-arrow-up-right-from-square" style="font-size:0.7em; margin-left:0.2rem; opacity:0.85;" aria-hidden="true"></i></a></li>
+                        <li class="nav-item"><a class="nav-link" href="https://auditcommons.org/" target="_blank" rel="noopener" style="color: #FFFFFF;"><img src="images/audit-commons.svg" alt="" width="17" height="17" style="margin-right:0.32rem; border-radius:2px; vertical-align:-3px;">Audit Commons <i class="fas fa-arrow-up-right-from-square" style="font-size:0.7em; margin-left:0.2rem; opacity:0.85;" aria-hidden="true"></i></a></li>
+                        <li class="nav-item"><a class="nav-link" href="https://csphd.org" target="_blank" rel="noopener" style="color: #FFFFFF;"><img src="images/csphd.svg" alt="" width="17" height="17" style="margin-right:0.32rem; border-radius:3px; vertical-align:-3px;">博士栈 CSPhD.org <i class="fas fa-arrow-up-right-from-square" style="font-size:0.7em; margin-left:0.2rem; opacity:0.85;" aria-hidden="true"></i></a></li>
                         <li class="nav-item d-none d-xl-flex align-items-center" aria-hidden="true"><span style="width:1px; height:18px; background:rgba(255,255,255,0.30);"></span></li>
                         <li class="nav-item"><a class="nav-link" href="collaboration.html" style="color: #FFFFFF;">Collaboration</a></li>
                         <li class="nav-item"><a class="nav-link" href="files/ZHAO_YUE_CV.pdf" style="color: #FFFFFF;">CV / Resume</a></li>
@@ -357,29 +366,23 @@
                         <h2 id="research" style="color:#990000; border-bottom:2px solid #990000; padding-bottom:6px; margin:30px 0 16px 0;">&#128300; Research</h2>
                         <div style="background:#fff7f7; border-left:4px solid #990000; padding:12px 16px; margin:8px 0 12px 0;">
                           <p style="margin:0 0 9px 0;">
-                            <strong>Auditable AI Systems.</strong> When no ground truth settles the answer, you can
-                            still ask four questions of the record a system leaves behind.
+                            <strong>Auditable AI Systems.</strong> LLMs and AI agents now generate answers, call tools,
+                            and take actions on their own. In many real settings, there is no definitive ground truth
+                            for whether they behaved correctly. Our lab develops methods, benchmarks, and open-source
+                            infrastructure that preserve enough evidence to audit their behavior through four questions:
                           </p>
                           <div style="margin:0 0 10px 0; padding-left:12px; border-left:2px solid #e8d0d0;">
-                            <div style="color:#444; font-size:0.95rem; line-height:1.75;"><strong style="color:#990000;">Data</strong> &middot; does the input resemble anything the system was built for?</div>
-                            <div style="color:#444; font-size:0.95rem; line-height:1.75;"><strong style="color:#990000;">Output</strong> &middot; does it hold up against evidence?</div>
-                            <div style="color:#444; font-size:0.95rem; line-height:1.75;"><strong style="color:#990000;">Action</strong> &middot; was it allowed?</div>
-                            <div style="color:#444; font-size:0.95rem; line-height:1.75;"><strong style="color:#990000;">Effort</strong> &middot; was the work necessary?</div>
+                            <div style="color:#444; font-size:0.95rem; line-height:1.75;"><strong style="color:#990000;">Data</strong> &middot; did the system receive an anomalous or unfamiliar input?</div>
+                            <div style="color:#444; font-size:0.95rem; line-height:1.75;"><strong style="color:#990000;">Output</strong> &middot; does an LLM's answer hold up against evidence when no reference answer exists?</div>
+                            <div style="color:#444; font-size:0.95rem; line-height:1.75;"><strong style="color:#990000;">Action</strong> &middot; did an AI agent stay within its instructions and permissions?</div>
+                            <div style="color:#444; font-size:0.95rem; line-height:1.75;"><strong style="color:#990000;">Effort</strong> &middot; did it use the right models, tools, and compute to complete the task efficiently?</div>
                           </div>
                           <p style="margin:0;">
-                            Three of them ask whether something went wrong. The fourth asks whether it was needed.
-                            That fourth question is the one industry brings us: the companies that reach out want
-                            agents that cost less and finish faster. Building the record that answers all four is
-                            the lab's contribution to AI Assurance. The question underneath is what evidence is
-                            enough to rely on a system when ground truth is absent.
+                            Together, these questions connect anomaly detection, LLM evaluation, agent security,
+                            and agent efficiency. They make AI behavior easier to inspect, verify, account for,
+                            and optimize before deployment and after a run.
                           </p>
                         </div>
-
-
-                        <p>
-                          I maintain <a href="https://auditcommons.org/" target="_blank" rel="noopener"><strong>Audit Commons</strong></a>,
-                          a publication covering AI auditing news, research explainers, practical guides, and selected resources.
-                        </p>
 
                         <div style="
                           background-color:#fff7f7;
@@ -496,6 +499,18 @@
                               </div>
                             </div>
                           </div>
+                          <div class="eco-layer">
+                            <div class="eco-layer-label">Media</div>
+                            <div class="eco-layer-body">
+                              <div class="eco-media">
+                                <img src="images/audit-commons.svg" alt="" width="40" height="40">
+                                <div>
+                                  <div class="eco-name"><a href="https://auditcommons.org/" target="_blank" rel="noopener">Audit Commons</a></div>
+                                  <div class="eco-items">AI auditing news, research explainers, practical guides, and selected tools, benchmarks, datasets, and standards.</div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                         </div>
 
                         <ol>
@@ -594,9 +609,9 @@
                         <!-- PRERENDER:bio START -->
                                                 <details class="smart-details" style="margin:16px 0 14px 0;">
                                                   <summary><h3 style="display:inline; color:#990000; font-size:1rem; font-weight:700; line-height:inherit; margin:0;">Biography</h3></summary>
-                                                  <p>Dr. Yue Zhao is an Assistant Professor of Computer Science at the University of Southern California, where he leads the FORTIS Lab. He serves as Associate Co-Director of the USC Institute on Ethics and Trust in Computing for 2026-2027. His lab builds Auditable AI Systems across four audit questions: detecting anomalies in data, verifying outputs, auditing actions, and optimizing effort when no ground truth is available to check against. For each question, the work records what happened so that it can be reconstructed and checked after the fact. Auditability serves accountability and efficiency alike: the same evidence shows what a system did wrong and what it never needed to do. This is the lab's contribution to the broader field of AI Assurance. The program spans anomaly and outlier detection at scale, LLM evaluation where no reference answer exists, and the security and auditability of AI agents that act on their own. Its current frontier is agent auditability: open-source infrastructure that audits AI agents from before deployment to after a run. He also advises early-stage AI startups.</p>
-                                                  <p>Dr. Zhao has authored over 80 peer-reviewed papers. His open-source projects, including PyOD, ADBench, TrustLLM, agent-audit, and Aegis, together exceed 65 million downloads and 30,000 GitHub stars. PyOD is named by OpenAI, used by Apache Beam, Amazon, Walmart, Databricks, and the European Space Agency, and cited in 49 patents and five books. Official guidance names it across Europe, Asia, the Middle East, and Latin America, from defense ministries and central banks to national AI authorities. Brazilian federal and congressional procurement audits run it. A Bank of Thailand paper published by the Bank for International Settlements states an eventual goal of deploying ECOD in production against its regulatory credit data. TrustLLM is cited in a U.S. Senate committee report and a NIST special publication on adversarial machine learning. Both the 2025 and 2026 editions of the International AI Safety Report cite it. Japan's National Institute of Information and Communications Technology describes it in a cybersecurity deck, and its AI Security Evaluation Platform builds two of three selectable test sets on it. It is an official benchmark in all four editions of the Future of Life Institute AI Safety Index through Summer 2026. The U.S. Department of Defense CDAO Generative AI Responsible AI Toolkit recommends both. Therapeutics Data Commons, which he co-authored, supplied the training data for Google Research's Tx-LLM and the prediction tasks in Google DeepMind's TxGemma.</p>
-                                                  <p>His awards include the NVIDIA Academic Grant Program Award, multiple Amazon Research Awards, the Capital One Research Award, and the Foresight Institute AI for Safety &amp; Science Nodes Grant. NSF grants and a Meta sponsored research agreement fund the lab alongside them. Those NSF grants include both phases of Pathways to Enable Open-Source Ecosystems (POSE). AAAI selected him for New Faculty Highlights, and his papers have won a Best Short Paper Award at ACM SIGSPATIAL and a Second Prize CCC Award at the IEEE ICDM BlueSky Track. He serves as an Associate or Action Editor for Transactions on Machine Learning Research, ACM Transactions on AI for Science, IEEE Transactions on Neural Networks and Learning Systems, and the Journal of Data-Centric Machine Learning Research. At conferences he is an Area Chair for ICLR, ICML, and NeurIPS.</p>
+                                                  <p>Dr. Yue Zhao is an Assistant Professor of Computer Science at the University of Southern California, where he leads the FORTIS Lab. He serves as Associate Co-Director of the USC Institute on Ethics and Trust in Computing for 2026-2027. He received his Ph.D. from Carnegie Mellon University's Heinz College of Information Systems and Public Policy in 2023. His lab builds Auditable AI Systems across data, outputs, actions, and effort, making AI behavior easier to inspect, verify, account for, and optimize. The program spans anomaly detection, LLM evaluation, and the security and efficiency of AI agents, with a current focus on open-source infrastructure for auditing autonomous agents before deployment and after a run.</p>
+                                                  <p>Dr. Zhao has authored over 80 peer-reviewed papers. His open-source projects, including PyOD, ADBench, TrustLLM, agent-audit, and Aegis, together exceed 65 million downloads and 30,000 GitHub stars. PyOD is named by OpenAI, used by Apache Beam, Amazon, Walmart, Databricks, and the European Space Agency, and cited in 49 patents and five books. TrustLLM is cited in a U.S. Senate committee report, a NIST special publication on adversarial machine learning, and the 2025 and 2026 editions of the International AI Safety Report.</p>
+                                                  <p>His honors include the NVIDIA Academic Grant Program Award, multiple Amazon Research Awards, the Capital One Research Award, and the Foresight Institute AI for Safety &amp; Science Nodes Grant. A Meta sponsored research agreement also supports the lab. AAAI selected him for New Faculty Highlights, and his papers have won a Best Short Paper Award at ACM SIGSPATIAL and a Second Prize CCC Award at the IEEE ICDM BlueSky Track. He is an Action Editor for Transactions on Machine Learning Research and the Journal of Data-centric Machine Learning Research, and an Associate Editor for ACM Transactions on AI for Science and IEEE Transactions on Neural Networks and Learning Systems.</p>
                                                 </details>
                         <!-- PRERENDER:bio END -->
 
