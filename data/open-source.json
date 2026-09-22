@@ -27,7 +27,7 @@
     "docs_url": "https://pyod.readthedocs.io",
     "paper_url": "https://arxiv.org/abs/2412.12154",
     "demo_url": "",
-    "stars": 10011,
+    "stars": 10012,
     "tags": [
       "Anomaly Detection",
       "Outlier Detection",
@@ -84,7 +84,7 @@
     "docs_url": "https://usc-fortis.github.io/AD-AGENT/",
     "paper_url": "https://arxiv.org/abs/2505.12594",
     "demo_url": "",
-    "stars": 102,
+    "stars": 103,
     "tags": [
       "LLM Agents",
       "Anomaly Detection",
@@ -158,7 +158,7 @@
     "docs_url": "",
     "paper_url": "https://proceedings.neurips.cc/paper_files/paper/2022/hash/da0ddd47c18ae3dd2888ff2ea4b6ccf7-Abstract-Datasets_and_Benchmarks.html",
     "demo_url": "",
-    "stars": 1023,
+    "stars": 1022,
     "tags": [
       "Anomaly Detection",
       "Benchmark",
@@ -176,7 +176,7 @@
     "docs_url": "",
     "paper_url": "",
     "demo_url": "",
-    "stars": 9392,
+    "stars": 9394,
     "tags": [
       "Awesome List",
       "Anomaly Detection",
@@ -231,7 +231,7 @@
     "docs_url": "https://docs.pygod.org",
     "paper_url": "http://jmlr.org/papers/v25/23-0963.html",
     "demo_url": "",
-    "stars": 1496,
+    "stars": 1495,
     "tags": [
       "Graph Anomaly Detection",
       "PyTorch Geometric",
@@ -341,7 +341,7 @@
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/aegis.html",
     "paper_url": "https://arxiv.org/abs/2603.12621",
     "demo_url": "https://github.com/Justin0504/Aegis/blob/main/docs/images/readme_demo1.gif",
-    "stars": 387,
+    "stars": 398,
     "tags": [
       "AI Agent Security",
       "Policy Enforcement",
@@ -398,7 +398,7 @@
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/agent-style.html",
     "paper_url": "",
     "demo_url": "https://pypi.org/project/agent-style/",
-    "stars": 691,
+    "stars": 693,
     "tags": [
       "AI Agents",
       "Agent Configuration",
