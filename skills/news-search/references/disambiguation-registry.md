@@ -253,6 +253,70 @@ Leads that repeatedly surface like positives but are confirmed not to name FORTI
 | Mainstream tech and AI-newsletter tier for the agent-auditing line (MIT Technology Review, IEEE Spectrum, Forbes, Synced, MarkTechPost, Unite.AI, Import AI, The Sequence, Last Week in AI, Gary Marcus, AI Snake Oil, Simon Willison) | 2026-07-31 D3 | Clean zero. The agent-auditing line has no penetration into general tech journalism as of this date; the PyOD footprint in that tier is confined to practitioner tutorials and mostly predates 2026. |
 | `aiproductivity.ai` (phantom search result) | 2026-07-31 D4 | Surfaced in search results but 404s on two fetches and is absent from the site's own news index. A clean illustration that a search result can reference a page that does not exist. |
 
+### Aegis, 2026-09-22 Round: the Collision Surface Is Now the Finding
+
+47 collision records in one round, 29 of them inside agent security, AI guardrails, or cloud host
+security. The name no longer discriminates, and a search for "Aegis agent security" returns at
+least three different research projects. New claimants registered this round, beyond those already
+listed above:
+
+| Name | What it actually is |
+|---|---|
+| arXiv:2608.16891 "Aegis" | An independent agent-security paper on runtime action boundaries by Adam Mazzocchetti, covered by The Agent Times. **Same name, same subfield, different authors.** |
+| "Aegis: Towards Governance, Integrity, and Security of AI Voice Agents" | A separate paper in the Promptfoo LLM Security Database. Same name, adjacent subfield. |
+| UK AISI AEGIS | A prompt-injection benchmark, unrelated to the tool-call firewall. |
+| AegisSwarm-Core (Sunil Gentyala) | Multi-agent zero trust, published through the Cloud Security Alliance. |
+| Undercurrent AEGIS | A commercial MCP governance tool, a six-gate decision protocol. |
+| M2MCent Aegis Policy MCP | A factory MCP governance proxy on Smithery. |
+| SpartanX Aegis | A commercial egress gateway enforcing network guardrails. |
+| Gaincontrol Aegis | A commercial authorization module. |
+| Alibaba Cloud / Volcengine Aegis (安骑士) | A cloud host security agent. |
+| CNCF AegisBPF | An in-kernel eBPF LSM enforcement mechanism. |
+| Red Hat aegis-ai | A Red Hat repository. |
+| AEGIS IT RESEARCH UG | A German consortium partner and deliverable editor. **All 15 "Aegis" hits across the EU C4IIoT corpus resolve to this company**, not to arXiv:2603.12621. |
+| Aegis Software, AEGIS.net, aegis.stanford.edu, Hoover Aegis Paper Series, Aegis Authenticator, Aegis Ventures, Aegis Protocol, ITIF Aegis Project, Xiaomi HarnessX AEGIS, Lockheed/US Navy AEGIS | Manufacturing execution software, health IT, a Gene Ontology tool, a national-security working-paper series, a 2FA app, a venture fund, a blockchain protocol, a tech-competitiveness program, an evolution engine, and a combat system. |
+
+### Further Collisions Registered 2026-09-22
+
+| Name | What it actually is | Where it surfaced |
+|---|---|---|
+| Microsoft ADBench | Automatic Differentiation Benchmark, `microsoft/ADBench` | CSDN, Microsoft Research |
+| Tencent AD-Bench | An advertising LLM-agent benchmark | CSDN, Hugging Face Papers |
+| UPC/BSC ADBench | An autonomous driving systems benchmark, Tabani et al. in *Computing* | Springer |
+| TrustLLM-IoMT | An LLM-driven node trust scheme for medical IoT federated learning | Elsevier *IoT* |
+| PYOD LLC | A consumer debt purchaser appearing in court records and SEC filings | Justia, SSRN, SEC |
+| Pyruvate Oxidase (EC 1.2.3.3) | A biochemical enzyme abbreviated PyOD in patents and assays | Google Patents, Daewoong, Lykera Biomed |
+| Pyodide | The WebAssembly Python runtime; prefix collision only | Zenn |
+| "PYOD" in Taiwanese education research | "Prepare Your Own Device and determination" | Emerald |
+| Transit Operational Data Standard | An open transit data format abbreviated TODS | standards listings |
+| Tod's | The Italian luxury brand, which ranks on TODS in business press | WSJ, FT |
+| CyberOK agent-audit, OpenClaw agentaudit.dev, @fullstackdegen/@agent-audit/mcp-server | Three unrelated projects using the `agent-audit` name; the last is a Lighthouse web-performance auditor | GitHub, Glama, OpenClaw |
+| BSI "Towards Auditable AI Systems" | A German federal office whitepaper using the phrase descriptively | ENISA |
+| SpecAlign (Imperial/Zheng; construction software; Wong Lab 2005) | Three unrelated projects sharing the name with the lab's LLM alignment paper | arXiv, commercial |
+| GEO-Bench (Princeton 2023; AI Alliance Earth observation) | Two unrelated benchmarks | arXiv, AI Alliance |
+| Yue Zhao (NVIDIA Graduate Fellow, UT Austin, video models) | A different person, advised by Philipp Krahenbuhl | NVIDIA Research |
+| Yue Zhao (Amazon Science, antibody and oncology research) | A different person | Amazon Science |
+| Yue Zhao (GM Cruise; Temple University pharmaceutical chemistry) | Two different patent inventors | Google Patents |
+| Yue Zhao (University of Utah / LIGO astrophysics) | A different person | NASA NTRS |
+| Yue Zhao (maritime law, flag state jurisdiction) | A different person | Brookings |
+| Yue Zhao (1997 Montgomery County high school student) | A different person | The Washington Post |
+| Jiale Zhao (Oregon State), Xinyu Zhao (Beihang), Youjian Zhao (Tsinghua, OmniAnomaly) | Distinct researchers whose surnames match | arXiv, ACM, GitHub |
+
+### Verified-Negative Leads Added 2026-09-22
+
+| Source | Verified date | Why it surfaces / what it really covers |
+|---|---|---|
+| Gartner "Govern AI Using TRiSM", "Consult the Board: LLM Strategies", and the Peer Insights AI-security page | 2026-09-22 | **All three URLs return HTTP 404 with zero Wayback captures.** They are constructed addresses rather than gated documents, and no evidence has ever been produced that any of them mentions TrustLLM. Stop carrying them as "held, gated". |
+| OpenSSF Scorecard pages for `yzhao062/pyod` and `mims-harvard/TDC` | 2026-09-22 | JavaScript shells whose only content is the machine-emitted JSON scorecard every public GitHub repository receives. First-party targets and a templated database page, the same grounds on which deps.dev was dropped. |
+| MLCommons AI Safety Benchmark v0.5 (arXiv:2404.12241) | 2026-09-22 | Cites TrustLLM at reference [152], pp.28-29, but Bertie Vidgen (first author), Joaquin Vanschoren (last author) and Bhavya Kailkhura are TrustLLM co-authors. A self-citation, and the clearest case for screening against the co-author list rather than the surname. |
+| Google Cloud Assured OSS supported-package lists | 2026-09-22 | The cited URL 404s, and both live package lists (free tier and Security Command Center premium) run `pynndescent, pynput, pyotp` with nothing between. PyOD is absent. |
+| Brookings, CSIS, Carnegie Endowment, Atlantic Council, CFR, Hoover, Stanford HAI, CAIS, GovAI, Epoch AI, IAPS, Partnership on AI, AI Now, Data & Society, CDT, EFF | 2026-09-22 D8c | Deep PDF sweeps; zero FORTIS citations. Every Aegis hit is the naval combat system or the Hoover paper series. RAND is the exception and now carries a confirmed citation. |
+| China TC260 AI Safety Governance Framework 3.0 (136 pp), CAICT AI Safety Bluebook (51 pp), BIS Working Paper 1188, Singapore IMDA "Legal Responsibility for AI Agents" (36 pp), ITU-T YSTR-IADIoT | 2026-09-22 D8b | All read in full; zero FORTIS terms. Re-check each on its next revision. |
+| NIST AI 300-1 ipd, NIST IR 8607, GAO-26-107624, CISA OSS Security Principles, CISA Gold Eagle, White House NSTM-4, OMB M-26-16, Treasury AI cybersecurity report, Federal Reserve AI Use Case Inventory 2025 | 2026-09-22 D8a | 15 high-priority recent government publications opened and scanned across all 24 FORTIS terms; all clean. |
+| Apple, Microsoft Phi-3/4, DeepSeek, Qwen, Cohere, Snowflake, Databricks technical reports; OpenAI GPT-4o system card (33 pp, full PDF) | 2026-09-22 D8d | Clean. In the GPT-4o card every "Zhao" is a different researcher (Shengjia, Hao, Zhicong, Z. Zhao). |
+| ISO/IEC JTC1 SC42, UK AISI Inspect Evals register, Thoughtworks Technology Radar | 2026-09-22 D8e | Clean zeros. Inspect Evals remains an open submission window rather than a citation. |
+| National grant and procurement registries: NSF, NIH RePORTER, CORDIS, UKRI Gateway, DFG GEPRIS, SNSF, JSPS KAKEN, NSFC, ANR; SAM.gov, SBIR, UK Contracts Finder; CourtListener, Justia, SEC EDGAR | 2026-09-22 deep sweep | Clean zeros across all of them. Corporate filings and litigation treat outlier detection as an internal method without naming an academic dependency. A well-bounded negative; suppress for at least two quarters. |
+
 ## How to Use This File
 
 1. **Before counting a Tier 0/1 candidate**: search this file for the source name or tool name. If it appears under "Verified-Negative Leads", do not re-search; the negative is already recorded.

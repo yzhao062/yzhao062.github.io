@@ -112,6 +112,14 @@ is `tier_guess: T0` with `status: verified-negative`. Reading only the tier caus
 2026-09-12 round to count eleven such documents as Tier 0 coverage, overstating new Tier 0 by a
 factor of six. Report outcome from `status`, always.
 
+**Every verdict record carries `tier_was`.** It holds the Phase A tier the candidate arrived with,
+copied verbatim even when the tier does not change, and `tier_guess` holds the tier after
+verification. The field is what makes Phase A measurable, and it is the only route to the
+calibration figures this file quotes. On 2026-09-22 it was written on 70 of 481 records, which cost
+that round its tier-movement measurement entirely and nearly bought a rule change on a number
+nobody could reproduce. A record missing `tier_was` is a defective record, not a record with a
+missing optional field.
+
 **Screen self-citations against the co-author list, not against the surname.** One round excluded
 seven co-author works before candidacy and found three apparent per-work zeros were entirely
 explained by cross-citation inside the PI's own portfolio. Keep the frequent-co-author list to hand
@@ -137,6 +145,14 @@ tiers held, **110 moved down, and none moved up**. A one-directional 26.2% error
 is optimistic rather than imprecise. The bias is worst at the top, where six Tier 0 candidates
 yielded one Tier 0 row. Report Phase A high-tier counts as claims, and use tier language only for
 verified rows.
+
+*On 2026-09-22 this rule was rewritten to say a tier is a ceiling on a calibrated surface and a
+floor on a new one. The rewrite rested on a reported 110 down and 20 up over 378 candidates, and
+was reverted the same day. What reverted it is worth more than the rule change: the claim could
+not be reproduced. Only 70 of that round's 481 verdict records carried `tier_was`, and only 56
+carried both `tier_was` and a final tier, which left no basis for a movement count over 378
+candidates. Two reviewers challenged the rewrite as too thin, and the recount showed the evidence
+was not thin but absent. A rule change needs the field that measures it to be mandatory in the verdict schema first.*
 
 **Decide first-party by authorship, not by host.** A domain regex covering the lab's own accounts
 passed 47 first-party records in one round, every one of which Phase B dropped: the lab's own papers

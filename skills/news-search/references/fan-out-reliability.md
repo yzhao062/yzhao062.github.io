@@ -340,6 +340,63 @@ member-only posts, and one anti-bot captcha survived every route. Never bypass a
 credential sharing, no cookie injection, no paywall-removal mirrors. A named `still_blocked` with its
 route list is the honest answer and the useful one.
 
+## Failure 17: A Calibration Claim Without the Field That Measures It
+
+The 2026-09-12 round measured 110 tier downgrades against zero upgrades over 420 candidates and
+concluded that a Phase A tier is a ceiling. Ten days later, a round reported 110 down and 20 up over
+378, with 14 of the 20 from the thesis unit. It rewrote the rule to say a tier is a ceiling on a
+calibrated surface and a floor on a new one.
+
+The rewrite was reverted the same day, for a reason stronger than the one the reviewers gave. They
+called one round on one new surface too thin. The recount found the evidence was not thin but
+absent. `tier_was`, the field that holds the Phase A tier, was written on 70 of 481 verdict records,
+and only 56 carried both it and a final tier. No movement count over 378 candidates was ever
+available, so the figure in the rewrite had no source.
+
+The lesson is about capture, not about tiers. A calibration figure is only as good as the field it is
+counted from, and a field that is optional at capture time cannot be reconstructed afterwards. The
+verdict schema in `SKILL.md` now requires `tier_was` on every record, and the 420-candidate rule stands.
+Whether a new surface under-tiers is an open question that the next round can answer, now that the
+field will exist.
+
+## Failure 18: Screening Self-Citations by Surname or Domain
+
+Six self-citations in one round would have passed a surname or domain filter. Each was caught only
+by intersecting the citing document's full author block against the cited work's author list:
+
+- MLCommons AI Safety Benchmark v0.5 cites TrustLLM; its first author, its last author, and one
+  further co-author are TrustLLM co-authors. Yue Zhao is not an MLCommons author, so no surname
+  appears twice.
+- Nature Machine Intelligence 10.1038/s42256-023-00740-3 cites TDC; Connor W. Coley is a TDC
+  co-author.
+- ACM Computing Surveys 10.1145/3626235 is the lab's own Diffusion Models survey, and the
+  citation-affiliation appendix books its self-citation as an OpenAI Tier 0 institution row.
+- IEEE TNNLS 10.1109/tnnls.2024.3497801 is the journal version of NNG-Mix.
+- An arXiv Graph-of-Skills paper cites LangSkills; Lichao Sun is a LangSkills author.
+- An IJCV 2026 survey cites DPU and MultiOOD; Hao Dong, Eleni Chatzi and Olga Fink are co-authors.
+
+Keep the frequent-co-author list to hand and read the citing document's author block. A surname
+screen is not a self-citation screen.
+
+## Failure 19: Believing an Address a Lane Reports
+
+Six verification shards measured it on 2026-09-22. `web2` carried 9 wrong addresses out of 32, three
+of which do not exist at all. `thesis` carried 4 of 33, one pointing at a history dissertation about
+1980s Brazilian rock music. In `academic2`, two claims were fabricated around a bare `site:` hit that
+returned a publisher homepage. `standards` found all three Gartner URLs to be 404s rather than
+paywalls, and `gov` found a NIST URL that 404s and is absent from the NIST publications database.
+
+Two shapes recur and they need different handling. Sometimes a lane reports a bare domain root
+instead of the document, as in six of the web2 corrections. Other times it reports a real-looking
+address that resolves to a different document, such as a thesis handle pointing at another thesis or
+a YouTube ID that does not exist.
+The per-unit figures above count only the second shape. Across all 378 candidates, 22 verified only
+at a corrected address, counting both.
+
+The countermeasure is cheap and it works: fetch the address before believing the claim, and when it
+404s, search for the document by title rather than dropping the lead. A 404 is a fact about the
+address, never about the claim.
+
 ## Checklist for the Next Round
 
 1. Write unit lists with `newline='\n'`, and strip `\r` at the point of use anyway.
@@ -384,6 +441,18 @@ route list is the honest answer and the useful one.
     publisher's companion repository for a book, `api.stackexchange.com` for a forum, and a browser
     User-Agent for a bot-detection 403, before recording `paywall_or_blocked`. Record the routes tried.
     Measured: 21 of 29 blocked items yielded, none of them by bypassing access control.
+
+21. Write `tier_was` on every verdict record, copied verbatim even when the tier holds. It is the
+    only source for a tier-movement figure. Measured: written on 70 of 481 records in one round,
+    which left that round with no movement count at all.
+22. Screen self-citations against the cited work's full author list, never against the surname or
+    the host. Six in one round passed a surname screen.
+23. Fetch every address a lane reports before believing its claim, and search by title when it
+    404s. Measured on 2026-09-22: 22 of 378 candidates verified only at a corrected address, 14 of
+    them in one 32-record shard. Treat that as a floor, because a candidate dropped at a wrong
+    address records no correction.
+24. Key the suppression index by truncated-title prefix as well as by URL, DOI, arXiv id, patent
+    number and OSTI accession. Two already-counted rows were reachable only that way.
 
 `scripts/dispatch_lanes.sh` implements the mechanical parts of items 1, 3, 4, 5 and 8. Its
 `result_complete` helper is the item 5 check, and it gates the skip-if-done branch and the launch

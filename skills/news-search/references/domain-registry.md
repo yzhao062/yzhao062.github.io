@@ -158,6 +158,59 @@ A confirmed-hit class with no registry entry until 2026-08-09. Analyst and consu
 | gartner.com | Agent-governance and enterprise-coding-agent reports. No FORTIS naming found as of 2026-08-09. Added 2026-08-09. |
 | idc.com | Not yet swept. Added 2026-08-09. |
 
+## Thesis and Dissertation Repositories (`thesis-repository`)
+
+New class, 2026-09-22. The first round to sweep this surface returned 28 confirmed items from 33
+candidates, so the recall cost of leaving it unregistered was high. This table registers 37 hosts:
+five cross-national aggregators, which come first because a single query there reaches many
+institutions, and 32 individual repositories. Those 32 are the repositories a confirmed item came
+from, not the whole population worth querying. A clean sweep of this table is therefore not a clean
+sweep of the surface. Two access patterns recur: Cloudflare challenges (Cal State, TDX) and Anubis
+proof-of-work challenges (Kiel, Tampere). A DSpace 7 REST path,
+`/server/api/core/bitstreams/<uuid>/content`, walked past one AWS WAF challenge where the web UI
+did not.
+
+| Domain | Notes |
+|---|---|
+| oatd.org, core.ac.uk, base-search.net, openaire.eu, ndltd.org | Cross-national aggregators; start here. NDLTD added 2026-09-22 after the first sweep ran without it. |
+| diva-portal.org | Sweden. Added 2026-09-22. |
+| tdx.cat, upcommons.upc.edu | Catalonia; TDX enforces Cloudflare. Added 2026-09-22. |
+| theses.fr, hal.science | France; theses.fr carries several non-CS doctoral candidates named Yue Zhao. HAL is the national open archive and holds deposited theses that theses.fr does not index; it was missed by the first sweep and is unswept. Added 2026-09-22. |
+| rcaap.pt, repositorio.ufu.br, repositorio.unicamp.br | Portugal and Brazil. Added 2026-09-22. |
+| shodhganga.inflibnet.ac.in | India. Added 2026-09-22. |
+| trove.nla.gov.au | Australia; OCR scans misread "good" as "PyOD". Added 2026-09-22. |
+| hdl.handle.net | Handle resolver fronting many repositories. Added 2026-09-22. |
+| dash.harvard.edu, escholarship.org, hammer.purdue.edu, vtechworks.lib.vt.edu, digitalcommons.fau.edu, digital.library.txst.edu, scholarworks.brandeis.edu, scholarworks.calstate.edu, researchdiscovery.drexel.edu | US institutional repositories with confirmed hits. Added 2026-09-22. |
+| ora.ox.ac.uk, norma.ncirl.ie | UK and Ireland. Added 2026-09-22. |
+| macau.uni-kiel.de, media.suub.uni-bremen.de, repositum.tuwien.at, studenttheses.uu.nl, aaltodoc.aalto.fi, trepo.tuni.fi, researchportal.tuni.fi, dspace.cuni.cz | Continental Europe; Kiel and Tampere use Anubis anti-bot challenges. Added 2026-09-22. |
+| open.uct.ac.za, research.sabanciuniv.edu, digital.car.chula.ac.th | Africa and Asia. Added 2026-09-22. |
+
+## MCP Registries and Agent-Skill Marketplaces (`mcp-registry`)
+
+New class, 2026-09-22. Agent tooling now has its own distribution surfaces, and the FORTIS
+over-privilege benchmark targets agent skills directly, so a listing here is on-topic rather than
+incidental. The first sweep found PyOD on two of them and clean zeros everywhere else.
+
+| Domain | Notes |
+|---|---|
+| hvtracker.net | HVTrust registry; scored a PyOD MCP server at 73.6, grade B. Confirmed hit. Added 2026-09-22. |
+| mcpagentsmarket.com | Carries a PyOD agent-skill listing. Confirmed hit. Added 2026-09-22. |
+| mcp.so, mcpservers.org, smithery.ai, glama.ai, pulsemcp.com, cursor.directory | Swept 2026-09-22, no FORTIS work. Smithery and Glama both carry unrelated projects named Aegis and agent-audit. Added 2026-09-22. |
+| modelcontextprotocol.io | The specification and the official servers repository; clean zero, and the security addenda are worth re-checking each revision. Added 2026-09-22. |
+
+## Gap Domains Added 2026-09-22
+
+These already carried counted ledger rows and were missing from this file anyway, which is its own
+finding about the harvest step.
+
+| Domain | Class | Notes |
+|---|---|---|
+| soumu.go.jp | intl-gov | Japan's Ministry of Internal Affairs and Communications. Ledger 1 row 21. |
+| ai.mil | gov-pdf | DoD CDAO. Ledger 1 rows 2 and 2b. Akamai-protected; the Wayback Machine serves it. |
+| sdaia.gov.sa | intl-gov | Saudi Data and AI Authority. Ledger 1 row 10. Serves fine to an ordinary browser User-Agent. |
+| pmc.ncbi.nlm.nih.gov | academic-repository | A repository rather than an outlet. Tier the journal, never the host. |
+| readthedocs.io | code-ecosystem | Documentation hosting; tier the project, never the host. |
+
 ## Adding New Entries
 
 When a confirmed Phase B hit comes from a domain not in the registry:
