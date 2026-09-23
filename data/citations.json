@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-09-21T16:00:55Z",
+  "generated_at": "2026-09-23T14:12:50Z",
   "source": "meta-finder citation-tracker, Semantic Scholar Graph API",
   "paper_count": 125,
-  "total_citations": 8786,
+  "total_citations": 8800,
   "papers": [
     {
       "id": "workshop-seva",
@@ -19,7 +19,7 @@
       "year": 2026,
       "venue": "EACL, 2026",
       "section": "conference",
-      "citation_count": 18,
+      "citation_count": 19,
       "influential_citations": 0
     },
     {
@@ -100,7 +100,7 @@
       "year": 2026,
       "venue": "ACL (Findings), 2026",
       "section": "conference",
-      "citation_count": 9,
+      "citation_count": 10,
       "influential_citations": 4
     },
     {
@@ -109,7 +109,7 @@
       "year": 2026,
       "venue": "ICLR, 2026",
       "section": "conference",
-      "citation_count": 56,
+      "citation_count": 57,
       "influential_citations": 1
     },
     {
@@ -244,8 +244,8 @@
       "year": 2025,
       "venue": "EMNLP Findings, 2025",
       "section": "conference",
-      "citation_count": 20,
-      "influential_citations": 4
+      "citation_count": 21,
+      "influential_citations": 5
     },
     {
       "id": "conference-navigating-between-explainability-and-extractability-in-machine-learning-as-a-service",
@@ -298,7 +298,7 @@
       "year": 2025,
       "venue": "NAACL (Demo Track), 2025",
       "section": "workshop",
-      "citation_count": 9,
+      "citation_count": 10,
       "influential_citations": 0
     },
     {
@@ -307,7 +307,7 @@
       "year": 2025,
       "venue": "EMNLP Findings, 2025",
       "section": "conference",
-      "citation_count": 34,
+      "citation_count": 35,
       "influential_citations": 0
     },
     {
@@ -370,7 +370,7 @@
       "year": 2024,
       "venue": "ICML, 2024",
       "section": "conference",
-      "citation_count": 368,
+      "citation_count": 369,
       "influential_citations": 32
     },
     {
@@ -442,7 +442,7 @@
       "year": 2022,
       "venue": "PAKDD, 2022",
       "section": "conference",
-      "citation_count": 150,
+      "citation_count": 151,
       "influential_citations": 13
     },
     {
@@ -497,7 +497,7 @@
       "venue": "NeurIPS, 2021",
       "section": "conference",
       "citation_count": 518,
-      "influential_citations": 67
+      "influential_citations": 66
     },
     {
       "id": "conference-data-denoising-scrna",
@@ -577,7 +577,7 @@
       "year": 2019,
       "venue": "SDM, 2019",
       "section": "conference",
-      "citation_count": 160,
+      "citation_count": 161,
       "influential_citations": 15
     },
     {
@@ -658,7 +658,7 @@
       "year": 2023,
       "venue": "ACM Computing Surveys, 2023",
       "section": "journal",
-      "citation_count": 2446,
+      "citation_count": 2449,
       "influential_citations": 77
     },
     {
@@ -667,7 +667,7 @@
       "year": 2023,
       "venue": "ACM SIGKDD Explorations Newsletter, 2023",
       "section": "journal",
-      "citation_count": 51,
+      "citation_count": 52,
       "influential_citations": 2
     },
     {
@@ -676,7 +676,7 @@
       "year": 2022,
       "venue": "Nature Chemical Biology, 2022",
       "section": "journal",
-      "citation_count": 216,
+      "citation_count": 214,
       "influential_citations": 11
     },
     {
@@ -685,7 +685,7 @@
       "year": 2022,
       "venue": "TKDE, 2022",
       "section": "journal",
-      "citation_count": 549,
+      "citation_count": 550,
       "influential_citations": 48
     },
     {
@@ -1099,7 +1099,7 @@
       "year": 2025,
       "venue": "arXiv preprint",
       "section": "preprint",
-      "citation_count": 3,
+      "citation_count": 4,
       "influential_citations": 0
     },
     {
@@ -1126,7 +1126,7 @@
       "year": 2024,
       "venue": "arXiv preprint",
       "section": "preprint",
-      "citation_count": 40,
+      "citation_count": 41,
       "influential_citations": 0
     }
   ]
