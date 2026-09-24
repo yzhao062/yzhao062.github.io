@@ -35,6 +35,37 @@ Not every change touches all three. The table below maps the first two; the **Gi
 | **Talks** | — | `cv/cv-full.tex` (Talks section) | CV only (not on website currently). |
 | **Student committee** | — | `cv/cv-full.tex` (Student Committee section) | CV only. |
 
+Editing a `data/*.json` file is not the whole change. The section below is a required follow-up
+step for most rows of this table.
+
+## Regenerating Prerendered HTML
+
+`publications.html`, `lab.html`, and `index.html` carry static regions delimited by
+`<!-- PRERENDER:<name> START -->` and `<!-- PRERENDER:<name> END -->`. The script
+`scripts/prerender_pages.py` generates those regions from the data files, and they are what a
+crawler or a reader without JavaScript sees. Those pages also render the same data client side,
+so a stale region still looks right in a browser while serving old facts to everyone else. That
+is why skipping this step goes unnoticed.
+
+After editing any of `data/publications.json`, `data/lab-current-phd.json`,
+`data/lab-members.json`, or `files/bio.txt`, run the script and stage every file it reports as
+updated:
+
+```bash
+python scripts/prerender_pages.py
+```
+
+It rewrites the PRERENDER regions of the three pages and refreshes `sitemap.xml`, whose
+`lastmod` values come from each page's real git date. The script is idempotent, so a second run
+on an unchanged tree reports `Unchanged` for every target; that is also how to confirm the first
+run landed.
+
+Do not hand-edit text inside a PRERENDER region, because the next run overwrites it. Prose
+outside those regions is hand-edited as usual, the News section of `index.html` included.
+
+Caught by an Agy review on 2026-09-24: a six-paper NeurIPS acceptance updated the three
+publication surfaces and stopped there. `publications.html` still listed all six as `preprint-*`
+entries with venue `arXiv preprint`, and `lab.html` still omitted a member's new paper.
 
 ## GitHub Profile README
 
@@ -226,6 +257,7 @@ AWARD_NAME & TYPE & DATE \\
 - When adding a preprint, add to **both** `data/publications.json` (with `section: "preprint"`) and `cv/cv-full.tex`.
 - Always preserve reverse chronological ordering in both places.
 - Run `python scripts/generate_cv_open_source.py` after any change to `data/open-source.json`.
+- Run `python scripts/prerender_pages.py` after any change to `data/publications.json`, `data/lab-current-phd.json`, `data/lab-members.json`, or `files/bio.txt`. Stage whatever it reports as updated, normally `publications.html`, `lab.html`, and `sitemap.xml`. A JSON-only change leaves the crawlable HTML serving the previous facts. See [Regenerating Prerendered HTML](#regenerating-prerendered-html).
 - **Publication ↔ lab-members sync**: When adding a new published paper to `data/publications.json`, check if any non-PhD lab member (in `data/lab-members.json`) is a co-author. If so, add the paper to their `publications` array. Note that author names may differ between the two files (e.g., display name vs legal name), so match carefully. Only list published papers with a venue, not arXiv-only preprints.
 
 ## News Item Trigger (index.html)
