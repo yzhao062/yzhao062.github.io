@@ -44,8 +44,9 @@ step for most rows of this table.
 `<!-- PRERENDER:<name> START -->` and `<!-- PRERENDER:<name> END -->`. The script
 `scripts/prerender_pages.py` generates those regions from the data files, and they are what a
 crawler or a reader without JavaScript sees. Those pages also render the same data client side,
-so a stale region still looks right in a browser while serving old facts to everyone else. That
-is why skipping this step goes unnoticed.
+so a stale region still looks right in a browser while serving old facts to everyone else. The
+`site-checks` workflow reruns the script and fails if those three pages differ, so the omission
+costs a red run after the push rather than a bad ship.
 
 After editing any of `data/publications.json`, `data/lab-current-phd.json`,
 `data/lab-members.json`, or `files/bio.txt`, run the script and stage every file it reports as
@@ -55,10 +56,16 @@ updated:
 python scripts/prerender_pages.py
 ```
 
-It rewrites the PRERENDER regions of the three pages and refreshes `sitemap.xml`, whose
-`lastmod` values come from each page's real git date. The script is idempotent, so a second run
-on an unchanged tree reports `Unchanged` for every target; that is also how to confirm the first
-run landed.
+It rewrites the PRERENDER regions of the three pages and refreshes `sitemap.xml`. The script is
+idempotent, so a second run on an unchanged tree reports `Unchanged` for every target; that is
+also how to confirm the first run landed.
+
+`sitemap.xml` trails the commit it describes, and that is expected. `refresh_sitemap` reads each
+page's `git log -1 --format=%cs`, so the date a page edit implies does not exist until that edit
+is committed. The commit rewriting `lab.html` therefore cannot carry the matching sitemap entry.
+`site-checks` excludes `sitemap.xml` from the assertion above for that reason and prints a notice
+instead, and the next run of the script picks the bump up. Chasing it with an extra commit is
+wasted work, and a hand-edited `lastmod` value is discarded by the next run.
 
 Do not hand-edit text inside a PRERENDER region, because the next run overwrites it. Prose
 outside those regions is hand-edited as usual, the News section of `index.html` included.
