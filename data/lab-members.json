@@ -174,7 +174,10 @@
     "alt": "Xiaolin Zhou",
     "research": "Multimodal/Generative AI/LLM",
     "status_text": "Master Student → Now Ph.D. Student at ASU (Fall 2026)",
-    "email": "xzhou733@usc.edu"
+    "email": "xzhou733@usc.edu",
+    "publications": [
+      "MedExAgent: Training LLM Agents to Ask, Examine, and Diagnose in Noisy Clinical Environments, NeurIPS 2026"
+    ]
   },
   {
     "group": "current",

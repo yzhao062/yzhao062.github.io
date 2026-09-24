@@ -1355,12 +1355,12 @@
     "sort_date": "2026-10-24"
   },
   {
-    "id": "preprint-maskforge",
-    "section": "preprint",
+    "id": "conference-maskforge",
+    "section": "conference",
     "title": "MaskForge: Structure-Aware Adaptive Attacks for Jailbreaking Diffusion Large Language Models",
     "paper_url": "https://arxiv.org/abs/2606.04027",
     "authors": "Yingzi Ma, Zhengyue Zhao, Xiaogeng Liu, Minhui Xue, Yue Zhao, Chaowei Xiao",
-    "venue": "arXiv preprint",
+    "venue": "NeurIPS, 2026",
     "year": 2026,
     "links": [
       {
@@ -1371,12 +1371,12 @@
     "abstract": "Diffusion large language models (dLLMs) generate text by iteratively denoising partially masked sequences under bidirectional context, exposing a safety surface distinct from autoregressive LLMs. Because mask tokens are native inputs and tokens are committed by confidence rather than position, harmful content can be induced through infilling and outside the monitored prefix. Existing jailbreaks either miss this native infill capability or rely on low-diversity mask-bearing templates applied uniformly across goals, with little structural adaptation or accumulated attack experience. We propose MaskForge, a fully black-box adaptive attack that casts dLLM red-teaming as optimized search over a growing library of structural patterns. MaskForge abstracts successful attempts into reusable schemas, selects goal-compatible patterns with a UCB bandit, and invokes a scorer-guided fallback when the current library fails. Successful attempts are distilled back into the pattern library, enabling experience to accumulate across goals. Across five public dLLMs and three benchmarks, MaskForge achieves an average attack success rate of 79.3%, a 17.6% relative improvement over the strongest competing dLLM baseline. The matured pattern library further transfers to AdvBench without any updates, achieving a 88.2% attack success rate and a 67% relative improvement over the strongest competing baseline."
   },
   {
-    "id": "preprint-memory-changing-preferences",
-    "section": "preprint",
+    "id": "conference-memory-changing-preferences",
+    "section": "conference",
     "title": "Memory Retrieval for Changing Preferences",
     "paper_url": "https://arxiv.org/abs/2606.02976",
-    "authors": "Yuehan Qin, Li Li, Linxin Song, Wei Yang, Jiate Li, Yuqing Yang, Yue Zhao",
-    "venue": "arXiv preprint",
+    "authors": "Yuehan Qin, Li Li, Linxin Song, Jiate Li, Wei Yang, Yuqing Yang, Yue Zhao",
+    "venue": "NeurIPS, 2026",
     "year": 2026,
     "links": [],
     "abstract": "Long-context dialogue systems must decide both when to access memory and which parts of the interaction history are relevant. Existing approaches typically rely on heuristic retrieval signals or always-on memory usage, failing to account for the changing and potentially inconsistent nature of user preferences. In this work, we propose a unified framework for memory access and selection based on changing preferences. We formulate personalized memory retrieval as identifying which historical turns provide evidence about a user's latent preference state, rather than relying on surface-level semantic similarity. To this end, we quantify the utility of each memory turn using a Bayes factor, defined as the improvement in the model's likelihood of the reference response when the turn is included in context. This provides a principled measure of evidence strength and a unified signal for both memory access and selection. By framing memory retrieval as utility estimation, the model learns to identify salient turns and regulate memory usage based on expected utility. Experiments on four heterogeneous memory benchmarks show that our approach outperforms existing embedding-based retrieval on long-context, preference-intensive tasks where modeling changing preferences is essential, while remaining competitive in low-density regimes where semantic similarity suffices."
@@ -1454,12 +1454,12 @@
     "abstract": "Large language model agents increasingly operate through an intermediate skill layer that mediates between user intent and concrete task execution. This layer is widely treated as an organizational abstraction, but we argue it is also a privilege boundary that current models routinely exceed. We present FORTIS, a benchmark that evaluates over-privilege in agent skills across two stages: whether a model selects the minimally sufficient skill from a large overlapping library, and whether it executes that skill without expanding into broader tools or actions than the skill permits. Across ten frontier models and three domains, we find that over-privileged behavior is the norm rather than the exception. Models consistently reach for higher-privilege skills and tools than the task requires, failing at both stages at rates that remain high even for the strongest available models. Failure is especially severe under the ordinary conditions of real user interaction: incomplete specification, convenience framing, and proximity to skill boundaries. None of these requires adversarial construction. The results indicate that the skill layer, far from containing agent behavior, is itself a primary source of privilege escalation in current systems."
   },
   {
-    "id": "preprint-medexagent",
-    "section": "preprint",
+    "id": "conference-medexagent",
+    "section": "conference",
     "title": "MedExAgent: Training LLM Agents to Ask, Examine, and Diagnose in Noisy Clinical Environments",
     "paper_url": "https://arxiv.org/abs/2605.07058",
     "authors": "Yicheng Gao, Xiaolin Zhou, Yahan Li, Yue Zhao, Ruishan Liu",
-    "venue": "arXiv preprint",
+    "venue": "NeurIPS, 2026",
     "year": 2026,
     "links": [
       {
@@ -1470,12 +1470,12 @@
     "abstract": "Real-world clinical diagnosis is a complex process in which the doctor is required to obtain information from both interaction with the patient and conducting medical exams. Additionally, the doctor needs to adapt to different patient personas, as well as noisy and incomplete information that can happen at any time during the process. However, existing benchmarks for medical LLMs and methods for automatic diagnosis largely simplify this process by reducing it to single-turn question answering, noise-free conversations, or sequential exam making, etc., ignoring the interactive and uncertain nature of clinical diagnosis. In this paper, we aim to address this gap by formalizing clinical diagnosis as a Partially Observable Markov Decision Process (POMDP) with three action types: questioning the patient, ordering medical exams as tool calls, and issuing a diagnosis. We also introduce a systematic noise model comprising seven patient noise types and three exam noise types. Using our proposed environment, we train an effective diagnosis agent, MedExAgent, through a two-stage pipeline that first performs supervised finetuning on synthetic conversations structured after the Calgary-Cambridge model for clinical interviews, and then applies DAPO to optimize a composite reward capturing diagnostic accuracy, tool call quality, and exam cost including financial cost and patient discomfort. Through extensive experiments and ablation studies, we demonstrate that MedExAgent achieves diagnostic performance comparable to larger models while maintaining cost-efficient examination strategies."
   },
   {
-    "id": "preprint-ufcod",
-    "section": "preprint",
+    "id": "conference-ufcod",
+    "section": "conference",
     "title": "Geometry over Density: Few-Shot Cross-Domain OOD Detection",
     "paper_url": "https://arxiv.org/abs/2605.03410",
     "authors": "Shawn Li, You Qin, Jiate Li, Charith Peris, Lisa Bauer, Roger Zimmermann, Yue Zhao",
-    "venue": "arXiv preprint",
+    "venue": "NeurIPS, 2026",
     "year": 2026,
     "links": [
       {
@@ -1486,13 +1486,13 @@
     "abstract": "Out-of-distribution (OOD) detection identifies test samples that fall outside a model's training distribution, a capability critical for safe deployment in high-stakes applications. Standard OOD detectors are trained on a specific in-distribution (ID) dataset and detect deviations from that single domain. In contrast, we study few-shot cross-domain OOD detection: given a single pre-trained model, can we perform OOD detection on arbitrary new ID-OOD task pairs using only a handful of ID samples at inference time, with no additional training? We propose UFCOD, a unified framework that achieves this goal through information-geometric analysis of diffusion trajectories. Our key insight is that diffusion noise predictions are score functions (gradients of log-density), and we extract two energy features: Path Energy (integrated score magnitude) and Dynamics Energy (score smoothness), that form a discrete Sobolev norm capturing how samples interact with the learned diffusion process. The central contribution is a train-once, deploy-anywhere paradigm: a diffusion model trained on a single dataset (e.g., CelebA) serves as a universal feature extractor for OOD detection across semantically unrelated domains (e.g., CIFAR-10, SVHN, Textures). At deployment, each new task requires only ~100 unlabeled ID samples for inference: no retraining, no fine-tuning, no task-specific adaptation. Using 100 ID samples per task, UFCOD achieves 93.7% average AUROC across 12 cross-domain benchmarks, competitive with methods trained on 50k--163k samples, demonstrating ~500× improvement in sample efficiency."
   },
   {
-    "id": "preprint-cat-dpo",
-    "section": "preprint",
+    "id": "conference-cat-dpo",
+    "section": "conference",
     "emoji": "🐱",
     "title": "Cat-DPO: Category-Adaptive Safety Alignment",
     "paper_url": "https://arxiv.org/abs/2604.17299",
     "authors": "Tiankai Yang, Yi Nian, Xinyuan Li, Ruiyao Xu, Henry Peng Zou, Kaize Ding, Xiyang Hu, Yan Liu, Yue Zhao",
-    "venue": "arXiv preprint",
+    "venue": "NeurIPS, 2026",
     "year": 2026,
     "links": [],
     "abstract": "Aligning large language models with human preferences must balance two competing goals: responding helpfully to legitimate requests and reliably refusing harmful ones. Most preference-based safety alignment methods collapse safety into a single scalar that is applied uniformly to every preference pair. The result is a model that looks safe on average but stays relatively unsafe on a minority of harm categories. We cast safety alignment as a per-category constrained optimization problem and derive Cat-DPO, a direct-preference-optimization algorithm with a separate adaptive safety margin for each harm category. The margin tightens when the model still produces unsafe responses on a category and relaxes once the model catches up, so the training signal tracks each category's current difficulty rather than averaging under one global rate. Across two LLM backbones and six preference-learning baselines, Cat-DPO improves aggregate helpfulness and harmlessness and compresses per-category safety variance and the best-to-worst gap, offering a drop-in per-category refinement of direct preference safety alignment."
@@ -1638,12 +1638,12 @@
     "sort_date": "2026-10-24"
   },
   {
-    "id": "preprint-tracing-moral-foundations",
-    "section": "preprint",
+    "id": "conference-tracing-moral-foundations",
+    "section": "conference",
     "title": "Tracing Moral Foundations in Large Language Models",
     "paper_url": "https://arxiv.org/abs/2601.05437",
     "authors": "Chenxiao Yu, Bowen Yi, Farzan Karimi-Malekabadi, Suhaib Abdurahman, Jinyi Ye, Shrikanth Narayanan, Yue Zhao, Morteza Dehghani",
-    "venue": "arXiv preprint",
+    "venue": "NeurIPS, 2026",
     "year": 2026,
     "links": [
       {

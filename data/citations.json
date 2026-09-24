@@ -806,20 +806,20 @@
       "influential_citations": 0
     },
     {
-      "id": "preprint-maskforge",
+      "id": "conference-maskforge",
       "title": "MaskForge: Structure-Aware Adaptive Attacks for Jailbreaking Diffusion Large Language Models",
       "year": 2026,
-      "venue": "arXiv preprint",
-      "section": "preprint",
+      "venue": "NeurIPS, 2026",
+      "section": "conference",
       "citation_count": 0,
       "influential_citations": 0
     },
     {
-      "id": "preprint-memory-changing-preferences",
+      "id": "conference-memory-changing-preferences",
       "title": "Memory Retrieval for Changing Preferences",
       "year": 2026,
-      "venue": "arXiv preprint",
-      "section": "preprint",
+      "venue": "NeurIPS, 2026",
+      "section": "conference",
       "citation_count": 1,
       "influential_citations": 0
     },
@@ -860,29 +860,29 @@
       "influential_citations": 0
     },
     {
-      "id": "preprint-medexagent",
+      "id": "conference-medexagent",
       "title": "MedExAgent: Training LLM Agents to Ask, Examine, and Diagnose in Noisy Clinical Environments",
       "year": 2026,
-      "venue": "arXiv preprint",
-      "section": "preprint",
+      "venue": "NeurIPS, 2026",
+      "section": "conference",
       "citation_count": 2,
       "influential_citations": 1
     },
     {
-      "id": "preprint-ufcod",
+      "id": "conference-ufcod",
       "title": "Geometry over Density: Few-Shot Cross-Domain OOD Detection",
       "year": 2026,
-      "venue": "arXiv preprint",
-      "section": "preprint",
+      "venue": "NeurIPS, 2026",
+      "section": "conference",
       "citation_count": 1,
       "influential_citations": 0
     },
     {
-      "id": "preprint-cat-dpo",
+      "id": "conference-cat-dpo",
       "title": "Cat-DPO: Category-Adaptive Safety Alignment",
       "year": 2026,
-      "venue": "arXiv preprint",
-      "section": "preprint",
+      "venue": "NeurIPS, 2026",
+      "section": "conference",
       "citation_count": 2,
       "influential_citations": 0
     },
@@ -968,11 +968,11 @@
       "influential_citations": 0
     },
     {
-      "id": "preprint-tracing-moral-foundations",
+      "id": "conference-tracing-moral-foundations",
       "title": "Tracing Moral Foundations in Large Language Models",
       "year": 2026,
-      "venue": "arXiv preprint",
-      "section": "preprint",
+      "venue": "NeurIPS, 2026",
+      "section": "conference",
       "citation_count": 4,
       "influential_citations": 0
     },
