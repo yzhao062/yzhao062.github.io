@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-09-23T14:12:50Z",
+  "generated_at": "2026-09-25T14:39:22Z",
   "source": "meta-finder citation-tracker, Semantic Scholar Graph API",
   "paper_count": 125,
-  "total_citations": 8800,
+  "total_citations": 8829,
   "papers": [
     {
       "id": "workshop-seva",
@@ -55,7 +55,7 @@
       "year": 2026,
       "venue": "ICLR, 2026",
       "section": "conference",
-      "citation_count": 36,
+      "citation_count": 39,
       "influential_citations": 0
     },
     {
@@ -109,7 +109,7 @@
       "year": 2026,
       "venue": "ICLR, 2026",
       "section": "conference",
-      "citation_count": 57,
+      "citation_count": 58,
       "influential_citations": 1
     },
     {
@@ -181,8 +181,8 @@
       "year": 2025,
       "venue": "CVPR, 2025",
       "section": "conference",
-      "citation_count": 21,
-      "influential_citations": 3
+      "citation_count": 22,
+      "influential_citations": 4
     },
     {
       "id": "conference-few-shot-graph-out-of-distribution-detection-with-llms",
@@ -217,7 +217,7 @@
       "year": 2025,
       "venue": "Findings of IJCNLP-AACL, 2025",
       "section": "conference",
-      "citation_count": 2,
+      "citation_count": 3,
       "influential_citations": 0
     },
     {
@@ -262,7 +262,7 @@
       "year": 2025,
       "venue": "The Web Conference (Demo Track), 2025",
       "section": "workshop",
-      "citation_count": 29,
+      "citation_count": 30,
       "influential_citations": 0
     },
     {
@@ -352,7 +352,7 @@
       "year": 2024,
       "venue": "NeurIPS, 2024",
       "section": "conference",
-      "citation_count": 42,
+      "citation_count": 43,
       "influential_citations": 5
     },
     {
@@ -424,7 +424,7 @@
       "year": 2022,
       "venue": "NeurIPS, 2022",
       "section": "conference",
-      "citation_count": 507,
+      "citation_count": 510,
       "influential_citations": 76
     },
     {
@@ -460,7 +460,7 @@
       "year": 2021,
       "venue": "NeurIPS, 2021",
       "section": "conference",
-      "citation_count": 102,
+      "citation_count": 103,
       "influential_citations": 21
     },
     {
@@ -469,7 +469,7 @@
       "year": 2021,
       "venue": "NeurIPS, 2021",
       "section": "conference",
-      "citation_count": 267,
+      "citation_count": 269,
       "influential_citations": 31
     },
     {
@@ -478,7 +478,7 @@
       "year": 2021,
       "venue": "MLSys, 2021",
       "section": "conference",
-      "citation_count": 81,
+      "citation_count": 82,
       "influential_citations": 6
     },
     {
@@ -523,7 +523,7 @@
       "year": 2020,
       "venue": "IEEE ICDM, 2020",
       "section": "conference",
-      "citation_count": 469,
+      "citation_count": 471,
       "influential_citations": 43
     },
     {
@@ -559,7 +559,7 @@
       "year": 2020,
       "venue": "IEEE ICDMW, 2020",
       "section": "workshop",
-      "citation_count": 39,
+      "citation_count": 40,
       "influential_citations": 3
     },
     {
@@ -658,8 +658,8 @@
       "year": 2023,
       "venue": "ACM Computing Surveys, 2023",
       "section": "journal",
-      "citation_count": 2449,
-      "influential_citations": 77
+      "citation_count": 2451,
+      "influential_citations": 78
     },
     {
       "id": "journal-the-need-for-unsupervised-outlier-model-selection-a-review-and-evaluation-of-internal-evaluation-strategies",
@@ -667,7 +667,7 @@
       "year": 2023,
       "venue": "ACM SIGKDD Explorations Newsletter, 2023",
       "section": "journal",
-      "citation_count": 52,
+      "citation_count": 53,
       "influential_citations": 2
     },
     {
@@ -676,7 +676,7 @@
       "year": 2022,
       "venue": "Nature Chemical Biology, 2022",
       "section": "journal",
-      "citation_count": 214,
+      "citation_count": 215,
       "influential_citations": 11
     },
     {
@@ -685,7 +685,7 @@
       "year": 2022,
       "venue": "TKDE, 2022",
       "section": "journal",
-      "citation_count": 550,
+      "citation_count": 553,
       "influential_citations": 48
     },
     {
@@ -694,7 +694,7 @@
       "year": 2019,
       "venue": "JMLR, 2019.",
       "section": "journal",
-      "citation_count": 938,
+      "citation_count": 939,
       "influential_citations": 67
     },
     {
@@ -757,7 +757,7 @@
       "year": 2026,
       "venue": "arXiv preprint",
       "section": "preprint",
-      "citation_count": 8,
+      "citation_count": 9,
       "influential_citations": 0
     },
     {
@@ -806,20 +806,20 @@
       "influential_citations": 0
     },
     {
-      "id": "conference-maskforge",
+      "id": "preprint-maskforge",
       "title": "MaskForge: Structure-Aware Adaptive Attacks for Jailbreaking Diffusion Large Language Models",
       "year": 2026,
-      "venue": "NeurIPS, 2026",
-      "section": "conference",
+      "venue": "arXiv preprint",
+      "section": "preprint",
       "citation_count": 0,
       "influential_citations": 0
     },
     {
-      "id": "conference-memory-changing-preferences",
+      "id": "preprint-memory-changing-preferences",
       "title": "Memory Retrieval for Changing Preferences",
       "year": 2026,
-      "venue": "NeurIPS, 2026",
-      "section": "conference",
+      "venue": "arXiv preprint",
+      "section": "preprint",
       "citation_count": 1,
       "influential_citations": 0
     },
@@ -842,11 +842,11 @@
       "influential_citations": 0
     },
     {
-      "id": "conference-chi-bench",
+      "id": "preprint-chi-bench",
       "title": "CHI-Bench: Can AI Agents Automate End-to-End, Long-Horizon, Policy-Rich Healthcare Workflows?",
       "year": 2026,
-      "venue": "NeurIPS Evaluations and Datasets Track, 2026",
-      "section": "conference",
+      "venue": "arXiv preprint",
+      "section": "preprint",
       "citation_count": 7,
       "influential_citations": 0
     },
@@ -856,33 +856,33 @@
       "year": 2026,
       "venue": "arXiv preprint",
       "section": "preprint",
-      "citation_count": 9,
+      "citation_count": 10,
       "influential_citations": 0
     },
     {
-      "id": "conference-medexagent",
+      "id": "preprint-medexagent",
       "title": "MedExAgent: Training LLM Agents to Ask, Examine, and Diagnose in Noisy Clinical Environments",
       "year": 2026,
-      "venue": "NeurIPS, 2026",
-      "section": "conference",
+      "venue": "arXiv preprint",
+      "section": "preprint",
       "citation_count": 2,
       "influential_citations": 1
     },
     {
-      "id": "conference-ufcod",
+      "id": "preprint-ufcod",
       "title": "Geometry over Density: Few-Shot Cross-Domain OOD Detection",
       "year": 2026,
-      "venue": "NeurIPS, 2026",
-      "section": "conference",
+      "venue": "arXiv preprint",
+      "section": "preprint",
       "citation_count": 1,
       "influential_citations": 0
     },
     {
-      "id": "conference-cat-dpo",
+      "id": "preprint-cat-dpo",
       "title": "Cat-DPO: Category-Adaptive Safety Alignment",
       "year": 2026,
-      "venue": "NeurIPS, 2026",
-      "section": "conference",
+      "venue": "arXiv preprint",
+      "section": "preprint",
       "citation_count": 2,
       "influential_citations": 0
     },
@@ -968,11 +968,11 @@
       "influential_citations": 0
     },
     {
-      "id": "conference-tracing-moral-foundations",
+      "id": "preprint-tracing-moral-foundations",
       "title": "Tracing Moral Foundations in Large Language Models",
       "year": 2026,
-      "venue": "NeurIPS, 2026",
-      "section": "conference",
+      "venue": "arXiv preprint",
+      "section": "preprint",
       "citation_count": 4,
       "influential_citations": 0
     },
@@ -1108,7 +1108,7 @@
       "year": 2024,
       "venue": "arXiv preprint",
       "section": "preprint",
-      "citation_count": 9,
+      "citation_count": 10,
       "influential_citations": 0
     },
     {
