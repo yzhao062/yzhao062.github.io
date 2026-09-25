@@ -842,11 +842,11 @@
       "influential_citations": 0
     },
     {
-      "id": "preprint-chi-bench",
+      "id": "conference-chi-bench",
       "title": "CHI-Bench: Can AI Agents Automate End-to-End, Long-Horizon, Policy-Rich Healthcare Workflows?",
       "year": 2026,
-      "venue": "arXiv preprint",
-      "section": "preprint",
+      "venue": "NeurIPS Evaluations and Datasets Track, 2026",
+      "section": "conference",
       "citation_count": 7,
       "influential_citations": 0
     },
