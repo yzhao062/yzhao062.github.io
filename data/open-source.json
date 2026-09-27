@@ -27,7 +27,7 @@
     "docs_url": "https://pyod.readthedocs.io",
     "paper_url": "https://arxiv.org/abs/2412.12154",
     "demo_url": "",
-    "stars": 10011,
+    "stars": 10015,
     "tags": [
       "Anomaly Detection",
       "Outlier Detection",
@@ -158,7 +158,7 @@
     "docs_url": "",
     "paper_url": "https://proceedings.neurips.cc/paper_files/paper/2022/hash/da0ddd47c18ae3dd2888ff2ea4b6ccf7-Abstract-Datasets_and_Benchmarks.html",
     "demo_url": "",
-    "stars": 1022,
+    "stars": 1021,
     "tags": [
       "Anomaly Detection",
       "Benchmark",
@@ -322,7 +322,7 @@
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/agent-audit.html",
     "paper_url": "https://arxiv.org/abs/2603.22853",
     "demo_url": "https://pypi.org/project/agent-audit/",
-    "stars": 232,
+    "stars": 233,
     "tags": [
       "AI Agent Security",
       "Security Audit",
@@ -341,7 +341,7 @@
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/aegis.html",
     "paper_url": "https://arxiv.org/abs/2603.12621",
     "demo_url": "https://github.com/Justin0504/Aegis/blob/main/docs/images/readme_demo1.gif",
-    "stars": 424,
+    "stars": 439,
     "tags": [
       "AI Agent Security",
       "Policy Enforcement",
@@ -387,7 +387,7 @@
       "Configuration",
       "MCP"
     ],
-    "last_updated_at": "2026-09-25T17:41:07Z"
+    "last_updated_at": "2026-09-27T00:29:38Z"
   },
   {
     "name": "agent-style",
@@ -398,7 +398,7 @@
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/agent-style.html",
     "paper_url": "",
     "demo_url": "https://pypi.org/project/agent-style/",
-    "stars": 694,
+    "stars": 695,
     "tags": [
       "AI Agents",
       "Agent Configuration",
