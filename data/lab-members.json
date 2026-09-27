@@ -236,6 +236,7 @@
     "status_text": "Master Student → Now Ph.D. Student at UCI",
     "email": "yuangangli.cs@gmail.com",
     "publications": [
+      "H-FedSN: Personalized Sparse Networks for Efficient and Accurate Hierarchical Federated Learning for IoT Applications, npj Artificial Intelligence, 2026",
       "Mitigating Hallucinations in Large Language Models via Causal Reasoning, AAAI 2026",
       "NLP-ADBench: NLP Anomaly Detection Benchmark, Findings of EMNLP 2025",
       "AD-LLM: Benchmarking Large Language Models for Anomaly Detection, Findings of ACL 2025"

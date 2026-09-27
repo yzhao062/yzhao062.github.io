@@ -1,7 +1,7 @@
 {
   "generated_at": "2026-09-27T14:44:07Z",
   "source": "meta-finder citation-tracker, Semantic Scholar Graph API",
-  "paper_count": 125,
+  "paper_count": 124,
   "total_citations": 8841,
   "papers": [
     {
@@ -282,15 +282,6 @@
       "section": "conference",
       "citation_count": 27,
       "influential_citations": 1
-    },
-    {
-      "id": "conference-socialmaze-a-benchmark-for-evaluating-social-reasoning-in-large-language-models",
-      "title": "SocialMaze: A Benchmark for Evaluating Social Reasoning in Large Language Models",
-      "year": 2025,
-      "venue": "NeurIPS Workshop on Socially Responsible and Trustworthy Foundation Models (ResponsibleFM), 2025",
-      "section": "workshop",
-      "citation_count": 1,
-      "influential_citations": 0
     },
     {
       "id": "conference-trusteval-a-dynamic-evaluation-toolkit-on-trustworthiness-of-generative-foundation-models",
@@ -708,11 +699,11 @@
     },
     {
       "id": "conference-reasoning-of-llms-in-complex-social-environments",
-      "title": "Modeling, Evaluating, and Enhancing Reasoning of Large Language Models in Complex Social Environments",
+      "title": "SocialMaze: A Benchmark for Evaluating and Enhancing Social Reasoning in Large Language Models in Complex Social Environments",
       "year": 2026,
-      "venue": "EMNLP Findings, 2026",
+      "venue": "EMNLP Findings, 2026; earlier versions at SocialSim @ COLM 2025 (Spotlight) and ResponsibleFM @ NeurIPS 2025",
       "section": "conference",
-      "citation_count": 0,
+      "citation_count": 1,
       "influential_citations": 0
     },
     {

@@ -516,22 +516,6 @@
     "abstract": "Out-of-Distribution (OOD) detection is critical for ensuring the reliability of machine learning models in safety-critical applications such as autonomous driving and medical diagnosis. While deploying personalized OOD detection directly on edge devices is desirable, it remains challenging due to large model sizes and the computational infeasibility of on-device training. Federated learning partially addresses this but still requires gradient computation and backpropagation, exceeding the capabilities of many edge devices. To overcome these challenges, we propose SecDOOD, a secure cloud-device collaboration framework for efficient on-device OOD detection without requiring device-side backpropagation. SecDOOD utilizes cloud resources for model training while ensuring user data privacy by retaining sensitive information on-device. Central to SecDOOD is a HyperNetwork-based personalized parameter generation module, which adapts cloud-trained models to device-specific distributions by dynamically generating local weight adjustments, effectively combining central and local information without local fine-tuning. Additionally, our dynamic feature sampling and encryption strategy selectively encrypts only the most informative feature channels, largely reducing encryption overhead without compromising detection performance. Extensive experiments across multiple datasets and OOD scenarios demonstrate that SecDOOD achieves performance comparable to fully fine-tuned models, enabling secure, efficient, and personalized OOD detection on resource-limited edge devices. To enhance accessibility and reproducibility, our code is publicly available at https://github.com/Dystopians/SecDOOD."
   },
   {
-    "id": "conference-socialmaze-a-benchmark-for-evaluating-social-reasoning-in-large-language-models",
-    "section": "workshop",
-    "title": "SocialMaze: A Benchmark for Evaluating Social Reasoning in Large Language Models",
-    "paper_url": "https://arxiv.org/abs/2505.23713",
-    "authors": "Zixiang Xu, Yanbo Wang, Yue Huang, Jiayi Ye, Haomin Zhuang, Zirui Song, Lang Gao, Chenxi Wang, Zhaorun Chen, Yujun Zhou, Sixian Li, Wang Pan, Yue Zhao, Jieyu Zhao, Xiangliang Zhang, Xiuying Chen.",
-    "venue": "NeurIPS Workshop on Socially Responsible and Trustworthy Foundation Models (ResponsibleFM), 2025",
-    "year": 2025,
-    "links": [
-      {
-        "type": "project",
-        "url": "https://huggingface.co/datasets/MBZUAI/SocialMaze"
-      }
-    ],
-    "abstract": "Large language models (LLMs) are increasingly applied to socially grounded tasks, such as online community moderation, media content analysis, and social reasoning games. Success in these contexts depends on a model's social reasoning ability - the capacity to interpret social contexts, infer others' mental states, and assess the truthfulness of presented information. However, there is currently no systematic evaluation framework that comprehensively assesses the social reasoning capabilities of LLMs. Existing efforts often oversimplify real-world scenarios and consist of tasks that are too basic to challenge advanced models. To address this gap, we introduce SocialMaze, a new benchmark specifically designed to evaluate social reasoning. SocialMaze systematically incorporates three core challenges: deep reasoning, dynamic interaction, and information uncertainty. It provides six diverse tasks across three key settings: social reasoning games, daily-life interactions, and digital community platforms. Both automated and human validation are used to ensure data quality. Our evaluation reveals several key insights: models vary substantially in their ability to handle dynamic interactions and integrate temporally evolving information; models with strong chain-of-thought reasoning perform better on tasks requiring deeper inference beyond surface-level cues; and model reasoning degrades significantly under uncertainty. Furthermore, we show that targeted fine-tuning on curated reasoning examples can greatly improve model performance in complex social scenarios. The dataset is publicly available at: https://huggingface.co/datasets/MBZUAI/SocialMaze"
-  },
-  {
     "id": "conference-trusteval-a-dynamic-evaluation-toolkit-on-trustworthiness-of-generative-foundation-models",
     "section": "workshop",
     "title": "TRUSTEVAL: A Dynamic Evaluation Toolkit on Trustworthiness of Generative Foundation Models",
@@ -1060,6 +1044,17 @@
     "abstract": "The emergence of smartwatches poses new challenges to information security. Although there are mature touch-based authentication methods for smartphones, the effectiveness of using these methods on smartwatches is still unclear. We conducted a user study (n=16) to evaluate how authentication methods (PIN and Pattern), UIs (Square and Circular), and display sizes (38mm and 42mm) affect authentication accuracy, speed, and security. Circular UIs are tailored to smartwatches with fewer UI elements. Results show that 1) PIN is more accurate and secure than Pattern; 2) Pattern is much faster than PIN; 3) Square UIs are more secure but less accurate than Circular UIs; 4) display size does not affect accuracy or speed, but security; 5) Square PIN is the most secure method of all. The study also reveals a security concern that participants' favorite method is not the best in any of the measures. We finally discuss implications for future touch-based smartwatch authentication design."
   },
   {
+    "id": "journal-h-fedsn",
+    "section": "journal",
+    "title": "H-FedSN: Personalized Sparse Networks for Efficient and Accurate Hierarchical Federated Learning for IoT Applications",
+    "paper_url": "https://arxiv.org/abs/2412.06210",
+    "authors": "Jiechao Gao†, Yuangang Li†, Jie Wang, Michael Lepech, Yue Zhao, Brad Campbell",
+    "venue": "npj Artificial Intelligence, 2026",
+    "year": 2026,
+    "links": [],
+    "abstract": "H-FedSN reduces communication costs in hierarchical federated learning for IoT systems. It trains binary masks over frozen network weights, with shared layers for collaboration and private layers for local adaptation. Bayesian aggregation at edge and cloud servers accounts for heterogeneous data and uneven client participation. Experiments on three real-world IoT datasets and MNIST report communication reductions of up to 477 times relative to baseline methods while maintaining accuracy."
+  },
+  {
     "id": "journal-don-t-let-it-hallucinate-premise-verification-via-retrieval-augmented-logical-reasoning",
     "section": "journal",
     "title": "Don’t Let It Hallucinate: Premise Verification via Retrieval-Augmented Logical Reasoning",
@@ -1197,13 +1192,23 @@
   {
     "id": "conference-reasoning-of-llms-in-complex-social-environments",
     "section": "conference",
-    "title": "Modeling, Evaluating, and Enhancing Reasoning of Large Language Models in Complex Social Environments",
-    "paper_url": "https://openreview.net/forum?id=wp0lBaBR15",
+    "title": "SocialMaze: A Benchmark for Evaluating and Enhancing Social Reasoning in Large Language Models in Complex Social Environments",
+    "paper_url": "https://arxiv.org/abs/2505.23713",
     "authors": "Zixiang Xu, Yanbo Wang, Yue Huang, Haomin Zhuang, Yujun Zhou, Jiayi Ye, Sixian Li, Zirui Song, Lang Gao, Chenxi Wang, Zhaorun Chen, Wang Pan, Yue Zhao, Jieyu Zhao, Xiangliang Zhang, Xiuying Chen",
-    "venue": "EMNLP Findings, 2026",
+    "venue": "EMNLP Findings, 2026; earlier versions at SocialSim @ COLM 2025 (Spotlight) and ResponsibleFM @ NeurIPS 2025",
     "year": 2026,
-    "links": [],
-    "sort_date": "2026-10-24"
+    "links": [
+      {
+        "type": "project",
+        "url": "https://xzx34.github.io/socialmaze/"
+      },
+      {
+        "type": "github",
+        "url": "https://github.com/xzx34/SocialMaze"
+      }
+    ],
+    "sort_date": "2026-10-24",
+    "abstract": "SocialMaze evaluates social reasoning in large language models through six tasks spanning social deduction games, everyday interactions, and digital communities. The benchmark combines deep inference, evolving interactions, and unreliable information. Experiments with twelve models examine reasoning workflows and targeted fine-tuning: workflows benefit weaker backbones, while fine-tuning improves structured social reasoning but shows inconclusive transfer to language-aggregation tasks."
   },
   {
     "id": "conference-financellm-survey-of-llms-in-finance",
