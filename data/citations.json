@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-09-27T14:44:07Z",
+  "generated_at": "2026-09-29T15:36:04Z",
   "source": "meta-finder citation-tracker, Semantic Scholar Graph API",
-  "paper_count": 124,
-  "total_citations": 8841,
+  "paper_count": 125,
+  "total_citations": 8851,
   "papers": [
     {
       "id": "workshop-seva",
@@ -55,8 +55,8 @@
       "year": 2026,
       "venue": "ICLR, 2026",
       "section": "conference",
-      "citation_count": 40,
-      "influential_citations": 0
+      "citation_count": 41,
+      "influential_citations": 1
     },
     {
       "id": "conference-defenses-against-prompt-attacks-learn-surface-heuristics",
@@ -284,6 +284,15 @@
       "influential_citations": 1
     },
     {
+      "id": "conference-socialmaze-a-benchmark-for-evaluating-social-reasoning-in-large-language-models",
+      "title": "SocialMaze: A Benchmark for Evaluating Social Reasoning in Large Language Models",
+      "year": 2025,
+      "venue": "NeurIPS Workshop on Socially Responsible and Trustworthy Foundation Models (ResponsibleFM), 2025",
+      "section": "workshop",
+      "citation_count": 1,
+      "influential_citations": 0
+    },
+    {
       "id": "conference-trusteval-a-dynamic-evaluation-toolkit-on-trustworthiness-of-generative-foundation-models",
       "title": "TRUSTEVAL: A Dynamic Evaluation Toolkit on Trustworthiness of Generative Foundation Models",
       "year": 2025,
@@ -487,7 +496,7 @@
       "year": 2021,
       "venue": "NeurIPS, 2021",
       "section": "conference",
-      "citation_count": 520,
+      "citation_count": 522,
       "influential_citations": 66
     },
     {
@@ -568,7 +577,7 @@
       "year": 2019,
       "venue": "SDM, 2019",
       "section": "conference",
-      "citation_count": 161,
+      "citation_count": 162,
       "influential_citations": 15
     },
     {
@@ -649,7 +658,7 @@
       "year": 2023,
       "venue": "ACM Computing Surveys, 2023",
       "section": "journal",
-      "citation_count": 2455,
+      "citation_count": 2457,
       "influential_citations": 78
     },
     {
@@ -667,7 +676,7 @@
       "year": 2022,
       "venue": "Nature Chemical Biology, 2022",
       "section": "journal",
-      "citation_count": 215,
+      "citation_count": 216,
       "influential_citations": 12
     },
     {
@@ -676,7 +685,7 @@
       "year": 2022,
       "venue": "TKDE, 2022",
       "section": "journal",
-      "citation_count": 553,
+      "citation_count": 554,
       "influential_citations": 48
     },
     {
@@ -685,7 +694,7 @@
       "year": 2019,
       "venue": "JMLR, 2019.",
       "section": "journal",
-      "citation_count": 941,
+      "citation_count": 942,
       "influential_citations": 67
     },
     {
@@ -699,11 +708,11 @@
     },
     {
       "id": "conference-reasoning-of-llms-in-complex-social-environments",
-      "title": "SocialMaze: A Benchmark for Evaluating and Enhancing Social Reasoning in Large Language Models in Complex Social Environments",
+      "title": "Modeling, Evaluating, and Enhancing Reasoning of Large Language Models in Complex Social Environments",
       "year": 2026,
-      "venue": "EMNLP Findings, 2026; earlier versions at SocialSim @ COLM 2025 (Spotlight) and ResponsibleFM @ NeurIPS 2025",
+      "venue": "EMNLP Findings, 2026",
       "section": "conference",
-      "citation_count": 1,
+      "citation_count": 0,
       "influential_citations": 0
     },
     {
@@ -964,8 +973,8 @@
       "year": 2026,
       "venue": "NeurIPS, 2026",
       "section": "conference",
-      "citation_count": 4,
-      "influential_citations": 0
+      "citation_count": 5,
+      "influential_citations": 1
     },
     {
       "id": "preprint-implicit-execution-tracing",
