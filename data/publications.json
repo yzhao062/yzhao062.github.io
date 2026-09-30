@@ -1,5 +1,16 @@
 [
   {
+    "id": "workshop-synco-ttcl",
+    "section": "workshop",
+    "title": "SynCo: Data Synthesis Co-Training for Self-Evolving LLMs via Multi-Agent Reinforcement Learning",
+    "paper_url": "https://openreview.net/forum?id=0SbD6GdfQZ",
+    "authors": "Wei Yang, Li Li, Yuehan Qin, Yawei Wang, Mingxi Wang, Shixuan Li, Tiankai Yang, Jiate Li, Jesse Thomason, Xuezhe Ma, Yue Zhao.",
+    "venue": "NeurIPS 2026 Workshop on Towards Test-Time Continual Learning Agents (TTCL), Poster",
+    "year": 2026,
+    "links": [],
+    "abstract": "SynCo jointly trains a Synthesizer that adapts training tasks to a Reasoner's evolving capabilities and a Reasoner that learns from those tasks. Multiple Reasoner rollouts supply outcome feedback to both agents. The framework is evaluated on mathematical reasoning benchmarks against a frozen-Synthesizer baseline."
+  },
+  {
     "id": "workshop-seva",
     "section": "workshop",
     "title": "SEVA: Self-Evolving Verification Agent with Process Reward for Fact Attribution",
@@ -1220,6 +1231,40 @@
     "year": 2026,
     "links": [],
     "sort_date": "2026-10-24"
+  },
+  {
+    "id": "preprint-controlled-decoding-attacks",
+    "section": "preprint",
+    "title": "Controlled Decoding Attacks on Black-Box LLMs",
+    "paper_url": "https://arxiv.org/abs/2609.36956",
+    "authors": "Jesson Wang†, Shawn Li†, Wei Yang, Franck Dernoncourt, Ryan A. Rossi, Charith Peris, Yue Zhao.",
+    "venue": "arXiv preprint",
+    "year": 2026,
+    "sort_date": "2026-09-29",
+    "links": [
+      {
+        "type": "github",
+        "url": "https://github.com/JessonWong/controlled-decoding"
+      }
+    ],
+    "abstract": "This paper studies decoding-time jailbreaks against black-box LLM interfaces that return only sampled text. It combines sampled-output distribution reconstruction, risk-gated intervention, and speculative multi-token execution to reduce target queries, with evaluation on four endpoints and three benchmarks."
+  },
+  {
+    "id": "preprint-cua-swe",
+    "section": "preprint",
+    "title": "CUA-SWE: When Computer-Use Agents Meet Visual Software Engineering",
+    "paper_url": "https://arxiv.org/abs/2609.32600",
+    "authors": "Prince Zizhuang Wang†♠, Chenhao Liang†, Zelong Xu†, Aojie Yuan†, Xiaolin Zhou†, Haiyue Zhang, Yue Zhao, Xiyang Hu, Shuli Jiang.",
+    "venue": "arXiv preprint",
+    "year": 2026,
+    "sort_date": "2026-09-26",
+    "links": [
+      {
+        "type": "github",
+        "url": "https://github.com/kingofspace0wzz/cua-swe"
+      }
+    ],
+    "abstract": "CUA-SWE benchmarks software engineering agents that edit code and use running visual interfaces in the same task. Its 105 tasks span web, game, mobile, and DevOps domains, with independent task-specific tests for requested behavior and preservation of existing functionality."
   },
   {
     "id": "preprint-qemscore",
