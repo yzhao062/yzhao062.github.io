@@ -1233,6 +1233,18 @@
     "sort_date": "2026-10-24"
   },
   {
+    "id": "preprint-metapersona",
+    "section": "preprint",
+    "title": "MetaPersona: Task-Grounded Synthetic Populations from Empirical Social Science",
+    "paper_url": "https://arxiv.org/abs/2609.38392",
+    "authors": "Jinyi Ye♠, Yuangang Li, Chenxiao Yu, Preyashi Poddar, Priyanka Dey, Longtian Ye, Zihan Wang, Xiyang Hu, Emilio Ferrara♠, Yue Zhao♠.",
+    "venue": "arXiv preprint",
+    "year": 2026,
+    "sort_date": "2026-09-29",
+    "links": [],
+    "abstract": "MetaPersona uses task-relevant social science evidence to construct persona dependency graphs and sample synthetic populations. MetaPersona-DB contains annotations from over 11,000 empirical human-subjects studies. Evaluations of misinformation belief, income redistribution, and AI-tool sentiment show task- and model-dependent results, including mixed outcomes for redistribution."
+  },
+  {
     "id": "preprint-controlled-decoding-attacks",
     "section": "preprint",
     "title": "Controlled Decoding Attacks on Black-Box LLMs",
