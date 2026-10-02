@@ -40,7 +40,7 @@ Reproducible records: [final candidate decisions](external-research/news-search-
 
 ### Propagated to Site
 
-The impact cards in `opensource.html` now include Bundesbank, Caltech/NASA JPL, Swedish FOI, Ai2, Newsweek, European Parliament, international AI safety, and independent agent-auditing evidence. The October homepage news entry highlights four of these records and labels the entry as a coverage update. The Ai2 description specifies the 400-prompt JailbreakTrigger subset; Newsweek remains labeled as opinion. Patent counts agree at 97 across the impact page, biography, generated homepage biography, and `llms.txt`. Both CV sources and the homepage link the Amazon award to the named recipient page.
+The impact cards in `opensource.html` now include Bundesbank, Caltech/NASA JPL, Swedish FOI, Ai2, Newsweek, European Parliament, international AI safety, and independent agent-auditing evidence. At the author's request, these findings appear on the impact page without a homepage news entry. The Ai2 description specifies the 400-prompt JailbreakTrigger subset; Newsweek remains labeled as opinion. Patent counts agree at 97 across the impact page, biography, generated homepage biography, and `llms.txt`. Both CV sources and the homepage link the Amazon award to the named recipient page.
 
 ## 2026-09-22 Pass (Phase A: 37 Agy lanes via `/prun`; Phase B: 16 Agy verification units over 378 candidates, plus 2 dedicated surface-audit units; coordinator-side patent family check and ledger recount)
 
