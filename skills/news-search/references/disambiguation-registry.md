@@ -324,3 +324,18 @@ listed above:
 3. **When discovering a new collision**: add an entry under the appropriate section with the round date and the resolution rule. The file grows monotonically.
 
 This is the disambiguation-side equivalent of `domain-registry.md`'s recall-floor harvest step.
+
+## Checks Added 2026-10-02
+
+| Lead | Resolution |
+|---|---|
+| Catch Bench Design in Open Pit Mining | Geotechnical catch-bench terminology on School of Rock Mining, unrelated to the CatchBench agent benchmark. Require arXiv:2608.22808 or a matching author/project link. |
+| Gaincontrol Aegis and aegis4ai.com | Commercial identity/authorization products. Their inspected pages do not identify Justin0504/Aegis, arXiv:2603.12621 or the USC authors. |
+| AgentAuditKit by Sattyam Jain | The separate agent-audit-kit repository is not HeadyZhang/agent-audit. Similar scanner purpose does not establish use or citation. |
+| IETF draft-sharif-agent-audit-trail | A logging-format draft, distinct from the FORTIS static security scanner. A shared phrase is insufficient. |
+| QEMScore Reddit post | The inspected automated post had no Q-LEAR/QRAFT or Yue Zhao reference. The claimed technical community discussion was not present. |
+| TSB-AutoAD author Qinghua Liu | The PVLDB paper and the current portfolio's graph-model extraction paper both identify Qinghua Liu at Ohio State. Exclude from independent uptake under the full coauthor-roster rule. |
+| Open Research Europe 6:213 | Version 1 says awaiting peer review. Its PyOD methods use is verified, but government hosting and open publication do not establish passed peer review. |
+| NTU thesis 94149 download | The response contains a multipart envelope before the PDF payload. Inspect the `%PDF` to `%%EOF` payload before calling it unreadable; the thesis does use PyOD. |
+
+The Navy SBIR 24.2 instructions, GPT-4o system card, Claude 3.7 Sonnet system card, Grok 4.7 model card, Gemini 2.5 Flash model card, and the checked CRS/White House documents received document-specific negative verdicts. These are not blanket claims about every document from those organizations. Exact URLs, routes, versions and decisions are preserved in `external-research/news-search-2026-10-02/candidates.jsonl`.

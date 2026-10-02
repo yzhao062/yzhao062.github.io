@@ -1,0 +1,357 @@
+{
+  "NS20261002-0078": {
+    "status": "dropped",
+    "suggested_ledger": "",
+    "notes": "Already recorded in Ledger 7 S71: PMLR v224/navarro23a. PDF and proceedings landing page identify the same Huawei paper. The venue is AutoML 2023, not ECML PKDD. No new count."
+  },
+  "NS20261002-0080": {
+    "status": "dropped",
+    "suggested_ledger": "",
+    "notes": "Already recorded in Ledger 1 row 2f: METI GENIAC Phase 2 SyntheticGestalt TDC evaluation. Alternate page is an evidence upgrade, not new adoption."
+  },
+  "NS20261002-0245": {
+    "status": "dropped",
+    "suggested_ledger": "",
+    "notes": "CISA bulletin repeats CVE-2026-15529 already recorded at Ledger 1 row 13 and discussed in prior passes. No independent adoption or new count."
+  },
+  "NS20261002-0511": {
+    "status": "dropped",
+    "suggested_ledger": "",
+    "notes": "International AI Safety Report 2025 is already recorded at Ledger 1 row 19. The arXiv copy is the same edition; additional Diffusion Models citation enriches evidence, not the document count."
+  },
+  "NS20261002-0284": {
+    "tier_guess": "T3",
+    "suggested_ledger": "Ledger 3",
+    "notes": "Verified substantive PyOD use in a master thesis. Count as educational/research ecosystem adoption; a thesis does not establish peer-reviewed publication."
+  },
+  "NS20261002-0285": {
+    "tier_guess": "T3",
+    "suggested_ledger": "Ledger 3",
+    "notes": "Verified substantive PyOD use in a master thesis; educational/research ecosystem adoption, with no peer-reviewed publication claim."
+  },
+  "NS20261002-0435": {
+    "tier_guess": "T3",
+    "suggested_ledger": "Ledger 3",
+    "notes": "Bachelor thesis integrating PyOD in an evaluated ETL pipeline. Count as thesis adoption; evidence does not establish operational production deployment or peer-reviewed publication."
+  },
+  "NS20261002-0436": {
+    "tier_guess": "T3",
+    "suggested_ledger": "Ledger 3",
+    "notes": "Diploma thesis experimentally using PyOD. Count as educational/research ecosystem adoption; no peer-reviewed publication claim."
+  },
+  "NS20261002-0437": {
+    "tier_guess": "T3",
+    "suggested_ledger": "Ledger 3",
+    "notes": "Doctoral dissertation using PyOD, ECOD, LSCP and ADBench. Count the dissertation as ecosystem evidence; do not infer peer review of each chapter."
+  },
+  "NS20261002-0438": {
+    "tier_guess": "T3",
+    "suggested_ledger": "Ledger 3",
+    "notes": "Verified substantive thesis use. NTU download carries a multipart envelope before the PDF; coordinator extracted the PDF payload and checked page 42. Thesis adoption, not a peer-reviewed publication.",
+    "pdf_path": "/tmp/news-search-20261002-codex/agent-io/evidence/ntu-ensemble-decoded.pdf",
+    "evidence_path": "/tmp/news-search-20261002-codex/agent-io/evidence/ntu-ensemble-decoded.pdf"
+  },
+  "NS20261002-0440": {
+    "tier_guess": "T3",
+    "suggested_ledger": "Ledger 3",
+    "notes": "KTH degree project using PyOD VAE on Volvo CE log data. This verifies a research evaluation, not company-wide production deployment."
+  },
+  "NS20261002-0441": {
+    "tier_guess": "T3",
+    "suggested_ledger": "Ledger 3",
+    "notes": "Master thesis adopting ADBench datasets and evaluation methodology. Count as educational/research ecosystem adoption."
+  },
+  "NS20261002-0147": {
+    "tier_guess": "T5",
+    "suggested_ledger": "Ledger 4",
+    "notes": "IEEE Big Data Cup CHI-Bench challenge names Yue Zhao as scientific adviser. Record community activity separately; it is not independent third-party adoption."
+  },
+  "NS20261002-0549": {
+    "status": "dropped",
+    "suggested_ledger": "",
+    "notes": "Cefor degree report develops the same Brazilian Senate procurement study already represented by Ledger 1 row 17 research proceedings. Treat as richer evidence for the existing study, not a new government deployment; the deposited item is a postgraduate technical report."
+  },
+  "NS20261002-0309": {
+    "status": "dropped",
+    "suggested_ledger": "",
+    "notes": "Companion repository for Agent Harness for Large Language Model Agents: A Survey, already recorded at Ledger 6 A20. Same survey artifact, no additional independent source count."
+  },
+  "NS20261002-0492": {
+    "status": "dropped",
+    "suggested_ledger": "",
+    "notes": "Same Open Research Europe 6:213 document as NS20261002-0246. PDF and HTML are one document."
+  },
+  "NS20261002-0512": {
+    "status": "dropped",
+    "suggested_ledger": "",
+    "notes": "Identical 2024 interim AI safety report as NS20261002-0489; same SHA-256. One document across two URL variants."
+  },
+  "NS20261002-0493": {
+    "work": "COPOD / ECOD / ADBench",
+    "evidence_summary": "Deutsche Bundesbank Technical Report 2026-03 benchmarks COPOD and ECOD on three public financial datasets and an AnaCredit subset. ADBench is discussed as prior benchmark literature, not used as the 57-dataset experimental suite. Table 2 reports results and out-of-memory outcomes. The report states that its authors' views need not reflect Bundesbank or Eurosystem policy.",
+    "notes": "Coordinator checked PDF pages 1, 6, 13 and 15. Corrected worker confusion between related-work ADBench results and the report's four experimental datasets. Research evaluation, not production deployment or institutional endorsement."
+  },
+  "NS20261002-0494": {
+    "evidence_summary": "Swedish Defence Research Agency report FOI-R--5453--SE lists ADBench among public resources for anomaly-detection evaluation (PDF p.33, section 6.6.2, footnote 85) and cites its paper at reference 71 (p.42).",
+    "notes": "Direct official report citation and resource listing. The passage does not establish actual deployment or a formal tooling recommendation."
+  },
+  "NS20261002-0495": {
+    "tier_guess": "T5",
+    "suggested_ledger": "Ledger 7",
+    "locator": "PDF page 6, section 4.2, Detection module; publication and acceptance metadata on page 1",
+    "evidence_summary": "Computers & Security 135 (2023), article 103510, implements its ransomware detection module with PyOD and TensorFlow. The methods evaluate OC-SVM, LOF and Isolation Forest. Authors include a researcher at the armasuisse Cyber-Defence Campus.",
+    "notes": "Publisher-formatted peer-reviewed article with DOI 10.1016/j.cose.2023.103510 and acceptance date 2023-09-24. Count as scientific use; a government-hosted copy and government-affiliated coauthor do not establish official policy adoption."
+  },
+  "NS20261002-0035": {
+    "status": "dropped",
+    "suggested_ledger": "",
+    "notes": "Same USC at ICLR 2025 institutional roundup as Ledger 2 row 18b; ISI and Viterbi cross-posts count once."
+  },
+  "NS20261002-0340": {
+    "status": "dropped",
+    "suggested_ledger": "",
+    "notes": "USC ICLR 2026 roundup explicitly excluded in the existing audit reclassification note dated 2026-04-29. No new external coverage count."
+  },
+  "NS20261002-0148": {
+    "status": "dropped",
+    "suggested_ledger": "",
+    "notes": "Kaggle hosting of the same CHI-Bench competition as NS20261002-0147. Same community initiative, not independent adoption. The conflicting 2027 date is not used."
+  },
+  "NS20261002-0239": {
+    "status": "dropped",
+    "suggested_ledger": "",
+    "notes": "Same DEV article as NS20261002-0042, after recovering canonical author URL."
+  },
+  "NS20261002-0257": {
+    "status": "dropped",
+    "suggested_ledger": "",
+    "notes": "Same Promptfoo vulnerability catalog entry as NS20261002-0001, surfaced through a tag/archive page."
+  },
+  "NS20261002-0308": {
+    "status": "dropped",
+    "suggested_ledger": "",
+    "notes": "CatchBench digest in the MindPattern entrants archive is the same entry as NS20261002-0193. One digest, not two independent sources."
+  },
+  "NS20261002-0002": {
+    "tier_guess": "T5",
+    "suggested_ledger": "Ledger 4",
+    "notes": "USC institutional editorial about its own faculty and lab. Kept as first-party/community coverage, outside independent external media counts."
+  },
+  "NS20261002-0146": {
+    "tier_guess": "T5",
+    "suggested_ledger": "Ledger 4",
+    "notes": "USC institutional editorial about its own faculty and lab. Kept as first-party/community coverage, outside independent external media counts."
+  },
+  "NS20261002-0145": {
+    "tier_guess": "T3",
+    "suggested_ledger": "Ledger 3",
+    "notes": "Verified independent practitioner/vendor commentary. Classed as ecosystem technical discussion, without a press-outlet authority claim."
+  },
+  "NS20261002-0153": {
+    "tier_guess": "T3",
+    "suggested_ledger": "Ledger 3",
+    "notes": "Verified independent practitioner/vendor commentary. Classed as ecosystem technical discussion, without a press-outlet authority claim."
+  },
+  "NS20261002-0335": {
+    "tier_guess": "T3",
+    "suggested_ledger": "Ledger 3",
+    "notes": "Verified independent practitioner/vendor commentary. Classed as ecosystem technical discussion, without a press-outlet authority claim."
+  },
+  "NS20261002-0144": {
+    "evidence_summary": "Newsweek opinion essay by Jake Cole (2026-07-23) discusses healthcare agent reliability and CHI-Bench evaluation across 75 clinical and administrative tasks.",
+    "notes": "Coordinator inspected saved raw Newsweek HTML: exact title, author, date, Opinion/Essays labels and CHI-Bench body passage. This is an opinion essay, not a reported news investigation."
+  },
+  "NS20261002-0276": {
+    "tier_guess": "T3",
+    "suggested_ledger": "Ledger 3",
+    "notes": "KTH master thesis with substantive PyOD use. Count as thesis adoption; no peer-reviewed publication claim."
+  },
+  "NS20261002-0413": {
+    "status": "dropped",
+    "suggested_ledger": "",
+    "notes": "Sina syndication of the same JiqizhixinPro DoxBench article already recorded at Ledger 2 row 36w. URL and displayed dates differ, but headline, attribution and story identity match."
+  },
+  "NS20261002-0370": {
+    "status": "dropped",
+    "suggested_ledger": "",
+    "notes": "Video of the CERN Anomaly Detection System presentation already represented by the CERN slides at Ledger 3 row 129. Record as an alternate format, not another independent adoption."
+  },
+  "NS20261002-0217": {
+    "status": "dropped",
+    "suggested_ledger": "",
+    "notes": "Same AI Weekly BlindBias Found First story as NS20261002-0126, surfaced through an alternate headline/URL."
+  },
+  "NS20261002-0202": {
+    "tier_guess": "T3",
+    "suggested_ledger": "Ledger 3",
+    "notes": "Independent vendor technical commentary naming the tool; not a separate press outlet or proof that the vendor deployed it."
+  },
+  "NS20261002-0204": {
+    "tier_guess": "T3",
+    "suggested_ledger": "Ledger 3",
+    "notes": "Independent vendor technical commentary naming the tool; not a separate press outlet or proof that the vendor deployed it."
+  },
+  "NS20261002-0289": {
+    "tier_guess": "T3",
+    "suggested_ledger": "Ledger 3",
+    "notes": "Verified substantive methods use in a degree thesis/dissertation. Count as ecosystem research adoption, not as a peer-reviewed article."
+  },
+  "NS20261002-0439": {
+    "tier_guess": "T3",
+    "suggested_ledger": "Ledger 3",
+    "notes": "Verified substantive methods use in a degree thesis/dissertation. Count as ecosystem research adoption, not as a peer-reviewed article."
+  },
+  "NS20261002-0446": {
+    "tier_guess": "T3",
+    "suggested_ledger": "Ledger 3",
+    "notes": "Verified substantive methods use in a degree thesis/dissertation. Count as ecosystem research adoption, not as a peer-reviewed article."
+  },
+  "NS20261002-0447": {
+    "tier_guess": "T3",
+    "suggested_ledger": "Ledger 3",
+    "notes": "Verified substantive methods use in a degree thesis/dissertation. Count as ecosystem research adoption, not as a peer-reviewed article."
+  },
+  "NS20261002-0452": {
+    "tier_guess": "T3",
+    "suggested_ledger": "Ledger 3",
+    "notes": "Doctoral dissertation with substantive PyOD/COPOD/ECOD evaluation. Count as research ecosystem use; no peer-reviewed article claim."
+  },
+  "NS20261002-0296": {
+    "tier_guess": "T5",
+    "suggested_ledger": "Ledger 4",
+    "notes": "Official USC IETC program verifies an internal leadership appointment and talk. First-party institutional service record, not an external award."
+  },
+  "NS20261002-0499": {
+    "tier_guess": "T3",
+    "suggested_ledger": "Ledger 3",
+    "notes": "Independent author commentary on SmarterArticles. Classified as practitioner ecosystem discussion without a news-outlet authority claim."
+  },
+  "NS20261002-0197": {
+    "peer_review_check": {
+      "candidate_id": "NS20261002-0197",
+      "official_url": "https://doi.org/10.1109/IJCNN54540.2023.10191331",
+      "evidence_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-reports-01-88594-16ed7744f11240ee/work/evidence/grab_paper.pdf",
+      "peer_review_status": "peer_reviewed",
+      "exact_venue": "2023 International Joint Conference on Neural Networks (IJCNN)",
+      "methods_use_verified": true,
+      "recommended_ledger": "Ledger 7",
+      "reason": "Verified against primary IEEE conference proceedings record (DOI: 10.1109/IJCNN54540.2023.10191331, published 2023-06-18). The paper was previously classified as an unreviewed industry engineering whitepaper because it was hosted on engineering.grab.com, but official records establish it was presented and published in the peer-reviewed proceedings of the 2023 International Joint Conference on Neural Networks (IJCNN) by IEEE. Experimental execution of PyGOD baseline implementations (DOMINANT, AnomalyDAE, CONAD, AdONE) is substantively verified in Section IV-B, IV-C, Table II, footnote 2, and references [13, 53]. Author block (Rizal Fathony, Jenn Ng, Jia Chen) confirms complete independence with zero coauthor overlap."
+    },
+    "source": "2023 International Joint Conference on Neural Networks (IJCNN)",
+    "url": "https://doi.org/10.1109/IJCNN54540.2023.10191331",
+    "notes": "Official publication verified in supplementary Gemini check. Verified against primary IEEE conference proceedings record (DOI: 10.1109/IJCNN54540.2023.10191331, published 2023-06-18). The paper was previously classified as an unreviewed industry engineering whitepaper because it was hosted on engineering.grab.com, but official records establish it was presented and published in the peer-reviewed proceedings of the 2023 International Joint Conference on Neural Networks (IJCNN) by IEEE. Experimental execution of PyGOD baseline implementations (DOMINANT, AnomalyDAE, CONAD, AdONE) is substantively verified in Section IV-B, IV-C, Table II, footnote 2, and references [13, 53]. Author block (Rizal Fathony, Jenn Ng, Jia Chen) confirms complete independence with zero coauthor overlap.",
+    "evidence_summary": "IJCNN 2023 paper by Grab researchers implements graph anomaly-detection baselines through PyGOD and evaluates CONAD. Official proceedings DOI: 10.1109/IJCNN54540.2023.10191331."
+  },
+  "NS20261002-0451": {
+    "peer_review_check": {
+      "candidate_id": "NS20261002-0451",
+      "official_url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/a3c1e6c8872aac5a445a821cdb523e70-Abstract-Conference.html",
+      "evidence_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-reports-03-88620-744d7acbda4f423f/work/evidence/NS20261002-0451_evidence.txt",
+      "peer_review_status": "peer_reviewed",
+      "exact_venue": "Advances in Neural Information Processing Systems 38 Main Conference (NeurIPS 2025)",
+      "methods_use_verified": true,
+      "recommended_ledger": "Ledger 7",
+      "reason": "Verified against official NeurIPS proceedings (Advances in Neural Information Processing Systems 38 Main Conference, DOI: 10.52202/085713-3765) and institutional repository ORBi UMons (handle 20.500.12907/55523). Previously classified under thesis-repository, but official records establish it as a top-tier peer-reviewed main conference publication. Substantive execution of ADBench across 26 datasets under contamination and experimental benchmarking of ECOD and COPOD are confirmed in Section 5, Table 2, and Appendix B. Coauthors Sukanya Patra and Souhaib Ben Taieb are independent with zero overlap."
+    },
+    "source": "Advances in Neural Information Processing Systems 38 Main Conference (NeurIPS 2025)",
+    "url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/a3c1e6c8872aac5a445a821cdb523e70-Abstract-Conference.html",
+    "notes": "Official publication verified in supplementary Gemini check. Verified against official NeurIPS proceedings (Advances in Neural Information Processing Systems 38 Main Conference, DOI: 10.52202/085713-3765) and institutional repository ORBi UMons (handle 20.500.12907/55523). Previously classified under thesis-repository, but official records establish it as a top-tier peer-reviewed main conference publication. Substantive execution of ADBench across 26 datasets under contamination and experimental benchmarking of ECOD and COPOD are confirmed in Section 5, Table 2, and Appendix B. Coauthors Sukanya Patra and Souhaib Ben Taieb are independent with zero overlap.",
+    "evidence_summary": "NeurIPS 2025 main-conference paper by Sukanya Patra and Souhaib Ben Taieb executes ADBench across 26 datasets and benchmarks ECOD and COPOD under data contamination."
+  },
+  "NS20261002-0246": {
+    "peer_review_check": {
+      "candidate_id": "NS20261002-0246",
+      "official_url": "https://open-research-europe.ec.europa.eu/articles/6-213",
+      "evidence_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-academic-04-88730-bba03e8643f54f97/work/scratch/open-research-europe-6-213.pdf",
+      "peer_review_status": "awaiting_peer_review",
+      "exact_venue": "Open Research Europe",
+      "methods_use_verified": true,
+      "recommended_ledger": "Ledger 7",
+      "reason": "Verified on European Commission Open Research Europe platform (Method Article 6:213, DOI: 10.12688/openreseurope.23019.1, published 2026-06-18 under Horizon Europe grant 101074092). Open Research Europe employs a post-publication open peer review model. Inspection of the canonical PDF and platform metadata confirms version 1 status is explicitly 'awaiting peer review' with zero approved referee reports to date; it has not yet passed peer review. Per review guidelines distinguishing awaiting review from passed, peer review is awaiting review / unverified. Substantive methods execution of PyOD 2.0.5 HBOS is verified on pp. 42 and 49 and preserved. Coauthors (Bružė, Paskauskas, Matulytė, Sabaliauskaitė, Lavišius) are independent Lithuanian researchers with zero overlap."
+    },
+    "tier_guess": "T3",
+    "suggested_ledger": "Ledger 3",
+    "source": "Open Research Europe (peer review pending or unverified)",
+    "notes": "Substantive methods use is verified; official peer-review status is not confirmed. Count as research ecosystem use. Verified on European Commission Open Research Europe platform (Method Article 6:213, DOI: 10.12688/openreseurope.23019.1, published 2026-06-18 under Horizon Europe grant 101074092). Open Research Europe employs a post-publication open peer review model. Inspection of the canonical PDF and platform metadata confirms version 1 status is explicitly 'awaiting peer review' with zero approved referee reports to date; it has not yet passed peer review. Per review guidelines distinguishing awaiting review from passed, peer review is awaiting review / unverified. Substantive methods execution of PyOD 2.0.5 HBOS is verified on pp. 42 and 49 and preserved. Coauthors (Bružė, Paskauskas, Matulytė, Sabaliauskaitė, Lavišius) are independent Lithuanian researchers with zero overlap.",
+    "evidence_summary": "Open Research Europe version 1, awaiting peer review, specifies PyOD 2.0.5 HBOS in its hybrid-threat intelligence pipeline. Exact component version is listed on PDF page 49."
+  },
+  "NS20261002-0272": {
+    "peer_review_check": {
+      "candidate_id": "NS20261002-0272",
+      "official_url": "https://aclanthology.org/2026.findings-acl.556/",
+      "evidence_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-academic-05-88748-013bf3abeb934eea/work/scratch/NS20261002-0272_evidence.txt",
+      "peer_review_status": "peer_reviewed",
+      "exact_venue": "Findings of the Association for Computational Linguistics: ACL 2026",
+      "methods_use_verified": true,
+      "recommended_ledger": "Ledger 7",
+      "reason": "Verified in the primary official ACL Anthology proceedings (Anthology ID: 2026.findings-acl.556, DOI: 10.18653/v1/2026.findings-acl.556, pages 11457-11483, published July 2026). While arXiv v3 was labeled 'Preprint. Under review', the official ACL Anthology confirms full peer-reviewed publication in Findings of ACL 2026. Substantive methods execution of TrustLLM benchmark (Sun et al., 2024) across hallucination, sycophancy, and privacy metrics is verified in Table 1 (p. 8) and Appendix A.2 (pp. 16-17). Coauthors (Liang, Hu, Liu, Griffiths, Fisac) are independent Princeton researchers with zero overlap."
+    },
+    "source": "Findings of the Association for Computational Linguistics: ACL 2026",
+    "url": "https://aclanthology.org/2026.findings-acl.556/",
+    "notes": "Official publication verified in supplementary Gemini check. Verified in the primary official ACL Anthology proceedings (Anthology ID: 2026.findings-acl.556, DOI: 10.18653/v1/2026.findings-acl.556, pages 11457-11483, published July 2026). While arXiv v3 was labeled 'Preprint. Under review', the official ACL Anthology confirms full peer-reviewed publication in Findings of ACL 2026. Substantive methods execution of TrustLLM benchmark (Sun et al., 2024) across hallucination, sycophancy, and privacy metrics is verified in Table 1 (p. 8) and Appendix A.2 (pp. 16-17). Coauthors (Liang, Hu, Liu, Griffiths, Fisac) are independent Princeton researchers with zero overlap."
+  },
+  "NS20261002-0333": {
+    "peer_review_check": {
+      "candidate_id": "NS20261002-0333",
+      "official_url": "https://arxiv.org/abs/2609.21363",
+      "evidence_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-academic-05-88748-013bf3abeb934eea/work/scratch/NS20261002-0333_evidence.txt",
+      "peer_review_status": "unverified",
+      "exact_venue": "arXiv",
+      "methods_use_verified": true,
+      "recommended_ledger": "Ledger 7",
+      "reason": "Official venue audit on ndss-symposium.org confirms that NDSS 2027 has not yet published official proceedings or an official list of accepted papers (NDSS 2027 submissions and review cycles are currently ongoing as of October 2026). Although the arXiv preprint (arXiv:2609.21363, submitted 2026-09-18) and author personal websites claim acceptance to NDSS 2027, per unit review instructions a manuscript self-claiming accepted is not sufficient when no primary official proceedings record is accessible; official peer-review status is therefore classified as unverified. Substantive methods adoption of DoxBench (Luo et al., 2025) across 8 tables and figures is verified and preserved. Coauthors (Wang, Li, Zhang, Zhang, You, Qian, Wen) are independent researchers with zero overlap."
+    },
+    "tier_guess": "T3",
+    "suggested_ledger": "Ledger 3",
+    "source": "arXiv (peer review pending or unverified)",
+    "notes": "Substantive methods use is verified; official peer-review status is not confirmed. Count as research ecosystem use. Official venue audit on ndss-symposium.org confirms that NDSS 2027 has not yet published official proceedings or an official list of accepted papers (NDSS 2027 submissions and review cycles are currently ongoing as of October 2026). Although the arXiv preprint (arXiv:2609.21363, submitted 2026-09-18) and author personal websites claim acceptance to NDSS 2027, per unit review instructions a manuscript self-claiming accepted is not sufficient when no primary official proceedings record is accessible; official peer-review status is therefore classified as unverified. Substantive methods adoption of DoxBench (Luo et al., 2025) across 8 tables and figures is verified and preserved. Coauthors (Wang, Li, Zhang, Zhang, You, Qian, Wen) are independent researchers with zero overlap.",
+    "evidence_summary": "Independent arXiv manuscript uses DoxBench Levels 2 and 3 as its evaluation dataset for geolocation privacy defenses. Its claimed NDSS 2027 acceptance lacks an accessible official venue record in this check."
+  },
+  "NS20261002-0530": {
+    "peer_review_check": {
+      "candidate_id": "NS20261002-0530",
+      "official_url": "https://arxiv.org/abs/2507.15584",
+      "evidence_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-academic-07-88788-ee10fc3447db4cbe/work/scratch/evidence/NS20261002-0530_evidence.txt",
+      "peer_review_status": "unverified",
+      "exact_venue": "arXiv",
+      "methods_use_verified": true,
+      "recommended_ledger": "Ledger 7",
+      "reason": "Primary conference proceedings audit across ICML 2026 proceedings, virtual conference site (icml.cc), position paper track, and OpenReview forum (id: 9HhehgF3jR) confirms that the paper was submitted to the ICML 2026 Position Paper Track but was never accepted or published in official ICML 2026 proceedings. Both the canonical PDF and OpenReview record confirm status as 'Preprint. Under review' (arXiv:2507.15584v2, last revised 2026-06-18) with no official accepted conference record. Per unit review instructions, peer-review status is unverified. Substantive methods execution of ADBench benchmark datasets and PyOD implementations (DeepSVDD, OCSVM) in Section 1 (p. 2) and Figure 1 is verified and preserved. Coauthors (Röchner, Klüttermann, Rothlauf, Schlör) are independent German researchers with zero overlap."
+    },
+    "tier_guess": "T3",
+    "suggested_ledger": "Ledger 3",
+    "source": "arXiv (peer review pending or unverified)",
+    "notes": "Substantive methods use is verified; official peer-review status is not confirmed. Count as research ecosystem use. Primary conference proceedings audit across ICML 2026 proceedings, virtual conference site (icml.cc), position paper track, and OpenReview forum (id: 9HhehgF3jR) confirms that the paper was submitted to the ICML 2026 Position Paper Track but was never accepted or published in official ICML 2026 proceedings. Both the canonical PDF and OpenReview record confirm status as 'Preprint. Under review' (arXiv:2507.15584v2, last revised 2026-06-18) with no official accepted conference record. Per unit review instructions, peer-review status is unverified. Substantive methods execution of ADBench benchmark datasets and PyOD implementations (DeepSVDD, OCSVM) in Section 1 (p. 2) and Figure 1 is verified and preserved. Coauthors (Röchner, Klüttermann, Rothlauf, Schlör) are independent German researchers with zero overlap.",
+    "evidence_summary": "Independent arXiv manuscript runs experiments on ADBench datasets with PyOD DeepSVDD and OCSVM, and critiques benchmark aggregation. Official conference acceptance was not established."
+  },
+  "NS20261002-0550": {
+    "tier_guess": "T3",
+    "suggested_ledger": "Ledger 3",
+    "notes": "Master thesis implementing PyOD Isolation Forest. Count as thesis research adoption; not a peer-reviewed article."
+  },
+  "NS20261002-0540": {
+    "status": "dropped",
+    "suggested_ledger": "",
+    "notes": "BAAI repost of the same AI蜗牛车 time-series anomaly survey as NS20261002-0541. Same opening, bibliography and PyOD/resource links; BAAI identifies the external WeChat source. One article across reposts."
+  },
+  "NS20261002-0228": {
+    "status": "dropped",
+    "suggested_ledger": "",
+    "notes": "Chinese translation of the same LLM-Hacking GEO-Bench article as NS20261002-0145. Count the original practitioner article once; a translated page is not additional external media."
+  },
+  "NS20261002-0344": {
+    "status": "dropped",
+    "suggested_ledger": "",
+    "coauthor_check": "Qinghua Liu is at Ohio State in both this PVLDB paper and the Yue Zhao coauthored graph-model extraction paper (arXiv:2511.11912). Matching full name and institution confirmed from both primary PDF author blocks.",
+    "notes": "Substantive scientific use exists, but the current portfolio has coauthor overlap. Excluded from independent uptake under the full coauthor-roster rule. Preserved as collaborator evidence.",
+    "pdf_path": "/tmp/news-search-20261002-codex/agent-io/evidence/tsb-autoad.pdf"
+  },
+  "NS20261002-0337": {
+    "url": "https://proceedings.mlr.press/v306/zhang26aw.html",
+    "source": "ICML 2026, PMLR 306",
+    "notes": "Coordinator verified official PMLR proceedings record: volume 306, pages 155426-155449, matching title and all seven authors."
+  },
+  "NS20261002-0287": {
+    "url": "https://doi.org/10.1007/s10618-024-01077-0"
+  }
+}

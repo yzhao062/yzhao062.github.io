@@ -1,0 +1,467 @@
+{
+  "units": [
+    {
+      "unit_id": "papers-02",
+      "queries_reported": 33,
+      "search_calls_logged": 33,
+      "candidates": 22,
+      "open_items": []
+    },
+    {
+      "unit_id": "papers-03",
+      "queries_reported": 47,
+      "search_calls_logged": 61,
+      "candidates": 25,
+      "open_items": [
+        "Query 'From Selection to Generation: A Survey of LLM-based Active Learning cite OR cited OR citation' failed with error 'no parts returned from GenerateContent'; marked unexecuted per instructions.",
+        "Query 'From Selection to Generation: A Survey of LLM-based Active Learning references' failed with error 'no parts returned from GenerateContent'; marked unexecuted per instructions.",
+        "OpenReview forum direct HTML fetch for TMLR reproducibility study (forum?id=5Q1gr80AXU) encountered ChallengeRequiredError (HTTP 403); JMLR official BibTeX verified directly and OpenReview profile confirmed.",
+        "MDPI Sensors direct PDF fetch for article 1424-8220/26/19/6003 encountered Akamai HTTP 403; content and comparative FaceLock evaluation verified via search extracts and VectorBrief secondary coverage (https://vectorbrief.online/news/4531)."
+      ]
+    },
+    {
+      "unit_id": "papers-04",
+      "queries_reported": 32,
+      "search_calls_logged": 35,
+      "candidates": 15,
+      "open_items": []
+    },
+    {
+      "unit_id": "papers-05",
+      "queries_reported": 27,
+      "search_calls_logged": 28,
+      "candidates": 16,
+      "open_items": [
+        "Grounding search redirect URL https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG2IT8VrVIDf3w4VVcEyRwa7JjcZY7KQnL2yrhPS89WM3pdD0wtRZfM1wl5NCBG-MNxNGTGOIgIv9WD5r_BTFSfXJIhs2m1YLR4i9PtX1Y8pxUh_apMXOTy9AEcYw9bPfUHDjuWpwiwFWfkiirwBiIfSAJbFF1D5lLW0lcdvF889dFViMuTIRaHbmEEqEVG4NOAZ29sYkJjF5FnAiCRYErV-jL returned HTTP 404 Not Found on direct fetch.",
+        "Direct download of MDPI Sensors PDF https://www.mdpi.com/1424-8220/26/10/3176/pdf?version=1716024976 was blocked with HTTP 403 Forbidden by Cloudflare anti-bot; full paper text was alternatively validated via official NCBI E-utilities XML API for PMC13211153.",
+        "Direct browser request to PubMed Central web view https://pmc.ncbi.nlm.nih.gov/articles/PMC13211153/ returned a reCAPTCHA challenge HTML shell; successfully bypassed via Entrez E-utilities API."
+      ]
+    },
+    {
+      "unit_id": "papers-06",
+      "queries_reported": 38,
+      "search_calls_logged": 39,
+      "candidates": 12,
+      "open_items": [
+        "bioRxiv PDF for Koleiev et al. (10.64898/2026.02.26.708193v1) was blocked by Cloudflare error 1015; full text retrieval should proceed via Europe PMC / browser session during verification phase.",
+        "Medium / Towards AI paywall and bot verification prevented full raw HTML download of Alexandra Amidon original article (why-outlier-detection-is-hard-94386578be6c), though text and Russian OTUS translation on Habr were verified."
+      ]
+    },
+    {
+      "unit_id": "papers-07",
+      "queries_reported": 27,
+      "search_calls_logged": 35,
+      "candidates": 17,
+      "open_items": [
+        "MDPI direct PDF endpoints returned HTTP 403 under automated curl fetching due to Akamai bot mitigation; citation verification was conducted via alternative index and aggregator records (PMC, Semantic Scholar, web summaries).",
+        "ResearchGate direct PDF downloads returned automated bot verification challenge HTML shells; papers were verified and retrieved via official institutional open-access repositories (CEUR-WS, Iowa State, Growing Science)."
+      ]
+    },
+    {
+      "unit_id": "papers-08",
+      "queries_reported": 38,
+      "search_calls_logged": 42,
+      "candidates": 17,
+      "open_items": []
+    },
+    {
+      "unit_id": "papers-09",
+      "queries_reported": 59,
+      "search_calls_logged": 57,
+      "candidates": 19,
+      "open_items": [
+        "Direct worker fetch of TheMoonlight.io review (https://www.themoonlight.io/es/review/cua-swe-when-computer-use-agents-meet-visual-software-engineering) returned HTTP 429 due to Vercel bot challenge; canonical scanner with browser automation recommended.",
+        "Direct worker fetch of Medium article (https://medium.com/@pankaj_pandey/tool-scoped-guardrails-agent-safety-must-live-next-to-the-action-3dac3b0fc9f8) returned HTTP 403 (Cloudflare challenge); verified topic overlap via search summary.",
+        "Tensorfeed.ai redirect returned bare homepage (https://tensorfeed.ai/) rather than persistent article path; logged in collisions per QA guidelines."
+      ]
+    },
+    {
+      "unit_id": "papers-10",
+      "queries_reported": 42,
+      "search_calls_logged": 43,
+      "candidates": 9,
+      "open_items": []
+    },
+    {
+      "unit_id": "papers-11",
+      "queries_reported": 40,
+      "search_calls_logged": 47,
+      "candidates": 13,
+      "open_items": []
+    },
+    {
+      "unit_id": "papers-12",
+      "queries_reported": 36,
+      "search_calls_logged": 36,
+      "candidates": 6,
+      "open_items": [
+        "Medium article by James Fahey (https://medium.com/@fahey_james/ai-in-weather-prediction-revolutionizing-forecasts-with-data-models-and-intelligence-ba9735896ab8) returned Cloudflare HTTP 403 upon direct HTTP GET; full text extraction requires browser/session cookies.",
+        "MDPI Sensors paper (https://www.mdpi.com/1424-8220/26/4/1275/pdf) returned Akamai HTTP 403 on automated curl; citation confirmed via article landing page and search grounding metadata.",
+        "Preprints.org manuscript 202605.1532 returned Akamai HTTP 403; confirmed via search grounding redirect and IEEE TKDE index.",
+        "Name collision noted: 'GOE-LLM' is also used for 'Generalizable Opponent Exploitation with LLMs' (poker game theory), distinct from FORTIS 'Graph Synthetic Out-of-Distribution Exposure with Large Language Models'.",
+        "Generic phrase collision re-verified: 'implicit execution traces' in FALAT (arXiv:2606.00765) refers to Li et al. 2025b, leaving FORTIS Implicit Execution Tracing (arXiv:2603.17445) with 0 confirmed external citers."
+      ]
+    },
+    {
+      "unit_id": "papers-13",
+      "queries_reported": 39,
+      "search_calls_logged": 39,
+      "candidates": 14,
+      "open_items": []
+    },
+    {
+      "unit_id": "tools-01",
+      "queries_reported": 43,
+      "search_calls_logged": 44,
+      "candidates": 13,
+      "open_items": []
+    },
+    {
+      "unit_id": "tools-03",
+      "queries_reported": 50,
+      "search_calls_logged": 50,
+      "candidates": 13,
+      "open_items": [
+        "FirstWord Pharma article (https://firstwordpharma.com/story/5936269) returned JavaScript-only loading shell; unable to extract full article text from raw HTTP fetch without JS rendering engine."
+      ]
+    },
+    {
+      "unit_id": "tools-04",
+      "queries_reported": 43,
+      "search_calls_logged": 43,
+      "candidates": 9,
+      "open_items": []
+    },
+    {
+      "unit_id": "outlets-01",
+      "queries_reported": 96,
+      "search_calls_logged": 99,
+      "candidates": 2,
+      "open_items": []
+    },
+    {
+      "unit_id": "outlets-02",
+      "queries_reported": 49,
+      "search_calls_logged": 49,
+      "candidates": 8,
+      "open_items": [
+        "takara.ai: Lead URL https://takara.ai/research/doxing-via-the-lens/ returned HTTP 404 (Next.js fallback shell) on live GET; flagged as phantom/dead link.",
+        "nist.gov: Grounding redirect location https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-2e2025.pdf returned HTTP 404 on direct fetch; documented as broken redirect rather than positive candidate."
+      ]
+    },
+    {
+      "unit_id": "outlets-03",
+      "queries_reported": 105,
+      "search_calls_logged": 105,
+      "candidates": 23,
+      "open_items": []
+    },
+    {
+      "unit_id": "outlets-04",
+      "queries_reported": 51,
+      "search_calls_logged": 66,
+      "candidates": 9,
+      "open_items": []
+    },
+    {
+      "unit_id": "outlets-05",
+      "queries_reported": 47,
+      "search_calls_logged": 73,
+      "candidates": 42,
+      "open_items": [
+        "Domain raxelabs.com is unresolvable (NXDOMAIN on DNS check); unable to crawl or index content.",
+        "goatstack.ai server endpoint refused connection on ports 80 and 443; service temporarily unreachable.",
+        "oatd.org blocked automated HTTP requests with Cloudflare bot challenge (HTTP 403 Forbidden); queries marked unexecuted.",
+        "base-search.net returned anti-bot verification page (\"Making sure you are not a bot!\"); queries marked unexecuted.",
+        "tdx.cat direct PDF bitstream and landing page requests returned Cloudflare challenge (HTTP 403 Forbidden); manual or browser session required to download full text."
+      ]
+    },
+    {
+      "unit_id": "outlets-06",
+      "queries_reported": 79,
+      "search_calls_logged": 80,
+      "candidates": 4,
+      "open_items": [
+        "Kiel University (macau.uni-kiel.de) dissertations by Andreas Lohrer and Huenemoerder returned bot-challenge HTML shells (HTTP 200, 7.4KB); preserved for headless browser fetch."
+      ]
+    },
+    {
+      "unit_id": "outlets-07",
+      "queries_reported": 100,
+      "search_calls_logged": 100,
+      "candidates": 10,
+      "open_items": [
+        "ai.mil direct HTTP requests returned 403 Forbidden to automated scripts; DoD CDAO Responsible AI Toolkit Generative AI Version 1.0 (recommending PyOD for OOD detection and citing TrustLLM for adversarial robustness) was confirmed via web search index summaries and Tradewinds Marketplace documentation (https://rai.tradewindai.com/), but full PDF download of the internal specification from ai.mil remains gated.",
+        "sdaia.gov.sa connections returned SSL network errors (errno 56 reset) from the local environment; SDAIA Deepfakes Guidelines (مبادئ التزييف العميق) citing PyOD and Artificial Intelligence in a Week (الذكاء الاصطناعي في أسبوع) newsletter citing TrustLLM were confirmed via search index evidence, but public PDF downloads directly from sdaia.gov.sa were inaccessible.",
+        "site:readthedocs.io \"Yue Zhao\" query failed with tool error: no candidates returned from GenerateContent (marked unexecuted per instructions).",
+        "guthlabs.ai surfaced in search grounding for MetaPersona (arXiv:2609.38392), but direct HTTP requests to prospective article URLs returned 404; recorded as an unresolvable search grounding lead without inventing URL slugs."
+      ]
+    },
+    {
+      "unit_id": "person-lab",
+      "queries_reported": 49,
+      "search_calls_logged": 44,
+      "candidates": 14,
+      "open_items": []
+    },
+    {
+      "unit_id": "standing-artifacts",
+      "queries_reported": 97,
+      "search_calls_logged": 97,
+      "candidates": 28,
+      "open_items": [
+        "Semantic Scholar Graph API endpoint intermittently returned HTTP 429 rate limit during high-rate citation discovery sweeps; supplemented with direct arXiv HTML and PDF full-text inspection across all assigned identifiers.",
+        "Preprints.org manuscript 202604.0428 direct PDF retrieval returned HTTP 403 Forbidden; underlying survey and taxonomy content confirmed via GitHub repository Gloriaameng/Awesome-Agent-Harness.",
+        "Implicit Execution Tracing (arXiv:2603.17445) returned exactly 0 independent external citations across both Semantic Scholar and web search engines (only self-citation by Auditable Agents 2604.05485), confirming the known zero-external-citation state."
+      ]
+    },
+    {
+      "unit_id": "standing-concepts",
+      "queries_reported": 54,
+      "search_calls_logged": 60,
+      "candidates": 10,
+      "open_items": []
+    },
+    {
+      "unit_id": "topics-downstream",
+      "queries_reported": 30,
+      "search_calls_logged": 39,
+      "candidates": 14,
+      "open_items": [
+        "https://readqvick.medium.com/multi-agent-framework-drugagent-automating-ai-driven-drug-discovery-programming-with-4ad68122dcbf returned HTTP 403 to automated scraper (Cloudflare protection); resolved real URL and title from search redirect, recommended for browser session if full-text extraction required.",
+        "https://www.clawsecure.ai/blog/introducing-clawsecure returned Cloudflare challenge on direct fetch; recorded as ecosystem context."
+      ]
+    },
+    {
+      "unit_id": "impact-adoption",
+      "queries_reported": 74,
+      "search_calls_logged": 74,
+      "candidates": 20,
+      "open_items": [
+        "Direct fetch of Preprints.org manuscript 202609.0644 returned HTTP 403 Akamai challenge for PDF download; flagged for coordinator canonical scanner."
+      ]
+    },
+    {
+      "unit_id": "education-books",
+      "queries_reported": 55,
+      "search_calls_logged": 56,
+      "candidates": 40,
+      "open_items": []
+    },
+    {
+      "unit_id": "code-ecosystem",
+      "queries_reported": 75,
+      "search_calls_logged": 74,
+      "candidates": 28,
+      "open_items": [
+        "Search query 'from pyod.models.ecod import ECOD github' encountered API error (no candidates returned from GenerateContent); alternative queries succeeded in discovering and verifying ECOD implementations in llamafarm, emmv, RoelBouman/outlierdetection, and PyOD_OPC-UA."
+      ]
+    },
+    {
+      "unit_id": "global-media",
+      "queries_reported": 72,
+      "search_calls_logged": 72,
+      "candidates": 26,
+      "open_items": [
+        {
+          "item": "Kiel University Dissertation (Germany)",
+          "url": "https://macau.uni-kiel.de/servlets/MCRFileNodeServlet/macau_derivate_00004993/huenemoerder_dissertation.pdf",
+          "status": "held_challenge",
+          "notes": "The Kiel University MACAU repository returned an anti-bot Proof-of-Work challenge (Anubis system) preventing automated PDF payload extraction. URL preserved for manual verification."
+        },
+        {
+          "item": "Universidade de Brasília (UnB) Paper",
+          "url": "https://ppee.unb.br/wp-content/uploads/2023/01/ARTIGO-WEAPON_-Uma-Arquitetura-para-Deteccao-de-Anomalias-de-Comportamento-do-Usuario.pdf",
+          "status": "held_scanned_raster",
+          "notes": "12-page Brazilian Portuguese paper downloaded to /tmp/news-search-20261002-codex/agent-io/results/unb_weapon_pyod.pdf; file consists of rasterized scanned images without embedded text layer."
+        }
+      ]
+    },
+    {
+      "unit_id": "theses",
+      "queries_reported": 44,
+      "search_calls_logged": 50,
+      "candidates": 26,
+      "open_items": [
+        {
+          "url": "https://research-information.bris.ac.uk/files/490661487/final_thesis.pdf",
+          "title": "Interactive Agents for Online Child Safety (Ellie Prosser, PhD thesis, Univ of Bristol, 2026)",
+          "http_status": 403,
+          "notes": "Cloudflare managed challenge on direct PDF curl from worker environment. Citation of TrustLLM verified via University of Bristol Pure landing page metadata as ref [181]. Requires coordinator browser/canonical scan."
+        },
+        {
+          "url": "https://theses.hal.science/tel-05351694/document",
+          "title": "Advancing Anomaly Detection in Tabular Data : A Case-Study on Credit Card Fraud Identification (Hugo Thimonier, PhD thesis, Univ Paris-Saclay, 2024)",
+          "http_status": 403,
+          "notes": "HAL anti-bot challenge on direct PDF curl from worker environment. Thesis metadata and defense verified via theses.fr (2024UPASG046) and HAL open archive tel-05351694. Requires coordinator browser/canonical scan."
+        },
+        {
+          "url": "https://gupea.ub.gu.se/bitstreams/eb6a75f1-a61e-4eb5-9b58-00e9337f1b00/download",
+          "title": "Trustworthiness in Large Language Models: Key Factors Influencing Software Company Adoption and Industry Barriers (Rasmus Nygren et al., Univ of Gothenburg, 2025)",
+          "http_status": 403,
+          "notes": "Anubis proof-of-work security challenge on direct PDF curl from worker environment. TrustLLM benchmark adoption confirmed via GUPEA repository record metadata (UUID: eb6a75f1-a61e-4eb5-9b58-00e9337f1b00). Requires coordinator browser/canonical scan."
+        },
+        {
+          "url": "https://scholarworks.calstate.edu/downloads/4q77g219t",
+          "title": "A Semi-Supervised Anomaly Detection Framework for Electricity Theft Using Optimized Feature Selection (Kyungwon Shin, Master's thesis, CSUN, 2022)",
+          "http_status": 403,
+          "notes": "Cloudflare challenge on direct PDF curl from worker environment. PyOD ABOD/KNN application verified via CSUN ScholarWorks record 4q77g219t. Requires coordinator browser/canonical scan."
+        },
+        {
+          "url": "https://mediatum.ub.tum.de/doc/1773695/1773695.pdf",
+          "title": "Current Limitations of Text-based Molecular Representations for Machine Learning in Small Molecule Drug Discovery (Peter Hartog, Doctoral thesis, TUM, 2024)",
+          "http_status": 403,
+          "notes": "Anubis security challenge on direct PDF curl from worker environment. TDC discussion verified via mediaTUM repository record 1773695. Requires coordinator browser/canonical scan."
+        },
+        {
+          "url": "https://www.diva-portal.org/smash/record.jsf?pid=diva2:2076930",
+          "title": "Decision-Support for OculomotorAssessment After Stroke Using EyeTracking and Machine Learning (Hannes Hagman Hansson, Umeå Univ, 2026)",
+          "http_status": 200,
+          "notes": "Abstract and metadata record verified on DiVA portal (URN: urn:nbn:se:umu:diva-255561), explicitly indexing ECOD as a core evaluated model. Full-text attachment not yet released / under embargo."
+        }
+      ]
+    },
+    {
+      "unit_id": "patents",
+      "queries_reported": 25,
+      "search_calls_logged": 11,
+      "candidates": 23,
+      "open_items": [
+        "Google Patents XHR batch 2 endpoint returned HTTP 503 rate limiting for queries: \"Therapeutics Data Commons\", \"TODS\" outlier, \"TODS\" anomaly, \"HPOD\" outlier, \"AD-AGENT\", \"NLP-ADBench\". Searches marked unexecuted.",
+        "TrustLLM (ICML 2024 / arXiv:2401.05561): No direct patent filings or assignee claims identified in this sweep; disambiguated from unrelated EU Horizon project trustllm.eu (grant 101135671).",
+        "MetaOD (KDD 2021 / arXiv:2106.11425): No dedicated patent filings found for unsupervised outlier model selection; separated from object detection metamorphic testing tool MetaOD.",
+        "Exhaustive audit of all 94 patents citing PyOD (as reported on Yue Zhao faculty profile) requires unthrottled bulk access to USPTO/EPO/CNIPA APIs or Google Patents BigQuery table."
+      ]
+    },
+    {
+      "unit_id": "pdf-us",
+      "queries_reported": 52,
+      "search_calls_logged": 52,
+      "candidates": 16,
+      "open_items": [
+        "GAO asset downloads (e.g. GAO-25-108519, https://www.gao.gov/assets/890/881730.pdf) return HTTP 403 from Akamai WAF when fetched via non-browser HTTP clients; coordinator can re-fetch with authenticated headless browser if canonical text scan is desired.",
+        "CRS report direct PDF downloads (https://crsreports.congress.gov/product/pdf/R/R46795 and R48909) challenge automated requests via Cloudflare; canonical text scanner may ingest via congressional legislative intranet or alternate mirror."
+      ]
+    },
+    {
+      "unit_id": "pdf-international",
+      "queries_reported": 38,
+      "search_calls_logged": 72,
+      "candidates": 12,
+      "open_items": []
+    },
+    {
+      "unit_id": "pdf-models",
+      "queries_reported": 48,
+      "search_calls_logged": 50,
+      "candidates": 12,
+      "open_items": []
+    },
+    {
+      "unit_id": "pdf-policy-analysts",
+      "queries_reported": 44,
+      "search_calls_logged": 60,
+      "candidates": 5,
+      "open_items": [
+        "McKinsey search returned lead on 2009 financial crisis report citing distinct consultant Yue Zhao; candidate dropped as name collision.",
+        "MITRE 11 Strategies of a World-Class Cybersecurity Operations Center PDF (2022) returned HTTP 403 on direct fetch; covered under prior verified negatives.",
+        "Gartner queries returned no direct public document citations for PyOD or TrustLLM; verified that prior constructed URLs (e.g., TRiSM / LLM Strategies) are 404s and held-gated status is retired per registry."
+      ]
+    },
+    {
+      "unit_id": "open-dragnet",
+      "queries_reported": 51,
+      "search_calls_logged": 51,
+      "candidates": 11,
+      "open_items": [
+        "https://www.kiss.caltech.edu/workshops/technosignatures/presentations/Wagstaff.pdf: Observed search grounding redirect for NASA JPL presentation by Dr. Kiri Wagstaff citing PyOD returned HTTP 404 on current server; preserved lead for institutional archive retrieval.",
+        "https://patents.google.com/patent/EP4662606A1: Google Patents returned HTTP 503 to automated scraper; document details verified via patent summary and family cross-reference (Genentech Inc., WO2024163456A1, paragraphs [0048] and [0067]).",
+        "https://gupea.ub.gu.se/bitstreams/eb6a75f1-a61e-4eb5-9b58-00e9337f1b00/download: University of Gothenburg repository PDF download returned bot-challenge HTML page (24,621 bytes); preserved in open items for manual/browser download.",
+        "https://openreview.net/forum?id=MGy6FHMqnd: OpenReview API endpoint for ClimateLLM forum returned HTTP 403 to unauthenticated client; web view confirmed conference submission under review.",
+        "Name collisions documented and distinguished: (1) DoxBench: Distinguished academic benchmark (arXiv:2504.19373) from commercial document AI tool by DoxPro.ai. (2) CatchBench: Distinguished agent failure audit benchmark (arXiv:2608.22808) from geotechnical/mining slope engineering terminology ('catch bench'). (3) PYOD: Distinguished Python Outlier Detection from Microsoft community sticker store project 'PimpYourOwnDevice (PYOD)'."
+      ]
+    },
+    {
+      "unit_id": "repair-papers-01",
+      "queries_reported": 76,
+      "search_calls_logged": 80,
+      "candidates": 9,
+      "open_items": [
+        "Direct download of Preprints.org manuscript 202609.1836.v1 returned HTTP 403 due to Akamai edge protection; coordinator canonical scanner or residential proxy needed to extract full text.",
+        "Takara AI technical index lead for CDCR-SFT: A bare homepage (https://takara.ai) was originally reported. A targeted search yielded a redirect to https://tldr.takara.ai/p/2609.02805, but live fetch showed this URL is an unrelated paper ('Large Language Models for Telecom Root Cause Analysis') with zero mention of CDCR-SFT or CausalDR. Because no authentic document URL could be recovered on takara.ai, this unrecoverable lead is retained in open_items with its observed search redirect rather than fabricating an address."
+      ]
+    },
+    {
+      "unit_id": "repair-tools-02",
+      "queries_reported": 63,
+      "search_calls_logged": 63,
+      "candidates": 26,
+      "open_items": [
+        "Preprints.org manuscript 202607.1125.v1 PDF download returned HTTP 403 Akamai challenge; queued for coordinator canonical scan."
+      ]
+    },
+    {
+      "unit_id": "repair-domain-gaps",
+      "queries_reported": 6,
+      "search_calls_logged": 10,
+      "candidates": 6,
+      "open_items": []
+    }
+  ],
+  "raw_records": 645,
+  "unique_urls": 556,
+  "identity_matches": 121,
+  "first_party_matches": 39,
+  "novel_urls": 391,
+  "dimensions": {
+    "D5": 215,
+    "D2": 57,
+    "D3": 80,
+    "D1": 11,
+    "D4": 13,
+    "D6": 10,
+    "D7": 98,
+    "D7-code": 27,
+    "D8": 35,
+    "D10": 5
+  },
+  "outlet_classes": {
+    "security-blog": 16,
+    "university": 22,
+    "policy-research": 8,
+    "industry": 40,
+    "academic": 107,
+    "ai-aggregator": 28,
+    "unknown": 11,
+    "developer-media": 84,
+    "github-dependents": 55,
+    "gov-pdf": 28,
+    "developer-community": 32,
+    "thesis-repository": 36,
+    "china-tech-media": 14,
+    "book": 13,
+    "tier1-business-press": 2,
+    "patent": 23,
+    "job-aggregator": 1,
+    "foundation-model": 16,
+    "tier1-tech-press": 1,
+    "analyst": 1,
+    "course-training": 8,
+    "web-archive": 2,
+    "mcp-registry": 3
+  },
+  "coverage_gaps": [],
+  "resolved_gaps": [
+    {
+      "unit_id": "outlets-04",
+      "domain": "ec.europa.eu",
+      "reason": "no executed site query in tool log"
+    },
+    {
+      "unit_id": "outlets-05",
+      "domain": "diva-portal.org",
+      "reason": "no executed site query in tool log"
+    }
+  ],
+  "unique_documents": 551
+}

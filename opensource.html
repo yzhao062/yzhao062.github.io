@@ -326,7 +326,7 @@
                       DoD CDAO lists PyOD and TrustLLM; ESA OPS-SAT uses PyOD; NIST AI 100-2e2025 and the FLI AI Safety Index cite TrustLLM.
                       On the agent-auditing line, Aegis is used as a quantitative baseline (Praetor, arXiv:2604.26274) and Auditable Agents has drawn third-party citations and editorial coverage within weeks of release.
                     </div>
-                    <h2 class="h3" style="color:#990000; margin-top:18px; margin-bottom:14px;">Open-Source Ecosystem Reach and Recognition</h2>
+                    <h2 id="impact" class="h3" style="color:#990000; margin-top:18px; margin-bottom:14px;">Open-Source Ecosystem Reach and Recognition</h2>
 
                     <!-- PyOD -->
                     <div id="pyod-impact" class="impact-card">
@@ -458,7 +458,7 @@
                           </tr>
                           <tr>
                             <td><span class="impact-type type-patent">Patents</span></td>
-                            <td>94 patents cite PyOD/COPOD/ECOD/LSCP/SUOD/TODS/XGBOD/PyGOD/CONAD/LUNAR/MetaOD/ADBench (China x70, US x14, WIPO x3, EPO x3, Germany x1, Japan x1, Korea x1, Slovakia x1), counted as distinct inventions rather than publication numbers. Many go beyond citation to implementation: China Mobile adopts the PyOD toolkit and selects twelve of its algorithms, Baidu trains COPOD models on five feature classes for anomalous-access detection, and Atlas Space Operations implements COPOD's empirical-copula scoring. Six name a tool inside a numbered claim. Other assignees include Visa International, Tencent, Genentech, IBM, Rapid7, CrowdStrike, Booz Allen Hamilton, State Grid, Harbin Institute of Technology, and Ericsson</td>
+                            <td>97 patents cite PyOD/COPOD/ECOD/LSCP/SUOD/TODS/XGBOD/PyGOD/CONAD/LUNAR/MetaOD/ADBench (China x72, US x15, WIPO x3, EPO x3, Germany x1, Japan x1, Korea x1, Slovakia x1), counted as distinct inventions rather than publication numbers. Many go beyond citation to implementation: China Mobile adopts the PyOD toolkit and selects twelve of its algorithms, Baidu trains COPOD models on five feature classes for anomalous-access detection, and Atlas Space Operations implements COPOD's empirical-copula scoring. Seven name a tool inside a numbered claim. Other assignees include Visa International, Tencent, Genentech, IBM, Rapid7, CrowdStrike, Booz Allen Hamilton, State Grid, Harbin Institute of Technology, and Ericsson</td>
                             <td class="impact-source"><a href="https://patents.google.com/patent/US12242939B2/en">Visa</a> &middot; <a href="https://patents.google.com/patent/CN115209452B/en">China Mobile</a> &middot; <a href="https://patents.google.com/patent/CN115603955B/en">Baidu</a> &middot; <a href="https://patents.google.com/patent/US12184394B2/en">Atlas Space</a></td>
                           </tr>
                           <tr>
@@ -485,6 +485,16 @@
                             <td><span class="impact-type type-education">Education</span></td>
                             <td>DataCamp course with dedicated chapter (19M+ platform learners)</td>
                             <td class="impact-source"><a href="https://www.datacamp.com/courses/anomaly-detection-in-python">DataCamp</a></td>
+                          </tr>
+                          <tr>
+                            <td><span class="impact-type type-gov">Bundesbank Research</span></td>
+                            <td>Deutsche Bundesbank Technical Report 2026-03 evaluates COPOD and ECOD as baselines on financial datasets, including an AnaCredit subset. The authors distinguish their research findings from Bundesbank policy.</td>
+                            <td class="impact-source"><a href="https://www.bundesbank.de/resource/blob/933522/8ab95aaef884a2817a91bcf6df0587ad/472B63F073F071307366337C94F8C870/2026-03-anomate-data.pdf">AnoMATE report</a></td>
+                          </tr>
+                          <tr>
+                            <td><span class="impact-type type-course">Caltech / NASA JPL</span></td>
+                            <td>Kiri Wagstaff&#39;s Caltech KISS short-course slides recommend PyOD as anomaly-detection software and reproduce figures from the PyOD paper.</td>
+                            <td class="impact-source"><a href="https://kiss.resources.caltech.edu/uploads/2026/09/technosignatures-wagstaff.pdf">Lecture slides</a></td>
                           </tr>
                         </tbody>
                       </table>
@@ -552,6 +562,21 @@
                             <td><a href="agent-audit.html">agent-audit</a> is indexed in the ReputAgent ecosystem directory; <a href="https://github.com/yzhao062/awesome-auditable-ai">awesome-auditable-ai</a> is referenced from a Hacker News thread and indexed by Ecosyste.ms</td>
                             <td class="impact-source"><a href="https://reputagent.com/ecosystem/headyzhang-agent-audit">ReputAgent</a> &middot; <a href="https://news.ycombinator.com/item?id=48777144">HN</a></td>
                           </tr>
+                          <tr>
+                            <td><span class="impact-type type-journal">Research Uptake</span></td>
+                            <td>Ajar discusses FORTIS&#39;s minimal-skill and privilege-containment evaluation, distinguishing model-level privilege from enforcement-layer defenses.</td>
+                            <td class="impact-source"><a href="https://arxiv.org/abs/2609.26900">Ajar preprint</a></td>
+                          </tr>
+                          <tr>
+                            <td><span class="impact-type type-journal">Research Uptake</span></td>
+                            <td>An independent study of agent recovery cites CatchBench&#39;s three observation stages: declared configurations, execution prefixes, and completed traces.</td>
+                            <td class="impact-source"><a href="https://arxiv.org/abs/2610.00372">Recovery study</a></td>
+                          </tr>
+                          <tr>
+                            <td><span class="impact-type type-journal">Research Uptake</span></td>
+                            <td>The A3BENCH preprint by UIUC and IBM researchers uses Auditable Agents to motivate its query-conditioned attribution tasks.</td>
+                            <td class="impact-source"><a href="https://arxiv.org/abs/2609.33676">A3BENCH preprint</a></td>
+                          </tr>
                         </tbody>
                       </table>
                     </div>
@@ -582,6 +607,11 @@
                             <td><span class="impact-type type-journal">Journal</span></td>
                             <td>Nature Communications study links the ADBench repository in its Data availability section for the benchmark anomaly datasets used</td>
                             <td class="impact-source"><a href="https://www.nature.com/articles/s41467-025-56173-6">Nature Comms</a></td>
+                          </tr>
+                          <tr>
+                            <td><span class="impact-type type-gov">Swedish FOI</span></td>
+                            <td>Sweden&#39;s Defence Research Agency lists ADBench among public resources for anomaly-detection evaluation and links its repository in report FOI-R--5453--SE (PDF p.33).</td>
+                            <td class="impact-source"><a href="https://www.foi.se/rest-api/report/FOI-R--5453--SE">FOI report</a></td>
                           </tr>
                         </tbody>
                       </table>
@@ -659,14 +689,19 @@
                             <td>Samsung SDS Insights treats TrustLLM as a flagship LLM trustworthiness evaluation framework in its Korean enterprise editorial; reference list cites arXiv:2401.05561</td>
                             <td class="impact-source"><a href="https://www.samsungsds.com/kr/insights/llm-evaluations.html">Samsung SDS</a></td>
                           </tr>
+                          <tr>
+                            <td><span class="impact-type type-institute">Ai2 Evaluation</span></td>
+                            <td>Ai2 uses TrustLLM&#39;s 400-prompt JailbreakTrigger subset in its safety-evaluation suite and reports T&uuml;lu 3 results using the WildGuard classifier. This is adoption of one safety dataset.</td>
+                            <td class="impact-source"><a href="https://github.com/allenai/safety-eval">Ai2 code</a> &middot; <a href="https://arxiv.org/abs/2411.15124">Tülu 3 report</a></td>
+                          </tr>
                         </tbody>
                       </table>
                     </div>
 
                     <!-- Recent institutional visibility -->
                     <div id="recent-institutional-impact" class="impact-card">
-                      <h3>Recent Institutional Visibility <span style="font-weight:400; color:#555; font-size:0.9rem;">&mdash; 2026 research releases</span></h3>
-                      <div class="impact-subtitle">Selected institutional pages for newer benchmarks and datasets</div>
+                      <h3>Selected Research Visibility <span style="font-weight:400; color:#555; font-size:0.9rem;">&mdash; media, policy, and institutions</span></h3>
+                      <div class="impact-subtitle">Selected external coverage and institutional references</div>
                       <table class="impact-table">
                         <colgroup><col class="col-type"><col class="col-evidence"><col class="col-source"></colgroup><thead><tr><th>Type</th><th>Evidence</th><th>Source</th></tr></thead>
                         <tbody>
@@ -679,6 +714,21 @@
                             <td><span class="impact-type type-enterprise">Industry Lab</span></td>
                             <td>Adobe Research lists FigEdit ("Charts Are Not Images") and the benchmark release</td>
                             <td class="impact-source"><a href="https://research.adobe.com/publication/charts-are-not-images-on-the-challenges-of-scientific-chart-editing/">Adobe Research</a></td>
+                          </tr>
+                          <tr>
+                            <td><span class="impact-type type-media">Newsweek Opinion</span></td>
+                            <td>A Newsweek opinion essay discusses CHI-Bench and its 75 clinical and administrative tasks in an assessment of healthcare agent reliability.</td>
+                            <td class="impact-source"><a href="https://www.newsweek.com/have-health-cares-ai-ambitions-hit-a-reliability-wall-12235130">Newsweek</a></td>
+                          </tr>
+                          <tr>
+                            <td><span class="impact-type type-policy">European Parliament</span></td>
+                            <td>A European Parliament study on monitoring EU law cites the multi-step LLM election-reasoning paper in its discussion of electoral simulation (footnote 78).</td>
+                            <td class="impact-source"><a href="https://www.europarl.europa.eu/RegData/etudes/STUD/2025/777915/IUST_STU(2025)777915_EN.pdf">Parliament study</a></td>
+                          </tr>
+                          <tr>
+                            <td><span class="impact-type type-policy">International Report</span></td>
+                            <td>The 2024 interim International Scientific Report on the Safety of Advanced AI cites the diffusion-model survey in its discussion of generative capabilities (reference 8).</td>
+                            <td class="impact-source"><a href="https://assets.publishing.service.gov.uk/media/6716673b96def6d27a4c9b24/international_scientific_report_on_the_safety_of_advanced_ai_interim_report.pdf">Interim report</a></td>
                           </tr>
                         </tbody>
                       </table>

@@ -1,0 +1,62 @@
+[
+  {
+    "candidate_id": "NS20261002-0197",
+    "official_url": "https://doi.org/10.1109/IJCNN54540.2023.10191331",
+    "evidence_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-reports-01-88594-16ed7744f11240ee/work/evidence/grab_paper.pdf",
+    "peer_review_status": "peer_reviewed",
+    "exact_venue": "2023 International Joint Conference on Neural Networks (IJCNN)",
+    "methods_use_verified": true,
+    "recommended_ledger": "Ledger 7",
+    "reason": "Verified against primary IEEE conference proceedings record (DOI: 10.1109/IJCNN54540.2023.10191331, published 2023-06-18). The paper was previously classified as an unreviewed industry engineering whitepaper because it was hosted on engineering.grab.com, but official records establish it was presented and published in the peer-reviewed proceedings of the 2023 International Joint Conference on Neural Networks (IJCNN) by IEEE. Experimental execution of PyGOD baseline implementations (DOMINANT, AnomalyDAE, CONAD, AdONE) is substantively verified in Section IV-B, IV-C, Table II, footnote 2, and references [13, 53]. Author block (Rizal Fathony, Jenn Ng, Jia Chen) confirms complete independence with zero coauthor overlap."
+  },
+  {
+    "candidate_id": "NS20261002-0451",
+    "official_url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/a3c1e6c8872aac5a445a821cdb523e70-Abstract-Conference.html",
+    "evidence_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-reports-03-88620-744d7acbda4f423f/work/evidence/NS20261002-0451_evidence.txt",
+    "peer_review_status": "peer_reviewed",
+    "exact_venue": "Advances in Neural Information Processing Systems 38 Main Conference (NeurIPS 2025)",
+    "methods_use_verified": true,
+    "recommended_ledger": "Ledger 7",
+    "reason": "Verified against official NeurIPS proceedings (Advances in Neural Information Processing Systems 38 Main Conference, DOI: 10.52202/085713-3765) and institutional repository ORBi UMons (handle 20.500.12907/55523). Previously classified under thesis-repository, but official records establish it as a top-tier peer-reviewed main conference publication. Substantive execution of ADBench across 26 datasets under contamination and experimental benchmarking of ECOD and COPOD are confirmed in Section 5, Table 2, and Appendix B. Coauthors Sukanya Patra and Souhaib Ben Taieb are independent with zero overlap."
+  },
+  {
+    "candidate_id": "NS20261002-0246",
+    "official_url": "https://open-research-europe.ec.europa.eu/articles/6-213",
+    "evidence_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-academic-04-88730-bba03e8643f54f97/work/scratch/open-research-europe-6-213.pdf",
+    "peer_review_status": "awaiting_peer_review",
+    "exact_venue": "Open Research Europe",
+    "methods_use_verified": true,
+    "recommended_ledger": "Ledger 7",
+    "reason": "Verified on European Commission Open Research Europe platform (Method Article 6:213, DOI: 10.12688/openreseurope.23019.1, published 2026-06-18 under Horizon Europe grant 101074092). Open Research Europe employs a post-publication open peer review model. Inspection of the canonical PDF and platform metadata confirms version 1 status is explicitly 'awaiting peer review' with zero approved referee reports to date; it has not yet passed peer review. Per review guidelines distinguishing awaiting review from passed, peer review is awaiting review / unverified. Substantive methods execution of PyOD 2.0.5 HBOS is verified on pp. 42 and 49 and preserved. Coauthors (Bružė, Paskauskas, Matulytė, Sabaliauskaitė, Lavišius) are independent Lithuanian researchers with zero overlap."
+  },
+  {
+    "candidate_id": "NS20261002-0272",
+    "official_url": "https://aclanthology.org/2026.findings-acl.556/",
+    "evidence_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-academic-05-88748-013bf3abeb934eea/work/scratch/NS20261002-0272_evidence.txt",
+    "peer_review_status": "peer_reviewed",
+    "exact_venue": "Findings of the Association for Computational Linguistics: ACL 2026",
+    "methods_use_verified": true,
+    "recommended_ledger": "Ledger 7",
+    "reason": "Verified in the primary official ACL Anthology proceedings (Anthology ID: 2026.findings-acl.556, DOI: 10.18653/v1/2026.findings-acl.556, pages 11457-11483, published July 2026). While arXiv v3 was labeled 'Preprint. Under review', the official ACL Anthology confirms full peer-reviewed publication in Findings of ACL 2026. Substantive methods execution of TrustLLM benchmark (Sun et al., 2024) across hallucination, sycophancy, and privacy metrics is verified in Table 1 (p. 8) and Appendix A.2 (pp. 16-17). Coauthors (Liang, Hu, Liu, Griffiths, Fisac) are independent Princeton researchers with zero overlap."
+  },
+  {
+    "candidate_id": "NS20261002-0333",
+    "official_url": "https://arxiv.org/abs/2609.21363",
+    "evidence_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-academic-05-88748-013bf3abeb934eea/work/scratch/NS20261002-0333_evidence.txt",
+    "peer_review_status": "unverified",
+    "exact_venue": "arXiv",
+    "methods_use_verified": true,
+    "recommended_ledger": "Ledger 7",
+    "reason": "Official venue audit on ndss-symposium.org confirms that NDSS 2027 has not yet published official proceedings or an official list of accepted papers (NDSS 2027 submissions and review cycles are currently ongoing as of October 2026). Although the arXiv preprint (arXiv:2609.21363, submitted 2026-09-18) and author personal websites claim acceptance to NDSS 2027, per unit review instructions a manuscript self-claiming accepted is not sufficient when no primary official proceedings record is accessible; official peer-review status is therefore classified as unverified. Substantive methods adoption of DoxBench (Luo et al., 2025) across 8 tables and figures is verified and preserved. Coauthors (Wang, Li, Zhang, Zhang, You, Qian, Wen) are independent researchers with zero overlap."
+  },
+  {
+    "candidate_id": "NS20261002-0530",
+    "official_url": "https://arxiv.org/abs/2507.15584",
+    "evidence_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-academic-07-88788-ee10fc3447db4cbe/work/scratch/evidence/NS20261002-0530_evidence.txt",
+    "peer_review_status": "unverified",
+    "exact_venue": "arXiv",
+    "methods_use_verified": true,
+    "recommended_ledger": "Ledger 7",
+    "reason": "Primary conference proceedings audit across ICML 2026 proceedings, virtual conference site (icml.cc), position paper track, and OpenReview forum (id: 9HhehgF3jR) confirms that the paper was submitted to the ICML 2026 Position Paper Track but was never accepted or published in official ICML 2026 proceedings. Both the canonical PDF and OpenReview record confirm status as 'Preprint. Under review' (arXiv:2507.15584v2, last revised 2026-06-18) with no official accepted conference record. Per unit review instructions, peer-review status is unverified. Substantive methods execution of ADBench benchmark datasets and PyOD implementations (DeepSVDD, OCSVM) in Section 1 (p. 2) and Figure 1 is verified and preserved. Coauthors (Röchner, Klüttermann, Rothlauf, Schlör) are independent German researchers with zero overlap."
+  }
+]

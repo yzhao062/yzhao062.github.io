@@ -1,0 +1,26 @@
+[
+  {
+    "candidate_id": "NS20261002-0197",
+    "status": 202,
+    "url": "https://ieeexplore.ieee.org/document/10191331/",
+    "title": "",
+    "file": "/tmp/news-search-20261002-codex/agent-io/evidence/official-peer-status/NS20261002-0197.html",
+    "text_preview": ""
+  },
+  {
+    "candidate_id": "NS20261002-0451",
+    "status": 200,
+    "url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/a3c1e6c8872aac5a445a821cdb523e70-Abstract-Conference.html",
+    "title": "An Evidence-Based Post-Hoc Adjustment Framework for Anomaly Detection Under Data Contamination",
+    "file": "/tmp/news-search-20261002-codex/agent-io/evidence/official-peer-status/NS20261002-0451.html",
+    "text_preview": "An Evidence-Based Post-Hoc Adjustment Framework for Anomaly Detection Under Data Contamination NeurIPS Proceedings Search An Evidence-Based Post-Hoc Adjustment Framework for Anomaly Detection Under Data Contamination Sukanya Patra, Souhaib Ben Taieb Advances in Neural Information Processing Systems 38 Main Conference  (NeurIPS 2025) Main Conference Track Bibtex Paper Abstract Unsupervised anomaly detection (AD) methods typically assume clean training data, yet real-world datasets often contain u"
+  },
+  {
+    "candidate_id": "NS20261002-0272",
+    "status": 200,
+    "url": "https://aclanthology.org/2026.findings-acl.556/",
+    "title": "RLHS: Mitigating Misalignment in RLHF with Hindsight Simulation - ACL Anthology",
+    "file": "/tmp/news-search-20261002-codex/agent-io/evidence/official-peer-status/NS20261002-0272.html",
+    "text_preview": "RLHS: Mitigating Misalignment in RLHF with Hindsight Simulation - ACL Anthology ACL Anthology About Announcements Communication channels Related work Copyright Credits Volunteer Development Feedback Using Author directory Citing papers Links in the Anthology Data access All FAQs Details Anthology identifiers Names ORCID iDs DOIs Verified authors Contributions Submissions Corrections Maintain author pages Attachments GitHub RLHS : Mitigating Misalignment in RLHF with Hindsight Simulation Kaiqu Li"
+  }
+]

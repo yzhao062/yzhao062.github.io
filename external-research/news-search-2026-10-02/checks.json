@@ -1,0 +1,13 @@
+{
+  "site_errors_excluding_gitignored_html": [],
+  "site_warnings": [
+    "citations.json has 1 id(s) absent from publications.json (e.g. conference-socialmaze-a-benchmark-for-evaluating-social-reasoning-in-large-language-models); check meta-finder profile-sync and update-citations if this persists"
+  ],
+  "unfiltered_local_reference_errors": 10949,
+  "gitignored_html_reference_errors": 10949,
+  "preserved_legacy_ledger_rows": 731,
+  "canonical_citation_embed_identical": true,
+  "candidate_records": 551,
+  "inventory_rows": 151,
+  "user_ecosystem_diff_preserved": true
+}

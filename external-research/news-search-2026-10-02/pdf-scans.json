@@ -1,0 +1,5503 @@
+[
+  {
+    "url": "https://github.com/KellyGong/SparseGAD",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-code-02-gemini-5635-760eee95de06411b/work/evidence/NS20261002-0389_ijcai234.pdf",
+    "candidate_id": "NS20261002-0389",
+    "sha256": "04e7ff6a8c5e066b115f1e434b85c9eb0cf1a9baa5bba48f1420ce31a6d8320f",
+    "hits": [
+      {
+        "page": 1,
+        "term": "Zhao et al"
+      },
+      {
+        "page": 6,
+        "term": "PyGOD"
+      },
+      {
+        "page": 9,
+        "term": "Yue Zhao"
+      },
+      {
+        "page": 9,
+        "term": "PyGOD"
+      },
+      {
+        "page": 10,
+        "term": "Zhao et al"
+      }
+    ],
+    "pages": 10,
+    "status": "scanned"
+  },
+  {
+    "url": "https://github.com/ZhongLIFR/AutoGAD2024",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-code-02-gemini-5635-760eee95de06411b/work/evidence/NS20261002-0390_arxiv.pdf",
+    "candidate_id": "NS20261002-0390",
+    "sha256": "58953d48def52f61376d1da29b8f56d198ef691512b46b6030dcd59ca4677bbf",
+    "hits": [
+      {
+        "page": 3,
+        "term": "Zhao et al"
+      },
+      {
+        "page": 6,
+        "term": "Zhao et al"
+      },
+      {
+        "page": 6,
+        "term": "Zhao et al"
+      },
+      {
+        "page": 6,
+        "term": "Zhao et al"
+      },
+      {
+        "page": 6,
+        "term": "Zhao et al"
+      },
+      {
+        "page": 6,
+        "term": "PyOD"
+      },
+      {
+        "page": 6,
+        "term": "TODS"
+      },
+      {
+        "page": 7,
+        "term": "Zhao et al"
+      },
+      {
+        "page": 26,
+        "term": "PyOD"
+      },
+      {
+        "page": 31,
+        "term": "Automatic Unsupervised Outlier Model Selection"
+      },
+      {
+        "page": 31,
+        "term": "Toward Unsupervised Outlier Model Selection"
+      },
+      {
+        "page": 44,
+        "term": "PyGOD"
+      },
+      {
+        "page": 44,
+        "term": "PyGOD"
+      },
+      {
+        "page": 44,
+        "term": "PyGOD"
+      },
+      {
+        "page": 44,
+        "term": "PyGOD"
+      },
+      {
+        "page": 44,
+        "term": "PyGOD"
+      },
+      {
+        "page": 44,
+        "term": "PyGOD"
+      }
+    ],
+    "pages": 46,
+    "status": "scanned"
+  },
+  {
+    "url": "https://github.com/jweihe/ADA-GAD",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-code-02-gemini-5635-760eee95de06411b/work/evidence/NS20261002-0391_arxiv.pdf",
+    "candidate_id": "NS20261002-0391",
+    "sha256": "a3e56c26e7bf5c98a6a6ab449834c30609578db20fd9e10817e0c86a7cde8525",
+    "hits": [
+      {
+        "page": 3,
+        "term": "Aegis"
+      },
+      {
+        "page": 6,
+        "term": "Zhao et al"
+      },
+      {
+        "page": 6,
+        "term": "PyGOD"
+      },
+      {
+        "page": 9,
+        "term": "PyGOD"
+      },
+      {
+        "page": 10,
+        "term": "Zhao et al"
+      },
+      {
+        "page": 11,
+        "term": "PyGOD"
+      },
+      {
+        "page": 11,
+        "term": "PyGOD"
+      },
+      {
+        "page": 11,
+        "term": "PyGOD"
+      }
+    ],
+    "pages": 11,
+    "status": "scanned"
+  },
+  {
+    "url": "https://github.com/HXYfighter/MolRL-MGPT",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-code-02-gemini-5635-760eee95de06411b/work/evidence/NS20261002-0393_arxiv.pdf",
+    "candidate_id": "NS20261002-0393",
+    "sha256": "1093cd019c87a4de2651b4bb01896807ea6c1b8e21d18671ef8677f64f23d849",
+    "hits": [],
+    "pages": 14,
+    "status": "scanned"
+  },
+  {
+    "url": "https://github.com/zoom-wang112358/LLM-Syn-Planner",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-code-02-gemini-5635-760eee95de06411b/work/evidence/NS20261002-0394_arxiv.pdf",
+    "candidate_id": "NS20261002-0394",
+    "sha256": "866560f9adc42deb518b58b090e4c37c414f4d70e6bffd74ef0c832a4f53c4fe",
+    "hits": [
+      {
+        "page": 4,
+        "term": "Zhao et al"
+      }
+    ],
+    "pages": 22,
+    "status": "scanned"
+  },
+  {
+    "url": "https://arxiv.org/abs/2602.08868",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-academic-06-88773-365afb5915f8460e/work/pdfs/NS20261002-0337_arxiv_2602.08868.pdf",
+    "candidate_id": "NS20261002-0337",
+    "sha256": "f332ad041f18724128e3502b32be491482cddb050b3ec566183ea4e08f46759b",
+    "hits": [
+      {
+        "page": 11,
+        "term": "2502.17812"
+      }
+    ],
+    "pages": 24,
+    "status": "scanned"
+  },
+  {
+    "url": "https://www.vldb.org/pvldb/vol18/p4364-liu.pdf",
+    "local_path": "/tmp/news-search-20261002-codex/agent-io/pdf-scans/6fc004ab16486211.pdf",
+    "candidate_id": "NS20261002-0344",
+    "http_status": 200,
+    "final_url": "https://www.vldb.org/pvldb/vol18/p4364-liu.pdf",
+    "sha256": "3d392d20e616f5fe67f6725a751481efee1a167cdfb7386d48f8d5ecb1e182ba",
+    "hits": [
+      {
+        "page": 7,
+        "term": "Zhao et al"
+      },
+      {
+        "page": 7,
+        "term": "COPOD"
+      },
+      {
+        "page": 14,
+        "term": "Yue Zhao"
+      },
+      {
+        "page": 14,
+        "term": "Yue Zhao"
+      },
+      {
+        "page": 14,
+        "term": "Yue Zhao"
+      },
+      {
+        "page": 14,
+        "term": "COPOD"
+      },
+      {
+        "page": 15,
+        "term": "TODS"
+      },
+      {
+        "page": 16,
+        "term": "Yue Zhao"
+      }
+    ],
+    "pages": 16,
+    "status": "scanned"
+  },
+  {
+    "url": "https://arxiv.org/abs/2603.03412",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-academic-06-88773-365afb5915f8460e/work/pdfs/NS20261002-0345_PrivateEdit_arXiv_2603.03412.pdf",
+    "candidate_id": "NS20261002-0345",
+    "sha256": "521a420b0725831eb98df1ba8e66824045f64d9fa9fb207becf776ff993d06ed",
+    "hits": [],
+    "pages": 11,
+    "status": "scanned"
+  },
+  {
+    "url": "https://proceedings.iclr.cc/paper_files/paper/2026/file/6f244818d72b2a4be9b1225d1344e950-Paper-Conference.pdf",
+    "local_path": "/tmp/news-search-20261002-codex/agent-io/pdf-scans/e883002402b5c920.pdf",
+    "candidate_id": "NS20261002-0346",
+    "http_status": 200,
+    "final_url": "https://proceedings.iclr.cc/paper_files/paper/2026/file/6f244818d72b2a4be9b1225d1344e950-Paper-Conference.pdf",
+    "sha256": "9cd007f9a1a7137b1b74dd6cc02088dc85ab768909d04af5faec9acefd4412cc",
+    "hits": [
+      {
+        "page": 1,
+        "term": "DoxBench"
+      },
+      {
+        "page": 3,
+        "term": "Zhao et al"
+      },
+      {
+        "page": 7,
+        "term": "DoxBench"
+      },
+      {
+        "page": 7,
+        "term": "DoxBench"
+      },
+      {
+        "page": 7,
+        "term": "DoxBench"
+      },
+      {
+        "page": 8,
+        "term": "DoxBench"
+      },
+      {
+        "page": 8,
+        "term": "DoxBench"
+      },
+      {
+        "page": 8,
+        "term": "DoxBench"
+      },
+      {
+        "page": 10,
+        "term": "DoxBench"
+      },
+      {
+        "page": 10,
+        "term": "DoxBench"
+      },
+      {
+        "page": 12,
+        "term": "2504.19373"
+      },
+      {
+        "page": 12,
+        "term": "Yue Zhao"
+      },
+      {
+        "page": 20,
+        "term": "DoxBench"
+      }
+    ],
+    "pages": 21,
+    "status": "scanned"
+  },
+  {
+    "url": "https://arxiv.org/abs/2507.12295",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-academic-06-88773-365afb5915f8460e/work/pdfs/NS20261002-0348_arxiv_2507.12295.pdf",
+    "candidate_id": "NS20261002-0348",
+    "sha256": "8353b61a277dc5166dfed9e89d3e434f4e5cf26fb885916e9161ce828eae9922",
+    "hits": [
+      {
+        "page": 1,
+        "term": "ADBench"
+      },
+      {
+        "page": 2,
+        "term": "ADBench"
+      },
+      {
+        "page": 2,
+        "term": "ADBench"
+      },
+      {
+        "page": 2,
+        "term": "ADBench"
+      },
+      {
+        "page": 3,
+        "term": "ADBench"
+      },
+      {
+        "page": 5,
+        "term": "NLP-ADBench"
+      },
+      {
+        "page": 5,
+        "term": "ADBench"
+      },
+      {
+        "page": 5,
+        "term": "ADBench"
+      },
+      {
+        "page": 5,
+        "term": "ADBench"
+      },
+      {
+        "page": 5,
+        "term": "ADBench"
+      },
+      {
+        "page": 9,
+        "term": "ECOD"
+      },
+      {
+        "page": 9,
+        "term": "ECOD"
+      },
+      {
+        "page": 12,
+        "term": "ECOD"
+      },
+      {
+        "page": 12,
+        "term": "ECOD"
+      },
+      {
+        "page": 12,
+        "term": "ECOD"
+      },
+      {
+        "page": 13,
+        "term": "ECOD"
+      },
+      {
+        "page": 13,
+        "term": "ECOD"
+      },
+      {
+        "page": 13,
+        "term": "ECOD"
+      },
+      {
+        "page": 13,
+        "term": "ECOD"
+      },
+      {
+        "page": 14,
+        "term": "ECOD"
+      },
+      {
+        "page": 14,
+        "term": "ECOD"
+      },
+      {
+        "page": 14,
+        "term": "ECOD"
+      },
+      {
+        "page": 14,
+        "term": "ECOD"
+      },
+      {
+        "page": 14,
+        "term": "ECOD"
+      },
+      {
+        "page": 14,
+        "term": "ECOD"
+      },
+      {
+        "page": 14,
+        "term": "ECOD"
+      },
+      {
+        "page": 14,
+        "term": "ECOD"
+      },
+      {
+        "page": 14,
+        "term": "ECOD"
+      },
+      {
+        "page": 14,
+        "term": "ECOD"
+      },
+      {
+        "page": 14,
+        "term": "ECOD"
+      },
+      {
+        "page": 14,
+        "term": "ECOD"
+      },
+      {
+        "page": 18,
+        "term": "ADBench"
+      },
+      {
+        "page": 18,
+        "term": "ADBench"
+      },
+      {
+        "page": 19,
+        "term": "NLP-ADBench"
+      },
+      {
+        "page": 19,
+        "term": "2412.04784"
+      },
+      {
+        "page": 19,
+        "term": "Yue Zhao"
+      },
+      {
+        "page": 19,
+        "term": "ADBench"
+      },
+      {
+        "page": 20,
+        "term": "Yue Zhao"
+      },
+      {
+        "page": 21,
+        "term": "AD-LLM: Benchmarking Large Language Models for Anomaly Detection"
+      },
+      {
+        "page": 21,
+        "term": "2412.11142"
+      },
+      {
+        "page": 21,
+        "term": "AD-LLM"
+      },
+      {
+        "page": 23,
+        "term": "ECOD"
+      },
+      {
+        "page": 24,
+        "term": "ECOD"
+      },
+      {
+        "page": 25,
+        "term": "ECOD"
+      },
+      {
+        "page": 26,
+        "term": "ECOD"
+      },
+      {
+        "page": 27,
+        "term": "ECOD"
+      },
+      {
+        "page": 28,
+        "term": "ECOD"
+      },
+      {
+        "page": 29,
+        "term": "ECOD"
+      },
+      {
+        "page": 30,
+        "term": "ECOD"
+      },
+      {
+        "page": 31,
+        "term": "ECOD"
+      },
+      {
+        "page": 32,
+        "term": "ECOD"
+      },
+      {
+        "page": 33,
+        "term": "ECOD"
+      },
+      {
+        "page": 34,
+        "term": "ECOD"
+      },
+      {
+        "page": 35,
+        "term": "ECOD"
+      },
+      {
+        "page": 36,
+        "term": "ECOD"
+      },
+      {
+        "page": 37,
+        "term": "ECOD"
+      },
+      {
+        "page": 38,
+        "term": "ECOD"
+      },
+      {
+        "page": 39,
+        "term": "ECOD"
+      },
+      {
+        "page": 40,
+        "term": "ECOD"
+      },
+      {
+        "page": 41,
+        "term": "ECOD"
+      },
+      {
+        "page": 42,
+        "term": "ECOD"
+      },
+      {
+        "page": 43,
+        "term": "ECOD"
+      },
+      {
+        "page": 44,
+        "term": "ECOD"
+      },
+      {
+        "page": 45,
+        "term": "ECOD"
+      },
+      {
+        "page": 46,
+        "term": "ECOD"
+      }
+    ],
+    "pages": 46,
+    "status": "scanned"
+  },
+  {
+    "url": "https://open-research-europe.ec.europa.eu/articles/6-213/pdf",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-academic-06-88773-365afb5915f8460e/work/pdfs/NS20261002-0492_ec_open_research_6_213.pdf",
+    "candidate_id": "NS20261002-0492",
+    "sha256": "5ba3098e39606441130673fa5b9f90a3aed19d374193129d73c34acb3c21f98c",
+    "hits": [
+      {
+        "page": 44,
+        "term": "auditable"
+      },
+      {
+        "page": 49,
+        "term": "PyOD"
+      }
+    ],
+    "pages": 51,
+    "status": "scanned"
+  },
+  {
+    "url": "https://studenttheses.uu.nl/server/api/core/bitstreams/ab579ac9-88c5-40a9-9212-2418cef6fa5b/content",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-web-10-1246-6484fb67b1cf4d5d/work/pdfs/uu_studentthesis_ab579ac9.pdf",
+    "candidate_id": "NS20261002-0289",
+    "sha256": "647fc9dda3db3bac7597f789e4fac6334a3a56ef239e4338a1db0e9de27bee51",
+    "hits": [
+      {
+        "page": 5,
+        "term": "PyGOD"
+      },
+      {
+        "page": 7,
+        "term": "PyGOD"
+      },
+      {
+        "page": 9,
+        "term": "PyGOD"
+      },
+      {
+        "page": 11,
+        "term": "PyGOD"
+      },
+      {
+        "page": 11,
+        "term": "PyGOD"
+      },
+      {
+        "page": 11,
+        "term": "PyGOD"
+      },
+      {
+        "page": 11,
+        "term": "PyGOD"
+      },
+      {
+        "page": 11,
+        "term": "PyGOD"
+      },
+      {
+        "page": 11,
+        "term": "PyGOD"
+      },
+      {
+        "page": 11,
+        "term": "PyGOD"
+      },
+      {
+        "page": 11,
+        "term": "PyGOD"
+      },
+      {
+        "page": 11,
+        "term": "PyGOD"
+      },
+      {
+        "page": 11,
+        "term": "PyGOD"
+      },
+      {
+        "page": 12,
+        "term": "PyGOD"
+      },
+      {
+        "page": 12,
+        "term": "PyGOD"
+      },
+      {
+        "page": 13,
+        "term": "PyGOD"
+      },
+      {
+        "page": 14,
+        "term": "PyGOD"
+      },
+      {
+        "page": 23,
+        "term": "PyGOD"
+      }
+    ],
+    "pages": 25,
+    "status": "scanned"
+  },
+  {
+    "url": "https://patents.google.com/patent/CN114785965B/en",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-patents-01-88667-93cbc6c88ed942df/work/evidence/NS20261002-0460_CN_114785965_B.pdf",
+    "candidate_id": "NS20261002-0460",
+    "sha256": "c197b57aeb4fcff7156ca4c739f9f2c215d9be89b71dc996e870fe539fcd17c6",
+    "hits": [
+      {
+        "page": 1,
+        "term": "COPOD"
+      },
+      {
+        "page": 1,
+        "term": "COPOD"
+      },
+      {
+        "page": 2,
+        "term": "COPOD"
+      },
+      {
+        "page": 3,
+        "term": "COPOD"
+      },
+      {
+        "page": 3,
+        "term": "COPOD"
+      },
+      {
+        "page": 3,
+        "term": "COPOD"
+      },
+      {
+        "page": 3,
+        "term": "COPOD"
+      },
+      {
+        "page": 3,
+        "term": "COPOD"
+      },
+      {
+        "page": 5,
+        "term": "COPOD"
+      },
+      {
+        "page": 5,
+        "term": "COPOD"
+      },
+      {
+        "page": 5,
+        "term": "COPOD"
+      },
+      {
+        "page": 5,
+        "term": "COPOD"
+      },
+      {
+        "page": 5,
+        "term": "COPOD"
+      },
+      {
+        "page": 7,
+        "term": "COPOD"
+      },
+      {
+        "page": 7,
+        "term": "COPOD"
+      },
+      {
+        "page": 8,
+        "term": "COPOD"
+      },
+      {
+        "page": 10,
+        "term": "COPOD"
+      },
+      {
+        "page": 10,
+        "term": "COPOD"
+      }
+    ],
+    "pages": 16,
+    "status": "scanned"
+  },
+  {
+    "url": "https://patents.google.com/patent/CN114254705B/en",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-patents-01-88667-93cbc6c88ed942df/work/evidence/NS20261002-0468_CN_114254705_B.pdf",
+    "candidate_id": "NS20261002-0468",
+    "sha256": "ee70d2e45373facce931f1416a5274fb2542b599c60141f08e74e92ca4a0577d",
+    "hits": [
+      {
+        "page": 5,
+        "term": "PyOD"
+      },
+      {
+        "page": 6,
+        "term": "LSCP"
+      }
+    ],
+    "pages": 16,
+    "status": "scanned"
+  },
+  {
+    "url": "https://patents.google.com/patent/CN113093985B/en",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-patents-01-88667-93cbc6c88ed942df/work/evidence/NS20261002-0471_CN_113093985_B.pdf",
+    "candidate_id": "NS20261002-0471",
+    "sha256": "c89a3d3fbfe7d2d1a44505d1549e303fbe1ece090de4be471f9bddc203d8739e",
+    "hits": [
+      {
+        "page": 9,
+        "term": "LSCP"
+      }
+    ],
+    "pages": 15,
+    "status": "scanned"
+  },
+  {
+    "url": "https://patents.google.com/patent/CN116010485B/en",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-patents-01-88667-93cbc6c88ed942df/work/evidence/NS20261002-0474_CN_116010485_B.pdf",
+    "candidate_id": "NS20261002-0474",
+    "sha256": "ca102e59a3927807a26abf7dcb5516589a96459a0ccf584ab80b4dc9883a63d1",
+    "hits": [],
+    "pages": 19,
+    "status": "scanned"
+  },
+  {
+    "url": "https://patents.google.com/patent/US20240045956A1/en",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-patents-01-88667-93cbc6c88ed942df/work/evidence/NS20261002-0477_patent.pdf",
+    "candidate_id": "NS20261002-0477",
+    "sha256": "316904e876e0585b741b61c257843a3159bef6fa1918487cee0d739103f5566b",
+    "hits": [],
+    "pages": 25,
+    "status": "scanned"
+  },
+  {
+    "url": "https://arxiv.org/abs/2406.18495",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-academic-07-88788-ee10fc3447db4cbe/work/scratch/pdfs/wildguard_arxiv_2406.18495.pdf",
+    "candidate_id": "NS20261002-0502",
+    "sha256": "cb3619d0e7dea3591b5b6dff3656c05b9b9a96d4a0b3635327fde64015e3ce20",
+    "hits": [
+      {
+        "page": 2,
+        "term": "Aegis"
+      },
+      {
+        "page": 3,
+        "term": "TrustLLM"
+      },
+      {
+        "page": 3,
+        "term": "Aegis"
+      },
+      {
+        "page": 3,
+        "term": "Aegis"
+      },
+      {
+        "page": 3,
+        "term": "Aegis"
+      },
+      {
+        "page": 3,
+        "term": "Aegis"
+      },
+      {
+        "page": 3,
+        "term": "Aegis"
+      },
+      {
+        "page": 3,
+        "term": "Aegis"
+      },
+      {
+        "page": 3,
+        "term": "Aegis"
+      },
+      {
+        "page": 5,
+        "term": "Aegis"
+      },
+      {
+        "page": 6,
+        "term": "Aegis"
+      },
+      {
+        "page": 6,
+        "term": "Aegis"
+      },
+      {
+        "page": 6,
+        "term": "Aegis"
+      },
+      {
+        "page": 6,
+        "term": "Aegis"
+      },
+      {
+        "page": 6,
+        "term": "Aegis"
+      },
+      {
+        "page": 6,
+        "term": "Aegis"
+      },
+      {
+        "page": 7,
+        "term": "Aegis"
+      },
+      {
+        "page": 7,
+        "term": "Aegis"
+      },
+      {
+        "page": 8,
+        "term": "Aegis"
+      },
+      {
+        "page": 8,
+        "term": "Aegis"
+      },
+      {
+        "page": 8,
+        "term": "Aegis"
+      },
+      {
+        "page": 9,
+        "term": "Aegis"
+      },
+      {
+        "page": 9,
+        "term": "Aegis"
+      },
+      {
+        "page": 9,
+        "term": "Aegis"
+      },
+      {
+        "page": 11,
+        "term": "Aegis"
+      },
+      {
+        "page": 13,
+        "term": "TrustLLM: Trustworthiness in Large Language Models"
+      },
+      {
+        "page": 13,
+        "term": "TrustLLM"
+      },
+      {
+        "page": 13,
+        "term": "Yue Zhao"
+      },
+      {
+        "page": 23,
+        "term": "Aegis"
+      },
+      {
+        "page": 26,
+        "term": "Aegis"
+      },
+      {
+        "page": 26,
+        "term": "Aegis"
+      },
+      {
+        "page": 27,
+        "term": "Aegis"
+      },
+      {
+        "page": 28,
+        "term": "Aegis"
+      },
+      {
+        "page": 28,
+        "term": "Aegis"
+      },
+      {
+        "page": 28,
+        "term": "Aegis"
+      },
+      {
+        "page": 28,
+        "term": "Aegis"
+      },
+      {
+        "page": 28,
+        "term": "Aegis"
+      },
+      {
+        "page": 30,
+        "term": "Aegis"
+      },
+      {
+        "page": 30,
+        "term": "Aegis"
+      },
+      {
+        "page": 30,
+        "term": "Aegis"
+      },
+      {
+        "page": 31,
+        "term": "Aegis"
+      },
+      {
+        "page": 31,
+        "term": "Aegis"
+      },
+      {
+        "page": 34,
+        "term": "Aegis"
+      },
+      {
+        "page": 34,
+        "term": "Aegis"
+      },
+      {
+        "page": 37,
+        "term": "Aegis"
+      },
+      {
+        "page": 37,
+        "term": "Aegis"
+      }
+    ],
+    "pages": 38,
+    "status": "scanned"
+  },
+  {
+    "url": "https://arxiv.org/pdf/2501.17805.pdf",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-academic-07-88788-ee10fc3447db4cbe/work/scratch/pdfs/international_scientific_report_final_2025.pdf",
+    "candidate_id": "NS20261002-0511",
+    "sha256": "668704691a2bc51c1f7630bc6a531adb33252af94a5e8475b766f59362ea9978",
+    "hits": [
+      {
+        "page": 281,
+        "term": "TrustLLM: Trustworthiness in Large Language Models"
+      },
+      {
+        "page": 281,
+        "term": "TrustLLM"
+      }
+    ],
+    "pages": 298,
+    "status": "scanned"
+  },
+  {
+    "url": "https://www.preprints.org/manuscript/202609.1836/v1",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-academic-07-88788-ee10fc3447db4cbe/work/scratch/pdfs/preprints_202609.1836_v1.pdf",
+    "candidate_id": "NS20261002-0518",
+    "sha256": "2049470b224c92ac976b124930140d70ce2b288d2ec731ac92d9e60da6648585",
+    "hits": [
+      {
+        "page": 10,
+        "term": "2604.17501"
+      }
+    ],
+    "pages": 10,
+    "status": "scanned"
+  },
+  {
+    "url": "https://openreview.net/forum?id=aB848FutiR",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-academic-07-88788-ee10fc3447db4cbe/work/scratch/pdfs/arxiv_2605.02913.pdf",
+    "candidate_id": "NS20261002-0520",
+    "sha256": "87d52f738106b32cfc8785dbf63e3d956d973da6f16f19cfe891bc61de8c6218",
+    "hits": [
+      {
+        "page": 2,
+        "term": "Zhao et al"
+      },
+      {
+        "page": 12,
+        "term": "Zhao et al"
+      },
+      {
+        "page": 17,
+        "term": "ADBench"
+      },
+      {
+        "page": 28,
+        "term": "ADBench"
+      },
+      {
+        "page": 31,
+        "term": "ADBench"
+      },
+      {
+        "page": 36,
+        "term": "ADBench"
+      },
+      {
+        "page": 40,
+        "term": "A Survey on LLM-based Conversational User Simulation"
+      },
+      {
+        "page": 43,
+        "term": "Personalized Multimodal Large Language Models: A Survey"
+      },
+      {
+        "page": 43,
+        "term": "2412.02142"
+      }
+    ],
+    "pages": 47,
+    "status": "scanned"
+  },
+  {
+    "url": "https://www.preprints.org/manuscript/202607.1125/v1",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-academic-07-88788-ee10fc3447db4cbe/work/scratch/pdfs/preprints_202607.1125_v1.pdf",
+    "candidate_id": "NS20261002-0529",
+    "sha256": "224aeac5c8e2e2b02cfff8d91fd9e0574585e27c4d8fa6c8f6c25b5089719bcb",
+    "hits": [
+      {
+        "page": 6,
+        "term": "ADBench"
+      },
+      {
+        "page": 7,
+        "term": "AD-LLM"
+      },
+      {
+        "page": 7,
+        "term": "COPOD"
+      },
+      {
+        "page": 7,
+        "term": "ECOD"
+      },
+      {
+        "page": 9,
+        "term": "COPOD"
+      },
+      {
+        "page": 9,
+        "term": "COPOD"
+      },
+      {
+        "page": 9,
+        "term": "ECOD"
+      },
+      {
+        "page": 9,
+        "term": "ECOD"
+      },
+      {
+        "page": 16,
+        "term": "auditable"
+      },
+      {
+        "page": 18,
+        "term": "AD-LLM"
+      },
+      {
+        "page": 19,
+        "term": "SUOD"
+      },
+      {
+        "page": 19,
+        "term": "SUOD"
+      },
+      {
+        "page": 19,
+        "term": "SUOD"
+      },
+      {
+        "page": 20,
+        "term": "ADBench"
+      },
+      {
+        "page": 21,
+        "term": "ADBench"
+      },
+      {
+        "page": 21,
+        "term": "ADBench"
+      },
+      {
+        "page": 21,
+        "term": "ADBench"
+      },
+      {
+        "page": 22,
+        "term": "ADBench"
+      },
+      {
+        "page": 22,
+        "term": "ADBench"
+      },
+      {
+        "page": 22,
+        "term": "ADBench"
+      },
+      {
+        "page": 22,
+        "term": "ADBench"
+      },
+      {
+        "page": 22,
+        "term": "ADBench"
+      },
+      {
+        "page": 22,
+        "term": "ADBench"
+      },
+      {
+        "page": 23,
+        "term": "ADBench"
+      },
+      {
+        "page": 23,
+        "term": "ADBench"
+      },
+      {
+        "page": 26,
+        "term": "ADBench: Anomaly Detection Benchmark"
+      },
+      {
+        "page": 26,
+        "term": "ADBench"
+      },
+      {
+        "page": 28,
+        "term": "COPOD: Copula-Based Outlier Detection"
+      },
+      {
+        "page": 28,
+        "term": "COPOD"
+      },
+      {
+        "page": 30,
+        "term": "AD-LLM"
+      },
+      {
+        "page": 31,
+        "term": "SUOD"
+      }
+    ],
+    "pages": 32,
+    "status": "scanned"
+  },
+  {
+    "url": "https://www.informatik.uni-wuerzburg.de/datascience/?cHash=58239fde74660e7474650e5293ee050e&tx_extbibsonomycsl_publicationlist%5Baction%5D=download&tx_extbibsonomycsl_publicationlist%5Bcontroller%5D=Document&tx_extbibsonomycsl_publicationlist%5BfileName%5D=We+Need+to+Rethink+Benchmarking+in+Anomaly+Detection.pdf&tx_extbibsonomycsl_publicationlist%5BintraHash%5D=6ba0f8197de45c41cd078beecc7c5a0d&tx_extbibsonomycsl_publicationlist%5BuserName%5D=dmir",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-academic-07-88788-ee10fc3447db4cbe/work/scratch/pdfs/wuerzburg.pdf",
+    "candidate_id": "NS20261002-0530",
+    "sha256": "ec594ad8752f2fa0e3d240abfd2591580352b985eef454a7772b37eded88c709",
+    "hits": [
+      {
+        "page": 2,
+        "term": "ADBench"
+      },
+      {
+        "page": 2,
+        "term": "ADBench"
+      },
+      {
+        "page": 2,
+        "term": "PyOD"
+      },
+      {
+        "page": 4,
+        "term": "ADBench"
+      },
+      {
+        "page": 6,
+        "term": "Zhao et al"
+      },
+      {
+        "page": 7,
+        "term": "ADBench"
+      },
+      {
+        "page": 10,
+        "term": "Yue Zhao"
+      },
+      {
+        "page": 10,
+        "term": "ADBench"
+      },
+      {
+        "page": 12,
+        "term": "ADGym: Design Choices for Deep Anomaly Detection"
+      },
+      {
+        "page": 12,
+        "term": "Yue Zhao"
+      },
+      {
+        "page": 13,
+        "term": "Automatic Unsupervised Outlier Model Selection"
+      },
+      {
+        "page": 13,
+        "term": "Yue Zhao"
+      },
+      {
+        "page": 13,
+        "term": "Yue Zhao"
+      },
+      {
+        "page": 13,
+        "term": "Yue Zhao"
+      },
+      {
+        "page": 13,
+        "term": "Yue Zhao"
+      },
+      {
+        "page": 13,
+        "term": "COPOD"
+      },
+      {
+        "page": 13,
+        "term": "ECOD"
+      },
+      {
+        "page": 14,
+        "term": "Yue Zhao"
+      }
+    ],
+    "pages": 15,
+    "status": "scanned"
+  },
+  {
+    "url": "https://www.diva-portal.org/smash/record.jsf?pid=diva2:1983804",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-web-17-4367-5f7ce0e79eda4904/work/evidence/NS20261002-0550.pdf",
+    "candidate_id": "NS20261002-0550",
+    "sha256": "fe61b8b36b9cdc0325d4e8e7282c2f48cee7f4a3b159fecac5bfef42eee4acce",
+    "hits": [
+      {
+        "page": 28,
+        "term": "PyOD"
+      },
+      {
+        "page": 30,
+        "term": "PyOD"
+      }
+    ],
+    "pages": 62,
+    "status": "scanned"
+  },
+  {
+    "url": "https://www.whitehouse.gov/wp-content/uploads/2026/03/03.20.26-National-Policy-Framework-for-Artificial-Intelligence-Legislative-Recommendations.pdf",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-reports-04-88636-e2abf589b1b64b60/work/evidence/whitehouse-ai-framework-2026.pdf",
+    "candidate_id": "NS20261002-0486",
+    "sha256": "d4f8973f19d7318137ebba973d03ea63af032123d3e629b5d1831cd24af1d6c0",
+    "hits": [],
+    "pages": 4,
+    "status": "scanned"
+  },
+  {
+    "url": "https://www.gao.gov/products/gao-25-108519",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-reports-04-88636-e2abf589b1b64b60/work/evidence/gao-25-108519-ai-agents.pdf",
+    "candidate_id": "NS20261002-0487",
+    "status": "unverified",
+    "error": "Local file is not a PDF",
+    "hits": []
+  },
+  {
+    "url": "https://www.everycrsreport.com/reports/R48909.html",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-reports-04-88636-e2abf589b1b64b60/work/evidence/crs_R48909.pdf",
+    "candidate_id": "NS20261002-0488",
+    "sha256": "3d659233a28009cb9d91461ad89914ab46838f5337275118c9af220c9f23463d",
+    "hits": [],
+    "pages": 7,
+    "status": "scanned"
+  },
+  {
+    "url": "https://assets.publishing.service.gov.uk/media/6716673b96def6d27a4c9b24/international_scientific_report_on_the_safety_of_advanced_ai_interim_report.pdf",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-reports-04-88636-e2abf589b1b64b60/work/evidence/international_scientific_report_interim.pdf",
+    "candidate_id": "NS20261002-0489",
+    "sha256": "ccc4f9c9dfe608d40bec7eff2167a780f2c2610391db815099be48e36d603196",
+    "hits": [],
+    "pages": 132,
+    "status": "scanned"
+  },
+  {
+    "url": "https://privacyinternational.org/sites/default/files/2026-02/Nowhere%20to%20Hide%20Privacy%20International_0.pdf",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-reports-04-88636-e2abf589b1b64b60/work/evidence/privacy_international_nowhere_to_hide.pdf",
+    "candidate_id": "NS20261002-0490",
+    "sha256": "f311272a25d03c62b7cd021ea01710e381d78c2f185752b423be9eb1650b5dff",
+    "hits": [
+      {
+        "page": 28,
+        "term": "2504.19373"
+      },
+      {
+        "page": 28,
+        "term": "2504.19373"
+      },
+      {
+        "page": 28,
+        "term": "Zhao Y."
+      },
+      {
+        "page": 38,
+        "term": "auditable"
+      }
+    ],
+    "pages": 40,
+    "status": "scanned"
+  },
+  {
+    "url": "https://www.europarl.europa.eu/RegData/etudes/STUD/2025/777915/IUST_STU(2025)777915_EN.pdf",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-reports-04-88636-e2abf589b1b64b60/work/evidence/europarl_ai_eu_law.pdf",
+    "candidate_id": "NS20261002-0491",
+    "sha256": "63aaf2e62634e26e9a2002b7b36efe8cfd91cb58939416050649e4b78be86515",
+    "hits": [
+      {
+        "page": 12,
+        "term": "auditable"
+      },
+      {
+        "page": 16,
+        "term": "auditable"
+      },
+      {
+        "page": 72,
+        "term": "Yue Zhao"
+      }
+    ],
+    "pages": 74,
+    "status": "scanned"
+  },
+  {
+    "url": "https://www.bundesbank.de/resource/blob/933522/8ab95aaef884a2817a91bcf6df0587ad/472B63F073F071307366337C94F8C870/2026-03-anomate-data.pdf",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-reports-04-88636-e2abf589b1b64b60/work/evidence/bundesbank_2026_03_anomate.pdf",
+    "candidate_id": "NS20261002-0493",
+    "sha256": "08983810d0a05c0d121219b5c63eec50fa1469842163c9c7e7173ae76308aea9",
+    "hits": [
+      {
+        "page": 6,
+        "term": "ADBench"
+      },
+      {
+        "page": 6,
+        "term": "ADBench"
+      },
+      {
+        "page": 13,
+        "term": "COPOD"
+      },
+      {
+        "page": 13,
+        "term": "ECOD"
+      },
+      {
+        "page": 15,
+        "term": "COPOD"
+      },
+      {
+        "page": 15,
+        "term": "ECOD"
+      },
+      {
+        "page": 20,
+        "term": "ADBench: Anomaly Detection Benchmark"
+      },
+      {
+        "page": 20,
+        "term": "ADBench"
+      },
+      {
+        "page": 21,
+        "term": "COPOD: Copula-Based Outlier Detection"
+      },
+      {
+        "page": 21,
+        "term": "COPOD"
+      },
+      {
+        "page": 21,
+        "term": "ECOD"
+      }
+    ],
+    "pages": 22,
+    "status": "scanned"
+  },
+  {
+    "url": "https://www.foi.se/rest-api/report/FOI-R--5453--SE",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-reports-04-88636-e2abf589b1b64b60/work/evidence/foi_sweden_report_5453.pdf",
+    "candidate_id": "NS20261002-0494",
+    "sha256": "603932fb53d936473616c34067e44e134705bc6f4eace86546a59c9b588f4b5f",
+    "hits": [
+      {
+        "page": 33,
+        "term": "ADBench"
+      },
+      {
+        "page": 33,
+        "term": "ADBench"
+      },
+      {
+        "page": 42,
+        "term": "ADBench"
+      }
+    ],
+    "pages": 44,
+    "status": "scanned"
+  },
+  {
+    "url": "https://www.cydcampus.admin.ch/dam/en/sd-web/8-cE1O8btVFX/Behavioral%20fingerprinting%20to%20detect%20ransomware%20in%20resource-constrained%20devices.pdf",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-reports-04-88636-e2abf589b1b64b60/work/evidence/swiss_cyd_campus_ransomware_pyod.pdf",
+    "candidate_id": "NS20261002-0495",
+    "sha256": "80422fa5a5d47aed064611a487d105d6ca5587c91e671d96055f30e28c9254a8",
+    "hits": [
+      {
+        "page": 6,
+        "term": "PyOD"
+      }
+    ],
+    "pages": 14,
+    "status": "scanned"
+  },
+  {
+    "url": "https://futureoflife.org/wp-content/uploads/2026/07/AI-Safety-Index-Summer-2026-Digital.pdf",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-reports-04-88636-e2abf589b1b64b60/work/evidence/fli_summer_2026.pdf",
+    "candidate_id": "NS20261002-0497",
+    "sha256": "823c932ac3185f2ace2235b8526caba6cebe0ad10a39b0da0645047148fa709f",
+    "hits": [
+      {
+        "page": 6,
+        "term": "TrustLLM"
+      },
+      {
+        "page": 10,
+        "term": "TrustLLM"
+      },
+      {
+        "page": 13,
+        "term": "TrustLLM"
+      },
+      {
+        "page": 25,
+        "term": "TrustLLM: Trustworthiness in Large Language Models"
+      },
+      {
+        "page": 25,
+        "term": "TrustLLM"
+      },
+      {
+        "page": 42,
+        "term": "TrustLLM"
+      },
+      {
+        "page": 45,
+        "term": "TrustLLM: Trustworthiness in Large Language Models"
+      },
+      {
+        "page": 45,
+        "term": "TrustLLM"
+      },
+      {
+        "page": 45,
+        "term": "TrustLLM"
+      },
+      {
+        "page": 45,
+        "term": "TrustLLM"
+      },
+      {
+        "page": 45,
+        "term": "TrustLLM"
+      },
+      {
+        "page": 45,
+        "term": "TrustLLM"
+      }
+    ],
+    "pages": 127,
+    "status": "scanned"
+  },
+  {
+    "url": "https://futureoflife.org/wp-content/uploads/2025/12/AI-Safety-Index-Report_131225_Full_Report_Digital.pdf",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-reports-04-88636-e2abf589b1b64b60/work/evidence/fli_winter_2025.pdf",
+    "candidate_id": "NS20261002-0498",
+    "sha256": "f1bf187e4a1e26a9fe2935a88c7aa26c5d338f8d3ccc2b14296aae6405f12bf0",
+    "hits": [
+      {
+        "page": 7,
+        "term": "TrustLLM"
+      },
+      {
+        "page": 11,
+        "term": "TrustLLM"
+      },
+      {
+        "page": 13,
+        "term": "TrustLLM"
+      },
+      {
+        "page": 27,
+        "term": "TrustLLM: Trustworthiness in Large Language Models"
+      },
+      {
+        "page": 27,
+        "term": "TrustLLM"
+      },
+      {
+        "page": 43,
+        "term": "TrustLLM"
+      },
+      {
+        "page": 46,
+        "term": "TrustLLM: Trustworthiness in Large Language Models"
+      },
+      {
+        "page": 46,
+        "term": "TrustLLM"
+      },
+      {
+        "page": 46,
+        "term": "TrustLLM"
+      },
+      {
+        "page": 46,
+        "term": "TrustLLM"
+      },
+      {
+        "page": 46,
+        "term": "TrustLLM"
+      },
+      {
+        "page": 46,
+        "term": "TrustLLM"
+      }
+    ],
+    "pages": 112,
+    "status": "scanned"
+  },
+  {
+    "url": "https://cdn.openai.com/o1-system-card-20241205.pdf",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-reports-04-88636-e2abf589b1b64b60/work/evidence/o1_system_card.pdf",
+    "candidate_id": "NS20261002-0503",
+    "sha256": "3ba7bdbe69e022f6be0527edbfe18ac1becdea48d5be9891ab764ff336c8a033",
+    "hits": [],
+    "pages": 52,
+    "status": "scanned"
+  },
+  {
+    "url": "https://www.sorbonne-universite.fr/sites/default/files/media/2025-03/BRELOY%20Arnaud.pdf",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-reports-01-88594-16ed7744f11240ee/work/evidence/sorbonne-breloy.pdf",
+    "candidate_id": "NS20261002-0057",
+    "sha256": "ca3bde3887576e8008d23b287259cab7ad6dc5cf903e94a5942bb7420508f09d",
+    "hits": [
+      {
+        "page": 2,
+        "term": "MultiOOD: Scaling Out-of-Distribution Detection for Multiple Modalities"
+      }
+    ],
+    "pages": 2,
+    "status": "scanned"
+  },
+  {
+    "url": "https://proceedings.mlr.press/v224/navarro23a/navarro23a.pdf",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-reports-01-88594-16ed7744f11240ee/work/evidence/navarro23a_lotus.pdf",
+    "candidate_id": "NS20261002-0078",
+    "sha256": "5b5e087083cba4d23a97315f8f6df8782bd5eaf495ea162f52ec025654a3cec3",
+    "hits": [
+      {
+        "page": 2,
+        "term": "Zhao et al"
+      },
+      {
+        "page": 2,
+        "term": "Zhao et al"
+      },
+      {
+        "page": 3,
+        "term": "Zhao et al"
+      },
+      {
+        "page": 5,
+        "term": "Zhao et al"
+      },
+      {
+        "page": 6,
+        "term": "Zhao et al"
+      },
+      {
+        "page": 8,
+        "term": "Zhao et al"
+      },
+      {
+        "page": 13,
+        "term": "Yue Zhao"
+      },
+      {
+        "page": 13,
+        "term": "Yue Zhao"
+      },
+      {
+        "page": 14,
+        "term": "Automatic Unsupervised Outlier Model Selection"
+      },
+      {
+        "page": 14,
+        "term": "Toward Unsupervised Outlier Model Selection"
+      },
+      {
+        "page": 14,
+        "term": "Yue Zhao"
+      },
+      {
+        "page": 14,
+        "term": "Yue Zhao"
+      },
+      {
+        "page": 15,
+        "term": "PyOD"
+      }
+    ],
+    "pages": 19,
+    "status": "scanned"
+  },
+  {
+    "url": "https://www.imse.iastate.edu/files/2023/05/Fili_iastate_0097E_20651.pdf",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-reports-01-88594-16ed7744f11240ee/work/evidence/iastate_thesis.pdf",
+    "candidate_id": "NS20261002-0099",
+    "sha256": "9f6b895ede1d011d8ed1325591e2a2a8704a7a13a1b9d63e44d4412dcc2048c2",
+    "hits": [
+      {
+        "page": 52,
+        "term": "Yue Zhao"
+      },
+      {
+        "page": 52,
+        "term": "LSCP"
+      }
+    ],
+    "pages": 123,
+    "status": "scanned"
+  },
+  {
+    "url": "https://media.defense.gov/2024/Apr/16/2003440563/-1/-1/0/Navy_SBIR_242_PI_DP2.PDF",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-reports-01-88594-16ed7744f11240ee/work/evidence/navy_sbir.pdf",
+    "candidate_id": "NS20261002-0105",
+    "sha256": "5742e78127a8235a8e3fa7ab98572fa72ddb7215a1aa174753ab77eb8044801a",
+    "hits": [],
+    "pages": 135,
+    "status": "scanned"
+  },
+  {
+    "url": "https://engineering.grab.com/files/Interaction-Focused%20Anomaly%20Detection%20on%20Bipartite%20Node-and-Edge-Attributed%20Graphs.pdf",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-reports-01-88594-16ed7744f11240ee/work/evidence/grab_paper.pdf",
+    "candidate_id": "NS20261002-0197",
+    "sha256": "2c0b94101f6e2a67c8c9f87cdc38546294f45c617d6a98576a30d2e73bd85e89",
+    "hits": [
+      {
+        "page": 2,
+        "term": "Aegis"
+      },
+      {
+        "page": 7,
+        "term": "PyGOD"
+      },
+      {
+        "page": 8,
+        "term": "PyGOD"
+      },
+      {
+        "page": 9,
+        "term": "PyGOD"
+      },
+      {
+        "page": 10,
+        "term": "PyGOD"
+      }
+    ],
+    "pages": 10,
+    "status": "scanned"
+  },
+  {
+    "url": "https://theses.fr/2024UPASG046",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-web-16-3649-0fcf3a35edd04c1d/work/evidence/thimonier_2024.pdf",
+    "candidate_id": "NS20261002-0452",
+    "sha256": "b0ed45ebaf35227e5a17f72ed61e0ba42522efcb7e82fcb9b0b424b47b2e8876",
+    "hits": [
+      {
+        "page": 31,
+        "term": "Zhao et al"
+      },
+      {
+        "page": 34,
+        "term": "COPOD"
+      },
+      {
+        "page": 34,
+        "term": "COPOD"
+      },
+      {
+        "page": 68,
+        "term": "COPOD"
+      },
+      {
+        "page": 86,
+        "term": "COPOD"
+      },
+      {
+        "page": 95,
+        "term": "ECOD"
+      },
+      {
+        "page": 98,
+        "term": "COPOD"
+      },
+      {
+        "page": 98,
+        "term": "ECOD"
+      },
+      {
+        "page": 99,
+        "term": "Zhao et al"
+      },
+      {
+        "page": 99,
+        "term": "COPOD"
+      },
+      {
+        "page": 99,
+        "term": "ECOD"
+      },
+      {
+        "page": 99,
+        "term": "ECOD"
+      },
+      {
+        "page": 99,
+        "term": "PyOD"
+      },
+      {
+        "page": 100,
+        "term": "COPOD"
+      },
+      {
+        "page": 100,
+        "term": "COPOD"
+      },
+      {
+        "page": 100,
+        "term": "ECOD"
+      },
+      {
+        "page": 100,
+        "term": "ECOD"
+      },
+      {
+        "page": 100,
+        "term": "ECOD"
+      },
+      {
+        "page": 100,
+        "term": "ECOD"
+      },
+      {
+        "page": 100,
+        "term": "ECOD"
+      },
+      {
+        "page": 100,
+        "term": "ECOD"
+      },
+      {
+        "page": 100,
+        "term": "ECOD"
+      },
+      {
+        "page": 100,
+        "term": "ECOD"
+      },
+      {
+        "page": 101,
+        "term": "COPOD"
+      },
+      {
+        "page": 101,
+        "term": "ECOD"
+      },
+      {
+        "page": 111,
+        "term": "ADBench: Anomaly Detection Benchmark"
+      },
+      {
+        "page": 111,
+        "term": "ADBench"
+      },
+      {
+        "page": 113,
+        "term": "COPOD: Copula-Based Outlier Detection"
+      },
+      {
+        "page": 113,
+        "term": "2201.00382"
+      },
+      {
+        "page": 113,
+        "term": "COPOD"
+      },
+      {
+        "page": 113,
+        "term": "ECOD"
+      },
+      {
+        "page": 117,
+        "term": "PyOD: A Python Toolbox for Scalable Outlier Detection"
+      },
+      {
+        "page": 117,
+        "term": "PyOD"
+      },
+      {
+        "page": 130,
+        "term": "COPOD"
+      },
+      {
+        "page": 132,
+        "term": "COPOD"
+      }
+    ],
+    "pages": 138,
+    "status": "scanned"
+  },
+  {
+    "url": "https://gupea.ub.gu.se/handle/2077/91173",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-web-16-3649-0fcf3a35edd04c1d/work/evidence/gupea_cse_25_29.pdf",
+    "candidate_id": "NS20261002-0454",
+    "sha256": "446e29707395bf5e6d81398a4f4807020797b4ea585b73c08fdb26185df6d993",
+    "hits": [
+      {
+        "page": 9,
+        "term": "TrustLLM"
+      },
+      {
+        "page": 16,
+        "term": "Zhao et al"
+      },
+      {
+        "page": 16,
+        "term": "TrustLLM"
+      }
+    ],
+    "pages": 17,
+    "status": "scanned"
+  },
+  {
+    "url": "https://www.osti.gov/servlets/purl/2352690",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-web-16-3649-0fcf3a35edd04c1d/work/evidence/lanl-la-ur-24-24919.pdf",
+    "candidate_id": "NS20261002-0478",
+    "sha256": "47ca5677983e26d24a2f4de5fdc8c4d7bd0887b0c16ad6615fa418bf695a26e9",
+    "hits": [
+      {
+        "page": 26,
+        "term": "PyOD: A Python Toolbox for Scalable Outlier Detection"
+      },
+      {
+        "page": 26,
+        "term": "PyOD"
+      }
+    ],
+    "pages": 37,
+    "status": "scanned"
+  },
+  {
+    "url": "https://ojs.aaai.org/index.php/AAAI/article/download/42359/46320",
+    "title": "AEGIS: Toward Expert-in-the-loop Industrial Anomaly Detection",
+    "local_path": "/tmp/news-search-20261002-codex/agent-io/pdfs/aaai-42359.pdf",
+    "http_status": 200,
+    "notes": "AAAI 2026 paper by Dongmin Kim et al. (LG AI Research). Verified via stream decompression: section Model Build cites (Yang et al. 2025; arXiv:2505.12594) AD-AGENT for agentic model construction. Also represents an AEGIS name collision (LG AI Research industrial anomaly detection platform vs USC FORTIS tool-call firewall).",
+    "unit_id": "papers-02",
+    "sha256": "4cd37e8e5de3e43a48239b3b280b4ee245fb6399b57100c3f3e1bbcbaf55816f",
+    "hits": [
+      {
+        "page": 1,
+        "term": "Aegis"
+      },
+      {
+        "page": 1,
+        "term": "Aegis"
+      },
+      {
+        "page": 1,
+        "term": "Aegis"
+      },
+      {
+        "page": 1,
+        "term": "Aegis"
+      },
+      {
+        "page": 1,
+        "term": "Aegis"
+      },
+      {
+        "page": 1,
+        "term": "Aegis"
+      },
+      {
+        "page": 1,
+        "term": "Aegis"
+      },
+      {
+        "page": 1,
+        "term": "Aegis"
+      },
+      {
+        "page": 1,
+        "term": "Aegis"
+      },
+      {
+        "page": 1,
+        "term": "Aegis"
+      },
+      {
+        "page": 2,
+        "term": "Aegis"
+      },
+      {
+        "page": 2,
+        "term": "Aegis"
+      },
+      {
+        "page": 2,
+        "term": "Aegis"
+      },
+      {
+        "page": 2,
+        "term": "Aegis"
+      },
+      {
+        "page": 2,
+        "term": "Aegis"
+      },
+      {
+        "page": 2,
+        "term": "Aegis"
+      },
+      {
+        "page": 2,
+        "term": "Aegis"
+      },
+      {
+        "page": 2,
+        "term": "Aegis"
+      },
+      {
+        "page": 2,
+        "term": "Aegis"
+      },
+      {
+        "page": 2,
+        "term": "Aegis"
+      },
+      {
+        "page": 2,
+        "term": "Aegis"
+      },
+      {
+        "page": 2,
+        "term": "Aegis"
+      },
+      {
+        "page": 3,
+        "term": "2505.12594"
+      },
+      {
+        "page": 3,
+        "term": "AD-AGENT"
+      },
+      {
+        "page": 3,
+        "term": "PyOD"
+      }
+    ],
+    "pages": 3,
+    "status": "scanned"
+  },
+  {
+    "url": "https://www.medrxiv.org/content/10.64898/2026.09.16.26363176v1.full.pdf",
+    "title": "Validating LLM judges for automated oversight of patient communication",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-papers-03-31865-e7cde03398d242c8/work/scratch/medrxiv_26363176.pdf",
+    "http_status": 200,
+    "notes": "Clinical AI preprint (Harvard Medical School / Dana-Farber / Mass General Brigham) citing Shao et al. IJCNLP-AACL 2025 patient-provider communication survey. Full text scan confirmed match at Shao et al. in bibliography and context.",
+    "unit_id": "papers-03",
+    "sha256": "ea8e7d5caa7157d4851fb57cccf9637cd10f7251ef09152f4c51c1ceadd640dd",
+    "hits": [],
+    "pages": 31,
+    "status": "scanned"
+  },
+  {
+    "url": "https://doi.org/10.1021/acs.analchem.5c06848",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-academic-01-88683-8bae3ff59bf44a26/work/evidence/hal_05606124.pdf",
+    "candidate_id": "NS20261002-0046",
+    "sha256": "58b38bc6bee3806592203b67b2426f649c96c7c98aeda7b91f9256eae7a6572e",
+    "hits": [
+      {
+        "page": 2,
+        "term": "PyOD"
+      },
+      {
+        "page": 6,
+        "term": "PyOD 2: A Python Library for Outlier Detection with LLM-powered Model Selection"
+      },
+      {
+        "page": 6,
+        "term": "PyOD"
+      },
+      {
+        "page": 7,
+        "term": "ADBench"
+      }
+    ],
+    "pages": 7,
+    "status": "scanned"
+  },
+  {
+    "url": "https://mavmatrix.uta.edu/cgi/viewcontent.cgi?article=1014&context=cse_dissertations2",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-web-15-3017-051c44ea8a5f49c9/work/evidence/NS20261002-0439_uta_1014.pdf",
+    "candidate_id": "NS20261002-0439",
+    "sha256": "65c0628ffe6129197fc8fd7c173aff3b8647858b0a4b3fff2ca8b677a4533025",
+    "hits": [
+      {
+        "page": 82,
+        "term": "TDC"
+      },
+      {
+        "page": 82,
+        "term": "TDC"
+      },
+      {
+        "page": 82,
+        "term": "TDC"
+      },
+      {
+        "page": 85,
+        "term": "TDC"
+      }
+    ],
+    "pages": 135,
+    "status": "scanned"
+  },
+  {
+    "url": "https://repositorio.ipcb.pt/bitstreams/c04e8617-3c25-4043-9f2c-e9e9076edcf0/download",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-web-15-3017-051c44ea8a5f49c9/work/evidence/NS20261002-0443_ipcb_c04e8617.pdf",
+    "candidate_id": "NS20261002-0443",
+    "sha256": "2027b40a24bca847a14e0db42fa9ee088ca3a6aec74391cd25658c574070f5a9",
+    "hits": [
+      {
+        "page": 8,
+        "term": "PyOD"
+      },
+      {
+        "page": 8,
+        "term": "PyOD"
+      },
+      {
+        "page": 8,
+        "term": "PyOD"
+      },
+      {
+        "page": 8,
+        "term": "PyOD"
+      },
+      {
+        "page": 8,
+        "term": "PyOD"
+      },
+      {
+        "page": 10,
+        "term": "PyOD"
+      },
+      {
+        "page": 10,
+        "term": "PyOD"
+      },
+      {
+        "page": 10,
+        "term": "PyOD"
+      },
+      {
+        "page": 10,
+        "term": "PyOD"
+      },
+      {
+        "page": 12,
+        "term": "PyOD"
+      },
+      {
+        "page": 16,
+        "term": "PyOD"
+      },
+      {
+        "page": 19,
+        "term": "Zhao et al"
+      },
+      {
+        "page": 19,
+        "term": "PyOD"
+      },
+      {
+        "page": 19,
+        "term": "PyOD"
+      },
+      {
+        "page": 20,
+        "term": "PyOD"
+      },
+      {
+        "page": 20,
+        "term": "PyOD"
+      },
+      {
+        "page": 20,
+        "term": "PyOD"
+      },
+      {
+        "page": 21,
+        "term": "PyOD"
+      },
+      {
+        "page": 21,
+        "term": "PyOD"
+      },
+      {
+        "page": 31,
+        "term": "Zhao et al"
+      },
+      {
+        "page": 31,
+        "term": "PyOD"
+      },
+      {
+        "page": 40,
+        "term": "Zhao et al"
+      },
+      {
+        "page": 40,
+        "term": "PyOD"
+      },
+      {
+        "page": 40,
+        "term": "PyOD"
+      },
+      {
+        "page": 40,
+        "term": "PyOD"
+      },
+      {
+        "page": 40,
+        "term": "PyOD"
+      },
+      {
+        "page": 40,
+        "term": "PyOD"
+      },
+      {
+        "page": 42,
+        "term": "PyOD"
+      },
+      {
+        "page": 43,
+        "term": "PyOD"
+      },
+      {
+        "page": 43,
+        "term": "PyOD"
+      },
+      {
+        "page": 44,
+        "term": "PyOD"
+      },
+      {
+        "page": 46,
+        "term": "PyOD"
+      },
+      {
+        "page": 49,
+        "term": "PyOD"
+      },
+      {
+        "page": 49,
+        "term": "PyOD"
+      },
+      {
+        "page": 49,
+        "term": "PyOD"
+      },
+      {
+        "page": 49,
+        "term": "PyOD"
+      },
+      {
+        "page": 49,
+        "term": "PyOD"
+      },
+      {
+        "page": 55,
+        "term": "PyOD: A Python Toolbox for Scalable Outlier Detection"
+      },
+      {
+        "page": 55,
+        "term": "PyOD"
+      }
+    ],
+    "pages": 55,
+    "status": "scanned"
+  },
+  {
+    "url": "https://scholarworks.aub.edu.lb/bitstreams/fedae00b-b6f4-4359-b4d1-86f7cb305d3a/download",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-web-15-3017-051c44ea8a5f49c9/work/evidence/NS20261002-0446_aub_fedae00b.pdf",
+    "candidate_id": "NS20261002-0446",
+    "sha256": "9c1e260cfe157abc8a099aade20c115a1af92ec4f855527e393cea01e4bfcd62",
+    "hits": [
+      {
+        "page": 10,
+        "term": "COPOD: Copula-Based Outlier Detection"
+      },
+      {
+        "page": 10,
+        "term": "COPOD"
+      },
+      {
+        "page": 10,
+        "term": "ECOD"
+      },
+      {
+        "page": 16,
+        "term": "COPOD"
+      },
+      {
+        "page": 16,
+        "term": "COPOD"
+      },
+      {
+        "page": 16,
+        "term": "ECOD"
+      },
+      {
+        "page": 16,
+        "term": "ECOD"
+      },
+      {
+        "page": 17,
+        "term": "COPOD"
+      },
+      {
+        "page": 17,
+        "term": "ECOD"
+      },
+      {
+        "page": 17,
+        "term": "PyOD"
+      },
+      {
+        "page": 17,
+        "term": "TODS"
+      },
+      {
+        "page": 23,
+        "term": "COPOD"
+      },
+      {
+        "page": 23,
+        "term": "ECOD"
+      },
+      {
+        "page": 24,
+        "term": "COPOD"
+      },
+      {
+        "page": 24,
+        "term": "ECOD"
+      },
+      {
+        "page": 31,
+        "term": "COPOD"
+      },
+      {
+        "page": 31,
+        "term": "COPOD"
+      },
+      {
+        "page": 31,
+        "term": "COPOD"
+      },
+      {
+        "page": 31,
+        "term": "ECOD"
+      },
+      {
+        "page": 31,
+        "term": "ECOD"
+      },
+      {
+        "page": 31,
+        "term": "ECOD"
+      },
+      {
+        "page": 31,
+        "term": "PyOD"
+      },
+      {
+        "page": 34,
+        "term": "COPOD"
+      },
+      {
+        "page": 34,
+        "term": "COPOD"
+      },
+      {
+        "page": 34,
+        "term": "COPOD"
+      },
+      {
+        "page": 34,
+        "term": "ECOD"
+      },
+      {
+        "page": 34,
+        "term": "ECOD"
+      },
+      {
+        "page": 34,
+        "term": "ECOD"
+      },
+      {
+        "page": 35,
+        "term": "COPOD"
+      },
+      {
+        "page": 35,
+        "term": "COPOD"
+      },
+      {
+        "page": 35,
+        "term": "ECOD"
+      },
+      {
+        "page": 35,
+        "term": "ECOD"
+      },
+      {
+        "page": 37,
+        "term": "COPOD"
+      },
+      {
+        "page": 37,
+        "term": "ECOD"
+      },
+      {
+        "page": 38,
+        "term": "COPOD"
+      },
+      {
+        "page": 38,
+        "term": "ECOD"
+      },
+      {
+        "page": 51,
+        "term": "COPOD"
+      },
+      {
+        "page": 51,
+        "term": "ECOD"
+      },
+      {
+        "page": 52,
+        "term": "COPOD"
+      },
+      {
+        "page": 52,
+        "term": "COPOD"
+      },
+      {
+        "page": 52,
+        "term": "ECOD"
+      },
+      {
+        "page": 52,
+        "term": "ECOD"
+      },
+      {
+        "page": 53,
+        "term": "COPOD"
+      },
+      {
+        "page": 53,
+        "term": "ECOD"
+      },
+      {
+        "page": 58,
+        "term": "ADBench"
+      },
+      {
+        "page": 59,
+        "term": "COPOD"
+      },
+      {
+        "page": 60,
+        "term": "TODS: An Automated Time Series Outlier Detection System"
+      },
+      {
+        "page": 60,
+        "term": "PyOD"
+      },
+      {
+        "page": 60,
+        "term": "PyOD"
+      }
+    ],
+    "pages": 60,
+    "status": "scanned"
+  },
+  {
+    "url": "http://arno.uvt.nl/show.cgi?fid=158081",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-web-15-3017-051c44ea8a5f49c9/work/evidence/NS20261002-0447_uvt_arno_158081.pdf",
+    "candidate_id": "NS20261002-0447",
+    "sha256": "a1f9aa3aa368cc63958c7162e25c8234f1bf17f20b90063bf00b0e4ed253f75c",
+    "hits": [
+      {
+        "page": 11,
+        "term": "PyOD"
+      },
+      {
+        "page": 18,
+        "term": "Zhao et al"
+      },
+      {
+        "page": 18,
+        "term": "PyOD"
+      },
+      {
+        "page": 19,
+        "term": "Zhao et al"
+      },
+      {
+        "page": 19,
+        "term": "PyOD"
+      },
+      {
+        "page": 19,
+        "term": "PyOD"
+      },
+      {
+        "page": 30,
+        "term": "PyOD"
+      }
+    ],
+    "pages": 32,
+    "status": "scanned"
+  },
+  {
+    "url": "https://proceedings.iclr.cc/paper_files/paper/2025/file/bf375a8dabbae40def018957ea68842a-Paper-Conference.pdf",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-academic-02-88701-b11e033c61334f13/work/evidence/NS20261002-0055.pdf",
+    "candidate_id": "NS20261002-0055",
+    "sha256": "eff8573729b97a76eba206806844adfeb7200f9f623305f9d138f74de168bfd0",
+    "hits": [
+      {
+        "page": 2,
+        "term": "Zhao et al"
+      },
+      {
+        "page": 3,
+        "term": "Zhao et al"
+      },
+      {
+        "page": 8,
+        "term": "ADBench"
+      },
+      {
+        "page": 11,
+        "term": "Yue Zhao"
+      },
+      {
+        "page": 12,
+        "term": "Yue Zhao"
+      },
+      {
+        "page": 12,
+        "term": "Yue Zhao"
+      },
+      {
+        "page": 12,
+        "term": "ADBench"
+      },
+      {
+        "page": 14,
+        "term": "Automatic Unsupervised Outlier Model Selection"
+      },
+      {
+        "page": 14,
+        "term": "Toward Unsupervised Outlier Model Selection"
+      },
+      {
+        "page": 14,
+        "term": "Yue Zhao"
+      },
+      {
+        "page": 14,
+        "term": "Yue Zhao"
+      },
+      {
+        "page": 14,
+        "term": "Yue Zhao"
+      },
+      {
+        "page": 14,
+        "term": "Yue Zhao"
+      },
+      {
+        "page": 14,
+        "term": "PyOD"
+      },
+      {
+        "page": 23,
+        "term": "Zhao et al"
+      },
+      {
+        "page": 23,
+        "term": "yzhao062"
+      },
+      {
+        "page": 23,
+        "term": "PyOD"
+      }
+    ],
+    "pages": 29,
+    "status": "scanned"
+  },
+  {
+    "url": "https://ojs.aaai.org/index.php/AAAI/article/download/40474/44435",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-academic-02-88701-b11e033c61334f13/work/evidence/NS20261002-0066.pdf",
+    "candidate_id": "NS20261002-0066",
+    "sha256": "99e23d1d63978505b94a33d6a4003824dc374413b96be6500be67ad722558022",
+    "hits": [
+      {
+        "page": 1,
+        "term": "Zhao et al"
+      },
+      {
+        "page": 1,
+        "term": "Zhao et al"
+      },
+      {
+        "page": 1,
+        "term": "Zhao et al"
+      },
+      {
+        "page": 2,
+        "term": "Zhao et al"
+      },
+      {
+        "page": 2,
+        "term": "TrustLLM"
+      },
+      {
+        "page": 3,
+        "term": "Zhao et al"
+      },
+      {
+        "page": 5,
+        "term": "Zhao et al"
+      },
+      {
+        "page": 8,
+        "term": "TrustLLM: Trustworthiness in Large Language Models"
+      },
+      {
+        "page": 8,
+        "term": "TrustLLM"
+      }
+    ],
+    "pages": 9,
+    "status": "scanned"
+  },
+  {
+    "url": "https://doi.org/10.1371/journal.pone.0335135",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-academic-02-88701-b11e033c61334f13/work/evidence/NS20261002-0076.pdf",
+    "candidate_id": "NS20261002-0076",
+    "sha256": "0516a645da6ffc4190d981cba69b2960d35b69591c5dd0136c3d1fbeead9555e",
+    "hits": [
+      {
+        "page": 3,
+        "term": "Contrastive Attributed Network Anomaly Detection with Data Augmentation"
+      },
+      {
+        "page": 3,
+        "term": "Aegis"
+      },
+      {
+        "page": 6,
+        "term": "Aegis"
+      },
+      {
+        "page": 8,
+        "term": "Aegis"
+      },
+      {
+        "page": 19,
+        "term": "Aegis"
+      },
+      {
+        "page": 27,
+        "term": "BOND"
+      }
+    ],
+    "pages": 27,
+    "status": "scanned"
+  },
+  {
+    "url": "https://www.growingscience.com/dsl/Vol13/dsl_2023_65.pdf",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-academic-02-88701-b11e033c61334f13/work/evidence/NS20261002-0094.pdf",
+    "candidate_id": "NS20261002-0094",
+    "sha256": "8c7cd5b4890923edde8d1e199a14ba9a73f887abdebfee77dc6e6a522163f71a",
+    "hits": [
+      {
+        "page": 3,
+        "term": "Zhao et al"
+      }
+    ],
+    "pages": 18,
+    "status": "scanned"
+  },
+  {
+    "url": "https://webthesis.biblio.polito.it/27687/1/tesi.pdf",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-reports-02-88606-ab22f1fc5ca745ba/work/evidence/NS20261002-0284_polito_27687.pdf",
+    "candidate_id": "NS20261002-0284",
+    "sha256": "cecc2da7b099710edce0cd69c17ec06d2a2d7a87368c6e27342e927d99571d03",
+    "hits": [
+      {
+        "page": 40,
+        "term": "PyOD"
+      }
+    ],
+    "pages": 90,
+    "status": "scanned"
+  },
+  {
+    "url": "https://thesis.unipd.it/retrieve/f471966e-c42e-49f1-b3ac-0fd2520a0b9c/Convento_Enrico.pdf",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-reports-02-88606-ab22f1fc5ca745ba/work/evidence/NS20261002-0285_unipd_convento.pdf",
+    "candidate_id": "NS20261002-0285",
+    "sha256": "8d101c63cd46dbd7bda921729b62dcdd7d40e4e83c071123d869826a172c4f04",
+    "hits": [
+      {
+        "page": 53,
+        "term": "PyOD"
+      },
+      {
+        "page": 53,
+        "term": "PyOD"
+      },
+      {
+        "page": 53,
+        "term": "PyOD"
+      }
+    ],
+    "pages": 103,
+    "status": "scanned"
+  },
+  {
+    "url": "https://repositum.tuwien.at/bitstream/20.500.12708/205599/2/Iglesias%20Vazquez%20Felix%20-%202025%20-%20What%20do%20anomaly%20scores%20actually%20mean%20Dynamic...pdf",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-reports-02-88606-ab22f1fc5ca745ba/work/evidence/NS20261002-0287_tuwien_iglesias_2025.pdf",
+    "candidate_id": "NS20261002-0287",
+    "sha256": "e6f6a8b436e4c1540ddb23361e2eee8ecd8aca021db7766f8013243721cccb29",
+    "hits": [
+      {
+        "page": 15,
+        "term": "PyOD"
+      },
+      {
+        "page": 15,
+        "term": "PyOD"
+      },
+      {
+        "page": 15,
+        "term": "PyOD"
+      },
+      {
+        "page": 15,
+        "term": "PyOD"
+      },
+      {
+        "page": 15,
+        "term": "PyOD"
+      },
+      {
+        "page": 15,
+        "term": "PyOD"
+      },
+      {
+        "page": 15,
+        "term": "PyOD"
+      },
+      {
+        "page": 15,
+        "term": "PyOD"
+      },
+      {
+        "page": 57,
+        "term": "ADBench: Anomaly Detection Benchmark"
+      },
+      {
+        "page": 57,
+        "term": "ADBench"
+      },
+      {
+        "page": 59,
+        "term": "PyOD: A Python Toolbox for Scalable Outlier Detection"
+      },
+      {
+        "page": 59,
+        "term": "PyOD"
+      }
+    ],
+    "pages": 59,
+    "status": "scanned"
+  },
+  {
+    "url": "https://theses.liacs.nl/pdf/2025-2026-KomeiliZadehKKoorosh.pdf",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-reports-02-88606-ab22f1fc5ca745ba/work/evidence/NS20261002-0435_liacs_komeilizadeh_2026.pdf",
+    "candidate_id": "NS20261002-0435",
+    "sha256": "e887bb1f2702486eb4d1646b4c2460a0a83975bc55fe5afcf951a1e893ecaffc",
+    "hits": [
+      {
+        "page": 11,
+        "term": "ECOD"
+      },
+      {
+        "page": 11,
+        "term": "PyOD"
+      },
+      {
+        "page": 11,
+        "term": "PyOD"
+      },
+      {
+        "page": 12,
+        "term": "COPOD"
+      },
+      {
+        "page": 12,
+        "term": "COPOD"
+      },
+      {
+        "page": 12,
+        "term": "ECOD"
+      },
+      {
+        "page": 12,
+        "term": "PyOD"
+      },
+      {
+        "page": 12,
+        "term": "PyOD"
+      },
+      {
+        "page": 13,
+        "term": "Zhao et al"
+      },
+      {
+        "page": 14,
+        "term": "PyOD"
+      },
+      {
+        "page": 14,
+        "term": "PyOD"
+      },
+      {
+        "page": 15,
+        "term": "PyOD"
+      },
+      {
+        "page": 20,
+        "term": "COPOD"
+      },
+      {
+        "page": 20,
+        "term": "ECOD"
+      },
+      {
+        "page": 20,
+        "term": "PyOD"
+      },
+      {
+        "page": 20,
+        "term": "PyOD"
+      },
+      {
+        "page": 21,
+        "term": "PyOD"
+      },
+      {
+        "page": 22,
+        "term": "ECOD"
+      },
+      {
+        "page": 23,
+        "term": "COPOD"
+      },
+      {
+        "page": 23,
+        "term": "ECOD"
+      },
+      {
+        "page": 23,
+        "term": "ECOD"
+      },
+      {
+        "page": 26,
+        "term": "ECOD"
+      },
+      {
+        "page": 27,
+        "term": "ECOD"
+      },
+      {
+        "page": 28,
+        "term": "PyOD"
+      },
+      {
+        "page": 29,
+        "term": "ECOD"
+      },
+      {
+        "page": 32,
+        "term": "COPOD"
+      },
+      {
+        "page": 32,
+        "term": "ECOD"
+      },
+      {
+        "page": 32,
+        "term": "ECOD"
+      },
+      {
+        "page": 32,
+        "term": "ECOD"
+      },
+      {
+        "page": 33,
+        "term": "COPOD"
+      },
+      {
+        "page": 33,
+        "term": "COPOD"
+      },
+      {
+        "page": 33,
+        "term": "ECOD"
+      },
+      {
+        "page": 33,
+        "term": "ECOD"
+      },
+      {
+        "page": 33,
+        "term": "ECOD"
+      },
+      {
+        "page": 34,
+        "term": "ECOD"
+      },
+      {
+        "page": 34,
+        "term": "ECOD"
+      },
+      {
+        "page": 34,
+        "term": "PyOD"
+      },
+      {
+        "page": 36,
+        "term": "COPOD"
+      },
+      {
+        "page": 36,
+        "term": "ECOD"
+      },
+      {
+        "page": 36,
+        "term": "ECOD"
+      },
+      {
+        "page": 36,
+        "term": "ECOD"
+      },
+      {
+        "page": 36,
+        "term": "ECOD"
+      },
+      {
+        "page": 37,
+        "term": "ECOD"
+      },
+      {
+        "page": 37,
+        "term": "ECOD"
+      },
+      {
+        "page": 38,
+        "term": "ECOD"
+      },
+      {
+        "page": 38,
+        "term": "ECOD"
+      },
+      {
+        "page": 39,
+        "term": "COPOD"
+      },
+      {
+        "page": 39,
+        "term": "ECOD"
+      },
+      {
+        "page": 40,
+        "term": "ECOD"
+      },
+      {
+        "page": 44,
+        "term": "Yue Zhao"
+      },
+      {
+        "page": 44,
+        "term": "Yue Zhao"
+      },
+      {
+        "page": 44,
+        "term": "Yue Zhao"
+      },
+      {
+        "page": 44,
+        "term": "ADBench"
+      },
+      {
+        "page": 44,
+        "term": "COPOD"
+      },
+      {
+        "page": 44,
+        "term": "ECOD"
+      },
+      {
+        "page": 45,
+        "term": "Automatic Unsupervised Outlier Model Selection"
+      },
+      {
+        "page": 45,
+        "term": "Yue Zhao"
+      },
+      {
+        "page": 45,
+        "term": "Yue Zhao"
+      },
+      {
+        "page": 45,
+        "term": "PyOD"
+      }
+    ],
+    "pages": 45,
+    "status": "scanned"
+  },
+  {
+    "url": "https://repositum.tuwien.at/bitstream/20.500.12708/228389/1/Blagojevic%20Adam%20-%202026%20-%20Zero-Day%20IoT%20Botnet%20Detection%20with%20Unsupervised...pdf",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-reports-02-88606-ab22f1fc5ca745ba/work/evidence/NS20261002-0436_tuwien_blagojevic_2026.pdf",
+    "candidate_id": "NS20261002-0436",
+    "sha256": "6ccede8603ea1d72e80653a1d0e6fb7c205459022336614fe1536b2d90a1787d",
+    "hits": [
+      {
+        "page": 47,
+        "term": "PyOD"
+      },
+      {
+        "page": 48,
+        "term": "PyOD"
+      },
+      {
+        "page": 48,
+        "term": "PyOD"
+      },
+      {
+        "page": 48,
+        "term": "PyOD"
+      },
+      {
+        "page": 48,
+        "term": "PyOD"
+      },
+      {
+        "page": 99,
+        "term": "PyOD 2: A Python Library for Outlier Detection with LLM-powered Model Selection"
+      },
+      {
+        "page": 99,
+        "term": "PyOD"
+      }
+    ],
+    "pages": 100,
+    "status": "scanned"
+  },
+  {
+    "url": "https://edoc.ub.uni-muenchen.de/35154/1/Qian_Li.pdf",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-reports-02-88606-ab22f1fc5ca745ba/work/evidence/NS20261002-0437_lmu_qian_li.pdf",
+    "candidate_id": "NS20261002-0437",
+    "sha256": "078fe8ef33be0516568796327f7d40819c4444f73376265de8bdbe482834c31d",
+    "hits": [
+      {
+        "page": 49,
+        "term": "yzhao062"
+      },
+      {
+        "page": 49,
+        "term": "PyOD"
+      },
+      {
+        "page": 49,
+        "term": "PyOD"
+      },
+      {
+        "page": 49,
+        "term": "PyOD"
+      },
+      {
+        "page": 85,
+        "term": "COPOD"
+      },
+      {
+        "page": 85,
+        "term": "COPOD"
+      },
+      {
+        "page": 85,
+        "term": "ECOD"
+      },
+      {
+        "page": 85,
+        "term": "ECOD"
+      },
+      {
+        "page": 86,
+        "term": "LSCP"
+      },
+      {
+        "page": 98,
+        "term": "yzhao062"
+      },
+      {
+        "page": 98,
+        "term": "yzhao062"
+      },
+      {
+        "page": 98,
+        "term": "ADBench"
+      },
+      {
+        "page": 98,
+        "term": "ECOD"
+      },
+      {
+        "page": 98,
+        "term": "LSCP"
+      },
+      {
+        "page": 98,
+        "term": "LSCP"
+      },
+      {
+        "page": 98,
+        "term": "PyOD"
+      },
+      {
+        "page": 98,
+        "term": "PyOD"
+      },
+      {
+        "page": 98,
+        "term": "PyOD"
+      },
+      {
+        "page": 98,
+        "term": "PyOD"
+      },
+      {
+        "page": 98,
+        "term": "PyOD"
+      },
+      {
+        "page": 99,
+        "term": "ADBench"
+      },
+      {
+        "page": 103,
+        "term": "ECOD"
+      },
+      {
+        "page": 103,
+        "term": "LSCP"
+      },
+      {
+        "page": 104,
+        "term": "ECOD"
+      },
+      {
+        "page": 104,
+        "term": "LSCP"
+      },
+      {
+        "page": 104,
+        "term": "LSCP"
+      },
+      {
+        "page": 104,
+        "term": "LSCP"
+      },
+      {
+        "page": 105,
+        "term": "ECOD"
+      },
+      {
+        "page": 105,
+        "term": "LSCP"
+      },
+      {
+        "page": 106,
+        "term": "ECOD"
+      },
+      {
+        "page": 106,
+        "term": "LSCP"
+      },
+      {
+        "page": 107,
+        "term": "ECOD"
+      },
+      {
+        "page": 107,
+        "term": "LSCP"
+      },
+      {
+        "page": 108,
+        "term": "ECOD"
+      },
+      {
+        "page": 109,
+        "term": "LSCP"
+      },
+      {
+        "page": 110,
+        "term": "ECOD"
+      },
+      {
+        "page": 110,
+        "term": "LSCP"
+      },
+      {
+        "page": 111,
+        "term": "ECOD"
+      },
+      {
+        "page": 111,
+        "term": "ECOD"
+      },
+      {
+        "page": 111,
+        "term": "ECOD"
+      },
+      {
+        "page": 111,
+        "term": "LSCP"
+      },
+      {
+        "page": 111,
+        "term": "LSCP"
+      },
+      {
+        "page": 111,
+        "term": "LSCP"
+      },
+      {
+        "page": 112,
+        "term": "ECOD"
+      },
+      {
+        "page": 112,
+        "term": "ECOD"
+      },
+      {
+        "page": 112,
+        "term": "LSCP"
+      },
+      {
+        "page": 113,
+        "term": "ECOD"
+      },
+      {
+        "page": 113,
+        "term": "LSCP"
+      },
+      {
+        "page": 165,
+        "term": "ADBench: Anomaly Detection Benchmark"
+      },
+      {
+        "page": 165,
+        "term": "Yue Zhao"
+      },
+      {
+        "page": 165,
+        "term": "ADBench"
+      },
+      {
+        "page": 168,
+        "term": "Yue Zhao"
+      },
+      {
+        "page": 168,
+        "term": "Yue Zhao"
+      },
+      {
+        "page": 168,
+        "term": "COPOD"
+      },
+      {
+        "page": 168,
+        "term": "ECOD"
+      },
+      {
+        "page": 172,
+        "term": "TODS"
+      },
+      {
+        "page": 174,
+        "term": "Yue Zhao"
+      },
+      {
+        "page": 174,
+        "term": "Yue Zhao"
+      },
+      {
+        "page": 174,
+        "term": "LSCP"
+      },
+      {
+        "page": 174,
+        "term": "PyOD"
+      }
+    ],
+    "pages": 176,
+    "status": "scanned"
+  },
+  {
+    "url": "https://tdr.lib.ntu.edu.tw/bitstream/123456789/94149/1/ntu-112-2.pdf",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-reports-02-88606-ab22f1fc5ca745ba/work/evidence/NS20261002-0438_ntu_taiwan.pdf",
+    "candidate_id": "NS20261002-0438",
+    "status": "unverified",
+    "error": "Local file is not a PDF",
+    "hits": []
+  },
+  {
+    "url": "https://www.diva-portal.org/smash/get/diva2:2023388/FULLTEXT01.pdf",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-reports-02-88606-ab22f1fc5ca745ba/work/evidence/NS20261002-0440_diva_2023388.pdf",
+    "candidate_id": "NS20261002-0440",
+    "sha256": "51e896787f123533d2c96b30577f2e88e3d3e2f3cd5aedfb0ee98ef6b633be5f",
+    "hits": [
+      {
+        "page": 31,
+        "term": "PyOD"
+      },
+      {
+        "page": 31,
+        "term": "PyOD"
+      }
+    ],
+    "pages": 50,
+    "status": "scanned"
+  },
+  {
+    "url": "https://www.diva-portal.org/smash/get/diva2:2072375/FULLTEXT01.pdf",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-reports-02-88606-ab22f1fc5ca745ba/work/evidence/NS20261002-0441_diva_2072375.pdf",
+    "candidate_id": "NS20261002-0441",
+    "sha256": "aa22f932699c5ea0726b700a6539922465e38c9f848d2544c67485756634bd50",
+    "hits": [
+      {
+        "page": 2,
+        "term": "ADBench"
+      },
+      {
+        "page": 10,
+        "term": "ADBench"
+      },
+      {
+        "page": 13,
+        "term": "ADBench"
+      },
+      {
+        "page": 18,
+        "term": "ADBench"
+      },
+      {
+        "page": 18,
+        "term": "ADBench"
+      },
+      {
+        "page": 28,
+        "term": "ADBench"
+      },
+      {
+        "page": 32,
+        "term": "ADBench"
+      },
+      {
+        "page": 32,
+        "term": "ADBench"
+      },
+      {
+        "page": 32,
+        "term": "ADBench"
+      },
+      {
+        "page": 35,
+        "term": "ADBench"
+      },
+      {
+        "page": 37,
+        "term": "ADBench"
+      }
+    ],
+    "pages": 43,
+    "status": "scanned"
+  },
+  {
+    "url": "https://webthesis.biblio.polito.it/27114/1/tesi.pdf",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-reports-02-88606-ab22f1fc5ca745ba/work/evidence/NS20261002-0444_polito_27114.pdf",
+    "candidate_id": "NS20261002-0444",
+    "sha256": "c7b643f21d07435ab375308bafc1872306bc33aff8dba84d8ae7549c591437ec",
+    "hits": [
+      {
+        "page": 85,
+        "term": "ADBench: Anomaly Detection Benchmark"
+      },
+      {
+        "page": 85,
+        "term": "Yue Zhao"
+      },
+      {
+        "page": 85,
+        "term": "ADBench"
+      }
+    ],
+    "pages": 86,
+    "status": "scanned"
+  },
+  {
+    "url": "https://www.politesi.polimi.it/bitstream/10589/204117/3/2023_05_Petri_Tesi_01.pdf",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-reports-02-88606-ab22f1fc5ca745ba/work/evidence/NS20261002-0445_polimi_petri_2023.pdf",
+    "candidate_id": "NS20261002-0445",
+    "sha256": "4a55858666b1b6daa185e70f315182b23673abf4f9b10589056db45b59d51de9",
+    "hits": [
+      {
+        "page": 44,
+        "term": "PyOD"
+      },
+      {
+        "page": 64,
+        "term": "PyOD"
+      },
+      {
+        "page": 64,
+        "term": "PyOD"
+      },
+      {
+        "page": 99,
+        "term": "PyOD"
+      }
+    ],
+    "pages": 122,
+    "status": "scanned"
+  },
+  {
+    "url": "https://escholarship.org/content/qt50r7q2g0/qt50r7q2g0.pdf",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-reports-03-88620-744d7acbda4f423f/work/evidence/NS20261002-0448_uc_qt50r7q2g0.pdf",
+    "candidate_id": "NS20261002-0448",
+    "sha256": "f0c46962a8f55ee8e645b841af572800e08dc33113d6976a8f0c4eb2e95e27c1",
+    "hits": [
+      {
+        "page": 17,
+        "term": "Zhao et al"
+      },
+      {
+        "page": 17,
+        "term": "Zhao et al"
+      },
+      {
+        "page": 53,
+        "term": "Zhao et al"
+      },
+      {
+        "page": 54,
+        "term": "Zhao et al"
+      },
+      {
+        "page": 64,
+        "term": "Zhao et al"
+      },
+      {
+        "page": 69,
+        "term": "Zhao et al"
+      },
+      {
+        "page": 111,
+        "term": "Zhao et al"
+      },
+      {
+        "page": 125,
+        "term": "TrustLLM: Trustworthiness in Large Language Models"
+      },
+      {
+        "page": 125,
+        "term": "TrustLLM"
+      }
+    ],
+    "pages": 136,
+    "status": "scanned"
+  },
+  {
+    "url": "https://escholarship.org/content/qt3x04d8h6/qt3x04d8h6.pdf",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-reports-03-88620-744d7acbda4f423f/work/evidence/NS20261002-0449_uc_qt3x04d8h6.pdf",
+    "candidate_id": "NS20261002-0449",
+    "sha256": "918d16cab8649297c24724078d496c794b83d96377212a060583c202c3ddb3ff",
+    "hits": [
+      {
+        "page": 139,
+        "term": "TrustLLM"
+      }
+    ],
+    "pages": 163,
+    "status": "scanned"
+  },
+  {
+    "url": "https://amsdottorato.unibo.it/id/eprint/12200/1/Dissertation_Enttsel.pdf",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-reports-03-88620-744d7acbda4f423f/work/evidence/NS20261002-0450_unibo_enttsel.pdf",
+    "candidate_id": "NS20261002-0450",
+    "sha256": "fa3a6ae56759ce8ce1b523c9449fdabdb08b4733acbd34c78cc4a1eafef20c03",
+    "hits": [
+      {
+        "page": 134,
+        "term": "ADBench: Anomaly Detection Benchmark"
+      },
+      {
+        "page": 134,
+        "term": "ADBench"
+      }
+    ],
+    "pages": 141,
+    "status": "scanned"
+  },
+  {
+    "url": "https://orbi.umons.ac.be/bitstream/20.500.12907/55523/1/23422_An_Evidence_Based_Post_H.pdf",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-reports-03-88620-744d7acbda4f423f/work/evidence/NS20261002-0451_umons_23422.pdf",
+    "candidate_id": "NS20261002-0451",
+    "sha256": "e487ff768bb0d9e0a55b37cacab2ed05438ad65aa9f8a4afaade4b89652821a6",
+    "hits": [
+      {
+        "page": 4,
+        "term": "ADBench"
+      },
+      {
+        "page": 9,
+        "term": "ADBench"
+      },
+      {
+        "page": 9,
+        "term": "ADBench"
+      },
+      {
+        "page": 9,
+        "term": "COPOD"
+      },
+      {
+        "page": 9,
+        "term": "COPOD"
+      },
+      {
+        "page": 9,
+        "term": "COPOD"
+      },
+      {
+        "page": 9,
+        "term": "ECOD"
+      },
+      {
+        "page": 9,
+        "term": "ECOD"
+      },
+      {
+        "page": 11,
+        "term": "ADBench: Anomaly Detection Benchmark"
+      },
+      {
+        "page": 11,
+        "term": "ADBench"
+      },
+      {
+        "page": 12,
+        "term": "COPOD: Copula-Based Outlier Detection"
+      },
+      {
+        "page": 12,
+        "term": "COPOD"
+      },
+      {
+        "page": 26,
+        "term": "ADBench"
+      },
+      {
+        "page": 26,
+        "term": "ADBench"
+      },
+      {
+        "page": 26,
+        "term": "COPOD"
+      },
+      {
+        "page": 26,
+        "term": "COPOD"
+      },
+      {
+        "page": 26,
+        "term": "ECOD"
+      },
+      {
+        "page": 26,
+        "term": "ECOD"
+      },
+      {
+        "page": 27,
+        "term": "COPOD"
+      },
+      {
+        "page": 27,
+        "term": "COPOD"
+      },
+      {
+        "page": 27,
+        "term": "ECOD"
+      },
+      {
+        "page": 27,
+        "term": "ECOD"
+      }
+    ],
+    "pages": 30,
+    "status": "scanned"
+  },
+  {
+    "url": "https://www.nccoe.nist.gov/sites/default/files/2026-02/accelerating-the-adoption-of-software-and-ai-agent-identity-and-authorization-concept-paper.pdf",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-reports-03-88620-744d7acbda4f423f/work/evidence/NS20261002-0479_nist-nccoe-ai-agent-identity.pdf",
+    "candidate_id": "NS20261002-0479",
+    "sha256": "b303f7fba8c916f440a9435fa48d0e4465553f6b974d3157a1494747589e0b71",
+    "hits": [],
+    "pages": 11,
+    "status": "scanned"
+  },
+  {
+    "url": "https://www.hsgac.senate.gov/wp-content/uploads/Marius-Hobbhahn-Testimony.pdf",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-reports-03-88620-744d7acbda4f423f/work/evidence/NS20261002-0480_marius-hobbhahn-testimony.pdf",
+    "candidate_id": "NS20261002-0480",
+    "sha256": "e87ef9ce0714f72cc6571a9fe163391a6bfad526c3452c00247a1b7afc610ec7",
+    "hits": [],
+    "pages": 7,
+    "status": "scanned"
+  },
+  {
+    "url": "https://www.hsgac.senate.gov/wp-content/uploads/Paul-Ohm-Testimony.pdf",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-reports-03-88620-744d7acbda4f423f/work/evidence/NS20261002-0481_paul-ohm-testimony.pdf",
+    "candidate_id": "NS20261002-0481",
+    "sha256": "304c9e007e21551cbc4ae6e3e98303c3d41edb85026ce1221fefa4e92ea14b5d",
+    "hits": [],
+    "pages": 10,
+    "status": "scanned"
+  },
+  {
+    "url": "https://www.hsgac.senate.gov/wp-content/uploads/Kurt-Gaudette-Testimony-1.pdf",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-reports-03-88620-744d7acbda4f423f/work/evidence/NS20261002-0482_kurt-gaudette-testimony.pdf",
+    "candidate_id": "NS20261002-0482",
+    "sha256": "df573bb260f4ea7744209ebfa224df2a6386d44c9f0d1b1288120534d42f7703",
+    "hits": [],
+    "pages": 9,
+    "status": "scanned"
+  },
+  {
+    "url": "https://www.cisa.gov/sites/default/files/2026-01/joint-guidance-principles-for-the-secure-integration-of-artificial-intelligence-in-operational-technology-508cV2.pdf",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-reports-03-88620-744d7acbda4f423f/work/evidence/NS20261002-0483_cisa-principles-ai-ot-v2.pdf",
+    "candidate_id": "NS20261002-0483",
+    "sha256": "1fde3cbaadf9f75411158a144595631f8dd4029e52b11545c49811d29f531560",
+    "hits": [],
+    "pages": 25,
+    "status": "scanned"
+  },
+  {
+    "url": "https://www.energy.gov/sites/default/files/2026-07/ModCon-AIExpo.pdf",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-reports-03-88620-744d7acbda4f423f/work/evidence/NS20261002-0484_ModCon-AIExpo.pdf",
+    "candidate_id": "NS20261002-0484",
+    "sha256": "09b8f898cfd2e8e25384408cb3f9e0498fa16571c9c0894fc4b5d0597e8a6a03",
+    "hits": [],
+    "pages": 19,
+    "status": "scanned"
+  },
+  {
+    "url": "https://www.energy.gov/sites/default/files/2026-07/ModCon-Confab26.pdf",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-reports-03-88620-744d7acbda4f423f/work/evidence/NS20261002-0485_ModCon-Confab26.pdf",
+    "candidate_id": "NS20261002-0485",
+    "sha256": "6a85f3d32c866218bb2ed506d75906fe3f602842190f124528dc7b16eb0766b7",
+    "hits": [],
+    "pages": 38,
+    "status": "scanned"
+  },
+  {
+    "url": "https://www.diva-portal.org/smash/record.jsf?pid=diva2:1721433",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-web-18-4534-33b17057bd0447d3/work/evidence/NS20261002-0551.pdf",
+    "candidate_id": "NS20261002-0551",
+    "sha256": "7a248eb38eb05414537d99a1257317489d87dae369a80265f38e4d32f8307742",
+    "hits": [
+      {
+        "page": 14,
+        "term": "PyOD"
+      },
+      {
+        "page": 22,
+        "term": "PyOD: A Python Toolbox for Scalable Outlier Detection"
+      },
+      {
+        "page": 22,
+        "term": "PyOD"
+      }
+    ],
+    "pages": 22,
+    "status": "scanned"
+  },
+  {
+    "url": "https://www.frontiersin.org/journals/neurorobotics/articles/10.3389/fnbot.2023.1267561/pdf",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-academic-03-88715-e456078a7bc44a95/work/scratch/frontiers_1267561.pdf",
+    "candidate_id": "NS20261002-0095",
+    "sha256": "8a2c0a3b75131039a72f66b5dec00618d2ef8ca8f544bd7120bde70ea1eac61a",
+    "hits": [
+      {
+        "page": 2,
+        "term": "Zhao et al"
+      }
+    ],
+    "pages": 15,
+    "status": "scanned"
+  },
+  {
+    "url": "https://static1.squarespace.com/static/6396e6e3df81712f7d8ca1df/t/65a7e79c1af77f79e0ad6bfd/1741448412133/Nextskins-publication-1b.pdf",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-academic-03-88715-e456078a7bc44a95/work/scratch/nextskins.pdf",
+    "candidate_id": "NS20261002-0106",
+    "sha256": "9b587d82e4afcb6b6bee3d4b154b95e62abcbeeff026fa8de7da9f793b7c19fb",
+    "hits": [],
+    "pages": 21,
+    "status": "scanned"
+  },
+  {
+    "url": "https://pi.cs.tsinghua.edu.cn/lab/papers/AuthTrack.pdf",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-academic-03-88715-e456078a7bc44a95/work/scratch/tsinghua_authtrack.pdf",
+    "candidate_id": "NS20261002-0107",
+    "sha256": "c4c3dc7fe0c44b8ff8b807610deb15861cba4b4aa65ba3cefa390366090d49ef",
+    "hits": [],
+    "pages": 15,
+    "status": "scanned"
+  },
+  {
+    "url": "https://www.emerald.com/ftmal/article/18/6/975/1337934/Hyperparameter-optimization-in-machine-learning",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-academic-03-88715-e456078a7bc44a95/work/scratch/fetches/arxiv_2410.22854.pdf",
+    "candidate_id": "NS20261002-0114",
+    "sha256": "fde08e803653821a01fad31bf5653630733eddfa6755663ff7265c11714b27e2",
+    "hits": [
+      {
+        "page": 103,
+        "term": "Zhao et al"
+      }
+    ],
+    "pages": 145,
+    "status": "scanned"
+  },
+  {
+    "url": "https://openresearch-repository.anu.edu.au/server/api/core/bitstreams/5852f826-af57-4c81-9259-9072e8b30386/content",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-web-02-95283-fa25f4602d1e4488/work/evidence/NS20261002-0074.pdf",
+    "candidate_id": "NS20261002-0074",
+    "sha256": "93b9ba0ed3e2a3d49f1de501a7b76938e9c29d960b5484e43473aa95f6fcacc0",
+    "hits": [
+      {
+        "page": 80,
+        "term": "ADBench"
+      },
+      {
+        "page": 80,
+        "term": "ADBench"
+      },
+      {
+        "page": 80,
+        "term": "ADBench"
+      },
+      {
+        "page": 80,
+        "term": "ADBench"
+      },
+      {
+        "page": 194,
+        "term": "ADBench"
+      }
+    ],
+    "pages": 209,
+    "status": "scanned"
+  },
+  {
+    "url": "https://www.diva-portal.org/smash/record.jsf?pid=diva2:1954964",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-web-09-99290-0525f821c5f544aa/work/evidence/NS20261002-0276.pdf",
+    "candidate_id": "NS20261002-0276",
+    "sha256": "5b054ae77d05d3aad293e00ba107a1bc7c50a06e3b4af4c81a41c6140688336e",
+    "hits": [
+      {
+        "page": 25,
+        "term": "PyOD"
+      },
+      {
+        "page": 25,
+        "term": "PyOD"
+      },
+      {
+        "page": 30,
+        "term": "PyOD"
+      },
+      {
+        "page": 43,
+        "term": "ADBench: Anomaly Detection Benchmark"
+      },
+      {
+        "page": 43,
+        "term": "ADBench"
+      },
+      {
+        "page": 44,
+        "term": "PyOD: A Python Toolbox for Scalable Outlier Detection"
+      },
+      {
+        "page": 44,
+        "term": "yzhao062"
+      },
+      {
+        "page": 44,
+        "term": "PyOD"
+      },
+      {
+        "page": 44,
+        "term": "PyOD"
+      }
+    ],
+    "pages": 48,
+    "status": "scanned"
+  },
+  {
+    "url": "https://upcommons.upc.edu/entities/publication/559ac5b9-8343-4f24-aead-e3d0025884e7",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-web-09-99290-0525f821c5f544aa/work/evidence/NS20261002-0278.pdf",
+    "candidate_id": "NS20261002-0278",
+    "sha256": "62d4e2ff7f3fc2462345a35fbb21b1a0e0e0d95e32867aab83dc9066e07f5764",
+    "hits": [],
+    "pages": 10,
+    "status": "scanned"
+  },
+  {
+    "url": "https://theses.fr/api/v1/document/2024LORR0071",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-web-09-99290-0525f821c5f544aa/work/evidence/NS20261002-0279.pdf",
+    "candidate_id": "NS20261002-0279",
+    "sha256": "dbd7da89fd129b721f4bf6566d83887a08761b6fe5c36fefb180bb1e2d0c366e",
+    "hits": [],
+    "pages": 177,
+    "status": "scanned"
+  },
+  {
+    "url": "https://arxiv.org/abs/2607.09015",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-academic-04-88730-bba03e8643f54f97/work/scratch/arxiv_2607_09015.pdf",
+    "candidate_id": "NS20261002-0171",
+    "sha256": "9dc927de35fdf104374cb23677c682b65095d4a53f2a78fee49d279e119960c5",
+    "hits": [
+      {
+        "page": 15,
+        "term": "Learning to Route LLMs from Bandit Feedback: One Policy, Many Trade-offs"
+      },
+      {
+        "page": 15,
+        "term": "2510.07429"
+      },
+      {
+        "page": 15,
+        "term": "Yue Zhao"
+      }
+    ],
+    "pages": 44,
+    "status": "scanned"
+  },
+  {
+    "url": "https://arxiv.org/abs/2607.21951",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-academic-04-88730-bba03e8643f54f97/work/scratch/arxiv_2607_21951.pdf",
+    "candidate_id": "NS20261002-0172",
+    "sha256": "b8acba717c01f432b27ecf39cd50c8c5127db39d742e9dd55ceaca318790fd07",
+    "hits": [
+      {
+        "page": 2,
+        "term": "StealthRank"
+      },
+      {
+        "page": 12,
+        "term": "2605.29107"
+      },
+      {
+        "page": 13,
+        "term": "StealthRank"
+      },
+      {
+        "page": 13,
+        "term": "2504.05804"
+      }
+    ],
+    "pages": 16,
+    "status": "scanned"
+  },
+  {
+    "url": "https://aclanthology.org/2026.acl-long.413/",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-academic-04-88730-bba03e8643f54f97/work/scratch/acl_long_413.pdf",
+    "candidate_id": "NS20261002-0174",
+    "sha256": "24ad37663733c6d5e9f651e2d27e5d01f2e18e06bd21cc8fbef4b8a3a42a58f7",
+    "hits": [
+      {
+        "page": 2,
+        "term": "StealthRank"
+      },
+      {
+        "page": 5,
+        "term": "StealthRank"
+      },
+      {
+        "page": 10,
+        "term": "2601.12263"
+      },
+      {
+        "page": 10,
+        "term": "2602.00364"
+      },
+      {
+        "page": 10,
+        "term": "Yue Zhao"
+      },
+      {
+        "page": 10,
+        "term": "Yue Zhao"
+      },
+      {
+        "page": 11,
+        "term": "StealthRank"
+      },
+      {
+        "page": 11,
+        "term": "2504.05804"
+      }
+    ],
+    "pages": 13,
+    "status": "scanned"
+  },
+  {
+    "url": "https://arxiv.org/abs/2604.13074",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-academic-04-88730-bba03e8643f54f97/work/scratch/arxiv_2604_13074.pdf",
+    "candidate_id": "NS20261002-0175",
+    "sha256": "69117fa64a44f4ec23cb20d8e913650b71969ad335c5f6f15f43cd51283f7f1b",
+    "hits": [
+      {
+        "page": 10,
+        "term": "2412.02142"
+      }
+    ],
+    "pages": 28,
+    "status": "scanned"
+  },
+  {
+    "url": "https://kdd-eval-workshop.github.io/agenticai-evaluation-kdd2026/assets/papers/56_Reason_Less_Verify_More_Det.pdf",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-academic-04-88730-bba03e8643f54f97/work/scratch/paper_56.pdf",
+    "candidate_id": "NS20261002-0210",
+    "sha256": "22fa4f04132eb57aacf0b4fc80bfff2b13f722a9ef0b65cdb606af2e78614ae6",
+    "hits": [
+      {
+        "page": 2,
+        "term": "Aegis"
+      },
+      {
+        "page": 3,
+        "term": "auditable"
+      },
+      {
+        "page": 7,
+        "term": "2603.12621"
+      },
+      {
+        "page": 7,
+        "term": "Aegis"
+      }
+    ],
+    "pages": 7,
+    "status": "scanned"
+  },
+  {
+    "url": "https://open-research-europe.ec.europa.eu/articles/6-213",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-academic-04-88730-bba03e8643f54f97/work/scratch/open-research-europe-6-213.pdf",
+    "candidate_id": "NS20261002-0246",
+    "sha256": "5ba3098e39606441130673fa5b9f90a3aed19d374193129d73c34acb3c21f98c",
+    "hits": [
+      {
+        "page": 44,
+        "term": "auditable"
+      },
+      {
+        "page": 49,
+        "term": "PyOD"
+      }
+    ],
+    "pages": 51,
+    "status": "scanned"
+  },
+  {
+    "url": "https://zenodo.org/records/8207454/files/Data%20Detective%20Hunting%20Outliers%20with%20Python.pdf",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-academic-04-88730-bba03e8643f54f97/work/scratch/zenodo_8207454.pdf",
+    "candidate_id": "NS20261002-0248",
+    "sha256": "434f8bd1e2ad073bc6de2a65d33fd7d1b3f3fdbc9860321f241ba3946287a71c",
+    "hits": [
+      {
+        "page": 1,
+        "term": "Yue Zhao"
+      },
+      {
+        "page": 1,
+        "term": "PyGOD"
+      },
+      {
+        "page": 1,
+        "term": "PyGOD"
+      },
+      {
+        "page": 1,
+        "term": "PyOD"
+      },
+      {
+        "page": 1,
+        "term": "PyOD"
+      },
+      {
+        "page": 1,
+        "term": "PyOD"
+      },
+      {
+        "page": 2,
+        "term": "PyOD"
+      },
+      {
+        "page": 2,
+        "term": "PyOD"
+      },
+      {
+        "page": 7,
+        "term": "PyGOD"
+      },
+      {
+        "page": 7,
+        "term": "PyOD"
+      },
+      {
+        "page": 7,
+        "term": "PyOD"
+      }
+    ],
+    "pages": 7,
+    "status": "scanned"
+  },
+  {
+    "url": "https://arxiv.org/pdf/2501.08617.pdf",
+    "title": "RLHS: Mitigating Misalignment in RLHF with Hindsight Simulation",
+    "local_path": "/tmp/news-search-20261002-codex/agent-io/results/arxiv_2501.08617.pdf",
+    "http_status": 200,
+    "notes": "Verified citation of TrustLLM (Sun et al., 2024, arXiv:2401.05561) in Section 4, Table 1, and bibliography; used as primary benchmark for sycophancy and privacy evaluations.",
+    "unit_id": "outlets-05",
+    "sha256": "9d9ada0079418e6df9a737e26b1964de1f88aa2c45657ae6e894a736faf06c75",
+    "hits": [
+      {
+        "page": 1,
+        "term": "TrustLLM"
+      },
+      {
+        "page": 3,
+        "term": "TrustLLM"
+      },
+      {
+        "page": 6,
+        "term": "TrustLLM"
+      },
+      {
+        "page": 6,
+        "term": "TrustLLM"
+      },
+      {
+        "page": 7,
+        "term": "TrustLLM"
+      },
+      {
+        "page": 8,
+        "term": "TrustLLM"
+      },
+      {
+        "page": 9,
+        "term": "Zhao et al"
+      },
+      {
+        "page": 9,
+        "term": "Zhao et al"
+      },
+      {
+        "page": 13,
+        "term": "TrustLLM: Trustworthiness in Large Language Models"
+      },
+      {
+        "page": 13,
+        "term": "TrustLLM"
+      },
+      {
+        "page": 16,
+        "term": "TrustLLM"
+      },
+      {
+        "page": 17,
+        "term": "TrustLLM"
+      }
+    ],
+    "pages": 27,
+    "status": "scanned"
+  },
+  {
+    "url": "https://arxiv.org/pdf/2609.38266",
+    "title": "Janus: Evidence-Before-Effect Sagas and Offline-Verifiable Provenance for Agentic LLMs",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-standing-artifacts-64378-092f498adb064c34/work/pdfs/2609.38266.pdf",
+    "http_status": 200,
+    "notes": "Downloaded 229,270 bytes. Verified dual citation of AEGIS (2603.12621) and Auditable Agents (2604.05485) for pre-execution firewalls and audit layers.",
+    "unit_id": "standing-artifacts",
+    "sha256": "cb0bbeb9b11f06d18a068dbf7a4833d10e8e2a85d23565bb3f6e076ec5f5ebb3",
+    "hits": [
+      {
+        "page": 3,
+        "term": "Auditable Agents"
+      },
+      {
+        "page": 3,
+        "term": "auditable"
+      },
+      {
+        "page": 3,
+        "term": "Aegis"
+      },
+      {
+        "page": 3,
+        "term": "Aegis"
+      },
+      {
+        "page": 12,
+        "term": "Auditable Agents"
+      },
+      {
+        "page": 12,
+        "term": "2603.12621"
+      },
+      {
+        "page": 12,
+        "term": "2604.05485"
+      },
+      {
+        "page": 12,
+        "term": "auditable"
+      },
+      {
+        "page": 12,
+        "term": "Aegis"
+      }
+    ],
+    "pages": 13,
+    "status": "scanned"
+  },
+  {
+    "url": "https://arxiv.org/pdf/2609.26900",
+    "title": "Ajar: Measuring Open Privilege in Agent Defenses",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-standing-artifacts-64378-092f498adb064c34/work/pdfs/2609.26900.pdf",
+    "http_status": 200,
+    "notes": "Downloaded 469,254 bytes. Verified independent citation of FORTIS (2605.09163) for checking minimal skill selection and privilege boundaries.",
+    "unit_id": "standing-artifacts",
+    "sha256": "83feeff05d346f06d92ed69c2fb4eb90ae3bb77b477c620294614586a9c45f88",
+    "hits": [
+      {
+        "page": 24,
+        "term": "2605.09163"
+      },
+      {
+        "page": 24,
+        "term": "Yue Zhao"
+      }
+    ],
+    "pages": 26,
+    "status": "scanned"
+  },
+  {
+    "url": "https://arxiv.org/pdf/2609.14062",
+    "title": "When Single-User-Oriented LLM-based Assistants Involve Others: A Scoping Review of Pathways, Risks, and Responses",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-standing-artifacts-64378-092f498adb064c34/work/pdfs/2609.14062.pdf",
+    "http_status": 200,
+    "notes": "Downloaded 834,156 bytes. Verified independent citation of WeClawArena (2608.03499) for auditable cross-user agent sandboxes.",
+    "unit_id": "standing-artifacts",
+    "sha256": "bb3641927f6dd92695970ad0d7c6c32dc6159b7ef39bf3f49005c673b47f6d69",
+    "hits": [
+      {
+        "page": 17,
+        "term": "2608.03499"
+      },
+      {
+        "page": 17,
+        "term": "auditable"
+      },
+      {
+        "page": 17,
+        "term": "Yue Zhao"
+      },
+      {
+        "page": 18,
+        "term": "2604.01350"
+      },
+      {
+        "page": 18,
+        "term": "Yue Zhao"
+      }
+    ],
+    "pages": 18,
+    "status": "scanned"
+  },
+  {
+    "url": "https://arxiv.org/pdf/2610.00372",
+    "title": "When Harnesses Lose the Signal: Causal Evaluation of Recovery in LLM Agents",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-standing-artifacts-64378-092f498adb064c34/work/pdfs/2610.00372.pdf",
+    "http_status": 200,
+    "notes": "Downloaded 653,498 bytes. Verified independent citation of CatchBench (2608.22808) for evaluating agent failure detection across prefixes and traces.",
+    "unit_id": "standing-artifacts",
+    "sha256": "d315e6bc03cb9f56627be7929772d41540da57bad5cdc7aaa73ad675a1085d09",
+    "hits": [
+      {
+        "page": 3,
+        "term": "CatchBench"
+      },
+      {
+        "page": 12,
+        "term": "CatchBench: When Can an Agent Failure Be Caught?"
+      },
+      {
+        "page": 12,
+        "term": "2608.22808"
+      },
+      {
+        "page": 12,
+        "term": "2608.22808"
+      },
+      {
+        "page": 12,
+        "term": "CatchBench"
+      },
+      {
+        "page": 12,
+        "term": "Yue Zhao"
+      }
+    ],
+    "pages": 15,
+    "status": "scanned"
+  },
+  {
+    "url": "https://arxiv.org/abs/2610.01042",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-academic-05-88748-013bf3abeb934eea/work/scratch/2610.01042.pdf",
+    "candidate_id": "NS20261002-0325",
+    "sha256": "c3b5ae1fda69cc0d276d6d55f2cc9af75d22fe99a7b50e2a0a3f22711ee36d4c",
+    "hits": [
+      {
+        "page": 12,
+        "term": "FORTIS: Benchmarking Over-Privilege in Agent Skills"
+      },
+      {
+        "page": 12,
+        "term": "2605.09163"
+      },
+      {
+        "page": 13,
+        "term": "Yue Zhao"
+      }
+    ],
+    "pages": 32,
+    "status": "scanned"
+  },
+  {
+    "url": "https://arxiv.org/abs/2609.33295",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-academic-05-88748-013bf3abeb934eea/work/scratch/2609.33295.pdf",
+    "candidate_id": "NS20261002-0328",
+    "sha256": "1d9d7a6c3064804d907a48e58ffb47f19369d99107b01a693f92738e94f2a332",
+    "hits": [
+      {
+        "page": 14,
+        "term": "CatchBench: When Can an Agent Failure Be Caught?"
+      },
+      {
+        "page": 14,
+        "term": "2608.22808"
+      },
+      {
+        "page": 14,
+        "term": "CatchBench"
+      },
+      {
+        "page": 14,
+        "term": "Yue Zhao"
+      }
+    ],
+    "pages": 34,
+    "status": "scanned"
+  },
+  {
+    "url": "https://arxiv.org/pdf/2609.33676",
+    "title": "Auditing Agent Actions Through Query-Conditioned Attribution",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-standing-concepts-66607-2a1a717024064d5a/work/scratch/2609.33676.pdf",
+    "http_status": 200,
+    "notes": "30 pages. Scanned with pypdf: UIUC and IBM paper directly citing Auditable Agents (Nian et al., arXiv:2604.05485) to motivate attribution questions in A3BENCH.",
+    "unit_id": "standing-concepts",
+    "sha256": "993c7f381f96043f87186dd7f0ac96fdea763f6c7214ebf56d96507a80279bbf",
+    "hits": [
+      {
+        "page": 11,
+        "term": "Auditable Agents"
+      },
+      {
+        "page": 11,
+        "term": "2604.05485"
+      },
+      {
+        "page": 11,
+        "term": "auditable"
+      },
+      {
+        "page": 11,
+        "term": "Yue Zhao"
+      }
+    ],
+    "pages": 30,
+    "status": "scanned"
+  },
+  {
+    "url": "https://arxiv.org/pdf/2609.21363",
+    "title": "Hiding in Plain Sight: A Diffusion-based Mitigation of Geolocation Privacy Leakage in Vision-Language Models",
+    "local_path": "/tmp/arxiv_2609_21363.pdf",
+    "http_status": 200,
+    "notes": "Downloaded public PDF (25 pages, 11,283,600 bytes). Verified full-text adoption of DoxBench (Levels 2 & 3) in Sections V-A, V-B, Tables I, IX, X, XII, XIV, XV.",
+    "unit_id": "topics-downstream",
+    "sha256": "a6979f701b512739d80bac8692c5255d47ca9965f82e778f7d7591d997394d08",
+    "hits": [
+      {
+        "page": 8,
+        "term": "DoxBench"
+      },
+      {
+        "page": 9,
+        "term": "DoxBench"
+      },
+      {
+        "page": 9,
+        "term": "DoxBench"
+      },
+      {
+        "page": 9,
+        "term": "DoxBench"
+      },
+      {
+        "page": 9,
+        "term": "DoxBench"
+      },
+      {
+        "page": 9,
+        "term": "DoxBench"
+      },
+      {
+        "page": 9,
+        "term": "DoxBench"
+      },
+      {
+        "page": 10,
+        "term": "DoxBench"
+      },
+      {
+        "page": 10,
+        "term": "DoxBench"
+      },
+      {
+        "page": 10,
+        "term": "DoxBench"
+      },
+      {
+        "page": 10,
+        "term": "DoxBench"
+      },
+      {
+        "page": 11,
+        "term": "DoxBench"
+      },
+      {
+        "page": 11,
+        "term": "DoxBench"
+      },
+      {
+        "page": 12,
+        "term": "DoxBench"
+      },
+      {
+        "page": 12,
+        "term": "DoxBench"
+      },
+      {
+        "page": 12,
+        "term": "DoxBench"
+      },
+      {
+        "page": 13,
+        "term": "DoxBench"
+      },
+      {
+        "page": 13,
+        "term": "DoxBench"
+      },
+      {
+        "page": 13,
+        "term": "DoxBench"
+      },
+      {
+        "page": 13,
+        "term": "DoxBench"
+      },
+      {
+        "page": 14,
+        "term": "2504.19373"
+      },
+      {
+        "page": 15,
+        "term": "Multimodal GEO"
+      },
+      {
+        "page": 17,
+        "term": "DoxBench"
+      },
+      {
+        "page": 17,
+        "term": "DoxBench"
+      },
+      {
+        "page": 17,
+        "term": "DoxBench"
+      },
+      {
+        "page": 17,
+        "term": "DoxBench"
+      },
+      {
+        "page": 18,
+        "term": "DoxBench"
+      },
+      {
+        "page": 18,
+        "term": "DoxBench"
+      },
+      {
+        "page": 18,
+        "term": "DoxBench"
+      },
+      {
+        "page": 19,
+        "term": "DoxBench"
+      },
+      {
+        "page": 19,
+        "term": "DoxBench"
+      },
+      {
+        "page": 19,
+        "term": "DoxBench"
+      },
+      {
+        "page": 21,
+        "term": "DoxBench"
+      },
+      {
+        "page": 22,
+        "term": "DoxBench"
+      },
+      {
+        "page": 23,
+        "term": "DoxBench"
+      }
+    ],
+    "pages": 25,
+    "status": "scanned"
+  },
+  {
+    "url": "https://huggingface.co/datasets/HydroSophyTech/ToxiMol-benchmark",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-code-04-94515-c77b6b9ea1d442c4/work/evidence/arxiv_2506.10912.pdf",
+    "candidate_id": "NS20261002-0514",
+    "sha256": "c3e8c796f213528fc1a0a3cd46a355e82669d25b66a171d392139f4f8da412f8",
+    "hits": [
+      {
+        "page": 2,
+        "term": "TDC"
+      },
+      {
+        "page": 3,
+        "term": "TDC"
+      },
+      {
+        "page": 10,
+        "term": "Yue Zhao"
+      },
+      {
+        "page": 10,
+        "term": "Yue Zhao"
+      },
+      {
+        "page": 11,
+        "term": "TDC"
+      },
+      {
+        "page": 13,
+        "term": "TDC"
+      },
+      {
+        "page": 13,
+        "term": "TDC"
+      },
+      {
+        "page": 13,
+        "term": "TDC"
+      },
+      {
+        "page": 14,
+        "term": "TDC"
+      },
+      {
+        "page": 14,
+        "term": "TDC"
+      },
+      {
+        "page": 17,
+        "term": "combo"
+      },
+      {
+        "page": 27,
+        "term": "TDC"
+      },
+      {
+        "page": 27,
+        "term": "TDC"
+      },
+      {
+        "page": 27,
+        "term": "TDC"
+      }
+    ],
+    "pages": 29,
+    "status": "scanned"
+  },
+  {
+    "url": "https://github.com/wkqdzkd/Awesome-Reliable-Self-Evolving-Agents",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-code-04-94515-c77b6b9ea1d442c4/work/evidence/wkqdzkd_survey.pdf",
+    "candidate_id": "NS20261002-0521",
+    "sha256": "d2187be8385fae59cd637100f36be0356cce4ee3aa9a8fd4537c7f060724a86a",
+    "hits": [
+      {
+        "page": 26,
+        "term": "auditable"
+      },
+      {
+        "page": 26,
+        "term": "auditable"
+      },
+      {
+        "page": 27,
+        "term": "auditable"
+      },
+      {
+        "page": 27,
+        "term": "auditable"
+      },
+      {
+        "page": 27,
+        "term": "auditable"
+      },
+      {
+        "page": 28,
+        "term": "auditable"
+      },
+      {
+        "page": 31,
+        "term": "auditable"
+      },
+      {
+        "page": 33,
+        "term": "auditable"
+      },
+      {
+        "page": 34,
+        "term": "auditable"
+      },
+      {
+        "page": 35,
+        "term": "auditable"
+      },
+      {
+        "page": 35,
+        "term": "auditable"
+      },
+      {
+        "page": 35,
+        "term": "auditable"
+      },
+      {
+        "page": 35,
+        "term": "auditable"
+      },
+      {
+        "page": 38,
+        "term": "auditable"
+      },
+      {
+        "page": 53,
+        "term": "auditable"
+      },
+      {
+        "page": 72,
+        "term": "auditable"
+      },
+      {
+        "page": 76,
+        "term": "MemoHarness: Agent Harnesses That Learn from Experience"
+      },
+      {
+        "page": 76,
+        "term": "2607.14159"
+      },
+      {
+        "page": 78,
+        "term": "Yue Zhao"
+      },
+      {
+        "page": 94,
+        "term": "auditable"
+      },
+      {
+        "page": 98,
+        "term": "Yue Zhao"
+      }
+    ],
+    "pages": 110,
+    "status": "scanned"
+  },
+  {
+    "url": "https://cdn.openai.com/gpt-4o-system-card.pdf",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-reports-05-88652-a30c9d04981c493f/work/scratch/evidence/gpt-4o.pdf",
+    "candidate_id": "NS20261002-0504",
+    "sha256": "e2579ecb185cbc13bac39f9dbf25e1917f78e1ea5a3a5023165c6614fb5db724",
+    "hits": [],
+    "pages": 33,
+    "status": "scanned"
+  },
+  {
+    "url": "https://www-cdn.anthropic.com/9ff93dfa8f445c932415d335c88852ef47f1201e.pdf",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-reports-05-88652-a30c9d04981c493f/work/scratch/evidence/claude-3-7.pdf",
+    "candidate_id": "NS20261002-0505",
+    "sha256": "82947a46fc2d1b9a1d69501ef973fc3c5b328b703b9a17bd8a143c2672f8a1a6",
+    "hits": [],
+    "pages": 43,
+    "status": "scanned"
+  },
+  {
+    "url": "https://media.x.ai/v1/website/4p7card-5eccc980.pdf",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-reports-05-88652-a30c9d04981c493f/work/scratch/evidence/grok-4-7.pdf",
+    "candidate_id": "NS20261002-0508",
+    "sha256": "9e4269af5fb9685d27b2fa73619fb1a6b278027f52d5438ceafd6994c9f2b486",
+    "hits": [],
+    "pages": 30,
+    "status": "scanned"
+  },
+  {
+    "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Flash-Model-Card.pdf",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-reports-05-88652-a30c9d04981c493f/work/scratch/evidence/gemini-2-5-flash.pdf",
+    "candidate_id": "NS20261002-0509",
+    "sha256": "f3221d9458b2fed961c4eb8bef0b33a8164550a7e87b3805278209d12e9f34af",
+    "hits": [],
+    "pages": 11,
+    "status": "scanned"
+  },
+  {
+    "url": "https://assets.publishing.service.gov.uk/media/66474eab4f29e1d07fadca3d/international_scientific_report_on_the_safety_of_advanced_ai_interim_report.pdf",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-reports-05-88652-a30c9d04981c493f/work/scratch/evidence/international_scientific_report_interim.pdf",
+    "candidate_id": "NS20261002-0512",
+    "sha256": "ccc4f9c9dfe608d40bec7eff2167a780f2c2610391db815099be48e36d603196",
+    "hits": [],
+    "pages": 132,
+    "status": "scanned"
+  },
+  {
+    "url": "https://kiss.resources.caltech.edu/uploads/2026/09/technosignatures-wagstaff.pdf",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-reports-05-88652-a30c9d04981c493f/work/scratch/evidence/technosignatures-wagstaff.pdf",
+    "candidate_id": "NS20261002-0517",
+    "sha256": "257551bfe73bec2601c6526fae43443bd377ae54d23ea389fdbd4e15b47f1747",
+    "hits": [
+      {
+        "page": 9,
+        "term": "Zhao et al"
+      },
+      {
+        "page": 12,
+        "term": "Zhao et al"
+      },
+      {
+        "page": 14,
+        "term": "Zhao et al"
+      },
+      {
+        "page": 22,
+        "term": "yzhao062"
+      },
+      {
+        "page": 22,
+        "term": "PyOD"
+      },
+      {
+        "page": 22,
+        "term": "PyOD"
+      },
+      {
+        "page": 22,
+        "term": "PyOD"
+      }
+    ],
+    "pages": 22,
+    "status": "scanned"
+  },
+  {
+    "url": "https://bd.camara.leg.br/bd/items/4ee84fca-a96d-48fc-9599-b6a87f73d0b7/full",
+    "local_path": "/private/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-verify-reports-05-88652-a30c9d04981c493f/work/scratch/evidence/camara_sobrepreco.pdf",
+    "candidate_id": "NS20261002-0549",
+    "sha256": "a33fdb400654d216856c476b79f0818013fee7d461c6bea2704807e9a76b0d2a",
+    "hits": [
+      {
+        "page": 11,
+        "term": "COPOD"
+      },
+      {
+        "page": 11,
+        "term": "PyOD"
+      },
+      {
+        "page": 13,
+        "term": "COPOD"
+      },
+      {
+        "page": 13,
+        "term": "PyOD"
+      },
+      {
+        "page": 17,
+        "term": "PyOD"
+      },
+      {
+        "page": 19,
+        "term": "COPOD"
+      },
+      {
+        "page": 21,
+        "term": "COPOD"
+      },
+      {
+        "page": 21,
+        "term": "ECOD"
+      },
+      {
+        "page": 22,
+        "term": "PyOD"
+      },
+      {
+        "page": 22,
+        "term": "SUOD"
+      },
+      {
+        "page": 24,
+        "term": "COPOD"
+      },
+      {
+        "page": 24,
+        "term": "ECOD"
+      },
+      {
+        "page": 25,
+        "term": "PyOD"
+      },
+      {
+        "page": 42,
+        "term": "ECOD"
+      },
+      {
+        "page": 42,
+        "term": "PyOD"
+      },
+      {
+        "page": 42,
+        "term": "PyOD"
+      },
+      {
+        "page": 42,
+        "term": "PyOD"
+      },
+      {
+        "page": 42,
+        "term": "PyOD"
+      },
+      {
+        "page": 56,
+        "term": "PyOD"
+      },
+      {
+        "page": 64,
+        "term": "COPOD"
+      },
+      {
+        "page": 64,
+        "term": "ECOD"
+      },
+      {
+        "page": 65,
+        "term": "COPOD"
+      },
+      {
+        "page": 65,
+        "term": "ECOD"
+      },
+      {
+        "page": 65,
+        "term": "PyOD"
+      },
+      {
+        "page": 66,
+        "term": "PyOD"
+      },
+      {
+        "page": 72,
+        "term": "ECOD"
+      },
+      {
+        "page": 72,
+        "term": "ECOD"
+      },
+      {
+        "page": 72,
+        "term": "ECOD"
+      },
+      {
+        "page": 72,
+        "term": "ECOD"
+      },
+      {
+        "page": 72,
+        "term": "ECOD"
+      },
+      {
+        "page": 72,
+        "term": "ECOD"
+      },
+      {
+        "page": 72,
+        "term": "ECOD"
+      },
+      {
+        "page": 73,
+        "term": "COPOD"
+      },
+      {
+        "page": 73,
+        "term": "COPOD"
+      },
+      {
+        "page": 73,
+        "term": "COPOD"
+      },
+      {
+        "page": 73,
+        "term": "COPOD"
+      },
+      {
+        "page": 73,
+        "term": "ECOD"
+      },
+      {
+        "page": 73,
+        "term": "ECOD"
+      },
+      {
+        "page": 73,
+        "term": "ECOD"
+      },
+      {
+        "page": 73,
+        "term": "ECOD"
+      },
+      {
+        "page": 73,
+        "term": "ECOD"
+      },
+      {
+        "page": 73,
+        "term": "PyOD"
+      },
+      {
+        "page": 73,
+        "term": "PyOD"
+      },
+      {
+        "page": 74,
+        "term": "Zhao et al"
+      },
+      {
+        "page": 74,
+        "term": "Zhao et al"
+      },
+      {
+        "page": 74,
+        "term": "Zhao et al"
+      },
+      {
+        "page": 74,
+        "term": "COPOD"
+      },
+      {
+        "page": 74,
+        "term": "ECOD"
+      },
+      {
+        "page": 74,
+        "term": "SUOD"
+      },
+      {
+        "page": 74,
+        "term": "SUOD"
+      },
+      {
+        "page": 74,
+        "term": "SUOD"
+      },
+      {
+        "page": 74,
+        "term": "SUOD"
+      },
+      {
+        "page": 74,
+        "term": "SUOD"
+      },
+      {
+        "page": 74,
+        "term": "SUOD"
+      },
+      {
+        "page": 74,
+        "term": "SUOD"
+      },
+      {
+        "page": 78,
+        "term": "COPOD"
+      },
+      {
+        "page": 78,
+        "term": "COPOD"
+      },
+      {
+        "page": 78,
+        "term": "COPOD"
+      },
+      {
+        "page": 78,
+        "term": "ECOD"
+      },
+      {
+        "page": 78,
+        "term": "ECOD"
+      },
+      {
+        "page": 78,
+        "term": "PyOD"
+      },
+      {
+        "page": 78,
+        "term": "PyOD"
+      },
+      {
+        "page": 78,
+        "term": "PyOD"
+      },
+      {
+        "page": 78,
+        "term": "PyOD"
+      },
+      {
+        "page": 78,
+        "term": "PyOD"
+      },
+      {
+        "page": 78,
+        "term": "PyOD"
+      },
+      {
+        "page": 78,
+        "term": "PyOD"
+      },
+      {
+        "page": 78,
+        "term": "PyOD"
+      },
+      {
+        "page": 78,
+        "term": "PyOD"
+      },
+      {
+        "page": 78,
+        "term": "SUOD"
+      },
+      {
+        "page": 78,
+        "term": "SUOD"
+      },
+      {
+        "page": 78,
+        "term": "SUOD"
+      },
+      {
+        "page": 79,
+        "term": "COPOD"
+      },
+      {
+        "page": 79,
+        "term": "COPOD"
+      },
+      {
+        "page": 79,
+        "term": "COPOD"
+      },
+      {
+        "page": 79,
+        "term": "COPOD"
+      },
+      {
+        "page": 79,
+        "term": "ECOD"
+      },
+      {
+        "page": 79,
+        "term": "PyOD"
+      },
+      {
+        "page": 79,
+        "term": "PyOD"
+      },
+      {
+        "page": 79,
+        "term": "SUOD"
+      },
+      {
+        "page": 79,
+        "term": "SUOD"
+      },
+      {
+        "page": 79,
+        "term": "SUOD"
+      },
+      {
+        "page": 81,
+        "term": "combo"
+      },
+      {
+        "page": 96,
+        "term": "COPOD"
+      },
+      {
+        "page": 96,
+        "term": "COPOD"
+      },
+      {
+        "page": 96,
+        "term": "COPOD"
+      },
+      {
+        "page": 96,
+        "term": "COPOD"
+      },
+      {
+        "page": 96,
+        "term": "COPOD"
+      },
+      {
+        "page": 96,
+        "term": "COPOD"
+      },
+      {
+        "page": 96,
+        "term": "COPOD"
+      },
+      {
+        "page": 96,
+        "term": "COPOD"
+      },
+      {
+        "page": 96,
+        "term": "COPOD"
+      },
+      {
+        "page": 96,
+        "term": "COPOD"
+      },
+      {
+        "page": 96,
+        "term": "COPOD"
+      },
+      {
+        "page": 96,
+        "term": "COPOD"
+      },
+      {
+        "page": 96,
+        "term": "COPOD"
+      },
+      {
+        "page": 96,
+        "term": "COPOD"
+      },
+      {
+        "page": 97,
+        "term": "COPOD"
+      },
+      {
+        "page": 97,
+        "term": "COPOD"
+      },
+      {
+        "page": 97,
+        "term": "COPOD"
+      },
+      {
+        "page": 97,
+        "term": "COPOD"
+      },
+      {
+        "page": 97,
+        "term": "COPOD"
+      },
+      {
+        "page": 97,
+        "term": "COPOD"
+      },
+      {
+        "page": 97,
+        "term": "COPOD"
+      },
+      {
+        "page": 97,
+        "term": "COPOD"
+      },
+      {
+        "page": 98,
+        "term": "COPOD"
+      },
+      {
+        "page": 100,
+        "term": "COPOD"
+      },
+      {
+        "page": 103,
+        "term": "COPOD"
+      },
+      {
+        "page": 103,
+        "term": "COPOD"
+      },
+      {
+        "page": 103,
+        "term": "PyOD"
+      },
+      {
+        "page": 103,
+        "term": "PyOD"
+      },
+      {
+        "page": 103,
+        "term": "PyOD"
+      },
+      {
+        "page": 103,
+        "term": "PyOD"
+      },
+      {
+        "page": 103,
+        "term": "SUOD"
+      },
+      {
+        "page": 103,
+        "term": "SUOD"
+      },
+      {
+        "page": 109,
+        "term": "COPOD: Copula-Based Outlier Detection"
+      },
+      {
+        "page": 109,
+        "term": "ADBench: Anomaly Detection Benchmark"
+      },
+      {
+        "page": 109,
+        "term": "2201.00382"
+      },
+      {
+        "page": 109,
+        "term": "ADBench"
+      },
+      {
+        "page": 109,
+        "term": "COPOD"
+      },
+      {
+        "page": 109,
+        "term": "ECOD"
+      },
+      {
+        "page": 113,
+        "term": "SUOD: Accelerating Large-scale Unsupervised Heterogeneous Outlier Detection"
+      },
+      {
+        "page": 113,
+        "term": "yzhao062"
+      },
+      {
+        "page": 113,
+        "term": "yzhao062"
+      },
+      {
+        "page": 113,
+        "term": "PyOD"
+      },
+      {
+        "page": 113,
+        "term": "PyOD"
+      },
+      {
+        "page": 113,
+        "term": "PyOD"
+      },
+      {
+        "page": 113,
+        "term": "PyOD"
+      },
+      {
+        "page": 113,
+        "term": "PyOD"
+      },
+      {
+        "page": 113,
+        "term": "PyOD"
+      },
+      {
+        "page": 113,
+        "term": "PyOD"
+      },
+      {
+        "page": 113,
+        "term": "PyOD"
+      },
+      {
+        "page": 113,
+        "term": "PyOD"
+      },
+      {
+        "page": 113,
+        "term": "SUOD"
+      },
+      {
+        "page": 113,
+        "term": "SUOD"
+      },
+      {
+        "page": 125,
+        "term": "COPOD: Copula-Based Outlier Detection"
+      },
+      {
+        "page": 125,
+        "term": "COPOD"
+      },
+      {
+        "page": 125,
+        "term": "COPOD"
+      },
+      {
+        "page": 125,
+        "term": "ECOD"
+      },
+      {
+        "page": 125,
+        "term": "PyOD"
+      },
+      {
+        "page": 125,
+        "term": "PyOD"
+      },
+      {
+        "page": 126,
+        "term": "LSCP"
+      },
+      {
+        "page": 126,
+        "term": "LSCP"
+      },
+      {
+        "page": 126,
+        "term": "PyOD"
+      },
+      {
+        "page": 126,
+        "term": "SUOD"
+      },
+      {
+        "page": 126,
+        "term": "SUOD"
+      },
+      {
+        "page": 127,
+        "term": "PyOD"
+      }
+    ],
+    "pages": 136,
+    "status": "scanned"
+  },
+  {
+    "url": "https://www.vldb.org/pvldb/vol18/p4364-liu.pdf",
+    "local_path": "/tmp/news-search-20261002-codex/agent-io/evidence/tsb-autoad.pdf",
+    "candidate_id": "NS20261002-0344",
+    "coordinator_final": true,
+    "sha256": "3d392d20e616f5fe67f6725a751481efee1a167cdfb7386d48f8d5ecb1e182ba",
+    "hits": [
+      {
+        "page": 7,
+        "term": "Zhao et al"
+      },
+      {
+        "page": 7,
+        "term": "COPOD"
+      },
+      {
+        "page": 14,
+        "term": "Yue Zhao"
+      },
+      {
+        "page": 14,
+        "term": "Yue Zhao"
+      },
+      {
+        "page": 14,
+        "term": "Yue Zhao"
+      },
+      {
+        "page": 14,
+        "term": "COPOD"
+      },
+      {
+        "page": 15,
+        "term": "TODS"
+      },
+      {
+        "page": 16,
+        "term": "Yue Zhao"
+      }
+    ],
+    "pages": 16,
+    "status": "scanned"
+  },
+  {
+    "url": "https://tdr.lib.ntu.edu.tw/bitstream/123456789/94149/1/ntu-112-2.pdf",
+    "local_path": "/tmp/news-search-20261002-codex/agent-io/evidence/ntu-ensemble-decoded.pdf",
+    "candidate_id": "NS20261002-0438",
+    "coordinator_final": true,
+    "sha256": "ab2f2de8a7a515dd72a1cd9000d5bae285fdd1499bc20b12ca1bb67a982e9fe0",
+    "hits": [
+      {
+        "page": 8,
+        "term": "PyOD"
+      },
+      {
+        "page": 21,
+        "term": "PyOD"
+      },
+      {
+        "page": 21,
+        "term": "PyOD"
+      },
+      {
+        "page": 21,
+        "term": "PyOD"
+      },
+      {
+        "page": 21,
+        "term": "PyOD"
+      },
+      {
+        "page": 21,
+        "term": "PyOD"
+      },
+      {
+        "page": 22,
+        "term": "PyOD"
+      },
+      {
+        "page": 39,
+        "term": "PyOD"
+      },
+      {
+        "page": 41,
+        "term": "PyOD"
+      },
+      {
+        "page": 42,
+        "term": "Yue Zhao"
+      },
+      {
+        "page": 42,
+        "term": "PyOD"
+      },
+      {
+        "page": 42,
+        "term": "PyOD"
+      },
+      {
+        "page": 42,
+        "term": "PyOD"
+      },
+      {
+        "page": 62,
+        "term": "PyOD"
+      },
+      {
+        "page": 62,
+        "term": "PyOD"
+      },
+      {
+        "page": 62,
+        "term": "PyOD"
+      },
+      {
+        "page": 62,
+        "term": "PyOD"
+      },
+      {
+        "page": 62,
+        "term": "PyOD"
+      },
+      {
+        "page": 62,
+        "term": "PyOD"
+      },
+      {
+        "page": 62,
+        "term": "PyOD"
+      },
+      {
+        "page": 62,
+        "term": "PyOD"
+      },
+      {
+        "page": 62,
+        "term": "PyOD"
+      },
+      {
+        "page": 62,
+        "term": "PyOD"
+      },
+      {
+        "page": 62,
+        "term": "PyOD"
+      },
+      {
+        "page": 62,
+        "term": "PyOD"
+      },
+      {
+        "page": 62,
+        "term": "PyOD"
+      },
+      {
+        "page": 62,
+        "term": "PyOD"
+      },
+      {
+        "page": 62,
+        "term": "PyOD"
+      },
+      {
+        "page": 62,
+        "term": "PyOD"
+      },
+      {
+        "page": 62,
+        "term": "PyOD"
+      },
+      {
+        "page": 78,
+        "term": "PyOD"
+      }
+    ],
+    "pages": 91,
+    "status": "scanned"
+  }
+]
