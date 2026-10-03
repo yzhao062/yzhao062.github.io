@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="author" content="Yue Zhao">
   <meta name="robots" content="index, follow, max-image-preview:large">
-  <meta name="description" content="Yue Zhao, USC computer science assistant professor, builds Auditable AI Systems through anomaly detection, LLM evaluation and guardrails, AI agent auditing and security, and agent efficiency.">
+  <meta name="description" content="Yue Zhao at USC studies Auditable AI Systems through detection, verification, auditing, efficiency, and a developing direction in agent risk modeling.">
   <meta name="keywords" content="Yue Zhao, USC, AI Assurance, Auditable AI Systems, Agent Auditability, LLM Evaluation, LLM Hallucination, LLM Jailbreak Detection, LLM Guardrails, AI Agent Security, Tool-Call Security, MCP Security, Least Privilege, Over-Privilege, Audit Trails, Agent Systems, AI Agent Auditing, auditable, Agent Decision Auditing, AI Behavior Verification, Agentic AI, AI Risk Audit and Control, AI Risk, AI Risk Audit, AI Risk Control, AI Risk Management, AI Auditing, AI Defense, Adversarial Robustness, Anomaly Detection, Out-of-Distribution Detection, Trustworthiness Benchmarks, Runtime Guardrails, Foundation Models, AI Safety, AI Security, Outlier Detection, AI for Science and Society, Climate AI, Healthcare AI, Computational Social Systems, Agent Efficiency, LLM Routing, Inference Cost, open-source ecosystem, NSF POSE, open-source sustainability, research software">
 
   <title>Yue Zhao, USC | Auditable AI Systems: Anomaly Detection, LLMs, Agent Security</title>
@@ -13,13 +13,13 @@
   <link rel="icon" type="image/x-icon" href="images/logo2.ico">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Yue Zhao, USC | Auditable AI Systems: Anomaly Detection, LLMs, Agent Security">
-  <meta property="og:description" content="Yue Zhao, USC computer science assistant professor, builds Auditable AI Systems through anomaly detection, LLM evaluation and guardrails, AI agent auditing and security, and agent efficiency.">
+  <meta property="og:description" content="Yue Zhao at USC studies Auditable AI Systems through detection, verification, auditing, efficiency, and a developing direction in agent risk modeling.">
   <meta property="og:url" content="https://viterbi-web.usc.edu/~yzhao010/">
   <meta property="og:image" content="https://viterbi-web.usc.edu/~yzhao010/images/rsz_300.jpg">
   <meta property="og:image:alt" content="Yue Zhao, USC computer science faculty">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Yue Zhao, USC | Auditable AI Systems: Anomaly Detection, LLMs, Agent Security">
-  <meta name="twitter:description" content="Yue Zhao, USC computer science assistant professor, builds Auditable AI Systems through anomaly detection, LLM evaluation and guardrails, AI agent auditing and security, and agent efficiency.">
+  <meta name="twitter:description" content="Yue Zhao at USC studies Auditable AI Systems through detection, verification, auditing, efficiency, and a developing direction in agent risk modeling.">
   <meta name="twitter:image" content="https://viterbi-web.usc.edu/~yzhao010/images/rsz_300.jpg">
   <meta name="twitter:image:alt" content="Yue Zhao, USC computer science faculty">
   <script type="application/ld+json">
@@ -34,7 +34,7 @@
       "@id": "https://viterbi-web.usc.edu/~yzhao010/#person",
       "name": "Yue Zhao",
       "image": "https://viterbi-web.usc.edu/~yzhao010/images/rsz_300.jpg",
-      "description": "USC computer science assistant professor studying auditable AI systems, anomaly detection, LLM evaluation, and AI agent auditing.",
+      "description": "USC computer science assistant professor studying Auditable AI Systems across detection, verification, auditing, efficiency, and a developing direction in risk modeling.",
       "url": "https://viterbi-web.usc.edu/~yzhao010/",
       "affiliation": {
         "@type": "CollegeOrUniversity",
@@ -62,6 +62,9 @@
         "Over-Privilege",
         "Audit Trails",
         "AI Auditing",
+        "Agent Risk Modeling",
+        "Loss Estimation",
+        "Dynamic Risk Assessment",
         "AI Risk Management",
         "AI Risk Audit",
         "AI Risk Control",
@@ -101,7 +104,7 @@
     "url": "https://viterbi-web.usc.edu/~yzhao010/",
     "inLanguage": "en",
     "publisher": {"@id": "https://viterbi-web.usc.edu/~yzhao010/#person"},
-    "about": "Auditable AI Systems: detecting anomalies in data, verifying outputs, auditing actions, and optimizing effort when ground truth is unavailable."
+    "about": "Auditable AI Systems: detection in data, verification of output, auditing of action, optimization of effort, and modeling of risk. Risk modeling is a developing research direction connecting behavioral evidence to deployment conditions and potential losses."
   }
   </script>
   <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
@@ -340,7 +343,7 @@
                          width="150" height="147" decoding="async">
                     <div class="info-text" style="margin-top: 8px;">
                         <strong>Research Themes</strong><br>
-                        Auditable AI Systems: detection in data, verification of output, auditing of action, optimization of effort
+                        Auditable AI Systems: detection in data, verification of output, auditing of action, optimization of effort, and modeling of risk
                     </div>
                     <div class="link-list">
                         <a href="https://scholar.google.com/citations?user=zoGDYsoAAAAJ&hl=en">Google Scholar</a> |
@@ -366,23 +369,24 @@
                         <h2 id="research" style="color:#990000; border-bottom:2px solid #990000; padding-bottom:6px; margin:30px 0 16px 0;">&#128300; Research</h2>
                         <div style="background:#fff7f7; border-left:4px solid #990000; padding:12px 16px; margin:8px 0 12px 0;">
                           <p style="margin:0 0 9px 0;">
-                            <strong>Auditable AI Systems.</strong> LLMs and AI agents now generate answers, call tools,
-                            and take actions on their own. In many real settings, there is no definitive ground truth
-                            for whether they behaved correctly. Our lab develops methods, benchmarks, and open-source
-                            infrastructure that preserve enough evidence to audit their behavior through four questions:
+                            <strong>Auditable AI Systems.</strong> Our lab develops methods, benchmarks, and open-source
+                            tools for checking AI behavior and informing deployment decisions. We study what evidence
+                            can establish when labels, reference answers, or complete records are unavailable.
+                            Five questions organize this work:
                           </p>
                           <div style="margin:0 0 10px 0; padding-left:12px; border-left:2px solid #e8d0d0;">
                             <div style="color:#444; font-size:0.95rem; line-height:1.75;"><strong style="color:#990000;">Data</strong> &middot; did the system receive an anomalous or unfamiliar input?</div>
                             <div style="color:#444; font-size:0.95rem; line-height:1.75;"><strong style="color:#990000;">Output</strong> &middot; does an LLM's answer hold up against evidence when no reference answer exists?</div>
                             <div style="color:#444; font-size:0.95rem; line-height:1.75;"><strong style="color:#990000;">Action</strong> &middot; did an AI agent stay within its instructions and permissions?</div>
                             <div style="color:#444; font-size:0.95rem; line-height:1.75;"><strong style="color:#990000;">Effort</strong> &middot; did it use the right models, tools, and compute to complete the task efficiently?</div>
+                            <div style="color:#444; font-size:0.95rem; line-height:1.75;"><strong style="color:#990000;">Risk</strong> &middot; what losses could arise in a given deployment, how likely and severe could they be, and how might that risk change over time?</div>
                           </div>
                           <p style="margin:0;">
-                            Together, these questions connect anomaly detection, LLM evaluation, agent security,
-                            and agent efficiency. They make AI behavior easier to inspect, verify, account for,
-                            and optimize before deployment and after a run. Beyond a system's behavior, we study
-                            its real-world impact: how LLMs and agents can affect people and the decisions made
-                            with them.
+                            Detection, verification, auditing, and efficiency research provide evidence about how
+                            AI systems behave. Our developing risk-modeling direction asks how that evidence can
+                            inform judgments about future losses under specific deployment conditions.
+                            Across these directions, we also study how LLMs and agents affect people and the
+                            decisions made with them.
                           </p>
                         </div>
 
@@ -394,38 +398,46 @@
                         ">
                           <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
                             <h3 style="color:#990000; font-size:1rem; font-weight:700; line-height:inherit; margin:0;"><a href="ecosystem.html" style="color:inherit;">The Auditable AI Ecosystem</a></h3>
-                            <span style="color:#7a2a2a; font-size:0.85rem;">from data anomalies to efficient agent decisions</span>
+                            <span style="color:#7a2a2a; font-size:0.85rem;">from observed behavior to deployment decisions</span>
                           </div>
                           <div class="eco-layer">
                             <div class="eco-layer-label">Questions</div>
                             <div class="eco-layer-body">
-                              <div class="row g-3">
-                              <div class="col-12 col-sm-6 col-lg-3">
+                              <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-5 g-3">
+                              <div class="col">
                                 <div class="eco-kind"><i class="fas fa-magnifying-glass-chart" aria-hidden="true"></i>Detection in Data</div>
                                 <div class="eco-items">
                                   <a href="pyod.html">PyOD</a>: the anomaly-detection library, 59M+ downloads. Named by OpenAI; used by Amazon, the European Space Agency, and the U.S. DoD CDAO.<br>
                                   <a href="https://arxiv.org/abs/2605.03410" target="_blank" rel="noopener">UFCOD</a>: few-shot cross-domain OOD.
                                 </div>
                               </div>
-                              <div class="col-12 col-sm-6 col-lg-3">
+                              <div class="col">
                                 <div class="eco-kind"><i class="fas fa-circle-check" aria-hidden="true"></i>Verification of Output</div>
                                 <div class="eco-items">
                                   <a href="https://openreview.net/forum?id=bWUU0LwwMp" target="_blank" rel="noopener">TrustLLM</a>: the multi-institution trustworthiness benchmark.<br>
                                   <a href="https://arxiv.org/abs/2504.06438" target="_blank" rel="noopener">Premise Verification</a>: checks a query's premises against retrieved evidence before the model answers.
                                 </div>
                               </div>
-                              <div class="col-12 col-sm-6 col-lg-3">
+                              <div class="col">
                                 <div class="eco-kind"><i class="fas fa-shield-halved" aria-hidden="true"></i>Auditing of Action</div>
                                 <div class="eco-items">
                                   <a href="https://arxiv.org/abs/2606.28739" target="_blank" rel="noopener">Agent Safety Is Action Alignment</a>: harm in the gap between authority exercised and granted.<br>
                                   <a href="https://arxiv.org/abs/2603.17445" target="_blank" rel="noopener">IET</a>: segment-level attribution from the final text alone.
                                 </div>
                               </div>
-                              <div class="col-12 col-sm-6 col-lg-3">
+                              <div class="col">
                                 <div class="eco-kind"><i class="fas fa-gauge-high" aria-hidden="true"></i>Optimization of Effort</div>
                                 <div class="eco-items">
                                   <a href="https://arxiv.org/abs/2603.19423" target="_blank" rel="noopener">The Autonomy Tax</a>: what defense training costs an agent's ability to finish its task.<br>
                                   <a href="https://arxiv.org/abs/2510.07429" target="_blank" rel="noopener">Bandit routing</a>: model choice as an online cost-quality trade-off.
+                                </div>
+                              </div>
+                              <div class="col">
+                                <div class="eco-kind"><i class="fas fa-chart-line" aria-hidden="true"></i>Modeling of Risk</div>
+                                <div class="eco-items">
+                                  <a href="#modeling-of-risk">Developing direction</a>. Evidence base:<br>
+                                  <a href="fortis-benchmark.html">FORTIS</a>: measures over-privilege in skill and tool use.<br>
+                                  <a href="https://arxiv.org/abs/2608.22808" target="_blank" rel="noopener">CatchBench</a>: measures when agent failures can be caught.
                                 </div>
                               </div>
                               </div>
@@ -529,8 +541,7 @@
                                 cross-domain OOD detection. PyOD is the
                                 flagship open-source artifact and is now in its third major release. When an incident
                                 involves distribution shift, these methods supply the evidence for whether unfamiliar
-                                input conditions contributed to it. Evidence at the action point establishes an
-                                action-only incident instead. Current research emphasis sits at verification of output and auditing of action.
+                                input conditions contributed to it.
                               </p>
                               <p style="font-family:'Poppins','Segoe UI',sans-serif; font-size:0.93rem; color:#7a2a2a;">
                                 <strong>Keywords:</strong> Anomaly Detection, Outlier Detection, Out-of-Distribution Detection, PyOD Ecosystem, Benchmark Design, Multimodal OOD, Graph OOD, Few-Shot OOD, OOD Detector Selection
@@ -604,6 +615,23 @@
                               </p>
                             </details>
                           </li>
+                          <li>
+                            <details id="modeling-of-risk" class="smart-details">
+                              <summary><h3 style="display:inline; font-size:1rem; font-weight:700; margin:0;">Modeling of Risk: Agent Risk, Loss, and Decision-Making</h3></summary>
+                              <p style="margin-top:8px;">
+                                We are developing risk models for agentic AI that connect behavioral evidence to
+                                the likelihood and severity of losses in a specified deployment. These models must
+                                account for permissions, controls, exposure, and the time horizon. We study how risk
+                                changes as agents, tools, memory, and workflows evolve, and how estimates could inform
+                                deployment decisions, risk controls, and insurance underwriting. Drawing on the other
+                                four directions, we ask what observed behavior can establish about future losses and
+                                where uncertainty remains.
+                              </p>
+                              <p style="font-family:'Poppins','Segoe UI',sans-serif; font-size:0.93rem; color:#7a2a2a;">
+                                <strong>Keywords:</strong> Agent Risk Modeling, Loss Estimation, Dynamic Risk Assessment, Deployment Decisions, Insurance Underwriting
+                              </p>
+                            </details>
+                          </li>
                         </ol>
 
                         <h2 id="about" style="color:#990000; border-bottom:2px solid #990000; padding-bottom:6px; margin:30px 0 16px 0;">&#128100; About</h2>
@@ -611,7 +639,7 @@
                         <!-- PRERENDER:bio START -->
                                                 <details class="smart-details" style="margin:16px 0 14px 0;">
                                                   <summary><h3 style="display:inline; color:#990000; font-size:1rem; font-weight:700; line-height:inherit; margin:0;">Biography</h3></summary>
-                                                  <p>Dr. Yue Zhao is an Assistant Professor of Computer Science at the University of Southern California, where he leads the FORTIS Lab. He serves as Associate Co-Director of the USC Institute on Ethics and Trust in Computing for 2026-2027. He received his Ph.D. from Carnegie Mellon University's Heinz College of Information Systems and Public Policy in 2023. His lab builds Auditable AI Systems across data, outputs, actions, and effort, making AI behavior easier to inspect, verify, account for, and optimize. The program spans anomaly detection, LLM evaluation, and the security and efficiency of AI agents. Its current focus is open-source infrastructure for auditing autonomous agents before deployment and after a run. His lab also studies how LLMs and agents can affect people and the decisions made with them.</p>
+                                                  <p>Dr. Yue Zhao is an Assistant Professor of Computer Science at the University of Southern California, where he leads the FORTIS Lab. He serves as Associate Co-Director of the USC Institute on Ethics and Trust in Computing for 2026-2027. He received his Ph.D. from Carnegie Mellon University's Heinz College of Information Systems and Public Policy in 2023. His lab builds Auditable AI Systems across five directions: detection in data, verification of output, auditing of action, optimization of effort, and modeling of risk. The program spans anomaly detection, LLM evaluation, agent security and efficiency, and a developing direction connecting behavioral evidence to deployment risks and potential losses. Its current focus is open-source infrastructure for auditing autonomous agents before deployment and after a run. His lab also studies how LLMs and agents can affect people and the decisions made with them.</p>
                                                   <p>Dr. Zhao has authored over 80 peer-reviewed papers. His open-source projects, including PyOD, ADBench, TrustLLM, agent-audit, and Aegis, together exceed 65 million downloads and 30,000 GitHub stars. PyOD is named by OpenAI, used by Apache Beam, Amazon, Walmart, Databricks, and the European Space Agency, and discussed in five books. The anomaly-detection tools are cited in 97 patents. TrustLLM is cited in a U.S. Senate committee report, a NIST special publication on adversarial machine learning, and the 2025 and 2026 editions of the International AI Safety Report.</p>
                                                   <p>His honors include the NVIDIA Academic Grant Program Award, multiple Amazon Research Awards, the Capital One Research Award, and the Foresight Institute AI for Safety &amp; Science Nodes Grant. A Meta sponsored research agreement also supports the lab. AAAI selected him for New Faculty Highlights, and his papers have won a Best Short Paper Award at ACM SIGSPATIAL and a Second Prize CCC Award at the IEEE ICDM BlueSky Track. He is an Action Editor for Transactions on Machine Learning Research and the Journal of Data-centric Machine Learning Research, and an Associate Editor for ACM Transactions on AI for Science and IEEE Transactions on Neural Networks and Learning Systems.</p>
                                                 </details>
@@ -660,6 +688,8 @@
 
                         <h2 id="news" style="color:#990000; border-bottom:2px solid #990000; padding-bottom:6px; margin:30px 0 16px 0;">&#9992; News and Travel</h2>
 
+                        <p><strong>[Oct 2026]</strong> Birthday cheers at FORTIS! We celebrated with Korean BBQ, cake, and good company. <a href="lab.html#birthday-dinner-photos">Photos from our lab dinner</a>.</p>
+
                         <p><strong>[Sep 2026]</strong> Our paper <a href="https://openreview.net/forum?id=0SbD6GdfQZ"><b>SynCo: Data Synthesis Co-Training for Self-Evolving LLMs via Multi-Agent Reinforcement Learning</b></a>, led by Ph.D. student <a href="https://weiyang930.github.io/">Wei Yang</a>, was accepted as a poster at the <i>NeurIPS 2026 Workshop on Towards Test-Time Continual Learning Agents (TTCL)</i>.</p>
 
                         <p><strong>[Sep 2026]</strong> Our workshop proposal, <b>Geometric and Spatial Reasoning in Vision-Language Models (GSR-VLM)</b>, has been accepted to the <i>AAAI 2027</i> workshop program in Montr&eacute;al, Canada. I will serve as a co-organizer. See <a href="services.html#conference-workshop-organizing-roles">professional service</a>.</p>
@@ -684,10 +714,10 @@
 
                         <p><strong>[Aug 2026]</strong> New preprint led by <a href="https://lili0415.github.io/">Shawn Li</a>: <b>JigShape: Evaluating Visual-Geometric Reasoning in VLMs through Jigsaw Puzzles</b>. Tab-and-blank interlocking pieces remove the ambiguous ground truth that rectangular cuts create in texture-repeated regions, giving 95K puzzle instances with a single correct answer. Only one of five frontier models beats a random baseline on 4x4 grids, and every model collapses on larger ones even after fine-tuning, a scaling cliff that leaves geometric reasoning open for vision-language models. <a href="https://arxiv.org/abs/2607.27670">[arXiv]</a></p>
 
-                        <p><strong>[Jul 2026]</strong> Yue has been appointed <b>Associate Co-Director</b> of the <a href="https://sites.usc.edu/ietc/">USC Institute on Ethics and Trust in Computing</a> for 2026-2027. He will work with Co-Directors John Hawthorne and Yan Liu on interdisciplinary research, education, and engagement around trustworthy and responsible computing.</p>
-
                         <details class="smart-details" style="margin: 6px 0 10px 0;">
                             <summary style="cursor: pointer;">Show more news</summary>
+                        <p><strong>[Jul 2026]</strong> Yue has been appointed <b>Associate Co-Director</b> of the <a href="https://sites.usc.edu/ietc/">USC Institute on Ethics and Trust in Computing</a> for 2026-2027. He will work with Co-Directors John Hawthorne and Yan Liu on interdisciplinary research, education, and engagement around trustworthy and responsible computing.</p>
+
                         <p><strong>[Jun 2026]</strong> Our group heads to <i>ACL 2026</i> and <i>ICML 2026</i>. At ACL, <a href="https://lili0415.github.io/">Shawn Li</a> presents his first-author <a href="https://arxiv.org/abs/2601.07185"><b>Defenses Against Prompt Attacks Learn Surface Heuristics</b></a> in the main conference. Yi Nian presents his first-author <a href="auditable-agents.html"><b>Auditable Agents</b></a> at the KnowFM workshop (<a href="https://arxiv.org/abs/2604.05485">arXiv</a>), with <a href="https://raymondy.github.io/">Tiankai Yang</a> and <a href="https://aihemaotai.github.io/">Chenxiao Yu</a> also attending ACL. At ICML, <a href="https://JetRichardLee.github.io/">Jiate Li</a> presents his first-author <a href="https://arxiv.org/abs/2602.00364"><b>&ldquo;Someone Hid It&rdquo;: Query-Agnostic Black-Box Attacks on LLM-Based Retrieval</b></a>. Come say hello!</p>
 
                         <p><strong>[Jun 2026]</strong> We released <a href="https://github.com/yzhao062/auditable"><b>auditable</b></a>, an open-source system of record for AI-agent decisions: it captures what each decision relied on, replays it against live state, and rolls back the committed action when it no longer holds, on one typed graph across an agent's plan, run, and review. <a href="https://github.com/yzhao062/auditable">[GitHub]</a></p>
