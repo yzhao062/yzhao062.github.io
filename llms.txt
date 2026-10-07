@@ -35,7 +35,8 @@ The lab applies these methods to specific application domains: retrieval-augment
 - [FORTIS Lab](https://viterbi-web.usc.edu/~yzhao010/lab.html): current PhD students, lab members, and alumni
 - [Publications](https://viterbi-web.usc.edu/~yzhao010/publications.html): full publication list with abstracts and links
 - [Open Source](https://viterbi-web.usc.edu/~yzhao010/opensource.html): open-source projects with GitHub stars, docs, and paper links
-- [Auditable AI Ecosystem](https://viterbi-web.usc.edu/~yzhao010/ecosystem.html): eleven open artifacts organized across pre-deployment, runtime, post-run, and lifecycle-wide auditing
+- [Auditable AI Ecosystem](https://viterbi-web.usc.edu/~yzhao010/ecosystem.html): twelve open artifacts organized across pre-deployment, runtime, post-run, and lifecycle-wide auditing
+- [Auditable Claims about AI Agents](https://arxiv.org/abs/2610.07459): a method for checking agent claims against obtainable records, extending Auditable Agents' Policy Checkability
 - [auditable](https://viterbi-web.usc.edu/~yzhao010/auditable.html): open-source system of record for AI-agent decisions; the lab's flagship agent-auditing tool
 - [anywhere-agents](https://viterbi-web.usc.edu/~yzhao010/anywhere-agents.html): one config to rule all your AI agents; portable, effective, safer; maintained configuration for Claude Code and Codex
 - [agent-audit](https://viterbi-web.usc.edu/~yzhao010/agent-audit.html): security auditing tool for AI agent code

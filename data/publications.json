@@ -1233,6 +1233,23 @@
     "sort_date": "2026-10-24"
   },
   {
+    "id": "preprint-auditable-claims",
+    "section": "preprint",
+    "title": "Auditable Claims about AI Agents",
+    "paper_url": "https://arxiv.org/abs/2610.07459",
+    "authors": "Yue Zhao, Jiate Li, Li Li, Yi Nian, Jinbo Liu, Xiaolin Zhou, and Xiyang Hu.",
+    "venue": "arXiv preprint",
+    "year": 2026,
+    "sort_date": "2026-10-05",
+    "links": [
+      {
+        "type": "github",
+        "url": "https://github.com/yzhao062/auditable-claims"
+      }
+    ],
+    "abstract": "This paper extends the Policy Checkability dimension of Auditable Agents from single actions to claims. An auditable claim fixes its policy, scope, decision rule, and the obtainable records and their writers before a verdict. Under an explicit model, the paper proves three conditions necessary for support where their hypotheses hold: independent coverage, authorization bound to action arguments, and completeness beyond integrity. A claim-check table covers six common claims, and an illustrative worked case follows one claim through five evidence states."
+  },
+  {
     "id": "preprint-metapersona",
     "section": "preprint",
     "title": "MetaPersona: Task-Grounded Synthetic Populations from Empirical Social Science",

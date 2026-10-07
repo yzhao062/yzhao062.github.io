@@ -4,26 +4,26 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="author" content="Yue Zhao">
-  <meta name="description" content="The Auditable AI Ecosystem: eleven open artifacts for auditing AI agents across the full lifecycle, from static scanning and over-privilege benchmarking before deployment, through tool-call gating at runtime, to decision capture, replay, and attribution after a run.">
+  <meta name="description" content="The Auditable AI Ecosystem: twelve open artifacts for auditing AI agents across the full lifecycle, from static scanning and over-privilege benchmarking before deployment, through tool-call gating at runtime, to decision capture, replay, and attribution after a run.">
   <meta name="keywords" content="The Auditable AI Ecosystem, Auditable AI Systems, Agent Auditability, auditable, GRADE, awesome-auditable-ai, AI Agent Auditing, PRE LIVE POST, Yue Zhao, USC, FORTIS Lab, Agent Lifecycle, AI Risk Audit and Control, open-source ecosystem, open-source sustainability, research software">
   <title>The Auditable AI Ecosystem | Yue Zhao</title>
   <link rel="canonical" href="https://viterbi-web.usc.edu/~yzhao010/ecosystem.html">
   <link rel="icon" type="image/x-icon" href="images/logo2.ico">
   <meta property="og:type" content="website">
   <meta property="og:title" content="The Auditable AI Ecosystem | Yue Zhao">
-  <meta property="og:description" content="Eleven open artifacts for auditing AI agents across the full lifecycle: pre-deployment scanning and benchmarking, runtime tool-call gating, and post-run capture, replay, and attribution.">
+  <meta property="og:description" content="Twelve open artifacts for auditing AI agents across the full lifecycle: pre-deployment scanning and benchmarking, runtime tool-call gating, and post-run capture, replay, and attribution.">
   <meta property="og:url" content="https://viterbi-web.usc.edu/~yzhao010/ecosystem.html">
   <meta property="og:image" content="https://viterbi-web.usc.edu/~yzhao010/images/logo.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="The Auditable AI Ecosystem | Yue Zhao">
-  <meta name="twitter:description" content="Eleven open artifacts for auditing AI agents across the full lifecycle: pre-deployment scanning and benchmarking, runtime tool-call gating, and post-run capture, replay, and attribution.">
+  <meta name="twitter:description" content="Twelve open artifacts for auditing AI agents across the full lifecycle: pre-deployment scanning and benchmarking, runtime tool-call gating, and post-run capture, replay, and attribution.">
   <meta name="twitter:image" content="https://viterbi-web.usc.edu/~yzhao010/images/logo.png">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
     "name": "The Auditable AI Ecosystem",
-    "description": "Eleven open artifacts for auditing AI agents across the full lifecycle: pre-deployment scanning and benchmarking, runtime tool-call gating, and post-run capture, replay, and attribution.",
+    "description": "Twelve open artifacts for auditing AI agents across the full lifecycle: pre-deployment scanning and benchmarking, runtime tool-call gating, and post-run capture, replay, and attribution.",
     "url": "https://viterbi-web.usc.edu/~yzhao010/ecosystem.html",
     "author": {
       "@type": "Person",
@@ -99,6 +99,22 @@
       },
       {
         "@type": "ScholarlyArticle",
+        "name": "Auditable Claims about AI Agents",
+        "description": "Extends the Policy Checkability dimension of Auditable Agents from single actions to claims, fixing the policy, scope, records, writers, and decision rule before a verdict.",
+        "url": "https://arxiv.org/abs/2610.07459",
+        "datePublished": "2026-10-05",
+        "author": [
+          {"@type": "Person", "name": "Yue Zhao"},
+          {"@type": "Person", "name": "Jiate Li"},
+          {"@type": "Person", "name": "Li Li"},
+          {"@type": "Person", "name": "Yi Nian"},
+          {"@type": "Person", "name": "Jinbo Liu"},
+          {"@type": "Person", "name": "Xiaolin Zhou"},
+          {"@type": "Person", "name": "Xiyang Hu"}
+        ]
+      },
+      {
+        "@type": "ScholarlyArticle",
         "name": "No Attacker Needed: Unintentional Cross-User Contamination in Shared-State LLM Agents",
         "url": "https://arxiv.org/abs/2604.01350"
       },
@@ -146,7 +162,7 @@
           Open-source infrastructure for auditing AI agents, from before deployment to after a run.
         </p>
         <p>
-          Eleven open artifacts, each answering one question an auditor asks at one point in an agent's life.
+          Twelve open artifacts, each answering a question an auditor asks about an agent or the evidence it leaves.
           The record they produce has two uses: it shows what a system did wrong, and it shows what it never
           needed to do. Every one is public and citable, and the tools install from PyPI.
           <!-- [Auditable AI paused 2026-09] The stack supports
@@ -171,6 +187,8 @@
             start with <a href="fortis-benchmark.html">FORTIS</a> for benchmark tasks, scoring, code and citation.</li>
           <li><strong>Decide what evidence an agent system should retain:</strong>
             start with <a href="auditable-agents.html">Auditable Agents</a> and its Auditability Card.</li>
+          <li><strong>Check a claim about an agent:</strong>
+            start with <a href="https://arxiv.org/abs/2610.07459" target="_blank" rel="noopener">Auditable Claims about AI Agents</a> for the records and decision rule a claim needs before a verdict.</li>
         </ul>
         <div style="background:#fff7f7; border-left:4px solid #990000; padding:14px 18px; margin:0 0 8px 0;">
           <div style="font-family:'SFMono-Regular',Consolas,'Liberation Mono',monospace; font-size:1.1rem; font-weight:700; color:#990000; margin-bottom:8px;">pip install auditable</div>
@@ -324,12 +342,12 @@
         <!-- ── SPANS ALL THREE ── -->
         <h2 style="color:#990000; border-bottom:2px solid #990000; padding-bottom:6px; margin:30px 0 16px 0;">Across the Whole Lifecycle</h2>
         <p style="color:#555; font-size:0.95rem; margin-bottom:14px;">
-          Three artifacts do not sit at one moment. One says what auditability requires, one measures whether
-          the requirement was met, and one maps the surrounding literature.
+          Four artifacts span the lifecycle. They define auditability, specify the evidence for a claim,
+          measure whether a failure was catchable, and map the surrounding literature.
         </p>
 
         <div class="row g-3" style="margin-bottom:20px;">
-          <div class="col-12 col-md-4">
+          <div class="col-12 col-md-6">
             <div style="border:1px solid #e8d0d0; border-radius:8px; padding:14px 16px; height:100%; background:#fff7f7;">
               <div style="color:#7a2a2a; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:6px;">Framework</div>
               <div style="font-size:1.05rem; font-weight:700; margin-bottom:6px;">
@@ -348,7 +366,27 @@
             </div>
           </div>
 
-          <div class="col-12 col-md-4">
+          <div class="col-12 col-md-6">
+            <div style="border:1px solid #e8d0d0; border-radius:8px; padding:14px 16px; height:100%; background:#fff7f7;">
+              <div style="color:#7a2a2a; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:6px;">Method</div>
+              <div style="font-size:1.05rem; font-weight:700; margin-bottom:6px;">
+                <a href="https://arxiv.org/abs/2610.07459" target="_blank" rel="noopener">Auditable Claims about AI Agents</a>
+              </div>
+              <div style="color:#555; font-size:0.88rem; line-height:1.5;">
+                <em>What records would settle this claim?</em>
+                Extends Auditable Agents' Policy Checkability from single actions to claims.
+                Fix the policy, scope, records, writers, and decision rule before a verdict.
+                Six claim checks and an illustrative case connect the evidence to supported, contradicted, or undecidable verdicts.
+              </div>
+              <div style="margin-top:10px; font-size:0.82rem;">
+                <a href="https://arxiv.org/abs/2610.07459" target="_blank" rel="noopener"><i class="fas fa-scroll" aria-hidden="true"></i> arXiv</a>
+                &nbsp;|&nbsp;
+                <a href="https://github.com/yzhao062/auditable-claims" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i> Worksheet &amp; Materials</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6">
             <div style="border:1px solid #e8d0d0; border-radius:8px; padding:14px 16px; height:100%; background:#fff7f7;">
               <div style="color:#7a2a2a; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:6px;">Benchmark</div>
               <div style="font-size:1.05rem; font-weight:700; margin-bottom:6px;">
@@ -368,7 +406,7 @@
             </div>
           </div>
 
-          <div class="col-12 col-md-4">
+          <div class="col-12 col-md-6">
             <div style="border:1px solid #e8d0d0; border-radius:8px; padding:14px 16px; height:100%; background:#fff7f7;">
               <div style="color:#7a2a2a; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:6px;">Reference</div>
               <div style="font-size:1.05rem; font-weight:700; margin-bottom:6px;">
