@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-05T18:13:10Z",
+  "generated_at": "2026-10-07T16:18:43Z",
   "source": "meta-finder citation-tracker, Semantic Scholar Graph API",
   "paper_count": 129,
-  "total_citations": 8967,
+  "total_citations": 9003,
   "papers": [
     {
       "id": "workshop-synco-ttcl",
@@ -28,7 +28,7 @@
       "year": 2026,
       "venue": "EACL, 2026",
       "section": "conference",
-      "citation_count": 19,
+      "citation_count": 20,
       "influential_citations": 0
     },
     {
@@ -46,7 +46,7 @@
       "year": 2026,
       "venue": "ICLR, 2026",
       "section": "conference",
-      "citation_count": 11,
+      "citation_count": 12,
       "influential_citations": 1
     },
     {
@@ -64,8 +64,8 @@
       "year": 2026,
       "venue": "ICLR, 2026",
       "section": "conference",
-      "citation_count": 43,
-      "influential_citations": 1
+      "citation_count": 45,
+      "influential_citations": 2
     },
     {
       "id": "conference-defenses-against-prompt-attacks-learn-surface-heuristics",
@@ -163,7 +163,7 @@
       "year": 2025,
       "venue": "CVPR, 2025",
       "section": "conference",
-      "citation_count": 39,
+      "citation_count": 40,
       "influential_citations": 4
     },
     {
@@ -172,7 +172,7 @@
       "year": 2025,
       "venue": "AAAI Workshop on Foundation Models for Biological Discoveries (FMs4Bio), 2025",
       "section": "workshop",
-      "citation_count": 50,
+      "citation_count": 51,
       "influential_citations": 3
     },
     {
@@ -181,7 +181,7 @@
       "year": 2025,
       "venue": "NeurIPS, 2025",
       "section": "conference",
-      "citation_count": 24,
+      "citation_count": 25,
       "influential_citations": 3
     },
     {
@@ -190,7 +190,7 @@
       "year": 2025,
       "venue": "CVPR, 2025",
       "section": "conference",
-      "citation_count": 22,
+      "citation_count": 23,
       "influential_citations": 4
     },
     {
@@ -208,7 +208,7 @@
       "year": 2025,
       "venue": "ACL, 2025",
       "section": "conference",
-      "citation_count": 31,
+      "citation_count": 32,
       "influential_citations": 0
     },
     {
@@ -307,7 +307,7 @@
       "year": 2025,
       "venue": "EMNLP Findings, 2025",
       "section": "conference",
-      "citation_count": 39,
+      "citation_count": 40,
       "influential_citations": 0
     },
     {
@@ -424,8 +424,8 @@
       "year": 2022,
       "venue": "NeurIPS, 2022",
       "section": "conference",
-      "citation_count": 514,
-      "influential_citations": 79
+      "citation_count": 515,
+      "influential_citations": 80
     },
     {
       "id": "conference-bond-benchmarking-unsupervised-outlier-node-detection-on-static-attributed-graphs",
@@ -433,7 +433,7 @@
       "year": 2022,
       "venue": "NeurIPS, 2022",
       "section": "conference",
-      "citation_count": 164,
+      "citation_count": 165,
       "influential_citations": 18
     },
     {
@@ -496,7 +496,7 @@
       "year": 2021,
       "venue": "NeurIPS, 2021",
       "section": "conference",
-      "citation_count": 527,
+      "citation_count": 530,
       "influential_citations": 66
     },
     {
@@ -523,7 +523,7 @@
       "year": 2020,
       "venue": "IEEE ICDM, 2020",
       "section": "conference",
-      "citation_count": 474,
+      "citation_count": 475,
       "influential_citations": 44
     },
     {
@@ -604,7 +604,7 @@
       "year": 2018,
       "venue": "IntelliSys, 2018",
       "section": "conference",
-      "citation_count": 149,
+      "citation_count": 150,
       "influential_citations": 5
     },
     {
@@ -640,7 +640,7 @@
       "year": 2026,
       "venue": "Transactions on Machine Learning Research (TMLR), 2026",
       "section": "journal",
-      "citation_count": 17,
+      "citation_count": 18,
       "influential_citations": 0
     },
     {
@@ -667,8 +667,8 @@
       "year": 2023,
       "venue": "ACM Computing Surveys, 2023",
       "section": "journal",
-      "citation_count": 2474,
-      "influential_citations": 78
+      "citation_count": 2478,
+      "influential_citations": 77
     },
     {
       "id": "journal-the-need-for-unsupervised-outlier-model-selection-a-review-and-evaluation-of-internal-evaluation-strategies",
@@ -694,7 +694,7 @@
       "year": 2022,
       "venue": "TKDE, 2022",
       "section": "journal",
-      "citation_count": 557,
+      "citation_count": 559,
       "influential_citations": 48
     },
     {
@@ -703,7 +703,7 @@
       "year": 2019,
       "venue": "JMLR, 2019.",
       "section": "journal",
-      "citation_count": 947,
+      "citation_count": 949,
       "influential_citations": 67
     },
     {
@@ -775,8 +775,8 @@
       "year": 2026,
       "venue": "arXiv preprint",
       "section": "preprint",
-      "citation_count": 3,
-      "influential_citations": 0
+      "citation_count": 4,
+      "influential_citations": 1
     },
     {
       "id": "preprint-jigshape",
@@ -793,7 +793,7 @@
       "year": 2026,
       "venue": "arXiv preprint",
       "section": "preprint",
-      "citation_count": 12,
+      "citation_count": 14,
       "influential_citations": 0
     },
     {
@@ -847,7 +847,7 @@
       "year": 2026,
       "venue": "NeurIPS, 2026",
       "section": "conference",
-      "citation_count": 0,
+      "citation_count": 1,
       "influential_citations": 0
     },
     {
@@ -883,7 +883,7 @@
       "year": 2026,
       "venue": "NeurIPS Evaluations and Datasets Track, 2026",
       "section": "conference",
-      "citation_count": 7,
+      "citation_count": 8,
       "influential_citations": 0
     },
     {
@@ -892,7 +892,7 @@
       "year": 2026,
       "venue": "arXiv preprint",
       "section": "preprint",
-      "citation_count": 12,
+      "citation_count": 13,
       "influential_citations": 0
     },
     {
@@ -928,8 +928,8 @@
       "year": 2026,
       "venue": "ACM AI Leadership Summit, 2026 (condensed 4-page version); earlier version at ACL 2026 KnowFM Workshop",
       "section": "conference",
-      "citation_count": 18,
-      "influential_citations": 0
+      "citation_count": 19,
+      "influential_citations": 1
     },
     {
       "id": "preprint-cross-user-contamination",
@@ -973,7 +973,7 @@
       "year": 2026,
       "venue": "KDD D&B Track, 2026",
       "section": "conference",
-      "citation_count": 3,
+      "citation_count": 4,
       "influential_citations": 0
     },
     {
@@ -1018,7 +1018,7 @@
       "year": 2026,
       "venue": "arXiv preprint",
       "section": "preprint",
-      "citation_count": 1,
+      "citation_count": 2,
       "influential_citations": 0
     },
     {
@@ -1108,7 +1108,7 @@
       "year": 2026,
       "venue": "ICML Workshop on Trustworthy AI for Good (AI4GOOD), 2026",
       "section": "workshop",
-      "citation_count": 20,
+      "citation_count": 21,
       "influential_citations": 3
     },
     {
