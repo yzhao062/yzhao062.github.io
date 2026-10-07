@@ -176,7 +176,7 @@
     "docs_url": "",
     "paper_url": "",
     "demo_url": "",
-    "stars": 9406,
+    "stars": 9410,
     "tags": [
       "Awesome List",
       "Anomaly Detection",
@@ -341,7 +341,7 @@
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/aegis.html",
     "paper_url": "https://arxiv.org/abs/2603.12621",
     "demo_url": "https://github.com/Justin0504/Aegis/blob/main/docs/images/readme_demo1.gif",
-    "stars": 486,
+    "stars": 503,
     "tags": [
       "AI Agent Security",
       "Policy Enforcement",
@@ -360,7 +360,7 @@
     "docs_url": "https://pycombo.readthedocs.io",
     "paper_url": "https://aaai.org/papers/13648-combining-machine-learning-models-using-combo-library/",
     "demo_url": "",
-    "stars": 659,
+    "stars": 660,
     "tags": [
       "Ensemble Learning",
       "Model Combination",
@@ -378,7 +378,7 @@
     "docs_url": "https://anywhere-agents.readthedocs.io",
     "paper_url": "",
     "demo_url": "",
-    "stars": 248,
+    "stars": 249,
     "tags": [
       "Claude Code",
       "Codex",
@@ -387,7 +387,7 @@
       "Configuration",
       "MCP"
     ],
-    "last_updated_at": "2026-10-05T17:59:07Z"
+    "last_updated_at": "2026-10-07T03:00:32Z"
   },
   {
     "name": "agent-style",
@@ -407,6 +407,6 @@
       "Claude Code",
       "Codex"
     ],
-    "last_updated_at": "2026-09-27T19:59:49Z"
+    "last_updated_at": "2026-10-07T02:56:42Z"
   }
 ]
