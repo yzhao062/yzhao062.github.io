@@ -175,8 +175,16 @@
       text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 3px;
     }
     .eco-kind i { width: 1.05em; margin-right: 0.35em; opacity: 0.9; }
+    .eco-number {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 1.4em; height: 1.4em; margin-right: 0.4em; border-radius: 50%;
+      background: #990000; color: #fff; letter-spacing: 0;
+    }
     .eco-items { color: #555; font-size: 0.88rem; line-height: 1.5; }
     .eco-items a { font-weight: 600; }
+    .eco-work + .eco-work { margin-top: 8px; }
+    .eco-venue { color: #765858; font-size: 0.8rem; white-space: nowrap; }
+    .eco-theory-work + .eco-theory-work { margin-top: 10px; }
 
     /* ---- Stack layer: each artifact is an object in its own well ------------- */
     .eco-wells { display: grid; gap: 16px; grid-template-columns: 1fr; }
@@ -374,11 +382,11 @@
                             Five questions organize this work:
                           </p>
                           <div style="margin:0 0 10px 0; padding-left:12px; border-left:2px solid #e8d0d0;">
-                            <div style="color:#444; font-size:0.95rem; line-height:1.75;"><strong style="color:#990000;">Data</strong> &middot; did the system receive an anomalous or unfamiliar input?</div>
-                            <div style="color:#444; font-size:0.95rem; line-height:1.75;"><strong style="color:#990000;">Output</strong> &middot; does an LLM's answer hold up against evidence when no reference answer exists?</div>
-                            <div style="color:#444; font-size:0.95rem; line-height:1.75;"><strong style="color:#990000;">Action</strong> &middot; did an AI agent stay within its instructions and permissions?</div>
-                            <div style="color:#444; font-size:0.95rem; line-height:1.75;"><strong style="color:#990000;">Effort</strong> &middot; did it use the right models, tools, and compute to complete the task efficiently?</div>
-                            <div style="color:#444; font-size:0.95rem; line-height:1.75;"><strong style="color:#990000;">Risk</strong> &middot; what losses could arise in a given deployment, how likely and severe could they be, and how might that risk change over time?</div>
+                            <div style="color:#444; font-size:0.95rem; line-height:1.75;"><strong style="color:#990000;">1. Data</strong> &middot; did the system receive an anomalous or unfamiliar input?</div>
+                            <div style="color:#444; font-size:0.95rem; line-height:1.75;"><strong style="color:#990000;">2. Output</strong> &middot; does an LLM's answer hold up against evidence when no reference answer exists?</div>
+                            <div style="color:#444; font-size:0.95rem; line-height:1.75;"><strong style="color:#990000;">3. Action</strong> &middot; did an AI agent stay within its instructions and permissions?</div>
+                            <div style="color:#444; font-size:0.95rem; line-height:1.75;"><strong style="color:#990000;">4. Effort</strong> &middot; did it use the right models, tools, and compute to complete the task efficiently?</div>
+                            <div style="color:#444; font-size:0.95rem; line-height:1.75;"><strong style="color:#990000;">5. Risk</strong> &middot; what losses could arise in a given deployment, how likely and severe could they be, and how might that risk change over time?</div>
                           </div>
                           <p style="margin:0;">
                             Detection, verification, auditing, and efficiency research provide evidence about how
@@ -396,7 +404,7 @@
                           margin:12px 0;
                         ">
                           <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
-                            <h3 style="color:#990000; font-size:1rem; font-weight:700; line-height:inherit; margin:0;"><a href="ecosystem.html" style="color:inherit;">The Auditable AI Ecosystem</a></h3>
+                            <h3 id="ecosystem" style="color:#990000; font-size:1rem; font-weight:700; line-height:inherit; margin:0;"><a href="ecosystem.html" style="color:inherit;">The Auditable AI Ecosystem</a></h3>
                             <span style="color:#7a2a2a; font-size:0.85rem;">from observed behavior to deployment decisions</span>
                           </div>
                           <div class="eco-layer">
@@ -404,39 +412,38 @@
                             <div class="eco-layer-body">
                               <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-5 g-3">
                               <div class="col">
-                                <div class="eco-kind"><i class="fas fa-magnifying-glass-chart" aria-hidden="true"></i>Detection in Data</div>
+                                <div class="eco-kind"><span class="eco-number">1</span>Detection in Data</div>
                                 <div class="eco-items">
-                                  <a href="pyod.html">PyOD</a>: the anomaly-detection library, 59M+ downloads. Named by OpenAI; used by Amazon, the European Space Agency, and the U.S. DoD CDAO.<br>
-                                  <a href="https://arxiv.org/abs/2605.03410" target="_blank" rel="noopener">UFCOD</a>: few-shot cross-domain OOD.
+                                  <div class="eco-work"><a href="pyod.html">PyOD</a> <span class="eco-venue">[JMLR'19]</span>: scalable outlier detection in Python.</div>
+                                  <div class="eco-work"><a href="https://arxiv.org/abs/2605.03410" target="_blank" rel="noopener">UFCOD</a> <span class="eco-venue">[NeurIPS'26]</span>: few-shot cross-domain OOD detection.</div>
                                 </div>
                               </div>
                               <div class="col">
-                                <div class="eco-kind"><i class="fas fa-circle-check" aria-hidden="true"></i>Verification of Output</div>
+                                <div class="eco-kind"><span class="eco-number">2</span>Verification of Output</div>
                                 <div class="eco-items">
-                                  <a href="https://openreview.net/forum?id=bWUU0LwwMp" target="_blank" rel="noopener">TrustLLM</a>: the multi-institution trustworthiness benchmark.<br>
-                                  <a href="https://arxiv.org/abs/2504.06438" target="_blank" rel="noopener">Premise Verification</a>: checks a query's premises against retrieved evidence before the model answers.
+                                  <div class="eco-work"><a href="https://openreview.net/forum?id=bWUU0LwwMp" target="_blank" rel="noopener">TrustLLM</a> <span class="eco-venue">[ICML'24]</span>: benchmarking LLM trustworthiness.</div>
+                                  <div class="eco-work"><a href="https://arxiv.org/abs/2504.06438" target="_blank" rel="noopener">Premise Verification</a> <span class="eco-venue">[TMLR'26]</span>: checking a query's premises before answering.</div>
                                 </div>
                               </div>
                               <div class="col">
-                                <div class="eco-kind"><i class="fas fa-shield-halved" aria-hidden="true"></i>Auditing of Action</div>
+                                <div class="eco-kind"><span class="eco-number">3</span>Auditing of Action</div>
                                 <div class="eco-items">
-                                  <a href="https://arxiv.org/abs/2606.28739" target="_blank" rel="noopener">Agent Safety Is Action Alignment</a>: harm in the gap between authority exercised and granted.<br>
-                                  <a href="https://arxiv.org/abs/2603.17445" target="_blank" rel="noopener">IET</a>: segment-level attribution from the final text alone.
+                                  <div class="eco-work"><a href="https://arxiv.org/abs/2608.03499" target="_blank" rel="noopener">WeClawArena</a> <span class="eco-venue">[EMNLP Findings'26]</span>: auditing cross-user agent collaboration and security.</div>
+                                  <div class="eco-work"><a href="https://arxiv.org/abs/2603.17445" target="_blank" rel="noopener">IET</a> <span class="eco-venue">[arXiv]</span>: attributing agent segments from final text.</div>
                                 </div>
                               </div>
                               <div class="col">
-                                <div class="eco-kind"><i class="fas fa-gauge-high" aria-hidden="true"></i>Optimization of Effort</div>
+                                <div class="eco-kind"><span class="eco-number">4</span>Optimization of Effort</div>
                                 <div class="eco-items">
-                                  <a href="https://arxiv.org/abs/2603.19423" target="_blank" rel="noopener">The Autonomy Tax</a>: what defense training costs an agent's ability to finish its task.<br>
-                                  <a href="https://arxiv.org/abs/2510.07429" target="_blank" rel="noopener">Bandit routing</a>: model choice as an online cost-quality trade-off.
+                                  <div class="eco-work"><a href="https://arxiv.org/abs/2603.19423" target="_blank" rel="noopener">The Autonomy Tax</a> <span class="eco-venue">[EMNLP'26]</span>: how defense training impairs task completion.</div>
+                                  <div class="eco-work"><a href="https://arxiv.org/abs/2510.07429" target="_blank" rel="noopener">Bandit Routing</a> <span class="eco-venue">[arXiv]</span>: learning cost-quality trade-offs for model selection.</div>
                                 </div>
                               </div>
                               <div class="col">
-                                <div class="eco-kind"><i class="fas fa-chart-line" aria-hidden="true"></i>Modeling of Risk</div>
+                                <div class="eco-kind"><span class="eco-number">5</span>Modeling of Risk</div>
                                 <div class="eco-items">
-                                  <a href="#modeling-of-risk">Developing direction</a>. Evidence base:<br>
-                                  <a href="fortis-benchmark.html">FORTIS</a>: measures over-privilege in skill and tool use.<br>
-                                  <a href="https://arxiv.org/abs/2608.22808" target="_blank" rel="noopener">CatchBench</a>: measures when agent failures can be caught.
+                                  <div class="eco-work"><strong>agent-risk</strong> <span class="eco-venue">[forthcoming]</span>: bounding risk after tool-call gate changes.</div>
+                                  <div class="eco-work"><a href="https://arxiv.org/abs/2608.22808" target="_blank" rel="noopener">CatchBench</a> <span class="eco-venue">[arXiv]</span>: measuring when agent failures can be caught.</div>
                                 </div>
                               </div>
                               </div>
@@ -452,9 +459,15 @@
                                   <div class="eco-items">what agent auditability requires: five dimensions and three mechanism classes (detect, enforce, recover). <a href="https://arxiv.org/abs/2604.05485">arXiv</a>.</div>
                                 </div>
                                 <div class="eco-well">
-                                  <div class="eco-kind"><i class="fas fa-clipboard-check" aria-hidden="true"></i>Method</div>
-                                  <div class="eco-name"><a href="https://arxiv.org/abs/2610.07459" target="_blank" rel="noopener">Auditable Claims about AI Agents</a></div>
-                                  <div class="eco-items">extends Policy Checkability from actions to claims: fix the policy, scope, records, writers, and decision rule before a verdict. <a href="https://github.com/yzhao062/auditable-claims" target="_blank" rel="noopener">worksheet</a>.</div>
+                                  <div class="eco-kind"><i class="fas fa-square-root-variable" aria-hidden="true"></i>Theory</div>
+                                  <div class="eco-theory-work">
+                                    <div class="eco-name"><a href="https://arxiv.org/abs/2610.07459" target="_blank" rel="noopener">Auditable Claims</a></div>
+                                    <div class="eco-items">conditions on the records needed to support a claim about an agent. <a href="https://github.com/yzhao062/auditable-claims" target="_blank" rel="noopener">worksheet</a>.</div>
+                                  </div>
+                                  <div class="eco-theory-work">
+                                    <div class="eco-name">agent-risk</div>
+                                    <div class="eco-items">risk bounds for tool-call gate changes from logs and targeted reruns. Preprint forthcoming.</div>
+                                  </div>
                                 </div>
                                 <div class="eco-well">
                                   <div class="eco-kind"><i class="fas fa-wrench" aria-hidden="true"></i>Tool</div>
@@ -499,7 +512,6 @@
                                   <div class="lc-head"><span class="lc-dot" aria-hidden="true"></span><span class="lc-label">Live &middot; while running</span></div>
                                   <div class="eco-items">
                                     <a href="https://arxiv.org/abs/2604.01350" target="_blank" rel="noopener">Cross-User Contamination</a>: data leaking between users in shared-state agents.<br>
-                                  <a href="https://arxiv.org/abs/2512.04668" target="_blank" rel="noopener">Topology Matters</a>: memory leakage in multi-agent LLMs.<br>
                                   <a href="aegis.html">Aegis</a>: a firewall that gates each tool call.
                                   </div>
                                 </div>
