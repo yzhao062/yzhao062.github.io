@@ -27,7 +27,7 @@
     "docs_url": "https://pyod.readthedocs.io",
     "paper_url": "https://arxiv.org/abs/2412.12154",
     "demo_url": "",
-    "stars": 10029,
+    "stars": 10030,
     "tags": [
       "Anomaly Detection",
       "Outlier Detection",
@@ -73,7 +73,7 @@
       "Resources",
       "Benchmarks"
     ],
-    "last_updated_at": "2026-09-28T19:53:22Z"
+    "last_updated_at": "2026-10-10T02:10:18Z"
   },
   {
     "name": "AD-AGENT",
@@ -249,7 +249,7 @@
     "docs_url": "http://tods-doc.github.io",
     "paper_url": "https://arxiv.org/abs/2009.09822",
     "demo_url": "",
-    "stars": 1666,
+    "stars": 1667,
     "tags": [
       "Time Series",
       "Anomaly Detection",
@@ -267,7 +267,7 @@
     "docs_url": "https://tdcommons.ai",
     "paper_url": "https://proceedings.neurips.cc/paper/2021/hash/6a8d3b0f5987e0f6d3d2f5f65f02e3cc-Abstract.html",
     "demo_url": "",
-    "stars": 1291,
+    "stars": 1294,
     "tags": [
       "Therapeutics",
       "Benchmark",
@@ -341,7 +341,7 @@
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/aegis.html",
     "paper_url": "https://arxiv.org/abs/2603.12621",
     "demo_url": "https://github.com/Justin0504/Aegis/blob/main/docs/images/readme_demo1.gif",
-    "stars": 516,
+    "stars": 522,
     "tags": [
       "AI Agent Security",
       "Policy Enforcement",
@@ -378,7 +378,7 @@
     "docs_url": "https://anywhere-agents.readthedocs.io",
     "paper_url": "",
     "demo_url": "",
-    "stars": 251,
+    "stars": 255,
     "tags": [
       "Claude Code",
       "Codex",
