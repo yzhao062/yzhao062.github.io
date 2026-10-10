@@ -4,26 +4,26 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="author" content="Yue Zhao">
-  <meta name="description" content="The Auditable AI Ecosystem: twelve open artifacts for auditing AI agents across the full lifecycle, from static scanning and over-privilege benchmarking before deployment, through tool-call gating at runtime, to decision capture, replay, and attribution after a run.">
+  <meta name="description" content="The Auditable AI Ecosystem: open artifacts for auditing AI agents, from pre-deployment scanning and runtime tool-call gating to post-run capture, replay, and attribution.">
   <meta name="keywords" content="The Auditable AI Ecosystem, Auditable AI Systems, Agent Auditability, auditable, GRADE, awesome-auditable-ai, AI Agent Auditing, PRE LIVE POST, Yue Zhao, USC, FORTIS Lab, Agent Lifecycle, AI Risk Audit and Control, open-source ecosystem, open-source sustainability, research software">
   <title>The Auditable AI Ecosystem | Yue Zhao</title>
   <link rel="canonical" href="https://viterbi-web.usc.edu/~yzhao010/ecosystem.html">
   <link rel="icon" type="image/x-icon" href="images/logo2.ico">
   <meta property="og:type" content="website">
   <meta property="og:title" content="The Auditable AI Ecosystem | Yue Zhao">
-  <meta property="og:description" content="Twelve open artifacts for auditing AI agents across the full lifecycle: pre-deployment scanning and benchmarking, runtime tool-call gating, and post-run capture, replay, and attribution.">
+  <meta property="og:description" content="Open artifacts for auditing AI agents across the full lifecycle: pre-deployment scanning and benchmarking, runtime tool-call gating, and post-run capture, replay, and attribution.">
   <meta property="og:url" content="https://viterbi-web.usc.edu/~yzhao010/ecosystem.html">
   <meta property="og:image" content="https://viterbi-web.usc.edu/~yzhao010/images/logo.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="The Auditable AI Ecosystem | Yue Zhao">
-  <meta name="twitter:description" content="Twelve open artifacts for auditing AI agents across the full lifecycle: pre-deployment scanning and benchmarking, runtime tool-call gating, and post-run capture, replay, and attribution.">
+  <meta name="twitter:description" content="Open artifacts for auditing AI agents across the full lifecycle: pre-deployment scanning and benchmarking, runtime tool-call gating, and post-run capture, replay, and attribution.">
   <meta name="twitter:image" content="https://viterbi-web.usc.edu/~yzhao010/images/logo.png">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
     "name": "The Auditable AI Ecosystem",
-    "description": "Twelve open artifacts for auditing AI agents across the full lifecycle: pre-deployment scanning and benchmarking, runtime tool-call gating, and post-run capture, replay, and attribution.",
+    "description": "Open artifacts for auditing AI agents across the full lifecycle: pre-deployment scanning and benchmarking, runtime tool-call gating, and post-run capture, replay, and attribution.",
     "url": "https://viterbi-web.usc.edu/~yzhao010/ecosystem.html",
     "author": {
       "@type": "Person",
@@ -54,14 +54,24 @@
         "url": "https://arxiv.org/abs/2605.09163"
       },
       {
-        "@type": "Dataset",
+        "@type": "SoftwareSourceCode",
         "name": "CatchBench: When Can an Agent Failure Be Caught?",
         "description": "A benchmark scoring whether an agent failure can be caught from the configuration declared before a run, a growing prefix of its trace, or the finished trace.",
         "url": "https://github.com/yzhao062/catchbench",
-        "citation": {
-          "@type": "ScholarlyArticle",
-          "name": "CatchBench: When Can an Agent Failure Be Caught?",
-          "url": "https://arxiv.org/abs/2608.22808"
+        "codeRepository": "https://github.com/yzhao062/catchbench",
+        "programmingLanguage": "Python",
+        "citation": "https://arxiv.org/abs/2608.22808",
+        "hasPart": {
+          "@type": "Dataset",
+          "name": "CatchBench Synthetic PRE Records",
+          "description": "Fifty-six CatchBench-authored synthetic records of declared agent configurations, with labels for the PRE benchmark.",
+          "url": "https://github.com/yzhao062/catchbench/blob/main/data/pre/synthetic.json",
+          "license": "https://opensource.org/license/mit/",
+          "citation": "https://arxiv.org/abs/2608.22808",
+          "creator": {
+            "@type": "Person",
+            "name": "Yue Zhao"
+          }
         },
         "usageInfo": "https://github.com/yzhao062/catchbench/blob/main/THIRD_PARTY_LICENSES.md",
         "creator": {
@@ -120,6 +130,12 @@
       },
       {
         "@type": "ScholarlyArticle",
+        "name": "WeClawArena: An Auditable Sandbox and Benchmark for Cross-User Agents Collaboration and Security in Human-Centered Agent Networks",
+        "description": "A sandbox and benchmark for multi-party tool use across personal agent workspaces, recording messages, tool calls, resource operations, and final workspace state.",
+        "url": "https://arxiv.org/abs/2608.03499"
+      },
+      {
+        "@type": "ScholarlyArticle",
         "name": "Topology Matters: Measuring Memory Leakage in Multi-Agent LLMs",
         "url": "https://arxiv.org/abs/2512.04668"
       },
@@ -162,7 +178,7 @@
           Open-source infrastructure for auditing AI agents, from before deployment to after a run.
         </p>
         <p>
-          Twelve open artifacts, each answering a question an auditor asks about an agent or the evidence it leaves.
+          Open artifacts, each answering a question an auditor asks about an agent or the evidence it leaves.
           The record they produce has two uses: it shows what a system did wrong, and it shows what it never
           needed to do. Every one is public and citable, and the tools install from PyPI.
           <!-- [Auditable AI paused 2026-09] The stack supports
@@ -270,6 +286,24 @@
 
               <div style="margin-bottom:14px;">
                 <div style="font-size:1rem; font-weight:700; margin-bottom:3px;">
+                  <a href="https://arxiv.org/abs/2608.03499" target="_blank" rel="noopener">WeClawArena</a>
+                  <span style="font-size:0.66rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; color:#fff; background:#7a2a2a; padding:1px 5px; border-radius:3px; vertical-align:middle; margin-left:4px;">Benchmark</span>
+                </div>
+                <div style="color:#555; font-size:0.86rem; line-height:1.5;">
+                  <em>Do agents serving different owners respect each other's boundaries?</em>
+                  A sandbox and benchmark for multi-party tool use across personal agent workspaces.
+                  It records messages, tool calls, resource operations, and final workspace state, and
+                  reports task utility and attack success separately.
+                </div>
+                <div style="margin-top:6px; font-size:0.8rem;">
+                  <a href="https://arxiv.org/abs/2608.03499" target="_blank" rel="noopener"><i class="fas fa-file-lines" aria-hidden="true"></i> arXiv</a>
+                  &nbsp;|&nbsp;
+                  <a href="https://github.com/kingofspace0wzz/WeClawArena" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i> Code</a>
+                </div>
+              </div>
+
+              <div style="margin-bottom:14px;">
+                <div style="font-size:1rem; font-weight:700; margin-bottom:3px;">
                   <a href="https://arxiv.org/abs/2604.01350" target="_blank" rel="noopener">Cross-User Contamination</a>
                   <span style="font-size:0.66rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; color:#555; background:#e8d0d0; padding:1px 5px; border-radius:3px; vertical-align:middle; margin-left:4px;">Paper</span>
                 </div>
@@ -368,7 +402,7 @@
 
           <div class="col-12 col-md-6">
             <div style="border:1px solid #e8d0d0; border-radius:8px; padding:14px 16px; height:100%; background:#fff7f7;">
-              <div style="color:#7a2a2a; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:6px;">Method</div>
+              <div style="color:#7a2a2a; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:6px;">Theory</div>
               <div style="font-size:1.05rem; font-weight:700; margin-bottom:6px;">
                 <a href="https://arxiv.org/abs/2610.07459" target="_blank" rel="noopener">Auditable Claims about AI Agents</a>
               </div>
@@ -397,6 +431,7 @@
                 Puts one auditor's question to all three information states under a single interface. It scores
                 72 entrants over 1187 declared configurations and 1162 recorded runs, and publishes the 71
                 contrasts that fail to separate rather than ranking them.
+                The <a href="https://github.com/yzhao062/catchbench/blob/main/data/pre/synthetic.json" target="_blank" rel="noopener">56 authored synthetic PRE records</a> are MIT licensed; third-party records have separate or unresolved terms in the <a href="https://github.com/yzhao062/catchbench/blob/main/THIRD_PARTY_LICENSES.md" target="_blank" rel="noopener">license notices</a>.
               </div>
               <div style="margin-top:10px; font-size:0.82rem;">
                 <a href="https://arxiv.org/abs/2608.22808" target="_blank" rel="noopener"><i class="fas fa-file-lines" aria-hidden="true"></i> arXiv</a>
@@ -437,8 +472,8 @@
           <a href="https://auditable.run" target="_blank" rel="noopener"><strong>Auditable AI (auditable.run)</strong></a>. -->
           Most of this stack lives under
           <a href="https://github.com/yzhao062" target="_blank" rel="noopener">github.com/yzhao062</a>.
-          <a href="agent-audit.html">agent-audit</a> and <a href="aegis.html">Aegis</a> are maintained in
-          their authors' own repositories, linked from their pages above.
+          <a href="agent-audit.html">agent-audit</a>, <a href="aegis.html">Aegis</a>, and WeClawArena are
+          maintained in their authors' own repositories, linked above.
         </p>
 
       </div>
