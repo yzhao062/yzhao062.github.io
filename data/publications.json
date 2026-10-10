@@ -3,12 +3,63 @@
     "id": "workshop-synco-ttcl",
     "section": "workshop",
     "title": "SynCo: Data Synthesis Co-Training for Self-Evolving LLMs via Multi-Agent Reinforcement Learning",
-    "paper_url": "https://openreview.net/forum?id=0SbD6GdfQZ",
-    "authors": "Wei Yang, Li Li, Yuehan Qin, Yawei Wang, Mingxi Wang, Shixuan Li, Tiankai Yang, Jiate Li, Jesse Thomason, Xuezhe Ma, Yue Zhao.",
+    "paper_url": "https://arxiv.org/abs/2610.11345",
+    "authors": "Wei Yang, Shawn Li, Yuehan Qin, Yawei Wang, Mingxi Wang, Shixuan Li, Tiankai Yang, Jiate Li, Jesse Thomason, Xuezhe Ma, Yue Zhao.",
     "venue": "NeurIPS 2026 Workshop on Towards Test-Time Continual Learning Agents (TTCL), Poster",
     "year": 2026,
-    "links": [],
+    "links": [
+      {
+        "type": "github",
+        "url": "https://github.com/weiyang930/SynCo"
+      },
+      {
+        "type": "project",
+        "url": "https://huggingface.co/datasets/weiyang930/SynCo"
+      },
+      {
+        "type": "paper",
+        "url": "https://openreview.net/forum?id=0SbD6GdfQZ"
+      }
+    ],
     "abstract": "SynCo jointly trains a Synthesizer that adapts training tasks to a Reasoner's evolving capabilities and a Reasoner that learns from those tasks. Multiple Reasoner rollouts supply outcome feedback to both agents. The framework is evaluated on mathematical reasoning benchmarks against a frozen-Synthesizer baseline."
+  },
+  {
+    "id": "preprint-ai4fire",
+    "section": "preprint",
+    "title": "AI4Fire: Evaluating Large Language Models on Wildfire Tasks",
+    "paper_url": "https://arxiv.org/abs/2610.10946",
+    "authors": "Yue Zhao, Xiyang Hu, Zuobin Xiong, Zhangyu Wang, Ruolin Li.",
+    "venue": "arXiv preprint",
+    "year": 2026,
+    "sort_date": "2026-10-07",
+    "links": [
+      {
+        "type": "github",
+        "url": "https://github.com/yzhao062/AI4Fire"
+      }
+    ],
+    "abstract": "AI4Fire evaluates six core language models on five wildfire tasks with and without task-specific grounding, with a sweep covering 29 additional models. It compares model scores with non-LLM baselines and audits the source datasets. SQL access improves database accuracy, while no core model beats repeating today's staffing count on personnel forecasting. The release includes prompts, responses, scores, code, and a survey of 138 works."
+  },
+  {
+    "id": "workshop-jevout-agenthon",
+    "section": "workshop",
+    "title": "JevOut: Natural Context Can Flip Decision Models",
+    "paper_url": "https://arxiv.org/abs/2609.30243",
+    "authors": "Zixiang Xu, Zirui Song, Chiyu Zhang, Xiuying Chen, Xi Liu, Xiyang Hu, Yue Zhao♠.",
+    "venue": "NeurIPS 2026 Agenthon Workshop, Poster",
+    "year": 2026,
+    "sort_date": "2026-12-12",
+    "links": [
+      {
+        "type": "github",
+        "url": "https://github.com/xzx34/JevOut"
+      },
+      {
+        "type": "project",
+        "url": "https://xzx34.github.io/jevout/"
+      }
+    ],
+    "abstract": "JevOut studies how natural-looking, answer-preserving context additions redirect finite-choice decision models. Across four systems and seven datasets, probability-guided optimization redirects 61.4%-73.2% of each system's initially correct decisions toward a predetermined wrong option. The search uses at most 64 accepted target evaluations per decision. Three blinded annotators judge 91.6% of 250 sampled successful contexts natural and answer-preserving, with no decisive answer-changing evidence, by majority vote."
   },
   {
     "id": "workshop-seva",
