@@ -180,7 +180,7 @@
         <p>
           Open artifacts, each answering a question an auditor asks about an agent or the evidence it leaves.
           The record they produce has two uses: it shows what a system did wrong, and it shows what it never
-          needed to do. Every one is public and citable, and the tools install from PyPI.
+          needed to do. Every released one is public and citable, and the tools install from PyPI.
           <!-- [Auditable AI paused 2026-09] The stack supports
           <a href="https://auditable.run" target="_blank" rel="noopener"><strong>Auditable AI</strong></a>,
           the company building the auditable layer for AI agents. -->
@@ -373,87 +373,91 @@
           </div>
         </div>
 
-        <!-- ── SPANS ALL THREE ── -->
-        <h2 style="color:#990000; border-bottom:2px solid #990000; padding-bottom:6px; margin:30px 0 16px 0;">Across the Whole Lifecycle</h2>
+        <!-- ── FOUNDATIONS: APPLY AT EVERY STAGE ── -->
+        <h2 style="color:#990000; border-bottom:2px solid #990000; padding-bottom:6px; margin:30px 0 16px 0;">Foundations</h2>
         <p style="color:#555; font-size:0.95rem; margin-bottom:14px;">
-          Four artifacts span the lifecycle. They define auditability, specify the evidence for a claim,
-          measure whether a failure was catchable, and map the surrounding literature.
+          These artifacts apply at all three stages. They define auditability, specify the evidence for a
+          claim, bound the risk of a gate change, measure whether a failure was catchable, and map the
+          surrounding literature.
         </p>
-
-        <div class="row g-3" style="margin-bottom:20px;">
-          <div class="col-12 col-md-6">
-            <div style="border:1px solid #e8d0d0; border-radius:8px; padding:14px 16px; height:100%; background:#fff7f7;">
-              <div style="color:#7a2a2a; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:6px;">Framework</div>
-              <div style="font-size:1.05rem; font-weight:700; margin-bottom:6px;">
-                <a href="https://arxiv.org/abs/2604.05485" target="_blank" rel="noopener">Auditable Agents</a>
-              </div>
-              <div style="color:#555; font-size:0.88rem; line-height:1.5;">
-                <em>What does auditability actually require?</em>
-                Five dimensions and three mechanism classes: detect, enforce, recover. The grid above is that
-                framework instantiated.
-              </div>
-              <div style="margin-top:10px; font-size:0.82rem;">
-                <a href="auditable-agents.html"><i class="fas fa-file-lines" aria-hidden="true"></i> Summary</a>
-                &nbsp;|&nbsp;
-                <a href="https://arxiv.org/abs/2604.05485" target="_blank" rel="noopener"><i class="fas fa-scroll" aria-hidden="true"></i> arXiv</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-12 col-md-6">
-            <div style="border:1px solid #e8d0d0; border-radius:8px; padding:14px 16px; height:100%; background:#fff7f7;">
-              <div style="color:#7a2a2a; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:6px;">Theory</div>
-              <div style="font-size:1.05rem; font-weight:700; margin-bottom:6px;">
-                <a href="https://arxiv.org/abs/2610.07459" target="_blank" rel="noopener">Auditable Claims about AI Agents</a>
-              </div>
-              <div style="color:#555; font-size:0.88rem; line-height:1.5;">
-                <em>What records would settle this claim?</em>
-                Extends Auditable Agents' Policy Checkability from single actions to claims.
-                Fix the policy, scope, records, writers, and decision rule before a verdict.
-                Six claim checks and an illustrative case connect the evidence to supported, contradicted, or undecidable verdicts.
-              </div>
-              <div style="margin-top:10px; font-size:0.82rem;">
-                <a href="https://arxiv.org/abs/2610.07459" target="_blank" rel="noopener"><i class="fas fa-scroll" aria-hidden="true"></i> arXiv</a>
-                &nbsp;|&nbsp;
-                <a href="https://github.com/yzhao062/auditable-claims" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i> Worksheet &amp; Materials</a>
+        <div style="border:1px solid #e8d0d0; border-radius:8px; padding:2px 16px; background:#fff7f7; margin-bottom:20px;">
+          <div class="row g-2" style="padding:12px 0; border-bottom:1px solid #f0dcdc;">
+            <div class="col-12 col-sm-3 col-lg-2"><div style="color:#7a2a2a; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; padding-top:3px;"><i class="fas fa-layer-group" style="width:1.05em; margin-right:0.35em; opacity:0.9;" aria-hidden="true"></i>Framework</div></div>
+            <div class="col-12 col-sm-9 col-lg-10">
+              <div>
+                <div style="font-size:1.05rem; font-weight:700; margin-bottom:4px;"><a href="https://arxiv.org/abs/2604.05485" target="_blank" rel="noopener">Auditable Agents</a></div>
+                <div style="color:#555; font-size:0.88rem; line-height:1.5;">
+                  <em>What does auditability actually require?</em>
+                  Five dimensions and three mechanism classes: detect, enforce, recover. The grid above is that
+                  framework instantiated.
+                </div>
+                <div style="margin-top:6px; font-size:0.82rem;">
+                  <a href="auditable-agents.html"><i class="fas fa-file-lines" aria-hidden="true"></i> Summary</a>
+                  &nbsp;|&nbsp;
+                  <a href="https://arxiv.org/abs/2604.05485" target="_blank" rel="noopener"><i class="fas fa-scroll" aria-hidden="true"></i> arXiv</a>
+                </div>
               </div>
             </div>
           </div>
-
-          <div class="col-12 col-md-6">
-            <div style="border:1px solid #e8d0d0; border-radius:8px; padding:14px 16px; height:100%; background:#fff7f7;">
-              <div style="color:#7a2a2a; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:6px;">Benchmark</div>
-              <div style="font-size:1.05rem; font-weight:700; margin-bottom:6px;">
-                <a href="https://arxiv.org/abs/2608.22808" target="_blank" rel="noopener">CatchBench</a>
+          <div class="row g-2" style="padding:12px 0; border-bottom:1px solid #f0dcdc;">
+            <div class="col-12 col-sm-3 col-lg-2"><div style="color:#7a2a2a; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; padding-top:3px;"><i class="fas fa-square-root-variable" style="width:1.05em; margin-right:0.35em; opacity:0.9;" aria-hidden="true"></i>Theory</div></div>
+            <div class="col-12 col-sm-9 col-lg-10">
+              <div>
+                <div style="font-size:1.05rem; font-weight:700; margin-bottom:4px;"><a href="https://arxiv.org/abs/2610.07459" target="_blank" rel="noopener">Auditable Claims about AI Agents</a></div>
+                <div style="color:#555; font-size:0.88rem; line-height:1.5;">
+                  <em>What records would settle this claim?</em>
+                  Extends Auditable Agents' Policy Checkability from single actions to claims.
+                  Fix the policy, scope, records, writers, and decision rule before a verdict.
+                  Six claim checks and an illustrative case connect the evidence to supported, contradicted, or undecidable verdicts.
+                </div>
+                <div style="margin-top:6px; font-size:0.82rem;">
+                  <a href="https://arxiv.org/abs/2610.07459" target="_blank" rel="noopener"><i class="fas fa-scroll" aria-hidden="true"></i> arXiv</a>
+                  &nbsp;|&nbsp;
+                  <a href="https://github.com/yzhao062/auditable-claims" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i> Worksheet &amp; Materials</a>
+                </div>
               </div>
-              <div style="color:#555; font-size:0.88rem; line-height:1.5;">
-                <em>Was the failure catchable at all?</em>
-                Puts one auditor's question to all three information states under a single interface. It scores
-                72 entrants over 1187 declared configurations and 1162 recorded runs, and publishes the 71
-                contrasts that fail to separate rather than ranking them.
-                The <a href="https://github.com/yzhao062/catchbench/blob/main/data/pre/synthetic.json" target="_blank" rel="noopener">56 authored synthetic PRE records</a> are MIT licensed; third-party records have separate or unresolved terms in the <a href="https://github.com/yzhao062/catchbench/blob/main/THIRD_PARTY_LICENSES.md" target="_blank" rel="noopener">license notices</a>.
-              </div>
-              <div style="margin-top:10px; font-size:0.82rem;">
-                <a href="https://arxiv.org/abs/2608.22808" target="_blank" rel="noopener"><i class="fas fa-file-lines" aria-hidden="true"></i> arXiv</a>
-                &nbsp;|&nbsp;
-                <a href="https://github.com/yzhao062/catchbench" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i> Code</a>
+              <div style="margin-top:12px;">
+                <div style="font-size:1.05rem; font-weight:700; margin-bottom:4px;">agent-risk</div>
+                <div style="color:#555; font-size:0.88rem; line-height:1.5;">
+                  <em>What does a gate change do to risk?</em>
+                  Risk bounds for tool-call gate changes, estimated from logs and targeted reruns. Preprint forthcoming.
+                </div>
               </div>
             </div>
           </div>
-
-          <div class="col-12 col-md-6">
-            <div style="border:1px solid #e8d0d0; border-radius:8px; padding:14px 16px; height:100%; background:#fff7f7;">
-              <div style="color:#7a2a2a; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:6px;">Reference</div>
-              <div style="font-size:1.05rem; font-weight:700; margin-bottom:6px;">
-                <a href="https://github.com/yzhao062/awesome-auditable-ai" target="_blank" rel="noopener">awesome-auditable-ai</a>
+          <div class="row g-2" style="padding:12px 0; border-bottom:1px solid #f0dcdc;">
+            <div class="col-12 col-sm-3 col-lg-2"><div style="color:#7a2a2a; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; padding-top:3px;"><i class="fas fa-chart-line" style="width:1.05em; margin-right:0.35em; opacity:0.9;" aria-hidden="true"></i>Benchmark</div></div>
+            <div class="col-12 col-sm-9 col-lg-10">
+              <div>
+                <div style="font-size:1.05rem; font-weight:700; margin-bottom:4px;"><a href="https://arxiv.org/abs/2608.22808" target="_blank" rel="noopener">CatchBench</a></div>
+                <div style="color:#555; font-size:0.88rem; line-height:1.5;">
+                  <em>Was the failure catchable at all?</em>
+                  Puts one auditor's question to all three information states under a single interface. It scores
+                  72 entrants over 1187 declared configurations and 1162 recorded runs, and publishes the 71
+                  contrasts that fail to separate rather than ranking them.
+                  The <a href="https://github.com/yzhao062/catchbench/blob/main/data/pre/synthetic.json" target="_blank" rel="noopener">56 authored synthetic PRE records</a> are MIT licensed; third-party records have separate or unresolved terms in the <a href="https://github.com/yzhao062/catchbench/blob/main/THIRD_PARTY_LICENSES.md" target="_blank" rel="noopener">license notices</a>.
+                </div>
+                <div style="margin-top:6px; font-size:0.82rem;">
+                  <a href="https://arxiv.org/abs/2608.22808" target="_blank" rel="noopener"><i class="fas fa-file-lines" aria-hidden="true"></i> arXiv</a>
+                  &nbsp;|&nbsp;
+                  <a href="https://github.com/yzhao062/catchbench" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i> Code</a>
+                </div>
               </div>
-              <div style="color:#555; font-size:0.88rem; line-height:1.5;">
-                <em>Who else is working on this?</em>
-                A curated map of papers, tools, datasets, and standards for reliable, auditable AI agents,
-                with published checks for paper-title and destination consistency.
-              </div>
-              <div style="margin-top:10px; font-size:0.82rem;">
-                <a href="https://github.com/yzhao062/awesome-auditable-ai" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a>
+            </div>
+          </div>
+          <div class="row g-2" style="padding:12px 0;">
+            <div class="col-12 col-sm-3 col-lg-2"><div style="color:#7a2a2a; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; padding-top:3px;"><i class="fas fa-book" style="width:1.05em; margin-right:0.35em; opacity:0.9;" aria-hidden="true"></i>Resource</div></div>
+            <div class="col-12 col-sm-9 col-lg-10">
+              <div>
+                <div style="font-size:1.05rem; font-weight:700; margin-bottom:4px;"><a href="https://github.com/yzhao062/awesome-auditable-ai" target="_blank" rel="noopener">awesome-auditable-ai</a></div>
+                <div style="color:#555; font-size:0.88rem; line-height:1.5;">
+                  <em>Who else is working on this?</em>
+                  A curated map of papers, tools, datasets, and standards for reliable, auditable AI agents,
+                  with published checks for paper-title and destination consistency.
+                </div>
+                <div style="margin-top:6px; font-size:0.82rem;">
+                  <a href="https://github.com/yzhao062/awesome-auditable-ai" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a>
+                </div>
               </div>
             </div>
           </div>
@@ -462,7 +466,7 @@
         <!-- ── CLOSING CTA ── -->
         <h2 style="color:#990000; border-bottom:2px solid #990000; padding-bottom:6px; margin:30px 0 16px 0;">Build on It</h2>
         <p>
-          Every artifact here is public, citable, and built to be extended. If you are adding a detector, a
+          Every released artifact here is public, citable, and built to be extended. If you are adding a detector, a
           policy, or a new lifecycle stage, open an issue on the repository it belongs to. If you are
           benchmarking against this work, <a href="https://github.com/yzhao062/catchbench" target="_blank" rel="noopener">CatchBench</a>
           is the entrant interface, and it takes submissions that fail to separate as readily as ones that win.

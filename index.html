@@ -148,13 +148,37 @@
       padding: 0 5px; color: #990000; font-weight: 600;
     }
 
-    /* ---- Research questions: each question carries two representative works -- */
-    .rq-list { margin: 0 0 10px 0; padding-left: 12px; border-left: 2px solid #e8d0d0; }
-    .rq + .rq { margin-top: 7px; }
-    .rq-q { color: #444; font-size: 0.95rem; line-height: 1.5; }
-    .rq-q strong { color: #990000; }
-    .rq-works { color: #555; font-size: 0.85rem; line-height: 1.5; margin-top: 1px; }
-    .rq-works a { font-weight: 600; }
+    /* ---- Research questions: a label column, the question with its representative
+            works as inline chips, and a summary that opens into the direction ---- */
+    .rq-list { margin: 0 0 10px 0; }
+    .rq + .rq { margin-top: 6px; }
+    details.rq > summary {
+      position: relative; padding-left: 5.3rem;
+      color: #444; font-size: 0.95rem; line-height: 1.6;
+    }
+    details.rq > summary::before { position: absolute; left: 0.05rem; top: 0.66em; }
+    details.rq > summary:hover { background-color: transparent; }
+    .rq-label { position: absolute; left: 1.15rem; top: 0; color: #990000; font-weight: 700; }
+    .rq-works { display: inline-block; }
+    .rq-work {
+      display: inline-block; white-space: nowrap; margin-left: 2px;
+      background: #fff; border: 1px solid #e6c9c9; border-radius: 3px;
+      padding: 0 6px; font-size: 0.8rem; line-height: 1.5; vertical-align: 1px;
+    }
+    .rq-work a { font-weight: 600; text-decoration: none; }
+    .rq-work a:hover { text-decoration: underline; }
+    .rq-work .eco-venue { font-size: 0.76rem; margin-left: 2px; }
+    .rq-detail { padding: 4px 0 6px 5.3rem; color: #444; font-size: 0.92rem; line-height: 1.55; }
+    @media (max-width: 575.98px) {
+      /* on a phone the label runs inline so the question keeps the width */
+      details.rq > summary { padding-left: 1.15rem; }
+      .rq-label { position: static; margin-right: 0.35em; }
+      .rq-detail { padding-left: 1.15rem; }
+    }
+    .rq-detail h3 { color: #7a2a2a; font-size: 0.92rem; font-weight: 700; line-height: 1.4; margin: 2px 0 4px; }
+    .rq-detail p { margin: 0 0 6px; }
+    .rq-detail p:last-child { margin-bottom: 0; }
+    .rq-detail .rq-keywords { font-family: 'Poppins', 'Segoe UI', sans-serif; font-size: 0.84rem; color: #7a2a2a; }
 
     /* ---- Ecosystem card: three layers, one spine ---------------------------- */
     .eco-layer + .eco-layer { margin-top: 18px; }
@@ -186,20 +210,17 @@
     .eco-items { color: #555; font-size: 0.88rem; line-height: 1.5; }
     .eco-items a { font-weight: 600; }
     .eco-venue { color: #765858; font-size: 0.8rem; white-space: nowrap; }
-    .eco-theory-work + .eco-theory-work { margin-top: 10px; }
 
-    /* ---- Foundations layer: each artifact is an object in its own well ------- */
-    .eco-wells { display: grid; gap: 16px; grid-template-columns: 1fr; }
-    @media (min-width: 576px) { .eco-wells { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-    .eco-well {
-      background: #fff; border: 1px solid #eccfcf; border-radius: 4px;
-      padding: 9px 11px; height: 100%;
+    /* ---- Foundations layer: one panel, a kind column, then name: description - */
+    .eco-defs {
+      background: #fff; border: 1px solid #eccfcf; border-radius: 4px; padding: 8px 12px;
     }
-    .eco-well .eco-name { font-size: 0.98rem; font-weight: 700; margin: 1px 0 2px; }
+    .eco-def { display: grid; grid-template-columns: 7rem minmax(0, 1fr); column-gap: 10px; align-items: baseline; }
+    .eco-def + .eco-def { margin-top: 5px; padding-top: 5px; border-top: 1px solid #f4e4e4; }
+    .eco-def .eco-kind { margin-bottom: 0; }
     @media (max-width: 575.98px) {
-      /* one-up on a phone: shrink the box so it does not read as an empty panel */
-      .eco-well { padding: 7px 10px; }
-      .eco-well .eco-name { font-size: 0.94rem; margin: 0 0 1px; }
+      .eco-def { grid-template-columns: minmax(0, 1fr); }
+      .eco-def .eco-kind { margin-bottom: 1px; }
     }
 
     /* ---- Media layer --------------------------------------------------------- */
@@ -377,28 +398,133 @@
                         <h2 id="research" style="color:#990000; border-bottom:2px solid #990000; padding-bottom:6px; margin:30px 0 16px 0;">&#128300; Research</h2>
                         <div style="background:#fff7f7; border-left:4px solid #990000; padding:12px 16px; margin:8px 0 12px 0;">
                           <p style="margin:0 0 9px 0;">
-                            <strong>Auditable AI Systems.</strong> Our lab develops methods, benchmarks, and open-source
+                            <strong>Auditable AI Systems.</strong> Our lab develops theory, methods, benchmarks, and open-source
                             tools for checking AI behavior and informing deployment decisions. We study what evidence
                             can establish when labels, reference answers, or complete records are unavailable.
                             Four questions organize this work:
                           </p>
                           <div class="rq-list">
-                            <div class="rq">
-                              <div class="rq-q"><strong>1. Input</strong> &middot; does the system receive an anomalous or unfamiliar input?</div>
-                              <div class="rq-works"><a href="pyod.html">PyOD</a> <span class="eco-venue">[JMLR'19]</span> &middot; <a href="https://arxiv.org/abs/2605.03410" target="_blank" rel="noopener">UFCOD</a> <span class="eco-venue">[NeurIPS'26]</span></div>
-                            </div>
-                            <div class="rq">
-                              <div class="rq-q"><strong>2. Output</strong> &middot; does what a model says hold up against the evidence?</div>
-                              <div class="rq-works"><a href="https://openreview.net/forum?id=bWUU0LwwMp" target="_blank" rel="noopener">TrustLLM</a> <span class="eco-venue">[ICML'24]</span> &middot; <a href="https://arxiv.org/abs/2504.06438" target="_blank" rel="noopener">Premise Verification</a> <span class="eco-venue">[TMLR'26]</span></div>
-                            </div>
-                            <div class="rq">
-                              <div class="rq-q"><strong>3. Action</strong> &middot; does what an agent does stay within the authority it was granted?</div>
-                              <div class="rq-works"><a href="https://arxiv.org/abs/2608.03499" target="_blank" rel="noopener">WeClawArena</a> <span class="eco-venue">[EMNLP Findings'26]</span> &middot; <a href="https://arxiv.org/abs/2603.19423" target="_blank" rel="noopener">The Autonomy Tax</a> <span class="eco-venue">[EMNLP'26]</span></div>
-                            </div>
-                            <div class="rq">
-                              <div class="rq-q"><strong>4. Risk</strong> &middot; what could a deployment lose, with what likelihood and severity, and how does that change over time?</div>
-                              <div class="rq-works">agent-risk <span class="eco-venue">[preprint forthcoming]</span></div>
-                            </div>
+                            <details class="rq smart-details">
+                              <summary>
+                                <span class="rq-label">Input</span>
+                                Does the system receive an anomalous or unfamiliar input?
+                                <span class="rq-works">
+                                  <span class="rq-work"><a href="pyod.html">PyOD</a> <span class="eco-venue">JMLR'19</span></span>
+                                  <span class="rq-work"><a href="https://arxiv.org/abs/2605.03410" target="_blank" rel="noopener">UFCOD</a> <span class="eco-venue">NeurIPS'26</span></span>
+                                </span>
+                              </summary>
+                              <div class="rq-detail">
+                                <h3>Detection in Data: Anomaly, Outlier, and Out-of-Distribution Detection</h3>
+                                <p>
+                                  Here the question is whether an input departed from the conditions
+                                  represented during development and evaluation. That boundary is hard to estimate when
+                                  labels or representative examples are sparse. This is the lab's methodological and
+                                  open-source base. It includes the <a href="pyod.html">PyOD</a> ecosystem and ADBench,
+                                  plus benchmark infrastructure for NLP. It also covers automatic OOD detector selection,
+                                  modality-specific OOD methods for graphs, multimodal data, and video, and few-shot
+                                  cross-domain OOD detection. PyOD is the
+                                  flagship open-source artifact and is now in its third major release. When an incident
+                                  involves distribution shift, these methods supply the evidence for whether unfamiliar
+                                  input conditions contributed to it.
+                                  <a href="https://proceedings.mlsys.org/paper_files/paper/2021/hash/37385144cac01dff38247ab11c119e3c-Abstract.html" target="_blank" rel="noopener">SUOD</a>
+                                  and the GPU-accelerated
+                                  <a href="https://www.vldb.org/pvldb/vol16/p546-zhao.pdf" target="_blank" rel="noopener">TOD</a>
+                                  cut the compute cost of running many detectors at scale.
+                                </p>
+                                <p class="rq-keywords"><strong>Keywords:</strong> Anomaly Detection, Outlier Detection, Out-of-Distribution Detection, PyOD Ecosystem, Benchmark Design, Multimodal OOD, Graph OOD, Few-Shot OOD, OOD Detector Selection, Scalable Detection</p>
+                              </div>
+                            </details>
+                            <details class="rq smart-details">
+                              <summary>
+                                <span class="rq-label">Output</span>
+                                Does what a model says hold up against the evidence?
+                                <span class="rq-works">
+                                  <span class="rq-work"><a href="https://openreview.net/forum?id=bWUU0LwwMp" target="_blank" rel="noopener">TrustLLM</a> <span class="eco-venue">ICML'24</span></span>
+                                  <span class="rq-work"><a href="https://arxiv.org/abs/2504.06438" target="_blank" rel="noopener">Premise Verification</a> <span class="eco-venue">TMLR'26</span></span>
+                                </span>
+                              </summary>
+                              <div class="rq-detail">
+                                <h3>Verification of Output: LLM Evaluation, Hallucination, Jailbreaks, and Guardrails</h3>
+                                <p>
+                                  Between the data going in and the action taken, foundation models add their own failure surface: behavior under attack,
+                                  hallucination of fact and reasoning, and adversarial robustness of retrieval. Failures on any of
+                                  these surfaces can propagate downstream when the model's output is passed to an agent or a
+                                  user-facing system. My lab
+                                  measures these surfaces through jailbreak detection for vision-language models,
+                                  causal analysis of hallucination, query-agnostic attacks on retrieval-augmented generation, and
+                                  LLM-as-anomaly-detector benchmarks. It also covers category-adaptive safety alignment, which
+                                  targets the harm categories a single safety score leaves behind.
+                                  <a href="https://trustllmbenchmark.github.io/TrustLLM-Website/">TrustLLM</a> benchmarks the
+                                  trustworthiness of large language models. Choosing which model
+                                  answers is part of the same question:
+                                  <a href="https://arxiv.org/abs/2510.07429" target="_blank" rel="noopener">BaRP</a>
+                                  treats model choice as an online decision under shifting prices and accuracy needs.
+                                </p>
+                                <p class="rq-keywords"><strong>Keywords:</strong> Foundation-Model Trust, Trustworthiness Benchmarks, LLM Hallucination, Jailbreak Detection, RAG Security, Adversarial Retrieval, Vision-Language Models, LLM-as-Judge, Safety Alignment, LLM Routing</p>
+                              </div>
+                            </details>
+                            <details class="rq smart-details">
+                              <summary>
+                                <span class="rq-label">Action</span>
+                                Does what an agent does stay within the authority it was granted?
+                                <span class="rq-works">
+                                  <span class="rq-work"><a href="https://arxiv.org/abs/2608.03499" target="_blank" rel="noopener">WeClawArena</a> <span class="eco-venue">EMNLP Findings'26</span></span>
+                                  <span class="rq-work"><a href="https://arxiv.org/abs/2603.19423" target="_blank" rel="noopener">The Autonomy Tax</a> <span class="eco-venue">EMNLP'26</span></span>
+                                </span>
+                              </summary>
+                              <div class="rq-detail">
+                                <h3>Auditing of Action: AI Agent Security, Audit Trails, and MCP Security</h3>
+                                <p>
+                                  Here deployed systems act through tools, APIs, and shared state, so what a
+                                  system does becomes the primary failure surface. Whether an action stayed within the
+                                  authority a user granted cannot be read from the model's text alone, as
+                                  <a href="https://arxiv.org/abs/2606.28739" target="_blank" rel="noopener">Agent Safety Is Action Alignment</a>
+                                  argues. I work on auditability frameworks for
+                                  reconstructing, checking, and attributing agent behavior after deployment, and on runtime
+                                  control surfaces that intercept tool calls before they fire. Further work covers
+                                  agent-specific failure modes such as over-privilege and cross-user contamination. These span
+                                  the full lifecycle: pre-deployment audit, runtime tool-call mediation, and post-run
+                                  attribution and recovery. My <a href="auditable-agents.html">Auditable Agents</a> position
+                                  paper organizes these into five dimensions of auditability and three mechanism classes (detect,
+                                  enforce, recover). These methods are moving from research into deployable open-source infrastructure that audits agents from before deployment to after a run.
+                                </p>
+                                <p>
+                                  Efficiency is part of the same question. A trace logs what each step did;
+                                  <a href="https://arxiv.org/abs/2606.22741" target="_blank" rel="noopener">GRADE</a>
+                                  adds the dependencies and reused results it omits.
+                                  <a href="https://openreview.net/forum?id=0pbUfmwNTy" target="_blank" rel="noopener">DyFlow</a>
+                                  constructs and adjusts agent workflows as a run proceeds. Defenses carry their own cost:
+                                  across 97 agent tasks,
+                                  <a href="https://arxiv.org/abs/2603.19423" target="_blank" rel="noopener">The Autonomy Tax</a>
+                                  reports that defense-trained models time out on 99% of tasks, compared with 13% for
+                                  undefended baselines.
+                                </p>
+                                <p class="rq-keywords"><strong>Keywords:</strong> Agent Auditability, Runtime Audit, Pre-Execution Mediation, Agent Failure Modes, Over-Privilege, Cross-User Contamination, Action Alignment, Behavior Verification, Multi-Agent Systems, AI Agent Security, Agent Efficiency, Cost of Defense Training, Dependency Analysis</p>
+                              </div>
+                            </details>
+                            <details class="rq smart-details" id="modeling-of-risk">
+                              <summary>
+                                <span class="rq-label">Risk</span>
+                                What could a deployment lose, with what likelihood and severity, and how does that change over time?
+                                <span class="rq-works">
+                                  <span class="rq-work">agent-risk <span class="eco-venue">preprint forthcoming</span></span>
+                                </span>
+                              </summary>
+                              <div class="rq-detail">
+                                <h3>Modeling of Risk: Agent Risk, Loss, and Decision-Making</h3>
+                                <p>
+                                  We are developing risk models for agentic AI that connect behavioral evidence to
+                                  the likelihood and severity of losses in a specified deployment. These models must
+                                  account for permissions, controls, exposure, and the time horizon. We study how risk
+                                  changes as agents, tools, memory, and workflows evolve, and how estimates could inform
+                                  deployment decisions, risk controls, and insurance underwriting. Losses include harm
+                                  from a wrong action and the cost of work that was not needed. Drawing on the other
+                                  three directions, we ask what observed behavior can establish about future losses and
+                                  where uncertainty remains.
+                                </p>
+                                <p class="rq-keywords"><strong>Keywords:</strong> Agent Risk Modeling, Loss Estimation, Dynamic Risk Assessment, Deployment Decisions, Insurance Underwriting</p>
+                              </div>
+                            </details>
                           </div>
                           <p style="margin:0;">
                             Detection, verification, and auditing research provide evidence about how AI systems
@@ -459,32 +585,31 @@
                           <div class="eco-layer">
                             <div class="eco-layer-label">Foundations</div>
                             <div class="eco-layer-body">
-                              <div class="eco-wells">
-                                <div class="eco-well">
+                              <div class="eco-defs">
+                                <div class="eco-def">
                                   <div class="eco-kind"><i class="fas fa-layer-group" aria-hidden="true"></i>Framework</div>
-                                  <div class="eco-name"><a href="auditable-agents.html">Auditable Agents</a></div>
-                                  <div class="eco-items">what agent auditability requires: five dimensions and three mechanism classes (detect, enforce, recover). <a href="https://arxiv.org/abs/2604.05485">arXiv</a>.</div>
+                                  <div class="eco-items">
+                                    <a href="auditable-agents.html">Auditable Agents</a>: the five dimensions and three mechanism classes (detect, enforce, recover) that agent auditability requires. <a href="https://arxiv.org/abs/2604.05485">arXiv</a>.
+                                  </div>
                                 </div>
-                                <div class="eco-well">
+                                <div class="eco-def">
                                   <div class="eco-kind"><i class="fas fa-square-root-variable" aria-hidden="true"></i>Theory</div>
-                                  <div class="eco-theory-work">
-                                    <div class="eco-name"><a href="https://arxiv.org/abs/2610.07459" target="_blank" rel="noopener">Auditable Claims</a></div>
-                                    <div class="eco-items">conditions on the records needed to support a claim about an agent. <a href="https://github.com/yzhao062/auditable-claims" target="_blank" rel="noopener">worksheet</a>.</div>
-                                  </div>
-                                  <div class="eco-theory-work">
-                                    <div class="eco-name">agent-risk</div>
-                                    <div class="eco-items">risk bounds for tool-call gate changes from logs and targeted reruns. Preprint forthcoming.</div>
+                                  <div class="eco-items">
+                                    <a href="https://arxiv.org/abs/2610.07459" target="_blank" rel="noopener">Auditable Claims</a>: conditions on the records needed to support a claim about an agent. <a href="https://github.com/yzhao062/auditable-claims" target="_blank" rel="noopener">worksheet</a>.<br>
+                                    <strong>agent-risk</strong>: risk bounds for tool-call gate changes from logs and targeted reruns. Preprint forthcoming.
                                   </div>
                                 </div>
-                                <div class="eco-well">
+                                <div class="eco-def">
                                   <div class="eco-kind"><i class="fas fa-chart-line" aria-hidden="true"></i>Benchmark</div>
-                                  <div class="eco-name"><a href="https://arxiv.org/abs/2608.22808">CatchBench</a></div>
-                                  <div class="eco-items">can a failure be caught before a run, during it, or only after? <a href="https://github.com/yzhao062/catchbench">code</a>.</div>
+                                  <div class="eco-items">
+                                    <a href="https://arxiv.org/abs/2608.22808">CatchBench</a>: can a failure be caught before a run, during it, or only after? <a href="https://github.com/yzhao062/catchbench">code</a>.
+                                  </div>
                                 </div>
-                                <div class="eco-well">
+                                <div class="eco-def">
                                   <div class="eco-kind"><i class="fas fa-book" aria-hidden="true"></i>Resource</div>
-                                  <div class="eco-name"><a href="https://github.com/yzhao062/awesome-auditable-ai">awesome-auditable-ai</a></div>
-                                  <div class="eco-items">a curated map of papers, tools, datasets, and standards.</div>
+                                  <div class="eco-items">
+                                    <a href="https://github.com/yzhao062/awesome-auditable-ai">awesome-auditable-ai</a>: a curated map of papers, tools, datasets, and standards.
+                                  </div>
                                 </div>
                               </div>
                             </div>
@@ -503,113 +628,12 @@
                           </div>
                         </div>
 
-                        <ol>
-                          <li>
-                            <details class="smart-details">
-                              <summary><h3 style="display:inline; font-size:1rem; font-weight:700; margin:0;">Detection in Data: Anomaly, Outlier, and Out-of-Distribution Detection</h3></summary>
-                              <p style="margin-top:8px;">
-                                Here the question is whether an input departed from the conditions
-                                represented during development and evaluation. That boundary is hard to estimate when
-                                labels or representative examples are sparse. This is the lab's methodological and
-                                open-source base. It includes the <a href="pyod.html">PyOD</a> ecosystem and ADBench,
-                                plus benchmark infrastructure for NLP. It also covers automatic OOD detector selection,
-                                modality-specific OOD methods for graphs, multimodal data, and video, and few-shot
-                                cross-domain OOD detection. PyOD is the
-                                flagship open-source artifact and is now in its third major release. When an incident
-                                involves distribution shift, these methods supply the evidence for whether unfamiliar
-                                input conditions contributed to it.
-                                <a href="https://proceedings.mlsys.org/paper_files/paper/2021/hash/37385144cac01dff38247ab11c119e3c-Abstract.html" target="_blank" rel="noopener">SUOD</a>
-                                and the GPU-accelerated
-                                <a href="https://www.vldb.org/pvldb/vol16/p546-zhao.pdf" target="_blank" rel="noopener">TOD</a>
-                                cut the compute cost of running many detectors at scale.
-                              </p>
-                              <p style="font-family:'Poppins','Segoe UI',sans-serif; font-size:0.93rem; color:#7a2a2a;">
-                                <strong>Keywords:</strong> Anomaly Detection, Outlier Detection, Out-of-Distribution Detection, PyOD Ecosystem, Benchmark Design, Multimodal OOD, Graph OOD, Few-Shot OOD, OOD Detector Selection, Scalable Detection
-                              </p>
-                            </details>
-                          </li>
-                          <li>
-                            <details class="smart-details">
-                              <summary><h3 style="display:inline; font-size:1rem; font-weight:700; margin:0;">Verification of Output: LLM Evaluation, Hallucination, Jailbreaks, and Guardrails</h3></summary>
-                              <p style="margin-top:8px;">
-                                Between the data going in and the action taken, foundation models add their own failure surface: behavior under attack,
-                                hallucination of fact and reasoning, and adversarial robustness of retrieval. Failures on any of
-                                these surfaces can propagate downstream when the model's output is passed to an agent or a
-                                user-facing system. My lab
-                                measures these surfaces through jailbreak detection for vision-language models,
-                                causal analysis of hallucination, query-agnostic attacks on retrieval-augmented generation, and
-                                LLM-as-anomaly-detector benchmarks. It also covers category-adaptive safety alignment, which
-                                targets the harm categories a single safety score leaves behind.
-                                <a href="https://trustllmbenchmark.github.io/TrustLLM-Website/">TrustLLM</a> benchmarks the
-                                trustworthiness of large language models. Choosing which model
-                                answers is part of the same question:
-                                <a href="https://arxiv.org/abs/2510.07429" target="_blank" rel="noopener">BaRP</a>
-                                treats model choice as an online decision under shifting prices and accuracy needs.
-                              </p>
-                              <p style="font-family:'Poppins','Segoe UI',sans-serif; font-size:0.93rem; color:#7a2a2a;">
-                                <strong>Keywords:</strong> Foundation-Model Trust, Trustworthiness Benchmarks, LLM Hallucination, Jailbreak Detection, RAG Security, Adversarial Retrieval, Vision-Language Models, LLM-as-Judge, Safety Alignment, LLM Routing
-                              </p>
-                            </details>
-                          </li>
-                          <li>
-                            <details class="smart-details">
-                              <summary><h3 style="display:inline; font-size:1rem; font-weight:700; margin:0;">Auditing of Action: AI Agent Security, Audit Trails, and MCP Security</h3></summary>
-                              <p style="margin-top:8px;">
-                                Here deployed systems act through tools, APIs, and shared state, so what a
-                                system does becomes the primary failure surface. Whether an action stayed within the
-                                authority a user granted cannot be read from the model's text alone, as
-                                <a href="https://arxiv.org/abs/2606.28739" target="_blank" rel="noopener">Agent Safety Is Action Alignment</a>
-                                argues. I work on auditability frameworks for
-                                reconstructing, checking, and attributing agent behavior after deployment, and on runtime
-                                control surfaces that intercept tool calls before they fire. Further work covers
-                                agent-specific failure modes such as over-privilege and cross-user contamination. These span
-                                the full lifecycle: pre-deployment audit, runtime tool-call mediation, and post-run
-                                attribution and recovery. My <a href="auditable-agents.html">Auditable Agents</a> position
-                                paper organizes these into five dimensions of auditability and three mechanism classes (detect,
-                                enforce, recover). These methods are moving from research into deployable open-source infrastructure that audits agents from before deployment to after a run.
-                              </p>
-                              <p style="margin-top:8px;">
-                                Efficiency is part of the same question. A trace logs what each step did;
-                                <a href="https://arxiv.org/abs/2606.22741" target="_blank" rel="noopener">GRADE</a>
-                                adds the dependencies and reused results it omits.
-                                <a href="https://openreview.net/forum?id=0pbUfmwNTy" target="_blank" rel="noopener">DyFlow</a>
-                                constructs and adjusts agent workflows as a run proceeds. Defenses carry their own cost:
-                                across 97 agent tasks,
-                                <a href="https://arxiv.org/abs/2603.19423" target="_blank" rel="noopener">The Autonomy Tax</a>
-                                reports that defense-trained models time out on 99% of tasks, compared with 13% for
-                                undefended baselines.
-                              </p>
-                              <p style="font-family:'Poppins','Segoe UI',sans-serif; font-size:0.93rem; color:#7a2a2a;">
-                                <strong>Keywords:</strong> Agent Auditability, Runtime Audit, Pre-Execution Mediation, Agent Failure Modes, Over-Privilege, Cross-User Contamination, Action Alignment, Behavior Verification, Multi-Agent Systems, AI Agent Security, Agent Efficiency, Cost of Defense Training, Dependency Analysis
-                              </p>
-                            </details>
-                          </li>
-                          <li>
-                            <details id="modeling-of-risk" class="smart-details">
-                              <summary><h3 style="display:inline; font-size:1rem; font-weight:700; margin:0;">Modeling of Risk: Agent Risk, Loss, and Decision-Making</h3></summary>
-                              <p style="margin-top:8px;">
-                                We are developing risk models for agentic AI that connect behavioral evidence to
-                                the likelihood and severity of losses in a specified deployment. These models must
-                                account for permissions, controls, exposure, and the time horizon. We study how risk
-                                changes as agents, tools, memory, and workflows evolve, and how estimates could inform
-                                deployment decisions, risk controls, and insurance underwriting. Losses include harm
-                                from a wrong action and the cost of work that was not needed. Drawing on the other
-                                three directions, we ask what observed behavior can establish about future losses and
-                                where uncertainty remains.
-                              </p>
-                              <p style="font-family:'Poppins','Segoe UI',sans-serif; font-size:0.93rem; color:#7a2a2a;">
-                                <strong>Keywords:</strong> Agent Risk Modeling, Loss Estimation, Dynamic Risk Assessment, Deployment Decisions, Insurance Underwriting
-                              </p>
-                            </details>
-                          </li>
-                        </ol>
-
                         <h2 id="about" style="color:#990000; border-bottom:2px solid #990000; padding-bottom:6px; margin:30px 0 16px 0;">&#128100; About</h2>
 
                         <!-- PRERENDER:bio START -->
                                                 <details class="smart-details" style="margin:16px 0 14px 0;">
                                                   <summary><h3 style="display:inline; color:#990000; font-size:1rem; font-weight:700; line-height:inherit; margin:0;">Biography</h3></summary>
-                                                  <p>Dr. Yue Zhao is an Assistant Professor of Computer Science at the University of Southern California, where he leads the FORTIS Lab. He serves as Associate Co-Director of the USC Institute on Ethics and Trust in Computing for 2026-2027. He received his Ph.D. from Carnegie Mellon University's Heinz College of Information Systems and Public Policy in 2023. His lab builds Auditable AI Systems across four directions: detection in data, verification of output, auditing of action, and modeling of risk. The program spans anomaly detection, LLM evaluation, agent security and efficiency, and a developing direction connecting behavioral evidence to deployment risks and potential losses. Its current focus is open-source infrastructure for auditing autonomous agents before deployment and after a run. His lab also studies how LLMs and agents can affect people and the decisions made with them.</p>
+                                                  <p>Dr. Yue Zhao is an Assistant Professor of Computer Science at the University of Southern California, where he leads the FORTIS Lab. He serves as Associate Co-Director of the USC Institute on Ethics and Trust in Computing for 2026-2027. He received his Ph.D. from Carnegie Mellon University's Heinz College of Information Systems and Public Policy in 2023. His lab develops theory, methods, benchmarks, and open-source tools for Auditable AI Systems across four directions: detection in data, verification of output, auditing of action, and modeling of risk. The program spans anomaly detection, LLM evaluation, agent security and efficiency, and a developing direction connecting behavioral evidence to deployment risks and potential losses. Its current focus is open-source infrastructure for auditing autonomous agents before deployment and after a run. His lab also studies how LLMs and agents can affect people and the decisions made with them.</p>
                                                   <p>Dr. Zhao has authored over 80 peer-reviewed papers. His open-source projects, including PyOD, ADBench, TrustLLM, agent-audit, and Aegis, together exceed 65 million downloads and 30,000 GitHub stars. PyOD is named by OpenAI, used by Apache Beam, Amazon, Walmart, Databricks, and the European Space Agency, and discussed in five books. The anomaly-detection tools are cited in 97 patents. TrustLLM is cited in a U.S. Senate committee report, a NIST special publication on adversarial machine learning, and the 2025 and 2026 editions of the International AI Safety Report.</p>
                                                   <p>His honors include the NVIDIA Academic Grant Program Award, multiple Amazon Research Awards, the Capital One Research Award, and the Foresight Institute AI for Safety &amp; Science Nodes Grant. A Meta sponsored research agreement also supports the lab. AAAI selected him for New Faculty Highlights, and his papers have won a Best Short Paper Award at ACM SIGSPATIAL and a Second Prize CCC Award at the IEEE ICDM BlueSky Track. He is an Action Editor for Transactions on Machine Learning Research and the Journal of Data-centric Machine Learning Research, and an Associate Editor for ACM Transactions on AI for Science and IEEE Transactions on Neural Networks and Learning Systems.</p>
                                                 </details>
