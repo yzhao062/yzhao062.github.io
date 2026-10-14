@@ -27,7 +27,7 @@
     "docs_url": "https://pyod.readthedocs.io",
     "paper_url": "https://arxiv.org/abs/2412.12154",
     "demo_url": "",
-    "stars": 10036,
+    "stars": 10038,
     "tags": [
       "Anomaly Detection",
       "Outlier Detection",
@@ -65,7 +65,7 @@
     "docs_url": "",
     "paper_url": "",
     "demo_url": "",
-    "stars": 151,
+    "stars": 152,
     "tags": [
       "Agent Auditability",
       "Agent Reliability",
@@ -341,7 +341,7 @@
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/aegis.html",
     "paper_url": "https://arxiv.org/abs/2603.12621",
     "demo_url": "https://github.com/Justin0504/Aegis/blob/main/docs/images/readme_demo1.gif",
-    "stars": 540,
+    "stars": 542,
     "tags": [
       "AI Agent Security",
       "Policy Enforcement",
@@ -387,7 +387,7 @@
       "Configuration",
       "MCP"
     ],
-    "last_updated_at": "2026-10-13T22:00:40Z"
+    "last_updated_at": "2026-10-14T05:15:08Z"
   },
   {
     "name": "agent-style",
