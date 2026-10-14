@@ -1,5 +1,22 @@
 [
   {
+    "id": "preprint-agent-risk",
+    "section": "preprint",
+    "title": "agent-risk: Risk Assessment for Changes to AI Agents",
+    "paper_url": "https://arxiv.org/abs/2610.16280",
+    "authors": "Yue Zhao, Zixiang Xu, Angela Huyue Zhang, S. Alex Yang, Xiyang Hu.",
+    "venue": "arXiv preprint",
+    "year": 2026,
+    "sort_date": "2026-10-12",
+    "links": [
+      {
+        "type": "github",
+        "url": "https://github.com/yzhao062/agent-risk"
+      }
+    ],
+    "abstract": "agent-risk assesses proposed changes to AI agents using existing logs. It separates episodes that agree with the log, stop under a declared valuation, or continue and need further evidence. Replay assumes unchanged components remain invariant and the agent does not anticipate the change. The framework gives conditions for exact replay, saved-state requirements, and, for independent episodes, bounds on the reruns a decision needs. In a bash sandbox, targeted reruns reached both retry-gate decisions. Given the existing log, this used half the agent calls of a live test sized post hoc."
+  },
+  {
     "id": "workshop-synco-ttcl",
     "section": "workshop",
     "title": "SynCo: Data Synthesis Co-Training for Self-Evolving LLMs via Multi-Agent Reinforcement Learning",

@@ -377,7 +377,7 @@
         <h2 style="color:#990000; border-bottom:2px solid #990000; padding-bottom:6px; margin:30px 0 16px 0;">Foundations</h2>
         <p style="color:#555; font-size:0.95rem; margin-bottom:14px;">
           These artifacts apply at all three stages. They define auditability, specify the evidence for a
-          claim, bound the risk of a gate change, measure whether a failure was catchable, and map the
+          claim, assess the risk of an agent change, measure whether a failure was catchable, and map the
           surrounding literature.
         </p>
         <div style="border:1px solid #e8d0d0; border-radius:8px; padding:2px 16px; background:#fff7f7; margin-bottom:20px;">
@@ -417,10 +417,17 @@
                 </div>
               </div>
               <div style="margin-top:12px;">
-                <div style="font-size:1.05rem; font-weight:700; margin-bottom:4px;">agent-risk</div>
+                <div style="font-size:1.05rem; font-weight:700; margin-bottom:4px;"><a href="https://arxiv.org/abs/2610.16280" target="_blank" rel="noopener">agent-risk: Risk Assessment for Changes to AI Agents</a></div>
                 <div style="color:#555; font-size:0.88rem; line-height:1.5;">
-                  <em>What does a gate change do to risk?</em>
-                  Risk bounds for tool-call gate changes, estimated from logs and targeted reruns. Preprint forthcoming.
+                  <em>What risk can existing logs establish before an agent changes?</em>
+                  Separates episodes that act as logged, stop under a declared valuation, or continue and need further evidence.
+                  Gives conditions for exact replay and identifies the records, saved states, and targeted reruns needed for a decision.
+                  Replay assumes unchanged components remain invariant and the agent does not anticipate the change.
+                </div>
+                <div style="margin-top:6px; font-size:0.82rem;">
+                  <a href="https://arxiv.org/abs/2610.16280" target="_blank" rel="noopener"><i class="fas fa-scroll" aria-hidden="true"></i> arXiv</a>
+                  &nbsp;|&nbsp;
+                  <a href="https://github.com/yzhao062/agent-risk" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i> Code &amp; Materials</a>
                 </div>
               </div>
             </div>
