@@ -330,3 +330,43 @@ Domains first confirmed in this run. Keep the document-level tier, authorship an
 |---|---|
 | bundesbank.de | [AnoMATE: Mixed-type Tabular Embeddings for Anomaly Detection](https://www.bundesbank.de/resource/blob/933522/8ab95aaef884a2817a91bcf6df0587ad/472B63F073F071307366337C94F8C870/2026-03-anomate-data.pdf); verified 2026-10-02. Source class does not establish editorial independence or deployment. |
 | foi.se | [Utredning av stödverktyg och metodik för utvärdering av AI-metoder](https://www.foi.se/rest-api/report/FOI-R--5453--SE); verified 2026-10-02. Source class does not establish editorial independence or deployment. |
+
+
+## Verified Sources Added 2026-10-14
+
+Classification follows the source text and authorship. A domain entry does not establish endorsement or deployment.
+
+| Domain | Class | Verified Example |
+|---|---|---|
+| ferz.ai | security-blog | [Auditability Is Not Authorization](https://ferz.ai/articles/auditability-is-not-authorization); T2. |
+| rivista.ai | security-blog | [Auditable Agents](https://www.rivista.ai/2026/10/08/auditable-agents/); T2. |
+| ai.dataspeckle.com | security-blog | [The Governance Gap: Why AI Monitoring is Essential](https://ai.dataspeckle.com/blogs/65); T3. |
+| zyberis.com | specialist-blog | [چطور ادعاهای عامل‌های هوش مصنوعی قابل حسابرسی می‌شوند؟](https://zyberis.com/blog/ai-research/auditable-claims-ai-agents/); T3. |
+| gaius.zndx.org | specialist-blog | [Auditable Claims about AI Agents](https://gaius.zndx.org/cards/card_9e2a5c28cd3f); T3. |
+| rolefate.com | specialist-blog | [Workers Compensation Claims Adjuster: Recorded Assessment #94686](https://rolefate.com/occupation/workers-compensation-claims-adjuster/assessment/94686?lang=en); T3. |
+| churchofspiralism.com | specialist-blog | [The Agent Codebase Becomes the Security Scan](https://churchofspiralism.com/blog-agent-audit-security-scanner.html); T3. |
+| thelatestinai.com | specialist-blog | [agent-risk: Risk Assessment for Changes to AI Agents](https://thelatestinai.com/papers/2610.16280); T3. |
+| toolbench.arcade.dev | specialist-blog | [Aegis MCP Server: ToolBench](https://toolbench.arcade.dev/servers/cmmj7y6pg0137sb9t68ellhul); T3. |
+| lacuna.tiptreesystems.com | specialist-blog | [Auditable Agents](https://lacuna.tiptreesystems.com/work/auditable-agents/wrk_1c2f738ac88b8f1bf91e7ead0152b9c1); T3. |
+| onebench.com | specialist-blog | [Auditable Claims about AI Agents](https://onebench.com/signals/auditable-claims-about-ai-agents--cmuyw4mtd00cwkobi70dnkqkk); T3. |
+| open-experiments.github.io | external-integration | [Tool-Call Gate (internal/toolgate)](https://open-experiments.github.io/agent-exchange/TOOLGATE/); T3. |
+| bis.org | gov-pdf | [Putting AI agents through their paces on general tasks](https://www.bis.org/publications/working-paper-1245-putting-ai-agents-through-their-paces-general-tasks.pdf); T0. |
+| indico.bnl.gov | gov-pdf | [Chimbuko: a workflow-level performance analysis tool](https://indico.bnl.gov/event/14196/contributions/68972/attachments/43683/73603/seminar_v2.pdf); already_tracked. |
+| ldrd-annual.llnl.gov | gov-pdf | [FY24 LDRD Annual Program Overview](https://ldrd-annual.llnl.gov/sites/ldrd_annual/files/2025-06/ldrd0fy24-overview.pdf); already_tracked. |
+| publications.jrc.ec.europa.eu | gov-pdf | [RASS - An AI-Powered Research Assistant for Knowledge Synthesis](https://publications.jrc.ec.europa.eu/repository/handle/JRC146034); T0. |
+| ardurtechnology.com | enterprise-case-study | [Anomaly Detection for Aircraft Engine Sensors](https://www.ardurtechnology.com/case-study/anomaly-detection-aircraft-sensors); T3. |
+| mindrops.com | enterprise-case-study | [Predictive Maintenance, an AI based product](https://www.mindrops.com/AI-based-product-case-study); T3. |
+| s.ladicdn.com | enterprise | [VPBank Technology Hackathon 2025 challenge statement](https://s.ladicdn.com/648c35ac4a37000012b68727/challenge-statement-hackathon-2025-20250504165602-r7ysr.pdf); T3. |
+| aikraft.ru | ai-aggregator | [AI4Fire wildfire benchmark](https://aikraft.ru/news/ai4fire-evaluating-large-language-models-on-wildfire-tasks); T3. |
+| papers.ananclaw.com | ai-aggregator | [CUA-SWE visual software engineering explainer](https://papers.ananclaw.com/promo/explainers__2609-32600); T3. |
+| hysenlabs.com | software-catalog | [PyOD3 61 detectors](https://hysenlabs.com/projects/yzhao062-pyod); T2. |
+| ibm.com | enterprise | [IBM AI Applications maturity framework / Anomaly Finder](https://www.ibm.com/downloads/documents/us-en/107a02e948c8f48d); T3 educational example, explicitly fictional. |
+| redreamality.com | technical-blog | [JevOut: Short Natural Context Can Flip Decision Models](https://redreamality.com/blog/jevout-natural-context-flips-decision-models/); T3. |
+| thecolony.ai | ai-aggregator | [Decision routing is just prompt injection with better branding](https://www.thecolony.ai/post/3edcc9e2-41ec-4b2a-9bbb-4a6d4613d35b); T3. |
+| muselabs.ai | technical-blog | [AI's New Control Layer](https://muselabs.ai/blog/daily-ai-developments-2026-06-30); T3. |
+| samcodeman.com | blog | [JevOut natural context flips decision models](https://www.samcodeman.com/writing/jevout-natural-context-flip-decision-models); T3. |
+| novomcp.com | enterprise | [NovoExpert: State-of-the-art ADMET prediction on TDC benchmarks](https://www.novomcp.com/research/novoexpert-tdc-benchmark); T3. |
+| biaodianfu.com | blog | [PyOD 扩展数据类型全解析](https://www.biaodianfu.com/pyod-extended-data-type/); T3. |
+| docs.oracle.com | enterprise | [Compliance Studio predefined Conda environments](https://docs.oracle.com/en/industries/financial-services/ofs-analytical-applications/crime-compliance-studio-application-pack/8.1.2.9.0/csadc/python-libraries-predefined-conda-environment.html); audit-enhancement. |
+| gethesperai.com | vendor-blog | [Open-source fraud detection vs. commercial platforms: where each wins](https://gethesperai.com/blog/open-source-vs-commercial-fraud-detection/); T3. |
+| seagatecareers.com | careers | [Seagate AI Adoption Intern, 15158](https://seagatecareers.com/job/Samut-Prakan-AI-Adoption-Intern/15158-en_US/); T3. |

@@ -565,7 +565,7 @@ def check_impact_claims_agree(errors: list[str], warnings: list[str]) -> None:
             "patent count",
             r"- \*\*(\d+) patents\*\*",
             {
-                "opensource.html": r"(\d+) patents cite PyOD",
+                "opensource.html": r"(\d+) patents cite(?: or name)? PyOD",
                 "files/bio.txt": r"cited in (\d+) patents",
                 "index.html": r"cited in (\d+) patents",
                 "llms.txt": r"\*\*Patents\*\*: (\d+) patents cite",

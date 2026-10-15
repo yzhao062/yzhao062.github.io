@@ -339,3 +339,21 @@ This is the disambiguation-side equivalent of `domain-registry.md`'s recall-floo
 | NTU thesis 94149 download | The response contains a multipart envelope before the PDF payload. Inspect the `%PDF` to `%%EOF` payload before calling it unreadable; the thesis does use PyOD. |
 
 The Navy SBIR 24.2 instructions, GPT-4o system card, Claude 3.7 Sonnet system card, Grok 4.7 model card, Gemini 2.5 Flash model card, and the checked CRS/White House documents received document-specific negative verdicts. These are not blanket claims about every document from those organizations. Exact URLs, routes, versions and decisions are preserved in `external-research/news-search-2026-10-02/candidates.jsonl`.
+
+
+## Checks Added 2026-10-14
+
+| Lead | Resolution |
+|---|---|
+| Argus Security, argus-security.dev | Homepage links Auditable Agents but names Yue Zhao as scientific advisor and paper coauthors as founder/cofounder. First-party affiliation; exclude from independent coverage. |
+| FERZ auditability analysis | Directly cites Auditable Agents v4. Count as critical vendor commentary, not endorsement or deployment. Its stated AI use is editorial assistance under named human authorship. |
+| OpenClaw Aegis Signer | Personal downstream plugin cites AEGIS, but signs after tool execution and fails open. Do not describe it as reproducing the pre-execution firewall. |
+| Arcade ToolBench Aegis | Exact Justin0504/Aegis link is valid. Page says scoring was not performed, so its displayed 0/100 is not a valid measured score. |
+| DrugAgent in npj Drug Discovery s44386-026-00075-0 | Reference 62 identifies a different Yang Q. et al. paper. Reference 127 is a valid TDC citation. Do not count this as FORTIS DrugAgent coverage. |
+| Google Assured OSS localized package lists | July 2024 Japanese catalog lists PyOD; checked June 2026 English content omits it. Historical localized evidence cannot establish current inclusion. |
+| Hysen Labs PyOD review | Current source records review and approval by Kacey on October 5, 2026. Preserve the existing media row; the earlier machine-only inference was stale and is rejected. |
+| Patent family tables | Google Patents places citations and cited-by rows below the family heading. Only family applications and country-status rows establish family membership. |
+
+## October 14, 2026 Government Supplement
+
+EDPB, AI Privacy Risks & Mitigations: Large Language Models (April 2025), PDF p.16, uses TrustLLM for the Linkoping University European project at trustllm.eu. It does not identify the ICML benchmark. CISA SB26-201 lists PyOD under CVE-2026-15529; CVE-2026-15531 in the adjacent table row belongs to HashNeRF-pytorch. A keyword hit across neighboring rows is not an identifier match. Raw sources and reviewed decisions are in external-research/news-search-2026-10-14/prun-verdicts.jsonl.

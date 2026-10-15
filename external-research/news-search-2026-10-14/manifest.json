@@ -1,0 +1,81 @@
+{
+  "run_date": "2026-10-14",
+  "start_utc": "2026-10-15T05:28:50Z",
+  "hard_stop_utc": "2026-10-15T06:28:50Z",
+  "scope": "targeted_incremental",
+  "inventory_publications": 133,
+  "inventory_tools": 22,
+  "candidate_records": 83,
+  "statuses": {
+    "counted": 39,
+    "dropped": 20,
+    "source-backfill": 5,
+    "verified-negative": 3,
+    "paywall_or_blocked": 13,
+    "candidate": 3
+  },
+  "new_ledger_rows": {
+    "1": 2,
+    "2": 2,
+    "3": 35
+  },
+  "transfers": [],
+  "patent_families": 107,
+  "patent_claim_families": 11,
+  "raw_evidence_storage": "/tmp/news-search-20261014-codex",
+  "commit_or_push": false,
+  "codex_queries_logged": 359,
+  "codex_queries_by_unit": {
+    "security-vendor": 107,
+    "institutional": 122,
+    "broad-discovery": 112,
+    "coordinator": 18
+  },
+  "items_with_targeted_queries": 41,
+  "items_not_searched": 114,
+  "worker_outputs_reconciled": {
+    "security-vendor": true,
+    "institutional": true,
+    "broad-discovery": true
+  },
+  "prun_queries_logged": 78,
+  "prun_queries_by_unit": {
+    "recent-government": 20,
+    "security-reports": 32,
+    "industry-rules": 26
+  },
+  "prun_worker_results": {
+    "recent-government": {
+      "status": "SUCCESS",
+      "duration_seconds": 420.918986,
+      "num_turns": 1,
+      "conversation_id": "b7a7d423-3b06-45d0-a1a7-831d091985e6",
+      "event_log": "/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-recent-government-36568-59e4eae268f84077/tail",
+      "event_log_sha256": "97af7dfbf925513c67ad93b1665e94251f89c3c5ba0a2b6e05a9b167303ac84d"
+    },
+    "security-reports": {
+      "status": "SUCCESS",
+      "duration_seconds": 440.401046,
+      "num_turns": 1,
+      "conversation_id": "b9c8c6f5-beac-4eac-a2c9-18f4f2a9bd19",
+      "event_log": "/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-security-reports-36757-2c6dc3ba6cb34ffa/tail",
+      "event_log_sha256": "f7e20bc2a1baf4cecaae4e48e2f191d31ddc9ccfc2205a517fcc5ac6e94c831c"
+    },
+    "industry-rules": {
+      "status": "SUCCESS",
+      "duration_seconds": 455.401022,
+      "num_turns": 1,
+      "conversation_id": "6523211d-9077-4e25-994b-0d989efe1f6b",
+      "event_log": "/var/folders/sj/82qpdfvj21g5ydhsrw5xpc940000gn/T/prun-task-36fdc6ba-industry-rules-36787-1039f8aac2194470/tail",
+      "event_log_sha256": "39c594bb1371adb6c85ab64deae6631c964271de6e610cd1a4732090bf1c7b6a"
+    }
+  },
+  "prun_reviewed_sources": 11,
+  "prun_new_ledger_rows": 0,
+  "coverage_matrix_scope": "Codex/coordinator portion only; supplementary exact queries are in prun-queries.jsonl.",
+  "completed_utc": "2026-10-15T06:15:22+00:00",
+  "all_workers_stopped": true,
+  "total_queries_logged": 437,
+  "elapsed_minutes": 46.53,
+  "commit_or_push_scope": "Research workers only; coordinator publication authorized separately after review."
+}

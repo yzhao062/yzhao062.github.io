@@ -447,6 +447,11 @@
                             <td class="impact-source"><a href="https://www.databricks.com/blog/2023/03/13/unsupervised-outlier-detection-databricks.html">Databricks Blog</a></td>
                           </tr>
                           <tr>
+                            <td><span class="impact-type type-enterprise">Oracle</span></td>
+                            <td>Oracle Financial Services Compliance Studio 8.1.2.9.0 lists PyOD 2.0.2 in both its default and ml4aml predefined Conda environments.</td>
+                            <td class="impact-source"><a href="https://docs.oracle.com/en/industries/financial-services/ofs-analytical-applications/crime-compliance-studio-application-pack/8.1.2.9.0/csadc/python-libraries-predefined-conda-environment.html">Oracle documentation</a></td>
+                          </tr>
+                          <tr>
                             <td><span class="impact-type type-enterprise">Enterprise</span></td>
                             <td>IQVIA healthcare fraud detection (123K+ pharmacy claims)</td>
                             <td class="impact-source"><a href="https://arxiv.org/abs/2003.05731">SUOD Paper</a></td>
@@ -458,7 +463,7 @@
                           </tr>
                           <tr>
                             <td><span class="impact-type type-patent">Patents</span></td>
-                            <td>97 patents cite PyOD/COPOD/ECOD/LSCP/SUOD/TODS/XGBOD/PyGOD/CONAD/LUNAR/MetaOD/ADBench (China x72, US x15, WIPO x3, EPO x3, Germany x1, Japan x1, Korea x1, Slovakia x1), counted as distinct inventions rather than publication numbers. Many go beyond citation to implementation: China Mobile adopts the PyOD toolkit and selects twelve of its algorithms, Baidu trains COPOD models on five feature classes for anomalous-access detection, and Atlas Space Operations implements COPOD's empirical-copula scoring. Seven name a tool inside a numbered claim. Other assignees include Visa International, Tencent, Genentech, IBM, Rapid7, CrowdStrike, Booz Allen Hamilton, State Grid, Harbin Institute of Technology, and Ericsson</td>
+                            <td>107 patents cite or name PyOD/COPOD/ECOD/LSCP/SUOD/TODS/XGBOD/PyGOD/CONAD/LUNAR/MetaOD/ADBench (China x77, US x18, WIPO x3, EPO x4, Germany x1, Japan x1, Korea x2, Slovakia x1), counted as distinct inventions rather than publication numbers. Many go beyond citation to implementation: China Mobile adopts the PyOD toolkit and selects twelve of its algorithms, Baidu trains COPOD models on five feature classes for anomalous-access detection, and Atlas Space Operations implements COPOD's empirical-copula scoring. Eleven name a tool inside a numbered claim. Other assignees include Visa International, Tencent, Genentech, IBM, Rapid7, CrowdStrike, Booz Allen Hamilton, State Grid, Harbin Institute of Technology, and Ericsson</td>
                             <td class="impact-source"><a href="https://patents.google.com/patent/US12242939B2/en">Visa</a> &middot; <a href="https://patents.google.com/patent/CN115209452B/en">China Mobile</a> &middot; <a href="https://patents.google.com/patent/CN115603955B/en">Baidu</a> &middot; <a href="https://patents.google.com/patent/US12184394B2/en">Atlas Space</a></td>
                           </tr>
                           <tr>
@@ -503,7 +508,7 @@
                     <!-- Agent Auditing line -->
                     <div id="agent-auditing-impact" class="impact-card">
                       <h3>Agent Auditability Line <span style="font-weight:400; color:#555; font-size:0.9rem;">&mdash; auditable, Aegis, agent-audit, Auditable Agents, GRADE, Implicit Execution Tracing</span></h3>
-                      <div class="impact-subtitle">Early external validation of the lab's current frontier (2026 releases)</div>
+                      <div class="impact-subtitle">External coverage, comparisons, and research use (2026 releases)</div>
                       <table class="impact-table">
                         <colgroup><col class="col-type"><col class="col-evidence"><col class="col-source"></colgroup><thead><tr><th>Type</th><th>Evidence</th><th>Source</th></tr></thead>
                         <tbody>
@@ -526,6 +531,21 @@
                             <td><span class="impact-type type-enterprise">Industry Blog</span></td>
                             <td>WIDTH applies the Auditable Agents five dimensions and the 8.3 ms firewall-overhead result to compliance infrastructure</td>
                             <td class="impact-source"><a href="https://www.width.com/blog/ai-compliance-workflows-accountability">WIDTH</a></td>
+                          </tr>
+                          <tr>
+                            <td><span class="impact-type type-enterprise">Vendor Analysis</span></td>
+                            <td>FERZ's October 2026 analysis cites <a href="auditable-agents.html">Auditable Agents</a> while contrasting audit evidence with authorization before execution, and presents FERZ's own approach.</td>
+                            <td class="impact-source"><a href="https://ferz.ai/articles/auditability-is-not-authorization">FERZ analysis</a></td>
+                          </tr>
+                          <tr>
+                            <td><span class="impact-type type-media">Media</span></td>
+                            <td>Rivista AI's October 2026 feature explains Auditable Agents' five dimensions, Aegis results, and the need for independent replication.</td>
+                            <td class="impact-source"><a href="https://www.rivista.ai/2026/10/08/auditable-agents/">Rivista AI</a></td>
+                          </tr>
+                          <tr>
+                            <td><span class="impact-type type-platform">Downstream Code</span></td>
+                            <td>Agent Exchange implements a scoring function based on Auditable Agents' five dimensions to compare tool-call gates. OpenClaw Aegis Signer credits AEGIS as inspiration for signing records after tool execution. Both are independent open-source projects; their code was read but not run.</td>
+                            <td class="impact-source"><a href="https://github.com/open-experiments/agent-exchange/blob/c0fa748c6eb06844c9926212def0d5805f43e6db/src/internal/toolgate/score.go">Agent Exchange</a> &middot; <a href="https://github.com/msbel5/openclaw-aegis-signer">Aegis Signer</a></td>
                           </tr>
                           <tr>
                             <td><span class="impact-type type-media">Media</span></td>
@@ -638,6 +658,16 @@
                             <td><span class="impact-type type-gov">NIST</span></td>
                             <td>Named in NIST AI 100-2e2025 Section 3.6 "Benchmarks for AML Vulnerabilities"</td>
                             <td class="impact-source"><a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-2e2025.pdf">NIST PDF</a></td>
+                          </tr>
+                          <tr>
+                            <td><span class="impact-type type-gov">BIS Research</span></td>
+                            <td>BIS Working Paper 1245 (2025), on evaluating AI agents on general tasks, cites TrustLLM in its review of language-model benchmarks.</td>
+                            <td class="impact-source"><a href="https://www.bis.org/publications/working-paper-1245-putting-ai-agents-through-their-paces-general-tasks.pdf">BIS paper</a></td>
+                          </tr>
+                          <tr>
+                            <td><span class="impact-type type-gov">European Commission</span></td>
+                            <td>The JRC's 2026 RASS research-assistant report cites TrustLLM when discussing misinformation, hallucination, and bias risks.</td>
+                            <td class="impact-source"><a href="https://doi.org/10.2760/0363450">JRC report</a></td>
                           </tr>
                           <tr>
                             <td><span class="impact-type type-policy">Policy</span></td>

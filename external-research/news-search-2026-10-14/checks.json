@@ -1,0 +1,30 @@
+{
+  "site_ci": "passed on isolated tracked-file snapshot",
+  "ledger_rows": {
+    "1": 45,
+    "2": 131,
+    "3": 575
+  },
+  "candidate_records": 83,
+  "unique_candidate_ids": 83,
+  "all_counted_have_raw_evidence_and_direct_mentions": true,
+  "all_records_carry_tier_was": true,
+  "phase_a_tiers_note": "Blank Phase A values preserved; no tier-calibration statistic is inferred.",
+  "patents_independent_review": "10 families; 4 numbered-claim families; 21 publication versions checked",
+  "new_ledger_rows": {
+    "1": 2,
+    "2": 2,
+    "3": 35
+  },
+  "full_inventory_matrix_rows": 155,
+  "deadline_utc": "2026-10-15T06:28:50Z",
+  "prun_supplement": "complete; three SUCCESS results; 78 completed search calls; 11 reviewed sources; zero new ledger rows",
+  "prun_source_hashes_verified": 9,
+  "gao_held_candidate_resolved": "verified-negative from recovered full PDF",
+  "tier_status_separated": true,
+  "non_tier_worker_labels_preserved_separately": 39,
+  "within_one_hour": true,
+  "all_workers_stopped": true,
+  "raw_fetch_hashes_verified": 74,
+  "citation_handoff_records": 3
+}
