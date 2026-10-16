@@ -1,0 +1,44 @@
+{
+  "source_repository": "https://github.com/yzhao062/yzhao062.github.io",
+  "source_directory": "images/fortis",
+  "masters": "The three SVG files are authoritative. Edit their paths, then run scripts/export_fortis_brand.py.",
+  "colors": {
+    "USC Cardinal": "#990000",
+    "USC Gold": "#FFCC00"
+  },
+  "color_reference": "https://identity.usc.edu/identity/color/",
+  "editing": "Paths and letter groups are editable; lettering is outlined, not live text.",
+  "usage": {
+    "fortis-logo": "Square logo with bottom wordmark.",
+    "fortis-symbol": "Square symbol with all motion lines, for icons or placement beside a title.",
+    "fortis-wordmark": "Separate outlined lettering for custom layouts."
+  },
+  "compatibility_alias": "images/lab-logo.png is exported from fortis-logo.svg for existing consumers and social previews.",
+  "exports": "PNG files have transparent backgrounds. PDF files retain vector paths for LaTeX.",
+  "assets": {
+    "fortis-logo": {
+      "svg_sha256": "d21a28b564eac942a479925464bec4c4dca261302f0ad00c71a66a6502be7618",
+      "paths": 32,
+      "png_size": [
+        2048,
+        2048
+      ]
+    },
+    "fortis-symbol": {
+      "svg_sha256": "8c4889afa587251b113c0f974e79707b3a58994c1707cb69eee38f95ca6b5f8c",
+      "paths": 20,
+      "png_size": [
+        2048,
+        2048
+      ]
+    },
+    "fortis-wordmark": {
+      "svg_sha256": "2d3b97b8272acf91bb676d30fa9c5a5466234dd8afd01e0a8e97f5bd05a8e890",
+      "paths": 12,
+      "png_size": [
+        1600,
+        447
+      ]
+    }
+  }
+}
