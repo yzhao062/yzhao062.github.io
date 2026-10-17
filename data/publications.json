@@ -1,5 +1,26 @@
 [
   {
+    "id": "preprint-grid-bench",
+    "section": "preprint",
+    "title": "Grid-Bench: Can LLMs Predict How Discrete Worlds Change?",
+    "paper_url": "https://arxiv.org/abs/2610.22312",
+    "authors": "Zixiang Xu, Zirui Song, Wanrong Zheng, Chiyu Zhang, Yue Huang, Yuyang Peng, Kexin Zhang, Jinkun Chen, Xiuying Chen, Xiangliang Zhang, Yan Liu, Laurent Itti, Frank Shyu, Xiaoqiang Luo, Sandeep Pandey, Xi Liu, Luke Simon, Xiyang Hu, Yue Zhao.",
+    "venue": "arXiv preprint",
+    "year": 2026,
+    "sort_date": "2026-10-15",
+    "links": [
+      {
+        "type": "project",
+        "url": "https://grid-bench.github.io/"
+      },
+      {
+        "type": "github",
+        "url": "https://github.com/grid-bench/Grid-Bench"
+      }
+    ],
+    "abstract": "Grid-Bench evaluates whether large language models can predict how a discrete world changes. Each task provides an initial grid, explicit textual rules, and a history of events, and the model must output the entire final grid. The benchmark covers eight operation families across 2D, 3D, and 4D worlds, and a simulator reference checks every cell. Evaluating six large language models, we find that complete-state accuracy falls sharply as event histories lengthen. Models with similar exact-match accuracy can also differ in how many cells they get wrong."
+  },
+  {
     "id": "preprint-agent-risk",
     "section": "preprint",
     "title": "agent-risk: Risk Assessment for Changes to AI Agents",
