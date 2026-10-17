@@ -37,7 +37,15 @@ from collections import Counter
 REPO_DEFAULT = [
     "news-coverage-audit.md",
     "citation-affiliation-audit.md",
+    # Per-round notes moved out of the audit on 2026-10-17. They still name held, dropped and
+    # verified-negative documents, so suppression must keep reading them.
+    "external-research/news-coverage-rounds.md",
 ]
+# Each run archive's candidate file holds every verdict, including the long-tail items that a
+# Ledger 3 cluster row shows only by example, so suppression reads them too.
+REPO_DEFAULT_GLOBS = ["external-research/news-search-*/candidates.jsonl"]
+# Defaults resolve against the repository root, so the command works from any directory.
+REPO_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 
 # --- extractors ---------------------------------------------------------------------------------
 # Each returns a set of canonical identifier strings for one line of the record.
@@ -104,6 +112,14 @@ def identifiers(line):
     return out
 
 
+def _label(path):
+    """Repo-relative path, so two run folders' candidates.jsonl stay distinguishable."""
+    try:
+        return os.path.relpath(os.path.abspath(path), REPO_ROOT)
+    except ValueError:
+        return os.path.basename(path)
+
+
 def build(paths, out_path):
     seen = {}
     per_file = Counter()
@@ -116,8 +132,8 @@ def build(paths, out_path):
                 for kind, ident in identifiers(line):
                     if ident not in seen:
                         seen[ident] = {"id": ident, "kind": kind,
-                                       "source": f"{os.path.basename(path)}:{lineno}"}
-                        per_file[os.path.basename(path)] += 1
+                                       "source": f"{_label(path)}:{lineno}"}
+                        per_file[_label(path)] += 1
     with open(out_path, "w", encoding="utf-8", newline="\n") as fh:
         for ident in sorted(seen):
             fh.write(json.dumps(seen[ident], ensure_ascii=False) + "\n")
@@ -175,7 +191,8 @@ def main():
     sub = ap.add_subparsers(dest="cmd", required=True)
     b = sub.add_parser("build")
     b.add_argument("--audit", action="append", default=None,
-                   help="record file to read; repeatable. Defaults to the two audit markdown files.")
+                   help="record file to read; repeatable. Defaults to the audit, the citation-affiliation audit and the "
+                        "round notes. Every run archive's candidates.jsonl is added either way.")
     b.add_argument("--out", default="identity-index.jsonl")
     c = sub.add_parser("check")
     c.add_argument("--index", required=True)
@@ -184,7 +201,15 @@ def main():
     a = ap.parse_args()
 
     if a.cmd == "build":
-        build(a.audit or REPO_DEFAULT, a.out)
+        import glob
+        paths = list(a.audit) if a.audit else [os.path.join(REPO_ROOT, p) for p in REPO_DEFAULT]
+        # The run archives are part of the record whatever --audit names: they hold the
+        # long-tail items a cluster row shows only by example.
+        for g in REPO_DEFAULT_GLOBS:
+            for p in sorted(glob.glob(os.path.join(REPO_ROOT, g))):
+                if p not in paths:
+                    paths.append(p)
+        build(paths, a.out)
     else:
         urls = list(a.url)
         if a.stdin:

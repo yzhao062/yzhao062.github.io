@@ -11,16 +11,18 @@ Sources supported:
 - Dimensions Analytics API (requires `DIMENSIONS_API_KEY` in `.env`,
   scientometric researcher access tier). Better CS coverage in practice.
 
-Use `--source both` to merge OpenAlex and Dimensions entries. Cross-source
-duplicates are deduplicated by (institution, citing title, cited work), so a
-citation that both sources see is counted once but tagged as
-`openalex+dimensions`.
+Use `--source both` to merge OpenAlex and Dimensions entries. Rows are
+deduplicated by (canonical organization, normalized citing title, cited work),
+so a citation that both sources see is counted once but tagged as
+`openalex+dimensions`. Citing papers authored by the PI or by two or more
+frequent co-authors are excluded and listed separately.
 
 Usage:
     python scripts/citation_affiliation_audit.py                         # OpenAlex only
     python scripts/citation_affiliation_audit.py --source both
     python scripts/citation_affiliation_audit.py --source dimensions
     python scripts/citation_affiliation_audit.py --limit 5               # quick OpenAlex check
+    python scripts/citation_affiliation_audit.py --from-raw .cache/citation-audit-raw.json
 """
 
 from __future__ import annotations
@@ -40,9 +42,13 @@ from typing import Iterable
 from citation_audit_common import (
     classify_institution,
     dedup_entries,
+    load_coauthors,
     load_papers,
+    load_work_authors,
     normalize_arxiv_id,
     normalize_doi,
+    normalize_title,
+    screen_self_citation,
     short_label,
     source_display_label,
 )
@@ -141,8 +147,11 @@ def _find_openalex_id(title: str, paper_url: str | None = None):
         time.sleep(0.1)
 
     # Title fallback with prefix-anchor + word-overlap matching
+    # Punctuation such as "?" in a title makes the search endpoint return HTTP 400,
+    # which used to be recorded as "not found"; search on a plain word bag instead.
+    search_text = re.sub(r"\s+", " ", re.sub(r"[^\w\s]", " ", title)).strip()
     url = "https://api.openalex.org/works?" + urllib.parse.urlencode({
-        "search": title,
+        "search": search_text,
         "per_page": "5",
         "select": "id,title,cited_by_count,publication_year",
     })
@@ -210,6 +219,10 @@ def _get_openalex_citing(work_id: str, max_pages: int = 50):
         for w in data["results"]:
             seen: set[str] = set()
             inst_details: list[dict] = []
+            authors = [
+                (a.get("author") or {}).get("display_name", "")
+                for a in w.get("authorships", [])
+            ]
             for authorship in w.get("authorships", []):
                 for inst in authorship.get("institutions", []):
                     name = inst.get("display_name", "")
@@ -226,6 +239,7 @@ def _get_openalex_citing(work_id: str, max_pages: int = 50):
                     "title": w.get("title", ""),
                     "year": w.get("publication_year"),
                     "institutions": inst_details,
+                    "authors": [a for a in authors if a],
                 })
 
         cursor = data.get("meta", {}).get("next_cursor")
@@ -289,7 +303,10 @@ def fetch_openalex_entries(papers: list[dict], *, verbose: bool = True, log=prin
                 cache_hits += 1
             else:
                 oa_id, _, cite_count = _find_openalex_id(title, paper_url=p.get("paper_url"))
-                cache[key] = {"id": oa_id, "cited_by": cite_count}
+                # Cache only resolved works: a miss may be an HTTP error or an indexing lag,
+                # and caching it would stop every later run from trying again.
+                if oa_id:
+                    cache[key] = {"id": oa_id, "cited_by": cite_count}
                 time.sleep(0.12)
             if oa_id and cite_count > 0:
                 found_works[oa_id] = short_label(title, venue)
@@ -348,17 +365,19 @@ def fetch_openalex_entries(papers: list[dict], *, verbose: bool = True, log=prin
             if c.get("id"):
                 citing_ids.add(c["id"])
             for inst in c["institutions"]:
-                tier, category = classify_institution(inst["name"])
+                tier, category, org = classify_institution(inst["name"])
                 if tier is None:
                     continue
                 entries.append({
                     "tier": tier,
                     "category": category,
+                    "org": org,
                     "institution": inst["name"],
                     "country": inst.get("country", ""),
                     "cited_work": short_name,
                     "citing_title": c.get("title", ""),
                     "citing_id": c.get("id", ""),
+                    "authors": c.get("authors", []),
                     "year": c.get("year"),
                     "source": "openalex",
                 })
@@ -385,35 +404,99 @@ def fetch_openalex_entries(papers: list[dict], *, verbose: bool = True, log=prin
 # ── Output ───────────────────────────────────────────────────────────────
 
 
-def _write_markdown(merged: dict, total_papers: int, out_path: Path) -> None:
-    entries = merged["entries"]
+COUNTRY_NAMES = {
+    "US": "United States", "GB": "United Kingdom", "CN": "China", "DE": "Germany",
+    "FR": "France", "JP": "Japan", "KR": "South Korea", "IN": "India",
+    "CH": "Switzerland", "SE": "Sweden", "IE": "Ireland", "CA": "Canada",
+    "AU": "Australia", "NL": "Netherlands", "IT": "Italy", "ES": "Spain",
+    "SG": "Singapore", "BR": "Brazil", "PT": "Portugal", "RO": "Romania",
+    "BE": "Belgium", "DK": "Denmark", "FI": "Finland", "NO": "Norway",
+    "AT": "Austria", "IL": "Israel", "TW": "Taiwan", "HK": "Hong Kong",
+    "PL": "Poland", "CZ": "Czechia", "GR": "Greece", "TR": "Turkey",
+    "SA": "Saudi Arabia", "AE": "United Arab Emirates", "MX": "Mexico",
+    "NZ": "New Zealand", "ZA": "South Africa", "RU": "Russia",
+}
+
+
+def _country_label(raw: str) -> str:
+    """Render ", "-joined country names or ISO codes as unique full names."""
+    out: list[str] = []
+    for c in (raw or "").split(", "):
+        name = COUNTRY_NAMES.get(c.strip().upper(), c.strip()) if len(c.strip()) == 2 else c.strip()
+        if name and name not in out:
+            out.append(name)
+    return ", ".join(out)
+
+
+def _cell(text: str, max_len: int | None = None) -> str:
+    text = (text or "").replace("|", "/").replace("\n", " ").strip()
+    if max_len and len(text) > max_len:
+        text = text[:max_len].rsplit(" ", 1)[0].rstrip(",;:-") + "\u2026"
+    return text
+
+
+def _n(count: int, noun: str) -> str:
+    return f"{count:,} {noun}" + ("" if count == 1 else "s")
+
+
+WORK_AUTHORS = load_work_authors(str(PROJECT_ROOT))
+
+
+def _screen(entries: list[dict], coauthors: dict):
+    """Split merged entries into kept rows and excluded self / co-author rows."""
+    kept: list[dict] = []
+    excluded: list[dict] = []
+    possible: list[dict] = []
+    for e in entries:
+        verdict, names = screen_self_citation(
+            e.get("authors") or [], coauthors, WORK_AUTHORS.get(e.get("cited_work", ""))
+        )
+        if verdict in ("self", "coauthor"):
+            excluded.append({**e, "verdict": verdict, "matched": names})
+            continue
+        if verdict == "possible":
+            possible.append({**e, "matched": names})
+        kept.append(e)
+    return kept, excluded, possible
+
+
+TIER_HEADINGS = (
+    ("T0", "Tier 0: Government, National Labs, Space Agencies, Central Banks, Defense, "
+           "Research Institutes, Foundation Model Companies"),
+    ("T1", "Tier 1: Big Tech, Finance, Pharma, Healthcare, Industrial, Telecom"),
+)
+
+
+def _write_markdown(merged: dict, total_papers: int, out_path: Path, coauthors: dict,
+                    generated: str) -> None:
     per_source: dict[str, dict] = merged["per_source"]
-    t0 = [e for e in entries if e["tier"] == "T0"]
-    t1 = [e for e in entries if e["tier"] == "T1"]
+    kept, excluded, possible = _screen(merged["entries"], coauthors)
 
     src_names = list(per_source.keys())
     src_label = " + ".join(source_display_label(s) for s in src_names)
 
     with open(out_path, "w", encoding="utf-8") as f:
         f.write("# Citation Affiliation Audit\n\n")
-        f.write(f"*Generated: {time.strftime('%Y-%m-%d')} via {src_label}*\n\n")
+        f.write(f"*Generated {generated} via {src_label} over {total_papers} non-survey papers "
+                "in `data/publications.json`.*\n\n")
         f.write(
-            "**What this is:** Papers that cite your work, where at least one "
-            "author is affiliated with a notable institution.\n"
+            "Each row is a citing paper with at least one author at a notable organization. "
+            "It means researchers at that organization cited the work, not that the "
+            "organization endorses it. Self-citations and co-author citations are excluded. "
+            "Both sources undercount computer-science citations, so treat every figure as a "
+            "lower bound.\n\n"
         )
-        f.write(
-            "This means \"researchers AT [institution] cited your tool\" -- "
-            "not \"[institution] officially endorses your tool.\"\n\n"
-        )
-        # Per-source headline numbers so combined runs do not present
-        # max-across-sources as a single combined truth.
-        f.write("Per-source coverage of the {0} non-survey papers:\n".format(total_papers))
+
+        f.write("| Source | Papers with citations | Unique citing papers | Run status |\n")
+        f.write("|---|---:|---:|---|\n")
         for src in src_names:
             ps = per_source[src]
-            f.write(
-                f"- **{source_display_label(src)}**: {ps['found_count']} papers with citations; "
-                f"{ps['unique_citing']} unique citing papers analyzed.\n"
-            )
+            status = "complete"
+            if ps.get("budget_error"):
+                status = (f"incomplete: {ps.get('works_queried', 0)} works queried, "
+                          f"{len(ps.get('works_unqueried') or [])} never queried")
+            f.write(f"| {source_display_label(src)} | {ps['found_count']} / {total_papers} | "
+                    f"{ps['unique_citing']:,} | {status} |\n")
         f.write("\n")
 
         # An API failure must never be readable as a zero-citation finding.
@@ -421,74 +504,89 @@ def _write_markdown(merged: dict, total_papers: int, out_path: Path) -> None:
         if incomplete:
             f.write("> [!WARNING]\n")
             f.write("> **This run is incomplete.** One or more sources stopped early, so the numbers\n")
-            f.write("> above are a floor, and an absent citation here is not evidence of no citation.\n")
+            f.write("> are a floor, and an absent citation here is not evidence of no citation.\n")
             for src, ps in incomplete:
-                queried = ps.get("works_queried", 0)
-                unqueried = len(ps.get("works_unqueried") or [])
+                f.write(f">\n> - **{source_display_label(src)}**: {ps['budget_error']}\n")
+            f.write("\n")
+
+        for tier, heading in TIER_HEADINGS:
+            rows = [e for e in kept if e["tier"] == tier]
+            orgs = {e.get("org") or e["institution"] for e in rows}
+            papers = {normalize_title(e.get("citing_title") or "") for e in rows}
+            f.write(f"## {heading}\n\n")
+            f.write(f"**{_n(len(rows), 'row')}: {_n(len(papers), 'citing paper')}, "
+                    f"{_n(len(orgs), 'organization')}.**\n\n")
+            if not rows:
+                continue
+            f.write("| Category | Organization | Country | Work Cited | Citing Paper | Year | Source |\n")
+            f.write("|---|---|---|---|---|---|---|\n")
+            for e in sorted(rows, key=lambda x: (x["category"], x.get("org") or "", -(x.get("year") or 0))):
                 f.write(
-                    f">\n> - **{source_display_label(src)}**: {ps['budget_error']} "
-                    f"{queried} works queried, {unqueried} never queried.\n"
+                    f"| {e['category']} | {_cell(e.get('org') or e['institution'])} | "
+                    f"{_cell(_country_label(e.get('country', '')))} | {_cell(e['cited_work'])} | "
+                    f"{_cell(e.get('citing_title'), 90)} | {e.get('year') or ''} | "
+                    f"{e.get('source', '')} |\n"
                 )
             f.write("\n")
 
-        for tier_label, tier_entries in (
-            ("Tier 0: Government, Space Agencies, National Labs, Defense, Foundation Model Cos", t0),
-            ("Tier 1: Big Tech, Finance, Pharma, Healthcare, Industrial", t1),
+        f.write("## Summary by Organization\n\n")
+        by_org: dict[tuple, dict] = {}
+        for e in kept:
+            key = (e.get("org") or e["institution"], e["category"], e["tier"])
+            agg = by_org.setdefault(key, {"papers": set(), "works": set()})
+            agg["papers"].add(normalize_title(e.get("citing_title") or ""))
+            agg["works"].add(e["cited_work"])
+        f.write("| Organization | Category | Tier | Citing Papers | Works Cited |\n")
+        f.write("|---|---|---|---:|---:|\n")
+        for (org, cat, tier), agg in sorted(
+            by_org.items(), key=lambda x: (x[0][2], -len(x[1]["papers"]), x[0][0])
         ):
-            f.write(f"## {tier_label}\n\n")
-            f.write(f"**{len(tier_entries)} entries**\n\n")
-            if tier_entries:
-                f.write("| Category | Institution | Country | Your Work Cited | Citing Paper | Year | Source |\n")
-                f.write("|----------|-----------|---------|----------------|-------------|------|--------|\n")
-                for e in sorted(tier_entries, key=lambda x: (x["category"], -(x.get("year") or 0))):
-                    ct = (e.get("citing_title") or "")[:60].replace("|", "/")
-                    inst = e["institution"].replace("|", "/")
-                    cw = e["cited_work"][:35].replace("|", "/")
-                    f.write(
-                        f"| {e['category']} | {inst} | {e['country']} | {cw} | {ct} | "
-                        f"{e.get('year') or ''} | {e.get('source', '')} |\n"
-                    )
-            f.write("\n")
+            f.write(f"| {org} | {cat} | {tier[1]} | {len(agg['papers'])} | {len(agg['works'])} |\n")
+        f.write("\n")
 
-        f.write("## Summary by Institution\n\n")
-        inst_counts: dict[tuple, int] = {}
-        for e in entries:
-            key = (e["institution"], e["category"])
-            inst_counts[key] = inst_counts.get(key, 0) + 1
-        f.write("| Institution | Category | Work-Citations |\n")
-        f.write("|-----------|----------|---------------|\n")
-        for (inst, cat), count in sorted(inst_counts.items(), key=lambda x: -x[1]):
-            f.write(f"| {inst} | {cat} | {count} |\n")
+        f.write("## Excluded and Flagged Citations\n\n")
+        n_self = sum(1 for e in excluded if e["verdict"] == "self")
+        n_co = len(excluded) - n_self
+        f.write(
+            f"Excluded: {_n(n_self, 'row')} where the PI is a citing author, and {_n(n_co, 'row')} "
+            "where an author of the cited work or two or more frequent co-authors are. A frequent "
+            "co-author shares two or more papers with the PI. "
+            f"Flagged but kept: {_n(len(possible), 'row')} where exactly one frequent co-author "
+            "who did not write the cited work matches, since one common name is weak evidence.\n\n"
+        )
+        for label, rows in (("Excluded", excluded), ("Flagged, kept", possible)):
+            if not rows:
+                continue
+            f.write(f"<details><summary>{label} ({_n(len(rows), 'row')})</summary>\n\n")
+            f.write("| Organization | Work Cited | Citing Paper | Year | Matched Authors |\n")
+            f.write("|---|---|---|---|---|\n")
+            for e in sorted(rows, key=lambda x: (x.get("org") or "", x.get("citing_title") or "")):
+                f.write(
+                    f"| {_cell(e.get('org') or e['institution'])} | {_cell(e['cited_work'])} | "
+                    f"{_cell(e.get('citing_title'), 90)} | {e.get('year') or ''} | "
+                    f"{_cell(', '.join(e['matched']))} |\n"
+                )
+            f.write("\n</details>\n\n")
 
-        f.write("\n## Coverage\n\n")
-        f.write(f"**Sources used:** {src_label}\n\n")
+        f.write("## Coverage\n\n")
         for src in src_names:
             ps = per_source[src]
-            f.write(f"### {source_display_label(src)}\n\n")
-            f.write(f"**Papers with citations:** {ps['found_count']}/{total_papers}\n\n")
-            if ps.get("zero_cite"):
-                zc = ps["zero_cite"]
-                f.write(f"**Indexed but 0 citations ({len(zc)}):** ")
-                f.write(", ".join(z[:40] for z in zc[:20]))
-                if len(zc) > 20:
-                    f.write(f", ... and {len(zc)-20} more")
-                f.write("\n\n")
-            if ps.get("not_found"):
-                nf = ps["not_found"]
-                f.write(f"**Not found ({len(nf)}):** ")
-                f.write(", ".join(n[:40] for n in nf[:20]))
-                if len(nf) > 20:
-                    f.write(f", ... and {len(nf)-20} more")
-                f.write("\n\n")
+            nf = ps.get("not_found") or []
+            if ps.get("budget_error"):
+                f.write(f"- **{source_display_label(src)}**: stopped early, see the warning above; "
+                        f"{ps.get('works_queried', 0)} works queried.\n")
+                continue
+            f.write(
+                f"- **{source_display_label(src)}**: {ps['found_count']} papers with citations, "
+                f"{len(ps.get('zero_cite') or [])} indexed with zero citations, {len(nf)} not found"
+                + (f": {'; '.join(_cell(n) for n in nf)}." if nf else ".")
+                + "\n"
+            )
         f.write(
-            "*OpenAlex coverage improves over time. Re-run in 3-6 months to "
-            "capture newly indexed papers; Dimensions has better CS coverage "
-            "and complements OpenAlex on per-paper citation graphs.*\n\n"
-        )
-        f.write(
-            "*Cross-source dedup uses exact (institution, citing_title, cited_work) "
-            "matching. Variants like 'Google' vs 'Google LLC' or punctuation-variant "
-            "titles may produce near-duplicate rows that span sources.*\n"
+            "\nRows are deduplicated by (organization, normalized citing title, work cited). "
+            "Legal entities of one company, a preprint and its journal version, and the two "
+            "sources' records of one paper therefore count once. Recent preprints are indexed "
+            "with a lag; re-run each semester.\n"
         )
 
 
@@ -552,7 +650,41 @@ def main(argv: Iterable[str] | None = None) -> int:
         default=str(PROJECT_ROOT / "citation-affiliation-audit.md"),
         help="Output Markdown path.",
     )
+    parser.add_argument(
+        "--raw-out",
+        default=str(PROJECT_ROOT / ".cache" / "citation-audit-raw.json"),
+        help="Where to save merged raw entries, so the report can be re-rendered without re-querying.",
+    )
+    parser.add_argument(
+        "--from-raw", nargs="+", default=None,
+        help="Re-render the report from one or more saved --raw-out files instead of querying any "
+             "source. Files from separate single-source runs are merged; a later file's source wins.",
+    )
     args = parser.parse_args(list(argv) if argv is not None else None)
+    coauthors = load_coauthors(str(PROJECT_ROOT))
+
+    if args.from_raw:
+        entries: list[dict] = []
+        per_source: dict[str, dict] = {}
+        generated, total = "", 0
+        for raw_file in args.from_raw:
+            raw = json.loads(Path(raw_file).read_text(encoding="utf-8"))
+            # A refreshed provider replaces only its own share of each entry; an entry that
+            # another provider also found keeps that provider instead of being dropped.
+            surviving = []
+            for e in entries:
+                kept_src = [x for x in e.get("source", "").split("+") if x and x not in raw["per_source"]]
+                if kept_src:
+                    surviving.append({**e, "source": "+".join(kept_src)})
+            entries = surviving + raw["entries"]
+            per_source.update(raw["per_source"])
+            generated = max(generated, raw["generated"])
+            total = max(total, raw["total_papers"])
+        ordered = {s: per_source[s] for s in ("openalex", "dimensions") if s in per_source}
+        merged = {"entries": dedup_entries(entries), "per_source": ordered}
+        _write_markdown(merged, total, Path(args.out), coauthors, generated)
+        print(f"Re-rendered {args.out} from {', '.join(args.from_raw)}")
+        return 0
 
     print("Loading papers from publications.json...")
     papers = load_papers(str(PROJECT_ROOT))
@@ -561,10 +693,27 @@ def main(argv: Iterable[str] | None = None) -> int:
     print(f"  {len(papers)} papers (after excluding surveys)\n")
 
     results: list[tuple[str, dict]] = []
+    generated = time.strftime("%Y-%m-%d")
+    raw_path = Path(args.raw_out)
+
+    def checkpoint() -> None:
+        """Save what has been fetched so far, so a later provider's crash keeps it."""
+        merged_so_far = _merge_results(results)
+        try:
+            raw_path.parent.mkdir(parents=True, exist_ok=True)
+            raw_path.write_text(json.dumps({
+                "generated": generated,
+                "total_papers": len(papers),
+                "per_source": merged_so_far["per_source"],
+                "entries": merged_so_far["entries"],
+            }, indent=1), encoding="utf-8")
+        except Exception as e:  # the raw dump is a convenience; never abort the audit on it
+            print(f"    (could not write raw entries: {e})")
 
     if args.source in ("openalex", "both"):
         print(">>> Running OpenAlex provider\n")
         results.append(("openalex", fetch_openalex_entries(papers, verbose=True)))
+        checkpoint()
 
     if args.source in ("dimensions", "both"):
         print("\n>>> Running Dimensions provider\n")
@@ -579,12 +728,14 @@ def main(argv: Iterable[str] | None = None) -> int:
             ),
         ))
 
+    checkpoint()
     merged = _merge_results(results)
     out_path = Path(args.out)
-    _write_markdown(merged, len(papers), out_path)
+    _write_markdown(merged, len(papers), out_path, coauthors, generated)
 
-    t0 = sum(1 for e in merged["entries"] if e["tier"] == "T0")
-    t1 = sum(1 for e in merged["entries"] if e["tier"] == "T1")
+    kept, excluded, _ = _screen(merged["entries"], coauthors)
+    t0 = sum(1 for e in kept if e["tier"] == "T0")
+    t1 = sum(1 for e in kept if e["tier"] == "T1")
     print(f"\n{'=' * 60}")
     print(f"DONE -> {out_path}")
     print(f"Sources: {' + '.join(merged['per_source'].keys())}")
@@ -600,6 +751,7 @@ def main(argv: Iterable[str] | None = None) -> int:
                   f"(these are unknown, not zero).")
     print(f"Tier 0: {t0} entries")
     print(f"Tier 1: {t1} entries")
+    print(f"Excluded self / co-author rows: {len(excluded)}")
     print("=" * 60)
     if incomplete:
         print("Exit 3: at least one source stopped early. Re-run after the budget resets;\n"

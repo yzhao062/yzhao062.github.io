@@ -1,0 +1,79 @@
+{
+ "run_date": "2026-10-17",
+ "scope": "full_search_and_audit_cleanup",
+ "discovery": {
+  "agy_lanes": 41,
+  "agy_followup_lanes": 7,
+  "claude_workflow_lanes": 3,
+  "queries_logged": 4126,
+  "queries_note": "the 4,126 queries span all 48 Agy lanes"
+ },
+ "phase_a_records_merged": 709,
+ "phase_b_candidates": 653,
+ "phase_b_logged_only": 62,
+ "phase_b_units": 43,
+ "phase_b_verdicts": 635,
+ "refute_pass": {
+  "agents": 12,
+  "claims": 117,
+  "upheld": 26,
+  "corrected": 57,
+  "refuted": 33,
+  "unverifiable": 1
+ },
+ "candidate_records": 697,
+ "statuses": {
+  "already_recorded": 41,
+  "kept": 439,
+  "dropped_name_collision": 6,
+  "refuted": 33,
+  "citation-handoff": 73,
+  "topic-validation": 53,
+  "duplicate": 5,
+  "dropped": 5,
+  "first_party": 19,
+  "paywall_or_blocked": 11,
+  "verified-negative": 11,
+  "held-unverifiable": 1
+ },
+ "new_ledger_rows": {
+  "1": 2,
+  "2": 3,
+  "3": 96,
+  "5": 3,
+  "6": 13,
+  "7": 43
+ },
+ "ledger3_cluster_rows": {
+  "rows": "661-667",
+  "items": 276
+ },
+ "patent_family_merges": [
+  "Ledger 3 row 633 into 66k",
+  "Ledger 3 row 652 into 270"
+ ],
+ "patent_families": 116,
+ "patent_families_prior_corrected": 106,
+ "patent_claim_families": 21,
+ "cleanup": {
+  "rows_moved": 55,
+  "rows_removed_to_handoffs": 17,
+  "orphan_promotions_reverified": 17,
+  "rows_moved_note": "51 in the cleanup, 2 during integration (SDAIA, Hysen), 2 after review round 1 (RAND, LLNL); Deloitte moved up and back"
+ },
+ "citation_audit": {
+  "generated": "2026-10-17",
+  "openalex": "incomplete (daily credit budget)",
+  "dimensions": "complete",
+  "tier0_citing_papers": 14,
+  "tier0_orgs": 8,
+  "tier1_citing_papers": 48,
+  "tier1_orgs": 23,
+  "non_survey_papers": 128,
+  "excluded_rows": 11
+ },
+ "commit_or_push": false,
+ "new_ledger_rows_note": "Ledger 3 also gains the 7 cluster rows below; two new patent rows merged into older rows are not counted",
+ "patent_claim_families_note": "recount of the Google Patents claims text for all 121 patent rows; the published 11 was an undercount",
+ "phase_b_verdicts_note": "653 worklist minus 62 logged-only = 591, plus 44 orphan and promotion (O/P) records = 635"
+}

@@ -60,7 +60,7 @@ while [ $# -gt 0 ]; do
                       # header grew, truncating guard 8 and hiding the never-edit-in-flight
                       # warning. Stop at the first line that is not a comment.
     -h|--help)        awk 'NR>1 && /^#/ {print; next} NR>1 {exit}' "$0"; exit 0 ;;
-    *)                u="${1%$''}"
+    *)                u="${1%$'\r'}"
                       # An empty or whitespace-only argument used to leave UNITS as a lone space,
                       # which passes the non-empty test while every `for u in $UNITS` loop sees zero
                       # words: the run then reports RECONCILE-OK on 0 units and exits 0. That is the
@@ -298,11 +298,52 @@ if [ "$BACKEND" = "agy" ] && [ "${NEWS_SEARCH_AGY_PREFLIGHT:-on}" != "off" ]; th
   # dispatcher would refuse the same value later, so the two disagreed before dispatch began.
   AGY_PF_TIMEOUT="$(validate_count "ANTIGRAVITY_PREFLIGHT_TIMEOUT_SECONDS" \
     "${ANTIGRAVITY_PREFLIGHT_TIMEOUT_SECONDS:-60}")" || exit 2
+  # GNU coreutils ships `timeout`; Homebrew installs it on macOS as `gtimeout`. Stock macOS has
+  # neither, and on 2026-10-17 every launch there died in this preflight with exit 127, so fall
+  # back to a shell watchdog with the same TERM-then-KILL escalation and the same exit codes.
+  PF_TIMEOUT_BIN="$(command -v timeout || command -v gtimeout || true)"
+  bounded_run() {
+    local secs="$1"; shift
+    if [ -n "$PF_TIMEOUT_BIN" ]; then
+      "$PF_TIMEOUT_BIN" --kill-after=5s "$secs" "$@"
+      return $?
+    fi
+    "$@" &
+    local pid=$!
+    # The watchdog polls the command every 0.1s instead of sleeping and waiting to be signalled.
+    # A signalled watchdog raced its own timer start: bash left a cancel that landed during the
+    # fork pending until the timer ran out, which held the caller for the full deadline or grace
+    # period. Polling needs no trap, leaves no timer behind, and its output goes to /dev/null so
+    # it never holds the caller's captured stdout open. It exits 99 once it has signalled the
+    # command, so the deadline is detected even when the command handles TERM and exits 0.
+    # Seconds are whole numbers here; the caller validates them as a positive integer.
+    ( n=0
+      while [ "$n" -lt $(( secs * 10 )) ]; do
+        kill -0 "$pid" 2>/dev/null || exit 0
+        sleep 0.1; n=$(( n + 1 ))
+      done
+      kill -TERM "$pid" 2>/dev/null || exit 0
+      n=0
+      while [ "$n" -lt 50 ]; do
+        kill -0 "$pid" 2>/dev/null || exit 99
+        sleep 0.1; n=$(( n + 1 ))
+      done
+      kill -KILL "$pid" 2>/dev/null
+      exit 99 ) >/dev/null 2>&1 &
+    local dog=$!
+    wait "$pid"
+    local rc=$?
+    wait "$dog"
+    local dog_rc=$?
+    # As in timeout(1): 124 after the deadline, 137 when KILL was needed, else the command's own.
+    if [ "$dog_rc" -eq 99 ] && [ "$rc" -ne 137 ]; then rc=124; fi
+    return "$rc"
+  }
   for a in --version models; do
     # --kill-after is what makes the bound real. Plain `timeout` sends TERM and then keeps
     # waiting, so a CLI that ignores TERM runs to completion and the wrapper only reports 124
     # afterwards: a 0.2s deadline still let a one-second fixture finish. Escalate to KILL.
-    timeout --kill-after=5s "$AGY_PF_TIMEOUT" "$AGY_BIN" "$a" >/dev/null 2>&1 || {
+    bounded_run "$AGY_PF_TIMEOUT" "$AGY_BIN" "$a" >/dev/null 2>&1 || {
       rc=$?
       case "$rc" in
         124) echo "agy preflight timed out after ${AGY_PF_TIMEOUT}s on \`$(basename "$AGY_BIN") $a\`" >&2 ;;

@@ -1,0 +1,856 @@
+[
+ {
+  "cid": "C0002",
+  "ledger": "3",
+  "row": "562"
+ },
+ {
+  "cid": "C0003",
+  "ledger": "3",
+  "row": "563"
+ },
+ {
+  "cid": "C0004",
+  "ledger": "3",
+  "row": "564"
+ },
+ {
+  "cid": "C0008",
+  "ledger": "3",
+  "row": "565"
+ },
+ {
+  "cid": "C0432",
+  "ledger": "6",
+  "row": "A46"
+ },
+ {
+  "cid": "C0438",
+  "ledger": "3",
+  "row": "566"
+ },
+ {
+  "cid": "C0448",
+  "ledger": "3",
+  "row": "567"
+ },
+ {
+  "cid": "C0472",
+  "ledger": "3",
+  "row": "568"
+ },
+ {
+  "cid": "C0473",
+  "ledger": "3",
+  "row": "569"
+ },
+ {
+  "cid": "C0483",
+  "ledger": "3",
+  "row": "570"
+ },
+ {
+  "cid": "C0485",
+  "ledger": "3",
+  "row": "571"
+ },
+ {
+  "cid": "C0486",
+  "ledger": "3",
+  "row": "572"
+ },
+ {
+  "cid": "C0497",
+  "ledger": "3",
+  "row": "573"
+ },
+ {
+  "cid": "C0501",
+  "ledger": "3",
+  "row": "574"
+ },
+ {
+  "cid": "C0504",
+  "ledger": "3",
+  "row": "575"
+ },
+ {
+  "cid": "C0505",
+  "ledger": "3",
+  "row": "576"
+ },
+ {
+  "cid": "C0517",
+  "ledger": "3",
+  "row": "577"
+ },
+ {
+  "cid": "C0518",
+  "ledger": "3",
+  "row": "578"
+ },
+ {
+  "cid": "C0519",
+  "ledger": "3",
+  "row": "579"
+ },
+ {
+  "cid": "C0529",
+  "ledger": "3",
+  "row": "580"
+ },
+ {
+  "cid": "C0538",
+  "ledger": "7",
+  "row": "S100"
+ },
+ {
+  "cid": "C0455",
+  "ledger": "3",
+  "row": "581"
+ },
+ {
+  "cid": "C0457",
+  "ledger": "3",
+  "row": "582"
+ },
+ {
+  "cid": "C0458",
+  "ledger": "3",
+  "row": "583"
+ },
+ {
+  "cid": "C0459",
+  "ledger": "5",
+  "row": "98"
+ },
+ {
+  "cid": "C0460",
+  "ledger": "7",
+  "row": "S101"
+ },
+ {
+  "cid": "C0018",
+  "ledger": "3",
+  "row": "584"
+ },
+ {
+  "cid": "C0034",
+  "ledger": "3",
+  "row": "585"
+ },
+ {
+  "cid": "C0048",
+  "ledger": "7",
+  "row": "S102"
+ },
+ {
+  "cid": "C0049",
+  "ledger": "7",
+  "row": "S103"
+ },
+ {
+  "cid": "C0058",
+  "ledger": "3",
+  "row": "586"
+ },
+ {
+  "cid": "C0063",
+  "ledger": "7",
+  "row": "S104"
+ },
+ {
+  "cid": "C0064",
+  "ledger": "7",
+  "row": "S105"
+ },
+ {
+  "cid": "C0065",
+  "ledger": "3",
+  "row": "587"
+ },
+ {
+  "cid": "C0068",
+  "ledger": "3",
+  "row": "588"
+ },
+ {
+  "cid": "C0069",
+  "ledger": "3",
+  "row": "589"
+ },
+ {
+  "cid": "C0070",
+  "ledger": "7",
+  "row": "S106"
+ },
+ {
+  "cid": "C0072",
+  "ledger": "7",
+  "row": "S107"
+ },
+ {
+  "cid": "C0073",
+  "ledger": "7",
+  "row": "S108"
+ },
+ {
+  "cid": "C0074",
+  "ledger": "3",
+  "row": "590"
+ },
+ {
+  "cid": "C0080",
+  "ledger": "7",
+  "row": "S109"
+ },
+ {
+  "cid": "C0083",
+  "ledger": "7",
+  "row": "S110"
+ },
+ {
+  "cid": "C0085",
+  "ledger": "7",
+  "row": "S111"
+ },
+ {
+  "cid": "C0089",
+  "ledger": "7",
+  "row": "S112"
+ },
+ {
+  "cid": "C0091",
+  "ledger": "3",
+  "row": "591"
+ },
+ {
+  "cid": "C0092",
+  "ledger": "3",
+  "row": "592"
+ },
+ {
+  "cid": "C0111",
+  "ledger": "3",
+  "row": "593"
+ },
+ {
+  "cid": "C0112",
+  "ledger": "3",
+  "row": "594"
+ },
+ {
+  "cid": "C0113",
+  "ledger": "3",
+  "row": "595"
+ },
+ {
+  "cid": "C0118",
+  "ledger": "3",
+  "row": "596"
+ },
+ {
+  "cid": "C0120",
+  "ledger": "3",
+  "row": "597"
+ },
+ {
+  "cid": "C0123",
+  "ledger": "3",
+  "row": "598"
+ },
+ {
+  "cid": "C0124",
+  "ledger": "3",
+  "row": "599"
+ },
+ {
+  "cid": "C0125",
+  "ledger": "3",
+  "row": "600"
+ },
+ {
+  "cid": "C0129",
+  "ledger": "3",
+  "row": "601"
+ },
+ {
+  "cid": "C0130",
+  "ledger": "3",
+  "row": "602"
+ },
+ {
+  "cid": "C0133",
+  "ledger": "3",
+  "row": "603"
+ },
+ {
+  "cid": "C0143",
+  "ledger": "3",
+  "row": "604"
+ },
+ {
+  "cid": "C0144",
+  "ledger": "3",
+  "row": "605"
+ },
+ {
+  "cid": "C0150",
+  "ledger": "3",
+  "row": "606"
+ },
+ {
+  "cid": "C0151",
+  "ledger": "3",
+  "row": "607"
+ },
+ {
+  "cid": "C0152",
+  "ledger": "3",
+  "row": "608"
+ },
+ {
+  "cid": "C0157",
+  "ledger": "7",
+  "row": "S113"
+ },
+ {
+  "cid": "C0158",
+  "ledger": "7",
+  "row": "S114"
+ },
+ {
+  "cid": "C0168",
+  "ledger": "3",
+  "row": "609"
+ },
+ {
+  "cid": "C0172",
+  "ledger": "3",
+  "row": "610"
+ },
+ {
+  "cid": "C0185",
+  "ledger": "2",
+  "row": "87"
+ },
+ {
+  "cid": "C0206",
+  "ledger": "3",
+  "row": "611"
+ },
+ {
+  "cid": "C0209",
+  "ledger": "3",
+  "row": "612"
+ },
+ {
+  "cid": "C0212",
+  "ledger": "3",
+  "row": "613"
+ },
+ {
+  "cid": "C0217",
+  "ledger": "3",
+  "row": "614"
+ },
+ {
+  "cid": "C0218",
+  "ledger": "3",
+  "row": "615"
+ },
+ {
+  "cid": "C0226",
+  "ledger": "3",
+  "row": "616"
+ },
+ {
+  "cid": "C0227",
+  "ledger": "3",
+  "row": "617"
+ },
+ {
+  "cid": "C0229",
+  "ledger": "3",
+  "row": "618"
+ },
+ {
+  "cid": "C0233",
+  "ledger": "3",
+  "row": "619"
+ },
+ {
+  "cid": "C0234",
+  "ledger": "3",
+  "row": "620"
+ },
+ {
+  "cid": "C0235",
+  "ledger": "3",
+  "row": "621"
+ },
+ {
+  "cid": "C0245",
+  "ledger": "3",
+  "row": "622"
+ },
+ {
+  "cid": "C0246",
+  "ledger": "7",
+  "row": "S115"
+ },
+ {
+  "cid": "C0248",
+  "ledger": "6",
+  "row": "A47"
+ },
+ {
+  "cid": "C0254",
+  "ledger": "3",
+  "row": "623"
+ },
+ {
+  "cid": "C0255",
+  "ledger": "6",
+  "row": "A48"
+ },
+ {
+  "cid": "C0258",
+  "ledger": "6",
+  "row": "A49"
+ },
+ {
+  "cid": "C0259",
+  "ledger": "3",
+  "row": "624"
+ },
+ {
+  "cid": "C0269",
+  "ledger": "3",
+  "row": "625"
+ },
+ {
+  "cid": "C0274",
+  "ledger": "3",
+  "row": "626"
+ },
+ {
+  "cid": "C0275",
+  "ledger": "3",
+  "row": "627"
+ },
+ {
+  "cid": "C0277",
+  "ledger": "7",
+  "row": "S116"
+ },
+ {
+  "cid": "C0289",
+  "ledger": "3",
+  "row": "628"
+ },
+ {
+  "cid": "C0291",
+  "ledger": "2",
+  "row": "88"
+ },
+ {
+  "cid": "C0298",
+  "ledger": "3",
+  "row": "629"
+ },
+ {
+  "cid": "C0299",
+  "ledger": "3",
+  "row": "630"
+ },
+ {
+  "cid": "C0300",
+  "ledger": "3",
+  "row": "631"
+ },
+ {
+  "cid": "C0301",
+  "ledger": "3",
+  "row": "632"
+ },
+ {
+  "cid": "C0302",
+  "ledger": "3",
+  "row": "66k",
+  "note": "same patent family as an existing row; merged"
+ },
+ {
+  "cid": "C0305",
+  "ledger": "7",
+  "row": "S117"
+ },
+ {
+  "cid": "C0312",
+  "ledger": "3",
+  "row": "634"
+ },
+ {
+  "cid": "C0317",
+  "ledger": "7",
+  "row": "S118"
+ },
+ {
+  "cid": "C0337",
+  "ledger": "5",
+  "row": "99"
+ },
+ {
+  "cid": "C0339",
+  "ledger": "5",
+  "row": "100"
+ },
+ {
+  "cid": "C0366",
+  "ledger": "3",
+  "row": "635"
+ },
+ {
+  "cid": "C0368",
+  "ledger": "2",
+  "row": "89"
+ },
+ {
+  "cid": "C0384",
+  "ledger": "3",
+  "row": "637"
+ },
+ {
+  "cid": "C0385",
+  "ledger": "3",
+  "row": "638"
+ },
+ {
+  "cid": "C0386",
+  "ledger": "3",
+  "row": "639"
+ },
+ {
+  "cid": "C0387",
+  "ledger": "3",
+  "row": "640"
+ },
+ {
+  "cid": "C0390",
+  "ledger": "3",
+  "row": "641"
+ },
+ {
+  "cid": "C0391",
+  "ledger": "3",
+  "row": "642"
+ },
+ {
+  "cid": "C0392",
+  "ledger": "3",
+  "row": "643"
+ },
+ {
+  "cid": "C0394",
+  "ledger": "3",
+  "row": "644"
+ },
+ {
+  "cid": "C0396",
+  "ledger": "3",
+  "row": "645"
+ },
+ {
+  "cid": "C0401",
+  "ledger": "3",
+  "row": "646"
+ },
+ {
+  "cid": "C0403",
+  "ledger": "3",
+  "row": "647"
+ },
+ {
+  "cid": "C0407",
+  "ledger": "3",
+  "row": "648"
+ },
+ {
+  "cid": "C0408",
+  "ledger": "3",
+  "row": "649"
+ },
+ {
+  "cid": "P1",
+  "ledger": "1",
+  "row": "29"
+ },
+ {
+  "cid": "P2",
+  "ledger": "3",
+  "row": "66cb",
+  "note": "kept in Ledger 3 after review round 2: a client brochure, not a report"
+ },
+ {
+  "cid": "O1",
+  "ledger": "1",
+  "row": "32",
+  "note": "moved from Ledger 2 row 90 in review round 1"
+ },
+ {
+  "cid": "O3",
+  "ledger": "3",
+  "row": "650"
+ },
+ {
+  "cid": "O4",
+  "ledger": "3",
+  "row": "651"
+ },
+ {
+  "cid": "O5",
+  "ledger": "6",
+  "row": "A50"
+ },
+ {
+  "cid": "O7",
+  "ledger": "7",
+  "row": "S119"
+ },
+ {
+  "cid": "O8a",
+  "ledger": "7",
+  "row": "S120"
+ },
+ {
+  "cid": "O8b",
+  "ledger": "7",
+  "row": "S121"
+ },
+ {
+  "cid": "O8c",
+  "ledger": "7",
+  "row": "S122"
+ },
+ {
+  "cid": "O8f",
+  "ledger": "7",
+  "row": "S123"
+ },
+ {
+  "cid": "O8h",
+  "ledger": "7",
+  "row": "S124"
+ },
+ {
+  "cid": "O9a",
+  "ledger": "7",
+  "row": "S125"
+ },
+ {
+  "cid": "O14b",
+  "ledger": "3",
+  "row": "270",
+  "note": "same patent family as an existing row; merged"
+ },
+ {
+  "cid": "D0001",
+  "ledger": "6",
+  "row": "A51"
+ },
+ {
+  "cid": "D0004",
+  "ledger": "6",
+  "row": "A52"
+ },
+ {
+  "cid": "D0005",
+  "ledger": "6",
+  "row": "A53"
+ },
+ {
+  "cid": "D0006",
+  "ledger": "6",
+  "row": "A54"
+ },
+ {
+  "cid": "D0007",
+  "ledger": "6",
+  "row": "A55"
+ },
+ {
+  "cid": "D0009",
+  "ledger": "6",
+  "row": "A56"
+ },
+ {
+  "cid": "D0010",
+  "ledger": "6",
+  "row": "A57"
+ },
+ {
+  "cid": "D0011",
+  "ledger": "6",
+  "row": "A58"
+ },
+ {
+  "cid": "D0061",
+  "ledger": "3",
+  "row": "653"
+ },
+ {
+  "cid": "D0067",
+  "ledger": "3",
+  "row": "654"
+ },
+ {
+  "cid": "D0079",
+  "ledger": "3",
+  "row": "655"
+ },
+ {
+  "cid": "D0081",
+  "ledger": "3",
+  "row": "656"
+ },
+ {
+  "cid": "D0099",
+  "ledger": "3",
+  "row": "657"
+ },
+ {
+  "cid": "D0102",
+  "ledger": "7",
+  "row": "S126"
+ },
+ {
+  "cid": "D0121",
+  "ledger": "3",
+  "row": "658"
+ },
+ {
+  "cid": "D0122",
+  "ledger": "3",
+  "row": "659"
+ },
+ {
+  "cid": "D0123",
+  "ledger": "3",
+  "row": "660"
+ },
+ {
+  "cid": "D0135",
+  "ledger": "7",
+  "row": "S127"
+ },
+ {
+  "cid": "D0137",
+  "ledger": "7",
+  "row": "S128"
+ },
+ {
+  "cid": "D0139",
+  "ledger": "7",
+  "row": "S129"
+ },
+ {
+  "cid": "D0140",
+  "ledger": "7",
+  "row": "S130"
+ },
+ {
+  "cid": "D0141",
+  "ledger": "7",
+  "row": "S131"
+ },
+ {
+  "cid": "D0142",
+  "ledger": "7",
+  "row": "S132"
+ },
+ {
+  "cid": "D0144",
+  "ledger": "7",
+  "row": "S133"
+ },
+ {
+  "cid": "D0145",
+  "ledger": "7",
+  "row": "S134"
+ },
+ {
+  "cid": "D0146",
+  "ledger": "7",
+  "row": "S135"
+ },
+ {
+  "cid": "D0150",
+  "ledger": "7",
+  "row": "S136"
+ },
+ {
+  "cid": "D0151",
+  "ledger": "7",
+  "row": "S137"
+ },
+ {
+  "cid": "D0152",
+  "ledger": "7",
+  "row": "S138"
+ },
+ {
+  "cid": "D0153",
+  "ledger": "7",
+  "row": "S139"
+ },
+ {
+  "cid": "D0154",
+  "ledger": "7",
+  "row": "S140"
+ },
+ {
+  "cid": "D0155",
+  "ledger": "7",
+  "row": "S141"
+ },
+ {
+  "cid": "D0156",
+  "ledger": "7",
+  "row": "S142"
+ },
+ {
+  "cid": "cluster:Aggregator and digest pages",
+  "ledger": "3",
+  "row": "661"
+ },
+ {
+  "cid": "cluster:Platform, registry and directory listings",
+  "ledger": "3",
+  "row": "662"
+ },
+ {
+  "cid": "cluster:Tutorials and blog posts",
+  "ledger": "3",
+  "row": "663"
+ },
+ {
+  "cid": "cluster:Third-party code by individuals",
+  "ledger": "3",
+  "row": "664"
+ },
+ {
+  "cid": "cluster:Curated lists",
+  "ledger": "3",
+  "row": "665"
+ },
+ {
+  "cid": "cluster:Videos",
+  "ledger": "3",
+  "row": "666"
+ },
+ {
+  "cid": "cluster:Forum and community threads",
+  "ledger": "3",
+  "row": "667"
+ }
+]

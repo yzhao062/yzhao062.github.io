@@ -6,18 +6,21 @@ Used by both `citation_affiliation_audit.py` (OpenAlex) and
 - `match_patterns()` and `classify_institution()`
 - `load_papers()` (reads data/publications.json, filters surveys)
 - `dedup_entries()` and `normalize_doi()` / `normalize_arxiv_id()` helpers
+- `load_coauthors()`, `load_work_authors()` and `screen_self_citation()` for the self / co-author screen
 - A shared `Entry` shape (plain dict) emitted by every source fetcher.
 
-Entry shape (one row per (cited_work, citing_paper, institution)):
+Entry shape (one row per (cited_work, citing_paper, organization)):
 
     {
         "tier": "T0" | "T1",
         "category": str,                # e.g., "Big Tech", "Space Agency"
-        "institution": str,             # institution display name
-        "country": str,                 # 2-letter country code if known
+        "org": str,                     # canonical organization, e.g. "AstraZeneca"
+        "institution": str,             # raw institution display name(s), "; "-joined after dedup
+        "country": str,                 # country name or code if known, ", "-joined after dedup
         "cited_work": str,              # short label for the user's paper
         "citing_title": str,            # title of the citing paper
         "citing_id": str,               # source-specific id (oa:..., dim:...)
+        "authors": list[str],           # citing-paper author names, for the self-citation screen
         "year": int | None,
         "source": "openalex" | "dimensions",
     }
@@ -62,135 +65,246 @@ def source_display_label(token: str) -> str:
 # major international bodies. Patterns use \b on short acronyms to dodge substring
 # collisions (e.g., \bNIST\b avoids "NISTagent").
 TIER0_PATTERNS = [
-    (r"European Space Agency|\bESA\b|ESOC|ESTEC", "Space Agency"),
-    (r"NASA|Jet Propulsion Lab|\bJPL\b", "Space Agency"),
-    (r"JAXA|Japan Aerospace", "Space Agency"),
-    (r"\bISRO\b|Indian Space Research", "Space Agency"),
-    (r"\bDLR\b|Deutsches Zentrum.*Luft", "Space Agency"),
-    (r"\bCNES\b|Centre National d.Etudes Spatiales", "Space Agency"),
-    (r"National Institute of Standards|\bNIST\b", "US Government"),
-    (r"Department of Energy(?! Sci)(?!.*University)", "US Government"),
-    (r"DARPA|Defense Advanced Research", "US Government"),
-    (r"\bNOAA\b|National Oceanic", "US Government"),
-    (r"National Institutes of Health|NIH Clinical Center", "US Government"),
-    (r"Centers for Disease Control|\bCDC\b", "US Government"),
-    (r"Food and Drug Admin|\bFDA\b", "US Government"),
-    (r"Federal Aviation|\bFAA\b", "US Government"),
-    (r"\bCISA\b|Cybersecurity.*Infrastructure", "US Government"),
-    (r"Department of Homeland Security", "US Government"),
-    (r"Federal Reserve|Board of Governors", "Central Bank"),
-    (r"European Central Bank|\bECB\b", "Central Bank"),
-    (r"\bBank for International Settlements\b", "Central Bank"),
-    (r"Bundesbank", "Central Bank"),
-    (r"Bank of England", "Central Bank"),
-    (r"Bank of Japan", "Central Bank"),
-    (r"People.s Bank of China|\bPBOC\b", "Central Bank"),
-    (r"Los Alamos|LANL\b", "National Lab"),
-    (r"Lawrence Livermore|\bLLNL\b", "National Lab"),
-    (r"Sandia National", "National Lab"),
-    (r"Oak Ridge|\bORNL\b", "National Lab"),
-    (r"Argonne National", "National Lab"),
-    (r"Brookhaven National", "National Lab"),
-    (r"Pacific Northwest|\bPNNL\b", "National Lab"),
-    (r"Idaho National|\bINL\b", "National Lab"),
-    (r"Fermilab|Fermi National", "National Lab"),
-    (r"SLAC National", "National Lab"),
-    (r"\bCERN\b", "International Lab"),
-    (r"\bDESY\b|Elektronen-Synchrotron", "International Lab"),
-    (r"Max Planck", "Research Institute"),
-    (r"Fraunhofer", "Research Institute"),
-    (r"\bOpenAI\b", "Foundation Model Co"),
-    (r"Anthropic", "Foundation Model Co"),
-    (r"DeepMind|Google DeepMind", "Foundation Model Co"),
-    (r"Meta\s*(AI|FAIR|Platforms)", "Foundation Model Co"),
-    (r"Raytheon", "Defense"),
-    (r"Lockheed Martin", "Defense"),
-    (r"Northrop Grumman", "Defense"),
-    (r"BAE Systems", "Defense"),
-    (r"\bMITRE\b", "Defense/Research"),
-    (r"RAND Corporation", "Defense/Research"),
-    (r"Booz Allen", "Defense"),
-    (r"Leidos", "Defense"),
-    (r"World Health Organization", "International Org"),
-    (r"\bIAEA\b|International Atomic Energy", "International Org"),
-    (r"\bWorld Bank\b", "International Org"),
-    (r"\bOECD\b", "International Org"),
-    (r"\bNATO\b", "International Org"),
+    (r"European Space Agency|\bESA\b|ESOC|ESTEC", "Space Agency", "European Space Agency"),
+    (r"NASA|Jet Propulsion Lab|\bJPL\b", "Space Agency", "NASA / JPL"),
+    (r"JAXA|Japan Aerospace", "Space Agency", "JAXA"),
+    (r"\bISRO\b|Indian Space Research", "Space Agency", "ISRO"),
+    (r"\bDLR\b|Deutsches Zentrum.*Luft", "Space Agency", "DLR"),
+    (r"\bCNES\b|Centre National d.Etudes Spatiales", "Space Agency", "CNES"),
+    (r"National Institute of Standards|\bNIST\b", "US Government", "NIST"),
+    (r"Department of Energy(?! Sci)(?!.*University)", "US Government", "US Department of Energy"),
+    (r"DARPA|Defense Advanced Research", "US Government", "DARPA"),
+    (r"\bNOAA\b|National Oceanic", "US Government", "NOAA"),
+    (r"National Institutes of Health|NIH Clinical Center", "US Government", "NIH"),
+    (r"Centers for Disease Control|\bCDC\b", "US Government", "CDC"),
+    (r"Food and Drug Admin|\bFDA\b", "US Government", "FDA"),
+    (r"Federal Aviation|\bFAA\b", "US Government", "FAA"),
+    (r"\bCISA\b|Cybersecurity.*Infrastructure", "US Government", "CISA"),
+    (r"Department of Homeland Security", "US Government", "DHS"),
+    (r"Federal Reserve|Board of Governors", "Central Bank", "Federal Reserve"),
+    (r"European Central Bank|\bECB\b", "Central Bank", "European Central Bank"),
+    (r"\bBank for International Settlements\b", "Central Bank", "Bank for International Settlements"),
+    (r"Bundesbank", "Central Bank", "Deutsche Bundesbank"),
+    (r"Bank of England", "Central Bank", "Bank of England"),
+    (r"Bank of Japan", "Central Bank", "Bank of Japan"),
+    (r"People.s Bank of China|\bPBOC\b", "Central Bank", "People's Bank of China"),
+    (r"Los Alamos|LANL\b", "National Lab", "Los Alamos National Laboratory"),
+    (r"Lawrence Livermore|\bLLNL\b", "National Lab", "Lawrence Livermore National Laboratory"),
+    (r"Sandia National", "National Lab", "Sandia National Laboratories"),
+    (r"Oak Ridge|\bORNL\b", "National Lab", "Oak Ridge National Laboratory"),
+    (r"Argonne National", "National Lab", "Argonne National Laboratory"),
+    (r"Brookhaven National", "National Lab", "Brookhaven National Laboratory"),
+    (r"Pacific Northwest|\bPNNL\b", "National Lab", "Pacific Northwest National Laboratory"),
+    (r"Idaho National|\bINL\b", "National Lab", "Idaho National Laboratory"),
+    (r"Fermilab|Fermi National", "National Lab", "Fermilab"),
+    (r"SLAC National", "National Lab", "SLAC National Accelerator Laboratory"),
+    (r"\bCERN\b", "International Lab", "CERN"),
+    (r"\bDESY\b|Elektronen-Synchrotron", "International Lab", "DESY"),
+    (r"Max Planck", "Research Institute", "Max Planck Society"),
+    (r"Fraunhofer", "Research Institute", "Fraunhofer"),
+    (r"\bOpenAI\b", "Foundation Model Co", "OpenAI"),
+    (r"Anthropic", "Foundation Model Co", "Anthropic"),
+    (r"DeepMind|Google DeepMind", "Foundation Model Co", "Google DeepMind"),
+    (r"Meta\s*(AI|FAIR|Platforms)", "Foundation Model Co", "Meta"),
+    (r"Raytheon", "Defense", "Raytheon"),
+    (r"Lockheed Martin", "Defense", "Lockheed Martin"),
+    (r"Northrop Grumman", "Defense", "Northrop Grumman"),
+    (r"BAE Systems", "Defense", "BAE Systems"),
+    (r"\bMITRE\b", "Defense/Research", "MITRE"),
+    (r"RAND Corporation", "Defense/Research", "RAND Corporation"),
+    (r"Booz Allen", "Defense", "Booz Allen Hamilton"),
+    (r"Leidos", "Defense", "Leidos"),
+    (r"World Health Organization", "International Org", "World Health Organization"),
+    (r"\bIAEA\b|International Atomic Energy", "International Org", "IAEA"),
+    (r"\bWorld Bank\b", "International Org", "World Bank"),
+    (r"\bOECD\b", "International Org", "OECD"),
+    (r"\bNATO\b", "International Org", "NATO"),
 ]
 
 TIER1_PATTERNS = [
-    (r"Google\b(?!.*DeepMind)", "Big Tech"),
-    (r"Microsoft\b", "Big Tech"),
-    (r"Amazon\b", "Big Tech"),
-    (r"Apple\b(?!.*University)", "Big Tech"),
-    (r"NVIDIA|Nvidia\b", "Big Tech"),
-    (r"\bIntel\b(?!.*ligence)", "Big Tech"),
-    (r"\bIBM\b", "Big Tech"),
-    (r"Salesforce", "Big Tech"),
-    (r"\bAdobe\b", "Big Tech"),
-    (r"Samsung\b", "Big Tech"),
-    (r"Huawei\b", "Big Tech"),
-    (r"Tencent\b", "Big Tech"),
-    (r"Alibaba\b", "Big Tech"),
-    (r"Baidu\b", "Big Tech"),
-    (r"ByteDance", "Big Tech"),
-    (r"Goldman Sachs", "Finance"),
-    (r"JPMorgan|J\.P\. Morgan", "Finance"),
-    (r"Morgan Stanley", "Finance"),
-    (r"Citadel\b", "Finance"),
-    (r"Two Sigma", "Finance"),
-    (r"BlackRock", "Finance"),
-    (r"Bloomberg\b(?!.*University)", "Finance"),
-    (r"Capital One", "Finance"),
-    (r"Wells Fargo", "Finance"),
-    (r"\bVisa\b(?!.*University)", "Finance"),
-    (r"Pfizer", "Pharma"),
-    (r"\bRoche\b", "Pharma"),
-    (r"Novartis", "Pharma"),
-    (r"AstraZeneca", "Pharma"),
-    (r"\bMerck\b", "Pharma"),
-    (r"Eli Lilly", "Pharma"),
-    (r"Sanofi", "Pharma"),
-    (r"Moderna", "Pharma"),
-    (r"Mayo Clinic", "Healthcare"),
-    (r"Cleveland Clinic", "Healthcare"),
-    (r"Siemens\b", "Industrial"),
-    (r"\bBosch\b", "Industrial"),
-    (r"Honeywell", "Industrial"),
-    (r"\bGeneral Electric\b|\bGE Research\b|\bGE Global Research\b", "Industrial"),
-    (r"Ericsson", "Telecom"),
-    (r"\bNokia\b", "Telecom"),
-    (r"\bCisco\b", "Telecom"),
-    (r"Qualcomm", "Telecom"),
-    (r"\bTesla\b", "Automotive"),
-    (r"SpaceX", "Aerospace"),
-    (r"\bWalmart\b", "Retail"),
-    (r"Deloitte", "Consulting"),
-    (r"McKinsey", "Consulting"),
-    (r"\bPwC\b|PricewaterhouseCoopers", "Consulting"),
-    (r"Accenture", "Consulting"),
+    (r"Google\b(?!.*DeepMind)", "Big Tech", "Google"),
+    (r"Microsoft\b", "Big Tech", "Microsoft"),
+    (r"Amazon\b", "Big Tech", "Amazon"),
+    (r"Apple\b(?!.*University)", "Big Tech", "Apple"),
+    (r"NVIDIA|Nvidia\b", "Big Tech", "NVIDIA"),
+    (r"\bIntel\b(?!.*ligence)", "Big Tech", "Intel"),
+    (r"\bIBM\b", "Big Tech", "IBM"),
+    (r"Salesforce", "Big Tech", "Salesforce"),
+    (r"\bAdobe\b", "Big Tech", "Adobe"),
+    (r"Samsung\b", "Big Tech", "Samsung"),
+    (r"Huawei\b", "Big Tech", "Huawei"),
+    (r"Tencent\b", "Big Tech", "Tencent"),
+    (r"Alibaba\b", "Big Tech", "Alibaba"),
+    (r"Baidu\b", "Big Tech", "Baidu"),
+    (r"ByteDance", "Big Tech", "ByteDance"),
+    (r"Goldman Sachs", "Finance", "Goldman Sachs"),
+    (r"JPMorgan|J\.P\. Morgan", "Finance", "JPMorgan Chase"),
+    (r"Morgan Stanley", "Finance", "Morgan Stanley"),
+    (r"Citadel\b", "Finance", "Citadel"),
+    (r"Two Sigma", "Finance", "Two Sigma"),
+    (r"BlackRock", "Finance", "BlackRock"),
+    (r"Bloomberg\b(?!.*University)", "Finance", "Bloomberg"),
+    (r"Capital One", "Finance", "Capital One"),
+    (r"Wells Fargo", "Finance", "Wells Fargo"),
+    (r"\bVisa\b(?!.*University)", "Finance", "Visa"),
+    (r"Pfizer", "Pharma", "Pfizer"),
+    (r"\bRoche\b", "Pharma", "Roche"),
+    (r"Novartis", "Pharma", "Novartis"),
+    (r"AstraZeneca", "Pharma", "AstraZeneca"),
+    (r"\bMerck\b", "Pharma", "Merck"),
+    (r"Eli Lilly", "Pharma", "Eli Lilly"),
+    (r"Sanofi", "Pharma", "Sanofi"),
+    (r"Moderna", "Pharma", "Moderna"),
+    (r"Mayo Clinic", "Healthcare", "Mayo Clinic"),
+    (r"Cleveland Clinic", "Healthcare", "Cleveland Clinic"),
+    (r"Siemens\b", "Industrial", "Siemens"),
+    (r"\bBosch\b", "Industrial", "Bosch"),
+    (r"Honeywell", "Industrial", "Honeywell"),
+    (r"\bGeneral Electric\b|\bGE Research\b|\bGE Global Research\b", "Industrial", "General Electric"),
+    (r"Ericsson", "Telecom", "Ericsson"),
+    (r"\bNokia\b", "Telecom", "Nokia"),
+    (r"\bCisco\b", "Telecom", "Cisco"),
+    (r"Qualcomm", "Telecom", "Qualcomm"),
+    (r"\bTesla\b", "Automotive", "Tesla"),
+    (r"SpaceX", "Aerospace", "SpaceX"),
+    (r"\bWalmart\b", "Retail", "Walmart"),
+    (r"Deloitte", "Consulting", "Deloitte"),
+    (r"McKinsey", "Consulting", "McKinsey"),
+    (r"\bPwC\b|PricewaterhouseCoopers", "Consulting", "PwC"),
+    (r"Accenture", "Consulting", "Accenture"),
 ]
 
 
 def match_patterns(name: str, patterns):
-    """Return (category, pattern) for the first match, or (None, None)."""
+    """Return (category, canonical_org) for the first match, or (None, None)."""
     if not name:
         return None, None
-    for pattern, category in patterns:
+    for pattern, category, canonical in patterns:
         if re.search(pattern, name, re.IGNORECASE):
-            return category, pattern
+            return category, canonical
     return None, None
 
 
 def classify_institution(name: str):
-    """Return ("T0"|"T1"|None, category|None) for an institution name."""
-    cat, _ = match_patterns(name, TIER0_PATTERNS)
+    """Return (tier, category, canonical_org) for an institution name.
+
+    Every element is None when the name matches neither tier. The canonical
+    organization collapses legal entities of one company ("AstraZeneca AB",
+    "AstraZeneca UK Ltd") so a citing paper counts once per organization.
+    """
+    cat, org = match_patterns(name, TIER0_PATTERNS)
     if cat:
-        return "T0", cat
-    cat, _ = match_patterns(name, TIER1_PATTERNS)
+        return "T0", cat, org
+    cat, org = match_patterns(name, TIER1_PATTERNS)
     if cat:
-        return "T1", cat
-    return None, None
+        return "T1", cat, org
+    return None, None, None
+
+
+# ── Self / co-author citation screen ────────────────────────────────────
+
+PI_NAME = "Yue Zhao"
+
+
+def name_key(name: str) -> frozenset:
+    """Order-insensitive key for a person name.
+
+    Lowercases, joins hyphenated given names, strips footnote marks, and drops
+    single-letter initials, so "Ryan A. Rossi", "Rossi, Ryan" and "Ryan Rossi"
+    share a key, as do "Yue Zhao" and "Zhao Yue".
+    """
+    cleaned = re.sub(r"[-‐‑]", "", name or "")
+    tokens = re.findall(r"[^\W\d_]+", cleaned.lower())
+    return frozenset(t for t in tokens if len(t) > 1)
+
+
+_PLACEHOLDER_TOKENS = {"many", "other", "others", "et", "al", "authors"}
+
+
+def _placeholder(key: frozenset) -> bool:
+    """True for author-list fillers such as "and many others" or "et al.", which are not names."""
+    return bool(key & _PLACEHOLDER_TOKENS)
+
+
+def load_coauthors(project_root: str, min_papers: int = 2) -> dict:
+    """Map name_key -> display name for the PI and frequent co-authors.
+
+    Reads the author strings in data/publications.json. A co-author must share
+    at least `min_papers` papers with the PI; the threshold keeps one-off
+    collaborators with common names from screening out unrelated citers.
+    """
+    path = os.path.join(project_root, "data", "publications.json")
+    with open(path, encoding="utf-8") as f:
+        pubs = json.load(f)
+    counts: dict[frozenset, int] = {}
+    display: dict[frozenset, str] = {}
+    for p in pubs:
+        seen: set[frozenset] = set()
+        for raw in re.split(r",|\band\b", p.get("authors", "") or ""):
+            raw = re.sub(r"[*†‡♠♣♥♦\d]", "", raw).strip(" .")
+            key = name_key(raw)
+            if len(key) < 2 or key in seen or _placeholder(key):
+                continue
+            seen.add(key)
+            counts[key] = counts.get(key, 0) + 1
+            display.setdefault(key, raw)
+    out = {k: display[k] for k, c in counts.items() if c >= min_papers}
+    out[name_key(PI_NAME)] = PI_NAME
+    return out
+
+
+def load_work_authors(project_root: str) -> dict:
+    """Map each paper's table label (see short_label) to its authors' name keys.
+
+    Two papers that share a label (the two SUOD papers) share one author set.
+    """
+    path = os.path.join(project_root, "data", "publications.json")
+    with open(path, encoding="utf-8") as f:
+        pubs = json.load(f)
+    out: dict[str, set] = {}
+    for p in pubs:
+        keys = out.setdefault(short_label(p.get("title", "")), set())
+        for raw in re.split(r",|\band\b", p.get("authors", "") or ""):
+            key = name_key(re.sub(r"[*†‡♠♣♥♦\d]", "", raw).strip(" ."))
+            if len(key) >= 2 and not _placeholder(key):
+                keys.add(key)
+    return out
+
+
+def screen_self_citation(authors: Iterable[str], coauthors: dict, cited_authors: set | None = None):
+    """Classify a citing paper by its author list.
+
+    Returns (verdict, matched_names) where verdict is:
+      "self"      the PI is an author;
+      "coauthor"  any author of the cited work is an author (a co-author citing their
+                  own paper, however few papers they share with the PI), or two or more
+                  frequent co-authors are;
+      "possible"  exactly one frequent co-author matches who did not write the
+                  cited work (kept, but listed, because one common name is weak evidence);
+      None        no match.
+    """
+    pi = name_key(PI_NAME)
+    matched: list[str] = []
+    own_work = False
+    is_self = False
+    for a in authors or []:
+        key = name_key(a)
+        if key == pi:
+            is_self = True
+        elif cited_authors and key in cited_authors:
+            own_work = True
+            name = coauthors.get(key, a)
+            if name not in matched:
+                matched.append(name)
+        elif key in coauthors and coauthors[key] not in matched:
+            matched.append(coauthors[key])
+    if is_self:
+        return "self", [PI_NAME] + matched
+    if len(matched) >= 2 or own_work:
+        return "coauthor", matched
+    if matched:
+        return "possible", matched
+    return None, []
 
 
 def load_papers(project_root: str):
@@ -219,9 +333,27 @@ def load_papers(project_root: str):
     return papers
 
 
-def short_label(title: str, venue: str, *, title_len: int = 45, venue_len: int = 20) -> str:
-    """Compact label for a cited paper, used in the output tables."""
-    return f"{title[:title_len]} ({venue[:venue_len]})"
+def short_label(title: str, venue: str = "", *, max_len: int = 42) -> str:
+    """Compact, readable label for a cited paper, used in the output tables.
+
+    A short pre-colon name ("COPOD: Copula-Based ...") becomes the label.
+    Otherwise the title is cut at a word boundary. The venue is left out: both
+    sources must produce the same label for cross-source dedup, and the label
+    only has to identify the work among the PI's own papers.
+    """
+    title = (title or "").strip()
+    m = re.match(r"^([^:]{2,24}):\s", title)
+    if m:
+        return m.group(1).strip()
+    if len(title) <= max_len:
+        return title
+    cut = title[:max_len].rsplit(" ", 1)[0].rstrip(",;:-")
+    return cut + "…"
+
+
+def normalize_title(title: str) -> str:
+    """Lowercase alphanumeric form of a title, for matching versions of one paper."""
+    return re.sub(r"[^a-z0-9]+", " ", (title or "").lower()).strip()
 
 
 def normalize_doi(paper_url: str):
@@ -247,24 +379,40 @@ def normalize_arxiv_id(paper_url: str):
 
 
 def dedup_entries(entries: Iterable[dict]) -> list[dict]:
-    """Deduplicate entries by (institution, citing_title, cited_work).
+    """Deduplicate entries by (organization, normalized citing title, cited work).
 
-    When the same entry appears from multiple sources, keep the first one
-    and concatenate the source markers (e.g., "openalex+dimensions").
+    Keying on the canonical organization collapses legal entities of one
+    company; keying on the normalized title collapses a preprint and its journal
+    version, and the two sources' records of one paper. Merged rows keep the
+    latest year and the union of sources, raw institution names, countries, and
+    authors.
     """
     by_key: dict[tuple, dict] = {}
     for e in entries:
         key = (
-            e.get("institution", ""),
-            e.get("citing_title") or "",
+            e.get("org") or e.get("institution", ""),
+            normalize_title(e.get("citing_title") or ""),
             e.get("cited_work", ""),
         )
         existing = by_key.get(key)
         if existing is None:
             by_key[key] = dict(e)
+            by_key[key]["authors"] = list(e.get("authors") or [])
             continue
         sources = set(existing.get("source", "").split("+"))
-        sources.add(e.get("source", ""))
+        sources.update(e.get("source", "").split("+"))
         sources.discard("")
         existing["source"] = "+".join(sorted(sources, key=_source_sort_key))
+        for field, sep in (("institution", "; "), ("country", ", ")):
+            vals = [v for v in (existing.get(field) or "").split(sep) if v]
+            for v in (e.get(field) or "").split(sep):
+                if v and v not in vals:
+                    vals.append(v)
+            existing[field] = sep.join(vals)
+        if (e.get("year") or 0) > (existing.get("year") or 0):
+            existing["year"] = e.get("year")
+            existing["citing_title"] = e.get("citing_title") or existing.get("citing_title")
+        for a in e.get("authors") or []:
+            if a not in existing["authors"]:
+                existing["authors"].append(a)
     return list(by_key.values())

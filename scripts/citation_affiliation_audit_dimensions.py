@@ -27,8 +27,6 @@ from pathlib import Path
 from typing import Iterable
 
 from citation_audit_common import (
-    TIER0_PATTERNS,
-    TIER1_PATTERNS,
     classify_institution,
     dedup_entries,
     load_papers,
@@ -111,7 +109,16 @@ def _query_dimensions(dsl, query: str, context: str):
     API failure into a false negative audit row. `context` is included in the
     raised message so the failing call site is obvious from the traceback.
     """
-    res = dsl.query(query)
+    for attempt in range(4):
+        try:
+            res = dsl.query(query)
+            break
+        except Exception as e:  # network timeouts and resets are transient; retry with backoff
+            if attempt == 3:
+                raise RuntimeError(f"Dimensions {context} failed after retries: {e}") from e
+            wait = 10 * (attempt + 1)
+            print(f"    Dimensions {type(e).__name__}; retrying in {wait}s...")
+            time.sleep(wait)
     errs = getattr(res, "errors", None)
     if errs:
         raise RuntimeError(f"Dimensions {context} failed: {errs}")
@@ -243,6 +250,21 @@ def _extract_institutions(citing_pub: dict) -> list[dict]:
     return out
 
 
+def _author_names(citing_pub: dict) -> list[str]:
+    """Author display names from a Dimensions publication object."""
+    names: list[str] = []
+    for author in citing_pub.get("authors", []) or []:
+        if isinstance(author, dict):
+            name = " ".join(
+                part for part in (author.get("first_name"), author.get("last_name")) if part
+            )
+        else:
+            name = str(author)
+        if name:
+            names.append(name)
+    return names
+
+
 def _get_citing_publications(dsl, pub_id: str, *, max_pages: int = 5, page_size: int = 1000):
     """Return citing-publication objects for a given Dimensions pub id.
 
@@ -340,18 +362,21 @@ def fetch_dimensions_entries(
             if cid:
                 citing_ids.add(cid)
             institutions = _extract_institutions(c)
+            authors = _author_names(c)
             for inst in institutions:
-                tier, category = classify_institution(inst["name"])
+                tier, category, org = classify_institution(inst["name"])
                 if tier is None:
                     continue
                 all_entries.append({
                     "tier": tier,
                     "category": category,
+                    "org": org,
                     "institution": inst["name"],
                     "country": inst.get("country", ""),
                     "cited_work": short_name,
                     "citing_title": c.get("title", ""),
                     "citing_id": cid or "",
+                    "authors": authors,
                     "year": c.get("year"),
                     "source": "dimensions",
                 })
@@ -380,7 +405,9 @@ def _write_standalone_markdown(result: dict, total_papers: int, out_path: Path) 
         f.write(
             f"Surveys excluded. {result['found_count']} papers with citations on Dimensions "
             f"(out of {total_papers} non-survey papers). "
-            f"{result['unique_citing']} unique citing publications analyzed.\n\n"
+            f"{result['unique_citing']} unique citing publications analyzed. This diagnostic copy "
+            "is not screened for self-citations; `scripts/citation_affiliation_audit.py` writes the "
+            "screened report.\n\n"
         )
 
         for tier_label, tier_entries in (("Tier 0", t0), ("Tier 1", t1)):
@@ -391,8 +418,8 @@ def _write_standalone_markdown(result: dict, total_papers: int, out_path: Path) 
                 f.write("|----------|-----------|---------|----------------|-------------|------|\n")
                 for e in sorted(tier_entries, key=lambda x: (x["category"], -(x.get("year") or 0))):
                     ct = (e.get("citing_title") or "")[:60].replace("|", "/")
-                    inst = e["institution"].replace("|", "/")
-                    cw = e["cited_work"][:35].replace("|", "/")
+                    inst = (e.get("org") or e["institution"]).replace("|", "/")
+                    cw = e["cited_work"].replace("|", "/")
                     f.write(
                         f"| {e['category']} | {inst} | {e['country']} | {cw} | {ct} | {e.get('year') or ''} |\n"
                     )

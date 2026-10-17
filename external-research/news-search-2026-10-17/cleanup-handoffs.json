@@ -1,0 +1,104 @@
+[
+ {
+  "target": "citation-audit",
+  "from": "Ledger 2 row 16",
+  "reason": "Research paper, not media, and not independent: the first author is Zekuan Liu (listed as Kay Liu on Amazon Science), who is first author of both cited works (BOND arXiv:2206.10071, PyGOD arXiv:2204.12095). Reference-list citation only (BOND/PyGOD appear nowhere else in the PDF). Same reasoning as rows 64-67 (corporate research portal, no editorial treatment).",
+  "row_text": "| 16 | BOND/PyGOD | Amazon Science | Industry research paper | \"Graph Diffusion Models for Anomaly Detection\" — cites Yue Zhao as co-author of BOND, cites PyGOD | 2024 | D3 | [Link](https://assets.amazon.science/0c/61/10782ada424e9bfb3eca22bc61b2/graph-diffusion-models-for-anomaly-detection.pdf) |"
+ },
+ {
+  "target": "negative",
+  "from": "Ledger 2 row 22",
+  "reason": "Already excluded from the count and documented in the 2026-07-19 pass section (lines 2089-2093). The 899-character cell is nearly all process history. Remove the row from the Ledger 2 table and keep a short collision record under Negative Results; the table then drops one row. Evidence kept: agent-audit appears only as a Docker service/container name, 'USC' only inside 'obfuscated', no project link, no Wayback snapshot.",
+  "row_text": "| 22 | agent-audit | SitePoint | Developer publication | **[REMOVED 2026-07-19: NOT COVERAGE]** \"OpenClaw Security Audit Guide 2026\". Flagged UNVERIFIED 2026-06-14; confirmed 2026-07-19 by full live fetch of the 649-line article: no Yue Zhao, FORTIS, USC, project URL, arXiv:2603.22853, or HeadyZhang reference. Its only literal token is generic sample Docker YAML (`services: agent-audit:` / `container_name: agent-audit-sandbox`). Wayback returned no snapshots, so the page did not change and the original claim was wrong. Independently re-verified 2026-07-19 by a separate fetch: `agent-audit` appears 3 times, all as a Docker service or container name (`services: agent-audit:`, `container_name: agent-audit-sandbox`); `USC` appears 3 times, all as the substring inside \"obfuscated\", which is the likely source of the original false positive; the only GitHub link in the article is `github.com/moby/moby`. Reclassified to Topic Validation; not counted. | 2026 | D5 | [Link](https://www.sitepoint.com/openclaw-security-audit-guide/) |"
+ },
+ {
+  "target": "citation-audit",
+  "from": "Ledger 2 row 66",
+  "reason": "NAACL 2025 Industry Track paper (TurboFuzzLLM, Amazon Web Services) that cites TrustLLM in the body to interpret its own results; the row itself says it is 'not run as a benchmark'. A body citation is bibliometric evidence for /citation-audit and does not meet Ledger 7's substantive-use rule; a research paper is not Ledger 2 media. Document-level note: the bib entry lists Yue Huang first with 'et al.', so Yue Zhao's name does not appear; identity rests on the title plus arXiv:2401.05561. Cell is 787 characters, mostly process history ('Phase A T1', 'for the skeptic').",
+  "row_text": "| 66 | TrustLLM | **Amazon Science** | T2 | NAACL 2025 Industry Track paper by Aman Goel, Xian Carrie Wu, Zhe Wang, Dmitriy Bespalov and Yanjun Qi, all Amazon Web Services. TrustLLM is cited in the body to interpret the authors' own attack-success results across model sizes, not run as a benchmark. Note for the skeptic: the bib entry lists Yue Huang first and truncates at 'et al.', so Yue Zhao's name does not appear in this document. The direct mention rests on the paper title 'Trustllm: Trustworthiness in large language models' plus arXiv:2401.05561, which is the registry's required disambiguator and rules out the trustllm.eu EU project. No self-citation: Yanjun Qi and the other four authors are absent from the TrustLLM author block. Tier demoted from the Phase A T1 for the same reason as the other amazon.science rows. | 2026 | fmco | [Link](https://www.amazon.science/publications/turbofuzzllm-turbocharging-mutation-based-fuzzing-for-effectively-jailbreaking-large-language-models-in-practice) |"
+ },
+ {
+  "target": "citation-audit",
+  "from": "Ledger 2 row 67",
+  "reason": "Single-author KDD workshop paper (Amazon) with TrustLLM as the anchor body citation; the row says 'weaker than the SEAD and RecSys rows' and 'not a benchmark run'. Reference-level citation, not media and not Ledger 7. The reference spells out the title, arXiv:2401.05561 and Yue Zhao's name. Cell is 621 characters of mostly process history.",
+  "row_text": "| 67 | TrustLLM | **Amazon Science** | T2 | Single-author paper by Daniel Lopez-Martinez (kdlopezm@amazon.com, Amazon, Santa Clara), KDD GenAI evaluation workshop. TrustLLM is the anchor citation for the paper's framing claim about LLM trustworthiness and is cited again for hallucination. The reference spells out the full title, arXiv:2401.05561 and Yue Zhao's name, so both the paper-title and PI-name disambiguators hold. Body citation, not a benchmark run, so weaker than the SEAD and RecSys rows. No self-citation: the sole author is absent from the TrustLLM author block. Tier demoted from the Phase A T1 for the same reason as the other amazon.science rows. | 2026 | fmco | [Link](https://www.amazon.science/publications/trustworthiness-in-medical-product-question-answering-by-large-language-models) |"
+ },
+ {
+  "target": "topic",
+  "from": "Ledger 3 row 66az",
+  "reason": "The row says the CVPR 2026 form addresses 'the same compute-transparency gap the paper quantified' but records no source that names the paper; the LinkedIn posts are authenticated and could not be read. A topic-only row does not meet Ledger 3. Move unless a post is shown to cite the paper. Table layout: | [Title](url) | Related Topic |.",
+  "row_text": "| 66az | Computing Resources | **Policy** | CVPR 2026 Compute Reporting Form — official policy pilot addressing same compute-transparency gap the paper quantified; discussed on LinkedIn by program chair Vladimir Pavlovic ([post](https://www.linkedin.com/posts/vladimir-pavlovic-a5528412_cvpr-2026-compute-reporting-form-author-activity-7384957217147457536-kd1X)), Sasha Luccioni ([post](https://www.linkedin.com/posts/sashaluccioniphd_cvpr-2026-compute-reporting-form-author-activity-7385993803515744256-uqM-)) |"
+ },
+ {
+  "target": "move-no-row",
+  "from": "Ledger 3 row 307",
+  "reason": "The row itself says the repo README advertises 'Daily Update enabled' (a machine arXiv crawl), the adoption signal is 'close to zero', and the entry is capped as an aggregator. The Ledger 3 definition excludes preprint aggregators listing the lab's own papers, and the file already buckets this class as 'Aggregator paper-pages (Tier 5)'. Re-home it as a bucket line instead of a numbered row (item count preserved). Also: row 75 attributes this paper to 'Z. Li et al.' and this row to 'Nian et al.'; authorship should be normalised to data/publications.json.",
+  "row_text": "| 307 | When Only the Final Text Survives (Nian et al.) | **Platform** | AGGREGATOR. The repo's own README advertises 'Daily Update enabled' linking .github/workflows/daily-arxiv-update.yml, so the entry is a machine arXiv crawl rather than a curation decision. Per disclaimer-patterns that caps it at T3, and the adoption signal is close to zero. Title variant 'for Multi-Agent Attribution' against data/publications.json's 'for Multi-Agent Auditing', the same variant the 2026-09-12 pass recorded at lines 487-489; same arXiv ID. Quote: \"- **2026-03-18** [arXiv ID: 2603.17445] [When Only the Final Text Survives: Implicit Execution Tracing for Multi-Agent Attribution](http://arxiv.org/abs/2603.17445v2)\" [Link](https://github.com/xaddwell/Awesome-LLM-Agent-Memory-Safety) |"
+ },
+ {
+  "target": "move-no-row",
+  "from": "Ledger 3 row 389",
+  "reason": "Moonlight (Corca) auto-generated paper-review page. The bucket below already lists Moonlight as an aggregator paper-page source for 15+ works, so recording individual Moonlight pages as full rows is inconsistent, and the task's Ledger 3 rule excludes preprint aggregators listing the lab's own papers. Move to the bucket; URL kept in the bullet. Bucket effect +1 item; Ledger 3 count -1.",
+  "row_text": "| 389 | From Selection to Generation (ACL 2025) | Moonlight | [Literature Review] From Selection to Generation: A Survey of LLM-based Active Learning. AI paper overview platform by Corca, Inc. synthesizing \"From Selection to Generation: A Survey of LLM-based Active Learning\" (arXiv:2502.11767), breaking down five stages of active learning with LLMs. Metadata records full author list including Yue Zhao. Locator: HTML meta description and Next.js articleBody payload, Introduction & Core Methodology. [Source](https://www.themoonlight.io/en/review/from-selection-to-generation-a-survey-of-llm-based-active-learning) |"
+ },
+ {
+  "target": "move-no-row",
+  "from": "Ledger 3 row 390",
+  "reason": "Same reasoning as row 389. Merge into the existing MetaOOD bucket bullet instead of a new bullet (bucket item count unchanged). Ledger 3 count -1.",
+  "row_text": "| 390 | MetaOOD (ICLR 2025) | Moonlight | [Literature Review] MetaOOD: Automatic Selection of OOD Detection Models. Moonlight AI platform overview and technical summary of MetaOOD (ICLR 2025) zero-shot unsupervised model selection. Breaks down problem context, methodology, and empirical results. Metadata records full author list including Yue Zhao. Locator: HTML meta description and Next.js articleBody payload, Introduction & Rationale. [Source](https://www.themoonlight.io/en/review/metaood-automatic-selection-of-ood-detection-models) |"
+ },
+ {
+  "target": "move-no-row",
+  "from": "Ledger 3 row 415",
+  "reason": "Moonlight (Spanish edition) auto-generated review page for CUA-SWE; same reasoning as row 389. Also a same-work, same-platform sibling of English Moonlight pages already bucketed elsewhere. Ledger 3 count -1; bucket +1.",
+  "row_text": "| 415 | CUA-SWE | TheMoonlight.io | [Revisión de artículo] CUA-SWE: When Computer-Use Agents Meet Visual Software Engineering. Live fetch succeeded (HTTP 200, 360KB). Detailed structured review of CUA-SWE benchmark on TheMoonlight.io (Corca, Inc.) analyzing POMDP formulation, 105 tasks across 4 domains, and matched comparison conditions. Embedded metadata explicitly indexes all authors including Yue Zhao. Locator: HTML Next.js hydration payload, script#__NEXT_DATA__ / article review summary. [Source](https://www.themoonlight.io/es/review/cua-swe-when-computer-use-agents-meet-visual-software-engineering) |"
+ },
+ {
+  "target": "move-no-row",
+  "from": "Ledger 3 row 498",
+  "reason": "Emergent Mind topic page on CDCR-SFT. The long-tail bucket at line 3211 already lists CDCR-SFT with Emergent Mind among its platforms, and the row says 'Capped at T3 per aggregator rules and promoted to Ledger 3', so it is the same item counted twice (once in the bucket, once as a row). Fold into the bucket, keep the URL emergentmind.com/topics/reasoning-dag-probing in the bullet. Ledger 3 count -1; bucket item count unchanged.",
+  "row_text": "| 498 | CDCR-SFT | Emergent Mind | Reasoning DAG Probing & CDCR-SFT: Causal-DAG Construction and Reasoning via Supervised Fine-Tuning. Curated AI research concept profile and topic tracker on Emergent Mind synthesizing research on reasoning DAG probing. Section 4 provides a dedicated conceptual and performance analysis of CDCR-SFT from Li, Shen, Nian, ..., Zhao (arXiv:2508.12495), highlighting its explicit causal-DAG construction, d-separation guarantees, and 95.33% accuracy on CLADDER. Capped at T3 per aggregator rules and promoted to Ledger 3. Locator: HTML section '4. Multi-Agent and Causal DAG Reasoning', paragraph 'Causal-DAG Construction and Reasoning (CDCR-SFT)'. [Source](https://www.emergentmind.com/topics/reasoning-dag-probing) |"
+ },
+ {
+  "target": "citation-audit",
+  "from": "Ledger 7 row S19",
+  "reason": "Fails the L7 rule three ways. (1) arXiv:2607.14035 is a single-author preprint survey ('Optimizing Visibility in Generative Engines: A Critical Survey of Generative Engine Optimization (2023-2026)', Olivier Martinez), not peer reviewed. (2) A survey describing a paper is a citation, not in-body use of the tool. (3) The quoted sentence is a remark about StealthRank's publication status ('primary status is that of a preprint with a workshop version, not a regular ICML publication'), not a use. I read the quote on p. 9 of the PDF; the survey's reference list says 'ICML 2026 workshop version'. The remark is worth keeping as a caveat on any StealthRank venue claim. Route to /citation-audit as a pass-section bullet; no ledger row.",
+  "row_text": "| S19 | arxiv.org | StealthRank | \"StealthRank jointly pursues rank and stealth, but its primary status is that of a preprint with a workshop version, not a regular ICML publication.\" [source](https://arxiv.org/html/2607.14035v1) |"
+ },
+ {
+  "target": "citation-audit",
+  "from": "Ledger 7 row S78",
+  "reason": "arXiv position paper (Zhangyang Wang, Peihao Wang, Kai Wang), no published version in OpenAlex, venue claim already unverified (the Count line itself says peer review is unverified). The body (p. 8) lists SecDOOD in one sentence among 'several systems' that demonstrate hypernetwork-based on-device learning; it does not run or build on it. That is a descriptive citation, so it fails both the peer-review and the in-body-use parts of the rule. Route to /citation-audit as a pass-section bullet; no ledger row.",
+  "row_text": "| S78 | arXiv (the Phase A venue claim of ICML 2026 is unverified) | Secure On-Device Video OOD Detection Without Backpropagation | arXiv preprint in ICML position-paper format, 'Position: Weight Space Should Be a First-Class Generative AI Modality' (Zhangyang Wang, Peihao Wang, UT Austin; Kai Wang, NUS). Names SecDOOD as one of the systems demonstrating hypernetwork-based on-device learning, with the full ten-author reference. Substantive in-body naming. Phase A called it 'ICML 2026'; the PDF carries no venue line, so the venue claim is unverified and the record is scored as a preprint. [Link](https://arxiv.org/abs/2605.18632) |"
+ },
+ {
+  "target": "citation-audit",
+  "from": "Ledger 7 row S66",
+  "reason": "The row's own text says 'No standalone substantive use of BOND', so it fails the L7 rule by its own admission. The Work cell also disagrees with the evidence: it says PyGOD while the evidence concerns BOND (ref 22, grouped in-text list) and CONAD (ref 12). Crossref confirms ANIMATE (Hu, Zhang, Zhu, Hou; Academy of Military Sciences and NUDT) is a Sensors 26(10):3176 paper. Route to /citation-audit as a pass-section bullet; no ledger row.",
+  "row_text": "| S66 | MDPI | PyGOD | Sensors (MDPI) 2026 ANIMATE (Hu, Zhang, Zhu, Hou, NUDT, independent) cites BOND at ref 22 inside a grouped in-text list, and CONAD at ref 12. No standalone substantive use of BOND. Held at T2; MDPI direct routes 403, PMC mirror used. [Link](https://doi.org/10.3390/s26103176) |"
+ },
+ {
+  "target": "citation-audit",
+  "from": "Ledger 7 row S23",
+  "reason": "Passing mention. The quote lists TrustLLM as one of three examples in a definition ('...include DecodingTrust, TrustLLM, and HELM, as well as the set of evaluations used in model cards...'); the paper (Wang, Hertzmann, Russakovsky, Patterns 2024, on AI fairness benchmarks) does not run the benchmark. I confirmed the quote in the PMC full text. The same citation is already in the citation-affiliation evidence (Adobe row), so L7 double-books it. Route to /citation-audit as a pass-section bullet; no ledger row.",
+  "row_text": "| S23 | doi.org | TrustLLM | “Recent examples for large language models (LLMs) that fall under our definition of a benchmark suite include DecodingTrust,22 TrustLLM,23 and HELM,24 as well as the set of evaluations used in model cards like Claude 3’s25 and Llama’s.26” [source](https://doi.org/10.1016/j.patter.2024.101080) |"
+ },
+ {
+  "target": "citation-audit",
+  "from": "Ledger 7 row S40",
+  "reason": "Review article (43 authors, Nature Reviews Drug Discovery) that names TDC in one sentence as an example of AI-ready community resources; it does not use TDC. The same paper is already in the citation-affiliation evidence (Fraunhofer rows), so L7 double-books it. Route to /citation-audit as a pass-section bullet; no ledger row.",
+  "row_text": "| S40 | nature.com | TDC | “Two notable examples include Therapeutics Data Commons157 and MoleculeNet158, which provide AI-ready datasets and benchmarks for multiple prediction tasks, including toxicity and ADR prediction, as community resources implementing various evaluation tools and leaderboards metrics.” [source](https://www.nature.com/articles/s41573-025-01164-x) |"
+ },
+ {
+  "target": "citation-audit",
+  "from": "Ledger 7 row S12",
+  "reason": "The row concedes the paper only 'names TDC as one of two exemplar standardized ecosystems ... which is framing'. In the Nature Scientific Data HTML (SynRXN, Phan, Nguyen Song, Stadler) the full name appears once, in a discussion sentence ('while the molecular machine learning community has flourished through standardized ecosystems like MoleculeNet and the Therapeutics Data Commons, reaction informatics remains fragmented'), and the abbreviation TDC never appears; SynRXN does not use TDC data or code. That is a passing mention, the same class as S23 and S40. The 2026-08-09 pass counted it as substantive; the text does not support that. Route to /citation-audit as a pass-section bullet; no ledger row.",
+  "row_text": "| S12 | *Nature Scientific Data* s41597-026-07260-w (SynRXN) | TDC | Names TDC as one of two exemplar standardized ecosystems the field should imitate, which is framing rather than a passing dataset citation. |"
+ },
+ {
+  "target": "citation-audit",
+  "from": "Ledger 7 row S76",
+  "reason": "The citing document is a 4-page PVLDB 17(12):4229-4232 tutorial abstract ('Time-Series Anomaly Detection: Overview and New Trends', Liu, Boniol, Palpanas, Paparrizos), and the DOI in the row resolves to it. Its only use of Ma, Zhao, Zhang and Akoglu is the single sentence 'internal evaluation methods evaluate the effectiveness of a model by using surrogate metrics ... [17, 29]' (p. 3) plus the reference entry. The row's 'uses it in-body as the internal-evaluation reference' overstates that. The Work cell also holds the cited paper's long title instead of a short work name. Route to /citation-audit as a pass-section bullet; no ledger row.",
+  "row_text": "| S76 | VLDB Endowment | The Need for Unsupervised Outlier Model Selection: A Review and Evaluation of Internal Evaluation Strategies | PVLDB 17(12) 2024 tutorial paper (Qinghua Liu OSU, Boniol Inria, Palpanas Paris Cité, Paparrizos OSU, independent) cites Ma, Zhao, Zhang & Akoglu at ref [29] and uses it in-body as the internal-evaluation reference. Demoted T1->T2 (specialist DB venue). [Link](https://doi.org/10.14778/3685800.3685842) |"
+ }
+]

@@ -37,11 +37,11 @@ This file complements `search-strategy.md` ("Common false positives" table) by c
 
 **Real match**: the FORTIS paper *Implicit Execution Tracing* (arXiv:2603.17445), on recovering which agent produced a harmful output after logs are stripped.
 
-**Required disambiguator**: arXiv:2603.17445, or a FORTIS author name.
+**Required disambiguator**: arXiv:2603.17445, a FORTIS author name, or the title "When Only the Final Text Survives" (v1 subtitle "for Multi-Agent Attribution", later "for Multi-Agent Auditing").
 
 **Known collisions** (do NOT count):
 
-- **"implicit execution traces [Li et al., 2025b]"**, cited in FALAT (arXiv:2606.00765, Concordia SPEAR Lab and DePaul). A different 2025 work that happens to share the descriptive phrase. Discovered 2026-07-31: FALAT had been reported as the sole external citer of Implicit Execution Tracing, but its PDF contains zero occurrences of "2603.17445", "USC", "FORTIS", or the FORTIS author names. After this correction, Implicit Execution Tracing has **zero** confirmed external citers.
+- **"implicit execution traces [Li et al., 2025b]"**, cited in FALAT (arXiv:2606.00765, Concordia SPEAR Lab and DePaul). A different 2025 work that happens to share the descriptive phrase. Discovered 2026-07-31: FALAT had been reported as the sole external citer of Implicit Execution Tracing, but its PDF contains zero occurrences of "2603.17445", "USC", "FORTIS", or the FORTIS author names. **Reversed 2026-10-17: FALAT is a citer, not a collision.** Its reference entry (PDF p.12) reads "Z. Li et al. When only the final text survives: Implicit execution tracing for multi-agent attribution. arXiv preprint, 2025b.", which is the exact v1 title of arXiv:2603.17445, and an arXiv title search returns no other work with it. The author and year are garbled, which is why the identifier and author-name checks found nothing. The paper's title is a disambiguator in its own right: grep the bibliography for it before calling a match a collision.
 
 ### ToolPrivBench vs the FORTIS over-privilege benchmark
 
@@ -351,7 +351,7 @@ The Navy SBIR 24.2 instructions, GPT-4o system card, Claude 3.7 Sonnet system ca
 | Arcade ToolBench Aegis | Exact Justin0504/Aegis link is valid. Page says scoring was not performed, so its displayed 0/100 is not a valid measured score. |
 | DrugAgent in npj Drug Discovery s44386-026-00075-0 | Reference 62 identifies a different Yang Q. et al. paper. Reference 127 is a valid TDC citation. Do not count this as FORTIS DrugAgent coverage. |
 | Google Assured OSS localized package lists | July 2024 Japanese catalog lists PyOD; checked June 2026 English content omits it. Historical localized evidence cannot establish current inclusion. |
-| Hysen Labs PyOD review | Current source records review and approval by Kacey on October 5, 2026. Preserve the existing media row; the earlier machine-only inference was stale and is rejected. |
+| Hysen Labs PyOD review | The page records approval by Kacey on October 5, 2026, but the site's editorial policy says every analysis is drafted by an AI pipeline. Classify Hysen pages as Ledger 3 directory entries (row 668), not Ledger 2 media; decided 2026-10-17. |
 | Patent family tables | Google Patents places citations and cited-by rows below the family heading. Only family applications and country-status rows establish family membership. |
 
 ## October 14, 2026 Government Supplement

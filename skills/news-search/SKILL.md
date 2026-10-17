@@ -50,9 +50,9 @@ Read these reference files before starting:
 
     An Agy lane gets the dispatcher's own scratch directory and never sees the checkout. Neither `--mode plan` nor the sandbox stops a headless write. The boundary is that the lane has no workspace and its prompt names no repository path, so the lane's inventory travels in the prompt body instead. An inherited `PRUN_SCRATCH_CWD` is therefore unset rather than merely left unexported, since the dispatcher rejects a caller-supplied workspace that arrives without an explicit `--mode`.
 
-    `agy --version` and `agy models` run as a preflight before any launch, each bounded by `timeout --kill-after=5s` at `ANTIGRAVITY_PREFLIGHT_TIMEOUT_SECONDS` (default 60, validated as a positive integer to match the dispatcher, which rejects zero). The kill escalation is what makes the bound real: plain `timeout` sends TERM and keeps waiting, so a CLI that ignores TERM runs to completion regardless. An expired login or a hung CLI therefore fails the run immediately, rather than as a wave of `FAILED-START` lines after the launch deadline. The diagnostic distinguishes 124 (expired), 137 (killed after ignoring TERM), and 125 through 127 (`timeout` could not run the command) from an ordinary failure, so an auth problem is not reported as a hang. **Lane prompts must carry their own inventory.** Because the worker never sees the checkout, a prompt that names `data/publications.json` or `references/domain-registry.md` by relative path gives the worker nothing; inline the rows the lane needs, and run `scripts/pdf_term_scan.py` on the coordinator side rather than asking a lane to call it.
+    `agy --version` and `agy models` run as a preflight before any launch, each bounded by `timeout --kill-after=5s` at `ANTIGRAVITY_PREFLIGHT_TIMEOUT_SECONDS` (default 60, validated as a positive integer to match the dispatcher, which rejects zero). Where neither `timeout` nor Homebrew's `gtimeout` exists, as on stock macOS, a shell watchdog applies the same TERM-then-KILL escalation and exit codes. The kill escalation is what makes the bound real: plain `timeout` sends TERM and keeps waiting, so a CLI that ignores TERM runs to completion regardless. An expired login or a hung CLI therefore fails the run immediately, rather than as a wave of `FAILED-START` lines after the launch deadline. The diagnostic distinguishes 124 (expired), 137 (killed after ignoring TERM), and 125 through 127 (`timeout` could not run the command) from an ordinary failure, so an auth problem is not reported as a hang. **Lane prompts must carry their own inventory.** Because the worker never sees the checkout, a prompt that names `data/publications.json` or `references/domain-registry.md` by relative path gives the worker nothing; inline the rows the lane needs, and run `scripts/pdf_term_scan.py` on the coordinator side rather than asking a lane to call it.
 
-Run the two-phase pipeline described below. Phase A gathers candidates into `news-search-candidates.jsonl` and does not edit `news-coverage-audit.md`. Phase B verifies each candidate, classifies the survivors, records dropped candidates in the candidate file, and writes only kept rows to `news-coverage-audit.md` using the tier structure in the Output section. If `news-coverage-audit.md` does not yet exist, Phase B creates it with the full tier structure and negative-results table as a fresh audit.
+Run the two-phase pipeline described below. Phase A gathers candidates into `news-search-candidates.jsonl` and does not edit `news-coverage-audit.md`. Phase B verifies each candidate, classifies the survivors, records dropped candidates in the candidate file, and writes only kept rows to `news-coverage-audit.md` using the tier structure in the Output section. The round's method notes, held items and corrections go to `external-research/news-coverage-rounds.md`, not to the audit file. If `news-coverage-audit.md` does not yet exist, Phase B creates it with the full tier structure and negative-results table as a fresh audit.
 
 ### Query Bank Triage Rules
 
@@ -92,9 +92,10 @@ reached by a new URL, and a later sweep of the same round put the rate at 5 of 1
 Verification that checks a candidate against its source but never against the ledger cannot tell new
 coverage from a new URL. The check is local and cheap, so it runs first, over every candidate.
 
-    python scripts/build_identity_index.py build --audit ../../news-coverage-audit.md \
-        --out scratch/<date>/identity-index.jsonl
+    python scripts/build_identity_index.py build --out scratch/<date>/identity-index.jsonl
     python scripts/build_identity_index.py check --index scratch/<date>/identity-index.jsonl --stdin
+
+With no `--audit`, the index reads the audit, the citation-affiliation audit and the round notes; every run archive's `candidates.jsonl` is always added.
 
 **Match on document identity, not on URL string.** The script extracts every identifier a recorded
 document carries: normalized URL, arXiv ID, DOI, language-stripped Google Patents number, OSTI
@@ -134,6 +135,8 @@ paper), the companion code repository for a book, `api.stackexchange.com` for a 
 browser User-Agent for a 403 that is bot detection rather than a paywall. Record which routes were tried.
 Never bypass access control: no credential sharing, no cookie injection, no paywall-removal mirrors. A
 `still_blocked` that names four failed routes is a usable finding; a bare "blocked" is not.
+
+**A match in round prose is not a ledger row.** On 2026-10-17 a sweep of the archived round notes found 17 groups of findings, about 45 documents, that a round had confirmed in prose and no ledger held. Three had later been skipped as "already in the prior audit" because the dedup check matched the prose. Before marking a candidate already recorded, confirm the match is a ledger row; a prose-only match is an unwritten promotion to finish now.
 
 **Check a zero against the record before reporting it.** The suppression index exists so lanes do not
 re-report known coverage, and it is only ever applied to candidates. One round published GRADE as having
@@ -411,22 +414,27 @@ Non-FM-co careers pages (Wells Fargo, Capital One, JPMC, Pfizer, Goldman, etc.) 
 
 ### Required Sections in Output File
 
-1. **Coverage ledgers** (separate counts for each):
-   - **Government/Policy citations** — Tier 0: government reports, foundation model system cards, standards documents, analyst reports that cite your work by name
-   - **External media** — Tier 1-2: third-party press, institutional features, dedicated blog posts by external authors
-   - **Ecosystem adoption** — Tier 3: books, podcasts, enterprise integrations, patents, tutorials, platform integrations by external parties
-   - **First-party/community** — self-authored blog posts, GitHub discussions, dataset hosting (not external coverage)
-   - **Awards & recognitions** — Tier 4: awards, fellowships, encyclopedia entries
-2. **Topic Validation appendix** — articles that cover the same topic but do not name your work
-3. **Negative Results table** — outlet types searched with no results (prevents re-searching)
-4. **Upcoming Opportunities** — imminent conferences, journalist contacts from prior coverage
-5. **Summary Statistics** — separate counts per ledger, not a single aggregate. Report: government/policy total, external media total, ecosystem total, first-party/community total, and awards total.
-6. **Coverage matrix** — per-item appendix or CSV with one row per paper/tool, dimensions searched (D1-D8 plus D10; D9 is now handled by the standalone [[citation-audit]] skill), Phase A candidate count, and Phase B outcome (kept/topic-only/dropped/none). This makes the audit auditable.
-7. **Registry harvest summary** — list of new domains added to `references/domain-registry.md` from this round's confirmed Phase B hits, grouped by class. Empty list is fine and should still be reported, so the harvest step stays visible across rounds.
+`news-coverage-audit.md` holds evidence, not process. Keep it to these sections, in this order:
+
+1. **Summary Statistics**: rows and counted items per ledger, each with its counting basis, plus the patent line. No combined total, because the ledgers measure different things and overlap. The patent line counts distinct inventions. Before a new patent row counts, intersect its Google Patents "Also Published As" and priority lists with the numbers already on file; merge a family member into the older row. On 2026-10-17 two of 13 new patent rows were family members of existing rows, and an earlier round had counted a US continuation twice.
+2. **Run History**: one table row per round (method, net new by ledger, headline result).
+3. **Coverage ledgers**, each ending in a count line computed from its own table:
+   - **Ledger 1, Government/Policy citations** (Tier 0) and **Ledger 1b, Government technical reports**
+   - **Ledger 2, External media** (Tier 1-2)
+   - **Ledger 3, Ecosystem adoption** (Tier 3). High-value types get one row each: patents, theses, courses, preprints with in-body use, enterprise documents, organization-owned code, framework integrations, documentation, specifications, podcasts and datasets. The long tail (aggregator pages, platform listings, tutorials and blog posts, individual code, curated lists, videos, forum threads) goes into one counted cluster row per type per round. The cluster row shows a few examples and points to the run archive's `candidates.jsonl`, where every item keeps its quote and locator.
+   - **Ledger 4, First-party/community** (not external coverage)
+   - **Ledger 5, Awards and recognitions** (Tier 4)
+   - **Ledger 6, Agent-auditing line, external academic citations**, and **Ledger 7, Scientific uptake**
+4. **Upcoming Visibility Opportunities**: open consultations and calls, each confirmed on its official page with its closing date.
+5. **Negative Results**: outlet classes searched with no hit, each with the date last checked. A class with a counted hit is not a negative.
+6. **Topic Validation**: sources on the same topic that name no work.
+7. **Citation Affiliation Evidence**: the summary from the citation-audit hook.
+
+Everything else a round produces goes to `external-research/news-coverage-rounds.md` (newest round first) or to its run folder under `external-research/`. That covers the method write-up, held and unverified items, corrections, the registry harvest summary, the propagation note, and the old-to-new row map when rows move between ledgers. The per-item coverage matrix lives in `news-coverage-matrix.csv` or the run folder. `build_identity_index.py` reads the round notes as well as the audit, so moving text there keeps it in the dedup index.
 
 ### Incremental Updates
 
-When running a targeted search (not full audit), append new findings to the existing file. Do not overwrite previous results. Mark the date of each search pass.
+A targeted run follows the same split: counted rows into the ledgers, one Run History row, and its notes into the round-notes file. Never overwrite an earlier round's notes.
 
 ### Downstream Handoff: Propagate Confirmed Findings to the Public Site
 
@@ -453,7 +461,7 @@ Run this step after the audit file is written, never before, so that only verifi
 
    **Check the award links while you are here.** A link that returns HTTP 200 is not evidence: fetch each award URL on the public surfaces and confirm the page actually names the PI. The 2026-08-13 round found two dead NortonLifeLock links redirecting to a generic corporate blog, and a Capital One Research Award cited to a USC Viterbi news page that returns 200 and contains no occurrence of "Zhao".
 4. **Keep the wording calibrated to the evidence.** Carry the audit's caveats onto the site rather than dropping them. Attribution that names only a tool and not the PI stays described that way. A co-authored project stays described as co-authored. Adverse coverage, such as a CVE advisory, is evidence of reach and does not belong in a card that reads as endorsement.
-5. **Record what was propagated.** Add a short "Propagated to site" note to the round's section in `news-coverage-audit.md` listing which rows reached which cards, so a later reader can tell the difference between a finding that was never surfaced and one that was deliberately held back.
+5. **Record what was propagated.** Add a short "Propagated to site" note to the round's entry in `external-research/news-coverage-rounds.md` listing which rows reached which cards. A later reader can then tell a finding that was never surfaced from one that was deliberately held back.
 
 The reverse direction also holds: when a public claim on the site cannot be traced to a row in the audit, treat that as a defect in the site, not as evidence the audit is incomplete.
 
@@ -520,20 +528,14 @@ When running the "Full audit" Run Mode, perform the following before writing `ne
 
 1. Check whether `citation-affiliation-audit.md` exists at the project root.
 2. If **missing**: tell the user "Citation affiliation audit has never run on this project; recommend running `/citation-audit --source both` (or `--source openalex` if no Dimensions credentials) before the news-search full audit." Do not auto-invoke the long citation audit without confirmation.
-3. If **fresh** (mtime within the last 30 days): copy citation-affiliation-audit.md's Tier 0 and Tier 1 tables verbatim into `news-coverage-audit.md` under a `## Citation Affiliation Evidence (integrated from citation-audit)` section. Specifically:
-   - Reproduce the **full Tier 0 table** (all rows), with the same `Category | Institution | Country | Your Work Cited | Citing Paper | Year | Source` columns.
-   - Reproduce the **full Tier 1 table** (all rows), same columns.
-   - Reproduce the **Summary by Institution** subsection.
-   - Reproduce the **per-source Coverage** subsections (so the freshness gate and source coverage stay visible in the merged report).
-   - Add a one-line freshness stamp at the top of the section citing the audit's generation date.
-   - Add a link back to `citation-affiliation-audit.md` for the canonical separate copy.
-4. If **stale** (mtime older than 30 days): integrate the same content, prefix the section header with `(stale, regenerate via /citation-audit)`, and surface the staleness to the user. Do not silently truncate.
+3. If **fresh** (mtime within the last 30 days): write a summary under `## Citation Affiliation Evidence` in `news-coverage-audit.md`. It gives the generation date and run status per source, the Tier 0 and Tier 1 row, citing-paper and organization counts, every Tier 0 organization by name, and the Tier 1 organizations by category with counts. It links to `citation-affiliation-audit.md`, which stays the only copy of the tables.
+4. If **stale** (mtime older than 30 days): write the same summary under `## Citation Affiliation Evidence (stale, regenerate via /citation-audit)` and surface the staleness to the user.
 
-The hook never re-runs the citation audit silently; that decision belongs to the user. The hook only reads the existing file and integrates its full content into the unified report.
+The hook never re-runs the citation audit silently; that decision belongs to the user.
 
-### Why full integration, not summary
+### Why a summary, not the full tables
 
-`news-coverage-audit.md` is the single artifact a tenure / promotion reader or grant reviewer scans for external-impact evidence. Forcing them to follow a link into a separate `citation-affiliation-audit.md` (which they may not realize exists) creates a gap in the impact story. Truncating to "top 10 hits" loses the long-tail Tier 1 evidence that often matters most for broader-impact narratives (e.g., a niche citation from Capital One or Mayo Clinic adds new domain breadth that a top-10 list might drop). Embedding the full tables verbatim keeps the integrated report self-contained while the standalone `citation-affiliation-audit.md` remains canonical for incremental re-runs.
+Until 2026-10-17 this hook embedded the full tables verbatim, on the reasoning that a reader of the audit should not have to follow a link. The embedded copy became a second source of truth that drifted. A May copy sat under a September canonical file until the 2026-10-02 round replaced it, and the copy added about 200 lines to the audit. Naming every Tier 0 organization keeps the audit self-contained for a reader, and the tables live in one file that the citation-audit script regenerates.
 
 ### Why the hook is one-way
 

@@ -42,8 +42,9 @@ The orchestrator defaults to `--source openalex`. Use `--source both` for the st
 2. **Locate each paper on every enabled source** by arXiv ID, then DOI, then a strict title match. Title matching uses a two-pass strategy: exact normalized-title match first, then prefix-anchor (pre-colon acronym like `PyOD:`, `TrustGen:`) plus high word overlap (50%+ with prefix, 70%+ without).
 3. **Query citing papers per work**. OpenAlex uses `filter=cites:{work_id}`; Dimensions uses `where reference_ids = "<pub_id>"`. Per-work queries preserve the mapping from each citing paper back to which of your works it cites; aggregate batch queries would lose that attribution.
 4. **Extract author institution affiliations** from every citing paper. Dimensions provides GRID-normalized `research_orgs` directly; OpenAlex returns `authorships[].institutions[].display_name`. The shared classifier in `scripts/citation_audit_common.py` matches both against the same Tier 0 / Tier 1 regex banks (see "Tier definitions" below).
-5. **Deduplicate** by `(institution, citing title, cited work)`. A citation seen by both sources collapses to one row with `source = openalex+dimensions`.
-6. **Write results** to `citation-affiliation-audit.md` at the repo root, with a `Source` column on the Tier 0 / Tier 1 tables and per-source Coverage subsections.
+5. **Deduplicate** by `(organization, normalized citing title, cited work)`. Every pattern in the Tier 0 / Tier 1 banks carries a canonical organization name. Legal entities of one company (`AstraZeneca AB`, `AstraZeneca UK Ltd`) and a parent with its institutes (`Fraunhofer Society`, `Fraunhofer Institute for ...`) therefore count once per citing paper. The normalized title collapses a preprint with its journal version and the two sources' records of one paper. A merged row keeps the later year and the union of sources, raw institution names and countries.
+6. **Screen self-citations.** A citing paper is excluded when the PI, an author of the cited work, or two or more frequent co-authors are among its authors. A frequent co-author shares two or more papers with the PI in `data/publications.json`. A single frequent co-author who did not write the cited work is kept but listed, because one common name is weak evidence. Both lists appear in the report so the screen can be audited. Before the screen existed, the 2026-09-12 report listed the lab's own *Few-Shot Graph Out-of-Distribution Detection with LLMs* as Adobe researchers citing DPU.
+7. **Write results** to `citation-affiliation-audit.md` at the repo root, with a `Source` column on the Tier 0 / Tier 1 tables and a per-source coverage summary. The merged raw entries are saved to `.cache/citation-audit-raw.json` after each source finishes, so a crash in the second source keeps the first. `--from-raw <file> [<file> ...]` re-renders the report without querying, and merges files from separate single-source runs.
 
 The shared logic lives in `scripts/citation_audit_common.py`. The two source modules (`scripts/citation_affiliation_audit.py` for OpenAlex, `scripts/citation_affiliation_audit_dimensions.py` for Dimensions) can also be invoked standalone for debugging.
 
@@ -64,7 +65,7 @@ The classifier uses regex patterns on institution names:
 
 Tier order matters: a citing-paper row matches at most one tier, Tier 0 wins on tie. Some patterns use `\b` boundaries on short acronyms (e.g., `\bNIST\b`) to dodge substring collisions.
 
-When adding a new pattern, place Tier 0 organizations in the Tier 0 list and check for substring conflicts with existing patterns (e.g., `Google` is in Tier 1 with a `(?!.*DeepMind)` exclusion so Google DeepMind lands in Tier 0).
+Each pattern is a `(regex, category, canonical organization)` triple; the canonical name is the unit the report deduplicates and summarizes on. When adding a new pattern, place Tier 0 organizations in the Tier 0 list and check for substring conflicts with existing patterns (e.g., `Google` is in Tier 1 with a `(?!.*DeepMind)` exclusion so Google DeepMind lands in Tier 0).
 
 ## What to Exclude
 
@@ -81,8 +82,11 @@ When adding a new pattern, place Tier 0 organizations in the Tier 0 list and che
 | **Dimensions only** | Compare Dimensions coverage vs OpenAlex independently | `python scripts/citation_affiliation_audit.py --source dimensions` |
 | **Full combined** | Semester audit, tenure prep, major milestone | `python scripts/citation_affiliation_audit.py --source both` |
 | **Dimensions API smoke test** | After getting a new key or before a real run | `python skills/citation-audit/scripts/dimensions_smoke_test.py` |
+| **Re-render** | After changing the writer, or to merge a later OpenAlex run with an earlier Dimensions run | `python scripts/citation_affiliation_audit.py --from-raw dim-raw.json openalex-raw.json` |
 
 Full combined run takes ~50-80 minutes (OpenAlex pass ~30-60 min + Dimensions pass ~10-20 min). Use `--limit N` to scope to the first N papers for a quick verification pass.
+
+**One OpenAlex day does not cover both phases.** Measured 2026-10-17: about 125 Phase 1 resolutions plus seven Phase 2 queries spent the whole daily budget. Phase 1 results are cached (only resolved works; a miss is retried next run). Run the OpenAlex pass on two consecutive days, or run Dimensions first and merge a later OpenAlex run with `--from-raw`.
 
 ## Known Limitations
 
@@ -98,7 +102,8 @@ Full combined run takes ~50-80 minutes (OpenAlex pass ~30-60 min + Dimensions pa
   Both causes point the same way: prefer `--source both` when Dimensions credentials exist, and never let an OpenAlex zero silently zero out a paper in the audit tables.
 - **Identifier resolution order.** Each source tries arXiv ID, then DOI, then a strict title match. arXiv lookup is the most reliable for CS papers but still requires the source to have ingested the paper.
 - **Source disagreements are signal.** When OpenAlex and Dimensions disagree on whether a paper has notable citations, prefer the higher-recall source for follow-up rather than picking one as ground truth.
-- **Exact-string cross-source dedup.** The merge key is `(institution, citing_title, cited_work)`. Variants like `Google` vs `Google LLC` or punctuation-variant titles may produce near-duplicate rows that span sources. The audit Markdown footer carries a caveat. Fuzzy dedup is deferred until the audit becomes the source of record for exact counts.
+- **Canonical organizations are coarse.** One canonical name per regex pattern means `Merck & Co` and `Merck KGaA` both count as `Merck`, and every Fraunhofer institute counts as `Fraunhofer`. That is the intended unit for "researchers at this organization cited the work"; split a pattern if a finer unit is ever needed.
+- **The self-citation screen is name-based.** It matches the PI, the cited work's own authors and frequent co-authors by name, so a different person who shares one of those names can be screened out. Two frequent co-authors are required for exclusion unless one of them wrote the cited work. A co-author with a single joint paper is screened only when that paper is the cited work. Read the excluded and flagged lists before quoting a borderline row.
 
 ## Improving Coverage
 
@@ -121,23 +126,22 @@ Additional gap-closers still useful when Dimensions falls short:
 
 Results go to `citation-affiliation-audit.md` at the repo root. The file includes:
 
-- **Header**: per-source headline numbers (papers with citations + unique citing papers per source), so combined runs do not present `max(...)` as a single combined truth.
-- **Tier 0 table**: Category, Institution, Country, Your Work Cited, Citing Paper, Year, Source.
-- **Tier 1 table**: same columns.
-- **Summary by institution**: aggregated counts per (institution, category).
-- **Coverage subsections**: per-source breakdown of papers with citations, indexed-but-zero-citations, and not-found lists. Per-source so a paper missing from OpenAlex but found by Dimensions does not appear in a combined "not found" list.
-- **Methodology footer**: framing reminder (researchers AT institution, not endorsement) + cross-source dedup caveat.
+- **Header**: framing (researchers at an organization, not endorsement) and a per-source table of papers with citations, unique citing papers and run status, so combined runs do not present `max(...)` as a single combined truth. An incomplete source adds a warning block.
+- **Tier 0 table** and **Tier 1 table**: Category, Organization, Country, Work Cited, Citing Paper, Year, Source, with a row / citing-paper / organization count above each.
+- **Summary by organization**: distinct citing papers and distinct works cited per organization.
+- **Excluded and flagged citations**: the self-citation screen's output.
+- **Coverage**: per source, papers with citations, indexed with zero citations, and the full not-found list, so a paper missing from OpenAlex but found by Dimensions does not appear in a combined list.
 
 ## Integration with [[news-search]]
 
-The [[news-search]] skill runs editorial-coverage discovery across D1-D8 + D10 (press, government PDFs, ecosystem, deep-research-tool output). Its final report is `news-coverage-audit.md`. When the user runs the news-search Full audit, it should read the existing `citation-affiliation-audit.md` and integrate the full citation evidence as a cross-skill section. This contract is authored here and mirrored semantically in `skills/news-search/SKILL.md`'s "Cross-skill: citation-audit integration" section (same three states, same full-table embedding rule, same no-silent-auto-invoke policy; wording differs to fit each skill's surrounding context). If you change one side, update the other in the same commit.
+The [[news-search]] skill runs editorial-coverage discovery across D1-D8 + D10 (press, government PDFs, ecosystem, deep-research-tool output). Its final report is `news-coverage-audit.md`. When the user runs the news-search Full audit, it should read the existing `citation-affiliation-audit.md` and integrate the full citation evidence as a cross-skill section. This contract is authored here and mirrored semantically in `skills/news-search/SKILL.md`'s "Cross-skill: citation-audit integration" section (same three states, same summary-plus-link rule, same no-silent-auto-invoke policy; wording differs to fit each skill's surrounding context). If you change one side, update the other in the same commit.
 
 1. **Before starting** news-search Full audit, check whether `citation-affiliation-audit.md` exists at the project root and record its modification time.
 2. If the file is **missing**, tell the user: "Citation affiliation audit has never run on this project; recommend running `/citation-audit --source both` (or `--source openalex` if no Dimensions credentials) before the news-search full audit." Do not auto-invoke without confirmation; a full citation audit is 30-80 minutes and may use Dimensions quota.
-3. If the file is **fresh** (modified within the last 30 days), copy the citation audit's **full Tier 0 table, full Tier 1 table, Summary by Institution subsection, and per-source Coverage subsections** verbatim into `news-coverage-audit.md` under `## Citation Affiliation Evidence (integrated from citation-audit)`. Add a one-line freshness stamp and a link back to `citation-affiliation-audit.md` as the canonical separate copy.
-4. If the file is **stale** (older than 30 days), integrate the same full content, mark the section header as `## Citation Affiliation Evidence (stale, regenerate via /citation-audit)`, and surface the staleness to the user. Do not silently truncate to a top-hit summary.
+3. If the file is **fresh** (modified within the last 30 days), write a summary into `news-coverage-audit.md` under `## Citation Affiliation Evidence`. It gives the generation date, the run status per source, and the Tier 0 and Tier 1 row, citing-paper and organization counts. The summary names every Tier 0 organization and groups the Tier 1 organizations by category with counts. It links to `citation-affiliation-audit.md`, which stays the only copy of the tables.
+4. If the file is **stale** (older than 30 days), write the same summary under `## Citation Affiliation Evidence (stale, regenerate via /citation-audit)` and surface the staleness to the user.
 
-The hook is read-only from news-search's perspective. It never re-runs the citation audit silently; the user decides whether to regenerate. Verbatim full-table embedding is intentional: `news-coverage-audit.md` is the single artifact tenure / promotion or grant reviewers scan, so the impact story must be self-contained rather than asking the reader to follow a link.
+The hook is read-only from news-search's perspective. It never re-runs the citation audit silently; the user decides whether to regenerate. Until 2026-10-17 the hook embedded the full tables verbatim. The embedded copy then stood as a second source of truth that drifted. A May copy sat under a September file until the 2026-10-02 round replaced it, and the copy added about 200 lines to the audit. A summary that names every Tier 0 organization keeps the audit self-contained for a reader while the tables live in one place.
 
 ## Related Skills
 
