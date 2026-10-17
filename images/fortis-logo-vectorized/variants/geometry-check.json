@@ -1,0 +1,31 @@
+{
+  "fortis-original-clearspace": {
+    "identical_paths": 32,
+    "transforms": {},
+    "viewBox": "-4.8686 -10.0000 510.8027 549.5332",
+    "fills": [
+      "#990000",
+      "#FFCC00"
+    ]
+  },
+  "fortis-original-horizontal": {
+    "identical_paths": 32,
+    "transforms": {
+      "fortis-wordmark": "translate(423.417215 -242.959949)"
+    },
+    "viewBox": "-4.8686 -10.0000 874.2418 484.0000",
+    "fills": [
+      "#990000",
+      "#FFCC00"
+    ]
+  },
+  "fortis-original-flat": {
+    "identical_paths": 32,
+    "transforms": {},
+    "viewBox": "-4.8686 -10.0000 510.8027 549.5332",
+    "fills": [
+      "#990000",
+      "#FFCC00"
+    ]
+  }
+}

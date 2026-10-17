@@ -1,0 +1,13 @@
+{
+  "source": "/Users/yzhao062/PycharmProjects/yzhao062.github.io/images/lab-logo.png",
+  "canvas": [
+    512,
+    512
+  ],
+  "motion_lines": 17,
+  "letter_groups": 6,
+  "paths": 32,
+  "alpha_intersection_over_union": 0.9895723647218786,
+  "alpha_disagreement_pixels": 1020,
+  "raster_images_in_master": 0
+}
