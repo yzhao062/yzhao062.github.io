@@ -278,6 +278,11 @@
             <div class="col-md-9 col-12 content-spacing">
                 <div class="col">
                     <h1 id="open-source">&#128736; Open Source / Software</h1>
+                    <nav aria-label="Open source sections" class="d-flex flex-wrap gap-3 my-3">
+                      <a href="#projects">Project Directory</a>
+                      <a href="ecosystem.html">Auditable AI Ecosystem</a>
+                      <a href="#impact">Adoption &amp; Impact</a>
+                    </nav>
                     <p>
                       I value practical and reproducible research. This page highlights open-source libraries,
                       benchmarks, and system tools built by my group and collaborators. Many of these projects
@@ -288,6 +293,29 @@
                       Each direction also covers efficiency, such as scalable detection, model routing, and the cost of defense training. These methods apply in science and
                       high-stakes domains.
                     </p>
+                    <h2 id="projects" class="h3" style="color:#990000; margin-top:18px; margin-bottom:10px;">Project Directory</h2>
+                    <p class="repo-meta" style="margin-bottom: 8px;">
+                      Flagship project pages:
+                      <a href="auditable.html">auditable</a>,
+                      <a href="agent-style.html">agent-style</a>,
+                      <a href="anywhere-agents.html">anywhere-agents</a>,
+                      <a href="agent-audit.html">agent-audit</a>,
+                      <a href="aegis.html">Aegis</a>,
+                      <a href="pyod.html">PyOD 3</a>.
+                    </p>
+                    <div style="margin: 10px 0 8px 0;">
+                      <span class="repo-meta" style="margin-right: 8px;">Sort by:</span>
+                      <button id="sort-attention" class="btn btn-sm btn-outline-secondary" type="button">Attention</button>
+                      <button id="sort-update" class="btn btn-sm btn-outline-secondary" type="button">Last Update</button>
+                    </div>
+                    <div id="meta-sync-status" class="repo-meta" style="margin-bottom: 6px;"></div>
+                    <div id="repo-summary" class="repo-meta"></div>
+                    <hr>
+                    <div id="repo-empty" class="empty-state" style="display:none;">
+                      No projects listed yet. Add entries to <code>data/open-source.json</code> to populate this page.
+                    </div>
+                    <div id="repo-list" class="row"></div>
+
                     <p>
                       <strong>Open-source program participation:</strong>
                       Several of these projects have been accepted into the
@@ -836,27 +864,7 @@
                       </table>
                     </div>
 
-                    <h2 class="h3" style="color:#990000; margin-top:18px; margin-bottom:10px;">Full Project Portfolio</h2>
-                    <p class="repo-meta" style="margin-bottom: 8px;">
-                      Flagship project pages:
-                      <a href="agent-style.html">agent-style</a>,
-                      <a href="anywhere-agents.html">anywhere-agents</a>,
-                      <a href="agent-audit.html">agent-audit</a>,
-                      <a href="aegis.html">Aegis</a>,
-                      <a href="pyod.html">PyOD 3</a>.
-                    </p>
-                    <div style="margin: 10px 0 8px 0;">
-                      <span class="repo-meta" style="margin-right: 8px;">Sort by:</span>
-                      <button id="sort-attention" class="btn btn-sm btn-outline-secondary" type="button">Attention</button>
-                      <button id="sort-update" class="btn btn-sm btn-outline-secondary" type="button">Last Update</button>
-                    </div>
-                    <div id="meta-sync-status" class="repo-meta" style="margin-bottom: 6px;"></div>
-                    <div id="repo-summary" class="repo-meta"></div>
-                    <hr>
-                    <div id="repo-empty" class="empty-state" style="display:none;">
-                      No projects listed yet. Add entries to <code>data/open-source.json</code> to populate this page.
-                    </div>
-                    <div id="repo-list" class="row"></div>
+
                 </div>
             </div>
         </div>
@@ -1101,6 +1109,10 @@
             loadedItems = Array.isArray(projects) ? projects : [];
             renderItems(loadedItems);
             updateMetaSyncStatus();
+            if (location.hash) {
+              var hashTarget = document.getElementById(location.hash.slice(1));
+              if (hashTarget) hashTarget.scrollIntoView();
+            }
 
             if (sortAttentionBtn) {
               sortAttentionBtn.addEventListener("click", function () {
