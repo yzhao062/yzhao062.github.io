@@ -65,6 +65,9 @@
     "alt": "Chenxiao Yu",
     "year_info": "1st year, with Fortis since 2024",
     "research": "Human-Centered AI / AI Safety / Interpretable and Controllable Foundation Models",
+    "awards": [
+      "USC Annenberg Fellowship"
+    ],
     "email": "cyu96374@usc.edu"
   },
   {
@@ -73,7 +76,10 @@
     "image": "images/others/zixiang.webp",
     "alt": "Zixiang Xu",
     "year_info": "1st year, with Fortis since Fall 2026",
-    "research": "Agent Systems / Trustworthy AI / AI for Science & Society"
+    "research": "Agent Systems / Trustworthy AI / AI for Science & Society",
+    "awards": [
+      "USC Annenberg Fellowship"
+    ]
   },
   {
     "name": "Wei Yang",
