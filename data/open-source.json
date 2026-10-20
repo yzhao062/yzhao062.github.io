@@ -27,7 +27,7 @@
     "docs_url": "https://pyod.readthedocs.io",
     "paper_url": "https://arxiv.org/abs/2412.12154",
     "demo_url": "",
-    "stars": 10048,
+    "stars": 10052,
     "tags": [
       "Anomaly Detection",
       "Outlier Detection",
@@ -54,7 +54,7 @@
       "Recovery",
       "Python SDK"
     ],
-    "last_updated_at": "2026-09-08T05:17:11Z"
+    "last_updated_at": "2026-10-20T05:31:06Z"
   },
   {
     "name": "awesome-auditable-ai",
@@ -65,7 +65,7 @@
     "docs_url": "",
     "paper_url": "",
     "demo_url": "",
-    "stars": 154,
+    "stars": 155,
     "tags": [
       "Agent Auditability",
       "Agent Reliability",
@@ -129,7 +129,7 @@
       "Benchmark",
       "Toolkit"
     ],
-    "last_updated_at": "2025-08-22T02:05:04Z"
+    "last_updated_at": "2026-10-20T07:29:57Z"
   },
   {
     "name": "NLP-ADBench",
@@ -176,7 +176,7 @@
     "docs_url": "",
     "paper_url": "",
     "demo_url": "",
-    "stars": 9418,
+    "stars": 9419,
     "tags": [
       "Awesome List",
       "Anomaly Detection",
@@ -267,7 +267,7 @@
     "docs_url": "https://tdcommons.ai",
     "paper_url": "https://proceedings.neurips.cc/paper/2021/hash/6a8d3b0f5987e0f6d3d2f5f65f02e3cc-Abstract.html",
     "demo_url": "",
-    "stars": 1298,
+    "stars": 1297,
     "tags": [
       "Therapeutics",
       "Benchmark",
@@ -322,7 +322,7 @@
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/agent-audit.html",
     "paper_url": "https://arxiv.org/abs/2603.22853",
     "demo_url": "https://pypi.org/project/agent-audit/",
-    "stars": 240,
+    "stars": 241,
     "tags": [
       "AI Agent Security",
       "Security Audit",
@@ -378,7 +378,7 @@
     "docs_url": "https://anywhere-agents.readthedocs.io",
     "paper_url": "",
     "demo_url": "",
-    "stars": 258,
+    "stars": 259,
     "tags": [
       "Claude Code",
       "Codex",
@@ -387,7 +387,7 @@
       "Configuration",
       "MCP"
     ],
-    "last_updated_at": "2026-10-19T02:09:00Z"
+    "last_updated_at": "2026-10-19T21:37:43Z"
   },
   {
     "name": "agent-style",
@@ -398,7 +398,7 @@
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/agent-style.html",
     "paper_url": "",
     "demo_url": "https://pypi.org/project/agent-style/",
-    "stars": 720,
+    "stars": 722,
     "tags": [
       "AI Agents",
       "Agent Configuration",
