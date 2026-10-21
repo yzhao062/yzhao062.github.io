@@ -27,7 +27,7 @@
     "docs_url": "https://pyod.readthedocs.io",
     "paper_url": "https://arxiv.org/abs/2412.12154",
     "demo_url": "",
-    "stars": 10051,
+    "stars": 10052,
     "tags": [
       "Anomaly Detection",
       "Outlier Detection",
@@ -398,7 +398,7 @@
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/agent-style.html",
     "paper_url": "",
     "demo_url": "https://pypi.org/project/agent-style/",
-    "stars": 722,
+    "stars": 723,
     "tags": [
       "AI Agents",
       "Agent Configuration",
