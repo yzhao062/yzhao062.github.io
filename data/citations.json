@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-19T16:23:33Z",
+  "generated_at": "2026-10-21T14:37:30Z",
   "source": "meta-finder citation-tracker, Semantic Scholar Graph API",
   "paper_count": 134,
-  "total_citations": 9159,
+  "total_citations": 9275,
   "papers": [
     {
       "id": "preprint-grid-bench",
@@ -10,7 +10,7 @@
       "year": 2026,
       "venue": "arXiv preprint",
       "section": "preprint",
-      "citation_count": 0,
+      "citation_count": 1,
       "influential_citations": 0
     },
     {
@@ -19,7 +19,7 @@
       "year": 2026,
       "venue": "arXiv preprint",
       "section": "preprint",
-      "citation_count": 0,
+      "citation_count": 1,
       "influential_citations": 0
     },
     {
@@ -37,7 +37,7 @@
       "year": 2026,
       "venue": "arXiv preprint",
       "section": "preprint",
-      "citation_count": 0,
+      "citation_count": 1,
       "influential_citations": 0
     },
     {
@@ -55,7 +55,7 @@
       "year": 2026,
       "venue": "ICML 2026 Workshops (AI4GOOD and FAGEN)",
       "section": "workshop",
-      "citation_count": 2,
+      "citation_count": 3,
       "influential_citations": 0
     },
     {
@@ -64,7 +64,7 @@
       "year": 2026,
       "venue": "EACL, 2026",
       "section": "conference",
-      "citation_count": 26,
+      "citation_count": 27,
       "influential_citations": 0
     },
     {
@@ -73,7 +73,7 @@
       "year": 2026,
       "venue": "WWW, 2026",
       "section": "conference",
-      "citation_count": 27,
+      "citation_count": 28,
       "influential_citations": 4
     },
     {
@@ -82,7 +82,7 @@
       "year": 2026,
       "venue": "ICLR, 2026",
       "section": "conference",
-      "citation_count": 14,
+      "citation_count": 15,
       "influential_citations": 1
     },
     {
@@ -91,7 +91,7 @@
       "year": 2026,
       "venue": "ACL, 2026",
       "section": "conference",
-      "citation_count": 3,
+      "citation_count": 4,
       "influential_citations": 0
     },
     {
@@ -100,7 +100,7 @@
       "year": 2026,
       "venue": "ICLR, 2026",
       "section": "conference",
-      "citation_count": 46,
+      "citation_count": 48,
       "influential_citations": 2
     },
     {
@@ -118,7 +118,7 @@
       "year": 2026,
       "venue": "ICLR, 2026",
       "section": "conference",
-      "citation_count": 13,
+      "citation_count": 14,
       "influential_citations": 2
     },
     {
@@ -127,7 +127,7 @@
       "year": 2026,
       "venue": "AAAI, 2026",
       "section": "conference",
-      "citation_count": 19,
+      "citation_count": 20,
       "influential_citations": 2
     },
     {
@@ -136,7 +136,7 @@
       "year": 2026,
       "venue": "ICML, 2026",
       "section": "conference",
-      "citation_count": 7,
+      "citation_count": 8,
       "influential_citations": 0
     },
     {
@@ -154,7 +154,7 @@
       "year": 2026,
       "venue": "ICLR, 2026",
       "section": "conference",
-      "citation_count": 60,
+      "citation_count": 61,
       "influential_citations": 1
     },
     {
@@ -163,7 +163,7 @@
       "year": 2025,
       "venue": "NeurIPS Workshop on Multi-Turn Interactions in Large Language Models (MTI-LLM), 2025",
       "section": "workshop",
-      "citation_count": 24,
+      "citation_count": 25,
       "influential_citations": 0
     },
     {
@@ -172,7 +172,7 @@
       "year": 2025,
       "venue": "KDD (Lecture-Style Tutorial Track), 2025",
       "section": "workshop",
-      "citation_count": 37,
+      "citation_count": 38,
       "influential_citations": 1
     },
     {
@@ -181,7 +181,7 @@
       "year": 2025,
       "venue": "Findings of IJCNLP-AACL, 2025",
       "section": "conference",
-      "citation_count": 12,
+      "citation_count": 13,
       "influential_citations": 2
     },
     {
@@ -190,7 +190,7 @@
       "year": 2025,
       "venue": "ACL (Findings), 2025",
       "section": "conference",
-      "citation_count": 46,
+      "citation_count": 48,
       "influential_citations": 3
     },
     {
@@ -208,7 +208,7 @@
       "year": 2025,
       "venue": "AAAI Workshop on Foundation Models for Biological Discoveries (FMs4Bio), 2025",
       "section": "workshop",
-      "citation_count": 54,
+      "citation_count": 55,
       "influential_citations": 3
     },
     {
@@ -217,7 +217,7 @@
       "year": 2025,
       "venue": "NeurIPS, 2025",
       "section": "conference",
-      "citation_count": 29,
+      "citation_count": 30,
       "influential_citations": 3
     },
     {
@@ -226,7 +226,7 @@
       "year": 2025,
       "venue": "CVPR, 2025",
       "section": "conference",
-      "citation_count": 28,
+      "citation_count": 30,
       "influential_citations": 4
     },
     {
@@ -235,7 +235,7 @@
       "year": 2025,
       "venue": "ECML PKDD, 2025",
       "section": "conference",
-      "citation_count": 16,
+      "citation_count": 17,
       "influential_citations": 0
     },
     {
@@ -271,7 +271,7 @@
       "year": 2025,
       "venue": "ACM SIGSPATIAL SpatialConnect Workshop, 2025",
       "section": "workshop",
-      "citation_count": 6,
+      "citation_count": 7,
       "influential_citations": 1
     },
     {
@@ -289,7 +289,7 @@
       "year": 2025,
       "venue": "EMNLP Findings, 2025",
       "section": "conference",
-      "citation_count": 22,
+      "citation_count": 23,
       "influential_citations": 5
     },
     {
@@ -298,7 +298,7 @@
       "year": 2025,
       "venue": "IEEE ICDM BlueSky Track, 2025",
       "section": "conference",
-      "citation_count": 2,
+      "citation_count": 3,
       "influential_citations": 0
     },
     {
@@ -307,7 +307,7 @@
       "year": 2025,
       "venue": "The Web Conference (Demo Track), 2025",
       "section": "workshop",
-      "citation_count": 32,
+      "citation_count": 33,
       "influential_citations": 0
     },
     {
@@ -316,7 +316,7 @@
       "year": 2025,
       "venue": "ACM BCB, 2025",
       "section": "conference",
-      "citation_count": 7,
+      "citation_count": 8,
       "influential_citations": 0
     },
     {
@@ -325,7 +325,7 @@
       "year": 2025,
       "venue": "ICCV, 2025",
       "section": "conference",
-      "citation_count": 28,
+      "citation_count": 29,
       "influential_citations": 1
     },
     {
@@ -334,7 +334,7 @@
       "year": 2025,
       "venue": "NAACL (Demo Track), 2025",
       "section": "workshop",
-      "citation_count": 10,
+      "citation_count": 11,
       "influential_citations": 0
     },
     {
@@ -343,7 +343,7 @@
       "year": 2025,
       "venue": "EMNLP Findings, 2025",
       "section": "conference",
-      "citation_count": 41,
+      "citation_count": 43,
       "influential_citations": 0
     },
     {
@@ -352,7 +352,7 @@
       "year": 2025,
       "venue": "ACM SIGSPATIAL, 2025",
       "section": "conference",
-      "citation_count": 8,
+      "citation_count": 9,
       "influential_citations": 0
     },
     {
@@ -370,7 +370,7 @@
       "year": 2024,
       "venue": "KDD, 2024",
       "section": "conference",
-      "citation_count": 13,
+      "citation_count": 14,
       "influential_citations": 0
     },
     {
@@ -379,7 +379,7 @@
       "year": 2024,
       "venue": "AutoML, 2024",
       "section": "conference",
-      "citation_count": 5,
+      "citation_count": 6,
       "influential_citations": 0
     },
     {
@@ -388,7 +388,7 @@
       "year": 2024,
       "venue": "NeurIPS, 2024",
       "section": "conference",
-      "citation_count": 44,
+      "citation_count": 45,
       "influential_citations": 5
     },
     {
@@ -406,8 +406,8 @@
       "year": 2024,
       "venue": "ICML, 2024",
       "section": "conference",
-      "citation_count": 374,
-      "influential_citations": 33
+      "citation_count": 376,
+      "influential_citations": 34
     },
     {
       "id": "conference-adgym-design-choices-for-deep-anomaly-detection",
@@ -415,7 +415,7 @@
       "year": 2023,
       "venue": "NeurIPS, 2023",
       "section": "conference",
-      "citation_count": 31,
+      "citation_count": 32,
       "influential_citations": 0
     },
     {
@@ -424,7 +424,7 @@
       "year": 2023,
       "venue": "AAAI, 2023",
       "section": "conference",
-      "citation_count": 45,
+      "citation_count": 46,
       "influential_citations": 2
     },
     {
@@ -433,7 +433,7 @@
       "year": 2023,
       "venue": "ECML/PKDD, 2023",
       "section": "conference",
-      "citation_count": 10,
+      "citation_count": 11,
       "influential_citations": 0
     },
     {
@@ -442,7 +442,7 @@
       "year": 2023,
       "venue": "ICML, 2023",
       "section": "conference",
-      "citation_count": 17,
+      "citation_count": 18,
       "influential_citations": 0
     },
     {
@@ -451,7 +451,7 @@
       "year": 2023,
       "venue": "VLDB, 2023",
       "section": "conference",
-      "citation_count": 10,
+      "citation_count": 11,
       "influential_citations": 0
     },
     {
@@ -460,7 +460,7 @@
       "year": 2022,
       "venue": "NeurIPS, 2022",
       "section": "conference",
-      "citation_count": 520,
+      "citation_count": 522,
       "influential_citations": 80
     },
     {
@@ -478,7 +478,7 @@
       "year": 2022,
       "venue": "PAKDD, 2022",
       "section": "conference",
-      "citation_count": 158,
+      "citation_count": 159,
       "influential_citations": 13
     },
     {
@@ -496,7 +496,7 @@
       "year": 2021,
       "venue": "NeurIPS, 2021",
       "section": "conference",
-      "citation_count": 107,
+      "citation_count": 108,
       "influential_citations": 17
     },
     {
@@ -505,7 +505,7 @@
       "year": 2021,
       "venue": "NeurIPS, 2021",
       "section": "conference",
-      "citation_count": 276,
+      "citation_count": 278,
       "influential_citations": 31
     },
     {
@@ -514,7 +514,7 @@
       "year": 2021,
       "venue": "MLSys, 2021",
       "section": "conference",
-      "citation_count": 82,
+      "citation_count": 83,
       "influential_citations": 5
     },
     {
@@ -532,8 +532,8 @@
       "year": 2021,
       "venue": "NeurIPS, 2021",
       "section": "conference",
-      "citation_count": 540,
-      "influential_citations": 66
+      "citation_count": 542,
+      "influential_citations": 67
     },
     {
       "id": "conference-data-denoising-scrna",
@@ -541,7 +541,7 @@
       "year": 2020,
       "venue": "IEEE BIBM, 2020",
       "section": "conference",
-      "citation_count": 2,
+      "citation_count": 3,
       "influential_citations": 0
     },
     {
@@ -550,7 +550,7 @@
       "year": 2020,
       "venue": "IEEE BigData, 2020",
       "section": "conference",
-      "citation_count": 39,
+      "citation_count": 40,
       "influential_citations": 4
     },
     {
@@ -559,7 +559,7 @@
       "year": 2020,
       "venue": "IEEE ICDM, 2020",
       "section": "conference",
-      "citation_count": 483,
+      "citation_count": 484,
       "influential_citations": 45
     },
     {
@@ -577,7 +577,7 @@
       "year": 2020,
       "venue": "IEEE ICME, 2020",
       "section": "conference",
-      "citation_count": 6,
+      "citation_count": 7,
       "influential_citations": 0
     },
     {
@@ -586,7 +586,7 @@
       "year": 2020,
       "venue": "AAAI Workshop, 2020",
       "section": "workshop",
-      "citation_count": 9,
+      "citation_count": 10,
       "influential_citations": 1
     },
     {
@@ -595,7 +595,7 @@
       "year": 2020,
       "venue": "IEEE ICDMW, 2020",
       "section": "workshop",
-      "citation_count": 40,
+      "citation_count": 41,
       "influential_citations": 3
     },
     {
@@ -604,7 +604,7 @@
       "year": 2020,
       "venue": "AAAI Workshop, 2020",
       "section": "workshop",
-      "citation_count": 9,
+      "citation_count": 10,
       "influential_citations": 0
     },
     {
@@ -613,7 +613,7 @@
       "year": 2019,
       "venue": "SDM, 2019",
       "section": "conference",
-      "citation_count": 163,
+      "citation_count": 164,
       "influential_citations": 15
     },
     {
@@ -622,7 +622,7 @@
       "year": 2019,
       "venue": "IJCNN, 2019",
       "section": "conference",
-      "citation_count": 54,
+      "citation_count": 55,
       "influential_citations": 7
     },
     {
@@ -631,7 +631,7 @@
       "year": 2018,
       "venue": "KDD Workshop, 2018",
       "section": "workshop",
-      "citation_count": 25,
+      "citation_count": 26,
       "influential_citations": 2
     },
     {
@@ -640,7 +640,7 @@
       "year": 2018,
       "venue": "IntelliSys, 2018",
       "section": "conference",
-      "citation_count": 150,
+      "citation_count": 151,
       "influential_citations": 5
     },
     {
@@ -649,7 +649,7 @@
       "year": 2018,
       "venue": "IJCNN, 2018",
       "section": "conference",
-      "citation_count": 156,
+      "citation_count": 157,
       "influential_citations": 19
     },
     {
@@ -676,7 +676,7 @@
       "year": 2026,
       "venue": "Transactions on Machine Learning Research (TMLR), 2026",
       "section": "journal",
-      "citation_count": 19,
+      "citation_count": 20,
       "influential_citations": 0
     },
     {
@@ -685,7 +685,7 @@
       "year": 2025,
       "venue": "Transactions on Machine Learning Research (TMLR), 2025",
       "section": "journal",
-      "citation_count": 14,
+      "citation_count": 15,
       "influential_citations": 0
     },
     {
@@ -694,7 +694,7 @@
       "year": 2024,
       "venue": "IEEE Transactions on Neural Networks and Learning Systems, 2024",
       "section": "journal",
-      "citation_count": 33,
+      "citation_count": 34,
       "influential_citations": 1
     },
     {
@@ -703,7 +703,7 @@
       "year": 2023,
       "venue": "ACM Computing Surveys, 2023",
       "section": "journal",
-      "citation_count": 2495,
+      "citation_count": 2497,
       "influential_citations": 78
     },
     {
@@ -712,7 +712,7 @@
       "year": 2023,
       "venue": "ACM SIGKDD Explorations Newsletter, 2023",
       "section": "journal",
-      "citation_count": 56,
+      "citation_count": 57,
       "influential_citations": 3
     },
     {
@@ -730,7 +730,7 @@
       "year": 2022,
       "venue": "TKDE, 2022",
       "section": "journal",
-      "citation_count": 571,
+      "citation_count": 574,
       "influential_citations": 50
     },
     {
@@ -739,7 +739,7 @@
       "year": 2019,
       "venue": "JMLR, 2019.",
       "section": "journal",
-      "citation_count": 951,
+      "citation_count": 952,
       "influential_citations": 67
     },
     {
@@ -757,7 +757,7 @@
       "year": 2026,
       "venue": "EMNLP Findings, 2026; earlier versions at SocialSim @ COLM 2025 (Spotlight) and ResponsibleFM @ NeurIPS 2025",
       "section": "conference",
-      "citation_count": 3,
+      "citation_count": 4,
       "influential_citations": 0
     },
     {
@@ -775,7 +775,7 @@
       "year": 2026,
       "venue": "arXiv preprint",
       "section": "preprint",
-      "citation_count": 0,
+      "citation_count": 1,
       "influential_citations": 0
     },
     {
@@ -784,7 +784,7 @@
       "year": 2026,
       "venue": "arXiv preprint",
       "section": "preprint",
-      "citation_count": 0,
+      "citation_count": 1,
       "influential_citations": 0
     },
     {
@@ -793,7 +793,7 @@
       "year": 2026,
       "venue": "arXiv preprint",
       "section": "preprint",
-      "citation_count": 0,
+      "citation_count": 1,
       "influential_citations": 0
     },
     {
@@ -802,7 +802,7 @@
       "year": 2026,
       "venue": "arXiv preprint",
       "section": "preprint",
-      "citation_count": 0,
+      "citation_count": 1,
       "influential_citations": 0
     },
     {
@@ -811,7 +811,7 @@
       "year": 2026,
       "venue": "arXiv preprint",
       "section": "preprint",
-      "citation_count": 0,
+      "citation_count": 1,
       "influential_citations": 0
     },
     {
@@ -820,7 +820,7 @@
       "year": 2026,
       "venue": "arXiv preprint",
       "section": "preprint",
-      "citation_count": 5,
+      "citation_count": 6,
       "influential_citations": 0
     },
     {
@@ -829,7 +829,7 @@
       "year": 2026,
       "venue": "arXiv preprint",
       "section": "preprint",
-      "citation_count": 2,
+      "citation_count": 3,
       "influential_citations": 0
     },
     {
@@ -838,7 +838,7 @@
       "year": 2026,
       "venue": "arXiv preprint",
       "section": "preprint",
-      "citation_count": 16,
+      "citation_count": 17,
       "influential_citations": 0
     },
     {
@@ -847,7 +847,7 @@
       "year": 2026,
       "venue": "arXiv preprint",
       "section": "preprint",
-      "citation_count": 2,
+      "citation_count": 3,
       "influential_citations": 0
     },
     {
@@ -856,7 +856,7 @@
       "year": 2026,
       "venue": "arXiv preprint",
       "section": "preprint",
-      "citation_count": 1,
+      "citation_count": 3,
       "influential_citations": 0
     },
     {
@@ -865,7 +865,7 @@
       "year": 2026,
       "venue": "arXiv preprint",
       "section": "preprint",
-      "citation_count": 5,
+      "citation_count": 6,
       "influential_citations": 0
     },
     {
@@ -874,7 +874,7 @@
       "year": 2026,
       "venue": "EMNLP, 2026",
       "section": "conference",
-      "citation_count": 4,
+      "citation_count": 5,
       "influential_citations": 0
     },
     {
@@ -901,7 +901,7 @@
       "year": 2026,
       "venue": "NeurIPS, 2026",
       "section": "conference",
-      "citation_count": 4,
+      "citation_count": 5,
       "influential_citations": 0
     },
     {
@@ -910,7 +910,7 @@
       "year": 2026,
       "venue": "arXiv preprint",
       "section": "preprint",
-      "citation_count": 0,
+      "citation_count": 1,
       "influential_citations": 0
     },
     {
@@ -937,7 +937,7 @@
       "year": 2026,
       "venue": "arXiv preprint",
       "section": "preprint",
-      "citation_count": 16,
+      "citation_count": 17,
       "influential_citations": 0
     },
     {
@@ -946,7 +946,7 @@
       "year": 2026,
       "venue": "NeurIPS, 2026",
       "section": "conference",
-      "citation_count": 2,
+      "citation_count": 3,
       "influential_citations": 1
     },
     {
@@ -955,7 +955,7 @@
       "year": 2026,
       "venue": "NeurIPS, 2026",
       "section": "conference",
-      "citation_count": 2,
+      "citation_count": 3,
       "influential_citations": 0
     },
     {
@@ -973,7 +973,7 @@
       "year": 2026,
       "venue": "ACM AI Leadership Summit, 2026 (condensed 4-page version); earlier version at ACL 2026 KnowFM Workshop",
       "section": "conference",
-      "citation_count": 20,
+      "citation_count": 21,
       "influential_citations": 0
     },
     {
@@ -982,7 +982,7 @@
       "year": 2026,
       "venue": "arXiv preprint",
       "section": "preprint",
-      "citation_count": 7,
+      "citation_count": 9,
       "influential_citations": 0
     },
     {
@@ -1000,7 +1000,7 @@
       "year": 2026,
       "venue": "arXiv preprint",
       "section": "preprint",
-      "citation_count": 9,
+      "citation_count": 11,
       "influential_citations": 0
     },
     {
@@ -1009,7 +1009,7 @@
       "year": 2026,
       "venue": "arXiv preprint",
       "section": "preprint",
-      "citation_count": 24,
+      "citation_count": 26,
       "influential_citations": 0
     },
     {
@@ -1018,7 +1018,7 @@
       "year": 2026,
       "venue": "KDD D&B Track, 2026",
       "section": "conference",
-      "citation_count": 4,
+      "citation_count": 5,
       "influential_citations": 0
     },
     {
@@ -1027,7 +1027,7 @@
       "year": 2026,
       "venue": "arXiv preprint",
       "section": "preprint",
-      "citation_count": 6,
+      "citation_count": 8,
       "influential_citations": 0
     },
     {
@@ -1045,7 +1045,7 @@
       "year": 2026,
       "venue": "EMNLP, 2026",
       "section": "conference",
-      "citation_count": 10,
+      "citation_count": 11,
       "influential_citations": 0
     },
     {
@@ -1054,7 +1054,7 @@
       "year": 2026,
       "venue": "NeurIPS, 2026",
       "section": "conference",
-      "citation_count": 8,
+      "citation_count": 9,
       "influential_citations": 1
     },
     {
@@ -1063,7 +1063,7 @@
       "year": 2026,
       "venue": "arXiv preprint",
       "section": "preprint",
-      "citation_count": 3,
+      "citation_count": 4,
       "influential_citations": 0
     },
     {
@@ -1072,7 +1072,7 @@
       "year": 2025,
       "venue": "arXiv preprint",
       "section": "preprint",
-      "citation_count": 12,
+      "citation_count": 13,
       "influential_citations": 0
     },
     {
@@ -1081,7 +1081,7 @@
       "year": 2025,
       "venue": "arXiv preprint",
       "section": "preprint",
-      "citation_count": 3,
+      "citation_count": 4,
       "influential_citations": 0
     },
     {
@@ -1090,7 +1090,7 @@
       "year": 2025,
       "venue": "arXiv preprint",
       "section": "preprint",
-      "citation_count": 3,
+      "citation_count": 4,
       "influential_citations": 0
     },
     {
@@ -1117,7 +1117,7 @@
       "year": 2025,
       "venue": "arXiv preprint",
       "section": "preprint",
-      "citation_count": 7,
+      "citation_count": 8,
       "influential_citations": 1
     },
     {
@@ -1126,7 +1126,7 @@
       "year": 2025,
       "venue": "arXiv preprint",
       "section": "preprint",
-      "citation_count": 4,
+      "citation_count": 5,
       "influential_citations": 0
     },
     {
@@ -1135,7 +1135,7 @@
       "year": 2025,
       "venue": "arXiv preprint",
       "section": "preprint",
-      "citation_count": 19,
+      "citation_count": 21,
       "influential_citations": 4
     },
     {
@@ -1180,7 +1180,7 @@
       "year": 2025,
       "venue": "arXiv preprint",
       "section": "preprint",
-      "citation_count": 4,
+      "citation_count": 5,
       "influential_citations": 0
     },
     {
@@ -1198,7 +1198,7 @@
       "year": 2024,
       "venue": "arXiv preprint",
       "section": "preprint",
-      "citation_count": 22,
+      "citation_count": 23,
       "influential_citations": 0
     },
     {
