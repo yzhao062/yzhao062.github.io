@@ -209,6 +209,8 @@ This lane runs in **every** run mode, including Quick check and Targeted, and it
 | Work | Identifier |
 |---|---|
 | Auditable Agents (position paper: five auditability dimensions, three mechanism classes) | arXiv:2604.05485 |
+| Auditable Claims about AI Agents | arXiv:2610.07459 |
+| agent-risk (risk assessment for changes to AI agents) | arXiv:2610.16280 |
 | Aegis (pre-execution firewall for tool calls) | arXiv:2603.12621, `github.com/Justin0504/Aegis` |
 | agent-audit (static security and over-privilege scanner) | arXiv:2603.22853, `github.com/HeadyZhang/agent-audit` |
 | Implicit Execution Tracing (post-hoc attribution after logs are stripped) | arXiv:2603.17445 |

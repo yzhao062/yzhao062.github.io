@@ -24,6 +24,37 @@ Moved verbatim from `news-coverage-audit.md` on 2026-10-17, with relative links 
 
 ---
 
+## 2026-10-21 Full Search, Time-Boxed Verification
+
+Method and counts are in the [run archive](news-search-2026-10-21/README.md). This entry records the decisions and the process faults.
+
+### Decisions
+
+- A national cybersecurity agency page that republishes a CVE is the same vulnerability as the NVD record, so SingCERT, INCIBE-CERT, CERT.hr and the CISA enrichment fold into Ledger 1 row 13. Press coverage of the CVE stays in Ledger 2.
+- A research paper by staff of a foundation-model company (Amazon Science, Microsoft Research) is not an official company document. It goes to Ledger 7 when it runs a tool, and to the citation audit otherwise.
+- A public comment filed on regulations.gov belongs to its author, so the CGS Administrators response to a CMS request for information is a Ledger 3 enterprise document.
+- A procurement specification issued by a judiciary council is an official government document (Ledger 1 row 35).
+- A translation that republishes a counted government document is a mirror of that document, so the SECRSS translation of NIST AI 100-2e2025 is noted on Ledger 1 row 3 and is not a Ledger 2 row.
+- Patents that cite TDC, the diffusion-models survey or TrustLLM are Ledger 3 rows outside the anomaly-detection patent count, as row 617 already was.
+- Verification units never see the ledgers. The coordinator therefore re-checks every kept verdict by URL variant, DOI and PMC ID before it becomes a row; nine documents already held under other addresses were caught that way.
+- A GitHub file is one document whatever ref its URL names (a commit hash, `HEAD`, `main`), and a repository root is the same document as its README. Review found 52 records that repeated a document under such variants (and two Ledger 4 copies of the LLNL report already cited in row 102); they are `already_recorded` or `duplicate` in the archive. DOI and PMC copies of 14 Ledger 7 articles were removed the same way.
+- The citation audit now completes truncated author lists from `skills/citation-audit/references/full-author-lists.json` and folds diacritics in names, and direct-check outcomes live in `skills/citation-audit/references/citation-audit-overrides.json`.
+
+### Process Faults
+
+- zsh does not split an unquoted variable, so the first launch passed 42 unit ids as one argument. Both dispatchers rejected it before starting anything.
+- The Claude discovery lanes had no time box and ran until the user's 30-minute limit, when the workflow was stopped. Their candidates were written progressively; the CJK lane's staged drafts were taken from its download folder.
+- Two Agy discovery lanes ended in FALLBACK at the final message (a malformed tool call and an output-token overrun). Their answers were recovered from the stream events, and the truncated pdf-models lane was re-run with an output limit.
+- A verification workflow was first launched with a placeholder argument and stopped before any agent returned.
+- 79 Agy units on the Claude and GPT group exhausted it (five-hour window to 0%, weekly from 65% to 12%). The long-tail units failed, and their records stay unverified.
+- The 45-minute verification limit left 829 records unverified, mostly long-tail Ledger 3 material. They are held in the archive for the next round.
+
+### Propagated to the Site
+
+- Patent figure 116 to 144 with the new country split, and claim-level 21 to 27: `opensource.html`, `files/bio.txt`, `index.html` (prerendered), `llms.txt`.
+- Argentina (Buenos Aires council procurement) and Singapore (GovTech AI Playbooks) rows in the PyOD impact card, and both in the `llms.txt` government-tooling line.
+- Held back: the NIST summer-fellowship abstract book (one student abstract) and the new Ledger 6 and Ledger 7 rows, which change no card's headline.
+
 ## 2026-10-17 Full Search and Audit Cleanup
 
 Method, findings, corrections and the file list are in [the run archive](news-search-2026-10-17/README.md). Every candidate, with its verdict, quote, locator, refute outcome and ledger row, is in its `candidates.jsonl`. This entry keeps only what a later round has to act on.

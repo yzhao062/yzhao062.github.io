@@ -1,0 +1,46 @@
+{
+ "_note": "Outcomes of direct checks on citation-affiliation audit rows, applied by scripts/citation_affiliation_audit.py on every render. Each entry matches a citing paper by exact title and, where given, an organization or cited work. drop removes the row to the Excluded table; relabel changes the work cited; flag keeps the row and lists it as unconfirmed.",
+ "overrides": [
+  {
+   "citing_title": "PrivateEdit: A Privacy-Preserving Pipeline for Face-Centric Generative Image Editing",
+   "org": "Meta",
+   "action": "drop",
+   "reason": "The paper prints Purdue and Michigan affiliations; Meta comes from an author's later ORCID employment",
+   "evidence": "https://arxiv.org/pdf/2603.03412",
+   "checked": "2026-10-21"
+  },
+  {
+   "citing_title": "Meta-learning for Automated Selection of Anomaly Detectors for Semi-supervised Datasets",
+   "cited_work": "Toward Unsupervised Outlier Model…",
+   "action": "relabel",
+   "to": "Automatic Unsupervised Outlier Model…",
+   "reason": "Reference [14] is MetaOD (NeurIPS 2021); Crossref linked it to the ICDM 2022 paper",
+   "evidence": "https://arxiv.org/pdf/2211.13681",
+   "checked": "2026-10-21"
+  },
+  {
+   "citing_title": "Temporal distribution shift in real-world pharmaceutical data: Implications for uncertainty quantification in QSAR models",
+   "org": "AstraZeneca",
+   "action": "drop",
+   "reason": "The version of record's 92 references and its arXiv text do not cite TDC; the index mis-attributed it",
+   "evidence": "https://research.chalmers.se/publication/547550/file/547550_Fulltext.pdf",
+   "checked": "2026-10-21"
+  },
+  {
+   "citing_title": "Convergence of LLM Integration and Edge Intelligence in Decentralized IoT Ecosystems",
+   "org": "Google",
+   "action": "flag",
+   "reason": "The reference list sits behind IEEE Xplore and no open deposit exists; Dimensions alone reports the citation",
+   "evidence": "https://api.crossref.org/works/10.1109/aiiot68874.2026.11569542",
+   "checked": "2026-10-21"
+  },
+  {
+   "citing_title": "Application of machine learning and artificial intelligence methods in predictions of absorption, distribution, metabolism, and excretion properties of chemicals",
+   "org": "FDA",
+   "action": "flag",
+   "reason": "FDA affiliation rests on the OpenAlex record; the paywalled chapter was not read",
+   "evidence": "https://api.crossref.org/works/10.1016/b978-0-443-30010-3.00012-x",
+   "checked": "2026-10-21"
+  }
+ ]
+}

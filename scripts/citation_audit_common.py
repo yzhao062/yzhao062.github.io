@@ -31,6 +31,7 @@ from __future__ import annotations
 import json
 import os
 import re
+import unicodedata
 from typing import Iterable
 
 EXCLUDE_TITLES_CONTAINING = [
@@ -206,14 +207,22 @@ def classify_institution(name: str):
 PI_NAME = "Yue Zhao"
 
 
+# Letters NFKD does not decompose (stroked or ligature forms).
+_STROKED = str.maketrans({"ı": "i", "ł": "l", "Ł": "L", "ø": "o", "Ø": "O", "đ": "d", "Đ": "D", "ß": "ss", "æ": "ae", "Æ": "AE", "œ": "oe", "Œ": "OE"})
+
+
 def name_key(name: str) -> frozenset:
     """Order-insensitive key for a person name.
 
-    Lowercases, joins hyphenated given names, strips footnote marks, and drops
-    single-letter initials, so "Ryan A. Rossi", "Rossi, Ryan" and "Ryan Rossi"
-    share a key, as do "Yue Zhao" and "Zhao Yue".
+    Lowercases, folds diacritics, joins hyphenated given names, strips footnote
+    marks, and drops single-letter initials, so "Ryan A. Rossi", "Rossi, Ryan"
+    and "Ryan Rossi" share a key, as do "Yue Zhao" and "Zhao Yue". Folding
+    matters because OpenAlex spells "Marinka Žitnik" where publications.json
+    has "Marinka Zitnik", and the unfolded key let her citation through.
     """
-    cleaned = re.sub(r"[-‐‑]", "", name or "")
+    folded = unicodedata.normalize("NFKD", (name or "").translate(_STROKED))
+    folded = "".join(c for c in folded if not unicodedata.combining(c))
+    cleaned = re.sub(r"[-‐‑]", "", folded)
     tokens = re.findall(r"[^\W\d_]+", cleaned.lower())
     return frozenset(t for t in tokens if len(t) > 1)
 
@@ -226,21 +235,34 @@ def _placeholder(key: frozenset) -> bool:
     return bool(key & _PLACEHOLDER_TOKENS)
 
 
+def _full_author_lists(project_root: str) -> dict:
+    """Publication id -> completed author list for papers whose author string is truncated."""
+    path = os.path.join(project_root, "skills", "citation-audit", "references", "full-author-lists.json")
+    if not os.path.exists(path):
+        return {}
+    with open(path, encoding="utf-8") as f:
+        return json.load(f)
+
+
 def load_coauthors(project_root: str, min_papers: int = 2) -> dict:
     """Map name_key -> display name for the PI and frequent co-authors.
 
-    Reads the author strings in data/publications.json. A co-author must share
-    at least `min_papers` papers with the PI; the threshold keeps one-off
-    collaborators with common names from screening out unrelated citers.
+    Reads the author strings in data/publications.json, completed from
+    full-author-lists.json. A co-author must share at least `min_papers` papers
+    with the PI; the threshold keeps one-off collaborators with common names
+    from screening out unrelated citers.
     """
     path = os.path.join(project_root, "data", "publications.json")
     with open(path, encoding="utf-8") as f:
         pubs = json.load(f)
+    full = _full_author_lists(project_root)
     counts: dict[frozenset, int] = {}
     display: dict[frozenset, str] = {}
     for p in pubs:
         seen: set[frozenset] = set()
-        for raw in re.split(r",|\band\b", p.get("authors", "") or ""):
+        names = re.split(r",|\band\b", p.get("authors", "") or "")
+        names += (full.get(p.get("id", "")) or {}).get("authors", [])
+        for raw in names:
             raw = re.sub(r"[*†‡♠♣♥♦\d]", "", raw).strip(" .")
             key = name_key(raw)
             if len(key) < 2 or key in seen or _placeholder(key):
@@ -257,14 +279,20 @@ def load_work_authors(project_root: str) -> dict:
     """Map each paper's table label (see short_label) to its authors' name keys.
 
     Two papers that share a label (the two SUOD papers) share one author set.
+    A truncated author string ("50+ collaborative authors") is completed from
+    skills/citation-audit/references/full-author-lists.json, keyed by publication id; without it a TrustLLM
+    author citing TrustLLM passed the screen.
     """
     path = os.path.join(project_root, "data", "publications.json")
     with open(path, encoding="utf-8") as f:
         pubs = json.load(f)
+    full = _full_author_lists(project_root)
     out: dict[str, set] = {}
     for p in pubs:
         keys = out.setdefault(short_label(p.get("title", "")), set())
-        for raw in re.split(r",|\band\b", p.get("authors", "") or ""):
+        names = re.split(r",|\band\b", p.get("authors", "") or "")
+        names += (full.get(p.get("id", "")) or {}).get("authors", [])
+        for raw in names:
             key = name_key(re.sub(r"[*†‡♠♣♥♦\d]", "", raw).strip(" ."))
             if len(key) >= 2 and not _placeholder(key):
                 keys.add(key)

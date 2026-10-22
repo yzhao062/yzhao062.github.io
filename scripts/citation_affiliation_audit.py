@@ -440,6 +440,24 @@ def _n(count: int, noun: str) -> str:
 
 
 WORK_AUTHORS = load_work_authors(str(PROJECT_ROOT))
+# Outcomes of direct checks on individual rows. The indexes cannot know them, so they are
+# reapplied on every render instead of being hand-edited into the report.
+_OVERRIDES_PATH = PROJECT_ROOT / "skills" / "citation-audit" / "references" / "citation-audit-overrides.json"
+OVERRIDES = (json.loads(_OVERRIDES_PATH.read_text(encoding="utf-8")).get("overrides", [])
+             if _OVERRIDES_PATH.exists() else [])
+
+
+def _override(e: dict) -> dict | None:
+    """The first checked override matching an entry's citing title, org and work cited."""
+    for o in OVERRIDES:
+        if o["citing_title"] != e.get("citing_title"):
+            continue
+        if o.get("org") and o["org"] != e.get("org"):
+            continue
+        if o.get("cited_work") and o["cited_work"] != e.get("cited_work"):
+            continue
+        return o
+    return None
 
 
 def _screen(entries: list[dict], coauthors: dict):
@@ -448,13 +466,21 @@ def _screen(entries: list[dict], coauthors: dict):
     excluded: list[dict] = []
     possible: list[dict] = []
     for e in entries:
+        o = _override(e)
+        if o and o["action"] == "drop":
+            excluded.append({**e, "verdict": "checked", "matched": [o["reason"]]})
+            continue
+        if o and o["action"] == "relabel":
+            e = {**e, "cited_work": o["to"]}
         verdict, names = screen_self_citation(
             e.get("authors") or [], coauthors, WORK_AUTHORS.get(e.get("cited_work", ""))
         )
         if verdict in ("self", "coauthor"):
             excluded.append({**e, "verdict": verdict, "matched": names})
             continue
-        if verdict == "possible":
+        if o and o["action"] == "flag":
+            possible.append({**e, "matched": [o["reason"]] + names})
+        elif verdict == "possible":
             possible.append({**e, "matched": names})
         kept.append(e)
     return kept, excluded, possible
@@ -546,19 +572,22 @@ def _write_markdown(merged: dict, total_papers: int, out_path: Path, coauthors: 
 
         f.write("## Excluded and Flagged Citations\n\n")
         n_self = sum(1 for e in excluded if e["verdict"] == "self")
-        n_co = len(excluded) - n_self
+        n_chk = sum(1 for e in excluded if e["verdict"] == "checked")
+        n_co = len(excluded) - n_self - n_chk
         f.write(
-            f"Excluded: {_n(n_self, 'row')} where the PI is a citing author, and {_n(n_co, 'row')} "
-            "where an author of the cited work or two or more frequent co-authors are. A frequent "
+            f"Excluded: {_n(n_self, 'row')} where the PI is a citing author, {_n(n_co, 'row')} "
+            "where an author of the cited work or two or more frequent co-authors are, and "
+            f"{_n(n_chk, 'row')} that a direct check of the paper refuted. A frequent "
             "co-author shares two or more papers with the PI. "
             f"Flagged but kept: {_n(len(possible), 'row')} where exactly one frequent co-author "
-            "who did not write the cited work matches, since one common name is weak evidence.\n\n"
+            "who did not write the cited work matches, since one common name is weak evidence, "
+            "or where a direct check could not confirm the citation or affiliation.\n\n"
         )
         for label, rows in (("Excluded", excluded), ("Flagged, kept", possible)):
             if not rows:
                 continue
             f.write(f"<details><summary>{label} ({_n(len(rows), 'row')})</summary>\n\n")
-            f.write("| Organization | Work Cited | Citing Paper | Year | Matched Authors |\n")
+            f.write("| Organization | Work Cited | Citing Paper | Year | Matched Authors or Reason |\n")
             f.write("|---|---|---|---|---|\n")
             for e in sorted(rows, key=lambda x: (x.get("org") or "", x.get("citing_title") or "")):
                 f.write(
