@@ -16,7 +16,7 @@
       "LLM Agents",
       "Reproducible Research"
     ],
-    "last_updated_at": "2026-09-13T23:26:42Z"
+    "last_updated_at": "2026-10-23T06:13:32Z"
   },
   {
     "name": "PyOD",
@@ -27,7 +27,7 @@
     "docs_url": "https://pyod.readthedocs.io",
     "paper_url": "https://arxiv.org/abs/2412.12154",
     "demo_url": "",
-    "stars": 10052,
+    "stars": 10053,
     "tags": [
       "Anomaly Detection",
       "Outlier Detection",
@@ -54,7 +54,7 @@
       "Recovery",
       "Python SDK"
     ],
-    "last_updated_at": "2026-10-20T05:31:06Z"
+    "last_updated_at": "2026-10-23T06:17:58Z"
   },
   {
     "name": "agentpile",
@@ -73,7 +73,7 @@
       "OpenTelemetry",
       "Python SDK"
     ],
-    "last_updated_at": "2026-10-23T04:17:38Z"
+    "last_updated_at": "2026-10-23T05:51:59Z"
   },
   {
     "name": "awesome-auditable-ai",
@@ -195,7 +195,7 @@
     "docs_url": "",
     "paper_url": "",
     "demo_url": "",
-    "stars": 9421,
+    "stars": 9424,
     "tags": [
       "Awesome List",
       "Anomaly Detection",
@@ -406,7 +406,7 @@
       "Configuration",
       "MCP"
     ],
-    "last_updated_at": "2026-10-23T02:41:17Z"
+    "last_updated_at": "2026-10-23T06:13:30Z"
   },
   {
     "name": "agent-style",
@@ -426,6 +426,6 @@
       "Claude Code",
       "Codex"
     ],
-    "last_updated_at": "2026-10-19T00:17:42Z"
+    "last_updated_at": "2026-10-23T06:17:57Z"
   }
 ]
