@@ -377,8 +377,8 @@
         <h2 style="color:#990000; border-bottom:2px solid #990000; padding-bottom:6px; margin:30px 0 16px 0;">Foundations</h2>
         <p style="color:#555; font-size:0.95rem; margin-bottom:14px;">
           These artifacts apply at all three stages. They define auditability, specify the evidence for a
-          claim, assess the risk of an agent change, measure whether a failure was catchable, and map the
-          surrounding literature.
+          claim, assess the risk of an agent change, read agent datasets and traces into common records,
+          measure whether a failure was catchable, and map the surrounding literature.
         </p>
         <div style="border:1px solid #e8d0d0; border-radius:8px; padding:2px 16px; background:#fff7f7; margin-bottom:20px;">
           <div class="row g-2" style="padding:12px 0; border-bottom:1px solid #f0dcdc;">
@@ -428,6 +428,25 @@
                   <a href="https://arxiv.org/abs/2610.16280" target="_blank" rel="noopener"><i class="fas fa-scroll" aria-hidden="true"></i> arXiv</a>
                   &nbsp;|&nbsp;
                   <a href="https://github.com/yzhao062/agent-risk" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i> Code &amp; Materials</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row g-2" style="padding:12px 0; border-bottom:1px solid #f0dcdc;">
+            <div class="col-12 col-sm-3 col-lg-2"><div style="color:#7a2a2a; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; padding-top:3px;"><i class="fas fa-database" style="width:1.05em; margin-right:0.35em; opacity:0.9;" aria-hidden="true"></i>Data Infrastructure</div></div>
+            <div class="col-12 col-sm-9 col-lg-10">
+              <div>
+                <div style="display:flex; align-items:center; gap:10px; font-size:1.05rem; font-weight:700; margin-bottom:4px;"><img src="images/agentpile/icon.svg" alt="" width="48" height="48" loading="lazy" decoding="async"><a href="https://github.com/yzhao062/agentpile" target="_blank" rel="noopener">agentpile</a></div>
+                <div style="color:#555; font-size:0.88rem; line-height:1.5;">
+                  <em>How do agent runs from different sources reach the same analysis?</em>
+                  Reads 13 public agent trajectory datasets, trace files, and live runs into ATIF v1.7 records
+                  that keep what each source recorded. The records go to pandas tables, networkx graphs, or
+                  OTLP spans for a tracing UI.
+                </div>
+                <div style="margin-top:6px; font-size:0.82rem;">
+                  <a href="https://github.com/yzhao062/agentpile" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a>
+                  &nbsp;|&nbsp;
+                  <a href="https://pypi.org/project/agentpile/" target="_blank" rel="noopener"><i class="fab fa-python" aria-hidden="true"></i> PyPI</a>
                 </div>
               </div>
             </div>

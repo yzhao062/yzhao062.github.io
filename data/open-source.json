@@ -57,6 +57,25 @@
     "last_updated_at": "2026-10-20T05:31:06Z"
   },
   {
+    "name": "agentpile",
+    "category": "Data Infrastructure",
+    "role": "Primary",
+    "description": "A Python package that reads 13 public agent trajectory datasets, trace files, and live agent runs into ATIF v1.7 records that keep what the source recorded, then hands them to pandas, networkx, or OTLP tracing tools.",
+    "repo_url": "https://github.com/yzhao062/agentpile",
+    "docs_url": "https://github.com/yzhao062/agentpile#readme",
+    "paper_url": "",
+    "demo_url": "",
+    "stars": 0,
+    "tags": [
+      "Agent Trajectories",
+      "Trace Data",
+      "ATIF",
+      "OpenTelemetry",
+      "Python SDK"
+    ],
+    "last_updated_at": "2026-10-23T04:17:38Z"
+  },
+  {
     "name": "awesome-auditable-ai",
     "category": "Resource Hub",
     "role": "Primary",
