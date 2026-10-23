@@ -123,13 +123,14 @@
           production use needs a real compensation rail behind the same gate interface.
         </p>
 
-        <h2 style="color:#990000;">Proven on public agent benchmarks</h2>
+        <h2 style="color:#990000;">What GRADE adds to a trace</h2>
         <p>
-          The graph is not just structure. GRADE
-          (<a href="https://arxiv.org/abs/2606.22741">arXiv:2606.22741</a>) evaluates six public agent corpora for
-          run-failure prediction. On SWE-Gym, adding the dependency layer lifts within-corpus ROC-AUC from a
-          0.663 run-size baseline to 0.805. Separately, the execution layer localizes the faulting step at Top-3 0.614
-          on the Who&amp;When benchmark.
+          A trace records what each step did but omits what it relied on and which earlier results it reused. GRADE
+          (<a href="https://arxiv.org/abs/2606.22741">arXiv:2606.22741</a>) recovers that dependency layer and grades
+          each edge by how it is known: observed, declared, or inferred. Whether the layer adds predictive value over
+          run size depends on the learner and the task sampling, so the paper advises keeping a run-size baseline when
+          crediting it. On the Who&amp;When benchmark, the execution layer ranks the faulting step in failed multi-agent
+          runs at Top-3 0.614, against 0.516 for a position prior.
         </p>
 
         <h2 style="color:#990000;">Quick start</h2>

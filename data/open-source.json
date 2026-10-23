@@ -335,7 +335,7 @@
   {
     "name": "agent-audit",
     "category": "Security Toolkit",
-    "role": "Primary",
+    "role": "Collaborator",
     "description": "An open-source tool for auditing AI agent code and configurations, with OWASP Agentic Top 10 coverage, taint analysis, and MCP configuration auditing.",
     "repo_url": "https://github.com/HeadyZhang/agent-audit",
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/agent-audit.html",
@@ -354,7 +354,7 @@
   {
     "name": "Aegis",
     "category": "Security / Compliance Platform",
-    "role": "Primary",
+    "role": "Collaborator",
     "description": "The open-source firewall for AI agents, with pre-execution policy checks, human-in-the-loop approvals, and tamper-evident audit trails for safer and more accountable deployment.",
     "repo_url": "https://github.com/Justin0504/Aegis",
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/aegis.html",
