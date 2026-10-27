@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-25T13:39:55Z",
+  "generated_at": "2026-10-27T15:24:30Z",
   "source": "meta-finder citation-tracker, Semantic Scholar Graph API",
   "paper_count": 135,
-  "total_citations": 9322,
+  "total_citations": 9338,
   "papers": [
     {
       "id": "preprint-personacuabench",
@@ -73,7 +73,7 @@
       "year": 2026,
       "venue": "EACL, 2026",
       "section": "conference",
-      "citation_count": 28,
+      "citation_count": 29,
       "influential_citations": 0
     },
     {
@@ -235,8 +235,8 @@
       "year": 2025,
       "venue": "CVPR, 2025",
       "section": "conference",
-      "citation_count": 30,
-      "influential_citations": 4
+      "citation_count": 31,
+      "influential_citations": 5
     },
     {
       "id": "conference-few-shot-graph-out-of-distribution-detection-with-llms",
@@ -379,7 +379,7 @@
       "year": 2024,
       "venue": "KDD, 2024",
       "section": "conference",
-      "citation_count": 14,
+      "citation_count": 15,
       "influential_citations": 0
     },
     {
@@ -388,7 +388,7 @@
       "year": 2024,
       "venue": "AutoML, 2024",
       "section": "conference",
-      "citation_count": 6,
+      "citation_count": 7,
       "influential_citations": 0
     },
     {
@@ -505,7 +505,7 @@
       "year": 2021,
       "venue": "NeurIPS, 2021",
       "section": "conference",
-      "citation_count": 109,
+      "citation_count": 110,
       "influential_citations": 17
     },
     {
@@ -514,7 +514,7 @@
       "year": 2021,
       "venue": "NeurIPS, 2021",
       "section": "conference",
-      "citation_count": 280,
+      "citation_count": 281,
       "influential_citations": 32
     },
     {
@@ -541,7 +541,7 @@
       "year": 2021,
       "venue": "NeurIPS, 2021",
       "section": "conference",
-      "citation_count": 543,
+      "citation_count": 547,
       "influential_citations": 67
     },
     {
@@ -568,7 +568,7 @@
       "year": 2020,
       "venue": "IEEE ICDM, 2020",
       "section": "conference",
-      "citation_count": 487,
+      "citation_count": 486,
       "influential_citations": 45
     },
     {
@@ -712,7 +712,7 @@
       "year": 2023,
       "venue": "ACM Computing Surveys, 2023",
       "section": "journal",
-      "citation_count": 2504,
+      "citation_count": 2506,
       "influential_citations": 78
     },
     {
@@ -730,7 +730,7 @@
       "year": 2022,
       "venue": "Nature Chemical Biology, 2022",
       "section": "journal",
-      "citation_count": 222,
+      "citation_count": 223,
       "influential_citations": 12
     },
     {
@@ -740,7 +740,7 @@
       "venue": "TKDE, 2022",
       "section": "journal",
       "citation_count": 578,
-      "influential_citations": 50
+      "influential_citations": 51
     },
     {
       "id": "journal-pyod-a-python-toolbox-for-scalable-outlier-detection",
@@ -748,8 +748,8 @@
       "year": 2019,
       "venue": "JMLR, 2019.",
       "section": "journal",
-      "citation_count": 953,
-      "influential_citations": 67
+      "citation_count": 952,
+      "influential_citations": 66
     },
     {
       "id": "conference-weclawarena-auditable-sandbox-for-cross-user-agent-security",
@@ -847,7 +847,7 @@
       "year": 2026,
       "venue": "arXiv preprint",
       "section": "preprint",
-      "citation_count": 17,
+      "citation_count": 18,
       "influential_citations": 0
     },
     {
@@ -946,8 +946,8 @@
       "year": 2026,
       "venue": "arXiv preprint",
       "section": "preprint",
-      "citation_count": 17,
-      "influential_citations": 0
+      "citation_count": 18,
+      "influential_citations": 1
     },
     {
       "id": "conference-medexagent",
@@ -955,7 +955,7 @@
       "year": 2026,
       "venue": "NeurIPS, 2026",
       "section": "conference",
-      "citation_count": 3,
+      "citation_count": 4,
       "influential_citations": 1
     },
     {
@@ -982,7 +982,7 @@
       "year": 2026,
       "venue": "ACM AI Leadership Summit, 2026 (condensed 4-page version); earlier version at ACL 2026 KnowFM Workshop",
       "section": "conference",
-      "citation_count": 21,
+      "citation_count": 22,
       "influential_citations": 0
     },
     {
@@ -1198,7 +1198,7 @@
       "year": 2024,
       "venue": "arXiv preprint",
       "section": "preprint",
-      "citation_count": 12,
+      "citation_count": 13,
       "influential_citations": 0
     },
     {
