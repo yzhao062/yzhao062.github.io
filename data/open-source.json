@@ -27,7 +27,7 @@
     "docs_url": "https://pyod.readthedocs.io",
     "paper_url": "https://arxiv.org/abs/2412.12154",
     "demo_url": "",
-    "stars": 10061,
+    "stars": 10062,
     "tags": [
       "Anomaly Detection",
       "Outlier Detection",
@@ -177,7 +177,7 @@
     "docs_url": "",
     "paper_url": "https://proceedings.neurips.cc/paper_files/paper/2022/hash/da0ddd47c18ae3dd2888ff2ea4b6ccf7-Abstract-Datasets_and_Benchmarks.html",
     "demo_url": "",
-    "stars": 1029,
+    "stars": 1030,
     "tags": [
       "Anomaly Detection",
       "Benchmark",
@@ -195,7 +195,7 @@
     "docs_url": "",
     "paper_url": "",
     "demo_url": "",
-    "stars": 9431,
+    "stars": 9433,
     "tags": [
       "Awesome List",
       "Anomaly Detection",
