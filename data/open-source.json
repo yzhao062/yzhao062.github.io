@@ -27,7 +27,7 @@
     "docs_url": "https://pyod.readthedocs.io",
     "paper_url": "https://arxiv.org/abs/2412.12154",
     "demo_url": "",
-    "stars": 10056,
+    "stars": 10061,
     "tags": [
       "Anomaly Detection",
       "Outlier Detection",
@@ -35,7 +35,7 @@
       "Machine Learning",
       "PyTorch"
     ],
-    "last_updated_at": "2026-10-12T03:42:10Z"
+    "last_updated_at": "2026-10-28T05:28:05Z"
   },
   {
     "name": "auditable",
@@ -46,7 +46,7 @@
     "docs_url": "https://auditable-ai.readthedocs.io/",
     "paper_url": "https://arxiv.org/abs/2606.22741",
     "demo_url": "https://pypi.org/project/auditable/",
-    "stars": 29,
+    "stars": 31,
     "tags": [
       "Agent Auditability",
       "Decision Replay",
@@ -65,7 +65,7 @@
     "docs_url": "https://github.com/yzhao062/agentpile#readme",
     "paper_url": "",
     "demo_url": "",
-    "stars": 15,
+    "stars": 27,
     "tags": [
       "Agent Trajectories",
       "Trace Data",
@@ -92,7 +92,7 @@
       "Resources",
       "Benchmarks"
     ],
-    "last_updated_at": "2026-10-24T08:48:23Z"
+    "last_updated_at": "2026-10-28T06:00:39Z"
   },
   {
     "name": "AD-AGENT",
@@ -121,7 +121,7 @@
     "docs_url": "https://trustllmbenchmark.github.io/TrustLLM-Website/",
     "paper_url": "https://openreview.net/forum?id=bWUU0LwwMp",
     "demo_url": "",
-    "stars": 633,
+    "stars": 634,
     "tags": [
       "Trustworthy AI",
       "LLM Evaluation",
@@ -177,7 +177,7 @@
     "docs_url": "",
     "paper_url": "https://proceedings.neurips.cc/paper_files/paper/2022/hash/da0ddd47c18ae3dd2888ff2ea4b6ccf7-Abstract-Datasets_and_Benchmarks.html",
     "demo_url": "",
-    "stars": 1028,
+    "stars": 1029,
     "tags": [
       "Anomaly Detection",
       "Benchmark",
@@ -195,7 +195,7 @@
     "docs_url": "",
     "paper_url": "",
     "demo_url": "",
-    "stars": 9430,
+    "stars": 9431,
     "tags": [
       "Awesome List",
       "Anomaly Detection",
@@ -214,7 +214,7 @@
     "docs_url": "",
     "paper_url": "",
     "demo_url": "",
-    "stars": 1623,
+    "stars": 1624,
     "tags": [
       "Writing",
       "Research Workflow",
@@ -268,7 +268,7 @@
     "docs_url": "http://tods-doc.github.io",
     "paper_url": "https://arxiv.org/abs/2009.09822",
     "demo_url": "",
-    "stars": 1666,
+    "stars": 1667,
     "tags": [
       "Time Series",
       "Anomaly Detection",
@@ -368,7 +368,7 @@
       "Audit Trail",
       "Human-in-the-Loop"
     ],
-    "last_updated_at": "2026-10-25T09:38:45Z"
+    "last_updated_at": "2026-10-27T17:11:05Z"
   },
   {
     "name": "combo",
@@ -417,7 +417,7 @@
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/agent-style.html",
     "paper_url": "",
     "demo_url": "https://pypi.org/project/agent-style/",
-    "stars": 726,
+    "stars": 727,
     "tags": [
       "AI Agents",
       "Agent Configuration",
@@ -426,6 +426,6 @@
       "Claude Code",
       "Codex"
     ],
-    "last_updated_at": "2026-10-23T06:17:57Z"
+    "last_updated_at": "2026-10-27T22:36:18Z"
   }
 ]
