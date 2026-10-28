@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Haoyan Xu",
+    "profile_url": "https://scholar.google.com/citations?user=BDjUvE8AAAAJ&hl=en",
+    "image": "images/others/xhy.webp",
+    "alt": "Haoyan Xu",
+    "year_info": "With Fortis Jan 2024 – Oct 2026",
+    "research": "Graph OOD Detection / Graph Foundation Models / Multimodal Robustness",
+    "awards": [
+      "Capital One Fellowship"
+    ],
+    "status_label": "Passed Ph.D. Defense, Oct 2026",
+    "destination": "Microsoft",
+    "email": "haoyanxu@usc.edu",
+    "co_advised_by": {
+      "name": "Mengyuan Li",
+      "url": "https://mengyuan-l.github.io/index.html"
+    }
+  }
+]

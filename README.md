@@ -9,6 +9,7 @@ Member sections are data-driven. Update JSON files instead of editing `lab.html`
 ### Files to edit
 
 - `data/lab-current-phd.json` for current Ph.D. students
+- `data/lab-phd-alumni.json` for Ph.D. alumni (same card layout as current students)
 - `data/lab-members.json` for current Master/Undergrad members and all past members
 
 ### Workflow
@@ -75,6 +76,25 @@ Member sections are data-driven. Update JSON files instead of editing `lab.html`
 }
 ```
 
+#### Ph.D. alumni (`data/lab-phd-alumni.json`)
+
+Same fields as a current Ph.D. student, with `status_label` required and an optional `destination`:
+
+```json
+{
+  "name": "Jane Doe",
+  "profile_url": "https://example.com",
+  "image": "images/others/jane_doe.webp",
+  "alt": "Jane Doe",
+  "year_info": "With Fortis Aug 2022 – May 2027",
+  "research": "LLM Safety, Robustness",
+  "status_label": "Passed Ph.D. Defense, May 2027",
+  "destination": "Example Lab"
+}
+```
+
+To move a Ph.D. student to alumni, cut the record from `data/lab-current-phd.json` into this file and update `year_info` and `status_label`. A name in both files fails the prerender and the site checks.
+
 #### Moving someone from current to past
 
 Change `"group": "current"` to `"group": "past"` in `data/lab-members.json`. Optionally update `status_text` and `email`. That single field change moves the member automatically.
@@ -93,6 +113,7 @@ The rest of this document is for the repo maintainer (Yue Zhao).
 │   ├── publications.json           Publication list (website)
 │   ├── open-source.json            Open-source projects (website + CV)
 │   ├── lab-current-phd.json        Current PhD students
+│   ├── lab-phd-alumni.json         PhD alumni
 │   ├── lab-members.json            Other lab members (current + past)
 │   └── citations.json              Per-paper citation counts (pushed by meta-finder)
 ├── cv/                             LaTeX CV sources
@@ -196,7 +217,7 @@ Use the `/dual-update` agent skill to update both website and CV in one pass.
 | Awards and Grants | `index.html` | `cv/cv-full.tex` |
 | Services | `services.html` | `cv/cv-full.tex` |
 | Teaching | `teaching.html` | `cv/cv-full.tex` |
-| PhD Students | `data/lab-current-phd.json` | `cv/cv-full.tex` |
+| PhD Students | `data/lab-current-phd.json`, `data/lab-phd-alumni.json` | `cv/cv-full.tex` |
 | Open-source | `data/open-source.json` | `cv/open-source.tex` (auto-generated) |
 
 ### Building the CV Locally

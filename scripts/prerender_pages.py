@@ -21,6 +21,7 @@ ROOT = Path(__file__).resolve().parent.parent
 PUBLICATIONS_PATH = ROOT / "data" / "publications.json"
 LAB_MEMBERS_PATH = ROOT / "data" / "lab-members.json"
 LAB_CURRENT_PHD_PATH = ROOT / "data" / "lab-current-phd.json"
+LAB_PHD_ALUMNI_PATH = ROOT / "data" / "lab-phd-alumni.json"
 PUBLICATIONS_PAGE = ROOT / "publications.html"
 LAB_PAGE = ROOT / "lab.html"
 INDEX_PAGE = ROOT / "index.html"
@@ -290,26 +291,30 @@ def render_member_publications(member: Mapping[str, Any]) -> str:
     )
 
 
-def render_current_phd_member(member: Mapping[str, Any]) -> str:
-    name = require_text(member, "name", "data/lab-current-phd.json")
-    profile_url = require_text(member, "profile_url", "data/lab-current-phd.json")
-    image = require_text(member, "image", "data/lab-current-phd.json")
+def render_phd_member(
+    member: Mapping[str, Any], source: str = "data/lab-current-phd.json"
+) -> str:
+    """Render one Ph.D. card; current students and alumni share this layout."""
+    name = require_text(member, "name", source)
+    profile_url = require_text(member, "profile_url", source)
+    image = require_text(member, "image", source)
     alt = escaped(member.get("alt") or name)
     role = str(member.get("status_label") or "Ph.D. Student")
     email = str(member.get("email") or "").strip()
     email_html = f' (<span itemprop="email">{escaped(email)}</span>)' if email else ""
+    destination = str(member.get("destination") or "").strip()
 
     co_advisors = member.get("co_advised_by") or []
     if isinstance(co_advisors, Mapping):
         co_advisors = [co_advisors]
     if not isinstance(co_advisors, list):
-        raise ValueError(f"data/lab-current-phd.json: invalid co_advised_by for {name!r}")
+        raise ValueError(f"{source}: invalid co_advised_by for {name!r}")
 
     advisor_links: list[str] = []
     for advisor in co_advisors:
         if not isinstance(advisor, Mapping):
-            raise ValueError(f"data/lab-current-phd.json: invalid co-advisor for {name!r}")
-        advisor_name = require_text(advisor, "name", "data/lab-current-phd.json")
+            raise ValueError(f"{source}: invalid co-advisor for {name!r}")
+        advisor_name = require_text(advisor, "name", source)
         if advisor.get("url"):
             advisor_links.append(
                 f'<a href="{escaped(advisor["url"])}">{escaped(advisor_name)}</a>'
@@ -344,6 +349,10 @@ def render_current_phd_member(member: Mapping[str, Any]) -> str:
         '    <p class="member-status"><strong><span itemprop="jobTitle">'
         f"{escaped(role)}</span></strong>{email_html}</p>"
     )
+    if destination:
+        lines.append(
+            f'    <p class="member-status">Destination: {escaped(destination)}</p>'
+        )
     if co_advised_html:
         lines.append(f"    {co_advised_html}")
     lines.append("</div>")
@@ -409,8 +418,21 @@ def render_past_member(member: Mapping[str, Any]) -> str:
 
 
 def lab_regions(
-    current_phd: list[dict[str, Any]], members: list[dict[str, Any]]
+    current_phd: list[dict[str, Any]],
+    members: list[dict[str, Any]],
+    phd_alumni: list[dict[str, Any]],
 ) -> dict[str, str]:
+    current_names = {str(item.get("name") or "").strip() for item in current_phd}
+    alumni_names = {str(item.get("name") or "").strip() for item in phd_alumni}
+    overlap = sorted(current_names & alumni_names - {""})
+    if overlap:
+        raise ValueError(
+            "data/lab-current-phd.json and data/lab-phd-alumni.json both list: "
+            + ", ".join(overlap)
+        )
+    for item in phd_alumni:
+        require_text(item, "status_label", "data/lab-phd-alumni.json")
+
     current = sorted_members(item for item in members if item.get("group") == "current")
     past = sorted_members(item for item in members if item.get("group") == "past")
     unknown_groups = sorted(
@@ -421,7 +443,11 @@ def lab_regions(
 
     return {
         "lab-current-phd": "\n".join(
-            render_current_phd_member(item) for item in sorted_members(current_phd)
+            render_phd_member(item) for item in sorted_members(current_phd)
+        ),
+        "lab-phd-alumni": "\n".join(
+            render_phd_member(item, "data/lab-phd-alumni.json")
+            for item in sorted_members(phd_alumni)
         ),
         "lab-current": "\n".join(render_current_member(item) for item in current),
         "lab-past": "\n".join(render_past_member(item) for item in past),
@@ -579,6 +605,7 @@ def main() -> None:
     publications = load_json_list(PUBLICATIONS_PATH)
     lab_members = load_json_list(LAB_MEMBERS_PATH)
     lab_current_phd = load_json_list(LAB_CURRENT_PHD_PATH)
+    lab_phd_alumni = load_json_list(LAB_PHD_ALUMNI_PATH)
 
     layout = {
         f"layout-{name}": (ROOT / "includes" / f"{name}.html").read_text(encoding="utf-8")
@@ -586,7 +613,7 @@ def main() -> None:
     }
     pages = {
         PUBLICATIONS_PAGE: {**layout, **publication_regions(publications, date.today().year)},
-        LAB_PAGE: {**layout, **lab_regions(lab_current_phd, lab_members)},
+        LAB_PAGE: {**layout, **lab_regions(lab_current_phd, lab_members, lab_phd_alumni)},
         INDEX_PAGE: {**layout, **bio_regions(BIO_PATH)},
     }
     rendered_pages = {
@@ -607,7 +634,7 @@ def main() -> None:
     )
     print(
         f"Rendered {visible_publications} publications and "
-        f"{len(lab_current_phd) + len(lab_members)} lab members"
+        f"{len(lab_current_phd) + len(lab_phd_alumni) + len(lab_members)} lab members"
     )
 
 

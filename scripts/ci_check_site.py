@@ -73,6 +73,7 @@ def check_required_files(errors: list[str]) -> None:
         "data/open-source.json",
         "data/lab-members.json",
         "data/lab-current-phd.json",
+        "data/lab-phd-alumni.json",
         "files/yue-zhao.bib",
         "includes/navbar.html",
         "includes/sidebar.html",
@@ -186,6 +187,32 @@ def check_json_files(errors: list[str], warnings: list[str]) -> None:
                 errors.append(f"lab-current-phd.json item #{idx} missing non-empty name")
             if not str(item.get("image", "")).strip():
                 errors.append(f"lab-current-phd.json item #{idx} missing non-empty image")
+
+    # --- lab-phd-alumni.json field checks ---
+    # Alumni share the current-student card renderer, so they need the same core
+    # fields plus their own status label; the renderer would otherwise fall back
+    # to "Ph.D. Student" and present an alumnus as current.
+    alumni_items = parsed.get("lab-phd-alumni.json")
+    if isinstance(alumni_items, list):
+        for idx, item in enumerate(alumni_items):
+            if not isinstance(item, dict):
+                errors.append(f"lab-phd-alumni.json item #{idx} is not an object")
+                continue
+            for field in ("name", "image", "status_label"):
+                if not str(item.get(field, "")).strip():
+                    errors.append(f"lab-phd-alumni.json item #{idx} missing non-empty {field}")
+        if isinstance(phd_items, list):
+            current_names = {
+                str(item.get("name", "")).strip()
+                for item in phd_items
+                if isinstance(item, dict)
+            }
+            for item in alumni_items:
+                name = str(item.get("name", "")).strip() if isinstance(item, dict) else ""
+                if name and name in current_names:
+                    errors.append(
+                        f"{name} is listed in both lab-current-phd.json and lab-phd-alumni.json"
+                    )
 
     # --- lab-members.json field checks ---
     mem_items = parsed.get("lab-members.json")

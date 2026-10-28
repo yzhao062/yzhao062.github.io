@@ -342,15 +342,6 @@
                             <p class="member-status"><strong><span itemprop="jobTitle">Ph.D. Candidate</span></strong> (<span itemprop="email">yuehanqi@usc.edu</span>)</p>
                         </div>
                         <div class="col-md-4 col-sm-6 team-member prerendered-member" itemscope itemtype="https://schema.org/Person">
-                            <img itemprop="image" src="images/others/xhy.webp" alt="Haoyan Xu" class="team-img" width="150" height="150" loading="lazy" decoding="async" fetchpriority="low">
-                            <h3><a itemprop="url" href="https://scholar.google.com/citations?user=BDjUvE8AAAAJ&amp;hl=en"><span itemprop="name">Haoyan Xu</span></a></h3>
-                            <p>5th year, with Fortis since Jan 2024</p>
-                            <p>Graph OOD Detection / Graph Foundation Models / Multimodal Robustness</p>
-                            <p><i class="fas fa-award" style="font-size:18px; color:#990000"></i> Capital One Fellowship</p>
-                            <p class="member-status"><strong><span itemprop="jobTitle">Ph.D. Candidate</span></strong> (<span itemprop="email">haoyanxu@usc.edu</span>)</p>
-                            <p class="member-status">co-advised by <a href="https://mengyuan-l.github.io/index.html">Mengyuan Li</a></p>
-                        </div>
-                        <div class="col-md-4 col-sm-6 team-member prerendered-member" itemscope itemtype="https://schema.org/Person">
                             <img itemprop="image" src="images/others/zixiang.webp" alt="Zixiang Xu" class="team-img" width="150" height="150" loading="lazy" decoding="async" fetchpriority="low">
                             <h3><a itemprop="url" href="https://xzx34.github.io/"><span itemprop="name">Zixiang Xu (徐子翔)</span></a></h3>
                             <p>1st year, with Fortis since Fall 2026</p>
@@ -412,8 +403,9 @@
                         });
                     }
 
-                    function renderCurrentPhdMembers(members) {
-                        const container = document.getElementById('current-phd-members');
+                    // Current students and alumni share this card layout; containerId picks the section.
+                    function renderPhdMembers(containerId, members) {
+                        const container = document.getElementById(containerId);
                         if (!container) return;
 
                         const cards = sortMembersByLastName(members).map(function(member) {
@@ -436,6 +428,9 @@
                             const statusLine = member.email
                                 ? '<p class="member-status"><strong>' + escapeHtml(statusLabel) + '</strong> (' + escapeHtml(member.email) + ')</p>'
                                 : '<p class="member-status"><strong>' + escapeHtml(statusLabel) + '</strong></p>';
+                            const destination = member.destination
+                                ? '<p class="member-status">Destination: ' + escapeHtml(member.destination) + '</p>'
+                                : '';
 
                             return (
                                 '<div class="col-md-4 col-sm-6 team-member">' +
@@ -445,6 +440,7 @@
                                     '<p>' + escapeHtml(member.research) + '</p>' +
                                     awards +
                                     statusLine +
+                                    destination +
                                     coAdvised +
                                 '</div>'
                             );
@@ -453,27 +449,50 @@
                         container.innerHTML = cards.join('');
                     }
 
-                    document.addEventListener('DOMContentLoaded', function() {
+                    function loadPhdMembers(url, containerId) {
                         // Snapshot the prerendered fallback so a failed or empty fetch restores it.
-                        var phdFallback = document.getElementById('current-phd-members');
+                        var phdFallback = document.getElementById(containerId);
                         var phdFallbackHtml = phdFallback ? phdFallback.innerHTML : '';
-                        fetch('data/lab-current-phd.json')
+                        fetch(url)
                             .then(function(response) {
-                                if (!response.ok) throw new Error('Failed to load Ph.D. member data');
+                                if (!response.ok) throw new Error('Failed to load ' + url);
                                 return response.json();
                             })
                             .then(function(members) {
                                 if (!Array.isArray(members) || members.length === 0) {
-                                    throw new Error('Ph.D. member data is empty or invalid');
+                                    throw new Error(url + ' is empty or invalid');
                                 }
-                                renderCurrentPhdMembers(members);
+                                renderPhdMembers(containerId, members);
                             })
                             .catch(function(error) {
                                 console.error(error);
                                 if (phdFallback) phdFallback.innerHTML = phdFallbackHtml;
                             });
+                    }
+
+                    document.addEventListener('DOMContentLoaded', function() {
+                        loadPhdMembers('data/lab-current-phd.json', 'current-phd-members');
+                        loadPhdMembers('data/lab-phd-alumni.json', 'phd-alumni-members');
                     });
                 </script>
+                <hr>
+                <p id="phd-alumni"><strong>Ph.D. Alumni</strong>: Ph.D. students who passed their defense with us, and where they went next.</p>
+                <div class="team-section">
+                    <div class="row members-row" id="phd-alumni-members">
+                        <!-- PRERENDER:lab-phd-alumni START -->
+                        <div class="col-md-4 col-sm-6 team-member prerendered-member" itemscope itemtype="https://schema.org/Person">
+                            <img itemprop="image" src="images/others/xhy.webp" alt="Haoyan Xu" class="team-img" width="150" height="150" loading="lazy" decoding="async" fetchpriority="low">
+                            <h3><a itemprop="url" href="https://scholar.google.com/citations?user=BDjUvE8AAAAJ&amp;hl=en"><span itemprop="name">Haoyan Xu</span></a></h3>
+                            <p>With Fortis Jan 2024 – Oct 2026</p>
+                            <p>Graph OOD Detection / Graph Foundation Models / Multimodal Robustness</p>
+                            <p><i class="fas fa-award" style="font-size:18px; color:#990000"></i> Capital One Fellowship</p>
+                            <p class="member-status"><strong><span itemprop="jobTitle">Passed Ph.D. Defense, Oct 2026</span></strong> (<span itemprop="email">haoyanxu@usc.edu</span>)</p>
+                            <p class="member-status">Destination: Microsoft</p>
+                            <p class="member-status">co-advised by <a href="https://mengyuan-l.github.io/index.html">Mengyuan Li</a></p>
+                        </div>
+                        <!-- PRERENDER:lab-phd-alumni END -->
+                    </div>
+                </div>
                 <hr>
                 <p><strong>Connect with them</strong>: many of the Undergraduate/Master RA are looking for Ph.D./full time job for Fall 2027 -- please reach out to them (or me for an intro). </p>
                 <div class="team-section">
@@ -806,6 +825,29 @@
         <hr>
         <h2 class="h3 text-center">Lab Activities</h2>
 <!--        <p class="text-center">Click to expand and view photos (images load only after opening).</p>-->
+
+        <details id="lab-activities-haoyan-xu-defense-2026-10-26" class="mb-3 smart-details">
+          <summary style="cursor:pointer; font-weight:600;">Show Haoyan Xu's Ph.D. Defense Photo</summary>
+
+          <div id="haoyan-xu-defense-2026-10-26" class="row mt-3 g-3">
+            <div class="col-12 col-sm-6 col-lg-4">
+              <a href="images/events/haoyan-xu-defense-2026-10-26.jpg" target="_blank" class="text-decoration-none">
+                <div class="card h-100">
+                  <img class="card-img-top" alt="Six people standing in front of a screen that reads Congratulations PhD at Haoyan Xu's Ph.D. defense"
+                       loading="lazy"
+                       decoding="async"
+                       width="5712"
+                       height="4284"
+                       style="aspect-ratio:4/3; object-fit:contain; background:#f8f8f8;"
+                       src="images/events/haoyan-xu-defense-2026-10-26.jpg">
+                  <div class="card-body p-2">
+                    <div class="small text-center">Dr. Haoyan Xu's Ph.D. defense, Oct 26, 2026</div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </details>
 
         <details id="lab-activities-birthday-2026-10-02" class="mb-3 smart-details">
           <summary style="cursor:pointer; font-weight:600;">Show Birthday Dinner Photos</summary>

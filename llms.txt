@@ -52,6 +52,7 @@ These files are directly accessible and contain machine-readable data:
 - [open-source.json](https://viterbi-web.usc.edu/~yzhao010/data/open-source.json): open-source projects with name, description, repo URL, docs URL, stars, and tags
 - [lab-members.json](https://viterbi-web.usc.edu/~yzhao010/data/lab-members.json): all lab members (current and past) with name, research area, status_text, and publications
 - [lab-current-phd.json](https://viterbi-web.usc.edu/~yzhao010/data/lab-current-phd.json): current PhD students with name, year_info, research area, awards, and email
+- [lab-phd-alumni.json](https://viterbi-web.usc.edu/~yzhao010/data/lab-phd-alumni.json): PhD alumni with the same fields plus status_label and destination
 
 ## Flagship Open-Source Projects
 

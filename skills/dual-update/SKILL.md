@@ -27,7 +27,7 @@ Not every change touches all three. The table below maps the first two; the **Gi
 | **Service role** (reviewer, AC, editor, organizer) | `services.html` | `cv/cv-full.tex` (Services section) | Match the sub-category (organizing, editorial, AC/reviewer, journal reviewer). |
 | **Institutional leadership appointment** (institute/center director, associate director, or similar named USC role) | `services.html` (Institutional Leadership); optionally `files/bio.txt` as a current-profile surface | `cv/cv-full.tex` (Services → Institutional Leadership) | Use the exact title from the offer letter, and a finite term (`2026-2027` in HTML, `2026--2027` in LaTeX). Never write `Present` and never infer months the letter does not state. The dated CV and services records stay accurate after the term. If `files/bio.txt` says the appointee currently serves in the role, revise or remove that clause after the term. Keep it out of Professional Experience, which holds employment and external advisory roles. Link the institute's home page, not its leadership page, which may not list the appointee yet. |
 | **Teaching course** | `teaching.html` | `cv/cv-full.tex` (Teaching section) | Include semester, course number, title, enrollment if known. |
-| **PhD student** | `data/lab-current-phd.json` | `cv/cv-full.tex` (PhD Students section) | JSON has structured fields; CV uses inline LaTeX. |
+| **PhD student** | `data/lab-current-phd.json`; alumni in `data/lab-phd-alumni.json` | `cv/cv-full.tex` (PhD Students section; alumni subgroup) | JSON has structured fields; CV uses inline LaTeX. After a defense, move the record to the alumni file, which uses the same card renderer. |
 | **Open-source project** | `data/open-source.json` | `cv/open-source.tex` (**auto-generated**) | Edit JSON only, then run `python scripts/generate_cv_open_source.py`. Do NOT edit `cv/open-source.tex` directly. |
 | **Research direction / keywords** | `index.html` (Research section), `files/bio.txt` | `cv/cv-full.tex` (Research Summary section) | Keep the same four audit questions across these sources and `../yzhao062/README.md`. Translate the wording to fit each surface without changing the count or scope. |
 | **News item** | `index.html` (News section) | — | Website only. |
@@ -49,7 +49,7 @@ so a stale region still looks right in a browser while serving old facts to ever
 costs a red run after the push rather than a bad ship.
 
 After editing any of `data/publications.json`, `data/lab-current-phd.json`,
-`data/lab-members.json`, or `files/bio.txt`, run the script and stage every file it reports as
+`data/lab-phd-alumni.json`, `data/lab-members.json`, or `files/bio.txt`, run the script and stage every file it reports as
 updated:
 
 ```bash
@@ -264,7 +264,7 @@ AWARD_NAME & TYPE & DATE \\
 - When adding a preprint, add to **both** `data/publications.json` (with `section: "preprint"`) and `cv/cv-full.tex`.
 - Always preserve reverse chronological ordering in both places.
 - Run `python scripts/generate_cv_open_source.py` after any change to `data/open-source.json`.
-- Run `python scripts/prerender_pages.py` after any change to `data/publications.json`, `data/lab-current-phd.json`, `data/lab-members.json`, or `files/bio.txt`. Stage whatever it reports as updated, normally `publications.html`, `lab.html`, and `sitemap.xml`. A JSON-only change leaves the crawlable HTML serving the previous facts. See [Regenerating Prerendered HTML](#regenerating-prerendered-html).
+- Run `python scripts/prerender_pages.py` after any change to `data/publications.json`, `data/lab-current-phd.json`, `data/lab-phd-alumni.json`, `data/lab-members.json`, or `files/bio.txt`. Stage whatever it reports as updated, normally `publications.html`, `lab.html`, and `sitemap.xml`. A JSON-only change leaves the crawlable HTML serving the previous facts. See [Regenerating Prerendered HTML](#regenerating-prerendered-html).
 - **Publication ↔ lab-members sync**: When adding a new published paper to `data/publications.json`, check if any non-PhD lab member (in `data/lab-members.json`) is a co-author. If so, add the paper to their `publications` array. Note that author names may differ between the two files (e.g., display name vs legal name), so match carefully. Only list published papers with a venue, not arXiv-only preprints.
 
 ## News Item Trigger (index.html)
