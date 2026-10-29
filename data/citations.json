@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-27T15:24:30Z",
+  "generated_at": "2026-10-29T16:07:56Z",
   "source": "meta-finder citation-tracker, Semantic Scholar Graph API",
   "paper_count": 135,
-  "total_citations": 9338,
+  "total_citations": 9398,
   "papers": [
     {
       "id": "preprint-personacuabench",
@@ -73,7 +73,7 @@
       "year": 2026,
       "venue": "EACL, 2026",
       "section": "conference",
-      "citation_count": 29,
+      "citation_count": 31,
       "influential_citations": 0
     },
     {
@@ -109,7 +109,7 @@
       "year": 2026,
       "venue": "ICLR, 2026",
       "section": "conference",
-      "citation_count": 49,
+      "citation_count": 52,
       "influential_citations": 2
     },
     {
@@ -154,7 +154,7 @@
       "year": 2026,
       "venue": "ACL (Findings), 2026",
       "section": "conference",
-      "citation_count": 12,
+      "citation_count": 13,
       "influential_citations": 4
     },
     {
@@ -199,7 +199,7 @@
       "year": 2025,
       "venue": "ACL (Findings), 2025",
       "section": "conference",
-      "citation_count": 48,
+      "citation_count": 49,
       "influential_citations": 3
     },
     {
@@ -226,7 +226,7 @@
       "year": 2025,
       "venue": "NeurIPS, 2025",
       "section": "conference",
-      "citation_count": 31,
+      "citation_count": 32,
       "influential_citations": 3
     },
     {
@@ -415,8 +415,8 @@
       "year": 2024,
       "venue": "ICML, 2024",
       "section": "conference",
-      "citation_count": 378,
-      "influential_citations": 34
+      "citation_count": 381,
+      "influential_citations": 36
     },
     {
       "id": "conference-adgym-design-choices-for-deep-anomaly-detection",
@@ -469,7 +469,7 @@
       "year": 2022,
       "venue": "NeurIPS, 2022",
       "section": "conference",
-      "citation_count": 524,
+      "citation_count": 527,
       "influential_citations": 80
     },
     {
@@ -514,8 +514,8 @@
       "year": 2021,
       "venue": "NeurIPS, 2021",
       "section": "conference",
-      "citation_count": 281,
-      "influential_citations": 32
+      "citation_count": 282,
+      "influential_citations": 33
     },
     {
       "id": "conference-suod-accelerating-large-scale-unsupervised-heterogeneous-outlier-detection",
@@ -523,7 +523,7 @@
       "year": 2021,
       "venue": "MLSys, 2021",
       "section": "conference",
-      "citation_count": 84,
+      "citation_count": 86,
       "influential_citations": 5
     },
     {
@@ -541,7 +541,7 @@
       "year": 2021,
       "venue": "NeurIPS, 2021",
       "section": "conference",
-      "citation_count": 547,
+      "citation_count": 548,
       "influential_citations": 67
     },
     {
@@ -568,8 +568,8 @@
       "year": 2020,
       "venue": "IEEE ICDM, 2020",
       "section": "conference",
-      "citation_count": 486,
-      "influential_citations": 45
+      "citation_count": 490,
+      "influential_citations": 46
     },
     {
       "id": "workshop-combo",
@@ -577,7 +577,7 @@
       "year": 2020,
       "venue": "AAAI (Demo), 2020",
       "section": "workshop",
-      "citation_count": 11,
+      "citation_count": 12,
       "influential_citations": 0
     },
     {
@@ -622,8 +622,8 @@
       "year": 2019,
       "venue": "SDM, 2019",
       "section": "conference",
-      "citation_count": 165,
-      "influential_citations": 15
+      "citation_count": 166,
+      "influential_citations": 14
     },
     {
       "id": "conference-music-artist-crnn",
@@ -658,7 +658,7 @@
       "year": 2018,
       "venue": "IJCNN, 2018",
       "section": "conference",
-      "citation_count": 157,
+      "citation_count": 159,
       "influential_citations": 19
     },
     {
@@ -703,7 +703,7 @@
       "year": 2024,
       "venue": "IEEE Transactions on Neural Networks and Learning Systems, 2024",
       "section": "journal",
-      "citation_count": 34,
+      "citation_count": 35,
       "influential_citations": 1
     },
     {
@@ -712,7 +712,7 @@
       "year": 2023,
       "venue": "ACM Computing Surveys, 2023",
       "section": "journal",
-      "citation_count": 2506,
+      "citation_count": 2512,
       "influential_citations": 78
     },
     {
@@ -730,7 +730,7 @@
       "year": 2022,
       "venue": "Nature Chemical Biology, 2022",
       "section": "journal",
-      "citation_count": 223,
+      "citation_count": 224,
       "influential_citations": 12
     },
     {
@@ -739,7 +739,7 @@
       "year": 2022,
       "venue": "TKDE, 2022",
       "section": "journal",
-      "citation_count": 578,
+      "citation_count": 580,
       "influential_citations": 51
     },
     {
@@ -748,7 +748,7 @@
       "year": 2019,
       "venue": "JMLR, 2019.",
       "section": "journal",
-      "citation_count": 952,
+      "citation_count": 976,
       "influential_citations": 66
     },
     {
