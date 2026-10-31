@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-29T16:07:56Z",
+  "generated_at": "2026-10-31T15:38:20Z",
   "source": "meta-finder citation-tracker, Semantic Scholar Graph API",
   "paper_count": 135,
-  "total_citations": 9398,
+  "total_citations": 9422,
   "papers": [
     {
       "id": "preprint-personacuabench",
@@ -73,7 +73,7 @@
       "year": 2026,
       "venue": "EACL, 2026",
       "section": "conference",
-      "citation_count": 31,
+      "citation_count": 32,
       "influential_citations": 0
     },
     {
@@ -83,7 +83,7 @@
       "venue": "WWW, 2026",
       "section": "conference",
       "citation_count": 28,
-      "influential_citations": 4
+      "influential_citations": 5
     },
     {
       "id": "conference-charts-are-not-images-on-the-challenges-of-scientific-chart-editing",
@@ -118,7 +118,7 @@
       "year": 2026,
       "venue": "ACL, 2026",
       "section": "conference",
-      "citation_count": 14,
+      "citation_count": 15,
       "influential_citations": 0
     },
     {
@@ -154,7 +154,7 @@
       "year": 2026,
       "venue": "ACL (Findings), 2026",
       "section": "conference",
-      "citation_count": 13,
+      "citation_count": 14,
       "influential_citations": 4
     },
     {
@@ -181,7 +181,7 @@
       "year": 2025,
       "venue": "KDD (Lecture-Style Tutorial Track), 2025",
       "section": "workshop",
-      "citation_count": 39,
+      "citation_count": 41,
       "influential_citations": 1
     },
     {
@@ -226,7 +226,7 @@
       "year": 2025,
       "venue": "NeurIPS, 2025",
       "section": "conference",
-      "citation_count": 32,
+      "citation_count": 33,
       "influential_citations": 3
     },
     {
@@ -415,8 +415,8 @@
       "year": 2024,
       "venue": "ICML, 2024",
       "section": "conference",
-      "citation_count": 381,
-      "influential_citations": 36
+      "citation_count": 382,
+      "influential_citations": 34
     },
     {
       "id": "conference-adgym-design-choices-for-deep-anomaly-detection",
@@ -469,7 +469,7 @@
       "year": 2022,
       "venue": "NeurIPS, 2022",
       "section": "conference",
-      "citation_count": 527,
+      "citation_count": 528,
       "influential_citations": 80
     },
     {
@@ -478,7 +478,7 @@
       "year": 2022,
       "venue": "NeurIPS, 2022",
       "section": "conference",
-      "citation_count": 170,
+      "citation_count": 171,
       "influential_citations": 19
     },
     {
@@ -541,7 +541,7 @@
       "year": 2021,
       "venue": "NeurIPS, 2021",
       "section": "conference",
-      "citation_count": 548,
+      "citation_count": 549,
       "influential_citations": 67
     },
     {
@@ -649,7 +649,7 @@
       "year": 2018,
       "venue": "IntelliSys, 2018",
       "section": "conference",
-      "citation_count": 151,
+      "citation_count": 152,
       "influential_citations": 5
     },
     {
@@ -676,7 +676,7 @@
       "year": 2026,
       "venue": "npj Artificial Intelligence, 2026",
       "section": "journal",
-      "citation_count": 5,
+      "citation_count": 1,
       "influential_citations": 0
     },
     {
@@ -685,7 +685,7 @@
       "year": 2026,
       "venue": "Transactions on Machine Learning Research (TMLR), 2026",
       "section": "journal",
-      "citation_count": 20,
+      "citation_count": 21,
       "influential_citations": 0
     },
     {
@@ -712,7 +712,7 @@
       "year": 2023,
       "venue": "ACM Computing Surveys, 2023",
       "section": "journal",
-      "citation_count": 2512,
+      "citation_count": 2517,
       "influential_citations": 78
     },
     {
@@ -748,7 +748,7 @@
       "year": 2019,
       "venue": "JMLR, 2019.",
       "section": "journal",
-      "citation_count": 976,
+      "citation_count": 983,
       "influential_citations": 66
     },
     {
@@ -982,8 +982,8 @@
       "year": 2026,
       "venue": "ACM AI Leadership Summit, 2026 (condensed 4-page version); earlier version at ACL 2026 KnowFM Workshop",
       "section": "conference",
-      "citation_count": 22,
-      "influential_citations": 0
+      "citation_count": 23,
+      "influential_citations": 1
     },
     {
       "id": "preprint-cross-user-contamination",
@@ -1018,7 +1018,7 @@
       "year": 2026,
       "venue": "arXiv preprint",
       "section": "preprint",
-      "citation_count": 27,
+      "citation_count": 28,
       "influential_citations": 0
     },
     {
@@ -1081,7 +1081,7 @@
       "year": 2025,
       "venue": "arXiv preprint",
       "section": "preprint",
-      "citation_count": 13,
+      "citation_count": 14,
       "influential_citations": 0
     },
     {
@@ -1162,7 +1162,7 @@
       "year": 2026,
       "venue": "ICML Workshop on Trustworthy AI for Good (AI4GOOD), 2026",
       "section": "workshop",
-      "citation_count": 23,
+      "citation_count": 24,
       "influential_citations": 3
     },
     {
