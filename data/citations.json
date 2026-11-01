@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-31T15:38:20Z",
+  "generated_at": "2026-11-01T16:02:31Z",
   "source": "meta-finder citation-tracker, Semantic Scholar Graph API",
   "paper_count": 135,
-  "total_citations": 9422,
+  "total_citations": 9435,
   "papers": [
     {
       "id": "preprint-personacuabench",
@@ -127,7 +127,7 @@
       "year": 2026,
       "venue": "ICLR, 2026",
       "section": "conference",
-      "citation_count": 15,
+      "citation_count": 16,
       "influential_citations": 3
     },
     {
@@ -181,7 +181,7 @@
       "year": 2025,
       "venue": "KDD (Lecture-Style Tutorial Track), 2025",
       "section": "workshop",
-      "citation_count": 41,
+      "citation_count": 42,
       "influential_citations": 1
     },
     {
@@ -415,7 +415,7 @@
       "year": 2024,
       "venue": "ICML, 2024",
       "section": "conference",
-      "citation_count": 382,
+      "citation_count": 383,
       "influential_citations": 34
     },
     {
@@ -469,7 +469,7 @@
       "year": 2022,
       "venue": "NeurIPS, 2022",
       "section": "conference",
-      "citation_count": 528,
+      "citation_count": 529,
       "influential_citations": 80
     },
     {
@@ -487,7 +487,7 @@
       "year": 2022,
       "venue": "PAKDD, 2022",
       "section": "conference",
-      "citation_count": 160,
+      "citation_count": 161,
       "influential_citations": 13
     },
     {
@@ -541,7 +541,7 @@
       "year": 2021,
       "venue": "NeurIPS, 2021",
       "section": "conference",
-      "citation_count": 549,
+      "citation_count": 550,
       "influential_citations": 67
     },
     {
@@ -649,7 +649,7 @@
       "year": 2018,
       "venue": "IntelliSys, 2018",
       "section": "conference",
-      "citation_count": 152,
+      "citation_count": 154,
       "influential_citations": 5
     },
     {
@@ -676,7 +676,7 @@
       "year": 2026,
       "venue": "npj Artificial Intelligence, 2026",
       "section": "journal",
-      "citation_count": 1,
+      "citation_count": 5,
       "influential_citations": 0
     },
     {
@@ -730,7 +730,7 @@
       "year": 2022,
       "venue": "Nature Chemical Biology, 2022",
       "section": "journal",
-      "citation_count": 224,
+      "citation_count": 225,
       "influential_citations": 12
     },
     {
