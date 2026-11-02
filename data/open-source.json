@@ -27,7 +27,7 @@
     "docs_url": "https://pyod.readthedocs.io",
     "paper_url": "https://arxiv.org/abs/2412.12154",
     "demo_url": "",
-    "stars": 10064,
+    "stars": 10073,
     "tags": [
       "Anomaly Detection",
       "Outlier Detection",
@@ -65,7 +65,7 @@
     "docs_url": "https://github.com/yzhao062/agentpile#readme",
     "paper_url": "",
     "demo_url": "",
-    "stars": 31,
+    "stars": 32,
     "tags": [
       "Agent Trajectories",
       "Trace Data",
@@ -73,7 +73,7 @@
       "OpenTelemetry",
       "Python SDK"
     ],
-    "last_updated_at": "2026-10-26T14:23:54Z"
+    "last_updated_at": "2026-11-02T17:11:39Z"
   },
   {
     "name": "awesome-auditable-ai",
@@ -84,7 +84,7 @@
     "docs_url": "",
     "paper_url": "",
     "demo_url": "",
-    "stars": 157,
+    "stars": 158,
     "tags": [
       "Agent Auditability",
       "Agent Reliability",
@@ -121,7 +121,7 @@
     "docs_url": "https://trustllmbenchmark.github.io/TrustLLM-Website/",
     "paper_url": "https://openreview.net/forum?id=bWUU0LwwMp",
     "demo_url": "",
-    "stars": 634,
+    "stars": 635,
     "tags": [
       "Trustworthy AI",
       "LLM Evaluation",
@@ -177,7 +177,7 @@
     "docs_url": "",
     "paper_url": "https://proceedings.neurips.cc/paper_files/paper/2022/hash/da0ddd47c18ae3dd2888ff2ea4b6ccf7-Abstract-Datasets_and_Benchmarks.html",
     "demo_url": "",
-    "stars": 1031,
+    "stars": 1032,
     "tags": [
       "Anomaly Detection",
       "Benchmark",
@@ -195,7 +195,7 @@
     "docs_url": "",
     "paper_url": "",
     "demo_url": "",
-    "stars": 9433,
+    "stars": 9438,
     "tags": [
       "Awesome List",
       "Anomaly Detection",
@@ -214,7 +214,7 @@
     "docs_url": "",
     "paper_url": "",
     "demo_url": "",
-    "stars": 1625,
+    "stars": 1624,
     "tags": [
       "Writing",
       "Research Workflow",
@@ -250,7 +250,7 @@
     "docs_url": "https://docs.pygod.org",
     "paper_url": "http://jmlr.org/papers/v25/23-0963.html",
     "demo_url": "",
-    "stars": 1499,
+    "stars": 1500,
     "tags": [
       "Graph Anomaly Detection",
       "PyTorch Geometric",
@@ -286,7 +286,7 @@
     "docs_url": "https://tdcommons.ai",
     "paper_url": "https://proceedings.neurips.cc/paper/2021/hash/6a8d3b0f5987e0f6d3d2f5f65f02e3cc-Abstract.html",
     "demo_url": "",
-    "stars": 1299,
+    "stars": 1300,
     "tags": [
       "Therapeutics",
       "Benchmark",
@@ -341,7 +341,7 @@
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/agent-audit.html",
     "paper_url": "https://arxiv.org/abs/2603.22853",
     "demo_url": "https://pypi.org/project/agent-audit/",
-    "stars": 243,
+    "stars": 245,
     "tags": [
       "AI Agent Security",
       "Security Audit",
@@ -360,7 +360,7 @@
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/aegis.html",
     "paper_url": "https://arxiv.org/abs/2603.12621",
     "demo_url": "https://github.com/Justin0504/Aegis/blob/main/docs/images/readme_demo1.gif",
-    "stars": 525,
+    "stars": 526,
     "tags": [
       "AI Agent Security",
       "Policy Enforcement",
@@ -368,7 +368,7 @@
       "Audit Trail",
       "Human-in-the-Loop"
     ],
-    "last_updated_at": "2026-10-30T07:02:02Z"
+    "last_updated_at": "2026-10-31T09:04:53Z"
   },
   {
     "name": "combo",
@@ -379,7 +379,7 @@
     "docs_url": "https://pycombo.readthedocs.io",
     "paper_url": "https://aaai.org/papers/13648-combining-machine-learning-models-using-combo-library/",
     "demo_url": "",
-    "stars": 660,
+    "stars": 659,
     "tags": [
       "Ensemble Learning",
       "Model Combination",
@@ -397,7 +397,7 @@
     "docs_url": "https://anywhere-agents.readthedocs.io",
     "paper_url": "",
     "demo_url": "",
-    "stars": 260,
+    "stars": 261,
     "tags": [
       "Claude Code",
       "Codex",
@@ -417,7 +417,7 @@
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/agent-style.html",
     "paper_url": "",
     "demo_url": "https://pypi.org/project/agent-style/",
-    "stars": 730,
+    "stars": 733,
     "tags": [
       "AI Agents",
       "Agent Configuration",
