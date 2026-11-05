@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-11-03T17:02:01Z",
+  "generated_at": "2026-11-05T17:20:39Z",
   "source": "meta-finder citation-tracker, Semantic Scholar Graph API",
   "paper_count": 135,
-  "total_citations": 9450,
+  "total_citations": 9479,
   "papers": [
     {
       "id": "preprint-personacuabench",
@@ -235,7 +235,7 @@
       "year": 2025,
       "venue": "CVPR, 2025",
       "section": "conference",
-      "citation_count": 31,
+      "citation_count": 32,
       "influential_citations": 5
     },
     {
@@ -253,7 +253,7 @@
       "year": 2025,
       "venue": "ACL, 2025",
       "section": "conference",
-      "citation_count": 33,
+      "citation_count": 34,
       "influential_citations": 0
     },
     {
@@ -352,7 +352,7 @@
       "year": 2025,
       "venue": "EMNLP Findings, 2025",
       "section": "conference",
-      "citation_count": 43,
+      "citation_count": 44,
       "influential_citations": 0
     },
     {
@@ -451,7 +451,7 @@
       "year": 2023,
       "venue": "ICML, 2023",
       "section": "conference",
-      "citation_count": 18,
+      "citation_count": 19,
       "influential_citations": 0
     },
     {
@@ -469,7 +469,7 @@
       "year": 2022,
       "venue": "NeurIPS, 2022",
       "section": "conference",
-      "citation_count": 530,
+      "citation_count": 532,
       "influential_citations": 81
     },
     {
@@ -532,7 +532,7 @@
       "year": 2021,
       "venue": "AAAI (Demo), 2021",
       "section": "workshop",
-      "citation_count": 84,
+      "citation_count": 85,
       "influential_citations": 1
     },
     {
@@ -541,8 +541,8 @@
       "year": 2021,
       "venue": "NeurIPS, 2021",
       "section": "conference",
-      "citation_count": 553,
-      "influential_citations": 69
+      "citation_count": 558,
+      "influential_citations": 68
     },
     {
       "id": "conference-data-denoising-scrna",
@@ -712,7 +712,7 @@
       "year": 2023,
       "venue": "ACM Computing Surveys, 2023",
       "section": "journal",
-      "citation_count": 2519,
+      "citation_count": 2529,
       "influential_citations": 78
     },
     {
@@ -730,8 +730,8 @@
       "year": 2022,
       "venue": "Nature Chemical Biology, 2022",
       "section": "journal",
-      "citation_count": 225,
-      "influential_citations": 12
+      "citation_count": 227,
+      "influential_citations": 13
     },
     {
       "id": "journal-ecod-unsupervised-outlier-detection-using-empirical-cumulative-distribution-functions",
@@ -739,7 +739,7 @@
       "year": 2022,
       "venue": "TKDE, 2022",
       "section": "journal",
-      "citation_count": 582,
+      "citation_count": 584,
       "influential_citations": 51
     },
     {
@@ -748,7 +748,7 @@
       "year": 2019,
       "venue": "JMLR, 2019.",
       "section": "journal",
-      "citation_count": 984,
+      "citation_count": 986,
       "influential_citations": 66
     },
     {
@@ -883,7 +883,7 @@
       "year": 2026,
       "venue": "EMNLP, 2026",
       "section": "conference",
-      "citation_count": 5,
+      "citation_count": 6,
       "influential_citations": 0
     },
     {
@@ -1000,7 +1000,7 @@
       "year": 2026,
       "venue": "arXiv preprint",
       "section": "preprint",
-      "citation_count": 9,
+      "citation_count": 10,
       "influential_citations": 2
     },
     {
@@ -1216,7 +1216,7 @@
       "year": 2024,
       "venue": "arXiv preprint",
       "section": "preprint",
-      "citation_count": 42,
+      "citation_count": 41,
       "influential_citations": 0
     }
   ]
