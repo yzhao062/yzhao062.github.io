@@ -27,7 +27,7 @@
     "docs_url": "https://pyod.readthedocs.io",
     "paper_url": "https://arxiv.org/abs/2412.12154",
     "demo_url": "",
-    "stars": 10075,
+    "stars": 10077,
     "tags": [
       "Anomaly Detection",
       "Outlier Detection",
@@ -406,7 +406,7 @@
       "Configuration",
       "MCP"
     ],
-    "last_updated_at": "2026-10-26T06:27:37Z"
+    "last_updated_at": "2026-11-05T04:45:05Z"
   },
   {
     "name": "agent-style",
