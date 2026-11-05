@@ -1,10 +1,39 @@
 [
   {
+    "id": "preprint-frontierphysics",
+    "section": "preprint",
+    "title": "FrontierPhysics: Evaluating Agents for End-to-End Physics Research",
+    "paper_url": "https://arxiv.org/abs/2611.06910",
+    "authors": "Bingran You†, Wenjun Ke†, Ria Rosenauer†, Bo Liu†, Wenbo Chen, Min Chen, Shuqi Xu, Yue Ma, Jiechao Feng, Bo Chen, Xiangkai Sun, Jiarui Liu, Jinen Guo, Zeyu Zhou, Xu Huang, Zhuohan Li, Haoyu Li, Heguang Lin, Lijie Ding, Yadong Zeng, Kangqi Zhang, Xinge Liu, Hanwen Liu, Zhenghong Li, Alexander von Recum, Yuchen Zhu, Felix Schwarzfischer, Yizhou Zhao, Jicheng Wang, Binxu Li, Qian Yu, Chan Li, Cheng Dai, Di Wang, Haoyu Zhang, Jiankai Sun, Kaituo Feng, Mian Qin, Ruihong Yin, Yiqun Luo, Weiwei Wu, Shihong Pan, Tsung Yeh Hsieh, Xiao Huang, Yan Zhang, Sihan Li, Zirui Ren, Zengji Tu, Kyoung Whan Choe, Ke Sun, Vincenzo Galia, Vaisakhi Mishra, Jiashu He, Hongyang Wang, Zhiheng Yang, Shubham Gaur, Yifan Gu, Shuyi Wang, Zihao Zuo, Steven Dillmann, Yiyou Sun, Xinyang Han, Hanchung Lee, Molei Tao, Yue Zhao, Shilong Liu, Yuchen Wu, Xuandong Zhao, Xiangyi Li, Florian Brand, Gerbrand Ceder, Hartmut Haeffner.",
+    "venue": "arXiv preprint",
+    "year": 2026,
+    "sort_date": "2026-11-04",
+    "links": [],
+    "abstract": "AI agents are playing an increasingly important role in physics research. However, existing physics benchmarks only evaluate fixed questions, isolated sub-tasks, or paper reproduction with given solutions, and rarely check research quality alongside correctness. We introduce FrontierPhysics, an end-to-end benchmark with 56 tasks made by 42 physicists based on their own research, covering nine domains across theoretical, computational, and experimental physics. Each task requires agents to review the literature, develop a research plan, conduct research and experiments, and produce structured outputs and scientific manuscripts. Combining deterministic verifiers with expert-authored rubrics, FrontierPhysics evaluates whether agents' research is correct and publishable. Across 22 models in 26 configurations, no configuration passes more than 46 of its 168 rollouts. Manual review of agent trajectories shows that frontier agents' main weaknesses are insufficiently rigorous reasoning and limited expert intuition, rather than gaps in physics knowledge or execution errors."
+  },
+  {
+    "id": "preprint-depth-terminal-tasks",
+    "section": "preprint",
+    "title": "Is Your Long-Horizon Benchmark Really Deep? Measuring and Synthesizing Depth in Terminal Tasks",
+    "paper_url": "https://arxiv.org/abs/2611.01927",
+    "authors": "Yu Jiang†, Yue Huang†, Hang Hua, Yuyang Wu, Zixuan Weng, Olexandr Isayev, Yue Zhao, Zinan Lin, Xiangliang Zhang.",
+    "venue": "arXiv preprint",
+    "year": 2026,
+    "sort_date": "2026-11-01",
+    "links": [
+      {
+        "type": "github",
+        "url": "https://github.com/AlanRosston/Depth"
+      }
+    ],
+    "abstract": "Long-horizon terminal tasks are used to evaluate and train agents. Human-curated datasets are scarce, so many synthesis methods have emerged. They usually measure the length of a task by the turns a model needs to pass it, and its difficulty by labels the LLM sets during generation. We find, however, that the turn count largely reflects the habits of the model, not only the demands of the task, and that the labels barely track how often models pass. We describe a terminal task by its work, the number of operations it requires, and its depth, the number of turns that must happen in sequence because the commands of each turn can only be chosen after reading the output of the previous one. Estimating depth as the smallest turn cap, stated to the agent, under which the task passes, we audit 734 tasks from six existing datasets. Synthesis has mostly added work, not depth: 94% of the solved synthetic tasks pass within three turns, yet depth, unlike the turn count, predicts difficulty beyond work. We propose DEPTH, in which a generation agent writes each task one segment at a time in a real software environment, carrying out each segment before writing it and starting the next from the state it leaves. Our 105 tasks exceed every audited dataset in depth and work, and none of six current models passes half of them. Fine-tuning Qwen3-8B on runs from these tasks improves it on two terminal benchmarks."
+  },
+  {
     "id": "preprint-personacuabench",
     "section": "preprint",
     "title": "PersonaCUABench: Benchmarking Computer-Use Agents Serving Diverse Personas",
     "paper_url": "https://arxiv.org/abs/2610.22990",
-    "authors": "Haoming Li†, Defu Cao†, Xu Hu†, Yingtao Luo, Yiyang Wang, Xianghe Xu, Jiashu He, Wanting Jiang, Yifan Zhang, Yunhan Zhao, Siyang Wu, Chen Yang, Haixin Wang, Zheyuan Deng, Taoran Li, Jingwen Zhang, Zhejian Peng, Shushu Liang, Yue Zhao, Bingzhe Li, Feng Chen, Yifan Wang, Jintao Huang, Yijun Wang, Yuexing Hao♠, Xiaomin Li♠.",
+    "authors": "Haoming Li†, Defu Cao†, Xu Hu†, Yingtao Luo, Yiyang Wang, Xianghe Xu, Jiashu He, Wanting Jiang, Yifan Zhang, Yunhan Zhao, Siyang Wu, Chen Yang, Haixin Wang, Zheyuan Deng, Taoran Li, Jingwen Zhang, Zhejian Peng, Shushu Liang, Yue Zhao, Bingzhe Li, Feng Chen, Yifan Wang, Jintao Huang, Yijun Wang, Yuexing Hao, Xiaomin Li.",
     "venue": "arXiv preprint",
     "year": 2026,
     "sort_date": "2026-10-16",
@@ -104,7 +133,7 @@
     "section": "workshop",
     "title": "JevOut: Natural Context Can Flip Decision Models",
     "paper_url": "https://arxiv.org/abs/2609.30243",
-    "authors": "Zixiang Xu, Zirui Song, Chiyu Zhang, Xiuying Chen, Xi Liu, Xiyang Hu, Yue Zhao♠.",
+    "authors": "Zixiang Xu, Zirui Song, Chiyu Zhang, Xiuying Chen, Xi Liu, Xiyang Hu, Yue Zhao.",
     "venue": "NeurIPS 2026 Agenthon Workshop, Poster",
     "year": 2026,
     "sort_date": "2026-12-12",
@@ -803,7 +832,7 @@
     "section": "conference",
     "title": "ADGym: Design Choices for Deep Anomaly Detection",
     "paper_url": "https://openreview.net/forum?id=9CKx9SsSSc",
-    "authors": "Minqi Jiang†, Chaochuan Hou†, Ao Zheng†, Songqiao Han, Hailiang Huang♠, Qingsong Wen, Xiyang Hu♠, Yue Zhao♠.",
+    "authors": "Minqi Jiang†, Chaochuan Hou†, Ao Zheng†, Songqiao Han, Hailiang Huang, Qingsong Wen, Xiyang Hu, Yue Zhao.",
     "venue": "NeurIPS, 2023",
     "year": 2023,
     "links": [
@@ -873,7 +902,7 @@
     "section": "conference",
     "title": "ADBench: Anomaly Detection Benchmark",
     "paper_url": "https://openreview.net/forum?id=foA_SFQ9zo0",
-    "authors": "Songqiao Han†, Xiyang Hu†, Hailiang Huang†, Minqi Jiang†, Yue Zhao†♠.",
+    "authors": "Songqiao Han†, Xiyang Hu†, Hailiang Huang†, Minqi Jiang†, Yue Zhao†.",
     "venue": "NeurIPS, 2022",
     "year": 2022,
     "links": [
@@ -1165,6 +1194,18 @@
     "abstract": "The emergence of smartwatches poses new challenges to information security. Although there are mature touch-based authentication methods for smartphones, the effectiveness of using these methods on smartwatches is still unclear. We conducted a user study (n=16) to evaluate how authentication methods (PIN and Pattern), UIs (Square and Circular), and display sizes (38mm and 42mm) affect authentication accuracy, speed, and security. Circular UIs are tailored to smartwatches with fewer UI elements. Results show that 1) PIN is more accurate and secure than Pattern; 2) Pattern is much faster than PIN; 3) Square UIs are more secure but less accurate than Circular UIs; 4) display size does not affect accuracy or speed, but security; 5) Square PIN is the most secure method of all. The study also reveals a security concern that participants' favorite method is not the best in any of the measures. We finally discuss implications for future touch-based smartwatch authentication design."
   },
   {
+    "id": "preprint-m3ood",
+    "section": "journal",
+    "title": "M3OOD: Automatic Selection of Multimodal OOD Detectors",
+    "paper_url": "https://arxiv.org/abs/2508.11936",
+    "authors": "Yuehan Qin, Li Li, Defu Cao, Tiankai Yang, Jiate Li, Yue Zhao",
+    "venue": "IEEE Transactions on Neural Networks and Learning Systems, 2026",
+    "year": 2026,
+    "links": [],
+    "abstract": "Out-of-distribution (OOD) robustness is a critical challenge for modern machine learning systems, particularly as they increasingly operate in multimodal settings involving inputs like video, audio, and sensor data. Currently, many OOD detection methods have been proposed, each with different designs targeting various distribution shifts. A single OOD detector may not prevail across all the scenarios; therefore, how can we automatically select an ideal OOD detection model for different distribution shifts? Due to the inherent unsupervised nature of the OOD detection task, it is difficult to predict model performance and find a universally Best model. Also, systematically comparing models on the new unseen data is costly or even impractical. To address this challenge, we introduce M3OOD, a meta-learning-based framework for OOD detector selection in multimodal settings. Meta learning offers a solution by learning from historical model behaviors, enabling rapid adaptation to new data distribution shifts with minimal supervision. Our approach combines multimodal embeddings with handcrafted meta-features that capture distributional and cross-modal characteristics to represent datasets. By leveraging historical performance across diverse multimodal benchmarks, M3OOD can recommend suitable detectors for a new data distribution shift. Experimental evaluation demonstrates that M3OOD consistently outperforms 10 competitive baselines across 12 test scenarios with minimal computational overhead.",
+    "sort_date": "2026-11-04"
+  },
+  {
     "id": "journal-h-fedsn",
     "section": "journal",
     "title": "H-FedSN: Personalized Sparse Networks for Efficient and Accurate Hierarchical Federated Learning for IoT Applications",
@@ -1180,7 +1221,7 @@
     "section": "journal",
     "title": "Don’t Let It Hallucinate: Premise Verification via Retrieval-Augmented Logical Reasoning",
     "paper_url": "https://arxiv.org/abs/2504.06438",
-    "authors": "Yuehan Qin, Shawn Li, Yi Nian, Xinyan Velocity Yu, Yue Zhao♠, Xuezhe Ma♠.",
+    "authors": "Yuehan Qin, Shawn Li, Yi Nian, Xinyan Velocity Yu, Yue Zhao, Xuezhe Ma.",
     "venue": "Transactions on Machine Learning Research (TMLR), 2026",
     "year": 2026,
     "links": [],
@@ -1191,7 +1232,7 @@
     "section": "journal",
     "title": "LEGO-Learn: Label-Efficient Graph Open-Set Learning",
     "paper_url": "https://openreview.net/forum?id=J6oxTJPOyN",
-    "authors": "Haoyan Xu, Kay Liu, Zhengtao Yao, Philip S. Yu, Mengyuan Li, Kaize Ding♠, Yue Zhao♠",
+    "authors": "Haoyan Xu, Kay Liu, Zhengtao Yao, Philip S. Yu, Mengyuan Li, Kaize Ding, Yue Zhao",
     "venue": "Transactions on Machine Learning Research (TMLR), 2025",
     "year": 2025,
     "links": [],
@@ -1262,7 +1303,7 @@
     "section": "journal",
     "title": "ECOD: Unsupervised Outlier Detection Using Empirical Cumulative Distribution Functions",
     "paper_url": "https://arxiv.org/abs/2201.00382",
-    "authors": "Zheng Li†, Yue Zhao†♠, Xiyang Hu, Nicola Botta, Cezar Ionescu, George H. Chen.",
+    "authors": "Zheng Li†, Yue Zhao†, Xiyang Hu, Nicola Botta, Cezar Ionescu, George H. Chen.",
     "venue": "TKDE, 2022",
     "year": 2022,
     "links": [
@@ -1364,7 +1405,7 @@
     "section": "preprint",
     "title": "MetaPersona: Task-Grounded Synthetic Populations from Empirical Social Science",
     "paper_url": "https://arxiv.org/abs/2609.38392",
-    "authors": "Jinyi Ye♠, Yuangang Li, Chenxiao Yu, Preyashi Poddar, Priyanka Dey, Longtian Ye, Zihan Wang, Xiyang Hu, Emilio Ferrara♠, Yue Zhao♠.",
+    "authors": "Jinyi Ye, Yuangang Li, Chenxiao Yu, Preyashi Poddar, Priyanka Dey, Longtian Ye, Zihan Wang, Xiyang Hu, Emilio Ferrara, Yue Zhao.",
     "venue": "arXiv preprint",
     "year": 2026,
     "sort_date": "2026-09-29",
@@ -1393,7 +1434,7 @@
     "section": "preprint",
     "title": "CUA-SWE: When Computer-Use Agents Meet Visual Software Engineering",
     "paper_url": "https://arxiv.org/abs/2609.32600",
-    "authors": "Prince Zizhuang Wang†♠, Chenhao Liang†, Zelong Xu†, Aojie Yuan†, Xiaolin Zhou†, Haiyue Zhang, Yue Zhao, Xiyang Hu, Shuli Jiang.",
+    "authors": "Prince Zizhuang Wang†, Chenhao Liang†, Zelong Xu†, Aojie Yuan†, Xiaolin Zhou†, Haiyue Zhang, Yue Zhao, Xiyang Hu, Shuli Jiang.",
     "venue": "arXiv preprint",
     "year": 2026,
     "sort_date": "2026-09-26",
@@ -1940,17 +1981,6 @@
     "year": 2025,
     "links": [],
     "abstract": "Efficient use of large language models (LLMs) is critical for deployment at scale: without adaptive routing, systems either overpay for strong models or risk poor performance from weaker ones. Selecting the right LLM for each query is fundamentally an online decision problem: models differ in strengths, prices fluctuate, and users value accuracy and cost differently. Yet most routers are trained offline with labels for all candidate models, an assumption that breaks in deployment, where only the outcome of the chosen model is observed. We bridge this gap with BaRP, a Bandit-feedback Routing with Preferences approach that trains under the same partial-feedback restriction as deployment, while supporting preference-tunable inference: operators can dial the performance/cost trade-off at test time without retraining. Framed as a contextual bandit over prompt features and a user preference vector, our method simulates an online feedback setting during training and adapts its routing decisions to each new prompt, rather than depending on full-information offline supervision. Comprehensive experiments show that our method consistently outperforms strong offline routers by at least 12.46% and the largest LLM by at least 2.45%, and generalizes robustly for unseen tasks."
-  },
-  {
-    "id": "preprint-m3ood",
-    "section": "preprint",
-    "title": "M3OOD: Automatic Selection of Multimodal OOD Detectors",
-    "paper_url": "https://arxiv.org/abs/2508.11936",
-    "authors": "Yuehan Qin, Li Li, Defu Cao, Tiankai Yang, Jiate Li, Yue Zhao",
-    "venue": "arXiv preprint",
-    "year": 2025,
-    "links": [],
-    "abstract": "Out-of-distribution (OOD) robustness is a critical challenge for modern machine learning systems, particularly as they increasingly operate in multimodal settings involving inputs like video, audio, and sensor data. Currently, many OOD detection methods have been proposed, each with different designs targeting various distribution shifts. A single OOD detector may not prevail across all the scenarios; therefore, how can we automatically select an ideal OOD detection model for different distribution shifts? Due to the inherent unsupervised nature of the OOD detection task, it is difficult to predict model performance and find a universally Best model. Also, systematically comparing models on the new unseen data is costly or even impractical. To address this challenge, we introduce M3OOD, a meta-learning-based framework for OOD detector selection in multimodal settings. Meta learning offers a solution by learning from historical model behaviors, enabling rapid adaptation to new data distribution shifts with minimal supervision. Our approach combines multimodal embeddings with handcrafted meta-features that capture distributional and cross-modal characteristics to represent datasets. By leveraging historical performance across diverse multimodal benchmarks, M3OOD can recommend suitable detectors for a new data distribution shift. Experimental evaluation demonstrates that M3OOD consistently outperforms 10 competitive baselines across 12 test scenarios with minimal computational overhead."
   },
   {
     "id": "workshop-stealthrank",

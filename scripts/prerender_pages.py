@@ -146,7 +146,6 @@ def format_authors(authors: str) -> str:
     """Preserve the author symbols and self-highlighting used in the browser."""
     value = escaped(authors)
     value = value.replace("†", "<sup>&dagger;</sup>")
-    value = value.replace("♠", "<sup>&spades;</sup>")
     return re.sub(r"\bYue Zhao\b", '<span class="author-self">Yue Zhao</span>', value)
 
 

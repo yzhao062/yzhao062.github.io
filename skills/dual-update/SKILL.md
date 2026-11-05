@@ -220,7 +220,7 @@ When adding or moving a peer-reviewed paper, run these searches before writing:
   "abstract": "..."
 }
 ```
-Use `"section": "conference"` for conference papers, `"section": "workshop"` for workshop papers, and `"section": "journal"` for journal papers. The website groups conference and workshop entries in the same rendered section, but the JSON distinguishes them. The `links` array can include entries with `type` set to `"github"` or `"project"`. Mark equal contribution with `†` and corresponding author with `♠` in the `authors` string.
+Use `"section": "conference"` for conference papers, `"section": "workshop"` for workshop papers, and `"section": "journal"` for journal papers. The website groups conference and workshop entries in the same rendered section, but the JSON distinguishes them. The `links` array can include entries with `type` set to `"github"` or `"project"`. Mark equal contribution with `†` in the `authors` string.
 
 ### Preprints (website JSON)
 ```json
@@ -243,7 +243,7 @@ Papers in the CV use `benumerate` with reverse numbering. Match the existing sty
 ```latex
 \item AUTHOR\_LIST. ``TITLE.'' \textit{VENUE}, YEAR. \href{URL}{[PDF]}
 ```
-- Mark equal contribution with `\equalcontrib` and corresponding author with `\corrauthor`.
+- Mark equal contribution with `\equalcontrib`.
 - The CV contains papers not on the website (older work, preprints). This is expected.
 
 ### Awards (website HTML in index.html)
