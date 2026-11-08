@@ -7,11 +7,14 @@ description: Draft, preview, publish, and record Yue Zhao's research announcemen
 
 Create a source-checked LinkedIn post in Yue Zhao's established voice, show the
 complete preview, publish only within the user's authorization, and record the final
-public result. LinkedIn commentary is limited to 3,000 characters.
+public result. The default is a brief, natural post that explains use and value.
+LinkedIn commentary is limited to 3,000 characters; that is capacity, not a target.
 
 Read [references/yue-style.md](references/yue-style.md) before drafting a personal
-post. The shared scaffolds and hashtag vocabulary remain in
-`skills/post-to-x/references/`, but LinkedIn copy should not be a verbatim X draft.
+post. The shared scaffolds, hashtag vocabulary, and the short PrefixSim example
+([example-prefixsim.md](../post-to-x/references/example-prefixsim.md), an editorial
+reference rather than a template) remain in `skills/post-to-x/references/`. LinkedIn
+copy should not be a verbatim X draft.
 
 ## Choose the delivery path
 
@@ -27,6 +30,10 @@ Use `scripts/post_to_linkedin.py` for repeatable text or image posts when Linked
 credentials are configured. Its media path uses LinkedIn's image endpoint and does not
 support PDF document posts. Never pass a PDF to `--media`.
 
+A repost caption goes through LinkedIn's native repost flow in the browser composer,
+because the API script cannot reshare; the screenshot approval rule above still
+applies to the exact final repost composer.
+
 This skill posts only to the authenticated user's personal feed. It does not cover
 messages, connection requests, comments, or Company Page publishing.
 
@@ -35,7 +42,9 @@ messages, connection requests, comments, or Company Page publishing.
 1. **Verify the source.** Read the current paper, project data, event record, or
    user-provided fact. Check venue, status, author names, URLs, and every number.
 2. **Choose one story.** Lead with the most concrete event, consequence, question, or
-   finding. Use the attached artifact for detail instead of restating all of it.
+   finding. Use the attached artifact for detail instead of restating all of it. Keep
+   the post brief unless the user asks for a long one or the content needs it. For a
+   repost caption, add one useful angle instead of repeating the original.
 3. **Draft and save.** Store only the post body in `scripts/drafts/<slug>.md`; the API
    path posts that file verbatim, so it must contain nothing else. Put links,
    attachment path and title, proposed mentions, hashtag rationale, character count,
@@ -79,8 +88,13 @@ messages, connection requests, comments, or Company Page publishing.
 
 - Voice, structure, links, and hashtag count follow
   [references/yue-style.md](references/yue-style.md).
-- Preserve honest limits. Distinguish separately validated components from a complete
-  end-to-end system, and a proposed framework from a measured result.
+- Default to a few sentences on use and value, one link, and a few relevant hashtags.
+  Do not add bullets, feature lists, questions, research-program framing, caveats, or
+  calls to action unless the content needs them.
+- Preserve honest limits where a claim needs them. Distinguish separately validated
+  components from a complete end-to-end system, and a proposed framework from a
+  measured result; keep such a limit inside the claim rather than as a habitual
+  caveat paragraph.
 - Apply repository writing rules: no casual em dash or en dash, no U+202F, no banned
   AI-tell words, and full forms where natural.
 - Stay at or below 3,000 characters including full literal URL length.

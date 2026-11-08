@@ -1,11 +1,6 @@
 # Hashtag sets for X announcements
 
-Pick **3 to 5** per post. Never more. X down-weights stuffed posts.
-
-**Mix across segments:**
-- 1 topic-specific (narrow, precise audience)
-- 1 to 2 sub-field (medium reach)
-- 1 to 2 broad (large but noisier reach)
+Use these tables as vocabulary. Pick a few tags, usually two to four and never more than five, and keep only tags that name something the post is about. Tags are optional on a repost or quote caption.
 
 ## By announcement type
 
@@ -54,18 +49,11 @@ Example: `#LLMs #AIAgents #AcademicTwitter #USCViterbi`
 
 ## Avoid
 
-- `#ChatGPT`, `#OpenAI`, `#Gemini`: attracts bots, drowns signal
-- `#Programming`, `#Tech`, `#Coding`: too broad, low conversion
+- `#ChatGPT`, `#OpenAI`, `#Gemini`: product names, unless the post is about that product
+- `#Programming`, `#Tech`, `#Coding`: too broad to say what the post is about
 - Spam tags: `#viral`, `#trending`, `#fyp`, `#followback`
-- Off-topic mixing: do not pair `#AnomalyDetection` with `#Gaming` just to reach two crowds
+- Off-topic tags: do not add `#Gaming` to an anomaly detection post
 
-## Selection flowchart
+## Selection
 
-```
-Start: what is the core topic of this post?
-  → Pick 1 specific tag from "By topic" buckets (narrowest bucket that fits).
-  → Pick 1 to 2 sub-field tags.
-  → Pick 1 to 2 broad tags (#MachineLearning, #AcademicTwitter, #OpenSource).
-  → Stop at 5 total.
-  → If announcing at a conference: swap one broad tag for the conference tag.
-```
+Name the core topic, take the most specific matching tag from "By topic", then add only tags the post content also supports (a venue tag for a conference paper, `#OpenSource` for a release). Stop at five.

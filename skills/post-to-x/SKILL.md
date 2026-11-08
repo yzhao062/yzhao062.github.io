@@ -5,7 +5,7 @@ description: Use when announcing a release, paper, grant, talk, award, or projec
 
 # Post to X
 
-Compose and post announcement tweets from this repo via `scripts/post_to_x.py`. The account holder has X Premium, so single long posts (up to 25,000 chars) are the default; threads are opt-in.
+Compose and post announcement tweets from this repo via `scripts/post_to_x.py`. The default is one brief, natural post that explains what the thing is and why it is useful. The account holder has X Premium, which allows single posts up to 25,000 characters; that is capacity for the rare post that needs it, not a length target. Threads are opt-in.
 
 ## When to use
 
@@ -50,11 +50,15 @@ If Gate 2 fails, stop and report **before posting**. Drafting and previewing may
 
 Always run step 3 before step 5. No exceptions. `--project` seeds a draft but never posts directly; the script refuses to post any draft that still contains `<!-- TODO` markers.
 
+The `--project` seed is a legacy long-form scaffold: its TODO prompts ask for bullets, star and docs lines, and 3 to 5 hashtags. Rewrite the seed into the short release shape in `references/draft-patterns.md`; do not fill each prompt mechanically.
+
 ## Hard rules
 
 - **Lead with the one-line value prop** that answers "what is different now?" For a release, that is the single biggest change, not a list of features. If the user says the core is X, do not bury X under other points.
-- **End with 3 to 5 hashtags** selected from `references/hashtag-sets.md`. Never more than 5; algorithm penalizes stuffing.
-- **Single long post is the default** (Premium). Only split into a thread when the user explicitly asks, or when content has 3+ distinct beats that read awkwardly as one paragraph.
+- **Keep it brief by default.** A few sentences on use and value, one link, a few hashtags. Do not pad to fill space or add bullets, feature lists, questions, research-program framing, or calls to action by habit, and do not add a caveat paragraph by habit. A limit that keeps a claim honest is required at any length. Write a long post only when the user asks or the content cannot be understood briefly. See `references/example-prefixsim.md` for one short example (a reference, not a template).
+- **Repost or quote captions add one useful angle** (who should use it, where it fits, a concrete takeaway). Do not restate the original post. `post_to_x.py` has no native quote or repost option, so a caption posted through the script must include the original post's URL and read as standalone commentary; otherwise the user makes the native quote manually.
+- **Hashtags: a few relevant ones**, usually two to four and never more than five, each naming something the post is about. Use `references/hashtag-sets.md` as vocabulary, and do not make claims about how X ranks tagged posts.
+- **One post is the default.** Only split into a thread when the user explicitly asks, or when content has 3+ distinct beats that read awkwardly as one post.
 - **Apply CLAUDE.md writing rules**:
   - No em dashes (`—`) or en dashes (`–`) as casual sentence punctuation. Use commas, colons, semicolons, or parentheses instead.
   - No banned words from `AGENTS.md` / `CLAUDE.md` Writing Defaults.
@@ -77,16 +81,19 @@ Always run step 3 before step 5. No exceptions. `--project` seeds a draft but ne
 | Mistake | Fix |
 |---|---|
 | Leading with a side feature (e.g., "multi-modal") when the core change is elsewhere (e.g., "agentic") | Ask the user what the core change is before drafting, do not infer from JSON alone |
-| Drafting without hashtags | Always append 3 to 5 from `references/hashtag-sets.md` |
+| Padding a short announcement into a long post, or adding bullets, a question, or a call to action by habit | Cut to the sentences that explain use and value; go long only on request or real need |
+| Repost caption that restates the original | Add one angle the original does not state |
+| Hashtags that do not match the body, or more than five | Keep a few relevant tags; justify each by the post content |
 | Em dash slips into draft (`—`) | Replace with `:` or `,` before preview; the guard hook will block Writes with banned style anyway |
-| Defaulting to thread mode | Premium user gets single long post by default; `--thread` only on explicit request |
+| Defaulting to thread mode | One post by default; `--thread` only on explicit request |
 | Posting without dry-run confirmation | Always run `--dry-run` first, get user yes/no, then run with `--yes` |
 | Fabricated social proof ("300+ companies") | Only cite numbers from `data/open-source.json`, `data/publications.json`, or user-stated facts |
 
 ## Quick reference
 
-- Draft patterns (release, paper, grant, talk): `skills/post-to-x/references/draft-patterns.md`
+- Draft patterns (release, paper, repost, grant, talk): `skills/post-to-x/references/draft-patterns.md`
+- Short release example (PrefixSim, editorial reference only): `skills/post-to-x/references/example-prefixsim.md`
 - Hashtag sets by topic and announcement type: `skills/post-to-x/references/hashtag-sets.md`
-- Known-good example posted 2026-04-17: `scripts/drafts/pyod-3.0.md` (PyOD 3 release)
+- Earlier posted example, 2026-04-17: `scripts/drafts/pyod-3.0.md` (PyOD 3 release; its bullet list is not the default shape)
 - Script source: `scripts/post_to_x.py`
 - Script flags: run with `--help`
