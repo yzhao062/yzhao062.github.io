@@ -1,9 +1,27 @@
 {
-  "generated_at": "2026-11-07T15:35:57Z",
+  "generated_at": "2026-11-09T19:55:10Z",
   "source": "meta-finder citation-tracker, Semantic Scholar Graph API",
-  "paper_count": 135,
-  "total_citations": 9604,
+  "paper_count": 137,
+  "total_citations": 9619,
   "papers": [
+    {
+      "id": "preprint-frontierphysics",
+      "title": "FrontierPhysics: Evaluating Agents for End-to-End Physics Research",
+      "year": 2026,
+      "venue": "arXiv preprint",
+      "section": "preprint",
+      "citation_count": 0,
+      "influential_citations": 0
+    },
+    {
+      "id": "preprint-depth-terminal-tasks",
+      "title": "Is Your Long-Horizon Benchmark Really Deep? Measuring and Synthesizing Depth in Terminal Tasks",
+      "year": 2026,
+      "venue": "arXiv preprint",
+      "section": "preprint",
+      "citation_count": 1,
+      "influential_citations": 0
+    },
     {
       "id": "preprint-personacuabench",
       "title": "PersonaCUABench: Benchmarking Computer-Use Agents Serving Diverse Personas",
@@ -199,7 +217,7 @@
       "year": 2025,
       "venue": "ACL (Findings), 2025",
       "section": "conference",
-      "citation_count": 50,
+      "citation_count": 51,
       "influential_citations": 3
     },
     {
@@ -416,7 +434,7 @@
       "venue": "ICML, 2024",
       "section": "conference",
       "citation_count": 383,
-      "influential_citations": 34
+      "influential_citations": 35
     },
     {
       "id": "conference-adgym-design-choices-for-deep-anomaly-detection",
@@ -469,8 +487,8 @@
       "year": 2022,
       "venue": "NeurIPS, 2022",
       "section": "conference",
-      "citation_count": 534,
-      "influential_citations": 81
+      "citation_count": 536,
+      "influential_citations": 82
     },
     {
       "id": "conference-bond-benchmarking-unsupervised-outlier-node-detection-on-static-attributed-graphs",
@@ -541,7 +559,7 @@
       "year": 2021,
       "venue": "NeurIPS, 2021",
       "section": "conference",
-      "citation_count": 561,
+      "citation_count": 562,
       "influential_citations": 68
     },
     {
@@ -649,7 +667,7 @@
       "year": 2018,
       "venue": "IntelliSys, 2018",
       "section": "conference",
-      "citation_count": 155,
+      "citation_count": 157,
       "influential_citations": 5
     },
     {
@@ -669,6 +687,15 @@
       "section": "conference",
       "citation_count": 11,
       "influential_citations": 1
+    },
+    {
+      "id": "preprint-m3ood",
+      "title": "M3OOD: Automatic Selection of Multimodal OOD Detectors",
+      "year": 2026,
+      "venue": "IEEE Transactions on Neural Networks and Learning Systems, 2026",
+      "section": "journal",
+      "citation_count": 6,
+      "influential_citations": 0
     },
     {
       "id": "journal-h-fedsn",
@@ -712,7 +739,7 @@
       "year": 2023,
       "venue": "ACM Computing Surveys, 2023",
       "section": "journal",
-      "citation_count": 2534,
+      "citation_count": 2538,
       "influential_citations": 78
     },
     {
@@ -730,7 +757,7 @@
       "year": 2022,
       "venue": "Nature Chemical Biology, 2022",
       "section": "journal",
-      "citation_count": 229,
+      "citation_count": 230,
       "influential_citations": 13
     },
     {
@@ -739,7 +766,7 @@
       "year": 2022,
       "venue": "TKDE, 2022",
       "section": "journal",
-      "citation_count": 586,
+      "citation_count": 588,
       "influential_citations": 51
     },
     {
@@ -748,7 +775,7 @@
       "year": 2019,
       "venue": "JMLR, 2019.",
       "section": "journal",
-      "citation_count": 987,
+      "citation_count": 988,
       "influential_citations": 66
     },
     {
@@ -1146,15 +1173,6 @@
       "section": "preprint",
       "citation_count": 23,
       "influential_citations": 4
-    },
-    {
-      "id": "preprint-m3ood",
-      "title": "M3OOD: Automatic Selection of Multimodal OOD Detectors",
-      "year": 2025,
-      "venue": "arXiv preprint",
-      "section": "preprint",
-      "citation_count": 6,
-      "influential_citations": 0
     },
     {
       "id": "workshop-stealthrank",
