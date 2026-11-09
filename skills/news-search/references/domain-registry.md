@@ -370,3 +370,19 @@ Classification follows the source text and authorship. A domain entry does not e
 | docs.oracle.com | enterprise | [Compliance Studio predefined Conda environments](https://docs.oracle.com/en/industries/financial-services/ofs-analytical-applications/crime-compliance-studio-application-pack/8.1.2.9.0/csadc/python-libraries-predefined-conda-environment.html); audit-enhancement. |
 | gethesperai.com | vendor-blog | [Open-source fraud detection vs. commercial platforms: where each wins](https://gethesperai.com/blog/open-source-vs-commercial-fraud-detection/); T3. |
 | seagatecareers.com | careers | [Seagate AI Adoption Intern, 15158](https://seagatecareers.com/job/Samut-Prakan-AI-Adoption-Intern/15158-en_US/); T3. |
+
+## Verified Sources Added 2026-11-09
+
+Classification follows the source text and authorship. A domain entry does not establish endorsement or deployment.
+
+| Domain | Class | Verified Example |
+|---|---|---|
+| accuknox.com | vendor-blog | [Auditable AI Agents Must Prove What They Actually Did](https://accuknox.com/blog/auditable-ai-agents); T3, applies the paper to the vendor's products. |
+| sec.gov | enterprise | [Lantern Pharma 8-K Exhibit 99.1](https://www.sec.gov/Archives/edgar/data/1763950/000164117225010541/ex99-1.htm); T3. |
+| boltz.bio | enterprise | [BoltzMol-1 technical report](https://boltz.bio/boltzmol1-technical-report.pdf); T3. |
+| blog.pebblous.ai | ai-aggregator | [FrontierPhysics benchmark](https://blog.pebblous.ai/blog/frontierphysics-end-to-end-physics-agent-benchmark/en/); T3, page source marks unattended machine output. |
+| agentconn.com | vendor-blog | [Who Audits the Agent?](https://agentconn.com/blog/who-audits-the-agent-security-review-skills/); T3. |
+| paperpeel.com | ai-aggregator | [PersonaCUABench](https://www.paperpeel.com/paper/2610.22990); T3. |
+| opentrain.ai | ai-aggregator | [Auditable Claims about AI Agents](https://www.opentrain.ai/papers/auditable-claims-about-ai-agents--arxiv-2610.07459/); T3. |
+| roboaidigest.com | ai-aggregator | [FrontierPhysics](https://roboaidigest.com/posts/2026-11-05-frontierphysics-end-to-end-research-benchmark/); T3. |
+| benchmark-radar.org | ai-aggregator | [Benchmark Radar, 2026-11-03](https://benchmark-radar.org/blog/2026-11-03/); T3. |

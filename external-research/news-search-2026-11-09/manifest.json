@@ -1,0 +1,74 @@
+{
+ "run_date": "2026-11-09",
+ "scope": "incremental_search",
+ "window_from": "2026-10-15",
+ "discovery": {
+  "agy_lanes": 11,
+  "claude_workflow_lanes": 3,
+  "queries_logged": 873,
+  "queries_by_executor": {
+   "agy": 738,
+   "claude": 135
+  }
+ },
+ "records_after_dedup": 113,
+ "held_records_from_2026_10_21": 35,
+ "candidate_records": 148,
+ "verification": {
+  "agy_units": 15,
+  "verdicts": 110,
+  "claude_refute_agents": 8,
+  "refute_claims": 16,
+  "refute_upheld": 12
+ },
+ "statuses": {
+  "kept": 73,
+  "paywall_or_blocked": 4,
+  "topic-validation": 30,
+  "previously_screened": 4,
+  "duplicate": 2,
+  "drop": 13,
+  "first_party": 4,
+  "already_recorded": 11,
+  "citation-handoff": 4,
+  "dropped_name_collision": 2,
+  "folded_into_existing": 1
+ },
+ "new_rows": {
+  "3": 4,
+  "6": 10,
+  "7": 24
+ },
+ "ledger3_clusters": {
+  "Tutorials and blog posts": 10,
+  "Aggregator and digest pages": 18,
+  "Videos": 1,
+  "Curated lists": 5,
+  "Third-party code by individuals": 1
+ },
+ "moved": {
+  "ledger2_row81_to_ledger3_row": 863
+ },
+ "counts_after": {
+  "2": [
+   94,
+   94
+  ],
+  "3": [
+   826,
+   1303
+  ],
+  "6": [
+   69,
+   69
+  ],
+  "7": [
+   252,
+   252
+  ]
+ },
+ "patents": {
+  "distinct_inventions": 144,
+  "new_in_window": 0
+ }
+}

@@ -24,6 +24,34 @@ Moved verbatim from `news-coverage-audit.md` on 2026-10-17, with relative links 
 
 ---
 
+## 2026-11-09 Incremental Search
+
+Method and counts are in the [run archive](news-search-2026-11-09/README.md). This entry records the decisions, the process notes and what reached the site.
+
+### Decisions
+
+- The round searched items dated from 2026-10-15 and verified the 35 Tier 2 records held on 2026-10-21. The 718 Tier 3 and 74 Tier 5 records from that round stay held.
+- Two AI Weekly alert pages, a Pebblous blog page whose source marks it as unattended machine output, and an AgentConn company post were first kept for Ledger 2. The refute pass moved them to Ledger 3 clusters, because machine-written and aggregator pages are capped at Ledger 3.
+- aiweekly.co states that it drafts coverage with AI-assisted workflows, so Ledger 2 row 81, an AI Weekly brief from an earlier round, moved to Ledger 3 row 863.
+- The AccuKnox post applies the Auditable Agents framework to the vendor's own products. Review moved it from Ledger 2 to the Ledger 3 blog cluster as vendor content.
+- A package-index page that reproduces the lab's own package metadata (piwheels, Libraries.io, a PyPI metadata snapshot) is first-party, so the three agentpile listings are not counted.
+- The ICCK systematic review arrived under its DOI and is the document Ledger 6 row A60 holds under its PDF URL. The JMIR Aging cohort study arrived under its DOI and is Ledger 7 row S197, held under its PMC page.
+- Ledger 3 row 551 counts four pages one per link, but its three extra items had never entered the Ledger 3 total; they do now.
+- The GitLab Advisory Database entry for CVE-2026-15529 is a mirror of Ledger 1 row 13.
+- The two Lantern Pharma 8-K exhibits are separate filings (first-quarter and full-year 2025 results), so they are two enterprise documents.
+- agentpile shipped on 2026-10-22 without joining the Standing Lane table in `skills/news-search/SKILL.md`; this round adds it.
+
+### Process Notes
+
+- `build_identity_index.py` now extracts PMC IDs, keys GitHub files by repository and path whatever ref the URL names, and tags each match with its holder: a table row under a ledger heading, other record text (round prose, the opportunities list, negative results), or an archived candidate and its status. Only a ledger row or an archived candidate with a recorded status is on file, and the closing count includes only those. The first re-check of this round missed the JMIR Aging repeat because the index had no PMC key.
+- The Agy patents lane cannot run Google Patents full-text queries, and the Claude patents lane found no patent in the window that names a tool. The patent count stays at 144.
+- The Agy academic lane and the Claude citation-graph lane found eight of the same arXiv citers independently.
+
+### Propagated to the Site
+
+- The BlackRock preprint that uses PyOD as its primary engine: a row in the PyOD card of `opensource.html` and a line in `llms.txt`.
+- Held back: the ten new Ledger 6 citers and the 24 Ledger 7 articles, which change no card's headline.
+
 ## 2026-10-21 Full Search, Time-Boxed Verification
 
 Method and counts are in the [run archive](news-search-2026-10-21/README.md). This entry records the decisions and the process faults.

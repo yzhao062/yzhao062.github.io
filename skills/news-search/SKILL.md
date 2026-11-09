@@ -136,7 +136,7 @@ browser User-Agent for a 403 that is bot detection rather than a paywall. Record
 Never bypass access control: no credential sharing, no cookie injection, no paywall-removal mirrors. A
 `still_blocked` that names four failed routes is a usable finding; a bare "blocked" is not.
 
-**A match in round prose is not a ledger row.** On 2026-10-17 a sweep of the archived round notes found 17 groups of findings, about 45 documents, that a round had confirmed in prose and no ledger held. Three had later been skipped as "already in the prior audit" because the dedup check matched the prose. Before marking a candidate already recorded, confirm the match is a ledger row; a prose-only match is an unwritten promotion to finish now.
+**A match in round prose is not a ledger row.** On 2026-10-17 a sweep of the archived round notes found 17 groups of findings, about 45 documents, that a round had confirmed in prose and no ledger held. Three had later been skipped as "already in the prior audit" because the dedup check matched the prose. Before marking a candidate already recorded, confirm the match is a ledger row; a prose-only match is an unwritten promotion to finish now. The check tags each match `[ledger]`, `[notes]` or `[archive:<status>]`, and its closing count treats only a ledger row or a recorded archive status as on file.
 
 **Check a zero against the record before reporting it.** The suppression index exists so lanes do not
 re-report known coverage, and it is only ever applied to candidates. One round published GRADE as having
@@ -219,6 +219,7 @@ This lane runs in **every** run mode, including Quick check and Targeted, and it
 | WeClawArena (auditable sandbox and benchmark for cross-user agent collaboration and security) | arXiv:2608.03499 |
 | CatchBench (benchmark for when an agent failure can be caught: declared config, trace prefix, finished trace) | arXiv:2608.22808, `github.com/yzhao062/catchbench` |
 | `auditable` (open-source system of record for agent decisions) | `github.com/yzhao062/auditable`, `pypi.org/project/auditable` |
+| agentpile (reads public agent trajectory datasets and live runs into ATIF records) | `github.com/yzhao062/agentpile` |
 | awesome-auditable-ai (curated knowledge base) | `github.com/yzhao062/awesome-auditable-ai` |
 | Auditability Card (machine-checkable disclosure artifact) | named inside Auditable Agents |
 

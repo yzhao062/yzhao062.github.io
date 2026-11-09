@@ -25,7 +25,13 @@ Usage:
 
 `build` writes one JSON object per line: the identifier, its kind, and where in the record it was
 found. `check` reads candidate URLs and prints, for each, whether any identifier matches and which.
-Exit status 0 always; the output is the answer.
+A `check` line may also be a bare identifier (a PMC ID, DOI or arXiv ID taken from a verdict), so a
+candidate that arrived under its DOI can be matched to a row held under its PMC page. Each match is
+tagged with its holder: [ledger] (a table row under a `## Ledger` heading), [notes] (any other
+record text, such as round prose, opportunities or negative results), or [archive:<status>], where
+only a recorded status means the document is on file. The closing count includes a candidate as
+recorded only on a ledger row or a recorded archive status. Exit status 0 always; the output is the
+answer.
 """
 import argparse
 import json
@@ -60,6 +66,14 @@ ISBN_RE = re.compile(r"\b(97[89]\d{10})\b")
 YT_RE = re.compile(r"(?:youtube\.com/watch\?v=|youtu\.be/)([A-Za-z0-9_-]{11})")
 # "Talk Python To Me #497", "Real Python Podcast #208", "Episode #208"
 EPISODE_RE = re.compile(r"([A-Z][A-Za-z' ]{3,40}?)\s*#(\d{1,4})\b")
+# PubMed Central: "PMC9531007", or the numeric id in an E-utilities URL (db=pmc&id=9531007).
+# A ledger row held under its PMC page and a candidate arriving under its DOI are one article
+# only if this key exists; on 2026-11-09 the missing key let S271 repeat S197.
+PMC_RE = re.compile(r"\b(PMC\d{5,9})\b")
+PMC_EUTILS_RE = re.compile(r"db=pmc(?:&amp;|&)id=(\d{5,9})")
+# Archive statuses that mean the document is on file. Any other status (unverified, dropped,
+# topic-validation) records a decision about a candidate, not a ledger row.
+RECORDED_STATUSES = {"kept", "already_recorded", "folded_into_existing", "duplicate", "patent_family_on_file", "counted"}
 
 
 def norm_url(u):
@@ -76,6 +90,25 @@ def patent_key(u):
     return f"patent:{m.group(1).upper()}" if m else None
 
 
+def github_key(n):
+    """Ref-insensitive GitHub file key: blob/<sha>, blob/HEAD and blob/main name one file, and a
+    repository root is the same document as its README. On 2026-10-21 52 kept records repeated
+    files already on file under another ref."""
+    m = re.match(r"(?:github\.com|raw\.githubusercontent\.com)/([^/]+)/([^/]+)(?:/(.*))?$", n)
+    if not m:
+        return None
+    owner, repo, rest = m.group(1), m.group(2).removesuffix(".git"), [p for p in (m.group(3) or "").split("/") if p]
+    if n.startswith("raw.githubusercontent.com"):
+        rest = rest[1:]
+    elif rest and rest[0] in ("blob", "tree", "raw", "edit") and len(rest) >= 2:
+        rest = rest[2:]
+    elif rest and rest[0] in ("commit", "commits", "issues", "pull", "pulls", "discussions", "releases", "wiki"):
+        return None
+    if rest == ["readme.md"]:
+        rest = []
+    return "gh:" + "/".join([owner, repo] + rest)
+
+
 def identifiers(line):
     """Every identifier a single line of the record carries, as (kind, canonical) pairs."""
     out = set()
@@ -86,8 +119,15 @@ def identifiers(line):
         pk = patent_key(n)
         if pk:
             out.add(("patent", pk))
+        gk = github_key(n)
+        if gk:
+            out.add(("github", gk))
         for v in YT_RE.findall(u):
             out.add(("youtube", f"youtube:{v}"))
+    for p in PMC_RE.findall(line):
+        out.add(("pmc", f"pmc:{p.upper()}"))
+    for p in PMC_EUTILS_RE.findall(line):
+        out.add(("pmc", f"pmc:PMC{p}"))
     for a in ARXIV_RE.findall(line):
         out.add(("arxiv", f"arxiv:{a}"))
     for d in DOI_RE.findall(line):
@@ -120,6 +160,36 @@ def _label(path):
         return os.path.basename(path)
 
 
+def _where(path, line, section):
+    """What a match in this file means: a ledger row, other record text, or an archived candidate
+    with its status. Only the first and an archive entry with a recorded status are on file.
+    A ledger row is a table row under a `## Ledger` heading; Run History, Upcoming Visibility
+    Opportunities, Negative Results, Topic Validation, the round notes and the citation-affiliation
+    audit name documents that are not counted, so they stay searchable as notes."""
+    label = _label(path)
+    if label.endswith("candidates.jsonl"):
+        try:
+            status = json.loads(line).get("status", "")
+        except json.JSONDecodeError:
+            status = ""
+        return f"archive:{status or 'unknown'}"
+    if "news-coverage-rounds" not in label and section.startswith("## Ledger") and line.lstrip().startswith("|"):
+        return "ledger"
+    return "notes"
+
+
+def _on_file(where):
+    return where == "ledger" or (where.startswith("archive:") and where[8:] in RECORDED_STATUSES)
+
+
+def _rank(where):
+    if where == "ledger":
+        return 0
+    if where.startswith("archive:") and where[8:] in RECORDED_STATUSES:
+        return 1
+    return 2 if where == "notes" else 3
+
+
 def build(paths, out_path):
     seen = {}
     per_file = Counter()
@@ -128,12 +198,20 @@ def build(paths, out_path):
             print(f"  skip (missing): {path}", file=sys.stderr)
             continue
         with open(path, encoding="utf-8", errors="replace") as fh:
+            section = ""
             for lineno, line in enumerate(fh, 1):
+                if line.startswith("## "):
+                    section = line
+                where = None
                 for kind, ident in identifiers(line):
+                    where = where or _where(path, line, section)
+                    # Keep the most authoritative holder: a ledger row beats a recorded archive
+                    # entry, which beats round prose, which beats an unverified or dropped candidate.
                     if ident not in seen:
-                        seen[ident] = {"id": ident, "kind": kind,
-                                       "source": f"{_label(path)}:{lineno}"}
                         per_file[_label(path)] += 1
+                    if ident not in seen or _rank(where) < _rank(seen[ident]["where"]):
+                        seen[ident] = {"id": ident, "kind": kind, "where": where,
+                                       "source": f"{_label(path)}:{lineno}"}
     with open(out_path, "w", encoding="utf-8", newline="\n") as fh:
         for ident in sorted(seen):
             fh.write(json.dumps(seen[ident], ensure_ascii=False) + "\n")
@@ -154,8 +232,15 @@ def candidate_identifiers(url):
     pk = patent_key(n)
     if pk:
         out.add(pk)
+    gk = github_key(n)
+    if gk:
+        out.add(gk)
     for v in YT_RE.findall(url):
         out.add(f"youtube:{v}")
+    for p in PMC_RE.findall(url):
+        out.add(f"pmc:{p.upper()}")
+    for p in PMC_EUTILS_RE.findall(url):
+        out.add(f"pmc:PMC{p}")
     for a in ARXIV_RE.findall(url):
         out.add(f"arxiv:{a}")
     for d in DOI_RE.findall(url):
@@ -173,16 +258,22 @@ def check(index_path, urls):
         for line in fh:
             r = json.loads(line)
             idx[r["id"]] = r
-    hit = 0
+    recorded = other = 0
     for u in urls:
         matches = [(i, idx[i]) for i in candidate_identifiers(u) if i in idx]
         if matches:
-            hit += 1
+            # `where` says whether the holder is a ledger row, other record text, or an archived
+            # candidate and its status; only a ledger row or a recorded status is on file.
+            if any(_on_file(r.get("where", "ledger")) for _, r in matches):
+                recorded += 1
+            else:
+                other += 1
             for i, r in matches:
-                print(f"MATCH  {r['kind']:<8} {i}  <- {r['source']}\n       {u}")
+                print(f"MATCH  {r['kind']:<8} {i}  <- {r['source']} [{r.get('where', 'ledger')}]\n       {u}")
         else:
             print(f"new    {u}")
-    print(f"\n{hit} of {len(urls)} candidates already recorded", file=sys.stderr)
+    print(f"\n{recorded} of {len(urls)} candidates already recorded (a ledger row or a recorded archive status); "
+          f"{other} more match only notes or an unrecorded archive entry, so judge those by hand", file=sys.stderr)
 
 
 def main():

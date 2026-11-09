@@ -1,0 +1,873 @@
+{"lane": "cjk", "executor": "agy", "query": "\"赵越\" \"南加州大学\""}
+{"lane": "cjk", "executor": "agy", "query": "site:zhihu.com \"赵越\" \"南加州大学\""}
+{"lane": "cjk", "executor": "agy", "query": "\"CatchBench\""}
+{"lane": "cjk", "executor": "agy", "query": "CatchBench (site:zhihu.com OR site:csdn.net OR site:weixin.qq.com OR site:bilibili.com)"}
+{"lane": "cjk", "executor": "agy", "query": "site:zicq.com \"CatchBench\""}
+{"lane": "cjk", "executor": "agy", "query": "\"Auditable Claims about AI Agents\""}
+{"lane": "cjk", "executor": "agy", "query": "\"Auditable Claims about AI Agents\" (weixin OR zhihu OR csdn OR zenn OR qiita OR tistory OR velog OR \"机器之心\" OR \"量子位\" OR \"36氪\")"}
+{"lane": "cjk", "executor": "agy", "query": "\"2610.16280\" OR \"agent-risk\" \"AI Agents\""}
+{"lane": "cjk", "executor": "agy", "query": "\"张湖月\" \"赵越\""}
+{"lane": "cjk", "executor": "agy", "query": "\"2610.16280\""}
+{"lane": "cjk", "executor": "agy", "query": "site:jiqizhixin.com \"赵越\""}
+{"lane": "cjk", "executor": "agy", "query": "\"Doxing via the Lens\" (site:jiqizhixin.com OR site:qbitai.com OR site:zhihu.com OR site:mp.weixin.qq.com OR site:36kr.com)"}
+{"lane": "cjk", "executor": "agy", "query": "\"Doxing via the Lens\" site:qq.com"}
+{"lane": "cjk", "executor": "agy", "query": "\"DoxBench\""}
+{"lane": "cjk", "executor": "agy", "query": "site:blog.csdn.net \"PyOD\""}
+{"lane": "cjk", "executor": "agy", "query": "site:qiita.com \"PyOD\""}
+{"lane": "cjk", "executor": "agy", "query": "site:zenn.dev \"PyOD\""}
+{"lane": "cjk", "executor": "agy", "query": "site:note.com \"PyOD\""}
+{"lane": "cjk", "executor": "agy", "query": "site:note.com \"PyOD\" \"2026\""}
+{"lane": "cjk", "executor": "agy", "query": "site:itmedia.co.jp \"PyOD\""}
+{"lane": "cjk", "executor": "agy", "query": "site:velog.io \"PyOD\""}
+{"lane": "cjk", "executor": "agy", "query": "site:velog.io \"PyOD\" \"2026\""}
+{"lane": "cjk", "executor": "agy", "query": "site:tistory.com \"PyOD\" \"2026\""}
+{"lane": "cjk", "executor": "agy", "query": "(site:heise.de OR site:lemondeinformatique.fr OR site:xataka.com) (\"Yue Zhao\" OR \"TrustLLM\" OR \"CatchBench\" OR \"PyOD\")"}
+{"lane": "cjk", "executor": "agy", "query": "site:heise.de \"TrustLLM\""}
+{"lane": "cjk", "executor": "agy", "query": "site:xataka.com \"Yue Zhao\""}
+{"lane": "cjk", "executor": "agy", "query": "site:lemondeinformatique.fr \"Yue Zhao\""}
+{"lane": "cjk", "executor": "agy", "query": "\"Auditable Agents\" (赵越 OR USC OR 南加州)"}
+{"lane": "cjk", "executor": "agy", "query": "\"Auditable Agents\" site:mp.weixin.qq.com"}
+{"lane": "cjk", "executor": "agy", "query": "\"赵越\" \"南加州大学\" site:mp.weixin.qq.com"}
+{"lane": "cjk", "executor": "agy", "query": "\"赵越\" \"南加州大学\" site:weixin.sogou.com"}
+{"lane": "cjk", "executor": "agy", "query": "site:freebuf.com \"赵越\" OR \"FORTIS\" OR \"agent-audit\" OR \"Aegis\" OR \"Auditable\""}
+{"lane": "cjk", "executor": "agy", "query": "\"DAPA\" \"AI Agent\" OR \"智能体\" \"审计\" site:myzaker.com"}
+{"lane": "cjk", "executor": "agy", "query": "site:secrss.com (\"智能体\" OR \"Agent\") (\"审计\" OR \"过度特权\" OR \"越权\" OR \"防火墙\")"}
+{"lane": "cjk", "executor": "agy", "query": "site:secrss.com \"智能体\" 2026"}
+{"lane": "cjk", "executor": "agy", "query": "site:bilibili.com \"赵越\" (\"南加州\" OR \"USC\")"}
+{"lane": "cjk", "executor": "agy", "query": "site:bilibili.com \"PyOD\""}
+{"lane": "cjk", "executor": "agy", "query": "site:aibase.com \"PyOD\""}
+{"lane": "cjk", "executor": "agy", "query": "site:aibase.com (\"TrustLLM\" OR \"CatchBench\" OR \"ADBench\" OR \"AD-LLM\" OR \"agent-audit\")"}
+{"lane": "cjk", "executor": "agy", "query": "site:aibase.com \"ADBench\""}
+{"lane": "cjk", "executor": "agy", "query": "site:zhihu.com (\"TrustLLM\" OR \"ADBench\" OR \"PyOD\")"}
+{"lane": "cjk", "executor": "agy", "query": "\"TrustLLM\" site:blog.csdn.net"}
+{"lane": "cjk", "executor": "agy", "query": "\"TrustLLM\" \"article/details\" site:blog.csdn.net"}
+{"lane": "cjk", "executor": "agy", "query": "\"大模型可信度评估实战：基于TrustLLM框架的五大维度解析与安全对齐实践\""}
+{"lane": "cjk", "executor": "agy", "query": "\"160672685\" csdn"}
+{"lane": "cjk", "executor": "agy", "query": "site:blog.csdn.net/weixin_26905423"}
+{"lane": "cjk", "executor": "agy", "query": "\"weixin_26905423\" \"TrustLLM\""}
+{"lane": "cjk", "executor": "agy", "query": "site:blog.csdn.net/weixin_26905423 \"TrustLLM\""}
+{"lane": "cjk", "executor": "agy", "query": "\"weixin_27268733\""}
+{"lane": "cjk", "executor": "agy", "query": "\"weixin_27268733\" \"TrustLLM\""}
+{"lane": "cjk", "executor": "agy", "query": "\"160672690\""}
+{"lane": "cjk", "executor": "agy", "query": "\"FrontierPhysics\" (site:zhihu.com OR site:csdn.net OR site:bilibili.com OR site:36kr.com)"}
+{"lane": "cjk", "executor": "agy", "query": "\"6aed75d1e5f4ca4eff8ed758\" OR \"aibjcy\" \"FrontierPhysics\""}
+{"lane": "cjk", "executor": "agy", "query": "site:devpress.csdn.net \"FrontierPhysics\""}
+{"lane": "cjk", "executor": "agy", "query": "\"The Autonomy Tax\" (site:zhihu.com OR site:csdn.net OR site:bilibili.com OR site:36kr.com OR site:jiqizhixin.com)"}
+{"lane": "cjk", "executor": "agy", "query": "\"SocialMaze\" (site:zhihu.com OR site:csdn.net OR site:mp.weixin.qq.com OR site:bilibili.com)"}
+{"lane": "cjk", "executor": "agy", "query": "site:blog.csdn.net \"2026-10\" OR \"2026-11\" (\"PyOD\" OR \"TrustLLM\" OR \"Auditable\" OR \"ADBench\" OR \"CatchBench\" OR \"FORTIS\" OR \"赵越\")"}
+{"lane": "cjk", "executor": "agy", "query": "site:blog.csdn.net \"PyOD\" \"2026-10\""}
+{"lane": "cjk", "executor": "agy", "query": "site:blog.csdn.net \"PyOD\" \"2026-11\""}
+{"lane": "cjk", "executor": "agy", "query": "\"Agent Banana\" (site:jiqizhixin.com OR site:qbitai.com OR site:zhihu.com OR site:mp.weixin.qq.com OR site:36kr.com)"}
+{"lane": "cjk", "executor": "agy", "query": "\"CUA-SWE\" OR \"PersonaCUABench\""}
+{"lane": "cjk", "executor": "agy", "query": "\"PersonaCUABench\" OR \"CUA-SWE\" (zhihu OR csdn OR zenn OR qiita OR weixin OR 机器之心)"}
+{"lane": "cjk", "executor": "agy", "query": "\"FinanceLLM\" (site:zhihu.com OR site:csdn.net OR site:36kr.com OR site:jiqizhixin.com)"}
+{"lane": "cjk", "executor": "agy", "query": "\"WeClawArena\""}
+{"lane": "cjk", "executor": "agy", "query": "site:chatpaper.ai \"Yue Zhao\""}
+{"lane": "cjk", "executor": "agy", "query": "site:chatpaper.ai (\"CatchBench\" OR \"Auditable Claims\" OR \"agent-risk\" OR \"FrontierPhysics\" OR \"PersonaCUABench\")"}
+{"lane": "cjk", "executor": "agy", "query": "site:bilibili.com \"TrustLLM\""}
+{"lane": "cjk", "executor": "agy", "query": "\"赵越\" \"南加州大学\" zhihu"}
+{"lane": "cjk", "executor": "agy", "query": "\"袁奥杰\""}
+{"lane": "cjk", "executor": "agy", "query": "\"Aojie Yuan\" USC"}
+{"lane": "cjk", "executor": "agy", "query": "\"袁傲杰\""}
+{"lane": "cjk", "executor": "agy", "query": "\"袁傲杰\" (site:zhihu.com OR site:csdn.net OR site:jiqizhixin.com OR site:mp.weixin.qq.com OR site:qbitai.com)"}
+{"lane": "cjk", "executor": "agy", "query": "\"执行前防火墙\" OR \"预执行防火墙\" OR \"No Tool Call Left Unchecked\" site:zhihu.com"}
+{"lane": "cjk", "executor": "agy", "query": "\"CatchBench\" site:blog.csdn.net"}
+{"lane": "cjk", "executor": "agy", "query": "\"agent-audit\" \"HeadyZhang\" OR \"A Security Analysis System for LLM Agent Applications\""}
+{"lane": "cjk", "executor": "agy", "query": "\"agent-audit\" (site:zhihu.com OR site:csdn.net OR site:freebuf.com OR site:secrss.com)"}
+{"lane": "cjk", "executor": "agy", "query": "\"FORTIS\" \"over-privilege\" OR \"智能体过度特权\" OR \"智能体越权\""}
+{"lane": "cjk", "executor": "agy", "query": "\"AEGIS\" (\"袁傲杰\" OR \"Aojie Yuan\" OR \"Yue Zhao\" OR \"No Tool Call Left Unchecked\") site:zhihu.com"}
+{"lane": "cjk", "executor": "agy", "query": "site:github.com \"PyOD\" (\"外れ値\" OR \"異常検知\" OR \"이상치\" OR \"异常检测\")"}
+{"lane": "cjk", "executor": "agy", "query": "\"PyOD\" (site:golem.de OR site:developpez.com OR site:genbeta.com)"}
+{"lane": "cjk", "executor": "agy", "query": "site:developpez.com \"PyOD\""}
+{"lane": "cjk", "executor": "agy", "query": "site:xataka.com \"Yue Zhao\""}
+{"lane": "cjk", "executor": "agy", "query": "site:heise.de \"PyOD\""}
+{"lane": "cjk", "executor": "agy", "query": "site:note.com (\"TrustLLM\" OR \"ADBench\" OR \"CatchBench\")"}
+{"lane": "cjk", "executor": "agy", "query": "(site:aitimes.com OR site:zdnet.co.kr) (\"TrustLLM\" OR \"PyOD\" OR \"Yue Zhao\" OR \"CatchBench\")"}
+{"lane": "cjk", "executor": "agy", "query": "site:tistory.com \"PyOD\" \"2026\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "site:openai.com \"TrustLLM\" OR \"PyOD\" OR \"Aegis\" OR \"agent-audit\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "site:anthropic.com \"TrustLLM\" OR \"PyOD\" OR \"Aegis\" OR \"agent-audit\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "site:anthropic.com \"TrustLLM\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "site:anthropic.com \"Yue Zhao\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "\"Anthropic\" \"Yue Zhao\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "site:openai.com/careers \"PyOD\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "\"openai\" \"PyOD\" job OR careers OR \"qualifications\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "\"system card\" \"OpenAI\" \"TrustLLM\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "site:openai.com \"system card\" filetype:pdf"}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "site:openai.com/index \"system card\" 2026"}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "\"GPT-6 Cyber System Card\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "\"GPT-6 Cyber\" \"Aegis\" OR \"agent-audit\" OR \"Auditable\" OR \"TrustLLM\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "site:openai.com \"GPT-6 Cyber\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "site:deepmind.google \"TrustLLM\" OR \"PyOD\" OR \"Therapeutics Data Commons\" OR \"Aegis\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "site:deepmind.google \"TrustLLM\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "site:deepmind.google \"Therapeutics Data Commons\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "site:deepmind.google \"PyOD\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "site:ai.meta.com \"TrustLLM\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "\"The Llama 3 Herd of Models\" \"TrustLLM\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "\"Phi-4\" \"TrustLLM\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "\"Phi-4 Technical Report\" \"TrustLLM\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "site:mckinsey.com \"TrustLLM\" OR \"PyOD\" OR \"ADBench\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "site:deloitte.com \"TrustLLM\" OR \"PyOD\" OR \"ADBench\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "site:deloitte.com \"TrustLLM\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "site:deloitte.com \"PyOD\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "site:pwc.com \"TrustLLM\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "site:pwc.com \"PyOD\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "site:accenture.com \"TrustLLM\" OR \"PyOD\" OR \"ADBench\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "\"Finance Function & AI Architect\" \"PyOD\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "site:ey.com \"TrustLLM\" OR \"PyOD\" OR \"ADBench\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "site:ey.com \"TrustLLM\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "site:kpmg.com \"TrustLLM\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "site:kpmg.com \"PyOD\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "site:bcg.com \"TrustLLM\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "site:bcg.com \"PyOD\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "site:gartner.com \"TrustLLM\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "site:gartner.com \"PyOD\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "site:forrester.com \"TrustLLM\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "site:forrester.com \"PyOD\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "site:idc.com \"TrustLLM\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "site:idc.com \"PyOD\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "site:developer.nvidia.com \"PyOD\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "site:nvidia.com \"TrustLLM\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "site:amazon.science \"TrustLLM\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "site:x.ai \"TrustLLM\" OR \"PyOD\" OR \"Aegis\" OR \"agent-audit\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "site:x.ai \"TrustLLM\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "site:x.ai \"PyOD\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "site:mistral.ai \"TrustLLM\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "site:mistral.ai \"PyOD\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "site:cohere.com \"TrustLLM\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "site:cohere.com \"PyOD\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "\"Aegis: No Tool Call Left Unchecked\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "\"2603.12621\" OR \"AEGIS: No Tool Call Left Unchecked\" OpenAI OR Anthropic OR DeepMind OR Microsoft OR Meta"}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "\"2603.22853\" OR \"agent-audit: A Security Analysis System\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "\"Auditable Claims about AI Agents\" OR \"2610.07459\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "site:accuknox.com \"Auditable\" OR \"Zhao\" OR \"Aegis\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "site:boards.greenhouse.io/openai \"PyOD\" OR \"TrustLLM\" OR \"Aegis\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "site:jobs.ashbyhq.com/openai \"PyOD\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "site:jobs.ashbyhq.com/openai \"anomaly\" OR \"outlier\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "site:jobs.ashbyhq.com/anthropic \"PyOD\" OR \"TrustLLM\" OR \"Aegis\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "site:jobs.ashbyhq.com/anthropic \"PyOD\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "site:anthropic.com/careers \"anomaly\" OR \"outlier\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "site:careers.google.com \"PyOD\" OR \"TrustLLM\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "site:metacareers.com \"PyOD\" OR \"TrustLLM\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "site:careers.microsoft.com \"PyOD\" OR \"TrustLLM\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "site:amazon.jobs \"PyOD\" OR \"TrustLLM\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "site:nvidia.wd5.myworkdayjobs.com \"PyOD\" OR \"TrustLLM\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "site:x.ai/careers \"PyOD\" OR \"TrustLLM\" OR \"Aegis\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "site:x.ai/careers \"PyOD\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "site:mckinsey.com \"agentic\" OR \"AI agents\" \"security\" OR \"audit\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "\"digital insiders\" site:mckinsey.com"}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "\"Deploying agentic AI with safety and security\" site:mckinsey.com"}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "\"Deploying agentic AI with safety and security\" \"McKinsey\" date OR \"2026\" OR \"2025\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "site:deloitte.com \"AI agent\" OR \"agentic\" 2026"}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "site:gartner.com \"Top Strategic Technology Trends\" 2025 OR 2026"}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "site:forrester.com \"agentic AI\" OR \"AI agents\" 2026"}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "site:idc.com \"agentic AI\" OR \"AI agents\" 2026"}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "site:anthropic.com \"computer use\" OR \"tool use\" \"firewall\" OR \"audit\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "site:anthropic.com/research 2026"}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "site:anthropic.com/research \"Expert Judgment Calls\" OR \"Automated Subtle Emergent Misalignment\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "\"Who's Aligned to Whom\" \"Zhao\" OR \"Aegis\" OR \"TrustLLM\" OR \"PyOD\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "\"Who's Aligned to Whom\" site:anthropic.com"}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "\"Who's Aligned to Whom\" \"Herdağdelen\" arXiv OR pdf"}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "\"Automated Subtle Emergent Misalignment\" \"Zhao\" OR \"TrustLLM\" OR \"Aegis\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "\"Gemini\" technical report \"TrustLLM\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "\"TxGemma\" \"Therapeutics Data Commons\" 2026"}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "site:mistral.ai/news 2026"}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "\"Timestral\" \"PyOD\" OR \"TODS\" OR \"anomaly\" OR \"outlier\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "\"Mistral Large 4\" OR \"Le Chonk\" \"technical report\" OR \"system card\" OR \"arXiv\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "site:mistral.ai \"Mistral Large\" \"TrustLLM\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "site:huggingface.co/mistralai \"TrustLLM\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "\"Llama 3.3\" \"TrustLLM\" OR \"PyOD\" OR \"Aegis\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "site:microsoft.com/en-us/research \"TrustLLM\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "site:microsoft.com/en-us/research/publication \"TrustLLM\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "site:ai.meta.com/blog 2026"}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "site:ai.meta.com \"safety evaluation\" OR \"system card\" OR \"model card\" 2026"}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "site:ai.meta.com \"safety evaluation\" 2026"}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "site:ai.meta.com \"TrustLLM\" OR \"Aegis\" OR \"agent-audit\" OR \"PyOD\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "\"2603.12621\" site:openai.com OR site:anthropic.com OR site:deepmind.google OR site:ai.meta.com"}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "\"2603.22853\" site:openai.com OR site:anthropic.com OR site:deepmind.google OR site:ai.meta.com"}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "\"2610.07459\" OR \"2610.16280\" site:openai.com OR site:anthropic.com OR site:deepmind.google OR site:ai.meta.com"}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "\"2401.05561\" site:deloitte.com OR site:mckinsey.com OR site:pwc.com OR site:accenture.com OR site:ey.com OR site:kpmg.com OR site:bcg.com OR site:gartner.com OR site:forrester.com OR site:idc.com"}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "\"ADBench\" site:deloitte.com OR site:mckinsey.com OR site:pwc.com OR site:accenture.com OR site:ey.com OR site:kpmg.com OR site:bcg.com OR site:gartner.com"}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "\"Therapeutics Data Commons\" site:deloitte.com OR site:mckinsey.com OR site:pwc.com OR site:accenture.com OR site:ey.com OR site:kpmg.com OR site:bcg.com"}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "\"Yue Zhao\" \"USC\" site:deloitte.com OR site:mckinsey.com OR site:pwc.com OR site:accenture.com OR site:ey.com OR site:kpmg.com OR site:bcg.com OR site:gartner.com"}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "\"Yue Zhao\" \"USC\" site:openai.com OR site:anthropic.com OR site:deepmind.google OR site:ai.meta.com OR site:mistral.ai OR site:x.ai OR site:cohere.com"}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "site:github.com/openai \"TrustLLM\" OR \"PyOD\" OR \"Aegis\" OR \"agent-audit\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "site:github.com/anthropics \"PyOD\" OR \"TrustLLM\" OR \"Aegis\" OR \"agent-audit\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "site:github.com/google-deepmind \"Therapeutics Data Commons\" OR \"TrustLLM\" OR \"PyOD\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "site:github.com/google-deepmind \"Therapeutics Data Commons\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "site:github.com/microsoft \"TrustLLM\" OR \"PyOD\" OR \"ADBench\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "site:github.com/microsoft \"import pyod\" OR \"pyod\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "site:github.com/microsoft \"pyod-gpu-anomaly-detection-demo\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "\"pyod-gpu-anomaly-detection-demo.ipynb\" site:github.com"}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "\"pyod-gpu-anomaly-detection-demo.ipynb\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "site:anthropic.com/research \"automated-subtle-emergent-misalignment\" OR \"emergent misalignment\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "site:anthropic.com/research \"automated-subtle-emergent-misalignment\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "site:anthropic.com \"Automated Subtle Emergent Misalignment\""}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "\"The Agentic Business Fabric\" site:forrester.com"}
+{"lane": "d8-fm-consult", "executor": "agy", "query": "site:gartner.com \"Top Strategic Technology Trends for 2027\""}
+{"lane": "d8-gov-intl", "executor": "agy", "query": "site:oecd.ai \"TrustLLM\" OR \"Auditable Agents\" OR \"agent-risk\" OR \"Aegis\" OR \"PyOD\""}
+{"lane": "d8-gov-intl", "executor": "agy", "query": "OECD AI \"TrustLLM\""}
+{"lane": "d8-gov-intl", "executor": "agy", "query": "site:oecd.ai/en/catalogue \"TrustLLM\""}
+{"lane": "d8-gov-intl", "executor": "agy", "query": "site:oecd.ai \"HowieHwong\""}
+{"lane": "d8-gov-intl", "executor": "agy", "query": "\"UK AI Safety Institute\" OR \"AISI\" \"audit\" OR \"agent\" 2026"}
+{"lane": "d8-gov-intl", "executor": "agy", "query": "site:aisi.gov.uk/research OR site:aisi.gov.uk/blog"}
+{"lane": "d8-gov-intl", "executor": "agy", "query": "Singapore IMDA OR CSA OR GovTech \"agent\" OR \"trustworthy\" 2026"}
+{"lane": "d8-gov-intl", "executor": "agy", "query": "site:csa.gov.sg \"advisory\" \"personal AI agents\" OR \"agent\" 2026"}
+{"lane": "d8-gov-intl", "executor": "agy", "query": "\"EU AI Office\" OR \"ENISA\" OR \"Joint Research Centre\" \"agent\" OR \"TrustLLM\" OR \"PyOD\" OR \"audit\" 2026"}
+{"lane": "d8-gov-intl", "executor": "agy", "query": "site:enisa.europa.eu/publications \"AI\" 2026"}
+{"lane": "d8-gov-intl", "executor": "agy", "query": "site:enisa.europa.eu \"October 2026\" OR \"November 2026\" OR \"2026-10\" OR \"2026-11\""}
+{"lane": "d8-gov-intl", "executor": "agy", "query": "site:digital-strategy.ec.europa.eu \"AI Office\" OR \"General-Purpose AI\" 2026"}
+{"lane": "d8-gov-intl", "executor": "agy", "query": "site:digital-strategy.ec.europa.eu \"October 2026\" OR \"November 2026\" \"AI\""}
+{"lane": "d8-gov-intl", "executor": "agy", "query": "\"AI Safety Institute\" \"Japan\" OR \"AISI Japan\" OR \"METI\" \"agent\" OR \"evaluation\" 2026"}
+{"lane": "d8-gov-intl", "executor": "agy", "query": "site:bsi.bund.de \"AI\" OR \"Künstliche Intelligenz\" 2026"}
+{"lane": "d8-gov-intl", "executor": "agy", "query": "site:cyber.gouv.fr \"intelligence artificielle\" OR \"AI\" 2026"}
+{"lane": "d8-gov-intl", "executor": "agy", "query": "\"TC260\" OR \"全国信息安全标准化技术委员会\" \"人工智能\" OR \"大模型\" OR \"智能体\" 2026"}
+{"lane": "d8-gov-intl", "executor": "agy", "query": "site:tc260.org.cn \"智能体\" OR \"TC260-TR-005-2026\""}
+{"lane": "d8-gov-intl", "executor": "agy", "query": "\"TC260-TR-005-2026\" OR \"智能体安全标准化研究\""}
+{"lane": "d8-gov-intl", "executor": "agy", "query": "site:caict.ac.cn \"智能体\" OR \"大模型\" 2026"}
+{"lane": "d8-gov-intl", "executor": "agy", "query": "\"面向智能体能力构建的高质量数据集建设指南\""}
+{"lane": "d8-gov-intl", "executor": "agy", "query": "site:gov.uk \"CatchBench\" OR \"Auditable Agents\" OR \"agent-risk\" OR \"agent-audit\""}
+{"lane": "d8-gov-intl", "executor": "agy", "query": "site:gov.uk \"TrustLLM\" OR \"PyOD\""}
+{"lane": "d8-gov-intl", "executor": "agy", "query": "site:turing.ac.uk \"TrustLLM\" OR \"PyOD\" OR \"Auditable\" OR \"ADBench\""}
+{"lane": "d8-gov-intl", "executor": "agy", "query": "site:turing.ac.uk \"TrustLLM\""}
+{"lane": "d8-gov-intl", "executor": "agy", "query": "\"Canadian AI Safety Institute\" OR \"CAISI\" OR \"CIFAR\" \"agent\" OR \"audit\" 2026"}
+{"lane": "d8-gov-intl", "executor": "agy", "query": "site:industry.gov.au OR site:cyber.gov.au \"AI\" \"agent\" OR \"guardrails\" 2026"}
+{"lane": "d8-gov-intl", "executor": "agy", "query": "site:itu.int \"TrustLLM\" OR \"PyOD\" OR \"Auditable Agents\" OR \"agent-risk\""}
+{"lane": "d8-gov-intl", "executor": "agy", "query": "site:itu.int \"TrustLLM\""}
+{"lane": "d8-gov-intl", "executor": "agy", "query": "site:itu.int \"PyOD\""}
+{"lane": "d8-gov-intl", "executor": "agy", "query": "\"European Space Agency\" \"PyOD\""}
+{"lane": "d8-gov-intl", "executor": "agy", "query": "site:oecd.ai \"Auditable Agents\""}
+{"lane": "d8-gov-intl", "executor": "agy", "query": "\"Agentic AI in Organisations\" \"OECD\""}
+{"lane": "d8-gov-intl", "executor": "agy", "query": "\"2610.07459\""}
+{"lane": "d8-gov-intl", "executor": "agy", "query": "\"2610.07459\" -site:arxiv.org"}
+{"lane": "d8-gov-intl", "executor": "agy", "query": "\"2610.16280\""}
+{"lane": "d8-gov-intl", "executor": "agy", "query": "\"2610.16280\" -site:arxiv.org"}
+{"lane": "d8-gov-intl", "executor": "agy", "query": "\"Auditable Agents\" \"Zhao\""}
+{"lane": "d8-gov-intl", "executor": "agy", "query": "\"2604.05485\""}
+{"lane": "d8-gov-intl", "executor": "agy", "query": "\"2604.05485\" -site:arxiv.org"}
+{"lane": "d8-gov-intl", "executor": "agy", "query": "\"2603.12621\""}
+{"lane": "d8-gov-intl", "executor": "agy", "query": "\"2603.12621\" -site:arxiv.org"}
+{"lane": "d8-gov-intl", "executor": "agy", "query": "\"2603.22853\""}
+{"lane": "d8-gov-intl", "executor": "agy", "query": "\"2608.22808\""}
+{"lane": "d8-gov-intl", "executor": "agy", "query": "\"2605.09163\""}
+{"lane": "d8-gov-intl", "executor": "agy", "query": "\"2608.03499\""}
+{"lane": "d8-gov-intl", "executor": "agy", "query": "\"2606.22741\""}
+{"lane": "d8-gov-intl", "executor": "agy", "query": "\"2603.17445\""}
+{"lane": "d8-gov-intl", "executor": "agy", "query": "\"TrustLLM\" site:europa.eu"}
+{"lane": "d8-gov-intl", "executor": "agy", "query": "\"ADBench\" site:gov.uk OR site:europa.eu OR site:oecd.org OR site:gov.sg OR site:go.jp"}
+{"lane": "d8-gov-intl", "executor": "agy", "query": "\"Therapeutics Data Commons\" site:europa.eu OR site:gov.uk OR site:oecd.org OR site:nih.gov"}
+{"lane": "d8-gov-intl", "executor": "agy", "query": "site:eur-lex.europa.eu \"artificial intelligence\" October 2026 OR November 2026"}
+{"lane": "d8-gov-intl", "executor": "agy", "query": "site:unesco.org \"AI\" \"agent\" OR \"audit\" 2026"}
+{"lane": "d8-gov-intl", "executor": "agy", "query": "site:unesco.org \"TrustLLM\""}
+{"lane": "d8-gov-intl", "executor": "agy", "query": "site:unesco.org \"PyOD\""}
+{"lane": "d8-gov-intl", "executor": "agy", "query": "site:unesco.org \"Yue Zhao\""}
+{"lane": "d8-gov-intl", "executor": "agy", "query": "\"United Nations\" OR \"UN\" \"AI agents\" OR \"agentic AI\" 2026"}
+{"lane": "d8-gov-intl", "executor": "agy", "query": "\"Hiroshima AI Process\" October 2026 OR November 2026"}
+{"lane": "d8-gov-intl", "executor": "agy", "query": "\"MeitY\" OR \"NITI Aayog\" \"agent\" OR \"trustworthy\" OR \"audit\" 2026"}
+{"lane": "d8-gov-intl", "executor": "agy", "query": "\"CERT-In\" \"AI Security Auditing Guidelines\" OR \"AI\" \"agent\" 2026"}
+{"lane": "d8-gov-intl", "executor": "agy", "query": "\"CERT-In\" \"Artificial Intelligence (AI) Security Auditing Guidelines\" date OR published"}
+{"lane": "d8-gov-intl", "executor": "agy", "query": "site:cert-in.org.in \"CISG-2026-04\" OR \"Artificial Intelligence Security Auditing Guidelines\""}
+{"lane": "d8-gov-intl", "executor": "agy", "query": "site:aiverifyfoundation.sg \"agent\" OR \"tool\" OR \"audit\" 2026"}
+{"lane": "d8-gov-intl", "executor": "agy", "query": "\"Starter Kit for Testing Agentic Systems for Safety and Reliability\""}
+{"lane": "d8-gov-intl", "executor": "agy", "query": "\"Starter Kit for Testing Agentic Systems\" site:imda.gov.sg OR site:aiverifyfoundation.sg OR site:github.com"}
+{"lane": "d8-gov-intl", "executor": "agy", "query": "site:oecd.ai \"transparency report\" \"TrustLLM\""}
+{"lane": "d8-gov-intl", "executor": "agy", "query": "site:oecd.ai \"transparency report\" \"PyOD\" OR \"ADBench\" OR \"Aegis\""}
+{"lane": "d8-gov-intl", "executor": "agy", "query": "site:inspect.ai-safety-institute.org.uk \"TrustLLM\" OR \"CatchBench\" OR \"Aegis\""}
+{"lane": "d8-gov-intl", "executor": "agy", "query": "site:github.com/UKGovernmentBEIS/inspect_ai \"TrustLLM\" OR \"CatchBench\" OR \"Aegis\""}
+{"lane": "d8-gov-intl", "executor": "agy", "query": "site:github.com/UKGovernmentBEIS/inspect_evals \"TrustLLM\" OR \"CatchBench\""}
+{"lane": "d8-gov-intl", "executor": "agy", "query": "site:oecd.org \"OECD Artificial Intelligence Papers\" 2026"}
+{"lane": "d8-gov-us", "executor": "agy", "query": "site:gov \"Yue Zhao\" \"Southern California\""}
+{"lane": "d8-gov-us", "executor": "agy", "query": "site:gov \"TrustLLM\""}
+{"lane": "d8-gov-us", "executor": "agy", "query": "site:nist.gov \"TrustLLM\" OR \"PyOD\" OR \"ADBench\""}
+{"lane": "d8-gov-us", "executor": "agy", "query": "site:nist.gov CAISI OR \"AI 100\" 2026"}
+{"lane": "d8-gov-us", "executor": "agy", "query": "site:nist.gov \"agent\" OR \"agents\" 2026"}
+{"lane": "d8-gov-us", "executor": "agy", "query": "site:nist.gov \"AI agent\" OR \"AI agents\" 2026"}
+{"lane": "d8-gov-us", "executor": "agy", "query": "site:nist.gov \"October 2026\" OR \"November 2026\" AI OR agent"}
+{"lane": "d8-gov-us", "executor": "agy", "query": "\"Key Practices for Incident Readiness and Response\" site:nist.gov OR site:cisa.gov OR site:nsa.gov"}
+{"lane": "d8-gov-us", "executor": "agy", "query": "site:osti.gov \"Yue Zhao\""}
+{"lane": "d8-gov-us", "executor": "agy", "query": "site:osti.gov \"TrustLLM\""}
+{"lane": "d8-gov-us", "executor": "agy", "query": "site:gao.gov \"artificial intelligence\" OR \"AI\" 2026"}
+{"lane": "d8-gov-us", "executor": "agy", "query": "site:gao.gov \"October 2026\" OR \"November 2026\""}
+{"lane": "d8-gov-us", "executor": "agy", "query": "site:gao.gov/products \"2026\" \"artificial intelligence\""}
+{"lane": "d8-gov-us", "executor": "agy", "query": "site:crsreports.congress.gov \"AI\" 2026"}
+{"lane": "d8-gov-us", "executor": "agy", "query": "site:congress.gov \"TrustLLM\" OR \"PyOD\" OR \"ADBench\""}
+{"lane": "d8-gov-us", "executor": "agy", "query": "site:nih.gov \"Therapeutics Data Commons\""}
+{"lane": "d8-gov-us", "executor": "agy", "query": "site:fda.gov \"Therapeutics Data Commons\" OR \"TrustLLM\" OR \"PyOD\""}
+{"lane": "d8-gov-us", "executor": "agy", "query": "site:fda.gov \"Therapeutics Data Commons\""}
+{"lane": "d8-gov-us", "executor": "agy", "query": "site:fda.gov \"anomaly detection\" \"machine learning\" 2026"}
+{"lane": "d8-gov-us", "executor": "agy", "query": "site:sec.gov \"PyOD\" OR \"TrustLLM\" OR \"ADBench\""}
+{"lane": "d8-gov-us", "executor": "agy", "query": "site:federalreserve.gov OR site:occ.gov OR site:finra.org OR site:treasury.gov \"artificial intelligence\" \"2026\""}
+{"lane": "d8-gov-us", "executor": "agy", "query": "site:defense.gov OR site:cdao.mil \"TrustLLM\" OR \"PyOD\" OR \"ADBench\""}
+{"lane": "d8-gov-us", "executor": "agy", "query": "site:nsf.gov \"Yue Zhao\""}
+{"lane": "d8-gov-us", "executor": "agy", "query": "site:cisa.gov \"Key Practices for Incident Readiness and Response\""}
+{"lane": "d8-gov-us", "executor": "agy", "query": "site:csrc.nist.gov \"draft\" \"2026\" \"artificial intelligence\" OR \"agent\""}
+{"lane": "d8-gov-us", "executor": "agy", "query": "site:whitehouse.gov \"October 2026\" OR \"November 2026\" \"artificial intelligence\" OR \"AI\""}
+{"lane": "d8-gov-us", "executor": "agy", "query": "site:cisa.gov \"October 2026\" OR \"November 2026\""}
+{"lane": "d8-gov-us", "executor": "agy", "query": "site:congress.gov \"hearing\" \"artificial intelligence\" 2026"}
+{"lane": "d8-gov-us", "executor": "agy", "query": "site:congress.gov hearing \"artificial intelligence\" 2026"}
+{"lane": "d8-gov-us", "executor": "agy", "query": "site:congress.gov \"October 2026\" hearing"}
+{"lane": "d8-gov-us", "executor": "agy", "query": "site:nist.gov \"AI 100-\" \"2026\""}
+{"lane": "d8-gov-us", "executor": "agy", "query": "site:nist.gov \"CAISI\" OR \"CAISSI\" \"October 2026\" OR \"November 2026\""}
+{"lane": "d8-gov-us", "executor": "agy", "query": "site:defense.gov \"CDAO\" \"2026\""}
+{"lane": "d8-gov-us", "executor": "agy", "query": "site:llnl.gov OR site:lanl.gov OR site:sandia.gov OR site:pnnl.gov OR site:anl.gov OR site:ornl.gov \"TrustLLM\""}
+{"lane": "d8-gov-us", "executor": "agy", "query": "site:llnl.gov OR site:lanl.gov OR site:sandia.gov OR site:pnnl.gov OR site:anl.gov OR site:ornl.gov \"Therapeutics Data Commons\""}
+{"lane": "d8-gov-us", "executor": "agy", "query": "site:llnl.gov OR site:lanl.gov OR site:sandia.gov OR site:pnnl.gov OR site:anl.gov OR site:ornl.gov \"PyOD\""}
+{"lane": "d8-gov-us", "executor": "agy", "query": "site:gov \"2604.05485\" OR \"2610.07459\" OR \"2610.16280\" OR \"2603.12621\""}
+{"lane": "d8-gov-us", "executor": "agy", "query": "site:gov \"2603.22853\" OR \"2603.17445\" OR \"2606.22741\" OR \"2605.09163\""}
+{"lane": "d8-gov-us", "executor": "agy", "query": "site:gov \"2608.03499\" OR \"2608.22808\" OR \"2401.05561\""}
+{"lane": "d8-gov-us", "executor": "agy", "query": "site:gov \"CatchBench\" OR \"agent-risk\" OR \"agent-audit\" OR \"WeClawArena\""}
+{"lane": "d8-gov-us", "executor": "agy", "query": "site:gov \"FORTIS Lab\""}
+{"lane": "d8-gov-us", "executor": "agy", "query": "site:gov \"Yue Zhao\" \"USC\" OR \"Viterbi\""}
+{"lane": "d8-gov-us", "executor": "agy", "query": "site:gov \"Yue Zhao\" \"USC\""}
+{"lane": "d8-gov-us", "executor": "agy", "query": "\"Yue Zhao\" \"University of Southern California\" site:gov"}
+{"lane": "d8-gov-us", "executor": "agy", "query": "site:gov \"COPOD\" OR \"ECOD\" OR \"ADBench\""}
+{"lane": "d8-gov-us", "executor": "agy", "query": "site:darpa.mil \"TrustLLM\" OR \"PyOD\" OR \"ADBench\" OR \"Yue Zhao\""}
+{"lane": "d8-gov-us", "executor": "agy", "query": "site:nsa.gov \"Key Practices for Incident Readiness and Response\""}
+{"lane": "d8-gov-us", "executor": "agy", "query": "\"PP-26-4396\" OR \"PP-26-\""}
+{"lane": "d8-gov-us", "executor": "agy", "query": "site:gov \"AI agent\" OR \"agentic AI\" \"October 2026\" OR \"November 2026\""}
+{"lane": "d8-gov-us", "executor": "agy", "query": "site:gov \"AI agent\" \"October 2026\""}
+{"lane": "d8-gov-us", "executor": "agy", "query": "site:nist.gov \"agent\" \"2026\""}
+{"lane": "d8-gov-us", "executor": "agy", "query": "site:csrc.nist.gov \"overlay\" \"AI\" OR \"super intelligence\""}
+{"lane": "l7-methods", "executor": "agy", "query": "site:link.springer.com (\"PyOD\" OR \"Therapeutics Data Commons\" OR \"ADBench\" OR \"PyGOD\") \"2026\""}
+{"lane": "l7-methods", "executor": "agy", "query": "PyOD outlier detection"}
+{"lane": "l7-methods", "executor": "agy", "query": "\"PyOD\" \"anomaly detection\" \"2026\" IEEE OR ACM OR Springer OR MDPI"}
+{"lane": "l7-methods", "executor": "agy", "query": "Europe PMC: \"PyOD\" AND FIRST_PDATE:[2026-09-15 TO 2026-11-09]"}
+{"lane": "l7-methods", "executor": "agy", "query": "Europe PMC: \"PyOD\" AND PUB_YEAR:2026"}
+{"lane": "l7-methods", "executor": "agy", "query": "Europe PMC: \"Therapeutics Data Commons\" AND PUB_YEAR:2026"}
+{"lane": "l7-methods", "executor": "agy", "query": "Europe PMC: \"ADBench\" AND PUB_YEAR:2026"}
+{"lane": "l7-methods", "executor": "agy", "query": "Europe PMC: \"PyGOD\" AND PUB_YEAR:2026"}
+{"lane": "l7-methods", "executor": "agy", "query": "Europe PMC: \"TODS\" AND PUB_YEAR:2026"}
+{"lane": "l7-methods", "executor": "agy", "query": "Europe PMC: \"SUOD\" AND PUB_YEAR:2026"}
+{"lane": "l7-methods", "executor": "agy", "query": "Europe PMC: \"ECOD\" AND \"outlier\" AND PUB_YEAR:2026"}
+{"lane": "l7-methods", "executor": "agy", "query": "Europe PMC: \"COPOD\" AND PUB_YEAR:2026"}
+{"lane": "l7-methods", "executor": "agy", "query": "Europe PMC: \"pyod.models\" AND PUB_YEAR:2026"}
+{"lane": "l7-methods", "executor": "agy", "query": "Europe PMC: \"pyod\" AND \"outlier\" AND PUB_YEAR:2026"}
+{"lane": "l7-methods", "executor": "agy", "query": "Europe PMC: \"pyod\" AND \"anomaly\" AND PUB_YEAR:2026"}
+{"lane": "l7-methods", "executor": "agy", "query": "Europe PMC: \"SUOD\" AND (\"outlier\" OR \"anomaly\") AND PUB_YEAR:2026"}
+{"lane": "l7-methods", "executor": "agy", "query": "Europe PMC: \"TODS\" AND (\"time series\" OR \"outlier\") AND PUB_YEAR:2026"}
+{"lane": "l7-methods", "executor": "agy", "query": "Europe PMC: \"Therapeutics Data Commons\" AND (METHODS:\"Therapeutics Data Commons\" OR ABSTRACT:\"Therapeutics Data Commons\") AND PUB_YEAR:2026"}
+{"lane": "l7-methods", "executor": "agy", "query": "Europe PMC: \"COPOD\" AND (\"copula\" OR \"outlier\") AND PUB_YEAR:2026"}
+{"lane": "l7-methods", "executor": "agy", "query": "Europe PMC: \"ECOD\" AND (\"empirical cumulative\" OR \"outlier\") AND PUB_YEAR:2026"}
+{"lane": "l7-methods", "executor": "agy", "query": "NCBI PMC: (\"PyOD\" OR \"pyod.models\") AND (\"2026/09/15\"[PDat] : \"3000\"[PDat])"}
+{"lane": "l7-methods", "executor": "agy", "query": "NCBI PMC: \"Therapeutics Data Commons\" AND (\"2026/09/15\"[PDat] : \"3000\"[PDat])"}
+{"lane": "l7-methods", "executor": "agy", "query": "NCBI PMC: \"ADBench\" AND (\"2026/09/15\"[PDat] : \"3000\"[PDat])"}
+{"lane": "l7-methods", "executor": "agy", "query": "NCBI PMC: \"PyGOD\" AND (\"2026/09/15\"[PDat] : \"3000\"[PDat])"}
+{"lane": "l7-methods", "executor": "agy", "query": "NCBI PMC: \"SUOD\" AND (\"2026/09/15\"[PDat] : \"3000\"[PDat])"}
+{"lane": "l7-methods", "executor": "agy", "query": "NCBI PMC: \"TODS\" AND (\"2026/09/15\"[PDat] : \"3000\"[PDat])"}
+{"lane": "l7-methods", "executor": "agy", "query": "CrossRef: \"PyOD\" filter:from-pub-date:2026-09-15"}
+{"lane": "l7-methods", "executor": "agy", "query": "CrossRef: \"Therapeutics Data Commons\" filter:from-pub-date:2026-09-15"}
+{"lane": "l7-methods", "executor": "agy", "query": "CrossRef: PyOD filter:from-created-date:2026-09-15"}
+{"lane": "l7-methods", "executor": "agy", "query": "CrossRef: ADBench filter:from-created-date:2026-09-15"}
+{"lane": "l7-methods", "executor": "agy", "query": "CrossRef: PyGOD filter:from-created-date:2026-09-15"}
+{"lane": "l7-methods", "executor": "agy", "query": "CrossRef: TODS outlier filter:from-created-date:2026-09-15"}
+{"lane": "l7-methods", "executor": "agy", "query": "CrossRef: SUOD outlier filter:from-created-date:2026-09-15"}
+{"lane": "l7-methods", "executor": "agy", "query": "CrossRef: COPOD outlier filter:from-created-date:2026-09-15"}
+{"lane": "l7-methods", "executor": "agy", "query": "CrossRef: ECOD outlier filter:from-created-date:2026-09-15"}
+{"lane": "l7-methods", "executor": "agy", "query": "CrossRef: Therapeutics Data Commons filter:from-created-date:2026-09-15"}
+{"lane": "l7-methods", "executor": "agy", "query": "OpenAlex: PyOD filter:from_publication_date:2026-09-15"}
+{"lane": "l7-methods", "executor": "agy", "query": "OpenAlex: ADBench filter:from_publication_date:2026-09-15"}
+{"lane": "l7-methods", "executor": "agy", "query": "OpenAlex: PyGOD filter:from_publication_date:2026-09-15"}
+{"lane": "l7-methods", "executor": "agy", "query": "OpenAlex: \"SUOD\" outlier filter:from_publication_date:2026-09-15"}
+{"lane": "l7-methods", "executor": "agy", "query": "OpenAlex: \"TODS\" outlier filter:from_publication_date:2026-09-15"}
+{"lane": "l7-methods", "executor": "agy", "query": "OpenAlex: \"Therapeutics Data Commons\" filter:from_publication_date:2026-09-15"}
+{"lane": "new-works", "executor": "agy", "query": "\"FrontierPhysics\""}
+{"lane": "new-works", "executor": "agy", "query": "site:aiweekly.co FrontierPhysics"}
+{"lane": "new-works", "executor": "agy", "query": "\"FrontierPhysics\" site:youtube.com"}
+{"lane": "new-works", "executor": "agy", "query": "\"FrontierPhysics\" -site:arxiv.org -site:alphaxiv.org -site:huggingface.co -site:aiweekly.co -site:youtube.com"}
+{"lane": "new-works", "executor": "agy", "query": "\"FrontierPhysics\" site:x.com OR site:twitter.com"}
+{"lane": "new-works", "executor": "agy", "query": "\"Is Your Long-Horizon Benchmark Really Deep?\""}
+{"lane": "new-works", "executor": "agy", "query": "\"Is Your Long-Horizon Benchmark Really Deep\" -site:arxiv.org -site:github.com/AlanRosston -site:alphaxiv.org -site:huggingface.co"}
+{"lane": "new-works", "executor": "agy", "query": "\"2611.01927\""}
+{"lane": "new-works", "executor": "agy", "query": "\"Measuring and Synthesizing Depth in Terminal Tasks\""}
+{"lane": "new-works", "executor": "agy", "query": "\"AlanRosston/Depth\" OR \"Measuring and Synthesizing Depth\" -site:github.com/AlanRosston/Depth"}
+{"lane": "new-works", "executor": "agy", "query": "\"PersonaCUABench\""}
+{"lane": "new-works", "executor": "agy", "query": "\"PersonaCUABench\" -site:arxiv.org -site:github.com/MatrAIx-ai -site:matraix.ai"}
+{"lane": "new-works", "executor": "agy", "query": "\"agentpile\""}
+{"lane": "new-works", "executor": "agy", "query": "\"agentpile\" -site:github.com/yzhao062 -site:pypi.org"}
+{"lane": "new-works", "executor": "agy", "query": "\"import agentpile\" OR \"from agentpile\" OR \"agentpile\" site:github.com -site:github.com/yzhao062/agentpile"}
+{"lane": "new-works", "executor": "agy", "query": "\"agentpile\" site:github.com -site:github.com/yzhao062"}
+{"lane": "new-works", "executor": "agy", "query": "site:arxiv.org \"FrontierPhysics\""}
+{"lane": "new-works", "executor": "agy", "query": "site:arxiv.org \"2611.06910\""}
+{"lane": "new-works", "executor": "agy", "query": "site:arxiv.org \"PersonaCUABench\""}
+{"lane": "new-works", "executor": "agy", "query": "site:arxiv.org \"PersonaCUABench\" -2610.22990"}
+{"lane": "new-works", "executor": "agy", "query": "site:bsky.app \"FrontierPhysics\""}
+{"lane": "new-works", "executor": "agy", "query": "site:bsky.app \"2611.01927\""}
+{"lane": "new-works", "executor": "agy", "query": "site:bsky.app \"Long-Horizon Benchmark Really Deep\""}
+{"lane": "new-works", "executor": "agy", "query": "\"FrontierPhysics\" site:weixin.qq.com OR site:zhihu.com"}
+{"lane": "new-works", "executor": "agy", "query": "\"FrontierPhysics\" site:jiqizhixin.com OR site:qbitai.com OR site:xinzhiyuan.com"}
+{"lane": "new-works", "executor": "agy", "query": "\"PersonaCUABench\" site:zhihu.com OR site:weixin.qq.com"}
+{"lane": "new-works", "executor": "agy", "query": "\"Is Your Long-Horizon Benchmark Really Deep\" site:zhihu.com OR site:weixin.qq.com"}
+{"lane": "new-works", "executor": "agy", "query": "\"FrontierPhysics\" site:reddit.com"}
+{"lane": "new-works", "executor": "agy", "query": "site:reddit.com FrontierPhysics"}
+{"lane": "new-works", "executor": "agy", "query": "\"FrontierPhysics\" site:news.ycombinator.com"}
+{"lane": "new-works", "executor": "agy", "query": "\"PersonaCUABench\" site:news.ycombinator.com"}
+{"lane": "new-works", "executor": "agy", "query": "\"Is Your Long-Horizon Benchmark Really Deep\" site:news.ycombinator.com"}
+{"lane": "new-works", "executor": "agy", "query": "\"agentpile\" site:news.ycombinator.com"}
+{"lane": "new-works", "executor": "agy", "query": "\"FrontierPhysics\" -site:arxiv.org -site:github.com -site:youtube.com -site:aiweekly.co -site:substack.com -site:samcodeman.com -site:pebblous.ai -site:benchmark-radar.org"}
+{"lane": "new-works", "executor": "agy", "query": "\"PersonaCUABench\" -site:arxiv.org -site:github.com -site:bsky.app -site:themoonlight.io -site:paperpeel.com"}
+{"lane": "new-works", "executor": "agy", "query": "\"2611.01927\" -site:arxiv.org -site:github.com -site:benchmark-radar.org"}
+{"lane": "new-works", "executor": "agy", "query": "gh search issues 2611.06910"}
+{"lane": "new-works", "executor": "agy", "query": "gh search code FrontierPhysics"}
+{"lane": "new-works", "executor": "agy", "query": "gh search issues FrontierPhysics"}
+{"lane": "new-works", "executor": "agy", "query": "gh search issues 2611.01927"}
+{"lane": "new-works", "executor": "agy", "query": "gh search code 2611.01927"}
+{"lane": "new-works", "executor": "agy", "query": "gh search issues PersonaCUABench"}
+{"lane": "new-works", "executor": "agy", "query": "gh search code PersonaCUABench"}
+{"lane": "new-works", "executor": "agy", "query": "gh search issues 2610.22990"}
+{"lane": "new-works", "executor": "agy", "query": "gh search code agentpile"}
+{"lane": "patents", "executor": "agy", "query": "site:patents.google.com \"PyOD\" after:publication:2026-10-15"}
+{"lane": "patents", "executor": "agy", "query": "site:patents.google.com \"PyOD\" \"2026\""}
+{"lane": "patents", "executor": "agy", "query": "site:patents.google.com \"pyod\" \"2026\""}
+{"lane": "patents", "executor": "agy", "query": "site:patents.google.com \"PyOD\" \"2026-10\" OR \"2026-11\""}
+{"lane": "patents", "executor": "agy", "query": "site:patents.justia.com \"PyOD\""}
+{"lane": "patents", "executor": "agy", "query": "\"PyOD\" patent \"2026\""}
+{"lane": "patents", "executor": "agy", "query": "\"ECOD\" \"outlier detection\" patent 2026"}
+{"lane": "patents", "executor": "agy", "query": "site:patents.google.com \"ECOD\" \"outlier\" \"2026\""}
+{"lane": "patents", "executor": "agy", "query": "site:patents.google.com \"COPOD\" \"outlier\""}
+{"lane": "patents", "executor": "agy", "query": "site:patents.google.com \"Therapeutics Data Commons\""}
+{"lane": "patents", "executor": "agy", "query": "\"Therapeutics Data Commons\" patent 2026"}
+{"lane": "patents", "executor": "agy", "query": "\"PyOD\" patent \"October 2026\" OR \"November 2026\""}
+{"lane": "patents", "executor": "agy", "query": "site:freepatentsonline.com \"PyOD\""}
+{"lane": "patents", "executor": "agy", "query": "\"Yue Zhao\" \"outlier\" patent"}
+{"lane": "patents", "executor": "agy", "query": "\"TrustLLM\" patent"}
+{"lane": "patents", "executor": "agy", "query": "\"TrustLLM\" site:patents.google.com"}
+{"lane": "patents", "executor": "agy", "query": "\"PyGOD\" site:patents.google.com"}
+{"lane": "patents", "executor": "agy", "query": "\"PyGOD\" patent"}
+{"lane": "patents", "executor": "agy", "query": "site:patents.google.com \"ADBench\""}
+{"lane": "patents", "executor": "agy", "query": "\"US202603\" \"PyOD\" OR \"ECOD\" OR \"COPOD\" OR \"TODS\" OR \"ADBench\""}
+{"lane": "patents", "executor": "agy", "query": "\"US2026\" \"PyOD\""}
+{"lane": "patents", "executor": "agy", "query": "\"patent application\" \"PyOD\" \"2026\""}
+{"lane": "patents", "executor": "agy", "query": "site:patents.justia.com \"PyOD\" 2026"}
+{"lane": "patents", "executor": "agy", "query": "\"PyOD\" \"October 2026\" patent OR \"November 2026\" patent"}
+{"lane": "patents", "executor": "agy", "query": "\"12770489\" patent"}
+{"lane": "patents", "executor": "agy", "query": "\"12770489\" \"PyOD\" OR \"ECOD\" OR \"COPOD\" OR \"outlier\""}
+{"lane": "patents", "executor": "agy", "query": "\"12755093\" patent"}
+{"lane": "patents", "executor": "agy", "query": "\"PyOD\" espacenet"}
+{"lane": "patents", "executor": "agy", "query": "site:worldwide.espacenet.com \"PyOD\" OR \"ECOD\" OR \"COPOD\""}
+{"lane": "patents", "executor": "agy", "query": "site:patentscope.wipo.int \"PyOD\" OR \"ECOD\" OR \"COPOD\""}
+{"lane": "patents", "executor": "agy", "query": "\"Yue Zhao\" \"outlier\" patent 2026"}
+{"lane": "patents", "executor": "agy", "query": "\"Therapeutics Data Commons\" \"patent\" \"2026\""}
+{"lane": "patents", "executor": "agy", "query": "\"CN12\" \"PyOD\""}
+{"lane": "patents", "executor": "agy", "query": "\"CN12\" \"PyOD\" 专利"}
+{"lane": "patents", "executor": "agy", "query": "\"CN119644151A\""}
+{"lane": "patents", "executor": "agy", "query": "\"CN122\" OR \"CN123\" \"PyOD\""}
+{"lane": "patents", "executor": "agy", "query": "site:eureka.patsnap.com \"PyOD\""}
+{"lane": "patents", "executor": "agy", "query": "site:eureka.patsnap.com \"ECOD\""}
+{"lane": "patents", "executor": "agy", "query": "\"CN119628855A\""}
+{"lane": "patents", "executor": "agy", "query": "site:eureka.patsnap.com \"COPOD\""}
+{"lane": "patents", "executor": "agy", "query": "site:eureka.patsnap.com \"PyGOD\""}
+{"lane": "patents", "executor": "agy", "query": "site:patents.google.com/patent/ \"ECOD\" \"outlier\" 2026"}
+{"lane": "patents", "executor": "agy", "query": "\"CN118939736B\""}
+{"lane": "patents", "executor": "agy", "query": "\"2026-10-22\" site:patents.google.com \"outlier\" OR \"anomaly\""}
+{"lane": "patents", "executor": "agy", "query": "\"US2026032\" OR \"US2026033\" \"outlier\" OR \"anomaly\""}
+{"lane": "patents", "executor": "agy", "query": "\"US20260320231A1\""}
+{"lane": "patents", "executor": "agy", "query": "\"20260220326\" patent"}
+{"lane": "patents", "executor": "agy", "query": "\"US2026032\" OR \"US2026033\" \"PyOD\" OR \"ECOD\" OR \"COPOD\""}
+{"lane": "patents", "executor": "agy", "query": "\"US2026034\" OR \"US2026035\" \"PyOD\" OR \"ECOD\" OR \"COPOD\""}
+{"lane": "patents", "executor": "agy", "query": "\"PyOD\" \"202603\""}
+{"lane": "patents", "executor": "agy", "query": "site:patents.justia.com/patent/202603"}
+{"lane": "patents", "executor": "agy", "query": "site:patents.justia.com \"outlier\" \"2026\""}
+{"lane": "patents", "executor": "agy", "query": "\"20260341026\" patent"}
+{"lane": "patents", "executor": "agy", "query": "\"20260341026\" \"PyOD\" OR \"ECOD\" OR \"COPOD\" OR \"ADBench\""}
+{"lane": "patents", "executor": "agy", "query": "\"20260341026\" \"PyOD\" OR \"Zhao\""}
+{"lane": "patents", "executor": "agy", "query": "\"12761273\" patent"}
+{"lane": "patents", "executor": "agy", "query": "site:patents.justia.com/patent/ \"November 5, 2026\" \"outlier\""}
+{"lane": "patents", "executor": "agy", "query": "\"20260348754\" \"PyOD\" OR \"TODS\" OR \"outlier\""}
+{"lane": "patents", "executor": "agy", "query": "\"CN122\" 专利 \"ECOD\" OR \"COPOD\""}
+{"lane": "patents", "executor": "agy", "query": "site:patents.google.com/patent/CN \"PyOD\""}
+{"lane": "patents", "executor": "agy", "query": "site:patents.google.com/patent/CN \"ECOD\""}
+{"lane": "patents", "executor": "agy", "query": "site:patents.google.com/patent/CN \"COPOD\""}
+{"lane": "patents", "executor": "agy", "query": "site:patents.google.com/patent/CN \"ADBench\""}
+{"lane": "patents", "executor": "agy", "query": "site:patents.google.com/patent/CN \"PyGOD\""}
+{"lane": "patents", "executor": "agy", "query": "site:patents.google.com/patent/CN \"TODS\""}
+{"lane": "patents", "executor": "agy", "query": "site:patents.google.com \"Yue Zhao\" \"outlier\" OR \"anomaly\""}
+{"lane": "patents", "executor": "agy", "query": "site:patents.justia.com \"US2026\" \"outlier detection\""}
+{"lane": "patents", "executor": "agy", "query": "\"12670403\" patent"}
+{"lane": "patents", "executor": "agy", "query": "site:patents.google.com/patent/ \"ANONYMIZING TIME-SERIES DATA USING MATRIX PROFILE\""}
+{"lane": "patents", "executor": "agy", "query": "\"CatchBench\" patent"}
+{"lane": "patents", "executor": "agy", "query": "\"agent-audit\" patent OR \"Aegis: No Tool Call Left Unchecked\" patent"}
+{"lane": "patents", "executor": "agy", "query": "\"TrustLLM\" patent 2026"}
+{"lane": "patents", "executor": "agy", "query": "\"ADBench\" patent 2026"}
+{"lane": "patents", "executor": "agy", "query": "\"Therapeutics Data Commons\" patent \"2026-10\" OR \"2026-11\""}
+{"lane": "patents", "executor": "agy", "query": "\"COPOD\" \"2026\" site:patents.google.com"}
+{"lane": "press-tools", "executor": "agy", "query": "\"PyOD\" site:databricks.com"}
+{"lane": "press-tools", "executor": "agy", "query": "\"PyOD\" site:aws.amazon.com/blogs OR site:docs.aws.amazon.com"}
+{"lane": "press-tools", "executor": "agy", "query": "\"PyOD\" site:learn.microsoft.com"}
+{"lane": "press-tools", "executor": "agy", "query": "\"PyOD\" site:cloud.google.com"}
+{"lane": "press-tools", "executor": "agy", "query": "\"PyOD\" site:snowflake.com OR site:docs.snowflake.com"}
+{"lane": "press-tools", "executor": "agy", "query": "\"PyOD\" site:oracle.com"}
+{"lane": "press-tools", "executor": "agy", "query": "\"TrustLLM\" site:huggingface.co/blog"}
+{"lane": "press-tools", "executor": "agy", "query": "\"TrustLLM\" site:marktechpost.com"}
+{"lane": "press-tools", "executor": "agy", "query": "\"TrustLLM\" \"2026\" blog OR security OR framework"}
+{"lane": "press-tools", "executor": "agy", "query": "\"Therapeutics Data Commons\" OR \"tdcommons.ai\" blog OR documentation OR release"}
+{"lane": "press-tools", "executor": "agy", "query": "\"ADBench\" site:databricks.com OR site:snowflake.com OR site:aws.amazon.com OR site:cloud.google.com"}
+{"lane": "press-tools", "executor": "agy", "query": "\"PyOD\" site:sap.com OR site:community.sap.com"}
+{"lane": "press-tools", "executor": "agy", "query": "\"PyOD\" site:elastic.co"}
+{"lane": "press-tools", "executor": "agy", "query": "\"PyOD\" site:splunk.com"}
+{"lane": "press-tools", "executor": "agy", "query": "\"Aegis\" \"No Tool Call Left Unchecked\""}
+{"lane": "press-tools", "executor": "agy", "query": "site:venturebeat.com \"your-ai-agents-can-execute-every-tool-call-correctly\""}
+{"lane": "press-tools", "executor": "agy", "query": "site:venturebeat.com/orchestration/your-ai-agents-can-execute-every-tool-call-correctly \"Aegis\""}
+{"lane": "press-tools", "executor": "agy", "query": "\"agent-audit\" OR \"Agent Audit\" \"Yue Zhao\" OR \"USC\" OR \"HeadyZhang\""}
+{"lane": "press-tools", "executor": "agy", "query": "\"Agent Audit\" \"HeadyZhang\" OR \"Haiyue Zhang\" -site:github.com -site:arxiv.org"}
+{"lane": "press-tools", "executor": "agy", "query": "\"agent-audit\" OR \"agent_audit\" site:medium.com OR site:substack.com OR site:dev.to"}
+{"lane": "press-tools", "executor": "agy", "query": "\"CatchBench\""}
+{"lane": "press-tools", "executor": "agy", "query": "\"CatchBench\" -site:github.com -site:alphaxiv.org -site:arxiv.org"}
+{"lane": "press-tools", "executor": "agy", "query": "\"Auditable Agents\" \"Auditability Card\""}
+{"lane": "press-tools", "executor": "agy", "query": "\"Auditable Claims about AI Agents\""}
+{"lane": "press-tools", "executor": "agy", "query": "\"agent-risk\" \"AI agents\" OR \"Yue Zhao\" OR \"2610.16280\""}
+{"lane": "press-tools", "executor": "agy", "query": "\"2610.16280\" OR \"agent-risk\" -site:github.com/yzhao062 -site:arxiv.org"}
+{"lane": "press-tools", "executor": "agy", "query": "\"DoxBench\" OR \"Doxing via the Lens\""}
+{"lane": "press-tools", "executor": "agy", "query": "\"DoxBench\" OR \"Doxing via the Lens\" -site:arxiv.org -site:github.com -site:github.io"}
+{"lane": "press-tools", "executor": "agy", "query": "\"No Attacker Needed\" \"Cross-User Contamination\""}
+{"lane": "press-tools", "executor": "agy", "query": "\"No Attacker Needed\" site:promptfoo.dev OR site:substack.com OR site:medium.com"}
+{"lane": "press-tools", "executor": "agy", "query": "\"LangSkills\" OR \"LabRAI/LangSkills\""}
+{"lane": "press-tools", "executor": "agy", "query": "\"anywhere-agents\""}
+{"lane": "press-tools", "executor": "agy", "query": "\"agent-style\" \"Yue Zhao\" OR \"yzhao062\""}
+{"lane": "press-tools", "executor": "agy", "query": "\"TrustLLM\" \"October 2026\" OR \"November 2026\""}
+{"lane": "press-tools", "executor": "agy", "query": "\"Therapeutics Data Commons\" \"2026\" blog OR news OR platform"}
+{"lane": "press-tools", "executor": "agy", "query": "\"PyOD\" site:packtpub.com OR site:oreilly.com"}
+{"lane": "press-tools", "executor": "agy", "query": "site:oreilly.com \"PyOD\" \"2026\""}
+{"lane": "press-tools", "executor": "agy", "query": "\"PyOD 3\" OR \"PyOD 3.0\""}
+{"lane": "press-tools", "executor": "agy", "query": "\"PyOD 3\" OR \"PyOD 3.0\" -site:github.com -site:readthedocs.io -site:pyod.dev"}
+{"lane": "press-tools", "executor": "agy", "query": "\"FrontierPhysics\" \"Evaluating Agents for End-to-End Physics Research\""}
+{"lane": "press-tools", "executor": "agy", "query": "\"PersonaCUABench\""}
+{"lane": "press-tools", "executor": "agy", "query": "site:aiweekly.co \"PersonaCUABench\""}
+{"lane": "press-tools", "executor": "agy", "query": "site:aiweekly.co \"Grid-Bench\" OR \"AI4Fire\" OR \"SynCo\" OR \"agent-risk\" OR \"CatchBench\" OR \"Aegis\" OR \"TrustLLM\""}
+{"lane": "press-tools", "executor": "agy", "query": "\"Grid-Bench\" \"Can LLMs Predict How Discrete Worlds Change\""}
+{"lane": "press-tools", "executor": "agy", "query": "\"AI4Fire\" \"Evaluating Large Language Models on Wildfire Tasks\""}
+{"lane": "press-tools", "executor": "agy", "query": "\"SynCo\" \"Data Synthesis Co-Training\""}
+{"lane": "press-tools", "executor": "agy", "query": "\"JevOut\" \"Natural Context Can Flip Decision Models\""}
+{"lane": "press-tools", "executor": "agy", "query": "\"AutoDavis\" \"Automatic and Dynamic Evaluation\""}
+{"lane": "press-tools", "executor": "agy", "query": "\"GEO-Bench\" \"Generative Engine Optimization\""}
+{"lane": "press-tools", "executor": "agy", "query": "\"CHI-Bench\" \"Healthcare Workflows\""}
+{"lane": "press-tools", "executor": "agy", "query": "\"CHI-Bench\" \"Can AI Agents Automate End-to-End, Long-Horizon, Policy-Rich Healthcare Workflows\""}
+{"lane": "press-tools", "executor": "agy", "query": "\"WeClawArena\""}
+{"lane": "press-tools", "executor": "agy", "query": "\"The Autonomy Tax\" \"Defense Training Breaks LLM Agents\""}
+{"lane": "press-tools", "executor": "agy", "query": "\"agentpile\""}
+{"lane": "press-tools", "executor": "agy", "query": "site:piwheels.org \"agentpile\""}
+{"lane": "press-tools", "executor": "agy", "query": "\"agentpile\" site:libraries.io"}
+{"lane": "press-tools", "executor": "agy", "query": "\"awesome-auditable-ai\""}
+{"lane": "press-tools", "executor": "agy", "query": "\"auditable\" \"system of record\" \"Yue Zhao\" OR \"FORTIS\""}
+{"lane": "press-tools", "executor": "agy", "query": "\"AEGIS: No Tool Call Left Unchecked\" -site:arxiv.org -site:github.com -site:alphaxiv.org"}
+{"lane": "press-tools", "executor": "agy", "query": "site:towardsdatascience.com \"PyOD\" OR \"TrustLLM\" OR \"ADBench\" \"2026\""}
+{"lane": "press-tools", "executor": "agy", "query": "site:snyk.io/blog \"agent\""}
+{"lane": "press-tools", "executor": "agy", "query": "site:trailofbits.com/blog \"agent\""}
+{"lane": "press-tools", "executor": "agy", "query": "\"TrustLLM\" site:substack.com"}
+{"lane": "press-tools", "executor": "agy", "query": "\"PyGOD\" \"graph outlier\" OR \"graph anomaly\""}
+{"lane": "press-tools", "executor": "agy", "query": "\"TODS\" \"automated time series outlier detection\""}
+{"lane": "press-tools", "executor": "agy", "query": "\"SUOD\" \"Accelerating Large-scale Unsupervised Heterogeneous Outlier Detection\""}
+{"lane": "press-tools", "executor": "agy", "query": "\"AD-AGENT: A Multi-agent Framework for End-to-end Anomaly Detection\""}
+{"lane": "press-tools", "executor": "agy", "query": "\"LangSkills\" \"LabRAI\" OR \"skill library\" OR \"agent skills\""}
+{"lane": "press-tools", "executor": "agy", "query": "\"FORTIS: Benchmarking Over-Privilege in Agent Skills\" -site:arxiv.org -site:github.com"}
+{"lane": "press-tools", "executor": "agy", "query": "\"FORTIS: Benchmarking Over-Privilege in Agent Skills\" site:substack.com OR site:medium.com OR site:securityweek.com"}
+{"lane": "press-tools", "executor": "agy", "query": "\"HeadyZhang/agent-audit\""}
+{"lane": "press-tools", "executor": "agy", "query": "\"Justin0504/Aegis\""}
+{"lane": "press-tools", "executor": "agy", "query": "site:darkreading.com \"PyOD\" OR \"TrustLLM\" OR \"Aegis\" OR \"agent\""}
+{"lane": "press-tools", "executor": "agy", "query": "site:securityboulevard.com \"agent\" \"tool\" \"firewall\" OR \"audit\""}
+{"lane": "press-tools", "executor": "agy", "query": "site:infoq.com \"PyOD\" OR \"TrustLLM\""}
+{"lane": "sl-academic", "executor": "agy", "query": "\"Auditable Agents\" \"arXiv:2604.05485\""}
+{"lane": "sl-academic", "executor": "agy", "query": "\"Auditable Agents\" site:openreview.net/forum"}
+{"lane": "sl-academic", "executor": "agy", "query": "\"2604.05485\" OR \"2603.12621\" OR \"2608.22808\" citing OR cited OR reference -USC"}
+{"lane": "sl-academic", "executor": "agy", "query": "\"Auditable Agents\" \"arXiv\" citing OR \"cited by\" OR \"references\" 2026"}
+{"lane": "sl-academic", "executor": "agy", "query": "\"CatchBench\" OR \"CatchBench: When Can an Agent Failure Be Caught\" citing OR cited OR reference OR baseline -USC"}
+{"lane": "sl-academic", "executor": "agy", "query": "\"2610.07459\" OR \"2610.16280\" citing OR \"cited by\" OR \"references\""}
+{"lane": "sl-academic", "executor": "agy", "query": "https://api.openalex.org/works?filter=cites:W7151862758"}
+{"lane": "sl-academic", "executor": "agy", "query": "https://api.openalex.org/works?filter=cites:W7221029425"}
+{"lane": "sl-academic", "executor": "agy", "query": "https://api.openalex.org/works?filter=cites:W7221771427"}
+{"lane": "sl-academic", "executor": "agy", "query": "https://api.openalex.org/works?filter=cites:W7136496478"}
+{"lane": "sl-academic", "executor": "agy", "query": "https://api.openalex.org/works?filter=cites:W7140324317"}
+{"lane": "sl-academic", "executor": "agy", "query": "https://api.openalex.org/works?filter=cites:W7138892043"}
+{"lane": "sl-academic", "executor": "agy", "query": "https://api.openalex.org/works?filter=cites:W7165666946"}
+{"lane": "sl-academic", "executor": "agy", "query": "https://api.openalex.org/works?filter=cites:W7160935315"}
+{"lane": "sl-academic", "executor": "agy", "query": "https://api.openalex.org/works?filter=cites:W7172487189"}
+{"lane": "sl-academic", "executor": "agy", "query": "https://api.openalex.org/works?filter=cites:W7204175720"}
+{"lane": "sl-academic", "executor": "agy", "query": "https://api.openalex.org/works?filter=from_publication_date:2026-10-15&search=\"Auditable Agents\""}
+{"lane": "sl-academic", "executor": "agy", "query": "https://api.openalex.org/works?filter=from_publication_date:2026-10-15&search=\"Auditable Claims about AI Agents\""}
+{"lane": "sl-academic", "executor": "agy", "query": "https://api.openalex.org/works?filter=from_publication_date:2026-10-15&search=\"agent-risk\""}
+{"lane": "sl-academic", "executor": "agy", "query": "https://api.openalex.org/works?filter=from_publication_date:2026-10-15&search=\"Aegis: No Tool Call Left Unchecked\""}
+{"lane": "sl-academic", "executor": "agy", "query": "https://api.openalex.org/works?filter=from_publication_date:2026-10-15&search=\"agent-audit\""}
+{"lane": "sl-academic", "executor": "agy", "query": "https://api.openalex.org/works?filter=from_publication_date:2026-10-15&search=\"Implicit Execution Tracing\""}
+{"lane": "sl-academic", "executor": "agy", "query": "https://api.openalex.org/works?filter=from_publication_date:2026-10-15&search=\"CatchBench\""}
+{"lane": "sl-academic", "executor": "agy", "query": "https://api.openalex.org/works?filter=from_publication_date:2026-10-15&search=\"WeClawArena\""}
+{"lane": "sl-academic", "executor": "agy", "query": "https://api.openalex.org/works?filter=from_publication_date:2026-10-15&search=\"2604.05485\""}
+{"lane": "sl-academic", "executor": "agy", "query": "https://api.openalex.org/works?filter=from_publication_date:2026-10-15&search=\"2610.07459\""}
+{"lane": "sl-academic", "executor": "agy", "query": "https://api.openalex.org/works?filter=from_publication_date:2026-10-15&search=\"2610.16280\""}
+{"lane": "sl-academic", "executor": "agy", "query": "https://api.openalex.org/works?filter=from_publication_date:2026-10-15&search=\"2603.12621\""}
+{"lane": "sl-academic", "executor": "agy", "query": "https://api.openalex.org/works?filter=from_publication_date:2026-10-15&search=\"2603.22853\""}
+{"lane": "sl-academic", "executor": "agy", "query": "https://api.openalex.org/works?filter=from_publication_date:2026-10-15&search=\"2603.17445\""}
+{"lane": "sl-academic", "executor": "agy", "query": "https://api.openalex.org/works?filter=from_publication_date:2026-10-15&search=\"2606.22741\""}
+{"lane": "sl-academic", "executor": "agy", "query": "https://api.openalex.org/works?filter=from_publication_date:2026-10-15&search=\"2605.09163\""}
+{"lane": "sl-academic", "executor": "agy", "query": "https://api.openalex.org/works?filter=from_publication_date:2026-10-15&search=\"2608.03499\""}
+{"lane": "sl-academic", "executor": "agy", "query": "https://api.openalex.org/works?filter=from_publication_date:2026-10-15&search=\"2608.22808\""}
+{"lane": "sl-academic", "executor": "agy", "query": "https://api.openalex.org/works?search=\"yzhao062/catchbench\""}
+{"lane": "sl-academic", "executor": "agy", "query": "https://api.openalex.org/works?search=\"Justin0504/Aegis\""}
+{"lane": "sl-academic", "executor": "agy", "query": "https://api.openalex.org/works?search=\"HeadyZhang/agent-audit\""}
+{"lane": "sl-academic", "executor": "agy", "query": "https://api.openalex.org/works?search=\"yzhao062/agentpile\""}
+{"lane": "sl-academic", "executor": "agy", "query": "https://api.openalex.org/works?search=\"agentpile\""}
+{"lane": "sl-academic", "executor": "agy", "query": "http://export.arxiv.org/api/query?search_query=all:\"Auditable Agents\""}
+{"lane": "sl-academic", "executor": "agy", "query": "http://export.arxiv.org/api/query?search_query=all:\"2604.05485\""}
+{"lane": "sl-academic", "executor": "agy", "query": "http://export.arxiv.org/api/query?search_query=all:\"2610.07459\""}
+{"lane": "sl-academic", "executor": "agy", "query": "http://export.arxiv.org/api/query?search_query=all:\"2610.16280\""}
+{"lane": "sl-academic", "executor": "agy", "query": "http://export.arxiv.org/api/query?search_query=all:\"2603.12621\""}
+{"lane": "sl-academic", "executor": "agy", "query": "http://export.arxiv.org/api/query?search_query=all:\"2603.22853\""}
+{"lane": "sl-academic", "executor": "agy", "query": "http://export.arxiv.org/api/query?search_query=all:\"2603.17445\""}
+{"lane": "sl-academic", "executor": "agy", "query": "http://export.arxiv.org/api/query?search_query=all:\"2606.22741\""}
+{"lane": "sl-academic", "executor": "agy", "query": "http://export.arxiv.org/api/query?search_query=all:\"2605.09163\""}
+{"lane": "sl-academic", "executor": "agy", "query": "http://export.arxiv.org/api/query?search_query=all:\"2608.03499\""}
+{"lane": "sl-academic", "executor": "agy", "query": "http://export.arxiv.org/api/query?search_query=all:\"2608.22808\""}
+{"lane": "sl-academic", "executor": "agy", "query": "http://export.arxiv.org/api/query?search_query=all:CatchBench"}
+{"lane": "sl-academic", "executor": "agy", "query": "http://export.arxiv.org/api/query?search_query=all:WeClawArena"}
+{"lane": "sl-academic", "executor": "agy", "query": "http://export.arxiv.org/api/query?search_query=all:\"agent-audit\""}
+{"lane": "sl-academic", "executor": "agy", "query": "http://export.arxiv.org/api/query?search_query=all:\"agent-risk\""}
+{"lane": "sl-academic", "executor": "agy", "query": "http://export.arxiv.org/api/query?search_query=all:\"Justin0504/Aegis\""}
+{"lane": "sl-academic", "executor": "agy", "query": "http://export.arxiv.org/api/query?search_query=all:\"HeadyZhang/agent-audit\""}
+{"lane": "sl-academic", "executor": "agy", "query": "http://export.arxiv.org/api/query?search_query=all:\"yzhao062/grade\""}
+{"lane": "sl-academic", "executor": "agy", "query": "http://export.arxiv.org/api/query?search_query=all:\"yzhao062/catchbench\""}
+{"lane": "sl-academic", "executor": "agy", "query": "http://export.arxiv.org/api/query?search_query=all:\"yzhao062/auditable\""}
+{"lane": "sl-academic", "executor": "agy", "query": "http://export.arxiv.org/api/query?search_query=all:Aegis AND all:tool"}
+{"lane": "sl-academic", "executor": "agy", "query": "http://export.arxiv.org/api/query?search_query=all:GRADE AND all:agent"}
+{"lane": "sl-standards", "executor": "agy", "query": "site:aas-1.org"}
+{"lane": "sl-standards", "executor": "agy", "query": "\"aas-1.org\" OR \"Agent Auditability Standard\""}
+{"lane": "sl-standards", "executor": "agy", "query": "\"2604.05485\" OR \"2610.07459\" OR \"2610.16280\" OR \"2603.12621\" OR \"2603.22853\""}
+{"lane": "sl-standards", "executor": "agy", "query": "\"2603.17445\" OR \"2606.22741\" OR \"2605.09163\" OR \"2608.03499\" OR \"2608.22808\""}
+{"lane": "sl-standards", "executor": "agy", "query": "site:nist.gov (\"2604.05485\" OR \"2610.07459\" OR \"2610.16280\" OR \"2603.12621\" OR \"2603.22853\" OR \"2603.17445\" OR \"2606.22741\" OR \"2605.09163\" OR \"2608.03499\" OR \"2608.22808\")"}
+{"lane": "sl-standards", "executor": "agy", "query": "site:nist.gov \"2604.05485\" OR \"2603.12621\" OR \"2610.07459\""}
+{"lane": "sl-standards", "executor": "agy", "query": "site:nist.gov \"Yue Zhao\" \"agent\""}
+{"lane": "sl-standards", "executor": "agy", "query": "site:nist.gov \"agent\" \"auditing\" OR \"auditability\""}
+{"lane": "sl-standards", "executor": "agy", "query": "site:owasp.org \"Yue Zhao\" OR \"Auditable Agents\" OR \"2604.05485\" OR \"2603.12621\""}
+{"lane": "sl-standards", "executor": "agy", "query": "site:owasp.org \"agent-audit\""}
+{"lane": "sl-standards", "executor": "agy", "query": "site:github.com/OWASP \"2604.05485\" OR \"2603.12621\" OR \"2610.07459\" OR \"2603.22853\""}
+{"lane": "sl-standards", "executor": "agy", "query": "site:cloudsecurityalliance.org \"agent\" OR \"agentic\""}
+{"lane": "sl-standards", "executor": "agy", "query": "site:cloudsecurityalliance.org \"October 2026\" OR \"November 2026\" \"agent\""}
+{"lane": "sl-standards", "executor": "agy", "query": "site:cloudsecurityalliance.org/artifacts/ \"2026\""}
+{"lane": "sl-standards", "executor": "agy", "query": "site:atlas.mitre.org \"agent\" OR \"agentic\""}
+{"lane": "sl-standards", "executor": "agy", "query": "site:atlas.mitre.org \"2026\""}
+{"lane": "sl-standards", "executor": "agy", "query": "\"US AI Safety Institute\" OR \"CAISI\" OR \"UK AI Safety Institute\" \"agent\" \"2026\""}
+{"lane": "sl-standards", "executor": "agy", "query": "\"EU AI Office\" OR \"European AI Office\" \"Article 12\" OR \"record-keeping\" 2026"}
+{"lane": "sl-standards", "executor": "agy", "query": "\"EU AI Office\" \"guidance\" OR \"consultation\" OR \"draft\" \"October 2026\" OR \"November 2026\""}
+{"lane": "sl-standards", "executor": "agy", "query": "\"IMDA\" OR \"Cyber Security Agency of Singapore\" \"agent\" OR \"audit\" 2026"}
+{"lane": "sl-standards", "executor": "agy", "query": "site:imda.gov.sg \"Agentic Testing\" OR \"Tester Accreditation\" 2026"}
+{"lane": "sl-standards", "executor": "agy", "query": "site:imda.gov.sg \"Starter Kit for Testing Agentic Systems\""}
+{"lane": "sl-standards", "executor": "agy", "query": "\"Seven simple steps for log analysis in AI systems\""}
+{"lane": "sl-standards", "executor": "agy", "query": "\"Inspect Scout\" \"transcript analysis\" OR \"Meridian\" OR \"AISI\""}
+{"lane": "sl-standards", "executor": "agy", "query": "\"Inspect Scout\" Meridian Labs date OR \"2026\""}
+{"lane": "sl-standards", "executor": "agy", "query": "\"Safeguards for Agentic Finance at Runtime\" OR \"SAFR\" \"Monetary Authority of Singapore\""}
+{"lane": "sl-standards", "executor": "agy", "query": "\"Agentic Risk & Capability Framework\" OR \"Agentic Risk and Capability Framework\""}
+{"lane": "sl-standards", "executor": "agy", "query": "\"Risks and controls for multi-agent systems\" \"Australia\" OR \"AISI\""}
+{"lane": "sl-standards", "executor": "agy", "query": "\"2604.05485\" OR \"Auditable Agents\" \"citation\" OR \"references\" OR \"standards\""}
+{"lane": "sl-standards", "executor": "agy", "query": "site:accuknox.com/blog \"auditable-ai-agents\""}
+{"lane": "sl-standards", "executor": "agy", "query": "site:accuknox.com \"Auditable AI Agents Must Prove What They Actually Did\" OR \"Atharva Shah\" \"Auditable\""}
+{"lane": "sl-standards", "executor": "agy", "query": "site:nist.gov \"agent\" \"October 2026\" OR \"November 2026\""}
+{"lane": "sl-standards", "executor": "agy", "query": "site:nist.gov \"Design Tenets for Agent Identity Management Systems\""}
+{"lane": "sl-standards", "executor": "agy", "query": "site:nist.gov \"Key Practices for Incident Readiness and Response\""}
+{"lane": "sl-standards", "executor": "agy", "query": "\"2610.07459\""}
+{"lane": "sl-standards", "executor": "agy", "query": "\"Auditable Claims about AI Agents\" -site:arxiv.org -site:alphaxiv.org"}
+{"lane": "sl-standards", "executor": "agy", "query": "\"2610.16280\" OR \"agent-risk\" \"Yue Zhao\""}
+{"lane": "sl-standards", "executor": "agy", "query": "\"No Tool Call Left Unchecked\" -site:arxiv.org -site:github.com/Justin0504/Aegis"}
+{"lane": "sl-standards", "executor": "agy", "query": "site:semanticscholar.org \"Auditable Agents\" \"2604.05485\""}
+{"lane": "sl-standards", "executor": "agy", "query": "\"ISO/IEC\" \"SC 42\" \"agent\" OR \"agents\" 2026"}
+{"lane": "sl-standards", "executor": "agy", "query": "\"ETSI\" \"Securing Artificial Intelligence\" OR \"SAI\" \"agent\" OR \"agents\" 2026"}
+{"lane": "sl-standards", "executor": "agy", "query": "site:standards.ieee.org \"agent\" 2026"}
+{"lane": "sl-standards", "executor": "agy", "query": "\"IEEE\" \"P1968\" \"Agent Systems\" OR \"Governance of Autonomous\""}
+{"lane": "sl-standards", "executor": "agy", "query": "\"P1968\" \"12749\" \"Recommended Practice for the Governance of Autonomous Artificial Intelligence\""}
+{"lane": "sl-standards", "executor": "agy", "query": "site:owasp.org \"Top 10 for Agentic\" OR \"Top 10 for Agentic Applications\" OR \"Agentic Security\""}
+{"lane": "sl-standards", "executor": "agy", "query": "\"Yue Zhao\" \"NIST\" OR \"OWASP\" OR \"ISO\" OR \"IEEE\" OR \"IMDA\" 2026"}
+{"lane": "sl-standards", "executor": "agy", "query": "site:cloudsecurityalliance.org \"audit\" \"agent\" \"2026\""}
+{"lane": "sl-standards", "executor": "agy", "query": "site:digital-strategy.ec.europa.eu \"AI Office\" \"October 2026\" OR \"November 2026\""}
+{"lane": "sl-standards", "executor": "agy", "query": "site:aisi.gov.uk \"October 2026\" OR \"November 2026\""}
+{"lane": "sl-standards", "executor": "agy", "query": "site:aisi.gov.uk \"ReproBAIT\""}
+{"lane": "sl-standards", "executor": "agy", "query": "site:csa.gov.sg \"Agentic\" OR \"Securing Agentic AI\""}
+{"lane": "sl-standards", "executor": "agy", "query": "site:atlas.mitre.org \"Zhao\" OR \"FORTIS\" OR \"2604.05485\" OR \"2603.12621\""}
+{"lane": "sl-standards", "executor": "agy", "query": "site:atlas.mitre.org \"No Tool Call Left Unchecked\" OR \"agent-audit\""}
+{"lane": "sl-standards", "executor": "agy", "query": "\"CatchBench\" -site:arxiv.org -site:github.com/yzhao062"}
+{"lane": "sl-standards", "executor": "agy", "query": "\"WeClawArena\" -site:arxiv.org -site:alphaxiv.org"}
+{"lane": "sl-standards", "executor": "agy", "query": "\"Implicit Execution Tracing\" -site:arxiv.org"}
+{"lane": "sl-standards", "executor": "agy", "query": "\"2606.22741\" -site:arxiv.org -site:github.com/yzhao062"}
+{"lane": "sl-standards", "executor": "agy", "query": "\"2603.22853\" -site:arxiv.org -site:github.com/HeadyZhang"}
+{"lane": "sl-standards", "executor": "agy", "query": "\"2605.09163\" -site:arxiv.org"}
+{"lane": "sl-web", "executor": "agy", "query": "\"2604.05485\" OR \"2610.07459\" OR \"2610.16280\""}
+{"lane": "sl-web", "executor": "agy", "query": "\"2603.12621\" OR \"2603.22853\" OR \"2603.17445\""}
+{"lane": "sl-web", "executor": "agy", "query": "\"2606.22741\" OR \"2605.09163\" OR \"2608.03499\" OR \"2608.22808\""}
+{"lane": "sl-web", "executor": "agy", "query": "\"yzhao062/auditable\" OR \"yzhao062/agentpile\" OR \"yzhao062/awesome-auditable-ai\""}
+{"lane": "sl-web", "executor": "agy", "query": "\"Auditable Claims about AI Agents\""}
+{"lane": "sl-web", "executor": "agy", "query": "site:accuknox.com \"Auditable Claims\" OR \"auditable\""}
+{"lane": "sl-web", "executor": "agy", "query": "site:accuknox.com \"Auditable AI Agents\" OR \"Auditable Agents\""}
+{"lane": "sl-web", "executor": "agy", "query": "site:accuknox.com \"Nian\" OR \"Auditable Agents\""}
+{"lane": "sl-web", "executor": "agy", "query": "accuknox blog \"Auditable AI Agents\" OR \"Auditable Agents\""}
+{"lane": "sl-web", "executor": "agy", "query": "\"Atharva Shah\" \"accuknox.com/blog\" OR \"accuknox\" \"Auditable AI Agents\""}
+{"lane": "sl-web", "executor": "agy", "query": "\"accuknox.com/blog\" \"Auditable AI Agents Must Prove What They Actually Did\""}
+{"lane": "sl-web", "executor": "agy", "query": "site:accuknox.com/blog/ \"auditable\""}
+{"lane": "sl-web", "executor": "agy", "query": "site:nofire.ai \"Auditable\" OR \"Zhao\" OR \"claims\""}
+{"lane": "sl-web", "executor": "agy", "query": "\"2604.05485\""}
+{"lane": "sl-web", "executor": "agy", "query": "site:github.com \"2604.05485\""}
+{"lane": "sl-web", "executor": "agy", "query": "github.com \"2604.05485\""}
+{"lane": "sl-web", "executor": "agy", "query": "\"Aegis: No Tool Call Left Unchecked\""}
+{"lane": "sl-web", "executor": "agy", "query": "site:venturebeat.com \"No Tool Call Left Unchecked\" OR (\"Aegis\" \"tool call\")"}
+{"lane": "sl-web", "executor": "agy", "query": "site:theweatherreport.ai \"Aegis\" OR \"2603.12621\" OR \"Yuan\" OR \"Zhao\""}
+{"lane": "sl-web", "executor": "agy", "query": "site:reddit.com \"No Tool Call Left Unchecked\" OR \"2603.12621\""}
+{"lane": "sl-web", "executor": "agy", "query": "\"CatchBench\""}
+{"lane": "sl-web", "executor": "agy", "query": "\"CatchBench\" -yzhao062 -alphaxiv -arxiv"}
+{"lane": "sl-web", "executor": "agy", "query": "\"agent-risk\" \"Angela Huyue Zhang\" OR \"Alex Yang\" OR \"Zixiang Xu\""}
+{"lane": "sl-web", "executor": "agy", "query": "\"Auditable AI Agents Must Prove What They Actually Did\""}
+{"lane": "sl-web", "executor": "agy", "query": "site:reddit.com \"Auditable Agents\" OR \"Auditable AI Agents\" OR \"2604.05485\""}
+{"lane": "sl-web", "executor": "agy", "query": "site:reddit.com \"Auditability Card\" OR \"Auditable Agents\""}
+{"lane": "sl-web", "executor": "agy", "query": "site:reddit.com inurl:comments \"Auditable Agents\""}
+{"lane": "sl-web", "executor": "agy", "query": "\"When Only the Final Text Survives: Implicit Execution Tracing\""}
+{"lane": "sl-web", "executor": "agy", "query": "site:takara.ai \"Implicit Execution Tracing\" OR \"Nian\" OR \"Zhao\""}
+{"lane": "sl-web", "executor": "agy", "query": "site:takara.ai \"2603.17445\" OR \"When Only the Final Text Survives\""}
+{"lane": "sl-web", "executor": "agy", "query": "\"Risk Assessment for Changes to AI Agents\""}
+{"lane": "sl-web", "executor": "agy", "query": "site:witness.ai \"agent\" OR \"tool\" OR \"audit\""}
+{"lane": "sl-web", "executor": "agy", "query": "\"system of record\" \"agent decisions\" OR \"auditable\""}
+{"lane": "sl-web", "executor": "agy", "query": "site:contro1.com \"agent\" OR \"system of record\" OR \"auditable\""}
+{"lane": "sl-web", "executor": "agy", "query": "site:trussed.ai \"agent\" OR \"system of record\" OR \"auditable\""}
+{"lane": "sl-web", "executor": "agy", "query": "WeClawArena"}
+{"lane": "sl-web", "executor": "agy", "query": "agent-risk"}
+{"lane": "sl-web", "executor": "agy", "query": "CatchBench"}
+{"lane": "sl-web", "executor": "agy", "query": "agentpile"}
+{"lane": "sl-web", "executor": "agy", "query": "awesome-auditable-ai"}
+{"lane": "sl-web", "executor": "agy", "query": "2603.12621"}
+{"lane": "sl-web", "executor": "agy", "query": "2604.05485"}
+{"lane": "sl-web", "executor": "agy", "query": "2610.07459"}
+{"lane": "sl-web", "executor": "agy", "query": "2610.16280"}
+{"lane": "sl-web", "executor": "agy", "query": "2606.22741"}
+{"lane": "sl-web", "executor": "agy", "query": "2605.09163"}
+{"lane": "sl-web", "executor": "agy", "query": "2608.22808"}
+{"lane": "sl-web", "executor": "agy", "query": "2603.22853"}
+{"lane": "sl-web", "executor": "agy", "query": "2603.17445"}
+{"lane": "sl-web", "executor": "agy", "query": "ARXIV:2604.05485"}
+{"lane": "sl-web", "executor": "agy", "query": "ARXIV:2608.03499"}
+{"lane": "sl-web", "executor": "agy", "query": "ARXIV:2608.22808"}
+{"lane": "cw-standing", "executor": "claude", "query": "Semantic Scholar API: citations of arXiv:2604.05485 (Auditable Agents)"}
+{"lane": "cw-standing", "executor": "claude", "query": "Semantic Scholar API: citations of arXiv:2603.12621, 2603.22853, 2603.17445, 2606.22741, 2605.09163, 2608.03499, 2608.22808, 2610.07459, 2610.16280 (several returned 429)"}
+{"lane": "cw-standing", "executor": "claude", "query": "OpenAlex cites filter (from 2026-10-01) for each of the ten arXiv works in the agent-auditability inventory"}
+{"lane": "cw-standing", "executor": "claude", "query": "OpenAlex fulltext.search: \"Auditable Agents\" Nian (from 2026-10-10)"}
+{"lane": "cw-standing", "executor": "claude", "query": "OpenAlex fulltext.search: CatchBench"}
+{"lane": "cw-standing", "executor": "claude", "query": "OpenAlex fulltext.search: WeClawArena"}
+{"lane": "cw-standing", "executor": "claude", "query": "OpenAlex fulltext.search: \"No tool call left unchecked\""}
+{"lane": "cw-standing", "executor": "claude", "query": "OpenAlex fulltext.search: \"Implicit Execution Tracing\""}
+{"lane": "cw-standing", "executor": "claude", "query": "OpenAlex fulltext.search: \"Benchmarking Over-Privilege in Agent Skills\""}
+{"lane": "cw-standing", "executor": "claude", "query": "OpenAlex fulltext.search: \"Auditable Claims about AI Agents\""}
+{"lane": "cw-standing", "executor": "claude", "query": "OpenAlex fulltext.search: \"Agent Audit: A Security Analysis System\""}
+{"lane": "cw-standing", "executor": "claude", "query": "OpenAlex fulltext.search: \"agent-risk\""}
+{"lane": "cw-standing", "executor": "claude", "query": "OpenAlex fulltext.search: \"GRADE\" \"dependency graph\" agents yzhao"}
+{"lane": "cw-standing", "executor": "claude", "query": "OpenAlex fulltext.search: \"Auditability Card\""}
+{"lane": "cw-standing", "executor": "claude", "query": "\"Auditable Agents\" arXiv 2604.05485 cited agent auditability"}
+{"lane": "cw-standing", "executor": "claude", "query": "\"CatchBench\" \"When Can an Agent Failure Be Caught\""}
+{"lane": "cw-standing", "executor": "claude", "query": "\"agent-audit\" HeadyZhang static security scanner LLM agents baseline"}
+{"lane": "cw-standing", "executor": "claude", "query": "\"Implicit Execution Tracing\" agents attribution logs stripped citation"}
+{"lane": "cw-standing", "executor": "claude", "query": "\"WeClawArena\" cross-user agent collaboration security benchmark"}
+{"lane": "cw-standing", "executor": "claude", "query": "\"Auditable Agents\" Nian Yuan Zhang Zhao 2026 agent auditability related work November 2026"}
+{"lane": "cw-standing", "executor": "claude", "query": "\"Auditable Claims about AI Agents\" arXiv 2610.07459"}
+{"lane": "cw-standing", "executor": "claude", "query": "\"awesome-auditable-ai\" OR \"yzhao062/auditable\" OR \"yzhao062/agentpile\" github"}
+{"lane": "cw-standing", "executor": "claude", "query": "\"Yue Zhao\" USC FORTIS lab agent auditability news OR blog"}
+{"lane": "cw-standing", "executor": "claude", "query": "\"agentpile\" ATIF trajectory datasets agent"}
+{"lane": "cw-standing", "executor": "claude", "query": "Hacker News OR Reddit \"Auditable Agents\" OR \"CatchBench\" OR \"agent-audit\" USC Yue Zhao agent audit"}
+{"lane": "cw-standing", "executor": "claude", "query": "codex.danielvaughan.com Auditable Agents OR WeClawArena OR \"agent-audit\" OR \"Implicit Execution Tracing\""}
+{"lane": "cw-standing", "executor": "claude", "query": "\"2604.05485\" github awesome list agent auditability papers"}
+{"lane": "cw-standing", "executor": "claude", "query": "\"HeadyZhang/agent-audit\" OR \"agent-audit\" \"OWASP Agentic\" awesome list OR newsletter OR review"}
+{"lane": "cw-standing", "executor": "claude", "query": "\"Justin0504/Aegis\" OR \"AEGIS: No Tool Call Left Unchecked\" pre-execution firewall AI agents"}
+{"lane": "cw-standing", "executor": "claude", "query": "\"FORTIS\" over-privilege agent skills benchmark \"Li et al.\" OR \"Shawn Li\" blog OR newsletter OR post"}
+{"lane": "cw-standing", "executor": "claude", "query": "\"auditable\" PyPI \"system of record\" agent decisions replay rollback github yzhao062 mention blog"}
+{"lane": "cw-standing", "executor": "claude", "query": "codex.danielvaughan.com 2026/11 OR 2026/10 agent auditability \"Auditable Agents\" Nian"}
+{"lane": "cw-standing", "executor": "claude", "query": "arXiv API (submitted 2026-10-15 to 2026-11-10): all:\"agent auditability\"; all:\"auditable agents\"; all:\"accountability layer\" AND agents; all:\"system of record\" AND agents; tamper-evident AND agent AND audit; pre-execution AND \"tool call\"; \"failure attribution\" AND multi-agent; \"over-privilege\" AND agent; rollback AND compensation AND agent; \"decision replay\" AND agent; \"audit trail\" AND \"LLM agents\"; auditable AND \"AI agents\" AND accountability"}
+{"lane": "cw-standing", "executor": "claude", "query": "arXiv API sweep (same date range) with 14 further queries on agent audit/provenance, accountability and tool, tool call firewall, agent skills security, over-privilege, multi-agent attribution trace, agent audit log, agent security benchmark, MCP audit, agent rollback, auditability, policy enforcement runtime, agent trajectories failure, evidence audit; about 70 of 171 candidate PDFs full-text scanned for inventory names before the time budget ended (one low-confidence hit)"}
+{"lane": "cw-standing", "executor": "claude", "query": "Full-text PDF/HTML scans of citing papers: 2610.33753, 2610.39468, 2610.34594, 2610.35193, 2610.35992, 2611.03772, 2610.31914, 2610.40975, 2610.40674, 2610.41025, 2610.17747, 2610.27244, 2611.00544, 2610.40565, 2610.39124 and 19 other recent agent-audit papers"}
+{"lane": "cw-standing", "executor": "claude", "query": "Fetches: arXiv abs/html/pdf pages, icck.org Beyond Guardrails page and PDF, skillsllm.com agent-audit page, dev.to Aegis post"}
+{"lane": "cw-d8", "executor": "claude", "query": "\"Auditable Agents\" arXiv 2604.05485"}
+{"lane": "cw-d8", "executor": "claude", "query": "NIST CAISI AI agent security report November 2026"}
+{"lane": "cw-d8", "executor": "claude", "query": "Agent Auditability Standard aas-1.org"}
+{"lane": "cw-d8", "executor": "claude", "query": "TrustLLM benchmark trustworthiness citation system card 2026"}
+{"lane": "cw-d8", "executor": "claude", "query": "\"Auditable Claims about AI Agents\" OR \"arXiv:2610.07459\""}
+{"lane": "cw-d8", "executor": "claude", "query": "\"CatchBench\" \"When Can an Agent Failure Be Caught\""}
+{"lane": "cw-d8", "executor": "claude", "query": "\"2604.05485\" agent auditability cited standard OR guidance OR framework"}
+{"lane": "cw-d8", "executor": "claude", "query": "OWASP agentic security \"Auditable Agents\" Zhao auditability card"}
+{"lane": "cw-d8", "executor": "claude", "query": "NIST AI 100 agent hijacking OR \"agent security\" publication October 2026 (nist.gov)"}
+{"lane": "cw-d8", "executor": "claude", "query": "GAO report artificial intelligence agents 2026 (gao.gov)"}
+{"lane": "cw-d8", "executor": "claude", "query": "CRS report AI agents agentic AI Congress 2026 (congress.gov)"}
+{"lane": "cw-d8", "executor": "claude", "query": "CISA agentic AI guidance joint publication 2026 (cisa.gov)"}
+{"lane": "cw-d8", "executor": "claude", "query": "NIST control overlays securing AI systems COSAIS agent draft public comment October 2026"}
+{"lane": "cw-d8", "executor": "claude", "query": "OWASP GenAI Security Project agentic AI new release November 2026"}
+{"lane": "cw-d8", "executor": "claude", "query": "Cloud Security Alliance agentic AI audit logging research publication October 2026"}
+{"lane": "cw-d8", "executor": "claude", "query": "EU AI Act Article 12 logging guidance agents standard record-keeping 2026 CEN CENELEC"}
+{"lane": "cw-d8", "executor": "claude", "query": "\"Therapeutics Data Commons\" NIH OR FDA OR DOE report 2026 AI drug discovery"}
+{"lane": "cw-d8", "executor": "claude", "query": "\"PyOD\" anomaly detection Federal Reserve OR Treasury OR FINRA OR SEC OR OCC report 2026"}
+{"lane": "cw-d8", "executor": "claude", "query": "\"ADBench\" anomaly detection benchmark cited NIST OR national laboratory OR DOE report 2026"}
+{"lane": "cw-d8", "executor": "claude", "query": "\"Yue Zhao\" \"University of Southern California\" AI agents auditability policy report 2026"}
+{"lane": "cw-d8", "executor": "claude", "query": "system card references \"TrustLLM\" OR \"ADBench\" OR \"PyOD\" OpenAI OR Anthropic OR Google DeepMind OR Meta OR Microsoft OR Amazon"}
+{"lane": "cw-d8", "executor": "claude", "query": "NVIDIA OR Microsoft OR Amazon blog agent auditing \"agent-audit\" OR \"Aegis\" pre-execution firewall tool calls audit layer"}
+{"lane": "cw-d8", "executor": "claude", "query": "Gartner OR Forrester OR Deloitte OR McKinsey report AI agent auditability observability November 2026"}
+{"lane": "cw-d8", "executor": "claude", "query": "careers job posting \"PyOD\" anomaly detection OpenAI OR Anthropic OR NVIDIA OR Microsoft OR Amazon OR Google"}
+{"lane": "cw-d8", "executor": "claude", "query": "IETF Internet-Draft agent audit trail references \"Auditable Agents\" Nian Yuan Zhao"}
+{"lane": "cw-d8", "executor": "claude", "query": "UK AI Security Institute agent auditing report November 2026"}
+{"lane": "cw-d8", "executor": "claude", "query": "Singapore IMDA Cyber Security Agency agentic AI addendum securing AI systems guidelines 2026"}
+{"lane": "cw-d8", "executor": "claude", "query": "MITRE ATLAS agent case studies update October 2026"}
+{"lane": "cw-d8", "executor": "claude", "query": "CAISI evaluation agent report (nist.gov, extended)"}
+{"lane": "cw-d8", "executor": "claude", "query": "NIST IR OR \"AI 800\" OR \"SP 800\" agent identity authorization logging draft released (csrc/nvlpubs)"}
+{"lane": "cw-d8", "executor": "claude", "query": "\"awesome-auditable-ai\" OR \"yzhao062/auditable\" OR \"yzhao062/agentpile\""}
+{"lane": "cw-d8", "executor": "claude", "query": "\"agent-risk\" \"Risk Assessment for Changes to AI Agents\" arXiv 2610.16280"}
+{"lane": "cw-d8", "executor": "claude", "query": "\"When Only the Final Text Survives\" implicit execution tracing multi-agent auditing"}
+{"lane": "cw-d8", "executor": "claude", "query": "\"WeClawArena\" OR \"GRADE: Graph Representation of LLM Agent Dependency and Execution\" OR \"Benchmarking Over-Privilege in Agent Skills\""}
+{"lane": "cw-d8", "executor": "claude", "query": "PyOD anomaly detection blog (AWS, NVIDIA, Microsoft, Google Cloud domains)"}
+{"lane": "cw-d8", "executor": "claude", "query": "\"Therapeutics Data Commons\" TDC benchmark drug discovery model (company domains)"}
+{"lane": "cw-d8", "executor": "claude", "query": "TrustLLM trustworthiness benchmark cited technical report (company domains)"}
+{"lane": "cw-d8", "executor": "claude", "query": "\"Agent Auditability Standard\" AAS-1"}
+{"lane": "cw-d8", "executor": "claude", "query": "arXiv agent auditability OR \"auditable agents\" cites \"Auditable Agents\" Nian 2026 October"}
+{"lane": "cw-d8", "executor": "claude", "query": "arXiv 2611 agent auditability \"Nian et al.\" \"Auditable agents\" Auditability Card five dimensions"}
+{"lane": "cw-d8", "executor": "claude", "query": "arXiv 2610 agent audit trail evidence \"arXiv:2604.05485\""}
+{"lane": "cw-d8", "executor": "claude", "query": "\"Five Dimensions Turn an Audit Verdict Into Five Slots\""}
+{"lane": "cw-d8", "executor": "claude", "query": "codex.danielvaughan.com Auditable Agents auditability dimensions Codex CLI"}
+{"lane": "cw-d8", "executor": "claude", "query": "danielvaughan.com \"Auditable Claims\" OR \"agent-risk\" OR \"GRADE\" OR \"WeClawArena\" Codex CLI blog 2026"}
+{"lane": "cw-d8", "executor": "claude", "query": "PwC OR KPMG OR EY OR Deloitte agentic AI assurance auditability report references arXiv \"Auditable Agents\""}
+{"lane": "cw-d8", "executor": "claude", "query": "FINRA OR SEC OR \"Federal Reserve\" OR OCC agentic AI auditability audit trail guidance October 2026"}
+{"lane": "cw-d8", "executor": "claude", "query": "DoD CDAO OR \"Department of War\" AI agent assurance testing evaluation guidance October 2026 report"}
+{"lane": "cw-d8", "executor": "claude", "query": "NSF award Yue Zhao University of Southern California FORTIS anomaly detection OR LLM agents OR trustworthy (nsf.gov domains)"}
+{"lane": "cw-d8", "executor": "claude", "query": "PyOD OR ADBench anomaly detection national laboratory technical report 2026 (DOE lab domains)"}
+{"lane": "cw-d8", "executor": "claude", "query": "NIH OR FDA report AI drug discovery \"Therapeutics Data Commons\" OR \"TDC\" benchmark datasets ADMET 2026 (nih.gov, fda.gov)"}
+{"lane": "cw-d8", "executor": "claude", "query": "\"Agent Audit: A Security Analysis System for LLM Agent Applications\" OR \"arXiv:2603.22853\""}
+{"lane": "cw-d8", "executor": "claude", "query": "\"No Tool Call Left Unchecked\" AEGIS pre-execution firewall cited agent security survey OR benchmark 2026"}
+{"lane": "cw-d8", "executor": "claude", "query": "Amazon Research Awards recipients 2026 Yue Zhao University of Southern California agentic AI auditing guardrails"}
+{"lane": "cw-d8", "executor": "claude", "query": "Yue Zhao USC FORTIS Lab award OR grant OR fellowship announced October 2026 OR November 2026 AI agents security"}
+{"lane": "cw-d8", "executor": "claude", "query": "\"Auditable Agents\" auditability five dimensions Nian research note (CSA and OWASP domains)"}
+{"lane": "cw-d8", "executor": "claude", "query": "labs.cloudsecurityalliance.org agent audit CatchBench OR \"agent-audit\" OR \"Aegis\" OR \"GRADE\" OR \"auditable\" research note November 2026"}
+{"lane": "cw-patents", "executor": "claude", "query": "patent \"PyOD\" outlier detection library claims 2026 (WebSearch)"}
+{"lane": "cw-patents", "executor": "claude", "query": "patents.google.com \"ECOD\" empirical cumulative distribution outlier detection anomaly patent (WebSearch)"}
+{"lane": "cw-patents", "executor": "claude", "query": "patent application \"COPOD\" copula-based outlier detection anomaly detection (WebSearch)"}
+{"lane": "cw-patents", "executor": "claude", "query": "Google Patents XHR: q=pyod after:publication:20260915 (0 results)"}
+{"lane": "cw-patents", "executor": "claude", "query": "Google Patents XHR: q=pyod, no date filter (19,093 fuzzy hits, BYOD stemming)"}
+{"lane": "cw-patents", "executor": "claude", "query": "Google Patents XHR: q=\"pyod\" sort=new (128 results, newest publication 2026-08-21)"}
+{"lane": "cw-patents", "executor": "claude", "query": "Google Patents XHR: q=anomaly detection after:publication:20260915 sort=new (0 results)"}
+{"lane": "cw-patents", "executor": "claude", "query": "Google Patents XHR: q=\"pyod\" after:publication:20260801 (4 results, all published 2026-08-11 to 2026-08-21)"}
+{"lane": "cw-patents", "executor": "claude", "query": "Google Patents XHR: q=\"anomaly detection\" sort=new (11,132 results, newest 2026-08-24)"}
+{"lane": "cw-patents", "executor": "claude", "query": "Google Patents XHR: q=\"anomaly detection\" after:publication:20260822 (9 results, newest 2026-08-24)"}
+{"lane": "cw-patents", "executor": "claude", "query": "Google Patents XHR: q=\"anomaly detection\" after:publication:20260815 (1,639 results, none after 2026-08-24)"}
+{"lane": "cw-patents", "executor": "claude", "query": "Google Patents XHR: q=\"ecod\" \"outlier\" after:publication:20260801 (HTTP 503)"}
+{"lane": "cw-patents", "executor": "claude", "query": "Google Patents XHR: q=\"copod\" after:publication:20260801 (HTTP 503)"}
+{"lane": "cw-patents", "executor": "claude", "query": "Google Patents XHR: q=\"suod\" after:publication:20260801 (HTTP 503)"}
+{"lane": "cw-patents", "executor": "claude", "query": "Google Patents XHR: q=\"pygod\" after:publication:20260801 (HTTP 503)"}
+{"lane": "cw-patents", "executor": "claude", "query": "Google Patents XHR: q=\"xgbod\" after:publication:20260801 (HTTP 503)"}
+{"lane": "cw-patents", "executor": "claude", "query": "Google Patents XHR: q=\"ecod\" after:publication:20260801 (HTTP 503)"}
+{"lane": "cw-patents", "executor": "claude", "query": "Google Patents XHR: q=\"copod\" (HTTP 503)"}
+{"lane": "cw-patents", "executor": "claude", "query": "Google Patents XHR: q=\"pyod\" after:publication:20260822 (HTTP 503)"}
+{"lane": "cw-patents", "executor": "claude", "query": "Google Patents XHR: q=\"pyod\" before:20261231 after:publication:20260815 (HTTP 503)"}
+{"lane": "cw-patents", "executor": "claude", "query": "Google Patents XHR: q=\"ecod\" \"outlier\" oq=ecod (HTTP 503)"}
+{"lane": "cw-patents", "executor": "claude", "query": "Google Patents XHR: q=\"pyod\" after:publication:20260815 oq=pyod (HTTP 503)"}
+{"lane": "cw-patents", "executor": "claude", "query": "Google Patents XHR: q=\"ecod\" \"anomaly\" sort=new (HTTP 503)"}
+{"lane": "cw-patents", "executor": "claude", "query": "Google Patents XHR: q=\"pyod\" after:publication:20260824 sort=new (HTTP 503)"}
+{"lane": "cw-patents", "executor": "claude", "query": "Google Patents XHR: q=\"pyod\" after:publication:20260915 sort=new num=50 (HTTP 503)"}
+{"lane": "cw-patents", "executor": "claude", "query": "Google Patents XHR: q=\"pyod\" after:publication:20260901 (HTTP 503)"}
+{"lane": "cw-patents", "executor": "claude", "query": "Google Patents page fetch: CN122567113A/en (HTTP 503)"}
+{"lane": "cw-patents", "executor": "claude", "query": "Google Patents page fetch: WO2023166515A1/en (HTTP 503)"}
+{"lane": "cw-patents", "executor": "claude", "query": "FreePatentsOnline: query_txt=\"pyod\" sort=chron (HTTP 403)"}
+{"lane": "cw-patents", "executor": "claude", "query": "Espacenet REST search: txt=\"pyod\" AND pd>=20260915 (HTTP 403)"}
+{"lane": "cw-patents", "executor": "claude", "query": "patent \"pyod\" anomaly detection method claims published October 2026 (WebSearch, patent-domain filter)"}
+{"lane": "cw-patents", "executor": "claude", "query": "\"Therapeutics Data Commons\" patent application (WebSearch, patent-domain filter)"}
+{"lane": "cw-patents", "executor": "claude", "query": "专利 \"PyOD\" 异常检测 公开 2026年10月 (WebSearch)"}
+{"lane": "cw-patents", "executor": "claude", "query": "patent \"TrustLLM\" OR \"ADBench\" OR \"PyGOD\" OR \"MetaOD\" claims trustworthiness benchmark (WebSearch, patent-domain filter)"}
+{"lane": "cw-patents", "executor": "claude", "query": "\"PyOD\" outlier detection library used to detect anomalies patent publication CN 2026 (WebSearch extended, patents.google.com)"}
+{"lane": "cw-patents", "executor": "claude", "query": "patent claims \"XGBOD\" OR \"LSCP\" OR \"SUOD\" outlier ensemble detector selection (WebSearch, patent-domain filter)"}
+{"lane": "cw-patents", "executor": "claude", "query": "patent \"Yue Zhao\" \"University of Southern California\" outlier detection model selection inventor (WebSearch, patent-domain filter)"}
+{"lane": "cw-patents", "executor": "claude", "query": "WO2026 patent \"PyOD\" anomaly detection isolation forest COPOD ECOD embodiment (WebSearch)"}
+{"lane": "cw-patents", "executor": "claude", "query": "patent description \"ADBench\" anomaly detection benchmark method claims 2026 publication (WebSearch)"}
+{"lane": "cw-patents", "executor": "claude", "query": "\"PyOD\" python outlier detection library patent application text (WebSearch, USPTO domains)"}
+{"lane": "cw-patents", "executor": "claude", "query": "\"Isolation Forest\" \"COPOD\" \"ECOD\" PyOD patent claims anomaly detection model library (WebSearch, patents.google.com)"}
+{"lane": "cw-patents", "executor": "claude", "query": "patent \"PyGOD\" graph outlier detection library OR \"LUNAR\" graph neural network outlier detection patent (WebSearch, patent-domain filter)"}
+{"lane": "cw-patents", "executor": "claude", "query": "patent \"TODS\" automated time series outlier detection system datamllab OR \"TrustLLM\" benchmark cited in patent (WebSearch, patent-domain filter)"}
