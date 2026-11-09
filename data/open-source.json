@@ -27,7 +27,7 @@
     "docs_url": "https://pyod.readthedocs.io",
     "paper_url": "https://arxiv.org/abs/2412.12154",
     "demo_url": "",
-    "stars": 10081,
+    "stars": 10082,
     "tags": [
       "Anomaly Detection",
       "Outlier Detection",
@@ -73,7 +73,7 @@
       "OpenTelemetry",
       "Python SDK"
     ],
-    "last_updated_at": "2026-11-02T17:11:39Z"
+    "last_updated_at": "2026-11-09T17:39:02Z"
   },
   {
     "name": "awesome-auditable-ai",
@@ -195,7 +195,7 @@
     "docs_url": "",
     "paper_url": "",
     "demo_url": "",
-    "stars": 9442,
+    "stars": 9447,
     "tags": [
       "Awesome List",
       "Anomaly Detection",
@@ -232,7 +232,7 @@
     "docs_url": "https://suod.readthedocs.io",
     "paper_url": "https://proceedings.mlsys.org/paper_files/paper/2021/hash/da9d70f7f98f0f660f24f6f3d9e7b0f1-Abstract.html",
     "demo_url": "",
-    "stars": 395,
+    "stars": 394,
     "tags": [
       "Anomaly Detection",
       "Acceleration",
@@ -341,7 +341,7 @@
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/agent-audit.html",
     "paper_url": "https://arxiv.org/abs/2603.22853",
     "demo_url": "https://pypi.org/project/agent-audit/",
-    "stars": 244,
+    "stars": 245,
     "tags": [
       "AI Agent Security",
       "Security Audit",
@@ -417,7 +417,7 @@
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/agent-style.html",
     "paper_url": "",
     "demo_url": "https://pypi.org/project/agent-style/",
-    "stars": 738,
+    "stars": 739,
     "tags": [
       "AI Agents",
       "Agent Configuration",
