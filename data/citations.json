@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-11-09T19:55:10Z",
+  "generated_at": "2026-11-11T17:06:39Z",
   "source": "meta-finder citation-tracker, Semantic Scholar Graph API",
   "paper_count": 137,
-  "total_citations": 9619,
+  "total_citations": 9651,
   "papers": [
     {
       "id": "preprint-frontierphysics",
@@ -118,7 +118,7 @@
       "year": 2026,
       "venue": "ACL, 2026",
       "section": "conference",
-      "citation_count": 5,
+      "citation_count": 6,
       "influential_citations": 0
     },
     {
@@ -173,7 +173,7 @@
       "venue": "ACL (Findings), 2026",
       "section": "conference",
       "citation_count": 14,
-      "influential_citations": 4
+      "influential_citations": 3
     },
     {
       "id": "conference-trustgen-a-platform-of-dynamic-benchmarking-on-the-trustworthiness-of-generative-foundation-models",
@@ -190,7 +190,7 @@
       "year": 2025,
       "venue": "NeurIPS Workshop on Multi-Turn Interactions in Large Language Models (MTI-LLM), 2025",
       "section": "workshop",
-      "citation_count": 26,
+      "citation_count": 27,
       "influential_citations": 0
     },
     {
@@ -208,7 +208,7 @@
       "year": 2025,
       "venue": "Findings of IJCNLP-AACL, 2025",
       "section": "conference",
-      "citation_count": 14,
+      "citation_count": 15,
       "influential_citations": 2
     },
     {
@@ -217,7 +217,7 @@
       "year": 2025,
       "venue": "ACL (Findings), 2025",
       "section": "conference",
-      "citation_count": 51,
+      "citation_count": 52,
       "influential_citations": 3
     },
     {
@@ -254,7 +254,7 @@
       "venue": "CVPR, 2025",
       "section": "conference",
       "citation_count": 33,
-      "influential_citations": 5
+      "influential_citations": 4
     },
     {
       "id": "conference-few-shot-graph-out-of-distribution-detection-with-llms",
@@ -316,7 +316,7 @@
       "year": 2025,
       "venue": "EMNLP Findings, 2025",
       "section": "conference",
-      "citation_count": 24,
+      "citation_count": 26,
       "influential_citations": 5
     },
     {
@@ -433,7 +433,7 @@
       "year": 2024,
       "venue": "ICML, 2024",
       "section": "conference",
-      "citation_count": 383,
+      "citation_count": 385,
       "influential_citations": 35
     },
     {
@@ -487,8 +487,8 @@
       "year": 2022,
       "venue": "NeurIPS, 2022",
       "section": "conference",
-      "citation_count": 536,
-      "influential_citations": 82
+      "citation_count": 538,
+      "influential_citations": 83
     },
     {
       "id": "conference-bond-benchmarking-unsupervised-outlier-node-detection-on-static-attributed-graphs",
@@ -550,7 +550,7 @@
       "year": 2021,
       "venue": "AAAI (Demo), 2021",
       "section": "workshop",
-      "citation_count": 85,
+      "citation_count": 86,
       "influential_citations": 1
     },
     {
@@ -559,7 +559,7 @@
       "year": 2021,
       "venue": "NeurIPS, 2021",
       "section": "conference",
-      "citation_count": 562,
+      "citation_count": 564,
       "influential_citations": 68
     },
     {
@@ -667,7 +667,7 @@
       "year": 2018,
       "venue": "IntelliSys, 2018",
       "section": "conference",
-      "citation_count": 157,
+      "citation_count": 158,
       "influential_citations": 5
     },
     {
@@ -739,7 +739,7 @@
       "year": 2023,
       "venue": "ACM Computing Surveys, 2023",
       "section": "journal",
-      "citation_count": 2538,
+      "citation_count": 2551,
       "influential_citations": 78
     },
     {
@@ -775,7 +775,7 @@
       "year": 2019,
       "venue": "JMLR, 2019.",
       "section": "journal",
-      "citation_count": 988,
+      "citation_count": 990,
       "influential_citations": 66
     },
     {
@@ -1027,7 +1027,7 @@
       "year": 2026,
       "venue": "arXiv preprint",
       "section": "preprint",
-      "citation_count": 10,
+      "citation_count": 11,
       "influential_citations": 2
     },
     {
@@ -1081,7 +1081,7 @@
       "year": 2026,
       "venue": "EMNLP, 2026",
       "section": "conference",
-      "citation_count": 12,
+      "citation_count": 13,
       "influential_citations": 0
     },
     {
@@ -1234,7 +1234,7 @@
       "year": 2024,
       "venue": "arXiv preprint",
       "section": "preprint",
-      "citation_count": 42,
+      "citation_count": 43,
       "influential_citations": 1
     }
   ]
