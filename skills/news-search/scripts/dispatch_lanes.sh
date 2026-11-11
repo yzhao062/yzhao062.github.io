@@ -4,9 +4,13 @@
 #   dispatch_lanes.sh --prompts DIR --results DIR [--backend agy|codex] [--cap N] [--no-wait] UNIT ...
 #
 # Lanes go to Agy (Gemini through the Antigravity CLI) by default. Codex stays reachable
-# behind --backend codex, because the prun skill reserves its higher-cost quota for the
-# /vet gatekeeper role rather than for ordinary fan-out. This mirrors the backend switch in
-# meta-finder's funding pass (FUNDING_LLM_BACKEND, agy default, codex retained).
+# behind --backend codex for a round the user names it for, which is the prun skill's own
+# rule for its workers. This mirrors the backend switch in meta-finder's funding pass
+# (FUNDING_LLM_BACKEND, agy default, codex retained).
+#
+# This script names no model and no effort. They come from the prun-worker row of the model
+# registry (user/agent-models.json, see the agent-models skill): the Agy lane model is read
+# here and pinned, and everything else is resolved inside the prun dispatchers.
 #
 # Reads <prompts>/<unit>.md, writes <results>/<unit>.md, logs to <results>/../state/<unit>.log.
 # Every guard here exists because its absence lost lanes silently. See
@@ -175,7 +179,7 @@ resolve_agy() {
   printf '%s\n' "$resolved"
 }
 
-# Backend selection. Agy is the default because the prun skill reserves Codex for /vet.
+# Backend selection. Agy is the default, as it is for prun; Codex runs only when asked for.
 # An unknown value fails closed rather than falling through to a default, so a typo in a
 # round script cannot quietly send forty lanes to the expensive backend.
 BACKEND="$(echo "${BACKEND:-${NEWS_SEARCH_LANE_BACKEND:-agy}}" | tr '[:upper:]' '[:lower:]')"
@@ -215,8 +219,21 @@ if [ "$BACKEND" = "agy" ]; then
   # dispatcher then exits 2 before printing STATE-DIR, this script polls the full launch
   # deadline, and every unit is reported FAILED-START. Caught in review round 1.
   unset PRUN_SCRATCH_CWD
-  export ANTIGRAVITY_DISPATCH_MODEL="${ANTIGRAVITY_DISPATCH_MODEL:-gemini-3.8-flash-high}"
-  export ANTIGRAVITY_DISPATCH_EFFORT="${ANTIGRAVITY_DISPATCH_EFFORT:-high}"
+  # Pin the lane to the registry's prun-worker model. The dispatcher treats a named model as
+  # pinned; an unpinned unit is subject to its freer-meter rule and can move to Agy's second
+  # quota group, which web-heavy lanes drain in minutes. The value is read from the registry,
+  # an exported ANTIGRAVITY_DISPATCH_MODEL still wins, and the effort follows the registry
+  # inside the dispatcher.
+  if [ -z "${ANTIGRAVITY_DISPATCH_MODEL:-}" ]; then
+    RESOLVER=""
+    for c in ".agent-config/repo/scripts/agent_models.py" "scripts/agent_models.py"; do
+      [ -f "$c" ] && { RESOLVER="$c"; break; }
+    done
+    [ -n "$RESOLVER" ] || { echo "agent_models.py not found; run bootstrap or set ANTIGRAVITY_DISPATCH_MODEL" >&2; exit 2; }
+    ANTIGRAVITY_DISPATCH_MODEL="$("$PY" "$RESOLVER" resolve --family agy --role prun-worker --field slug)" || ANTIGRAVITY_DISPATCH_MODEL=""
+    [ -n "$ANTIGRAVITY_DISPATCH_MODEL" ] || { echo "could not read the prun-worker model from the model registry ($RESOLVER)" >&2; exit 2; }
+  fi
+  export ANTIGRAVITY_DISPATCH_MODEL
   # Guard 8: the Agy dispatcher reads its own timeout name, and this is the ONLY deadline an
   # Agy lane gets. It runs no idle check: its process.wait() has no independent timeout and it
   # delegates enforcement to the CLI's --print-timeout. PRUN_STALL_THRESHOLD is a Codex-only
@@ -226,7 +243,8 @@ else
   DISPATCH_CMD=("$DISPATCH")
   export PRUN_SCRATCH_CWD="${PRUN_SCRATCH_CWD:-$(pwd)}"
   export PRUN_STALL_THRESHOLD="${PRUN_STALL_THRESHOLD:-1800}"
-  export CODEX_DISPATCH_REASONING="${CODEX_DISPATCH_REASONING:-xhigh}"
+  # No effort is set here: dispatch-task resolves the registry's prun-worker row for Codex.
+  # An exported CODEX_DISPATCH_REASONING still overrides it.
   export CODEX_DISPATCH_SANDBOX="${CODEX_DISPATCH_SANDBOX:-danger-full-access}"
   # dispatch-task defaults CODEX_DISPATCH_TIMEOUT to 0, which disables its hard deadline and
   # leaves only the idle-tail check. A worker that never finishes but keeps appending output
