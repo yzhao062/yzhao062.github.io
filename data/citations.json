@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-11-11T17:06:39Z",
+  "generated_at": "2026-11-13T17:10:52Z",
   "source": "meta-finder citation-tracker, Semantic Scholar Graph API",
   "paper_count": 137,
-  "total_citations": 9651,
+  "total_citations": 9673,
   "papers": [
     {
       "id": "preprint-frontierphysics",
@@ -127,7 +127,7 @@
       "year": 2026,
       "venue": "ICLR, 2026",
       "section": "conference",
-      "citation_count": 53,
+      "citation_count": 57,
       "influential_citations": 3
     },
     {
@@ -199,7 +199,7 @@
       "year": 2025,
       "venue": "KDD (Lecture-Style Tutorial Track), 2025",
       "section": "workshop",
-      "citation_count": 43,
+      "citation_count": 45,
       "influential_citations": 1
     },
     {
@@ -316,8 +316,8 @@
       "year": 2025,
       "venue": "EMNLP Findings, 2025",
       "section": "conference",
-      "citation_count": 26,
-      "influential_citations": 5
+      "citation_count": 27,
+      "influential_citations": 6
     },
     {
       "id": "conference-navigating-between-explainability-and-extractability-in-machine-learning-as-a-service",
@@ -334,7 +334,7 @@
       "year": 2025,
       "venue": "The Web Conference (Demo Track), 2025",
       "section": "workshop",
-      "citation_count": 34,
+      "citation_count": 35,
       "influential_citations": 0
     },
     {
@@ -379,7 +379,7 @@
       "year": 2025,
       "venue": "ACM SIGSPATIAL, 2025",
       "section": "conference",
-      "citation_count": 10,
+      "citation_count": 11,
       "influential_citations": 0
     },
     {
@@ -415,7 +415,7 @@
       "year": 2024,
       "venue": "NeurIPS, 2024",
       "section": "conference",
-      "citation_count": 47,
+      "citation_count": 48,
       "influential_citations": 5
     },
     {
@@ -433,7 +433,7 @@
       "year": 2024,
       "venue": "ICML, 2024",
       "section": "conference",
-      "citation_count": 385,
+      "citation_count": 387,
       "influential_citations": 35
     },
     {
@@ -532,8 +532,8 @@
       "year": 2021,
       "venue": "NeurIPS, 2021",
       "section": "conference",
-      "citation_count": 285,
-      "influential_citations": 33
+      "citation_count": 287,
+      "influential_citations": 34
     },
     {
       "id": "conference-suod-accelerating-large-scale-unsupervised-heterogeneous-outlier-detection",
@@ -559,7 +559,7 @@
       "year": 2021,
       "venue": "NeurIPS, 2021",
       "section": "conference",
-      "citation_count": 564,
+      "citation_count": 565,
       "influential_citations": 68
     },
     {
@@ -586,7 +586,7 @@
       "year": 2020,
       "venue": "IEEE ICDM, 2020",
       "section": "conference",
-      "citation_count": 492,
+      "citation_count": 493,
       "influential_citations": 46
     },
     {
@@ -685,7 +685,7 @@
       "year": 2017,
       "venue": "ISWC, 2017",
       "section": "conference",
-      "citation_count": 11,
+      "citation_count": 12,
       "influential_citations": 1
     },
     {
@@ -730,7 +730,7 @@
       "year": 2024,
       "venue": "IEEE Transactions on Neural Networks and Learning Systems, 2024",
       "section": "journal",
-      "citation_count": 37,
+      "citation_count": 38,
       "influential_citations": 1
     },
     {
@@ -757,7 +757,7 @@
       "year": 2022,
       "venue": "Nature Chemical Biology, 2022",
       "section": "journal",
-      "citation_count": 230,
+      "citation_count": 231,
       "influential_citations": 13
     },
     {
@@ -766,7 +766,7 @@
       "year": 2022,
       "venue": "TKDE, 2022",
       "section": "journal",
-      "citation_count": 588,
+      "citation_count": 589,
       "influential_citations": 51
     },
     {
@@ -775,7 +775,7 @@
       "year": 2019,
       "venue": "JMLR, 2019.",
       "section": "journal",
-      "citation_count": 990,
+      "citation_count": 991,
       "influential_citations": 66
     },
     {
@@ -1090,7 +1090,7 @@
       "year": 2026,
       "venue": "NeurIPS, 2026",
       "section": "conference",
-      "citation_count": 10,
+      "citation_count": 11,
       "influential_citations": 1
     },
     {
