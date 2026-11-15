@@ -16,7 +16,7 @@
       "LLM Agents",
       "Reproducible Research"
     ],
-    "last_updated_at": "2026-11-14T06:43:06Z"
+    "last_updated_at": "2026-11-14T06:57:51Z"
   },
   {
     "name": "PyOD",
@@ -54,7 +54,7 @@
       "Recovery",
       "Python SDK"
     ],
-    "last_updated_at": "2026-10-26T05:09:24Z"
+    "last_updated_at": "2026-11-15T00:32:43Z"
   },
   {
     "name": "agentpile",
@@ -65,7 +65,7 @@
     "docs_url": "https://github.com/yzhao062/agentpile#readme",
     "paper_url": "",
     "demo_url": "",
-    "stars": 32,
+    "stars": 33,
     "tags": [
       "Agent Trajectories",
       "Trace Data",
@@ -214,7 +214,7 @@
     "docs_url": "",
     "paper_url": "",
     "demo_url": "",
-    "stars": 1629,
+    "stars": 1628,
     "tags": [
       "Writing",
       "Research Workflow",
@@ -406,7 +406,7 @@
       "Configuration",
       "MCP"
     ],
-    "last_updated_at": "2026-11-14T06:43:03Z"
+    "last_updated_at": "2026-11-15T04:01:41Z"
   },
   {
     "name": "agent-style",
