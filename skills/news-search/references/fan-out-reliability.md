@@ -424,8 +424,8 @@ address, never about the claim.
    `ANTIGRAVITY_DISPATCH_TIMEOUT_SECONDS`, or `GROK_DISPATCH_TIMEOUT_SECONDS`). The Codex dispatcher
    `dispatch-task.sh` disables its hard timeout by default (the Agy and Grok dispatchers default to
    2700 seconds), so a Codex worker that never finishes but keeps writing output resets the idle
-   check forever. Setting the timeout is what makes item 5's `FALLBACK` check load-bearing: before
-   it, no Codex lane could time out.
+   check forever. Setting the timeout closes that case. A quiet lane is reaped by the idle check
+   either way, at `PRUN_STALL_THRESHOLD` seconds, which `dispatch_lanes.sh` raises from 600 to 1800.
 9. State the absolute result path literally in every prompt. `dispatch-task` does not pass it to the
    worker, so a prompt that refers to "the result path given to you" names nothing.
 10. Read a `FALLBACK` tail before re-dispatching it. Three of five units in one wave had finished their

@@ -45,7 +45,8 @@
 #      divergence in monitor.{sh,ps1}.
 #   8. The wall clock is set through whichever knob the chosen backend reads. They are named
 #      differently, so exporting only Codex's leaves an Agy or Grok lane without this script's
-#      hard deadline, and guard 5 is only load-bearing while a lane can actually time out.
+#      hard deadline, which is what stops a lane that keeps writing and so never goes idle.
+#      The idle threshold (PRUN_STALL_THRESHOLD) is raised from 600 to 1800 on every backend.
 #
 # NEVER edit this file while a wave is in flight. Bash reads a script lazily by byte offset,
 # so an edit kills the running shell mid-loop. Copy it and edit the copy.
@@ -241,9 +242,10 @@ if [ "$BACKEND" = "agy" ]; then
   fi
   export ANTIGRAVITY_DISPATCH_MODEL
   # Guard 8: the Agy dispatcher reads its own timeout name for the hard cap. It also reaps a
-  # lane whose tail stops growing for PRUN_STALL_THRESHOLD seconds (default 600). That
-  # variable is not exported on this branch, so an Agy lane keeps the dispatcher's default
-  # unless the caller already set it; the Codex and Grok branches below raise it to 1800.
+  # lane whose tail stops growing for PRUN_STALL_THRESHOLD seconds (default 600). Raise that
+  # to 1800 unless the caller already set it, as the Codex and Grok branches below do: a
+  # web-heavy search or fetch turn can stay quiet for more than ten minutes.
+  export PRUN_STALL_THRESHOLD="${PRUN_STALL_THRESHOLD:-1800}"
   export ANTIGRAVITY_DISPATCH_TIMEOUT_SECONDS="${ANTIGRAVITY_DISPATCH_TIMEOUT_SECONDS:-7200}"
 elif [ "$BACKEND" = "grok" ]; then
   PY="$(resolve_python)" || {
