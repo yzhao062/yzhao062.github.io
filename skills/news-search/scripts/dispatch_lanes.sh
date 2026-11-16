@@ -1,18 +1,19 @@
 #!/usr/bin/env bash
 # Dispatch news-search worker lanes, with the guards the 2026-08-30 round paid for.
 #
-#   dispatch_lanes.sh --prompts DIR --results DIR [--backend agy|codex] [--cap N] [--no-wait] UNIT ...
+#   dispatch_lanes.sh --prompts DIR --results DIR [--backend agy|codex|grok] [--cap N] [--no-wait] [--reconcile-only] UNIT ...
 #
 # Lanes go to Agy (Gemini through the Antigravity CLI) by default. Codex stays reachable
-# behind --backend codex for a round the user names it for, which is the prun skill's own
-# rule for its workers. This mirrors the backend switch in meta-finder's funding pass
-# (FUNDING_LLM_BACKEND, agy default, codex retained).
+# behind --backend codex and Grok behind --backend grok (or NEWS_SEARCH_LANE_BACKEND) for a
+# round the user names either for, which is the prun skill's own rule for its workers. This
+# mirrors the backend switch in meta-finder's funding pass (FUNDING_LLM_BACKEND, agy default).
 #
 # This script names no model and no effort. They come from the prun-worker row of the model
 # registry (user/agent-models.json, see the agent-models skill): the Agy lane model is read
 # here and pinned, and everything else is resolved inside the prun dispatchers.
 #
-# Reads <prompts>/<unit>.md, writes <results>/<unit>.md, logs to <results>/../state/<unit>.log.
+# Reads <prompts>/<unit>.md, writes <results>/<unit>.md, logs to <results>/../state/<unit>.log,
+# and records each lane's dispatcher exit in <results>/../state/<unit>.exit.
 # Every guard here exists because its absence lost lanes silently. See
 # references/fan-out-reliability.md for what each one is standing in for.
 #
@@ -27,19 +28,24 @@
 #      than quietly shrinking the launch set to nothing and exiting 0 under --no-wait.
 #   5. The run reconciles every dispatched unit against a *complete* result file and exits
 #      non-zero when any is missing, empty, or a timeout FALLBACK. A reaped worker still leaves
-#      a non-empty result behind, so size alone would grade a timeout as a success.
+#      a non-empty result behind, so size alone would grade a timeout as a success. A dispatcher
+#      that fails after its worker wrote the file keeps that file without a FALLBACK header, so
+#      each lane's dispatcher exit is recorded too, and a recorded exit other than 0 (or a lane
+#      still running) is incomplete whatever the file says.
 #   6. With --no-wait the script holds no supervising shell, so nothing long-lived can be
-#      killed out from under the workers. Reconcile later with --reconcile-only. Note that
+#      killed out from under the workers. Reconcile later with --reconcile-only. A rerun while
+#      a lane is still in flight leaves that lane alone and prints STILL-RUNNING. Note that
 #      --cap has no effect in --no-wait mode: the cap counts entries in the shell job table,
 #      and --no-wait disowns each worker as it launches. Launch every unit you pass, or run
 #      without --no-wait when you need the cap enforced.
-#   7. The FALLBACK test matches either dispatcher's header, anchored and case-sensitive.
-#      The two write different text ("worker wrote no result file" for Codex, "Agy wrote no
-#      final result" for Agy), so a literal match on one grades the other's failure as a
-#      success. anywhere-agents 754833a fixed the same divergence in monitor.{sh,ps1}.
+#   7. The FALLBACK test matches any dispatcher's header, anchored and case-sensitive.
+#      The three write different text ("worker wrote no result file" for Codex, "Agy wrote no
+#      final result" for Agy, "Grok wrote no final result" for Grok), so a literal match on
+#      one grades another's failure as a success. anywhere-agents 754833a fixed the same
+#      divergence in monitor.{sh,ps1}.
 #   8. The wall clock is set through whichever knob the chosen backend reads. They are named
-#      differently, so exporting only Codex's leaves an Agy lane with no hard deadline, and
-#      guard 5 is only load-bearing while a lane can actually time out.
+#      differently, so exporting only Codex's leaves an Agy or Grok lane without this script's
+#      hard deadline, and guard 5 is only load-bearing while a lane can actually time out.
 #
 # NEVER edit this file while a wave is in flight. Bash reads a script lazily by byte offset,
 # so an edit kills the running shell mid-loop. Copy it and edit the copy.
@@ -54,7 +60,7 @@ while [ $# -gt 0 ]; do
     --prompts)        PROMPTS="$2"; shift 2 ;;
     --results)        RESULTS="$2"; shift 2 ;;
     --backend)        [ $# -ge 2 ] && [ -n "${2:-}" ] || {
-                        echo "--backend requires a value: agy or codex" >&2; exit 2; }
+                        echo "--backend requires a value: agy, codex, or grok" >&2; exit 2; }
                       BACKEND="$2"; shift 2 ;;
     --cap)            CAP="$2"; shift 2 ;;
     --no-wait)        WAIT=0; shift ;;
@@ -179,23 +185,23 @@ resolve_agy() {
   printf '%s\n' "$resolved"
 }
 
-# Backend selection. Agy is the default, as it is for prun; Codex runs only when asked for.
-# An unknown value fails closed rather than falling through to a default, so a typo in a
-# round script cannot quietly send forty lanes to the expensive backend.
+# Backend selection. Agy is the default, as it is for prun; Codex and Grok run only when asked
+# for. An unknown value fails closed rather than falling through to a default, so a typo in a
+# round script cannot quietly send forty lanes to the wrong backend.
 BACKEND="$(echo "${BACKEND:-${NEWS_SEARCH_LANE_BACKEND:-agy}}" | tr '[:upper:]' '[:lower:]')"
 case "$BACKEND" in
-  agy|codex) ;;
-  *) echo "unknown --backend '$BACKEND'; expected one of agy, codex" >&2; exit 2 ;;
+  agy|codex|grok) ;;
+  *) echo "unknown --backend '$BACKEND'; expected one of agy, codex, grok" >&2; exit 2 ;;
 esac
 
 # Resolve the chosen dispatcher through the documented skill lookup order, first hit wins.
-# DISPATCH_CMD is an array because the Agy dispatcher is Python and needs an interpreter in
-# front of it, while the Codex one is a shell script invoked directly.
-if [ "$BACKEND" = "agy" ]; then
-  DISPATCH_REL="scripts/dispatch-task-agy.py"
-else
-  DISPATCH_REL="scripts/dispatch-task.sh"
-fi
+# DISPATCH_CMD is an array because the Agy and Grok dispatchers are Python and need an
+# interpreter in front of them, while the Codex one is a shell script invoked directly.
+case "$BACKEND" in
+  agy)   DISPATCH_REL="scripts/dispatch-task-agy.py" ;;
+  codex) DISPATCH_REL="scripts/dispatch-task.sh" ;;
+  grok)  DISPATCH_REL="scripts/dispatch-task-grok.py" ;;
+esac
 DISPATCH=""
 for c in "skills/prun/$DISPATCH_REL" \
          ".claude/skills/prun/$DISPATCH_REL" \
@@ -234,11 +240,26 @@ if [ "$BACKEND" = "agy" ]; then
     [ -n "$ANTIGRAVITY_DISPATCH_MODEL" ] || { echo "could not read the prun-worker model from the model registry ($RESOLVER)" >&2; exit 2; }
   fi
   export ANTIGRAVITY_DISPATCH_MODEL
-  # Guard 8: the Agy dispatcher reads its own timeout name, and this is the ONLY deadline an
-  # Agy lane gets. It runs no idle check: its process.wait() has no independent timeout and it
-  # delegates enforcement to the CLI's --print-timeout. PRUN_STALL_THRESHOLD is a Codex-only
-  # knob and is deliberately not exported here.
+  # Guard 8: the Agy dispatcher reads its own timeout name for the hard cap. It also reaps a
+  # lane whose tail stops growing for PRUN_STALL_THRESHOLD seconds (default 600). That
+  # variable is not exported on this branch, so an Agy lane keeps the dispatcher's default
+  # unless the caller already set it; the Codex and Grok branches below raise it to 1800.
   export ANTIGRAVITY_DISPATCH_TIMEOUT_SECONDS="${ANTIGRAVITY_DISPATCH_TIMEOUT_SECONDS:-7200}"
+elif [ "$BACKEND" = "grok" ]; then
+  PY="$(resolve_python)" || {
+    echo "no usable Python interpreter for the Grok dispatcher; set PRUN_PYTHON" >&2; exit 2; }
+  DISPATCH_CMD=("$PY" "$DISPATCH")
+  # Same workspace rule as Agy: dispatch-task-grok.py rejects an inherited PRUN_SCRATCH_CWD
+  # without an explicit --mode (exit 2 before STATE-DIR), and a research lane must never
+  # see the checkout.
+  unset PRUN_SCRATCH_CWD
+  # No model or effort is pinned here: dispatch-task-grok.py resolves the registry's
+  # prun-worker row for Grok itself and has no dual-pool meter switching. Exported
+  # GROK_DISPATCH_MODEL and GROK_DISPATCH_EFFORT still override it inside the dispatcher.
+  # Raise PRUN_STALL_THRESHOLD from Grok's 600s default to 1800s for the same reason as
+  # Codex: web-heavy search and fetch turns can go over 10 minutes between streaming-json lines.
+  export PRUN_STALL_THRESHOLD="${PRUN_STALL_THRESHOLD:-1800}"
+  export GROK_DISPATCH_TIMEOUT_SECONDS="${GROK_DISPATCH_TIMEOUT_SECONDS:-7200}"
 else
   DISPATCH_CMD=("$DISPATCH")
   export PRUN_SCRATCH_CWD="${PRUN_SCRATCH_CWD:-$(pwd)}"
@@ -260,25 +281,52 @@ fi
 # accept that as success, which is the silent lane-loss this launcher exists to prevent, and
 # bare `wait` does not surface the child's 124 exit either.
 #
-# The two dispatchers word their header differently: Codex writes "(FALLBACK, worker wrote no
-# result file)" and Agy writes "(FALLBACK, Agy wrote no final result)". A literal match on one
-# reports the other's failure as a complete result. Match the shape instead, anchored at the
-# line start and case-sensitive so a genuine result that merely discusses fallbacks in its
-# prose is not misread as one. This is the same generalization anywhere-agents 754833a applied
-# to monitor.{sh,ps1} after an Agy FALLBACK was reported done.
+# The three dispatchers word their header differently: Codex writes "(FALLBACK, worker wrote no
+# result file)", Agy writes "(FALLBACK, Agy wrote no final result)", and Grok writes "(FALLBACK,
+# Grok wrote no final result)". A literal match on one reports another's failure as a complete
+# result. Match the shape instead, anchored at the line start and case-sensitive so a genuine
+# result that merely discusses fallbacks in its prose is not misread as one. This is the same
+# generalization anywhere-agents 754833a applied to monitor.{sh,ps1} after an Agy FALLBACK was
+# reported done.
+#
+# The header covers only a lane whose worker wrote nothing. When the worker wrote the result
+# path itself and the run then failed (an error event, a truncated turn, a reap), every
+# dispatcher keeps the worker's file, adds no FALLBACK header, and reports the failure through
+# its exit code alone. The launch wrapper therefore records that exit in <state>/<unit>.exit,
+# "running <wrapper pid>" until the dispatcher returns, and a receipt that says anything but 0
+# is incomplete. A result with no receipt at all, from a round dispatched before the receipt
+# existed, is graded on the file as before. Takes the unit id.
 result_complete() {
-  local result="$1"
+  local result="$RESULTS/$1.md" receipt="$STATE/$1.exit" rc=""
   [ -s "$result" ] || return 1
+  if [ -f "$receipt" ]; then
+    IFS= read -r rc < "$receipt" || true
+    [ "$rc" = "0" ] || return 1
+  fi
   ! head -n 1 "$result" | grep -Eq '^# [A-Za-z0-9_-]+ result \(FALLBACK, '
+}
+
+# True while the wrapper named in a unit's receipt is alive, which is a lane left in flight by
+# an earlier --no-wait launch. A second dispatcher on the same result path would leave two
+# wrappers and one receipt, and whichever returned last would grade the other's file. A receipt
+# whose wrapper is gone (killed before it could record an exit) is not running, so that lane
+# can be retried. Takes the unit id.
+lane_running() {
+  local receipt="$STATE/$1.exit" state="" pid=""
+  [ -f "$receipt" ] || return 1
+  IFS= read -r state < "$receipt" || true
+  case "$state" in "running "*) pid="${state#running }" ;; *) return 1 ;; esac
+  case "$pid" in ''|0*|*[!0-9]*) return 1 ;; esac
+  kill -0 "$pid" 2>/dev/null
 }
 
 reconcile() {
   local incomplete="" u
   for u in $UNITS; do
-    result_complete "$RESULTS/$u.md" || incomplete="$incomplete $u"
+    result_complete "$u" || incomplete="$incomplete $u"
   done
   if [ -n "$incomplete" ]; then
-    echo "RECONCILE-FAIL missing, empty, or fallback results:$incomplete"
+    echo "RECONCILE-FAIL missing, empty, fallback, or unfinished results:$incomplete"
     return 3
   fi
   echo "RECONCILE-OK $(echo $UNITS | wc -w) units returned a complete result"
@@ -374,6 +422,41 @@ if [ "$BACKEND" = "agy" ] && [ "${NEWS_SEARCH_AGY_PREFLIGHT:-on}" != "off" ]; th
   echo "PREFLIGHT-OK   agy --version, agy models"
 fi
 
+# Preflight Grok before launching anything, by running dispatch-task-grok.py's own checks
+# through the interpreter that will run it: the registry row (or both overrides), the binary,
+# and the credential the worker will receive. Nothing here calls a model. A shell copy of those
+# rules disagreed with the dispatcher in both directions (review round 1), and each miss costs a
+# wave of FAILED-START lines after the launch deadline. Set NEWS_SEARCH_GROK_PREFLIGHT=off to skip.
+if [ "$BACKEND" = "grok" ] && [ "${NEWS_SEARCH_GROK_PREFLIGHT:-on}" != "off" ]; then
+  "$PY" -B - "$DISPATCH" <<'PREFLIGHT' || exit 2
+import importlib.util
+import os
+import sys
+
+spec = importlib.util.spec_from_file_location("dispatch_task_grok", sys.argv[1])
+mod = importlib.util.module_from_spec(spec)
+sys.modules[spec.name] = mod
+spec.loader.exec_module(mod)
+try:
+    _resolver, row, row_error = mod.load_registry_defaults(allow_missing_row=True)
+except mod.RegistryUnavailable as exc:
+    sys.exit(str(exc))
+overridden = all(
+    os.environ.get(name, "").strip()
+    for name in ("GROK_DISPATCH_MODEL", "GROK_DISPATCH_EFFORT")
+)
+if row is None and not overridden:
+    sys.exit(row_error)
+child_env, _withheld = mod.worker_env()
+if not mod.resolve_binary(child_env):
+    sys.exit("grok CLI not found: install the Grok CLI or set GROK_BIN")
+login_error = mod.check_login_preflight(child_env)
+if login_error:
+    sys.exit(login_error)
+PREFLIGHT
+  echo "PREFLIGHT-OK   grok registry row, grok binary, grok login"
+fi
+
 running() { jobs -rp | wc -l; }
 
 # Preflight every prompt before launching anything. Skipping a missing prompt and carrying on lets
@@ -394,14 +477,18 @@ fi
 DISPATCHED=""
 for u in $UNITS; do
   P="$PROMPTS/$u.md"; R="$RESULTS/$u.md"; L="$STATE/$u.log"
-  if result_complete "$R"; then echo "ALREADY-DONE   $u"; continue; fi
-  # The Agy dispatcher refuses ANY pre-existing result path (dispatch-task-agy.py:397-398),
-  # so a retry of an incomplete lane could never start: it printed LAUNCHED, then FAILED-START
-  # "result path already exists", and burned the launch deadline doing it. Retrying a fallback
-  # is the normal case this launcher is built around, so move the incomplete artifact aside
-  # under a unique name rather than deleting it. Checklist item 10 requires reading a FALLBACK
-  # tail before re-dispatching, which needs that file to still exist. Caught in review round 1.
-  if [ "$BACKEND" = "agy" ] && [ -e "$R" ]; then
+  if result_complete "$u"; then echo "ALREADY-DONE   $u"; continue; fi
+  # Leave a lane that is still in flight alone (see lane_running). Reconcile it later, or
+  # remove its receipt first if the pid it names now belongs to some other process.
+  if lane_running "$u"; then echo "STILL-RUNNING  $u :: $STATE/$u.exit"; continue; fi
+  # All three dispatchers refuse ANY pre-existing result path (dispatch-task.sh,
+  # dispatch-task-agy.py, dispatch-task-grok.py), so a retry of an incomplete lane could never
+  # start: it printed LAUNCHED, then FAILED-START "result path already exists", and burned the
+  # launch deadline doing it. Retrying a fallback is the normal case this launcher is built
+  # around, so move the incomplete artifact aside under a unique name rather than deleting it.
+  # Checklist item 10 requires reading a FALLBACK tail before re-dispatching, which needs that
+  # file to still exist. Caught in review round 1.
+  if [ -e "$R" ] || [ -L "$R" ]; then
     previous="$(mktemp "$STATE/$u.previous-result.XXXXXX")" || {
       echo "could not create a holding path for $u's previous result under $STATE" >&2; exit 3; }
     # Remove the empty file mktemp just created if the move fails, so a failed retry does not
@@ -415,7 +502,26 @@ for u in $UNITS; do
     while [ "$(running)" -ge "$CAP" ]; do sleep 20; done
   fi
   : > "$L"
-  nohup "${DISPATCH_CMD[@]}" --prompt-file "$P" --result-file "$R" --unit-id "$u" >>"$L" 2>&1 </dev/null &
+  # Record the dispatcher's exit beside the log (see result_complete). A launched lane always
+  # has a receipt: "running" from here, "running <pid>" once the wrapper is up, and the exit
+  # code at the end, so a reconcile that runs while the lane is still writing its file does not
+  # grade that file complete. The wrapper records its exit only while the receipt still carries
+  # its own line, so it cannot overwrite the receipt of a later launch.
+  E="$STATE/$u.exit"
+  printf 'running\n' > "$E" || { echo "could not write $u's exit receipt: $E" >&2; exit 3; }
+  nohup "${BASH:-bash}" -c '
+    receipt="$1"; shift
+    mine="running $$"
+    printf "%s\n" "$mine" > "$receipt.$$" && mv -f -- "$receipt.$$" "$receipt"
+    "$@"
+    rc=$?
+    current=""
+    IFS= read -r current < "$receipt" || true
+    if [ "$current" = "$mine" ]; then
+      printf "%s\n" "$rc" > "$receipt.$$" && mv -f -- "$receipt.$$" "$receipt"
+    fi
+    exit "$rc"
+  ' dispatch-lane "$E" "${DISPATCH_CMD[@]}" --prompt-file "$P" --result-file "$R" --unit-id "$u" >>"$L" 2>&1 </dev/null &
   # Detach ONLY in --no-wait mode. disown removes the job from `jobs -rp`, which is both the
   # concurrency cap's counter and what `wait` blocks on. Disowning unconditionally made --cap
   # a no-op and made `wait` return instantly, so reconciliation ran against workers that had
@@ -442,7 +548,7 @@ while [ -n "$PENDING" ]; do
   for u in $PENDING; do
     if grep -q '^STATE-DIR ' "$STATE/$u.log" 2>/dev/null; then
       echo "CONFIRMED      $u"
-    elif result_complete "$RESULTS/$u.md"; then
+    elif result_complete "$u"; then
       echo "ALREADY-DONE   $u"
     else
       STILL="$STILL $u"

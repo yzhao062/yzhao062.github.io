@@ -14,8 +14,12 @@ before building any launcher for a round.
 Three waves exited 0 while doing nothing, and two exited 2 while their workers ran to completion.
 Neither direction of that signal was reliable. Reconcile every dispatched unit against a **complete**
 result file before reporting a wave as finished, and before integrating anything. Complete means
-present, non-empty, and not beginning with the `(FALLBACK, worker wrote no result file)` header that
-`dispatch-task` writes over a reaped worker.
+present, non-empty, and not beginning with a `(FALLBACK, ...)` header (`worker wrote no result
+file` from `dispatch-task.sh`, `Agy wrote no final result` from `dispatch-task-agy.py`, or
+`Grok wrote no final result` from `dispatch-task-grok.py`). The dispatcher's own exit still counts
+in one direction. `dispatch_lanes.sh` records it for each lane in `<state>/<unit>.exit`, and
+anything but 0 there marks the lane incomplete, because a dispatcher that fails after its worker
+wrote the file keeps that file and adds no header.
 
 `prun`'s own flow already says most of this ("every dispatched unit must have a non-empty result").
 Skipping it is what let the first failure stay invisible for a full lane generation. Non-empty alone
@@ -408,14 +412,20 @@ address, never about the claim.
 4. Verify every launch by polling for `STATE-DIR`, and take a final sample at the deadline before
    declaring any unit failed. Starting during the last interval still counts as starting.
 5. Reconcile every dispatched unit against a result file that is present, non-empty, **and not a
-   `FALLBACK` header**. A reaped worker is not a silent loss, because `dispatch-task` salvages its
+   `FALLBACK` header**. A reaped worker is not a silent loss, because each dispatcher salvages its
    captured tail into the result file, but that file is non-empty and starts with
-   `(FALLBACK, worker wrote no result file)`. Sizing it alone grades a timeout as a success.
+   `(FALLBACK, worker wrote no result file)` (Codex), `(FALLBACK, Agy wrote no final result)` (Agy),
+   or `(FALLBACK, Grok wrote no final result)` (Grok). Sizing it alone grades a timeout as a success.
+   A worker that wrote its own file and then failed gets no header at all, only a non-zero
+   dispatcher exit, so record that exit for each lane and require 0 as well.
 6. Read the filesystem, not a killed process's stdout, to learn what actually ran.
 7. Group by document before reporting any tier count.
-8. Give the wait a finite wall clock. `dispatch-task` disables its hard timeout by default, so a
-   worker that never finishes but keeps writing output resets the idle check forever. Setting the
-   timeout is what makes item 5's `FALLBACK` check load-bearing: before it, no lane could time out.
+8. Give the wait a finite wall clock through the backend's timeout variable (`CODEX_DISPATCH_TIMEOUT`,
+   `ANTIGRAVITY_DISPATCH_TIMEOUT_SECONDS`, or `GROK_DISPATCH_TIMEOUT_SECONDS`). The Codex dispatcher
+   `dispatch-task.sh` disables its hard timeout by default (the Agy and Grok dispatchers default to
+   2700 seconds), so a Codex worker that never finishes but keeps writing output resets the idle
+   check forever. Setting the timeout is what makes item 5's `FALLBACK` check load-bearing: before
+   it, no Codex lane could time out.
 9. State the absolute result path literally in every prompt. `dispatch-task` does not pass it to the
    worker, so a prompt that refers to "the result path given to you" names nothing.
 10. Read a `FALLBACK` tail before re-dispatching it. Three of five units in one wave had finished their
