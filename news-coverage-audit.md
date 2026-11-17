@@ -2,7 +2,7 @@
 
 This file is the evidence record behind public impact claims about Yue Zhao and the USC FORTIS Lab. A row counts only if the source names or cites a specific work, the PI, the lab, or a co-author in the context of the work. The full rule and the tier definitions are in `skills/news-search/SKILL.md`. The ledgers measure different kinds of evidence and overlap, so they are never summed into one impact figure. Bibliometric evidence (which organizations' researchers cite the papers) is in [citation-affiliation-audit.md](citation-affiliation-audit.md).
 
-*Last updated 2026-11-09.*
+*Last updated 2026-11-16 (institutional cross-index; evidence checked 2026-11-13).*
 
 
 ## Summary Statistics
@@ -28,6 +28,7 @@ One row per round. Figures are net new counted rows as each round reported them;
 
 | Round | Method | Net New | Headline Result |
 |---|---|---|---|
+| 2026-11-16 | Reconciled November 13 institutional-source checks with existing ledgers | +0 | NRC automated digests and A*STAR, CSIRO Data61, CISPA and HKUST institute research citations/tests already appear in L3/L6. [Evidence cross-index](external-research/institutional-mentions-2026-11-13/evidence.json) and [round notes](external-research/news-coverage-rounds.md); no change to counts. |
 | 2026-11-09 | Incremental search over items dated from 2026-10-15: 11 Agy and 3 Claude Workflow discovery lanes (873 queries, 113 records after deduplication) plus the 35 Tier 2 records held from 2026-10-21; 110 candidates verified by 15 Agy units, and 8 Claude agents tried to refute the 16 highest-value keeps | L3 +4 rows plus 35 items in 5 clusters, L6 +10, L7 +24 | 10 new external papers cite the agent-auditing line; the government, standards and foundation-model sources checked in the window yielded no new direct mention. [Archive](external-research/news-search-2026-11-09/README.md) |
 | 2026-10-21 | Full search: 43 Agy, 14 Codex and 10 Claude Workflow lanes (11,152 queries, 1,926 records after deduplication); 652 candidates verified by Agy, Codex and Claude units, the rest held | L1 +3, L2 +4, L3 +152 rows plus 148 items in 7 clusters, L6 +5, L7 +99 | Government tooling in Singapore (GovTech AI Playbooks) and Argentina (Buenos Aires judiciary council procurement); patents 116 to 144; citation audit re-run on both sources, with a direct check of the Tier 0 and Tier 1 claims. [Archive](external-research/news-search-2026-10-21/README.md) |
 | 2026-10-17 | Full search: 48 Agy lanes (41 discovery, 7 follow-up; 4,126 queries) and 3 Claude Workflow lanes; 43 Agy verification units over 635 candidates; 12 Claude agents tried to refute the 117 high-tier keeps | L1 +2, L2 +3, L3 +96 rows and 276 items in 7 clusters, L5 +3, L6 +13, L7 +43 | SDAIA's newsletter names TrustLLM, and a CSET guide cites the model-extraction survey. Lantern Pharma and Recursion SEC filings name TDC. Patents move from 106 to 116. The refute pass rejected 33 of 117 high-tier claims, and 55 misfiled rows changed ledger. [Archive](external-research/news-search-2026-10-17/README.md) |

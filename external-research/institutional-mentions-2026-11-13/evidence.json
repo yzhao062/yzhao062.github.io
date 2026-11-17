@@ -1,0 +1,109 @@
+{
+  "checked": "2026-11-13",
+  "records": [
+    {
+      "project": "agent-audit",
+      "source": "National Research Council of Canada",
+      "evidence_type": "automated digest, not endorsement",
+      "date": "2026-09-14",
+      "url": "https://github.com/nrc-cnrc/ai-safety-radar-securite-ia/blob/main/digests/2026-09-14/safety-community.md",
+      "location": "Agent-Audit v0.20.0: Security Scanner Corrections",
+      "existing_ledger_records": [
+        "L3:661",
+        "L3:847"
+      ],
+      "new_counted_items": 0
+    },
+    {
+      "project": "AEGIS",
+      "source": "A*STAR Centre for Frontier AI Research",
+      "evidence_type": "affiliated co-first author research paper",
+      "date": "2026-06-13",
+      "url": "https://arxiv.org/html/2606.15242v1#S2",
+      "location": "section 2 names the pre-execution defense; bibliography identifies Yuan, Su and Yue Zhao",
+      "existing_ledger_records": [
+        "L6:A13"
+      ],
+      "new_counted_items": 0
+    },
+    {
+      "project": "AEGIS",
+      "source": "CSIRO Data61",
+      "evidence_type": "affiliated coauthor research paper",
+      "date": "2026-10-09",
+      "url": "https://arxiv.org/html/2610.13227v1#S9",
+      "location": "section 9 grouped citation; PDF reference 62",
+      "existing_ledger_records": [
+        "L6:A53"
+      ],
+      "new_counted_items": 0
+    },
+    {
+      "project": "GRADE",
+      "source": "TraceCompiler",
+      "evidence_type": "academic credit",
+      "date": null,
+      "url": "https://arxiv.org/html/2608.02680v1#S8",
+      "location": "section 8 explicitly credits graded evidence taxonomy",
+      "existing_ledger_records": [
+        "L6:A19"
+      ],
+      "new_counted_items": 0
+    },
+    {
+      "project": "FORTIS",
+      "source": "Task-Conditioned Least-Privilege Learning",
+      "evidence_type": "benchmark reuse",
+      "date": null,
+      "url": "https://arxiv.org/html/2608.18351v1#S4.SS3",
+      "location": "two independent evaluation tasks; Tables IV and V",
+      "existing_ledger_records": [
+        "L6:A44"
+      ],
+      "new_counted_items": 0
+    },
+    {
+      "project": "AEGIS",
+      "source": "National Research Council of Canada",
+      "evidence_type": "automated digest",
+      "date": "2026-05-20",
+      "url": "https://github.com/nrc-cnrc/ai-safety-radar-securite-ia/blob/main/digests/2026-05-20/safety-community.md#L26",
+      "location": "desktop release linked to Justin0504/Aegis",
+      "existing_ledger_records": [
+        "L3:661"
+      ],
+      "new_counted_items": 0
+    },
+    {
+      "project": "No Attacker Needed",
+      "source": "CISPA Helmholtz Center",
+      "evidence_type": "affiliated coauthors research paper",
+      "date": null,
+      "url": "https://arxiv.org/pdf/2609.35576#page=3",
+      "location": "related work compares shared-state contamination with private-memory setting",
+      "existing_ledger_records": [
+        "L6:A57"
+      ],
+      "new_counted_items": 0
+    },
+    {
+      "project": "agent-audit",
+      "source": "Guangzhou HKUST Fok Ying Tung Research Institute",
+      "evidence_type": "affiliated coauthors tested scanner",
+      "date": null,
+      "url": "https://arxiv.org/pdf/2607.02357v2#page=6",
+      "location": "Figure 4: 80.5% bypass under structural obfuscation",
+      "existing_ledger_records": [
+        "L6:A21"
+      ],
+      "new_counted_items": 0
+    }
+  ],
+  "synced": "2026-11-16",
+  "scope": "Institutional cross-index of existing evidence; not a new search round or evidence of agency endorsement.",
+  "nist_followup": {
+    "status": "No public posting or adoption of our comments verified in the November 13 check.",
+    "agency_comment_submission_is_external_citation": false,
+    "not_an_exhaustive_site_crawl": true
+  }
+}

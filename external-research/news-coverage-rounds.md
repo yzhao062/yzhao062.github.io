@@ -24,6 +24,20 @@ Moved verbatim from `news-coverage-audit.md` on 2026-10-17, with relative links 
 
 ---
 
+## 2026-11-16 Institutional Cross-Index (No New Counted Items)
+
+Evidence checked November 13, 2026; indexed November 16. The table maps institutions named in existing records to the ledger rows that already hold them, so it adds no counted item. It sat in `news-coverage-audit.md` for one day and moved here, because the audit keeps only the sections `skills/news-search/SKILL.md` requires. [Structured evidence and source locations](institutional-mentions-2026-11-13/evidence.json).
+
+| Institution | Work | Evidence Type | Existing Record |
+|---|---|---|---|
+| National Research Council Canada | AEGIS; agent-audit | Automated release digests, not adoption or endorsement | L3 rows 661, 847 |
+| A*STAR Centre for Frontier AI Research | AEGIS | Affiliated co-first author's academic citation | L6 A13 |
+| CSIRO Data61 | AEGIS | Affiliated coauthor's grouped academic citation | L6 A53 |
+| CISPA Helmholtz Center | No Attacker Needed | Affiliated coauthors' academic citation | L6 A57 |
+| Guangzhou HKUST Fok Ying Tung Research Institute | agent-audit | Affiliated coauthors tested scanner evasion | L6 A21 |
+
+Institutional affiliation identifies the researchers; it does not turn their paper into agency guidance. GRADE (A19) and FORTIS (A44) are also linked in the evidence file as academic credit and benchmark reuse. Our NIST public-comment submissions are policy participation, not independent citations or evidence of adoption.
+
 ## 2026-11-09 Incremental Search
 
 Method and counts are in the [run archive](news-search-2026-11-09/README.md). This entry records the decisions, the process notes and what reached the site.
