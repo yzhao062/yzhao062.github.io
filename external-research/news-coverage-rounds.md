@@ -24,6 +24,36 @@ Moved verbatim from `news-coverage-audit.md` on 2026-10-17, with relative links 
 
 ---
 
+## 2026-11-17 Full Search, Auditing-Weighted, High-Value Evidence Only
+
+Method and counts are in the [run archive](news-search-2026-11-17/README.md), and the plan with its in-round changes is in its [PLAN.md](news-search-2026-11-17/PLAN.md). This entry records the decisions, the process notes and what reached the site.
+
+### Decisions
+
+- The High-Value Evidence Only rule applied for the first time. Sixty-six verified records were long tail and stay in the archive with status `long_tail`, with one never-verified long-tail record beside them (67 in all); the Ledger 3 cluster rows were not extended. Six were set on review of the generated rows: a Galien Forum speaker bio, four general articles that name a work once in passing (Built In, Dataconomy, Unite.AI, and a MarkTechPost summary of the MLCommons benchmark), and the AI Radar rewrite noted below.
+- A Codex `/vet` review (two rounds) found the arXiv and LUHME 2026 versions of one paper counted twice in Ledger 7, and an AI Radar rewrite of the USC feature that the new rule excludes. A title check across the new rows then found the DTU ADMET-UQ collection under two addresses. One record of each duplicate is kept, and the rewrite is long tail.
+- NIST SP 2400-102e2026 (initial public draft) is its own Ledger 1 row (36), cross-noted on row 3. The draft does not itself say it replaces NIST AI 100-2e2025, so neither the audit nor the site calls it a successor.
+- A grant sub-report hosted by a ministry system belongs to its author: the MHLW report that uses TDC is Ledger 3, not Ledger 1b.
+- A commentary the PI wrote is Ledger 4 however widely it is republished; the Project Syndicate piece and its six republications are one row.
+- Patents: Google Patents refused automated access, so no Also Published As list was read. A Chinese patent counts unless its publication number, or a number in the family data its verifier recorded, already appears in the audit, or it shares a family with another new patent; a family member filed abroad could still slip through, so the count of 233 may overcount slightly. The four US and two WIPO patents are held from the count until a family check, because the 20-patent spot check found one US pre-grant publication of a grant already on file. Patents that name AEGIS, AD-AGENT, AutoAudit or TDC, and a company press release about a patent application, are Ledger 3 rows outside the anomaly-detection count.
+- arXiv:2611.17639 joined `data/publications.json` and `files/yue-zhao.bib`, and the Standing Lane tables in `skills/news-search/SKILL.md` were rebuilt, after the prep for this round found works shipped between rounds missing from them.
+
+### Process Notes
+
+- Twelve Agy lanes exited 70 or 124 after writing structurally complete result files (API, stream or malformed-call errors at the final message); their results were accepted as written. Two of them stopped mid-run (`papers-01` at six candidates, `pdf-international` mid-batch), so their scopes are only partly covered. Yue stopped three late lanes when the Gemini five-hour window fell to 49%, and no `prun` unit ran after that; verification moved to Claude Workflow agents.
+- The identity index missed two already-recorded Chinese articles (the QbitAI original of Ledger 2 row 37, and a 机器之心 article refuted on 2026-10-17); refute agents caught both by title. A title-keyed index would have caught them earlier.
+- Phase A tiers fell as before: one of 18 Tier 0 claims held.
+- A devx.mn page attributes a direct quotation to Yue Zhao that one verifier could not find in its source, the USC Viterbi AEGIS feature; the round did not re-check it. The page is not counted and should not be cited until the quotation is checked.
+- Leads logged but not finished: four books-and-courses candidates from the replacement Claude agent (not verified); N0511 (a TDC news page behind Cloudflare); an ICT Express survey whose first author also wrote Praetor (DOI 10.1016/j.icte.2026.10.014, HTTP 403); SSRN 7349818; an INJOIT article with an OpenAlex edge to agent-audit; and two OpenReview submissions surfaced on the CatchBench and FORTIS terms (33HUq9rQlH, GV6yjHJ2W5).
+- Yue set a hard stop at 03:00 Pacific for the round.
+
+### Propagated to the Site
+
+- Patent figure 144 to 233 with the new country split: `opensource.html`, `files/bio.txt`, `index.html` (prerendered), `llms.txt`.
+- The NIST SP 2400-102e2026 draft in the TrustLLM card of `opensource.html` and the TrustLLM policy line of `llms.txt`.
+- Held back from the Agent Auditability card: the patent application US 2026/0238651 A1, because its applicant also wrote the containment paper the card already lists, and the only verified copy is a SureChEMBL API record.
+- Held back: the 33 new Ledger 6 papers and 33 Ledger 7 articles change no card headline. The CFO Dive quote could join the auditing card in a later edit.
+
 ## 2026-11-16 Institutional Cross-Index (No New Counted Items)
 
 Evidence checked November 13, 2026; indexed November 16. The table maps institutions named in existing records to the ledger rows that already hold them, so it adds no counted item. It sat in `news-coverage-audit.md` for one day and moved here, because the audit keeps only the sections `skills/news-search/SKILL.md` requires. [Structured evidence and source locations](institutional-mentions-2026-11-13/evidence.json).

@@ -22,6 +22,8 @@ Read these files before starting:
 1. `data/publications.json` — all papers (titles, venues, years, links)
 2. `data/open-source.json` — all tools/libraries (names, stars, URLs)
 3. `news-coverage-audit.md` — previous audit results (skip known items, update stale entries)
+4. The weekly impact records and event log in the private `research-impact` hub, when its checkout is on this machine. Between rounds they record the auditing line's releases, new papers, publication of record, talk listings, awesome-list merges and Audit Commons refreshes. Read every record dated after the last round. Treat the lab's own items as first-party and the rest as leads to verify. Copy a fact into a lane prompt only with its public identifier, and leave out private email leads and unreleased manuscripts. Never write a path into the hub in this repository.
+5. `git status`: another session may have left uncommitted edits to the audit file. Phase B writes that file, so settle them before Phase B starts.
 
 ## Execution Model
 
@@ -54,6 +56,10 @@ Read these reference files before starting:
     `agy --version` and `agy models` run as a preflight before any launch, each bounded by `timeout --kill-after=5s` at `ANTIGRAVITY_PREFLIGHT_TIMEOUT_SECONDS` (default 60, validated as a positive integer to match the dispatcher, which rejects zero). Where neither `timeout` nor Homebrew's `gtimeout` exists, as on stock macOS, a shell watchdog applies the same TERM-then-KILL escalation and exit codes. The kill escalation is what makes the bound real: plain `timeout` sends TERM and keeps waiting, so a CLI that ignores TERM runs to completion regardless. An expired login or a hung CLI therefore fails the run immediately, rather than as a wave of `FAILED-START` lines after the launch deadline. The diagnostic distinguishes 124 (expired), 137 (killed after ignoring TERM), and 125 through 127 (`timeout` could not run the command) from an ordinary failure, so an auth problem is not reported as a hang. For Grok, the preflight runs `dispatch-task-grok.py`'s own checks through the resolved Python interpreter, without calling a model: the registry row (or both `GROK_DISPATCH_MODEL` and `GROK_DISPATCH_EFFORT`), the `grok` binary, and the credential the worker will receive (`XAI_API_KEY` only when `PRUN_KEEP_ENV` allows it, else `GROK_AUTH_PATH`, else `<GROK_HOME or ~/.grok>/auth.json`); set `NEWS_SEARCH_GROK_PREFLIGHT=off` (like `NEWS_SEARCH_AGY_PREFLIGHT=off` for Agy) to skip it. **Lane prompts must carry their own inventory.** Because the worker never sees the checkout, a prompt that names `data/publications.json` or `references/domain-registry.md` by relative path gives the worker nothing; inline the rows the lane needs, and run `scripts/pdf_term_scan.py` on the coordinator side rather than asking a lane to call it.
 
 Run the two-phase pipeline described below. Phase A gathers candidates into `news-search-candidates.jsonl` and does not edit `news-coverage-audit.md`. Phase B verifies each candidate, classifies the survivors, records dropped candidates in the candidate file, and writes only kept rows to `news-coverage-audit.md` using the tier structure in the Output section. The round's method notes, held items and corrections go to `external-research/news-coverage-rounds.md`, not to the audit file. If `news-coverage-audit.md` does not yet exist, Phase B creates it with the full tier structure and negative-results table as a fresh audit.
+
+### High-Value Evidence Only
+
+From the 2026-11-17 round on, lanes search for and verify only evidence that can reach Tier 0 to Tier 2, Ledger 6, Ledger 7, or the high-value Ledger 3 types: patents, theses, books, university courses, enterprise documents, organization-owned code and framework integrations, specifications, datasets, and any document that benchmarks or compares against a lab work. The long tail is neither searched for nor verified. That covers individual blog posts and tutorials, aggregator and machine-written pages, newsletter digests that only list a link, personal repositories, curated lists, videos other than interviews with the PI, forum and social posts, and platform listings. Yue judged their value limited (2026-11-16). Verification only moves a Phase A tier down (110 of 420 candidates moved down and none moved up), so dropping the long tail costs little at the top. Existing Ledger 3 cluster rows stay as recorded and stop growing, and held long-tail records stay held. Every paper and tool is still searched; only what a lane reports narrows.
 
 ### Query Bank Triage Rules
 
@@ -209,26 +215,44 @@ This lane runs in **every** run mode, including Quick check and Targeted, and it
 
 | Work | Identifier |
 |---|---|
-| Auditable Agents (position paper: five auditability dimensions, three mechanism classes) | arXiv:2604.05485 |
-| Auditable Claims about AI Agents | arXiv:2610.07459 |
-| agent-risk (risk assessment for changes to AI agents) | arXiv:2610.16280 |
+| Auditable Agents (position paper: five auditability dimensions, three mechanism classes; ACM AI Leadership Summit 2026 proceedings) | arXiv:2604.05485, DOI 10.1145/3806096.3844816, companion site `auditable-agents.github.io` |
+| Auditable Claims about AI Agents | arXiv:2610.07459, `github.com/yzhao062/auditable-claims` |
+| agent-risk (risk assessment for changes to AI agents) | arXiv:2610.16280, `github.com/yzhao062/agent-risk`, `pypi.org/project/ai-agent-risk` |
 | Aegis (pre-execution firewall for tool calls) | arXiv:2603.12621, `github.com/Justin0504/Aegis` |
-| agent-audit (static security and over-privilege scanner) | arXiv:2603.22853, `github.com/HeadyZhang/agent-audit` |
+| agent-audit (static security and over-privilege scanner) | arXiv:2603.22853, `github.com/HeadyZhang/agent-audit`, `pypi.org/project/agent-audit` |
 | Implicit Execution Tracing (post-hoc attribution after logs are stripped) | arXiv:2603.17445 |
 | GRADE (typed two-layer execution and dependency graph) | arXiv:2606.22741, `github.com/yzhao062/grade` |
 | FORTIS (over-privilege benchmark for agent skills) | arXiv:2605.09163 |
 | WeClawArena (auditable sandbox and benchmark for cross-user agent collaboration and security) | arXiv:2608.03499 |
-| CatchBench (benchmark for when an agent failure can be caught: declared config, trace prefix, finished trace) | arXiv:2608.22808, `github.com/yzhao062/catchbench` |
-| `auditable` (open-source system of record for agent decisions) | `github.com/yzhao062/auditable`, `pypi.org/project/auditable` |
-| agentpile (reads public agent trajectory datasets and live runs into ATIF records) | `github.com/yzhao062/agentpile` |
+| CatchBench (benchmark for when an agent failure can be caught: declared config, trace prefix, finished trace) | arXiv:2608.22808, `github.com/yzhao062/catchbench`, `pypi.org/project/catchbench` |
+| `auditable` (open-source system of record for agent decisions; its `auditable.bench` module reruns CatchBench board tables) | `github.com/yzhao062/auditable`, `pypi.org/project/auditable`, `auditable-ai.readthedocs.io` |
+| agentpile (reads public agent trajectory datasets and live runs into ATIF records) | `github.com/yzhao062/agentpile`, `pypi.org/project/agentpile` |
+| agent-defs (public rule sets and risk corpora for agent security tools) | `github.com/yzhao062/agent-defs` |
 | awesome-auditable-ai (curated knowledge base) | `github.com/yzhao062/awesome-auditable-ai` |
+| Audit Commons (bilingual field portal for AI auditing: news briefs, evidence worksheets, resource catalog) | `auditcommons.org`, `github.com/yzhao062/audit-commons` |
 | Auditability Card (machine-checkable disclosure artifact) | named inside Auditable Agents |
 
-Keep this table current. When a new work ships on this line, add it here in the same commit that adds it to `data/publications.json` or `data/open-source.json`.
+### Related Lines: Agent Behavior at the Moment of Action, Agent Safety and Security
+
+These works sit next to the auditing line, and Ledger 6 already counts external citers for five of them. Search them in the same lane with the same rules.
+
+| Work | Identifier |
+|---|---|
+| What LLM Agents See and What Users Say (when an agent may act on a presupposed claim) | arXiv:2611.17639 |
+| No Attacker Needed (unintentional cross-user contamination in shared-state agents) | arXiv:2604.01350 |
+| The Autonomy Tax (defense training breaks LLM agents) | arXiv:2603.19423 |
+| Agent Safety Is Action Alignment | arXiv:2606.28739 |
+| MemoHarness (agent harnesses that learn from experience) | arXiv:2607.14159 |
+| SkillCenter (source-grounded skill library for agents) | arXiv:2607.07676, `github.com/LabRAI/SkillCenter` |
+| CHI-Bench (long-horizon, policy-rich healthcare agent workflows) | arXiv:2605.16679 |
+| Topology Matters (memory leakage in multi-agent LLMs) | arXiv:2512.04668 |
+| Defenses Against Prompt Attacks Learn Surface Heuristics | arXiv:2601.07185 |
+
+Keep both tables current. When a new work ships on either line, add it here in the same commit that adds it to `data/publications.json` or `data/open-source.json`. Before each round, also diff the tables against those two files, the Ledger 6 "Cites" column and the hub's weekly records (Inputs item 4). Works shipped between rounds have been missed twice: agentpile in October, and in November arXiv:2611.17639, the ACM version of Auditable Agents, Audit Commons and the companion site.
 
 ### Concept Vocabulary to Search Every Round
 
-Coverage on this line often names the idea rather than the artifact, so search the vocabulary alongside the tool names: "auditable AI systems", "agent auditability", "accountability layer" for AI agents, "system of record" for agent decisions, decision replay against live state, rollback and compensation for agent actions, tamper-evident agent audit trails, pre-execution mediation, and post-run attribution in multi-agent systems.
+Coverage on this line often names the idea rather than the artifact, so search the vocabulary alongside the tool names: "auditable AI systems", "agent auditability", "accountability layer" for AI agents, "system of record" for agent decisions, decision replay against live state, rollback and compensation for agent actions, tamper-evident agent audit trails, pre-execution mediation, and post-run attribution in multi-agent systems. For the related lines, add agents acting on a false presupposition or asking before an irreversible act, cross-user contamination in shared agent memory, benign-task failure after agent defense training, and memory leakage between agents.
 
 Apply the citation verification rule without softening it. Most vocabulary matches will be other people writing about the same idea, which is topic-validation. This lane earns its place by catching the minority that name the work.
 
@@ -238,6 +262,7 @@ Apply the citation verification rule without softening it. Most vocabulary match
 - **Standards and regulation.** The Agent Auditability Standard (`aas-1.org`), EU AI Act Article 12 logging and traceability, NIST work on agent security, OWASP agentic releases, and any ISO/IEC JTC1 SC42 agent-audit item. These are the surfaces where a term turns into a requirement.
 - **Name collisions specific to this line.** `Auditable AI` is already in descriptive use by FICO, Fraunhofer HHI, IBM, Rezolve AI, Numbers Protocol, and an unrelated company at `auditableai.com`. `AuditBench` is Anthropic's alignment-auditing benchmark and is a separate project. `FORTIS` is the lab name, the benchmark name, and also a bank, a utility, and a hospital chain. Check these before counting any match and record new collisions in `references/disambiguation-registry.md`.
 - **Company surface.** `auditable.run` is the PI's own company site, so it is first-party and never counts as coverage. External writing *about* the company does count.
+- **Lab-run surfaces.** The following are first-party: Audit Commons, the companion site, the lab's GitHub and PyPI pages, and the ACM Digital Library page of the lab's own paper. An external project merged into awesome-auditable-ai is list participation, not adoption, and it is not coverage of the lab's work. A merged project's own repository or paper that names a lab work is judged on its own as a candidate.
 
 ---
 

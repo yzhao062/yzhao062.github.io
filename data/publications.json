@@ -1,5 +1,17 @@
 [
   {
+    "id": "preprint-what-llm-agents-see",
+    "section": "preprint",
+    "title": "What LLM Agents See and What Users Say",
+    "paper_url": "https://arxiv.org/abs/2611.17639",
+    "authors": "Yue Zhao, Angela Huyue Zhang, S. Alex Yang, Hua Wei, Xiyang Hu",
+    "venue": "arXiv preprint",
+    "year": 2026,
+    "sort_date": "2026-11-12",
+    "links": [],
+    "abstract": "Before an LLM agent cancels a reservation or deletes a folder for a user, what stops it from acting on a false assumption: what its tools show, or what the user says? In this work, we study this gap with presupposition theory from linguistics: an agent may act only if each claim behind the act (e.g., one reservation fits the name) is seen to hold, answered by the user, or disclosed while the act can be undone. A simple bound shows that when lookups cannot tell one record from two, any agent acts without asking first as often with two records as with one. We then vary whether a search lists, counts, or omits a second match, and whether the user states a claim that a record refutes (e.g., \"It is empty\"). Under a role-only prompt, a count of a second record leaves most of 36 earlier agents acting on the one they see, whereas listing both stops most. When the user says a record such as a folder is empty, however, a count of its one item stops agents about as often as a listing, and stating the claim mostly cuts acting when it is false. The newest Claude and GPT models always open a counted second record, then never act. When we add a same-name, same-zip customer to a retail benchmark, a lookup returning that customer first led to wrong-account writes in about a quarter of conversations, and one that checks a street the user knows kept completion near the one-customer level. Safe writes therefore need lookups that list or check competing records, and evaluations that vary what tools show."
+  },
+  {
     "id": "preprint-frontierphysics",
     "section": "preprint",
     "title": "FrontierPhysics: Evaluating Agents for End-to-End Physics Research",

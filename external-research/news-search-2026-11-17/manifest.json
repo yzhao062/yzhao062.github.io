@@ -1,0 +1,47 @@
+{
+ "run_date": "2026-11-17",
+ "scope": "full_search_auditing_weighted_high_value_only",
+ "summary": {
+  "verdicts": 726,
+  "refute_results": 108,
+  "duplicates_across_waves": 0,
+  "status": {
+   "verified": 345,
+   "long_tail": 66,
+   "already_recorded": 32,
+   "dropped": 8,
+   "refuted": 5,
+   "paywall_or_blocked": 10,
+   "first_party": 35,
+   "duplicate": 13,
+   "citation-handoff": 157,
+   "mirror": 55
+  },
+  "new_rows": {
+   "L1": 1,
+   "L2": 9,
+   "L3": 267,
+   "L4": 1,
+   "L6": 33,
+   "L7": 33
+  },
+  "new_rows_auditing_line": {
+   "L2": 1,
+   "L3": 19,
+   "L6": 33,
+   "L7": 2
+  },
+  "patents_new_rows": 114,
+  "patents_ad_count_add": 89,
+  "patents_ad_by_country": {
+   "CN": 89
+  },
+  "claim_level_patents": 20,
+  "refute_outcomes": {
+   "reclassified": 12,
+   "upheld": 95,
+   "unverifiable": 1
+  },
+  "unverified_phase_a_docs": 20
+ }
+}
