@@ -1,5 +1,46 @@
 [
   {
+    "id": "preprint-interpreting-deepstack",
+    "section": "preprint",
+    "title": "Interpreting DeepStack-Style Vision-Language Models: Do Input or Deeper-Layer Visual Tokens Drive Answers?",
+    "paper_url": "https://arxiv.org/abs/2611.25713",
+    "authors": "Yucheng Du†, Yi Nian†, Ruixue Lian†, Yue Zhao, Xiyang Hu.",
+    "venue": "arXiv preprint",
+    "year": 2026,
+    "sort_date": "2026-11-19",
+    "links": [
+      {
+        "type": "github",
+        "url": "https://github.com/yucheng-du/interpreting-deepstack-style-vlms"
+      }
+    ],
+    "abstract": "DeepStack-style vision-language models feed visual tokens to the language model at its input, and again at deeper layers. We call these the main entry and the later entries. What do the later entries add when the model already has the image? We give the entries versions that differ in one object's color and see which one the answer follows. On photographs, the original DeepStack follows the later entries, while Qwen3-VL-8B/32B follow the main entry. Does weakening the main entry give the later features more influence? On synthetic images, we keep this conflict and reduce color saturation at the main entry only. The unchanged later features gain a stronger effect on the relative scores of the two colors, in all four models, including Granite Vision. This holds even under mild desaturation, when accuracy without the conflict stays at 100%. To test whether later features can also correct errors, we degrade both entries and restore only the later ones. The same blur costs both Qwen models 50 percentage points of accuracy on stripe orientation. The 32B model recovers 48 points and the 8B model only 8. Accuracy with one clean entry predicted which entry each model can lose, and five of six tested predictions held on new GQA attribute questions. With the other entry zeroed, Qwen3-VL-8B loses only 0.3 points on its main entry alone, and DeepStack at most 3.45 points on either entry alone. In split inference on these questions, DeepStack can then send only its main-entry features at higher precision. This takes 49% fewer bytes than all entries at a shared precision, at similar accuracy."
+  },
+  {
+    "id": "preprint-watermarking-reissuance",
+    "section": "preprint",
+    "title": "Image Watermarking With Memory Across Reissuance",
+    "paper_url": "https://arxiv.org/abs/2611.23363",
+    "authors": "Xinyuan Li†, Yi Nian†, Xiaoqin Feng, Tiankai Yang, Yue Zhao.",
+    "venue": "arXiv preprint",
+    "year": 2026,
+    "sort_date": "2026-11-17",
+    "links": [],
+    "abstract": "Publishers often revise and reissue images, yet valid watermarks may persist on superseded releases or unapproved edits. Even a current release can contain regions last authorized at different revisions. We introduce and formalize reissuable provenance: determining an image's current, superseded, or unissued status and recovering each region's last authorized revision (its generation), with abstention when evidence is insufficient. Generational Stratigraphy Fields (GSF) combine watermark evidence with an authenticated live reference to the current release, enabling replacement or retirement without rewriting circulated copies. Each reissue freshly embeds new generation labels in approved regions and inherited labels elsewhere, preserving history without requiring old watermarks to survive successive edits. Our complete-output reissuance evaluation follows 480 histories through four releases, retaining each AI editor's entire output. GSF achieves 99.67% accuracy in classifying issued images as current or superseded and 94.09% recall of unissued edits. After three reissues, one generation map provides time and location: it recovers regional labels with 93.13% median accuracy and localizes the latest approved revision with 92.86% IoU. Regional labels remain readable under tested delivery transformations that impair issued-state recognition. Watermarks can thus express who issued an image, which release is authoritative now, and when each region was last authorized."
+  },
+  {
+    "id": "preprint-motion-aware-reward",
+    "section": "preprint",
+    "title": "Motion-Aware Reward Modeling for Instruction-Guided Video Editing",
+    "paper_url": "https://arxiv.org/abs/2611.22495",
+    "authors": "Li Li, Xiangbo Gao, Bo Ni, Samyadeep Basu, Viet Dac Lai, Jing Shi, Seunghyun Yoon, Gang Wu, Yu Wang, Thien Huu Nguyen, Tyler Derr, Franck Dernoncourt, Zhengzhong Tu, Yue Zhao.",
+    "venue": "arXiv preprint",
+    "year": 2026,
+    "sort_date": "2026-11-17",
+    "links": [],
+    "abstract": "Reward models for instruction-guided video editing can favor temporal consistency at the expense of motion. We study this failure, termed \\emph{motion collapse}, using controlled motion-suppression variants of real edits. On VE-Bench, the evaluated composite reward prefers a motion-suppressed candidate in $97\\%$ of cases. Learned video rewards and a VLM judge also struggle with mild suppression, while latent optimization and reward-guided fine-tuning exploit this weakness to increase reward as motion declines. A linear probe of our base reward backbone performs near chance on mild suppression, motivating an explicit inter-frame dynamics input. We propose a motion-aware reward model that combines an RGB frame-difference stream with preference training against motion-suppressed and fabricated-motion negatives. A distillation anchor preserves alignment with human quality judgments. On the VE-Bench motion ladder, our model reduces the rate of selecting motion-suppressed candidates to $0\\%$ while achieving a Spearman correlation of $0.57$ with human quality ratings. It also detects unseen suppression variants and preserves motion during reward-guided fine-tuning on two editing pipelines. These results support explicitly modeling motion in rewards for video editing."
+  },
+  {
     "id": "preprint-what-llm-agents-see",
     "section": "preprint",
     "title": "What LLM Agents See and What Users Say",
@@ -60,6 +101,23 @@
       }
     ],
     "abstract": "Computer-use agents (CUAs) are commonly evaluated against fixed task specifications, but users may omit requirements, add constraints, or require approval before consequential actions. Completing the benchmark instruction does not guarantee serving the person who asked. We introduce PersonaCUABench, which holds 74 tasks across 11 domains fixed and varies only who asks. A persona agent, playing one of 44 personas in four groups, rewrites each instruction in that user's own words and answers the CUA's questions, while the CUA sees only the dialogue, never the profile or the original instruction. Across nine backbones (3,330 runs), mean task completion falls by 36% relative to the original requests. The losses have two sources: in 59.9% of cells that lose points, the agent engages with what the user asked for and still gets it wrong, and 11.2% are stops the user requested that the checker scores as failures. Even when a persona request is fully completed, the user gives the top satisfaction rating in only 62.7% of cells, against 84.1% for the original requests. CUAs should therefore be evaluated not only on task completion but also on whether they meet the requirements and constraints users express."
+  },
+  {
+    "id": "preprint-qemem",
+    "section": "preprint",
+    "title": "From Relevant Memories to Sufficient Evidence: Rethinking Memory Utilization in LLM Agents",
+    "paper_url": "https://arxiv.org/abs/2610.22668",
+    "authors": "Shixuan Li†, Wei Yang†, Peiyu Zhang, Anzhe Cheng, Heng Ping, Xiaole Zhang, Jesse Thomason, Xuezhe Ma, Yue Zhao, Paul Bogdan.",
+    "venue": "arXiv preprint",
+    "year": 2026,
+    "sort_date": "2026-10-15",
+    "links": [
+      {
+        "type": "github",
+        "url": "https://github.com/shixuanli01/QEMem"
+      }
+    ],
+    "abstract": "Long-term memory enables LLM agents to reuse past experiences, yet retrieving relevant memories does not necessarily provide sufficient evidence for answering a query. Essential information may remain fragmented across memory records, obscured by abstraction, or disconnected from the relations required for reasoning. We identify this relevance-sufficiency gap and propose QEMem, a framework that reformulates memory utilization as the construction of query-specific evidence sets, shifting the focus from individual retrieval relevance to collective evidential support. QEMem integrates three complementary mechanisms: query-guided discovery retrieves evidence across multiple memory granularities; source-grounded reification organizes it into structured ViewCards with explicit evidential roles and source references; and sufficiency-guided refinement selectively recovers missing information. Operating on existing memory stores without modifying memory formation, QEMem achieves 91.43% LLM-judge accuracy on LoCoMo with Claude Opus 4.5, outperforming the strongest evaluated baseline, MemR$^3$, by 7.6 percentage points and NEMORI by 10.7 points under a shared memory store. Further analyses demonstrate improved evidence coverage and strong performance on questions requiring cross-session evidence integration."
   },
   {
     "id": "preprint-grid-bench",
