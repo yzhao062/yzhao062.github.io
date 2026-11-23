@@ -27,7 +27,7 @@
     "docs_url": "https://pyod.readthedocs.io",
     "paper_url": "https://arxiv.org/abs/2412.12154",
     "demo_url": "",
-    "stars": 10097,
+    "stars": 10098,
     "tags": [
       "Anomaly Detection",
       "Outlier Detection",
@@ -35,7 +35,7 @@
       "Machine Learning",
       "PyTorch"
     ],
-    "last_updated_at": "2026-11-12T19:46:40Z"
+    "last_updated_at": "2026-11-22T02:33:05Z"
   },
   {
     "name": "auditable",
@@ -73,7 +73,7 @@
       "OpenTelemetry",
       "Python SDK"
     ],
-    "last_updated_at": "2026-11-16T17:08:50Z"
+    "last_updated_at": "2026-11-23T19:20:10Z"
   },
   {
     "name": "awesome-auditable-ai",
@@ -92,7 +92,7 @@
       "Resources",
       "Benchmarks"
     ],
-    "last_updated_at": "2026-11-16T20:58:24Z"
+    "last_updated_at": "2026-11-21T19:11:10Z"
   },
   {
     "name": "AD-AGENT",
@@ -195,7 +195,7 @@
     "docs_url": "",
     "paper_url": "",
     "demo_url": "",
-    "stars": 9455,
+    "stars": 9460,
     "tags": [
       "Awesome List",
       "Anomaly Detection",
@@ -214,7 +214,7 @@
     "docs_url": "",
     "paper_url": "",
     "demo_url": "",
-    "stars": 1629,
+    "stars": 1628,
     "tags": [
       "Writing",
       "Research Workflow",
@@ -250,7 +250,7 @@
     "docs_url": "https://docs.pygod.org",
     "paper_url": "http://jmlr.org/papers/v25/23-0963.html",
     "demo_url": "",
-    "stars": 1500,
+    "stars": 1501,
     "tags": [
       "Graph Anomaly Detection",
       "PyTorch Geometric",
@@ -286,7 +286,7 @@
     "docs_url": "https://tdcommons.ai",
     "paper_url": "https://proceedings.neurips.cc/paper/2021/hash/6a8d3b0f5987e0f6d3d2f5f65f02e3cc-Abstract.html",
     "demo_url": "",
-    "stars": 1302,
+    "stars": 1304,
     "tags": [
       "Therapeutics",
       "Benchmark",
@@ -341,7 +341,7 @@
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/agent-audit.html",
     "paper_url": "https://arxiv.org/abs/2603.22853",
     "demo_url": "https://pypi.org/project/agent-audit/",
-    "stars": 246,
+    "stars": 249,
     "tags": [
       "AI Agent Security",
       "Security Audit",
@@ -406,7 +406,7 @@
       "Configuration",
       "MCP"
     ],
-    "last_updated_at": "2026-11-19T17:30:23Z"
+    "last_updated_at": "2026-11-23T02:36:36Z"
   },
   {
     "name": "agent-style",
@@ -417,7 +417,7 @@
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/agent-style.html",
     "paper_url": "",
     "demo_url": "https://pypi.org/project/agent-style/",
-    "stars": 746,
+    "stars": 749,
     "tags": [
       "AI Agents",
       "Agent Configuration",
