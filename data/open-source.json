@@ -27,7 +27,7 @@
     "docs_url": "https://pyod.readthedocs.io",
     "paper_url": "https://arxiv.org/abs/2412.12154",
     "demo_url": "",
-    "stars": 10099,
+    "stars": 10101,
     "tags": [
       "Anomaly Detection",
       "Outlier Detection",
@@ -65,7 +65,7 @@
     "docs_url": "https://github.com/yzhao062/agentpile#readme",
     "paper_url": "",
     "demo_url": "",
-    "stars": 34,
+    "stars": 35,
     "tags": [
       "Agent Trajectories",
       "Trace Data",
@@ -84,7 +84,7 @@
     "docs_url": "",
     "paper_url": "",
     "demo_url": "",
-    "stars": 162,
+    "stars": 163,
     "tags": [
       "Agent Auditability",
       "Agent Reliability",
@@ -103,7 +103,7 @@
     "docs_url": "https://usc-fortis.github.io/AD-AGENT/",
     "paper_url": "https://arxiv.org/abs/2505.12594",
     "demo_url": "",
-    "stars": 104,
+    "stars": 105,
     "tags": [
       "LLM Agents",
       "Anomaly Detection",
@@ -177,7 +177,7 @@
     "docs_url": "",
     "paper_url": "https://proceedings.neurips.cc/paper_files/paper/2022/hash/da0ddd47c18ae3dd2888ff2ea4b6ccf7-Abstract-Datasets_and_Benchmarks.html",
     "demo_url": "",
-    "stars": 1029,
+    "stars": 1030,
     "tags": [
       "Anomaly Detection",
       "Benchmark",
@@ -268,7 +268,7 @@
     "docs_url": "http://tods-doc.github.io",
     "paper_url": "https://arxiv.org/abs/2009.09822",
     "demo_url": "",
-    "stars": 1665,
+    "stars": 1666,
     "tags": [
       "Time Series",
       "Anomaly Detection",
@@ -286,7 +286,7 @@
     "docs_url": "https://tdcommons.ai",
     "paper_url": "https://proceedings.neurips.cc/paper/2021/hash/6a8d3b0f5987e0f6d3d2f5f65f02e3cc-Abstract.html",
     "demo_url": "",
-    "stars": 1303,
+    "stars": 1304,
     "tags": [
       "Therapeutics",
       "Benchmark",
@@ -341,7 +341,7 @@
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/agent-audit.html",
     "paper_url": "https://arxiv.org/abs/2603.22853",
     "demo_url": "https://pypi.org/project/agent-audit/",
-    "stars": 250,
+    "stars": 251,
     "tags": [
       "AI Agent Security",
       "Security Audit",
@@ -417,7 +417,7 @@
     "docs_url": "https://viterbi-web.usc.edu/~yzhao010/agent-style.html",
     "paper_url": "",
     "demo_url": "https://pypi.org/project/agent-style/",
-    "stars": 749,
+    "stars": 751,
     "tags": [
       "AI Agents",
       "Agent Configuration",
