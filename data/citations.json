@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-11-23T21:10:41Z",
+  "generated_at": "2026-11-25T19:31:13Z",
   "source": "meta-finder citation-tracker, Semantic Scholar Graph API",
   "paper_count": 142,
-  "total_citations": 9782,
+  "total_citations": 9803,
   "papers": [
     {
       "id": "preprint-interpreting-deepstack",
@@ -172,7 +172,7 @@
       "year": 2026,
       "venue": "ICLR, 2026",
       "section": "conference",
-      "citation_count": 59,
+      "citation_count": 61,
       "influential_citations": 3
     },
     {
@@ -244,7 +244,7 @@
       "year": 2025,
       "venue": "KDD (Lecture-Style Tutorial Track), 2025",
       "section": "workshop",
-      "citation_count": 46,
+      "citation_count": 47,
       "influential_citations": 1
     },
     {
@@ -253,8 +253,8 @@
       "year": 2025,
       "venue": "Findings of IJCNLP-AACL, 2025",
       "section": "conference",
-      "citation_count": 15,
-      "influential_citations": 2
+      "citation_count": 16,
+      "influential_citations": 3
     },
     {
       "id": "conference-ad-llm-benchmarking-large-language-models-for-anomaly-detection",
@@ -298,7 +298,7 @@
       "year": 2025,
       "venue": "CVPR, 2025",
       "section": "conference",
-      "citation_count": 34,
+      "citation_count": 35,
       "influential_citations": 4
     },
     {
@@ -379,7 +379,7 @@
       "year": 2025,
       "venue": "The Web Conference (Demo Track), 2025",
       "section": "workshop",
-      "citation_count": 37,
+      "citation_count": 38,
       "influential_citations": 0
     },
     {
@@ -532,8 +532,8 @@
       "year": 2022,
       "venue": "NeurIPS, 2022",
       "section": "conference",
-      "citation_count": 545,
-      "influential_citations": 83
+      "citation_count": 546,
+      "influential_citations": 84
     },
     {
       "id": "conference-bond-benchmarking-unsupervised-outlier-node-detection-on-static-attributed-graphs",
@@ -568,8 +568,8 @@
       "year": 2021,
       "venue": "NeurIPS, 2021",
       "section": "conference",
-      "citation_count": 112,
-      "influential_citations": 17
+      "citation_count": 113,
+      "influential_citations": 18
     },
     {
       "id": "conference-revisiting-time-series-outlier-detection-definitions-and-benchmarks",
@@ -577,7 +577,7 @@
       "year": 2021,
       "venue": "NeurIPS, 2021",
       "section": "conference",
-      "citation_count": 288,
+      "citation_count": 289,
       "influential_citations": 34
     },
     {
@@ -604,7 +604,7 @@
       "year": 2021,
       "venue": "NeurIPS, 2021",
       "section": "conference",
-      "citation_count": 573,
+      "citation_count": 575,
       "influential_citations": 67
     },
     {
@@ -631,7 +631,7 @@
       "year": 2020,
       "venue": "IEEE ICDM, 2020",
       "section": "conference",
-      "citation_count": 498,
+      "citation_count": 499,
       "influential_citations": 46
     },
     {
@@ -685,7 +685,7 @@
       "year": 2019,
       "venue": "SDM, 2019",
       "section": "conference",
-      "citation_count": 168,
+      "citation_count": 169,
       "influential_citations": 14
     },
     {
@@ -784,7 +784,7 @@
       "year": 2023,
       "venue": "ACM Computing Surveys, 2023",
       "section": "journal",
-      "citation_count": 2571,
+      "citation_count": 2574,
       "influential_citations": 79
     },
     {
@@ -811,7 +811,7 @@
       "year": 2022,
       "venue": "TKDE, 2022",
       "section": "journal",
-      "citation_count": 596,
+      "citation_count": 598,
       "influential_citations": 52
     },
     {
@@ -820,7 +820,7 @@
       "year": 2019,
       "venue": "JMLR, 2019.",
       "section": "journal",
-      "citation_count": 997,
+      "citation_count": 998,
       "influential_citations": 67
     },
     {
@@ -919,7 +919,7 @@
       "year": 2026,
       "venue": "arXiv preprint",
       "section": "preprint",
-      "citation_count": 22,
+      "citation_count": 23,
       "influential_citations": 0
     },
     {
@@ -1225,7 +1225,7 @@
       "year": 2026,
       "venue": "ICML Workshop on Trustworthy AI for Good (AI4GOOD), 2026",
       "section": "workshop",
-      "citation_count": 26,
+      "citation_count": 27,
       "influential_citations": 3
     },
     {
