@@ -24,6 +24,12 @@ Moved verbatim from `news-coverage-audit.md` on 2026-10-17, with relative links 
 
 ---
 
+## 2026-11-27 Government-First Incremental Refresh
+
+Six Agy lanes and the in-app browser checked government and institutional uses against the November 17 baseline. A narrower retry replaced the timed-out European lane. The round adds a Wuhan audit bureau staff account of PyOD ECOD screening in one public-investment audit, four preprints with methods use, and four external agent-auditing papers. The USA sweep found no newly verified government deployment. The NASA-hosted Global Mangrove Watch reprint cites PyOD as an example and uses the thresholding method by Thomas et al.
+
+The local impact page adds the Wuhan case, the NIST TDC evaluation from existing Ledger 3 row 329, and external evaluations using CatchBench and DoxBench. The Wuhan case also appears in the institutional summary. [Evidence and search scope](news-search-2026-11-27/README.md).
+
 ## 2026-11-17 Full Search, Auditing-Weighted, High-Value Evidence Only
 
 Method and counts are in the [run archive](news-search-2026-11-17/README.md), and the plan with its in-round changes is in its [PLAN.md](news-search-2026-11-17/PLAN.md). This entry records the decisions, the process notes and what reached the site.

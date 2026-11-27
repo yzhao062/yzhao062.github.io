@@ -1,0 +1,63 @@
+{
+  "date": "2026-11-27",
+  "baseline": "2026-11-17",
+  "units": [
+    {
+      "unit": "auditability",
+      "mode": "read-only",
+      "dispatcher_exit": 0,
+      "backend_status": "SUCCESS",
+      "model_confirmation": "ok",
+      "search_queries": 61
+    },
+    {
+      "unit": "external",
+      "mode": "read-only",
+      "dispatcher_exit": 0,
+      "backend_status": "SUCCESS",
+      "model_confirmation": "ok",
+      "search_queries": 61
+    },
+    {
+      "unit": "gov-euro-retry",
+      "mode": "read-only",
+      "dispatcher_exit": 0,
+      "backend_status": "SUCCESS",
+      "model_confirmation": "ok",
+      "search_queries": 5
+    },
+    {
+      "unit": "gov-euro",
+      "mode": "read-only",
+      "dispatcher_exit": 70,
+      "backend_status": "SUCCESS",
+      "dispatcher_outcome": "print_timeout",
+      "model_confirmation": "ok",
+      "search_queries": 100
+    },
+    {
+      "unit": "gov-us",
+      "mode": "read-only",
+      "dispatcher_exit": 0,
+      "backend_status": "SUCCESS",
+      "model_confirmation": "ok",
+      "search_queries": 74
+    },
+    {
+      "unit": "gov-world",
+      "mode": "read-only",
+      "dispatcher_exit": 0,
+      "backend_status": "SUCCESS",
+      "model_confirmation": "ok",
+      "search_queries": 137
+    },
+    {
+      "unit": "standards",
+      "mode": "read-only",
+      "dispatcher_exit": 0,
+      "backend_status": "SUCCESS",
+      "model_confirmation": "ok",
+      "search_queries": 86
+    }
+  ]
+}

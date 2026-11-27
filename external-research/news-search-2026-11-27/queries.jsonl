@@ -1,0 +1,524 @@
+{"unit": "auditability", "query": "\"2604.05485\" OR \"3806096.3844816\" OR \"Auditable Agents\""}
+{"unit": "auditability", "query": "\"2610.07459\" OR \"Auditable Claims about AI Agents\""}
+{"unit": "auditability", "query": "\"2610.16280\" OR \"agent-risk\" \"Risk Assessment for Changes to AI Agents\""}
+{"unit": "auditability", "query": "\"2603.12621\" OR \"2603.22853\" OR \"No Tool Call Left Unchecked\" OR \"Agent Audit: A Security Analysis System\""}
+{"unit": "auditability", "query": "\"2606.22741\" OR \"2605.09163\" OR \"2608.22808\" OR \"2611.17639\""}
+{"unit": "auditability", "query": "\"agentpile\" OR \"agent-defs\" OR \"Audit Commons\" OR \"auditable\" \"Yue Zhao\" OR \"Auditable Agents\""}
+{"unit": "auditability", "query": "\"CatchBench\" \"2608.22808\" OR \"FORTIS\" \"2605.09163\" OR \"GRADE\" \"2606.22741\" OR \"WeClawArena\" \"2608.03499\""}
+{"unit": "auditability", "query": "site:accuknox.com \"Auditable Agents\" OR \"2604.05485\" OR \"AEGIS\" OR \"2603.12621\""}
+{"unit": "auditability", "query": "(\"2604.05485\" OR \"3806096.3844816\" OR \"2610.07459\" OR \"2610.16280\") -site:arxiv.org -site:usc.edu -site:huggingface.co"}
+{"unit": "auditability", "query": "(\"2603.12621\" OR \"2603.22853\" OR \"2605.09163\" OR \"2606.22741\" OR \"2608.22808\" OR \"2611.17639\") -site:arxiv.org -site:usc.edu -site:huggingface.co"}
+{"unit": "auditability", "query": "(\"agentpile\" OR \"agent-defs\" OR \"auditcommons.org\" OR \"Audit Commons\") (\"agent\" OR \"audit\" OR \"Yue Zhao\" OR \"FORTIS\")"}
+{"unit": "auditability", "query": "(site:ietf.org OR site:nist.gov OR site:owasp.org OR site:europa.eu OR site:gov OR site:gov.uk) (\"Auditable Agents\" OR \"Auditable Claims\" OR \"agent-risk\" OR \"2604.05485\" OR \"2610.07459\" OR \"2603.12621\" OR \"2603.22853\" OR \"2605.09163\")"}
+{"unit": "auditability", "query": "\"2604.05485\" OR \"2603.12621\" OR \"2603.22853\" site:arxiv.org"}
+{"unit": "auditability", "query": "site:nofire.ai \"Auditable\" OR \"2610.07459\" OR \"2604.05485\" OR \"Audit Commons\" OR \"Yue Zhao\""}
+{"unit": "auditability", "query": "site:skillsintelligence.tools \"Auditable\" OR \"2610.07459\" OR \"FORTIS\" OR \"Yue Zhao\""}
+{"unit": "auditability", "query": "site:aegistraces.com OR site:agentiqa.com OR site:rends.ai OR site:foresight.org \"Yue Zhao\" OR \"2603.12621\" OR \"2604.05485\" OR \"2610.07459\""}
+{"unit": "auditability", "query": "site:accuknox.com \"2604.05485\" OR \"2603.12621\" OR \"Yue Zhao\""}
+{"unit": "auditability", "query": "site:skillsintelligence.tools \"predeclared\" OR \"Auditable\" OR \"agent claim\""}
+{"unit": "auditability", "query": "site:accuknox.com \"Auditable Agents\" OR \"auditability gap\" OR \"AgentZ\" \"audit\""}
+{"unit": "auditability", "query": "site:aegistraces.com OR site:agentiqa.com \"aegis\" OR \"audit\" OR \"2603.12621\""}
+{"unit": "auditability", "query": "site:protocol-institute.org \"Auditable\" OR \"compliance theater\" OR \"agent\""}
+{"unit": "auditability", "query": "site:cloudsecurityalliance.org \"Auditable Agents\" OR \"Agent Audit\" OR \"2604.05485\" OR \"2603.22853\" OR \"TrustLLM\""}
+{"unit": "auditability", "query": "(\"yzhao062/auditable\" OR \"yzhao062/agentpile\" OR \"yzhao062/agent-defs\" OR \"yzhao062/aegis\" OR \"HeadyZhang/agent-audit\" OR \"auditcommons.org\")"}
+{"unit": "auditability", "query": "\"2611.23422\" OR \"2611.23346\" OR \"2611.34380\" OR \"2611.21822\" OR \"2611.15170\""}
+{"unit": "auditability", "query": "(\"PyOD\" OR \"ADBench\" OR \"TrustLLM\" OR \"PyGOD\" OR \"Therapeutics Data Commons\" OR \"SUOD\" OR \"ECOD\" OR \"DoxBench\") (\"NIST\" OR \"ENISA\" OR \"UK AISI\" OR \"US AISI\" OR \"EU AI\" OR \"OECD\" OR \"MITRE\" OR \"CISA\" OR \"DOE\" OR \"Sandia\" OR \"Argonne\" OR \"Oak Ridge\") \"2026\""}
+{"unit": "auditability", "query": "\"An agent claim is auditable only when the verdict is predeclared\""}
+{"unit": "auditability", "query": "site:accuknox.com/blog \"Auditable\" OR \"AgentZ\" OR \"auditability\""}
+{"unit": "auditability", "query": "site:nist.gov (\"TrustLLM\" OR \"PyOD\" OR \"ADBench\" OR \"Therapeutics Data Commons\" OR \"Auditable Agents\") \"2026\""}
+{"unit": "auditability", "query": "(\"Audit Commons\" OR \"auditcommons.org\") -site:auditcommons.org -site:github.com"}
+{"unit": "auditability", "query": "(\"What LLM Agents See and What Users Say\" OR \"2611.17639\" OR \"WeClawArena\" OR \"2608.03499\" OR \"CatchBench\" OR \"2608.22808\") -site:arxiv.org -site:usc.edu"}
+{"unit": "auditability", "query": "site:protocol-institute.org \"2610.07459\" OR \"2604.05485\" OR \"Yue Zhao\" OR \"Auditable Claims\""}
+{"unit": "auditability", "query": "site:accuknox.com/blog \"Nian\" OR \"Action Recoverability\" OR \"auditability gap\""}
+{"unit": "auditability", "query": "(\"2604.05485\" OR \"2603.22853\" OR \"2603.12621\" OR \"2605.09163\" OR \"2606.22741\" OR \"2608.22808\" OR \"2610.07459\" OR \"2610.16280\" OR \"2611.17639\") (blog OR news OR newsletter OR github OR docs OR standard OR policy) -site:arxiv.org -site:huggingface.co"}
+{"unit": "auditability", "query": "(\"HeadyZhang/agent-audit\" OR \"pip install agent-audit\" OR \"pip install auditable\" OR \"pip install agentpile\" OR \"pip install agent-defs\")"}
+{"unit": "auditability", "query": "(\"Auditable Agents\" \"Yue Zhao\" OR \"3806096.3844816\" OR \"ACM AI Leadership Summit 2026\")"}
+{"unit": "auditability", "query": "site:roboticscenter.ai \"2610.16280\" OR \"agent-risk\" OR \"Auditable\" OR \"Yue Zhao\""}
+{"unit": "auditability", "query": "site:juliodosreis.com \"2604.05485\" OR \"Auditable Agents\" OR \"Yue Zhao\""}
+{"unit": "auditability", "query": "(\"TrustLLM\" OR \"PyOD\" OR \"ADBench\" OR \"Therapeutics Data Commons\" OR \"PyGOD\" OR \"ECOD\" OR \"SUOD\" OR \"DoxBench\") (site:nist.gov OR site:bis.org OR site:oecd.org OR site:europa.eu OR site:gov.uk) \"2026\""}
+{"unit": "auditability", "query": "\"What LLM Agents See and What Users Say\" OR \"2611.17639\""}
+{"unit": "auditability", "query": "\"CatchBench\" \"2608.22808\" OR \"FORTIS\" \"2605.09163\" OR \"GRADE\" \"2606.22741\" -site:arxiv.org -site:huggingface.co"}
+{"unit": "auditability", "query": "(\"yzhao062\" OR \"FORTIS Lab\") (\"auditable\" OR \"agentpile\" OR \"agent-defs\" OR \"Audit Commons\") -site:github.com -site:usc.edu -site:auditcommons.org"}
+{"unit": "auditability", "query": "(\"PyOD\" OR \"ADBench\" OR \"TrustLLM\" OR \"PyGOD\" OR \"Therapeutics Data Commons\" OR \"ECOD\" OR \"SUOD\" OR \"DoxBench\") (\"government\" OR \"ministry\" OR \"parliament\" OR \"agency\" OR \"NIST\" OR \"ENISA\" OR \"AISI\" OR \"DOE\" OR \"laboratory\") \"2026\" -site:arxiv.org"}
+{"unit": "auditability", "query": "site:cisa.gov (\"PyOD\" OR \"CVE-2026-15529\" OR \"TrustLLM\" OR \"ADBench\" OR \"Auditable Agents\")"}
+{"unit": "auditability", "query": "site:protocol-institute.org \"2610.07459\""}
+{"unit": "auditability", "query": "(\"agentiqa.com\" OR \"multiagentsecurity.ai\" OR \"devminimum.com\" OR \"ghostdriftresearch.com\") (\"2603.12621\" OR \"2611.23346\" OR \"2611.21822\" OR \"TrustLLM\" OR \"Auditable\")"}
+{"unit": "auditability", "query": "(\"2604.05485\" OR \"2603.12621\" OR \"2603.22853\" OR \"2605.09163\" OR \"2606.22741\" OR \"2608.22808\" OR \"2610.07459\" OR \"2610.16280\") (\"OWASP\" OR \"IETF\" OR \"NIST\" OR \"ENISA\" OR \"AISI\")"}
+{"unit": "auditability", "query": "(\"agentpile\" OR \"auditable\" \"yzhao062\" OR \"agent-defs\" OR \"agent-risk\") -site:github.com/yzhao062 -site:pypi.org -site:auditable.run -site:auditcommons.org -site:arxiv.org"}
+{"unit": "auditability", "query": "(\"What LLM Agents See and What Users Say\" OR \"2611.17639\") -site:arxiv.org -site:papers.cool"}
+{"unit": "auditability", "query": "(\"PyOD\" OR \"ADBench\" OR \"TrustLLM\" OR \"PyGOD\" OR \"Therapeutics Data Commons\" OR \"ECOD\" OR \"SUOD\" OR \"DoxBench\") (\"Nov 2026\" OR \"November 2026\" OR \"2026-11\") (benchmark OR evaluation OR audit OR government OR NIST OR AISI)"}
+{"unit": "auditability", "query": "site:themoonlight.io \"2611.17639\" OR \"2604.05485\" OR \"2610.07459\" OR \"2608.22808\""}
+{"unit": "auditability", "query": "(\"PyOD\" OR \"ADBench\" OR \"TrustLLM\" OR \"PyGOD\" OR \"Therapeutics Data Commons\" OR \"ECOD\" OR \"SUOD\" OR \"DoxBench\") (site:aisi.gov.uk OR site:enisa.europa.eu OR site:gao.gov OR site:ec.europa.eu OR site:gov.uk) \"2026\""}
+{"unit": "auditability", "query": "(\"Awesome Agentic Systems\" \"Auditable Agents\") OR (\"awesome-auditable-ai\" -site:github.com/yzhao062 -site:auditcommons.org)"}
+{"unit": "auditability", "query": "(\"agent-audit\" \"HeadyZhang\" OR \"agentguard\" \"aegistraces\" OR \"yzhao062/auditable\" OR \"yzhao062/agentpile\") (blog OR tutorial OR review OR HN OR reddit OR \"OWASP\" OR \"awesome\")"}
+{"unit": "auditability", "query": "(\"2604.05485\" OR \"2603.12621\" OR \"2603.22853\" OR \"2605.09163\" OR \"2606.22741\" OR \"2608.22808\" OR \"2610.07459\" OR \"2610.16280\" OR \"2611.17639\") (site:ietf.org OR site:nist.gov OR site:owasp.org OR site:cloudsecurityalliance.org)"}
+{"unit": "auditability", "query": "(\"PyOD\" OR \"ADBench\" OR \"TrustLLM\" OR \"PyGOD\" OR \"Therapeutics Data Commons\" OR \"SUOD\" OR \"ECOD\" OR \"DoxBench\") (\"2026-11-18\" OR \"2026-11-19\" OR \"2026-11-20\" OR \"2026-11-21\" OR \"2026-11-22\" OR \"2026-11-23\" OR \"2026-11-24\" OR \"2026-11-25\" OR \"2026-11-26\" OR \"2026-11-27\")"}
+{"unit": "auditability", "query": "\"agentpile\" \"ATIF\" OR \"yzhao062/agentpile\""}
+{"unit": "auditability", "query": "\"agent-defs\" \"yzhao062\" OR \"Definitions for agent security tools\""}
+{"unit": "auditability", "query": "\"agent-risk\" \"2610.16280\" -site:arxiv.org -site:github.com/yzhao062"}
+{"unit": "auditability", "query": "\"2611.17639\" OR \"What LLM Agents See and What Users Say\" \"Look-or-Ask\" -site:arxiv.org"}
+{"unit": "auditability", "query": "\"2606.22741\" \"GRADE\" -site:arxiv.org -site:github.com/yzhao062"}
+{"unit": "auditability", "query": "\"agent-audit\" \"HeadyZhang\" OR \"2603.22853\" -site:arxiv.org -site:github.com/HeadyZhang"}
+{"unit": "external", "query": "\"PyOD\" OR \"ADBench\" OR \"TrustLLM\" OR \"PyGOD\" OR \"DoxBench\" \"November 2026\" OR \"Nov 2026\" OR \"2026-11\""}
+{"unit": "external", "query": "\"Therapeutics Data Commons\" OR \"TrustLLM\" \"system card\" OR \"model card\" OR \"technical report\" OR \"documentation\" 2025 OR 2026"}
+{"unit": "external", "query": "\"PyOD\" \"patent\" OR site:patents.google.com (\"PyOD\" OR \"ADBench\" OR \"TrustLLM\" OR \"Therapeutics Data Commons\" OR \"PyGOD\")"}
+{"unit": "external", "query": "(\"PyOD\" OR \"ADBench\" OR \"TrustLLM\" OR \"PyGOD\" OR \"ECOD\" OR \"SUOD\") (CERN OR Fraunhofer OR RIKEN OR CSIRO OR INRIA OR AIST OR DLR OR ENISA OR AISI OR \"National Research Council\")"}
+{"unit": "external", "query": "(\"PyOD\" OR \"TrustLLM\" OR \"Therapeutics Data Commons\" OR \"DoxBench\" OR \"ADBench\") (\"Reuters\" OR \"Bloomberg\" OR \"Financial Times\" OR \"MIT Technology Review\" OR \"Wired\" OR \"Nature\" OR \"Science\" OR \"VentureBeat\" OR \"TechCrunch\" OR \"IEEE Spectrum\")"}
+{"unit": "external", "query": "(\"PyGOD\" OR \"SUOD\" OR \"DoxBench\" OR \"ECOD\") (\"benchmark\" OR \"evaluation\" OR \"report\" OR \"guideline\" OR \"policy\") 2025 OR 2026"}
+{"unit": "external", "query": "\"2401.05561\" OR \"19-011\" OR \"foA_SFQ9zo0\" OR \"2504.19373\" OR \"2201.00382\" (site:gov OR site:europa.eu OR site:org OR site:nvidia.com OR site:microsoft.com OR site:aws.amazon.com OR site:cloud.google.com)"}
+{"unit": "external", "query": "\"PyOD\" (site:docs.aws.amazon.com OR site:learn.microsoft.com OR site:cloud.google.com OR site:docs.nvidia.com OR site:docs.databricks.com OR site:huggingface.co)"}
+{"unit": "external", "query": "\"PyOD\" (\"Google Cloud\" OR \"Dataflow\" OR \"Apache Beam\" OR \"Assured Open Source\" OR \"Snowflake\" OR \"Databricks\" OR \"Vertex AI\" OR \"SageMaker\")"}
+{"unit": "external", "query": "\"TrustLLM\" (\"model card\" OR \"system card\" OR \"technical report\" OR \"Llama\" OR \"Qwen\" OR \"DeepSeek\" OR \"Mistral\" OR \"Claude\" OR \"Gemini\" OR \"Gemma\" OR \"GPT\" OR \"Granite\")"}
+{"unit": "external", "query": "\"Therapeutics Data Commons\" (\"Nature\" OR \"Science\" OR \"Cell\" OR \"BioNTech\" OR \"NVIDIA\" OR \"BioNeMo\" OR \"Roche\" OR \"Novartis\" OR \"AstraZeneca\" OR \"Pfizer\" OR \"Recursion\")"}
+{"unit": "external", "query": "\"ADBench\" (\"NVIDIA\" OR \"Amazon\" OR \"AWS\" OR \"Microsoft\" OR \"IBM\" OR \"Google\" OR \"Databricks\" OR \"SAS\" OR \"Alibaba\" OR \"ByteDance\" OR \"Huawei\")"}
+{"unit": "external", "query": "\"DoxBench\" OR \"2504.19373\" (\"news\" OR \"media\" OR \"policy\" OR \"report\" OR \"blog\" OR \"benchmark\" OR \"evaluation\" OR \"audit\")"}
+{"unit": "external", "query": "(\"PyGOD\" OR \"ECOD\" OR \"SUOD\") (site:patents.google.com OR \"patent\" OR \"USPTO\" OR \"WIPO\" OR \"EPO\")"}
+{"unit": "external", "query": "(\"PyOD\" OR \"ADBench\" OR \"TrustLLM\" OR \"PyGOD\" OR \"ECOD\" OR \"SUOD\" OR \"Therapeutics Data Commons\") (\"CERN\" OR \"Fraunhofer\" OR \"RIKEN\" OR \"CSIRO\" OR \"INRIA\" OR \"AIST\" OR \"DLR\" OR \"DFKI\" OR \"PSI\" OR \"UK AISI\" OR \"AISI\" OR \"ENISA\" OR \"ETRI\" OR \"KISTI\")"}
+{"unit": "external", "query": "\"PyOD\" (\"model card\" OR \"system card\" OR \"documentation\" OR \"tutorial\" OR \"release notes\") (site:aws.amazon.com OR site:learn.microsoft.com OR site:snowflake.com OR site:databricks.com OR site:nvidia.com OR site:ibm.com OR site:oracle.com)"}
+{"unit": "external", "query": "\"TrustLLM\" \"Yue Zhao\" OR \"2401.05561\" OR \"Huang\" (\"system card\" OR \"model card\" OR \"safety report\" OR \"evaluation\" OR \"audit\") 2025 OR 2026"}
+{"unit": "external", "query": "\"Therapeutics Data Commons\" site:nature.com OR site:science.org OR site:cell.com OR site:thelancet.com OR site:pnas.org"}
+{"unit": "external", "query": "\"PyOD\" (site:nature.com OR site:science.org OR site:cell.com OR site:pnas.org OR site:thelancet.com)"}
+{"unit": "external", "query": "(\"PyGOD\" OR \"ADBench\" OR \"SUOD\" OR \"ECOD\") (\"CSIRO\" OR \"RIKEN\" OR \"Fraunhofer\" OR \"INRIA\" OR \"CERN\" OR \"DLR\" OR \"AIST\" OR \"KISTI\" OR \"ETRI\" OR \"CEA\" OR \"Max Planck\" OR \"ETH Zurich\")"}
+{"unit": "external", "query": "site:patents.google.com (\"PyOD\" OR \"ADBench\" OR \"PyGOD\" OR \"ECOD\" OR \"SUOD\" OR \"Therapeutics Data Commons\" OR \"TrustLLM\")"}
+{"unit": "external", "query": "\"PyOD\" \"November 2026\" OR \"Nov 2026\" OR \"Nov. 2026\""}
+{"unit": "external", "query": "\"TrustLLM\" \"November 2026\" OR \"Nov 2026\" OR \"Nov. 2026\""}
+{"unit": "external", "query": "\"ADBench\" OR \"PyGOD\" OR \"DoxBench\" OR \"ECOD\" OR \"SUOD\" \"November 2026\" OR \"Nov 2026\""}
+{"unit": "external", "query": "\"PyOD\" site:patents.google.com"}
+{"unit": "external", "query": "(\"ADBench\" OR \"TrustLLM\" OR \"Therapeutics Data Commons\" OR \"PyGOD\" OR \"ECOD\" OR \"SUOD\" OR \"DoxBench\") site:patents.google.com"}
+{"unit": "external", "query": "\"PyOD\" (\"CERN\" OR \"INRIA\" OR \"CSIRO\" OR \"RIKEN\" OR \"AIST\" OR \"DLR\" OR \"Fraunhofer\" OR \"DFKI\" OR \"Max Planck\" OR \"UK AISI\")"}
+{"unit": "external", "query": "(\"DoxBench\" OR \"TrustLLM\" OR \"PyOD\" OR \"ADBench\" OR \"Therapeutics Data Commons\") (\"MIT Technology Review\" OR \"IEEE Spectrum\" OR \"The Register\" OR \"Ars Technica\" OR \"Nature\" OR \"Science\" OR \"Nikkei\" OR \"VentureBeat\")"}
+{"unit": "external", "query": "\"Therapeutics Data Commons\" (site:patents.google.com OR site:huggingface.co OR site:docs.nvidia.com OR site:github.com/NVIDIA OR site:deepmind.google)"}
+{"unit": "external", "query": "(\"TrustLLM\" OR \"ADBench\" OR \"PyOD\" OR \"PyGOD\") (site:aisi.gov.uk OR site:indico.cern.ch OR site:cds.cern.ch OR site:hal.science OR site:csiro.au OR site:nist.gov OR site:enisa.europa.eu)"}
+{"unit": "external", "query": "(\"Agent Audit\" OR \"Auditable Agents\" OR \"Auditable Claims about AI Agents\" OR \"WeClawArena\" OR \"TrustGen\" OR \"TRUSTEVAL\" OR \"AEGIS\") (\"Yue Zhao\" OR \"2603.22853\" OR \"2610.07459\" OR \"2502.14296\" OR \"2608.03499\" OR \"2603.12621\") (policy OR news OR NIST OR report OR blog OR enterprise)"}
+{"unit": "external", "query": "\"PyOD\" (\"system card\" OR \"model card\" OR \"documentation\" OR \"AWS\" OR \"Azure\" OR \"IBM\" OR \"NVIDIA\" OR \"Hugging Face\") \"outlier detection\""}
+{"unit": "external", "query": "(\"TrustLLM\" \"2401.05561\") (\"Hugging Face\" OR \"NVIDIA\" OR \"Microsoft\" OR \"IBM\" OR \"Google\" OR \"Meta\" OR \"Anthropic\" OR \"OpenAI\" OR \"Alibaba\" OR \"Mistral\")"}
+{"unit": "external", "query": "\"pyod\" (\"released\" OR \"version\" OR \"3.6.9\" OR \"November 2026\" OR \"Nov 2026\") site:pypi.org OR site:github.com OR site:anaconda.org"}
+{"unit": "external", "query": "\"DoxBench\" OR \"2504.19373\" OR \"Doxing via the Lens\" news OR article OR press OR media OR BBC OR Guardian OR Wired OR TechCrunch OR Ars OR Register"}
+{"unit": "external", "query": "\"PyOD\" (\"CVE-2026\" OR \"security\" OR \"advisory\" OR \"release\" OR \"Snowflake\" OR \"Databricks\" OR \"Google Cloud\" OR \"AWS\" OR \"Microsoft\" OR \"IBM\")"}
+{"unit": "external", "query": "\"ADBench\" (\"2206.02353\" OR \"foA_SFQ9zo0\" OR \"Yue Zhao\") (\"benchmark\" OR \"framework\" OR \"patent\" OR \"AWS\" OR \"NVIDIA\" OR \"IBM\" OR \"Google\" OR \"Nature\" OR \"Science\")"}
+{"unit": "external", "query": "\"ECOD\" \"2201.00382\" OR \"Empirical-Cumulative-distribution\" OR \"Empirical Cumulative Distribution\" (\"PyOD\" OR \"Yue Zhao\") (site:gov OR site:europa.eu OR site:patents.google.com OR site:nature.com OR site:science.org)"}
+{"unit": "external", "query": "\"TrustLLM\" \"2401.05561\" (\"Hugging Face\" OR \"model card\" OR \"system card\" OR \"safety\" OR \"Qwen\" OR \"DeepSeek\" OR \"Llama\" OR \"Mistral\" OR \"Granite\") site:huggingface.co OR site:github.com OR site:arxiv.org"}
+{"unit": "external", "query": "(\"PyOD\" OR \"PyGOD\" OR \"TrustLLM\" OR \"ADBench\" OR \"Therapeutics Data Commons\") (\"RIKEN\" OR \"AIST\" OR \"KISTI\" OR \"ETRI\" OR \"CSIRO\" OR \"A*STAR\" OR \"NRC\" OR \"UK AISI\" OR \"ENISA\")"}
+{"unit": "external", "query": "(\"Agent Audit\" OR \"agent-audit\" OR \"AEGIS\" OR \"Auditable Agents\" OR \"WeClawArena\" OR \"TrustGen\") (\"2603.22853\" OR \"2603.12621\" OR \"2604.05485\" OR \"2608.03499\" OR \"2502.14296\") -site:arxiv.org -site:github.com/yzhao062 -site:github.com/FORTIS-Lab"}
+{"unit": "external", "query": "\"Therapeutics Data Commons\" (\"STAT\" OR \"Endpoints News\" OR \"Fierce Biotech\" OR \"Nature News\" OR \"Nature Biotechnology\" OR \"Nature Machine Intelligence\" OR \"Cell\")"}
+{"unit": "external", "query": "\"TrustLLM\" (\"MIT Technology Review\" OR \"Wired\" OR \"IEEE Spectrum\" OR \"VentureBeat\" OR \"TechCrunch\" OR \"Financial Times\" OR \"Reuters\" OR \"Nature\") \"2401.05561\" OR \"Huang\" OR \"trustworthiness\""}
+{"unit": "external", "query": "(\"PyOD\" OR \"ADBench\" OR \"TrustLLM\" OR \"PyGOD\") (\"garak\" OR \"inspect_ai\" OR \"NeMo-Guardrails\" OR \"lighteval\" OR \"lm-evaluation-harness\" OR \"deepeval\" OR \"promptfoo\")"}
+{"unit": "external", "query": "\"PyOD\" (\"NIST\" OR \"MITRE\" OR \"ENISA\" OR \"AISI\" OR \"CERN\" OR \"Snowflake\" OR \"Databricks\" OR \"AWS\" OR \"Microsoft\" OR \"Google Cloud\") -site:github.com/yzhao062"}
+{"unit": "external", "query": "\"ADBench\" \"Han\" \"2022\" (\"Nature\" OR \"Science\" OR \"Cell\" OR \"PNAS\" OR \"Siemens\" OR \"Bosch\" OR \"IBM\" OR \"Microsoft\" OR \"AWS\" OR \"NVIDIA\")"}
+{"unit": "external", "query": "\"Therapeutics Data Commons\" site:patents.google.com"}
+{"unit": "external", "query": "\"TrustLLM\" site:patents.google.com"}
+{"unit": "external", "query": "\"PyOD\" (\"model card\" OR \"system card\" OR \"Amazon\" OR \"SageMaker\" OR \"Azure\" OR \"Snowflake\" OR \"Databricks\" OR \"Google Cloud\") \"pip install pyod\" OR \"from pyod\""}
+{"unit": "external", "query": "\"TrustLLM\" \"2401.05561\" (\"Safety\" OR \"Fairness\" OR \"Truthfulness\") (\"OpenAI\" OR \"Anthropic\" OR \"DeepMind\" OR \"Meta\" OR \"Mistral\" OR \"Qwen\" OR \"DeepSeek\" OR \"IBM\") -site:arxiv.org"}
+{"unit": "external", "query": "\"Therapeutics Data Commons\" (\"BioNeMo\" OR \"TxGemma\" OR \"Recursion\" OR \"Insilico\" OR \"Schrodinger\" OR \"Genentech\" OR \"Roche\" OR \"Novartis\" OR \"AstraZeneca\") -site:tdcommons.ai"}
+{"unit": "external", "query": "\"DoxBench\" OR \"2504.19373\" -site:arxiv.org -site:github.com -site:iclr.cc -site:openreview.net -site:huggingface.co"}
+{"unit": "external", "query": "(\"PyOD\" OR \"TrustLLM\" OR \"Therapeutics Data Commons\" OR \"ADBench\" OR \"DoxBench\") (site:techcrunch.com OR site:venturebeat.com OR site:theregister.com OR site:arstechnica.com OR site:technologyreview.com OR site:spectrum.ieee.org OR site:reuters.com OR site:wired.com)"}
+{"unit": "external", "query": "(\"PyOD\" OR \"TrustLLM\" OR \"ADBench\" OR \"PyGOD\" OR \"ECOD\" OR \"SUOD\" OR \"Therapeutics Data Commons\") (site:aisi.gov.uk OR site:enisa.europa.eu OR site:riken.jp OR site:aist.go.jp OR site:fraunhofer.de OR site:dlr.de OR site:csiro.au OR site:inria.fr OR site:psi.ch OR site:nrc-cnrc.gc.ca)"}
+{"unit": "external", "query": "(\"PyOD\" OR \"ADBench\" OR \"TrustLLM\" OR \"PyGOD\" OR \"Therapeutics Data Commons\") (site:huggingface.co/google OR site:huggingface.co/Qwen OR site:huggingface.co/meta-llama OR site:huggingface.co/mistralai OR site:huggingface.co/ibm-granite OR site:huggingface.co/nvidia OR site:huggingface.co/deepseek-ai OR site:huggingface.co/microsoft)"}
+{"unit": "external", "query": "(\"PyOD\" OR \"ADBench\" OR \"TrustLLM\" OR \"PyGOD\") (site:learn.microsoft.com OR site:aws.amazon.com OR site:docs.aws.amazon.com OR site:docs.nvidia.com OR site:developer.nvidia.com OR site:docs.databricks.com OR site:docs.snowflake.com)"}
+{"unit": "external", "query": "\"Python Outlier Detection\" OR \"2401.05561\" OR \"Therapeutics Data Commons\" site:patents.google.com"}
+{"unit": "external", "query": "\"Lantern Pharma\" \"Therapeutics Data Commons\" OR \"WO2025\" \"Therapeutics Data Commons\""}
+{"unit": "external", "query": "\"TrustLLM\" (\"inspect_ai\" OR \"garak\" OR \"NeMo-Guardrails\" OR \"lighteval\" OR \"lm-evaluation-harness\" OR \"UK AISI\" OR \"AISI\")"}
+{"unit": "external", "query": "(\"PyOD\" OR \"ADBench\" OR \"PyGOD\") (\"NVIDIA\" OR \"AWS\" OR \"Microsoft\" OR \"Databricks\" OR \"Snowflake\" OR \"Hugging Face\") (\"documentation\" OR \"docs\" OR \"guide\" OR \"library\" OR \"integration\") -site:github.com/yzhao062"}
+{"unit": "external", "query": "(\"PyOD\" OR \"ADBench\" OR \"TrustLLM\" OR \"Therapeutics Data Commons\" OR \"PyGOD\") (\"Nature Biotechnology\" OR \"Nature Machine Intelligence\" OR \"Nature Methods\" OR \"Nature Medicine\" OR \"Science Translational Medicine\" OR \"Cell Systems\")"}
+{"unit": "gov-euro-retry", "query": "site:europa.eu \"pyod\" OR \"yzhao062\" OR \"ADBench\" OR \"2401.05561\" OR \"CatchBench\" OR \"2604.05485\""}
+{"unit": "gov-euro-retry", "query": "site:gov.uk \"pyod\" OR \"yzhao062\" OR \"ADBench\" OR \"2401.05561\" OR \"CatchBench\" OR \"2604.05485\""}
+{"unit": "gov-euro-retry", "query": "site:enisa.europa.eu \"pyod\" OR \"ADBench\" OR \"TrustLLM\" OR \"2401.05561\" OR \"CatchBench\" OR \"2604.05485\""}
+{"unit": "gov-euro-retry", "query": "(\"gouv.fr\" OR \"bund.de\" OR \"admin.ch\" OR \"overheid.nl\" OR \"gov.ie\" OR \"riksdagen.se\" OR \"bundesbank\" OR \"bafin\" OR \"cnil.fr\" OR \"bsi.bund.de\") (\"pyod\" OR \"ADBench\" OR \"2401.05561\" OR \"CatchBench\" OR \"2604.05485\")"}
+{"unit": "gov-euro-retry", "query": "Find official European government, EU JRC, UK AISI, gov.uk, ENISA, central bank, or public procurement documents or repositories citing or using PyOD (yzhao062/pyod), TrustLLM (Huang et al arXiv:2401.05561), ADBench, CatchBench, or Auditable Agents (2604.05485), excluding UK Sutton Access Assure, JRC146034, Swedish FOI 5453, SEDIMARK, and Bundesbank IFC."}
+{"unit": "gov-euro", "query": "(\"TrustLLM\" OR \"TrustGen\" OR \"TRUSTEVAL\" OR \"DoxBench\" OR \"PyOD\" OR \"ADBench\" OR \"Auditable Agents\" OR \"Agent Audit\") (\"AI Security Institute\" OR \"AI Safety Institute\" OR \"EU AI Office\" OR \"ENISA\" OR \"Joint Research Centre\")"}
+{"unit": "gov-euro", "query": "(\"PyOD\" OR \"ADBench\" OR \"TrustLLM\" OR \"ECOD\" OR \"COPOD\" OR \"SUOD\" OR \"PyGOD\") (\"bundesbank\" OR \"bafin\" OR \"bsi.bund.de\" OR \"cnil\" OR \"anssi\" OR \"banque-france\" OR \"bancaditalia\" OR \"bde.es\" OR \"dnb.nl\" OR \"finma\" OR \"riksbank\" OR \"norges-bank\")"}
+{"unit": "gov-euro", "query": "(\"PyOD\" OR \"ADBench\" OR \"TrustLLM\" OR \"ECOD\" OR \"COPOD\" OR \"Therapeutics Data Commons\") (site:github.com/UKGovernmentBEIS OR site:github.com/alphagov OR site:github.com/UKHomeOffice OR site:github.com/uk-aisi OR site:code.europa.eu OR site:github.com/ec-jrc)"}
+{"unit": "gov-euro", "query": "(\"PyOD\" OR \"ECOD\" OR \"COPOD\" OR \"ADBench\" OR \"TrustLLM\") (\"Ausreißererkennung\" OR \"Anomalieerkennung\" OR \"détection d'anomalies\" OR \"rilevamento delle anomalie\" OR \"detecció d'anomalies\" OR \"detección de anomalías\" OR \"avvikelsedeteksjon\") (behörde OR ministerium OR ministère OR governo OR gov OR bank OR finanz)"}
+{"unit": "gov-euro", "query": "(\"PyOD\" OR \"ADBench\" OR \"TrustLLM\" OR \"PyGOD\" OR \"ECOD\" OR \"COPOD\") (site:ted.europa.eu OR site:contractsfinder.service.gov.uk OR site:find-tender.service.gov.uk OR site:boamp.fr OR site:evergabe-online.de)"}
+{"unit": "gov-euro", "query": "\"PyOD\" site:gov.uk"}
+{"unit": "gov-euro", "query": "\"TrustLLM\" site:gov.uk"}
+{"unit": "gov-euro", "query": "\"PyOD\" site:europa.eu"}
+{"unit": "gov-euro", "query": "\"TrustLLM\" site:europa.eu"}
+{"unit": "gov-euro", "query": "\"ADBench\" site:europa.eu"}
+{"unit": "gov-euro", "query": "\"ECOD\" \"outlier\" site:europa.eu"}
+{"unit": "gov-euro", "query": "\"Therapeutics Data Commons\" site:europa.eu"}
+{"unit": "gov-euro", "query": "\"PyOD\" OR \"ADBench\" OR \"TrustLLM\" OR \"ECOD\" OR \"COPOD\" site:aisi.gov.uk"}
+{"unit": "gov-euro", "query": "\"PyOD\" OR \"ADBench\" OR \"ECOD\" OR \"COPOD\" OR \"SUOD\" site:enisa.europa.eu"}
+{"unit": "gov-euro", "query": "\"PyOD\" site:op.europa.eu"}
+{"unit": "gov-euro", "query": "\"COPOD\" OR \"ECOD\" OR \"ADBench\" OR \"SUOD\" OR \"PyGOD\" site:op.europa.eu"}
+{"unit": "gov-euro", "query": "\"PyOD\" site:bundesbank.de OR site:bafin.de OR site:bsi.bund.de"}
+{"unit": "gov-euro", "query": "\"PyOD\" site:cnil.fr OR site:ssi.gouv.fr OR site:banque-france.fr OR site:gouv.fr"}
+{"unit": "gov-euro", "query": "\"PyOD\" \"europa.eu\""}
+{"unit": "gov-euro", "query": "\"PyOD\" \"AI Security Institute\" OR \"AI Safety Institute\" OR \"UK AISI\""}
+{"unit": "gov-euro", "query": "\"TrustLLM\" \"2401.05561\" \"AI Security Institute\" OR \"AI Safety Institute\" OR \"EU AI Office\" OR \"ENISA\" OR \"Joint Research Centre\""}
+{"unit": "gov-euro", "query": "\"PyOD\" \"Bundesbank\" OR \"BaFin\" OR \"BSI\" OR \"CNIL\" OR \"ANSSI\" OR \"Banca d'Italia\" OR \"Banco de España\" OR \"DNB\" OR \"FINMA\""}
+{"unit": "gov-euro", "query": "\"ADBench\" \"Bundesbank\" OR \"BaFin\" OR \"BSI\" OR \"CNIL\" OR \"JRC\" OR \"ENISA\" OR \"UK AISI\" OR \"europa.eu\""}
+{"unit": "gov-euro", "query": "\"DoxBench\" OR \"TrustGen\" OR \"TRUSTEVAL\" OR \"AD-LLM\" OR \"NLP-ADBench\" OR \"PyOD 2\" \"europa.eu\" OR \"gov.uk\" OR \"aisi.gov.uk\""}
+{"unit": "gov-euro", "query": "\"Yue Zhao\" site:europa.eu"}
+{"unit": "gov-euro", "query": "\"Yue Zhao\" site:gov.uk"}
+{"unit": "gov-euro", "query": "\"PyOD\" site:bundesbank.de"}
+{"unit": "gov-euro", "query": "\"ECOD\" site:bundesbank.de"}
+{"unit": "gov-euro", "query": "\"PyOD\" OR \"ECOD\" OR \"COPOD\" OR \"ADBench\" site:bis.org"}
+{"unit": "gov-euro", "query": "\"TrustLLM\" \"2401.05561\" site:europa.eu"}
+{"unit": "gov-euro", "query": "\"TrustLLM\" \"Yue Zhao\" site:europa.eu"}
+{"unit": "gov-euro", "query": "\"2401.05561\" \"aisi.gov.uk\" OR \"gov.uk\" OR \"europa.eu\""}
+{"unit": "gov-euro", "query": "\"PyOD\" \"Horizon\" \"europa.eu\""}
+{"unit": "gov-euro", "query": "\"PyOD\" \"Bundesbank\""}
+{"unit": "gov-euro", "query": "\"PyOD\" \"BaFin\" OR \"BSI\" OR \"ANSSI\" OR \"CNIL\" OR \"FINMA\""}
+{"unit": "gov-euro", "query": "\"PyOD\" \"gov.uk\" -sutton"}
+{"unit": "gov-euro", "query": "\"ECOD\" \"anomaly\" site:gov.uk"}
+{"unit": "gov-euro", "query": "\"COPOD\" \"anomaly\" site:europa.eu"}
+{"unit": "gov-euro", "query": "\"TrustLLM\" \"Joint Research Centre\" OR \"JRC\" \"europa.eu\""}
+{"unit": "gov-euro", "query": "\"PyOD\" \"AI Act\" OR \"DORA\" OR \"ENISA\" OR \"JRC\" OR \"BaFin\" OR \"CNIL\" OR \"BSI\""}
+{"unit": "gov-euro", "query": "\"PyOD\" \"Bank of England\" OR \"FCA\" OR \"Ofcom\" OR \"ONS\" OR \"NCSC\" OR \"ICO\""}
+{"unit": "gov-euro", "query": "\"TrustLLM\" \"Bank of England\" OR \"FCA\" OR \"Ofcom\" OR \"ONS\" OR \"NCSC\" OR \"ICO\" OR \"DSIT\""}
+{"unit": "gov-euro", "query": "\"Therapeutics Data Commons\" \"MHRA\" OR \"EMA\" OR \"NICE\" OR \"UK Biobank\" OR \"Wellcome\" OR \"NHS\" OR \"europa.eu\" OR \"gov.uk\""}
+{"unit": "gov-euro", "query": "\"JRC146034\""}
+{"unit": "gov-euro", "query": "\"PyOD\" \"Bank of England\" OR \"Financial Conduct Authority\" OR \"Ofcom\" OR \"ONS\" OR \"UK Statistics\""}
+{"unit": "gov-euro", "query": "\"PyOD\" \"EUR-Lex\" OR \"European Parliament\" OR \"ECB\" OR \"ESMA\" OR \"EBA\" OR \"Europol\""}
+{"unit": "gov-euro", "query": "\"ADBench\" \"JRC\" OR \"European Commission\" OR \"Bundesbank\" OR \"European Parliament\" OR \"UK\" \"gov.uk\""}
+{"unit": "gov-euro", "query": "\"TrustLLM\" \"RASS\" OR \"JRC\" \"10.2760\""}
+{"unit": "gov-euro", "query": "\"Diffusion Models: A Comprehensive Survey\" \"gov.uk\" OR \"europa.eu\" OR \"aisi.gov.uk\" OR \"bundesbank\" OR \"enisa\""}
+{"unit": "gov-euro", "query": "\"PyOD\" site:peren.gouv.fr OR site:cyber.gouv.fr OR site:ssi.gouv.fr OR site:cnil.fr"}
+{"unit": "gov-euro", "query": "\"PyOD\" site:bund.de"}
+{"unit": "gov-euro", "query": "\"PyOD\" site:admin.ch"}
+{"unit": "gov-euro", "query": "\"PyOD\" site:overheid.nl OR site:rijksoverheid.nl"}
+{"unit": "gov-euro", "query": "\"TrustLLM\" \"2401.05561\" site:bundesbank.de OR site:bsi.bund.de OR site:bafin.de OR site:enisa.europa.eu"}
+{"unit": "gov-euro", "query": "\"PyOD\" site:europa.eu -ore.eu"}
+{"unit": "gov-euro", "query": "\"PyOD\" site:gov.se OR site:foi.se OR site:riksbank.se OR site:scb.se"}
+{"unit": "gov-euro", "query": "\"PyOD\" site:gov.it OR site:bancaditalia.it OR site:istat.it OR site:acn.gov.it"}
+{"unit": "gov-euro", "query": "\"PyOD\" site:gob.es OR site:bde.es OR site:ine.es OR site:incibe.es"}
+{"unit": "gov-euro", "query": "\"PyOD\" site:gov.pl OR site:nbp.pl OR site:nask.pl OR site:stat.gov.pl"}
+{"unit": "gov-euro", "query": "\"ADBench\" OR \"TrustLLM\" OR \"ECOD\" OR \"COPOD\" site:admin.ch"}
+{"unit": "gov-euro", "query": "\"TrustLLM\" site:enisa.europa.eu"}
+{"unit": "gov-euro", "query": "\"TrustLLM\" site:europarl.europa.eu"}
+{"unit": "gov-euro", "query": "\"PyOD\" site:europarl.europa.eu"}
+{"unit": "gov-euro", "query": "\"TrustLLM\" \"2401.05561\" site:bis.org"}
+{"unit": "gov-euro", "query": "\"PyOD\" OR \"ADBench\" OR \"TrustLLM\" OR \"ECOD\" OR \"COPOD\" site:ecb.europa.eu"}
+{"unit": "gov-euro", "query": "\"PyOD\" \"gov.uk\" filetype:pdf"}
+{"unit": "gov-euro", "query": "\"TrustLLM\" \"europa.eu\" filetype:pdf"}
+{"unit": "gov-euro", "query": "\"ADBench\" \"europa.eu\" OR \"gov.uk\" filetype:pdf"}
+{"unit": "gov-euro", "query": "\"PyOD\" (\"Contracts Finder\" OR \"Find a Tender\" OR \"TED\" OR \"BOAMP\" OR \"Doffin\" OR \"Mercol\" OR \"eVergabe\")"}
+{"unit": "gov-euro", "query": "\"TrustLLM\" \"European Commission\" OR \"EU AI Office\" OR \"AI Act\" \"2401.05561\""}
+{"unit": "gov-euro", "query": "\"PyOD\" \"European Space Agency\" OR \"ESA\" -OPS-SAT -ESA-ADB"}
+{"unit": "gov-euro", "query": "\"PyOD\" (\"Deutsche Bundesbank\" OR \"BaFin\" OR \"BSI\") -bulletin -57 -\"2026-03\""}
+{"unit": "gov-euro", "query": "\"TrustLLM\" (\"UK AISI\" OR \"AI Security Institute\" OR \"AI Safety Institute\") \"2401.05561\""}
+{"unit": "gov-euro", "query": "\"Auditable Agents\" OR \"WeClawArena\" OR \"Agent Audit\" OR \"AEGIS\" (\"europa.eu\" OR \"aisi.gov.uk\" OR \"gov.uk\" OR \"enisa\")"}
+{"unit": "gov-euro", "query": "\"TrustLLM\" \"Bund\" OR \"Bundesbank\" OR \"BaFin\" OR \"BSI\" OR \"BMF\" OR \"BMBF\""}
+{"unit": "gov-euro", "query": "\"PyOD\" \"Ausreißererkennung\" OR \"Anomalieerkennung\" site:de"}
+{"unit": "gov-euro", "query": "\"PyOD\" \"détection d'anomalies\" site:fr"}
+{"unit": "gov-euro", "query": "\"PyOD\" \"UK\" \"regulator\" OR \"Ofcom\" OR \"FCA\" OR \"CMA\" OR \"ICO\" OR \"NHS\" OR \"MHRA\""}
+{"unit": "gov-euro", "query": "\"ADBench\" \"Deutsche Bundesbank\" OR \"Bank of England\" OR \"Banque de France\" OR \"ECB\" OR \"ESMA\""}
+{"unit": "gov-euro", "query": "\"AnomalyMatch\" \"PyOD\" OR \"ADBench\""}
+{"unit": "gov-euro", "query": "\"Spatially-Constrained Unsupervised Anomaly Detection\" \"PyOD\""}
+{"unit": "gov-euro", "query": "\"Scalable anomaly detection via a univariate Christoffel function\" \"ADBench\" OR \"PyOD\""}
+{"unit": "gov-euro", "query": "\"PyOD\" site:parliament.uk"}
+{"unit": "gov-euro", "query": "\"TrustLLM\" site:parliament.uk"}
+{"unit": "gov-euro", "query": "\"PyOD\" \"European Union\" OR \"European Commission\" OR \"EU AI Office\" OR \"JRC\" -RASS"}
+{"unit": "gov-euro", "query": "\"ADBench\" \"Bundesbank\" OR \"Bank of England\" OR \"European\" \"regulator\""}
+{"unit": "gov-euro", "query": "\"TrustLLM\" \"2401.05561\" \"Bundesbank\" OR \"BaFin\" OR \"CNIL\" OR \"BSI\" OR \"ANSSI\" OR \"FINMA\" OR \"Bank of England\" OR \"FCA\""}
+{"unit": "gov-euro", "query": "\"PyOD\" (\"Finanz\" OR \"Bundesamt\" OR \"Behörde\" OR \"Ministerium\" OR \"Statistik\") site:de OR site:at OR site:ch"}
+{"unit": "gov-euro", "query": "\"PyOD\" (\"Ministère\" OR \"Banque\" OR \"Autorité\" OR \"Agence\") site:fr OR site:be OR site:ch"}
+{"unit": "gov-euro", "query": "\"PyOD\" site:cern.ch"}
+{"unit": "gov-euro", "query": "\"ADBench\" OR \"TrustLLM\" OR \"ECOD\" OR \"COPOD\" site:cern.ch"}
+{"unit": "gov-euro", "query": "\"PyOD\" site:ccomptes.fr"}
+{"unit": "gov-euro", "query": "\"PyOD\" site:europa.eu \"ECOD\" OR \"COPOD\" OR \"ADBench\" OR \"SUOD\""}
+{"unit": "gov-euro", "query": "\"TrustLLM\" \"European\" \"benchmark\" \"2401.05561\""}
+{"unit": "gov-euro", "query": "\"PyOD\" \"Eurostat\" OR \"DESTATIS\" OR \"INSEE\" OR \"CBS\" OR \"ISTAT\" OR \"INE\" OR \"ONS\""}
+{"unit": "gov-euro", "query": "\"PyOD\" site:nhs.uk OR site:digital.nhs.uk"}
+{"unit": "gov-euro", "query": "\"PyOD\" site:dnb.nl OR site:afm.nl OR site:autoriteitpersoonsgegevens.nl"}
+{"unit": "gov-euro", "query": "\"PyOD\" site:norges-bank.no OR site:ngu.no OR site:finanstilsynet.no"}
+{"unit": "gov-euro", "query": "\"TrustLLM\" \"2401.05561\" site:bankofengland.co.uk OR site:fca.org.uk OR site:ico.org.uk OR site:ofcom.org.uk"}
+{"unit": "gov-euro", "query": "\"Generic Diagnostic Framework for Anomaly Detection\" \"PyOD\""}
+{"unit": "gov-us", "query": "\"PyOD\" site:gov"}
+{"unit": "gov-us", "query": "\"TrustLLM\" site:gov"}
+{"unit": "gov-us", "query": "\"ADBench\" OR \"ECOD\" OR \"COPOD\" OR \"SUOD\" OR \"PyGOD\" site:gov"}
+{"unit": "gov-us", "query": "\"Therapeutics Data Commons\" OR \"tdcommons\" site:gov"}
+{"unit": "gov-us", "query": "site:osti.gov \"PyOD\" OR \"TrustLLM\" OR \"ADBench\" OR \"ECOD\" OR \"COPOD\" OR \"SUOD\" OR \"PyGOD\""}
+{"unit": "gov-us", "query": "site:osti.gov \"Therapeutics Data Commons\" OR \"DoxBench\" OR \"MetaOD\" OR \"TODS\" OR \"XGBOD\" OR \"LSCP\""}
+{"unit": "gov-us", "query": "site:github.com (\"pyod\" OR \"ecod\" OR \"copod\" OR \"adbench\" OR \"trustllm\") (\"usnistgov\" OR \"nasa\" OR \"sandialabs\" OR \"LLNL\" OR \"ORNL\" OR \"pnnl\" OR \"cisagov\" OR \"FDA\" OR \"usgs\" OR \"noaa\" OR \"GSA\" OR \"lanl\" OR \"anl\" OR \"bnl\")"}
+{"unit": "gov-us", "query": "site:nist.gov \"TrustLLM\""}
+{"unit": "gov-us", "query": "site:nist.gov \"PyOD\" OR \"ADBench\" OR \"ECOD\" OR \"COPOD\" OR \"SUOD\" OR \"PyGOD\""}
+{"unit": "gov-us", "query": "site:cisa.gov OR site:gao.gov OR site:congress.gov \"TrustLLM\" OR \"PyOD\" OR \"ADBench\" OR \"Therapeutics Data Commons\""}
+{"unit": "gov-us", "query": "\"DoxBench\" site:gov"}
+{"unit": "gov-us", "query": "\"yzhao062\" site:gov OR site:github.com/usnistgov OR site:github.com/nasa OR site:github.com/cisagov"}
+{"unit": "gov-us", "query": "\"Therapeutics Data Commons\" (\"FDA\" OR \"NIH\" OR \"NCATS\" OR \"NCI\" OR \"NIST\") site:gov"}
+{"unit": "gov-us", "query": "site:osti.gov \"2026\" (\"PyOD\" OR \"TrustLLM\" OR \"ADBench\" OR \"COPOD\" OR \"ECOD\" OR \"Therapeutics Data Commons\")"}
+{"unit": "gov-us", "query": "site:osti.gov \"ADBench\" OR \"PyGOD\" OR \"SUOD\" OR \"COPOD\" OR \"PyOD 2\""}
+{"unit": "gov-us", "query": "site:llnl.gov OR site:sandia.gov OR site:ornl.gov OR site:inl.gov OR site:anl.gov OR site:bnl.gov OR site:pnnl.gov OR site:lanl.gov (\"PyOD\" OR \"TrustLLM\" OR \"ADBench\" OR \"COPOD\" OR \"Therapeutics Data Commons\")"}
+{"unit": "gov-us", "query": "site:fda.gov OR site:cdc.gov OR site:epa.gov OR site:nasa.gov OR site:usgs.gov OR site:noaa.gov (\"PyOD\" OR \"TrustLLM\" OR \"Therapeutics Data Commons\" OR \"ADBench\" OR \"COPOD\")"}
+{"unit": "gov-us", "query": "site:state.gov OR site:defense.gov OR site:energy.gov OR site:hhs.gov OR site:dhs.gov OR site:justice.gov OR site:treasury.gov OR site:sec.gov OR site:ftc.gov (\"PyOD\" OR \"TrustLLM\" OR \"Therapeutics Data Commons\" OR \"ADBench\")"}
+{"unit": "gov-us", "query": "\"CVE-2026-15529\" OR \"CVE-2026-15531\" site:gov"}
+{"unit": "gov-us", "query": "site:ca.gov OR site:ny.gov OR site:tx.gov OR site:wa.gov OR site:ma.gov OR site:va.gov OR site:il.gov OR site:fl.gov OR site:pa.gov OR site:nc.gov (\"PyOD\" OR \"TrustLLM\" OR \"Therapeutics Data Commons\" OR \"ADBench\")"}
+{"unit": "gov-us", "query": "site:sbir.gov \"PyOD\" OR \"TrustLLM\" OR \"Therapeutics Data Commons\" OR \"ADBench\""}
+{"unit": "gov-us", "query": "site:congress.gov \"TrustLLM\" OR \"PyOD\" OR \"Therapeutics Data Commons\""}
+{"unit": "gov-us", "query": "site:gao.gov \"TrustLLM\" OR \"PyOD\" OR \"Therapeutics Data Commons\" OR \"ADBench\""}
+{"unit": "gov-us", "query": "site:nist.gov \"Yue Zhao\""}
+{"unit": "gov-us", "query": "site:osti.gov \"Yue Zhao\""}
+{"unit": "gov-us", "query": "site:osti.gov \"2026\" \"TrustLLM\""}
+{"unit": "gov-us", "query": "site:github.com/usnistgov \"pyod\" OR \"trustllm\" OR \"adbench\" OR \"copod\" OR \"ecod\" OR \"tdcommons\""}
+{"unit": "gov-us", "query": "site:code.gov OR site:code.nist.gov \"pyod\" OR \"trustllm\" OR \"adbench\" OR \"copod\" OR \"ecod\" OR \"tdcommons\""}
+{"unit": "gov-us", "query": "site:ai.mil OR site:cdao.mil OR site:cto.mil \"TrustLLM\" OR \"PyOD\" OR \"ADBench\" OR \"Therapeutics Data Commons\""}
+{"unit": "gov-us", "query": "site:usaspending.gov OR site:sam.gov \"TrustLLM\" OR \"PyOD\" OR \"Therapeutics Data Commons\""}
+{"unit": "gov-us", "query": "\"TRUSTEVAL\" OR \"TrustGen\" OR \"Auditable Agents\" OR \"AEGIS\" \"Yue Zhao\" site:gov OR site:osti.gov"}
+{"unit": "gov-us", "query": "\"Diffusion Models: A Comprehensive Survey of Methods and Applications\" site:gov OR site:osti.gov"}
+{"unit": "gov-us", "query": "\"A Survey on Model Extraction Attacks and Defenses for Large Language Models\" site:gov OR site:osti.gov"}
+{"unit": "gov-us", "query": "site:whitehouse.gov OR site:federalregister.gov OR site:ntia.gov \"TrustLLM\" OR \"PyOD\" OR \"Therapeutics Data Commons\" OR \"ADBench\""}
+{"unit": "gov-us", "query": "\"NIST.SP.2400-102e2026\" OR \"NIST SP 2400-102\" site:nist.gov"}
+{"unit": "gov-us", "query": "\"PyOD\" (\"New York\" OR \"California\" OR \"Texas\" OR \"Washington\" OR \"Massachusetts\" OR \"Illinois\" OR \"Florida\" OR \"Virginia\" OR \"Maryland\" OR \"Oregon\") site:gov"}
+{"unit": "gov-us", "query": "\"AutoAudit\" OR \"TrustGen\" OR \"TRUSTEVAL\" site:gov"}
+{"unit": "gov-us", "query": "site:nvd.nist.gov \"pyod\" OR \"yzhao062\" OR \"trustllm\" OR \"tdcommons\""}
+{"unit": "gov-us", "query": "site:osti.gov \"AD-AGENT\" OR \"AD-LLM\" OR \"NLP-ADBench\" OR \"TRUSTEVAL\" OR \"TrustGen\""}
+{"unit": "gov-us", "query": "site:nist.gov \"2026\" \"Therapeutics Data Commons\""}
+{"unit": "gov-us", "query": "\"TrustLLM\" (\"DARPA\" OR \"CDAO\" OR \"DHS\" OR \"NSA\" OR \"NSF\" OR \"DoD\") site:gov OR site:mil"}
+{"unit": "gov-us", "query": "\"Therapeutics Data Commons\" (\"NIH\" OR \"FDA\" OR \"ARPA-H\" OR \"DOE\") site:gov"}
+{"unit": "gov-us", "query": "\"PyOD\" (\"NIST\" OR \"CISA\" OR \"DOE\" OR \"NASA\" OR \"NOAA\" OR \"USGS\" OR \"NSF\" OR \"NIH\") site:gov"}
+{"unit": "gov-us", "query": "site:nsf.gov \"award\" (\"PyOD\" OR \"TrustLLM\" OR \"Therapeutics Data Commons\" OR \"ADBench\" OR \"PyGOD\")"}
+{"unit": "gov-us", "query": "site:nrel.gov OR site:fnal.gov OR site:bnl.gov OR site:slac.stanford.edu (\"PyOD\" OR \"TrustLLM\" OR \"COPOD\" OR \"ECOD\" OR \"ADBench\" OR \"MetaOD\")"}
+{"unit": "gov-us", "query": "site:nist.gov (\"AI 100-2\" OR \"AI 600-1\" OR \"AI 800\" OR \"CAISI\" OR \"AISI\") \"TrustLLM\""}
+{"unit": "gov-us", "query": "site:cisa.gov \"PyOD\" OR \"TrustLLM\" OR \"ADBench\" OR \"CVE-2026-15529\""}
+{"unit": "gov-us", "query": "site:github.com \"pyod\" (\"usnistgov\" OR \"cisagov\" OR \"ORNL\" OR \"LLNL\" OR \"sandialabs\" OR \"pnnl\" OR \"anl\" OR \"bnl\" OR \"nasa\" OR \"GSA\" OR \"cityof\" OR \"stateof\")"}
+{"unit": "gov-us", "query": "site:huggingface.co (\"nist\" OR \"ornl\" OR \"llnl\" OR \"anl\" OR \"pnnl\" OR \"nih\" OR \"nasa\") (\"TrustLLM\" OR \"PyOD\" OR \"Therapeutics Data Commons\")"}
+{"unit": "gov-us", "query": "\"CVE-2026-15529\" \"cisa.gov\" OR \"nvd.nist.gov\""}
+{"unit": "gov-us", "query": "site:osti.gov \"TrustLLM\" (\"November 2026\" OR \"October 2026\" OR \"2026\")"}
+{"unit": "gov-us", "query": "site:nist.gov (\"November 2026\" OR \"Nov 2026\") (\"TrustLLM\" OR \"PyOD\" OR \"Therapeutics Data Commons\" OR \"ADBench\")"}
+{"unit": "gov-us", "query": "\"PyOD\" (\"Oak Ridge\" OR \"Sandia\" OR \"Los Alamos\" OR \"Lawrence Livermore\" OR \"Argonne\" OR \"Brookhaven\" OR \"Pacific Northwest\" OR \"Idaho National\" OR \"NREL\" OR \"SLAC\")"}
+{"unit": "gov-us", "query": "\"ADBench\" (\"Oak Ridge\" OR \"Sandia\" OR \"Los Alamos\" OR \"Lawrence Livermore\" OR \"Argonne\" OR \"Brookhaven\" OR \"Pacific Northwest\" OR \"Idaho National\" OR \"NIST\")"}
+{"unit": "gov-us", "query": "\"Therapeutics Data Commons\" (\"Oak Ridge\" OR \"Sandia\" OR \"Los Alamos\" OR \"Lawrence Livermore\" OR \"Argonne\" OR \"Brookhaven\" OR \"Pacific Northwest\" OR \"NIH\" OR \"NCATS\" OR \"FDA\")"}
+{"unit": "gov-us", "query": "site:osti.gov \"PyOD\" \"2025\" OR \"2026\""}
+{"unit": "gov-us", "query": "site:osti.gov \"Therapeutics Data Commons\" \"2026\""}
+{"unit": "gov-us", "query": "site:fda.gov \"Therapeutics Data Commons\" OR \"TrustLLM\" OR \"PyOD\" OR \"ADBench\""}
+{"unit": "gov-us", "query": "site:github.com/sandialabs \"pyod\" OR \"copod\" OR \"ecod\" OR \"adbench\" OR \"trustllm\""}
+{"unit": "gov-us", "query": "site:github.com/LLNL \"pyod\" OR \"copod\" OR \"ecod\" OR \"adbench\" OR \"trustllm\""}
+{"unit": "gov-us", "query": "site:github.com/ORNL \"pyod\" OR \"copod\" OR \"ecod\" OR \"adbench\" OR \"trustllm\""}
+{"unit": "gov-us", "query": "site:github.com/nasa \"pyod\" OR \"copod\" OR \"ecod\" OR \"adbench\" OR \"trustllm\""}
+{"unit": "gov-us", "query": "site:github.com/pnnl \"pyod\" OR \"copod\" OR \"ecod\" OR \"adbench\" OR \"trustllm\""}
+{"unit": "gov-us", "query": "site:github.com/cisagov \"pyod\" OR \"copod\" OR \"ecod\" OR \"adbench\" OR \"trustllm\""}
+{"unit": "gov-us", "query": "\"Therapeutics Data Commons\" (\"NCATS\" OR \"National Center for Advancing Translational Sciences\" OR \"FDA\" OR \"National Library of Medicine\")"}
+{"unit": "gov-us", "query": "\"PyOD\" (\"NIST\" OR \"CISA\" OR \"Department of\" OR \"National Laboratory\") \"github.com\""}
+{"unit": "gov-us", "query": "site:nist.gov \"SURF\" \"Therapeutics Data Commons\""}
+{"unit": "gov-us", "query": "\"Responsible AI Toolkit\" (\"CDAO\" OR \"Generative AI\") site:mil OR site:gov"}
+{"unit": "gov-us", "query": "site:cms.gov OR site:va.gov OR site:irs.gov OR site:uspto.gov OR site:transportation.gov OR site:faa.gov \"PyOD\" OR \"TrustLLM\" OR \"ADBench\" OR \"Therapeutics Data Commons\""}
+{"unit": "gov-us", "query": "site:cio.gov OR site:ai.gov OR site:usds.gov OR site:gsa.gov \"TrustLLM\" OR \"PyOD\" OR \"ADBench\" OR \"Therapeutics Data Commons\""}
+{"unit": "gov-us", "query": "site:osti.gov \"2026\" \"EAIRA\" OR \"TrustLLM\" OR \"COPOD\""}
+{"unit": "gov-us", "query": "site:osti.gov \"PyOD\" OR \"COPOD\" OR \"ECOD\" OR \"SUOD\" OR \"PyGOD\" OR \"ADBench\""}
+{"unit": "gov-us", "query": "\"GAO-27-107837\" (\"TrustLLM\" OR \"PyOD\" OR \"ADBench\" OR \"Therapeutics Data Commons\")"}
+{"unit": "gov-us", "query": "site:osti.gov \"2401.05561\" OR \"1901.01588\" OR \"2206.09426\" OR \"2102.09548\""}
+{"unit": "gov-world", "query": "site:gov.au (\"PyOD\" OR \"TrustLLM\" OR \"ADBench\" OR \"Therapeutics Data Commons\" OR \"PyGOD\" OR \"ECOD\" OR \"COPOD\" OR \"DoxBench\")"}
+{"unit": "gov-world", "query": "site:gc.ca OR site:canada.ca (\"PyOD\" OR \"TrustLLM\" OR \"ADBench\" OR \"Therapeutics Data Commons\" OR \"PyGOD\" OR \"ECOD\" OR \"COPOD\" OR \"DoxBench\")"}
+{"unit": "gov-world", "query": "site:go.jp (\"PyOD\" OR \"TrustLLM\" OR \"ADBench\" OR \"Therapeutics Data Commons\" OR \"PyGOD\" OR \"ECOD\" OR \"COPOD\" OR \"DoxBench\" OR \"SUOD\" OR \"2401.05561\")"}
+{"unit": "gov-world", "query": "site:gov.in OR site:nic.in (\"PyOD\" OR \"TrustLLM\" OR \"ADBench\" OR \"Therapeutics Data Commons\" OR \"PyGOD\" OR \"ECOD\" OR \"COPOD\" OR \"DoxBench\")"}
+{"unit": "gov-world", "query": "site:gov.br OR site:leg.br OR site:jus.br (\"PyOD\" OR \"TrustLLM\" OR \"ADBench\" OR \"Therapeutics Data Commons\" OR \"PyGOD\" OR \"ECOD\" OR \"COPOD\" OR \"DoxBench\")"}
+{"unit": "gov-world", "query": "site:go.id OR site:gov.tw OR site:gov.my OR site:govt.nz (\"PyOD\" OR \"TrustLLM\" OR \"ADBench\" OR \"Therapeutics Data Commons\" OR \"PyGOD\" OR \"ECOD\" OR \"COPOD\")"}
+{"unit": "gov-world", "query": "site:go.jp PyOD"}
+{"unit": "gov-world", "query": "site:go.jp TrustLLM"}
+{"unit": "gov-world", "query": "site:gov.sg PyOD"}
+{"unit": "gov-world", "query": "site:gov.sg TrustLLM"}
+{"unit": "gov-world", "query": "site:gov.au PyOD"}
+{"unit": "gov-world", "query": "site:gov.au TrustLLM"}
+{"unit": "gov-world", "query": "site:gc.ca PyOD"}
+{"unit": "gov-world", "query": "site:gc.ca TrustLLM"}
+{"unit": "gov-world", "query": "site:gov.in PyOD"}
+{"unit": "gov-world", "query": "site:go.jp \"Therapeutics Data Commons\""}
+{"unit": "gov-world", "query": "site:go.jp ADBench"}
+{"unit": "gov-world", "query": "site:go.kr PyOD"}
+{"unit": "gov-world", "query": "site:go.kr TrustLLM"}
+{"unit": "gov-world", "query": "site:or.kr TrustLLM"}
+{"unit": "gov-world", "query": "site:or.kr PyOD"}
+{"unit": "gov-world", "query": "site:gov.cn TrustLLM"}
+{"unit": "gov-world", "query": "site:gov.cn PyOD"}
+{"unit": "gov-world", "query": "site:gov.br PyOD"}
+{"unit": "gov-world", "query": "site:go.id PyOD"}
+{"unit": "gov-world", "query": "site:gov.cn PyOD -wuhan"}
+{"unit": "gov-world", "query": "site:gov.cn COPOD OR ECOD OR ADBench OR PyGOD OR SUOD"}
+{"unit": "gov-world", "query": "site:gov.tw PyOD OR TrustLLM OR ADBench OR \"Therapeutics Data Commons\""}
+{"unit": "gov-world", "query": "site:gov.tw PyOD"}
+{"unit": "gov-world", "query": "site:gov.tw TrustLLM"}
+{"unit": "gov-world", "query": "site:gov.ae PyOD"}
+{"unit": "gov-world", "query": "site:gov.ae TrustLLM"}
+{"unit": "gov-world", "query": "site:gov.sa PyOD"}
+{"unit": "gov-world", "query": "\"PyOD\" \"审计\" site:gov.cn"}
+{"unit": "gov-world", "query": "\"TrustLLM\" \"信通院\" OR site:caict.ac.cn"}
+{"unit": "gov-world", "query": "\"PyOD\" site:github.com/govtechsg OR site:github.com/canada-ca OR site:github.com/cds-snc"}
+{"unit": "gov-world", "query": "\"PyOD\" site:github.com \"gov\""}
+{"unit": "gov-world", "query": "\"Therapeutics Data Commons\" site:go.kr OR site:gov.cn OR site:gov.sg OR site:gov.in"}
+{"unit": "gov-world", "query": "\"ADBench\" site:gov.br OR site:leg.br OR site:gov.cn OR site:go.id OR site:gov.in"}
+{"unit": "gov-world", "query": "\"DoxBench\" site:gov.au OR site:gc.ca OR site:gov.sg OR site:go.jp OR site:go.kr"}
+{"unit": "gov-world", "query": "\"2401.05561\" site:go.jp OR site:gov.sg OR site:gov.au OR site:gc.ca OR site:gov.cn"}
+{"unit": "gov-world", "query": "\"1901.01588\" site:go.jp OR site:gov.br OR site:go.id OR site:gov.cn OR site:gov.in"}
+{"unit": "gov-world", "query": "site:go.jp \"PyOD\" 2026"}
+{"unit": "gov-world", "query": "site:go.jp \"TrustLLM\" 2026"}
+{"unit": "gov-world", "query": "site:go.jp \"PyGOD\""}
+{"unit": "gov-world", "query": "site:go.jp \"ECOD\""}
+{"unit": "gov-world", "query": "site:go.jp \"COPOD\""}
+{"unit": "gov-world", "query": "site:go.jp \"DoxBench\""}
+{"unit": "gov-world", "query": "site:aisi.go.jp TrustLLM"}
+{"unit": "gov-world", "query": "site:gov.cn \"ECOD\" 异常检测"}
+{"unit": "gov-world", "query": "site:gov.cn \"COPOD\" 异常检测"}
+{"unit": "gov-world", "query": "site:re.kr PyOD"}
+{"unit": "gov-world", "query": "site:re.kr TrustLLM"}
+{"unit": "gov-world", "query": "site:re.kr \"Therapeutics Data Commons\""}
+{"unit": "gov-world", "query": "site:csiro.au PyOD"}
+{"unit": "gov-world", "query": "site:csiro.au TrustLLM"}
+{"unit": "gov-world", "query": "site:csiro.au \"Therapeutics Data Commons\""}
+{"unit": "gov-world", "query": "site:a-star.edu.sg PyOD"}
+{"unit": "gov-world", "query": "site:a-star.edu.sg TrustLLM"}
+{"unit": "gov-world", "query": "site:a-star.edu.sg \"Therapeutics Data Commons\""}
+{"unit": "gov-world", "query": "site:cas.cn PyOD"}
+{"unit": "gov-world", "query": "site:cas.cn TrustLLM"}
+{"unit": "gov-world", "query": "site:cas.cn \"Therapeutics Data Commons\""}
+{"unit": "gov-world", "query": "site:gov.in \"ADBench\" OR \"TrustLLM\" OR \"PyGOD\" OR \"ECOD\" OR \"COPOD\""}
+{"unit": "gov-world", "query": "site:gov.in \"TrustLLM\""}
+{"unit": "gov-world", "query": "site:gov.in \"Therapeutics Data Commons\""}
+{"unit": "gov-world", "query": "site:gov.br \"TrustLLM\""}
+{"unit": "gov-world", "query": "site:leg.br \"PyOD\""}
+{"unit": "gov-world", "query": "site:jus.br \"PyOD\""}
+{"unit": "gov-world", "query": "site:gov.ar \"PyOD\""}
+{"unit": "gov-world", "query": "site:gob.mx \"PyOD\""}
+{"unit": "gov-world", "query": "site:gob.cl \"PyOD\""}
+{"unit": "gov-world", "query": "site:gov.za \"PyOD\""}
+{"unit": "gov-world", "query": "site:govt.nz \"PyOD\""}
+{"unit": "gov-world", "query": "site:indiaai.gov.in PyOD"}
+{"unit": "gov-world", "query": "site:indiaai.gov.in TrustLLM"}
+{"unit": "gov-world", "query": "site:indiaai.gov.in \"Therapeutics Data Commons\""}
+{"unit": "gov-world", "query": "site:etri.re.kr PyOD"}
+{"unit": "gov-world", "query": "site:etri.re.kr ADBench"}
+{"unit": "gov-world", "query": "site:riken.jp PyOD"}
+{"unit": "gov-world", "query": "site:riken.jp TrustLLM"}
+{"unit": "gov-world", "query": "site:aist.go.jp PyOD"}
+{"unit": "gov-world", "query": "site:aist.go.jp TrustLLM"}
+{"unit": "gov-world", "query": "site:go.jp \"AD-LLM\""}
+{"unit": "gov-world", "query": "site:go.jp \"TRUSTEVAL\" OR \"TrustGen\""}
+{"unit": "gov-world", "query": "\"202525017A\" site:niph.go.jp"}
+{"unit": "gov-world", "query": "site:github.com/Digital-Agency-Japan OR site:github.com/digital-go-jp PyOD OR TrustLLM"}
+{"unit": "gov-world", "query": "site:github.com/aist-airc OR site:github.com/nict-jp OR site:github.com/ipa-cyber PyOD OR TrustLLM"}
+{"unit": "gov-world", "query": "site:github.com/govau OR site:github.com/csiro OR site:github.com/au-gov PyOD OR TrustLLM"}
+{"unit": "gov-world", "query": "site:github.com/aisingapore OR site:github.com/opengovsg PyOD OR TrustLLM"}
+{"unit": "gov-world", "query": "\"AISI\" \"TrustLLM\" Japan OR Singapore OR Korea OR Australia OR Canada"}
+{"unit": "gov-world", "query": "\"PyOD\" (\"Bank of Japan\" OR \"Bank of Canada\" OR \"Reserve Bank of Australia\" OR \"Monetary Authority of Singapore\" OR \"Bank of Korea\" OR \"Banco Central do Brasil\")"}
+{"unit": "gov-world", "query": "\"ECOD\" (\"Bank of\" OR \"Reserve Bank\" OR \"Monetary Authority\" OR \"Banco Central\" OR \"Audit\") -ECODs"}
+{"unit": "gov-world", "query": "\"COPOD\" (\"Bank of\" OR \"Reserve Bank\" OR \"Monetary Authority\" OR \"Banco Central\" OR \"Audit\")"}
+{"unit": "gov-world", "query": "\"ADBench\" (\"Ministry\" OR \"Agency\" OR \"Government\" OR \"Bank\" OR \"National\") -European -US -NIST -Bundesbank -FOI"}
+{"unit": "gov-world", "query": "site:sgaisi.sg TrustLLM"}
+{"unit": "gov-world", "query": "site:sgaisi.sg PyOD OR ADBench OR DoxBench OR TrustGen"}
+{"unit": "gov-world", "query": "site:aikosh.indiaai.gov.in \"Therapeutics Data Commons\""}
+{"unit": "gov-world", "query": "site:aikosh.indiaai.gov.in PyOD OR TrustLLM OR ADBench"}
+{"unit": "gov-world", "query": "site:imda.gov.sg TrustLLM OR PyOD OR DoxBench"}
+{"unit": "gov-world", "query": "site:csa.gov.sg TrustLLM OR PyOD OR ADBench"}
+{"unit": "gov-world", "query": "site:mas.gov.sg TrustLLM OR PyOD OR ADBench OR ECOD OR COPOD"}
+{"unit": "gov-world", "query": "site:bankofcanada.ca PyOD OR TrustLLM OR ECOD OR COPOD OR ADBench"}
+{"unit": "gov-world", "query": "\"PyOD\" \"审计\" -wuhan"}
+{"unit": "gov-world", "query": "\"PyOD\" site:brin.go.id OR site:bps.go.id OR site:ojk.go.id OR site:bi.go.id"}
+{"unit": "gov-world", "query": "\"PyOD\" site:camara.leg.br"}
+{"unit": "gov-world", "query": "\"PyOD\" site:tcu.gov.br"}
+{"unit": "gov-world", "query": "\"PyOD\" site:tech.gov.sg"}
+{"unit": "gov-world", "query": "\"TrustLLM\" site:tech.gov.sg"}
+{"unit": "gov-world", "query": "\"PyOD\" site:rbi.org.in"}
+{"unit": "gov-world", "query": "\"TrustLLM\" site:tc260.org.cn"}
+{"unit": "gov-world", "query": "\"PyOD\" \"厚生労働\" OR \"総務省\" OR \"経済産業省\" OR \"デジタル庁\" OR \"会計検査院\""}
+{"unit": "gov-world", "query": "\"TrustLLM\" \"デジタル庁\" OR \"総務省\" OR \"経済産業省\" OR \"AISI\""}
+{"unit": "gov-world", "query": "\"Therapeutics Data Commons\" site:go.jp \"2026\""}
+{"unit": "gov-world", "query": "\"PyOD\" site:korea.kr"}
+{"unit": "gov-world", "query": "site:gov.sa TrustLLM"}
+{"unit": "gov-world", "query": "site:boj.or.jp PyOD"}
+{"unit": "gov-world", "query": "site:boj.or.jp TrustLLM"}
+{"unit": "gov-world", "query": "site:re.kr ADBench"}
+{"unit": "gov-world", "query": "site:gov.br \"SUOD\""}
+{"unit": "gov-world", "query": "site:gov.br \"ADBench\""}
+{"unit": "gov-world", "query": "site:ipea.gov.br PyOD"}
+{"unit": "gov-world", "query": "site:gov.cn \"PyOD\" 2026"}
+{"unit": "gov-world", "query": "site:geniac.meti.go.jp \"Therapeutics Data Commons\""}
+{"unit": "gov-world", "query": "site:tec.gov.in PyOD"}
+{"unit": "gov-world", "query": "site:consejo.jusbaires.gob.ar PyOD"}
+{"unit": "gov-world", "query": "\"57070:2025\" PyOD OR TEC"}
+{"unit": "gov-world", "query": "\"PyOD\" site:gob.ar"}
+{"unit": "gov-world", "query": "\"PyOD\" site:gov.co"}
+{"unit": "gov-world", "query": "\"PyOD\" site:gob.pe OR site:gov.my OR site:gov.il"}
+{"unit": "gov-world", "query": "\"PyOD\" \"2026\" \"Japan\" OR \"Singapore\" OR \"Canada\" OR \"Australia\" OR \"Korea\" OR \"India\" OR \"Brazil\""}
+{"unit": "gov-world", "query": "\"TrustLLM\" \"2026\" \"Japan\" OR \"Singapore\" OR \"Canada\" OR \"Australia\" OR \"Korea\" OR \"India\" OR \"Brazil\""}
+{"unit": "gov-world", "query": "\"ADBench\" \"2026\" \"Japan\" OR \"Singapore\" OR \"Canada\" OR \"Australia\" OR \"Korea\" OR \"India\" OR \"Brazil\""}
+{"unit": "gov-world", "query": "\"DoxBench\" \"Singapore\" OR \"Australia\" OR \"Canada\" OR \"Japan\" OR \"Korea\" OR \"India\""}
+{"unit": "gov-world", "query": "site:gov.sg \"SUOD\" OR \"PyGOD\" OR \"ADBench\""}
+{"unit": "gov-world", "query": "site:go.jp \"SUOD\""}
+{"unit": "gov-world", "query": "site:go.jp \"1901.01588\""}
+{"unit": "standards", "query": "\"PyOD\" (\"ISO/IEC\" OR \"ETSI\" OR \"IETF\" OR \"ITU\" OR \"OWASP\" OR \"MITRE\" OR \"OECD\" OR \"World Bank\" OR \"UNESCO\" OR \"BIS\")"}
+{"unit": "standards", "query": "\"TrustLLM\" (\"ISO/IEC\" OR \"ETSI\" OR \"IETF\" OR \"ITU\" OR \"OWASP\" OR \"MITRE\" OR \"OECD\" OR \"World Bank\" OR \"UNESCO\" OR \"UN\" OR \"NIST\")"}
+{"unit": "standards", "query": "(\"ADBench\" OR \"PyGOD\" OR \"ECOD\" OR \"COPOD\" OR \"SUOD\") (\"ISO/IEC\" OR \"ETSI\" OR \"IETF\" OR \"ITU\" OR \"OWASP\" OR \"OECD\" OR \"World Bank\" OR \"IMF\" OR \"BIS\")"}
+{"unit": "standards", "query": "(\"Therapeutics Data Commons\" OR \"pytdc\") (\"WHO\" OR \"FDA\" OR \"EMA\" OR \"OECD\" OR \"UN\" OR \"UNESCO\" OR \"World Bank\" OR \"ISO\" OR \"standards\")"}
+{"unit": "standards", "query": "(\"DoxBench\" OR \"TrustGen\" OR \"TRUSTEVAL\" OR \"NLP-ADBench\" OR \"AD-LLM\") (\"OECD\" OR \"ITU\" OR \"ISO\" OR \"ETSI\" OR \"IETF\" OR \"OWASP\" OR \"MITRE\" OR \"NIST\" OR \"UNESCO\")"}
+{"unit": "standards", "query": "\"PyOD\" (\"Databricks\" OR \"Snowflake\" OR \"AWS\" OR \"Azure\" OR \"Google Cloud\" OR \"Splunk\" OR \"Elastic\" OR \"Datadog\" OR \"Cloud Security Alliance\" OR \"NVIDIA\")"}
+{"unit": "standards", "query": "\"TrustLLM\" (\"OWASP\" OR \"Cloud Security Alliance\" OR \"NVIDIA\" OR \"Garak\" OR \"AWS\" OR \"Azure\" OR \"Google Cloud\" OR \"IBM\" OR \"Cisco\" OR \"Palo Alto\" OR \"Lakera\" OR \"Protect AI\")"}
+{"unit": "standards", "query": "(\"yzhao062\" OR \"Yue Zhao\") (\"ISO/IEC\" OR \"ETSI\" OR \"IETF\" OR \"ITU\" OR \"World Bank\" OR \"IMF\" OR \"OWASP\" OR \"MITRE\" OR \"CSA\" OR \"UNESCO\" OR \"OECD\")"}
+{"unit": "standards", "query": "(\"PyOD\" OR \"ADBench\" OR \"TrustLLM\" OR \"PyGOD\" OR \"ECOD\" OR \"COPOD\" OR \"SUOD\" OR \"Therapeutics Data Commons\" OR \"DoxBench\") (site:bis.org OR site:oecd.org OR site:oecd.ai OR site:worldbank.org OR site:imf.org OR site:unesco.org OR site:un.org OR site:itu.int OR site:who.int)"}
+{"unit": "standards", "query": "(\"PyOD\" OR \"ADBench\" OR \"TrustLLM\" OR \"PyGOD\" OR \"ECOD\" OR \"COPOD\" OR \"SUOD\" OR \"DoxBench\" OR \"agent-audit\" OR \"AEGIS\") (site:owasp.org OR site:cloudsecurityalliance.org OR site:mitre.org)"}
+{"unit": "standards", "query": "(\"PyOD\" OR \"ECOD\" OR \"COPOD\" OR \"SUOD\" OR \"ADBench\") (site:docs.databricks.com OR site:elastic.co OR site:splunk.com OR site:docs.aws.amazon.com OR site:learn.microsoft.com OR site:cloud.google.com OR site:docs.snowflake.com)"}
+{"unit": "standards", "query": "(\"2401.05561\" OR \"1901.01588\" OR \"2206.09426\" OR \"2201.00382\" OR \"2009.09463\" OR \"2102.04548\" OR \"2504.19373\") (\"OECD\" OR \"UNESCO\" OR \"ITU\" OR \"ETSI\" OR \"IETF\" OR \"ISO\" OR \"BIS\" OR \"World Bank\" OR \"OWASP\" OR \"NIST\")"}
+{"unit": "standards", "query": "(\"pyod\" OR \"TrustLLM\" OR \"ADBench\" OR \"Therapeutics Data Commons\" OR \"ECOD\" OR \"COPOD\") (\"NIST\" OR \"ENISA\" OR \"AISI\" OR \"European Commission\" OR \"OECD\" OR \"IMF\" OR \"BIS\") 2026"}
+{"unit": "standards", "query": "\"PyOD\" site:iso.org OR site:etsi.org OR site:ietf.org OR site:itu.int"}
+{"unit": "standards", "query": "\"TrustLLM\" site:iso.org OR site:etsi.org OR site:ietf.org OR site:itu.int"}
+{"unit": "standards", "query": "\"PyOD\" site:bis.org OR site:oecd.org OR site:worldbank.org OR site:imf.org OR site:unesco.org OR site:un.org"}
+{"unit": "standards", "query": "\"TrustLLM\" site:bis.org OR site:oecd.org OR site:worldbank.org OR site:imf.org OR site:unesco.org OR site:un.org"}
+{"unit": "standards", "query": "\"PyOD\" \"OWASP\" OR \"MITRE\" OR \"Cloud Security Alliance\" OR \"ENISA\""}
+{"unit": "standards", "query": "\"TrustLLM\" \"OWASP\" OR \"MITRE\" OR \"Cloud Security Alliance\" OR \"ENISA\" OR \"AISI\""}
+{"unit": "standards", "query": "\"TrustLLM\" \"garak\" OR \"NeMo Guardrails\" OR \"pyrit\" OR \"promptfoo\" OR \"inspect_ai\""}
+{"unit": "standards", "query": "\"agent-audit\" \"OWASP\" OR \"MITRE\" OR \"NIST\" OR \"EU AI Act\""}
+{"unit": "standards", "query": "\"AEGIS\" \"2603.12621\" OR \"Pre-Execution Firewall\" \"OWASP\" OR \"NIST\" OR \"CSA\" OR \"vendor\""}
+{"unit": "standards", "query": "\"PyOD\" \"Apache Beam\" OR \"Snowflake\" OR \"Databricks\" OR \"AWS\" OR \"Azure\" OR \"Datadog\" OR \"Elastic\""}
+{"unit": "standards", "query": "\"ECOD\" \"PyOD\" \"Databricks\" OR \"Snowflake\" OR \"Microsoft\" OR \"AWS\" OR \"Google\" OR \"Oracle\" OR \"SAP\""}
+{"unit": "standards", "query": "\"ISO/IEC\" \"PyOD\" OR \"ADBench\" OR \"TrustLLM\" OR \"Therapeutics Data Commons\" OR \"ECOD\""}
+{"unit": "standards", "query": "\"ETSI\" OR \"IETF\" OR \"ITU-T\" \"PyOD\" OR \"ADBench\" OR \"TrustLLM\" OR \"ECOD\" OR \"COPOD\""}
+{"unit": "standards", "query": "site:datatracker.ietf.org \"PyOD\" OR \"TrustLLM\" OR \"ADBench\" OR \"ECOD\" OR \"COPOD\" OR \"SUOD\" OR \"DoxBench\" OR \"AEGIS\""}
+{"unit": "standards", "query": "site:iso.org \"PyOD\" OR \"TrustLLM\" OR \"ADBench\" OR \"Therapeutics Data Commons\" OR \"ECOD\" OR \"COPOD\""}
+{"unit": "standards", "query": "site:etsi.org \"PyOD\" OR \"TrustLLM\" OR \"ADBench\" OR \"Therapeutics Data Commons\" OR \"ECOD\" OR \"COPOD\""}
+{"unit": "standards", "query": "site:itu.int \"PyOD\" OR \"TrustLLM\" OR \"ADBench\" OR \"Therapeutics Data Commons\" OR \"ECOD\" OR \"COPOD\""}
+{"unit": "standards", "query": "site:bis.org \"PyOD\" OR \"TrustLLM\" OR \"ADBench\" OR \"ECOD\" OR \"COPOD\" OR \"SUOD\" OR \"DoxBench\""}
+{"unit": "standards", "query": "site:oecd.org OR site:oecd.ai \"PyOD\" OR \"TrustLLM\" OR \"ADBench\" OR \"Therapeutics Data Commons\" OR \"ECOD\" OR \"COPOD\" OR \"TrustEval\""}
+{"unit": "standards", "query": "site:un.org OR site:unesco.org OR site:worldbank.org OR site:imf.org \"PyOD\" OR \"TrustLLM\" OR \"ADBench\" OR \"Therapeutics Data Commons\" OR \"ECOD\" OR \"COPOD\""}
+{"unit": "standards", "query": "site:owasp.org OR site:genai.owasp.org \"PyOD\" OR \"TrustLLM\" OR \"agent-audit\" OR \"AEGIS\" OR \"ADBench\""}
+{"unit": "standards", "query": "site:aws.amazon.com \"PyOD\" OR \"TrustLLM\" OR \"Therapeutics Data Commons\" OR \"ECOD\" OR \"COPOD\""}
+{"unit": "standards", "query": "site:learn.microsoft.com \"PyOD\" OR \"TrustLLM\" OR \"Therapeutics Data Commons\" OR \"ECOD\" OR \"COPOD\""}
+{"unit": "standards", "query": "site:nvidia.com \"TrustLLM\" OR \"PyOD\" OR \"Therapeutics Data Commons\" OR \"ECOD\""}
+{"unit": "standards", "query": "site:nist.gov \"TrustLLM\" OR \"PyOD\" OR \"Therapeutics Data Commons\""}
+{"unit": "standards", "query": "site:nist.gov \"ADBench\" OR \"ECOD\" OR \"COPOD\" OR \"DoxBench\" OR \"agent-audit\" OR \"AEGIS\""}
+{"unit": "standards", "query": "site:cloudsecurityalliance.org \"PyOD\" OR \"ADBench\" OR \"ECOD\" OR \"COPOD\""}
+{"unit": "standards", "query": "site:cloudsecurityalliance.org \"TrustLLM\" OR \"DoxBench\" OR \"TrustGen\" OR \"TRUSTEVAL\""}
+{"unit": "standards", "query": "site:databricks.com \"PyOD\""}
+{"unit": "standards", "query": "site:docs.aws.amazon.com \"PyOD\" OR \"Therapeutics Data Commons\""}
+{"unit": "standards", "query": "site:learn.microsoft.com \"PyOD\" OR \"TrustLLM\" OR \"Therapeutics Data Commons\""}
+{"unit": "standards", "query": "site:cloud.google.com \"PyOD\" OR \"Therapeutics Data Commons\" OR \"TrustLLM\""}
+{"unit": "standards", "query": "site:ibm.com \"PyOD\" OR \"TrustLLM\" OR \"Therapeutics Data Commons\" OR \"ECOD\" OR \"ADBench\""}
+{"unit": "standards", "query": "site:elastic.co \"PyOD\" OR \"ECOD\" OR \"COPOD\" OR \"ADBench\""}
+{"unit": "standards", "query": "site:datadoghq.com \"PyOD\" OR \"TrustLLM\" OR \"ECOD\" OR \"COPOD\""}
+{"unit": "standards", "query": "site:enisa.europa.eu \"PyOD\" OR \"TrustLLM\" OR \"ADBench\" OR \"ECOD\" OR \"COPOD\" OR \"DoxBench\""}
+{"unit": "standards", "query": "site:splunk.com \"PyOD\""}
+{"unit": "standards", "query": "site:snowflake.com \"PyOD\" OR \"ECOD\" OR \"COPOD\""}
+{"unit": "standards", "query": "site:paloaltonetworks.com \"TrustLLM\" OR \"PyOD\" OR \"agent-audit\" OR \"AEGIS\""}
+{"unit": "standards", "query": "site:cisco.com \"TrustLLM\" OR \"PyOD\" OR \"agent-audit\" OR \"AEGIS\""}
+{"unit": "standards", "query": "site:fda.gov OR site:ema.europa.eu \"Therapeutics Data Commons\" OR \"PyOD\" OR \"TrustLLM\""}
+{"unit": "standards", "query": "site:who.int \"Therapeutics Data Commons\" OR \"TrustLLM\" OR \"PyOD\""}
+{"unit": "standards", "query": "\"TrustLLM\" (\"garak\" OR \"Promptfoo\" OR \"Inspect AI\" OR \"PyRIT\")"}
+{"unit": "standards", "query": "site:registry.opendata.aws \"Therapeutics Data Commons\" OR \"TDC\""}
+{"unit": "standards", "query": "site:docs.cloud.google.com \"pyod\" OR \"TrustLLM\" OR \"Therapeutics Data Commons\""}
+{"unit": "standards", "query": "\"pyod\" \"Assured Open Source Software\" Google Cloud"}
+{"unit": "standards", "query": "\"HowieHwong/TrustLLM\" OR \"TrustGen/TrustEval-toolkit\" site:oecd.ai"}
+{"unit": "standards", "query": "site:beam.apache.org \"pyod\" OR \"PyODFactory\""}
+{"unit": "standards", "query": "\"Therapeutics Data Commons\" site:docs.nvidia.com OR site:developer.nvidia.com"}
+{"unit": "standards", "query": "\"agent-audit\" OR \"AEGIS\" \"2603.12621\" site:github.com OR site:pypi.org OR site:owasp.org"}
+{"unit": "standards", "query": "\"pyod\" (\"Palo Alto\" OR \"CrowdStrike\" OR \"Datadog\" OR \"Check Point\" OR \"SentinelOne\" OR \"Trend Micro\" OR \"Fortinet\" OR \"Cloudflare\")"}
+{"unit": "standards", "query": "\"TrustLLM\" (\"NIST\" OR \"UK AISI\" OR \"US AISI\" OR \"ENISA\" OR \"OECD\" OR \"UNESCO\" OR \"European Commission\") 2026"}
+{"unit": "standards", "query": "\"PyOD\" (\"NIST\" OR \"UK AISI\" OR \"OECD\" OR \"BIS\" OR \"IMF\" OR \"World Bank\" OR \"UN\" OR \"ITU\" OR \"ETSI\" OR \"ISO\") 2025 OR 2026"}
+{"unit": "standards", "query": "\"ADBench\" (\"NIST\" OR \"OECD\" OR \"BIS\" OR \"Databricks\" OR \"Google Cloud\" OR \"AWS\" OR \"Azure\" OR \"IBM\" OR \"NVIDIA\")"}
+{"unit": "standards", "query": "site:oecd.ai \"pyod\" OR \"ADBench\" OR \"PyGOD\" OR \"ECOD\" OR \"COPOD\" OR \"Therapeutics Data Commons\""}
+{"unit": "standards", "query": "site:ibm.com/docs \"pyod\""}
+{"unit": "standards", "query": "\"PyOD\" site:github.com/Azure OR site:github.com/awslabs OR site:github.com/GoogleCloudPlatform OR site:github.com/NVIDIA"}
+{"unit": "standards", "query": "\"TrustLLM\" site:github.com/NVIDIA OR site:github.com/Azure OR site:github.com/awslabs OR site:github.com/UKGovernmentBEIS"}
+{"unit": "standards", "query": "\"PyOD\" (\"IETF\" OR \"ETSI\" OR \"ISO/IEC\" OR \"ITU-T\" OR \"NIST\") \"2026\""}
+{"unit": "standards", "query": "\"TrustLLM\" (\"NIST\" OR \"EU AI Act\" OR \"UN\" OR \"UNESCO\" OR \"World Bank\" OR \"BIS\" OR \"IMF\") \"November 2026\" OR \"October 2026\""}
+{"unit": "standards", "query": "\"CVE-2026-15529\" site:nvd.nist.gov OR site:cve.org OR site:cisa.gov"}
+{"unit": "standards", "query": "\"PyOD\" (\"NIST\" OR \"MITRE\" OR \"CISA\" OR \"CVE\") 2026"}
+{"unit": "standards", "query": "\"DoxBench\" OR \"TrustGen\" OR \"TRUSTEVAL\" (\"OECD\" OR \"NIST\" OR \"EU AI Act\" OR \"MITRE\" OR \"OWASP\") 2026"}
+{"unit": "standards", "query": "\"PyOD\" (\"OWASP\" OR \"Cloudflare\" OR \"Datadog\" OR \"CrowdStrike\" OR \"SentinelOne\" OR \"Check Point\" OR \"Trend Micro\")"}
+{"unit": "standards", "query": "\"PyOD\" site:aws.amazon.com/marketplace OR site:azuremarketplace.microsoft.com OR site:console.cloud.google.com"}
+{"unit": "standards", "query": "\"TrustLLM\" (\"NIST\" OR \"CISA\" OR \"UK AISI\" OR \"ENISA\" OR \"ISO\" OR \"IEEE\" OR \"ETSI\" OR \"IETF\" OR \"ITU\")"}
+{"unit": "standards", "query": "\"Agent Audit\" OR \"agent-audit\" (\"OWASP\" OR \"CSA\" OR \"NIST\" OR \"MITRE\" OR \"vendor\") 2026"}
+{"unit": "standards", "query": "\"CVE-2026-15531\" \"pyod\" site:nvd.nist.gov OR site:cve.org OR site:cisa.gov"}
+{"unit": "standards", "query": "\"pyod\" site:docs.cloud.google.com/assured-open-source-software OR site:cloud.google.com/assured-open-source-software"}
+{"unit": "standards", "query": "(\"PyOD\" OR \"TrustLLM\" OR \"ADBench\" OR \"Therapeutics Data Commons\" OR \"ECOD\" OR \"DoxBench\" OR \"agent-audit\") (\"November 2026\" OR \"Nov 2026\")"}
+{"unit": "standards", "query": "\"NIST.SP.2400-102\" OR \"NIST AI 100-2\" \"TrustLLM\""}
+{"unit": "standards", "query": "\"google/adk\" OR \"Azure\" OR \"Cloudflare\" OR \"Datadog\" OR \"CrowdStrike\" \"agent-audit\" OR \"TrustLLM\" OR \"PyOD\""}
+{"unit": "standards", "query": "\"AI Transparency Initiative\" Microsoft November 2026 \"TrustLLM\" OR \"agent-audit\" OR \"AEGIS\" OR \"Auditable\""}
